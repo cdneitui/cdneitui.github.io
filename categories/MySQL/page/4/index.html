@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>`MySQL`分类下的文章 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/categories/MySQL/page/4/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/categories/MySQL/page/4/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/categories/MySQL/page/4/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/categories/MySQL/page/4/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `MySQL`分类下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/22/2019030500073/">
+    		MySQL函数
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-22T06:24:35.000Z">2015-12-22</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/函数/" title="函数">函数</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>复制代码 控制流函数 IFNULL(expr1,expr2) 如果expr1不是NULL，IFNULL()返回expr1，否则它返回expr2。IFNULL()返回一个数字或字符串值，取决于它被使用的上下文环境。 mysql&gt; select IFNULL(1,0); -&gt; 1 mysql&gt; select IFNULL(0,10); -&gt; 0 mysql&gt; select IFNULL(1/0,10); -&gt; 10 mysql&gt; select IFNULL(1/0,’yes’); -&gt; ‘yes’ IF(expr1,expr2,expr3) 如果expr1是TRUE(expr1&lt;&gt;0且expr1&lt;&gt;NULL)，那么IF()返回expr2，否则它返回expr3。IF()返回一个数字或字符串值，取决于它被使用的上下文。 mysql&gt; select IF(1&gt;2,2,3); -&gt; 3 mysql&gt; select IF(1&lt;2,’yes’,’no’); -&gt; ‘yes’ mysql&gt; select IF(strcmp(‘test’,’test1’),’yes’,’no’); -&gt; ‘no’ expr1作为整数值被计算，它意味着如果你正在测试浮点或字符串值，你应该使用一个比较操作来做。 mysql&gt; select IF(0.1,1,0); -&gt; 0 mysql&gt; select IF(0.1&lt;&gt;0,1,0); -&gt; 1 在上面的第一种情况中，IF(0.1)返回0，因为0.1被变换到整数值, 导致测试IF(0)。这可能不是你期望的。在第二种情况中，比较测试原来的浮点值看它是否是非零，比较的结果被用作一个整数。 CASE value WHEN [compare-value] THEN result [WHEN [compare-value] THEN result ] [ELSE result] END CASE WHEN [condition] THEN result [WHEN [condition] THEN result ] [ELSE result] END 第一个版本返回result，其中value=compare-value。第二个版本中如果第一个条件为真，返回result。如果没有匹配的result值，那么结果在ELSE后的result被返回。如果没有ELSE部分，那么NULL被返回。 mysql&gt; SELECT CASE 1 WHEN 1 THEN “one” WHEN 2 THEN “two” ELSE “more” END; -&gt; “one” mysql&gt; SELECT CASE WHEN 1&gt;0 THEN “true” ELSE “false” END; -&gt; “true” mysql&gt; SELECT CASE BINARY “B” when “a” then 1 when “b” then 2 END; -&gt; NULL 数学函数 所有的数学函数在一个出错的情况下返回NULL。 - 单目减。改变参数的符号。 mysql&gt; select - 2; 注意，如果这个操作符与一个BIGINT使用，返回值是一个BIGINT！这意味着你应该避免在整数上使用-，那可能有值-2^63！ ABS(X) 返回X的绝对值。 mysql&gt; select ABS(2); -&gt; 2 mysql&gt; select ABS(-32); -&gt; 32 该功能可安全用于BIGINT值。 SIGN(X) 返回参数的符号，为-1、0或1，取决于X是否是负数、零或正数。 mysql&gt; select SIGN(-32); -&gt; -1 mysql&gt; select SIGN(0); -&gt; 0 mysql&gt; select SIGN(234); -&gt; 1 MOD(N,M) % 模 (类似C中的%操作符)。返回N被M除的余数。 mysql&gt; select MOD(234, 10); -&gt; 4 mysql&gt; select 253 % 7; -&gt; 1 mysql&gt; select MOD(29,9); -&gt; 2 这个函数可安全用于BIGINT值。  FLOOR(X) 返回不大于X的最大整数值。 mysql&gt; select FLOOR(1.23); -&gt; 1 mysql&gt; select FLOOR(-1.23); -&gt; -2 注意返回值被变换为一个BIGINT！  CEILING(X) 返回不小于X的最小整数值。 mysql&gt; select CEILING(1.23); -&gt; 2 mysql&gt; select CEILING(-1.23); -&gt; -1 注意返回值被变换为一个BIGINT！ ROUND(X) 返回参数X的四舍五入的一个整数。 mysql&gt; select ROUND(-1.23); -&gt; -1 mysql&gt; select ROUND(-1.58); -&gt; -2 mysql&gt; select ROUND(1.58); -&gt; 2 注意返回值被变换为一个BIGINT! ROUND(X,D) 返回参数X的四舍五入的有D为小数的一个数字。如果D为0，结果将没有小数点或小数部分。 mysql&gt; select ROUND(1.298, 1); -&gt; 1.3 mysql&gt; select ROUND(1.298, 0); -&gt; 1 注意返回值被变换为一个BIGINT! EXP(X) 返回值e（自然对数的底）的X次方。 mysql&gt; select EXP(2); -&gt; 7.389056 mysql&gt; select EXP(-2); -&gt; 0.135335 LOG(X) 返回X的自然对数。 mysql&gt; select LOG(2); -&gt; 0.693147 mysql&gt; select LOG(-2); -&gt; NULL 如果你想要一个数字X的任意底B的对数，使用公式LOG(X)/LOG(B)。 LOG10(X) 返回X的以10为底的对数。 mysql&gt; select LOG10(2); -&gt; 0.301030 mysql&gt; select LOG10(100); -&gt; 2.000000 mysql&gt; select LOG10(-100); -&gt; NULL POW(X,Y) POWER(X,Y) 返回值X的Y次幂。 mysql&gt; select POW(2,2); -&gt; 4.000000 mysql&gt; select POW(2,-2); -&gt; 0.250000SQRT(X) 返回非负数X的平方根。 mysql&gt; select SQRT(4); -&gt; 2.000000 mysql&gt; select SQRT(20); -&gt; 4.472136 PI() 返回PI的值（圆周率）。 mysql&gt; select PI(); -&gt; 3.141593 COS(X) 返回X的余弦, 在这里X以弧度给出。 mysql&gt; select COS(PI()); -&gt; -1.000000 SIN(X) 返回X的正弦值，在此X以弧度给出。 mysql&gt; select SIN(PI()); -&gt; 0.000000 TAN(X) 返回X的正切值，在此X以弧度给出。 mysql&gt; select TAN(PI()+1); -&gt; 1.557408 ACOS(X) 返回X反余弦，即其余弦值是X。如果X不在-1到1的范围，返回NULL。 mysql&gt; select ACOS(1); -&gt; 0.000000 mysql&gt; select ACOS(1.0001); -&gt; NULL mysql&gt; select ACOS(0); -&gt; 1.570796 ASIN(X) 返回X反正弦值，即其正弦值是X。L如果X不在-1到1的范围，返回NULL。 mysql&gt; select ASIN(0.2); -&gt; 0.201358 mysql&gt; select ASIN(‘foo’); -&gt; 0.000000 ATAN(X) 返回X的反正切值，即其正切值是X。 mysql&gt; select ATAN(2); -&gt; 1.107149 mysql&gt; select ATAN(-2); -&gt; -1.107149ATAN2(X,Y) 返回2个变量X和Y的反正切。它类似于计算Y/X的反正切，除了两个参数的符号被用来决定结果的象限。 mysql&gt; select ATAN(-2,2); -&gt; -0.785398 mysql&gt; select ATAN(PI(),0); -&gt; 1.570796 COT(X) 返回X的余切。 mysql&gt; select COT(12); -&gt; -1.57267341 mysql&gt; select COT(0); -&gt; NULL RAND() RAND(N) 返回在范围0到1.0内的随机浮点值。如果一个整数参数N被指定，它被用作种子值。 mysql&gt; select RAND(); -&gt; 0.5925 mysql&gt; select RAND(20); -&gt; 0.1811 mysql&gt; select RAND(20); -&gt; 0.1811 mysql&gt; select RAND(); -&gt; 0.2079 mysql&gt; select RAND(); -&gt; 0.7888 你不能在一个ORDER BY子句用RAND()值使用列，因为ORDER BY将重复计算列多次。然而在MySQL3.23中，你可以做： SELECT <em> FROM table_name ORDER BY RAND()，这是有利于得到一个来自SELECT </em> FROM table1,table2 WHERE a=b AND c<d order by rand() limit 1000的集合的随机样本。注意在一个where子句里的一个rand()将在每次where被执行时重新评估。 least(x,y,) 有2和2个以上的参数，返回最小(最小值)的参数。参数使用下列规则进行比较： 如果返回值被使用在一个integer上下文，或所有的参数都是整数值，他们作为整数比较。 如果返回值被使用在一个real上下文，或所有的参数是实数值，他们作为实数比较。 如果任何参数是一个大小敏感的字符串，参数作为大小写敏感的字符串被比较。 在其他的情况下，参数作为大小写无关的字符串被比较。 mysql> select LEAST(2,0); -&gt; 0 mysql&gt; select LEAST(34.0,3.0,5.0,767.0); -&gt; 3.0 mysql&gt; select LEAST(“B”,”A”,”C”); -&gt; “A” 在MySQL 3.22.5以前的版本，你可以使用MIN()而不是LEAST。 GREATEST(X,Y,) 返回最大(最大值)的参数。参数使用与LEAST一样的规则进行比较。 mysql&gt; select GREATEST(2,0); -&gt; 2 mysql&gt; select GREATEST(34.0,3.0,5.0,767.0); -&gt; 767.0 mysql&gt; select GREATEST(“B”,”A”,”C”); -&gt; “C” 在MySQL在 3.22.5 以前的版本, 你能使用MAX()而不是GREATEST.  DEGREES(X) 返回参数X，从弧度变换为角度。 mysql&gt; select DEGREES(PI()); -&gt; 180.000000RADIANS(X) 返回参数X，从角度变换为弧度。 mysql&gt; select RADIANS(90); -&gt; 1.570796 TRUNCATE(X,D) 返回数字X，截断为D位小数。如果D为0，结果将没有小数点或小数部分。 mysql&gt; select TRUNCATE(1.223,1); -&gt; 1.2 mysql&gt; select TRUNCATE(1.999,1); -&gt; 1.9 mysql&gt; select TRUNCATE(1.999,0); -&gt; 1 字符串函数对于针对字符串位置的操作，第一个位置被标记为1。 ASCII(str) 返回字符串str的最左面字符的ASCII代码值。如果str是空字符串，返回0。如果str是NULL，返回NULL。 mysql&gt; select ASCII(‘2’); -&gt; 50 mysql&gt; select ASCII(2); -&gt; 50 mysql&gt; select ASCII(‘dx’); -&gt; 100也可参见ORD()函数。 ORD(str) 如果字符串str最左面字符是一个多字节字符，通过以格式((first byte ASCII code)*256+(second byte ASCII code))[*256+third byte ASCII code]返回字符的ASCII代码值来返回多字节字符代码。如果最左面的字符不是一个多字节字符。返回与ASCII()函数返回的相同值。 mysql&gt; select ORD(‘2’); -&gt; 50 CONV(N,from_base,to_base) 在不同的数字基之间变换数字。返回数字N的字符串数字，从from_base基变换为to_base基，如果任何参数是NULL，返回NULL。参数N解释为一个整数，但是可以指定为一个整数或一个字符串。最小基是2且最大的基是36。如果to_base是一个负数，N被认为是一个有符号数，否则，N被当作无符号数。 CONV以64位点精度工作。 mysql&gt; select CONV(“a”,16,2); -&gt; ‘1010’ mysql&gt; select CONV(“6E”,18,8); -&gt; ‘172’ mysql&gt; select CONV(-17,10,-18); -&gt; ‘-H’ mysql&gt; select CONV(10+”10”+’10’+0xa,10,10); -&gt; ‘40’ BIN(N) 返回二进制值N的一个字符串表示，在此N是一个长整数(BIGINT)数字，这等价于CONV(N,10,2)。如果N是NULL，返回NULL。 mysql&gt; select BIN(12); -&gt; ‘1100’ OCT(N) 返回八进制值N的一个字符串的表示，在此N是一个长整型数字，这等价于CONV(N,10,8)。如果N是NULL，返回NULL。 mysql&gt; select OCT(12); -&gt; ‘14’ HEX(N) 返回十六进制值N一个字符串的表示，在此N是一个长整型(BIGINT)数字，这等价于CONV(N,10,16)。如果N是NULL，返回NULL。 mysql&gt; select HEX(255); -&gt; ‘FF’ CHAR(N,) CHAR()将参数解释为整数并且返回由这些整数的ASCII代码字符组成的一个字符串。NULL值被跳过。 mysql&gt; select CHAR(77,121,83,81,’76’); -&gt; ‘MySQL’ mysql&gt; select CHAR(77,77.3,’77.3’); -&gt; ‘MMM’ CONCAT(str1,str2,) 返回来自于参数连结的字符串。如果任何参数是NULL，返回NULL。可以有超过2个的参数。一个数字参数被变换为等价的字符串形式。 mysql&gt; select CONCAT(‘My’, ‘S’, ‘QL’); -&gt; ‘MySQL’ mysql&gt; select CONCAT(‘My’, NULL, ‘QL’); -&gt; NULL mysql&gt; select CONCAT(14.3); -&gt; ‘14.3’ LENGTH(str) OCTET_LENGTH(str) CHAR_LENGTH(str) CHARACTER_LENGTH(str) 返回字符串str的长度。 mysql&gt; select LENGTH(‘text’); -&gt; 4 mysql&gt; select OCTET_LENGTH(‘text’); -&gt; 4 注意，对于多字节字符，其CHAR_LENGTH()仅计算一次。 LOCATE(substr,str) POSITION(substr IN str) 返回子串substr在字符串str第一个出现的位置，如果substr不是在str里面，返回0. mysql&gt; select LOCATE(‘bar’, ‘foobarbar’); -&gt; 4 mysql&gt; select LOCATE(‘xbar’, ‘foobar’); -&gt; 0 该函数是多字节可靠的。  LOCATE(substr,str,pos) 返回子串substr在字符串str第一个出现的位置，从位置pos开始。如果substr不是在str里面，返回0。 mysql&gt; select LOCATE(‘bar’, ‘foobarbar’,5); -&gt; 7 这函数是多字节可靠的。 INSTR(str,substr) 返回子串substr在字符串str中的第一个出现的位置。这与有2个参数形式的LOCATE()相同，除了参数被颠倒。 mysql&gt; select INSTR(‘foobarbar’, ‘bar’); -&gt; 4 mysql&gt; select INSTR(‘xbar’, ‘foobar’); -&gt; 0 这函数是多字节可靠的。 LPAD(str,len,padstr) 返回字符串str，左面用字符串padstr填补直到str是len个字符长。 mysql&gt; select LPAD(‘hi’,4,’??’); -&gt; ‘??hi’ RPAD(str,len,padstr) 返回字符串str，右面用字符串padstr填补直到str是len个字符长。 mysql&gt; select RPAD(‘hi’,5,’?’); -&gt; ‘hi???’ LEFT(str,len) 返回字符串str的最左面len个字符。 mysql&gt; select LEFT(‘foobarbar’, 5); -&gt; ‘fooba’ 该函数是多字节可靠的。 RIGHT(str,len) 返回字符串str的最右面len个字符。 mysql&gt; select RIGHT(‘foobarbar’, 4); -&gt; ‘rbar’ 该函数是多字节可靠的。 SUBSTRING(str,pos,len) SUBSTRING(str FROM pos FOR len) MID(str,pos,len) 从字符串str返回一个len个字符的子串，从位置pos开始。使用FROM的变种形式是ANSI SQL92语法。 mysql&gt; select SUBSTRING(‘Quadratically’,5,6); -&gt; ‘ratica’ 该函数是多字节可靠的。 SUBSTRING(str,pos) SUBSTRING(str FROM pos) 从字符串str的起始位置pos返回一个子串。 mysql&gt; select SUBSTRING(‘Quadratically’,5); -&gt; ‘ratically’ mysql&gt; select SUBSTRING(‘foobarbar’ FROM 4); -&gt; ‘barbar’ 该函数是多字节可靠的。 SUBSTRING_INDEX(str,delim,count) 返回从字符串str的第count个出现的分隔符delim之后的子串。如果count是正数，返回最后的分隔符到左边(从左边数) 的所有字符。如果count是负数，返回最后的分隔符到右边的所有字符(从右边数)。 mysql&gt; select SUBSTRING_INDEX(‘<a href="http://www.mysql.com&#39;" target="_blank" rel="noopener">www.mysql.com&#39;</a>, ‘.’, 2); -&gt; ‘<a href="http://www.mysql&#39;" target="_blank" rel="noopener">www.mysql&#39;</a> mysql&gt; select SUBSTRING_INDEX(‘<a href="http://www.mysql.com&#39;" target="_blank" rel="noopener">www.mysql.com&#39;</a>, ‘.’, -2); -&gt; ‘mysql.com’ 该函数对多字节是可靠的。 LTRIM(str) 返回删除了其前置空格字符的字符串str。 mysql&gt; select LTRIM(‘  barbar’); -&gt; ‘barbar’ RTRIM(str) 返回删除了其拖后空格字符的字符串str。 mysql&gt; select RTRIM(‘barbar   ‘); -&gt; ‘barbar’ 该函数对多字节是可靠的。  TRIM([[BOTH | LEADING | TRAILING] [remstr] FROM] str) 返回字符串str，其所有remstr前缀或后缀被删除了。如果没有修饰符BOTH、LEADING或TRAILING给出，BOTH被假定。如果remstr没被指定，空格被删除。 mysql&gt; select TRIM(‘  bar   ‘); -&gt; ‘bar’ mysql&gt; select TRIM(LEADING ‘x’ FROM ‘xxxbarxxx’); -&gt; ‘barxxx’ mysql&gt; select TRIM(BOTH ‘x’ FROM ‘xxxbarxxx’); -&gt; ‘bar’ mysql&gt; select TRIM(TRAILING ‘xyz’ FROM ‘barxxyz’); -&gt; ‘barx’ 该函数对多字节是可靠的。 SOUNDEX(str) 返回str的一个同音字符串。听起来“大致相同”的2个字符串应该有相同的同音字符串。一个“标准”的同音字符串长是4个字符，但是SOUNDEX()函数返回一个任意长的字符串。你可以在结果上使用SUBSTRING()得到一个“标准”的 同音串。所有非数字字母字符在给定的字符串中被忽略。所有在A-Z之外的字符国际字母被当作元音。 mysql&gt; select SOUNDEX(‘Hello’); -&gt; ‘H400’ mysql&gt; select SOUNDEX(‘Quadratically’); -&gt; ‘Q36324’ SPACE(N) 返回由N个空格字符组成的一个字符串。 mysql&gt; select SPACE(6); -&gt; ‘      ‘ REPLACE(str,from_str,to_str) 返回字符串str，其字符串from_str的所有出现由字符串to_str代替。 mysql&gt; select REPLACE(‘<a href="http://www.mysql.com&#39;" target="_blank" rel="noopener">www.mysql.com&#39;</a>, ‘w’, ‘Ww’); -&gt; ‘WwWwWw.mysql.com’ 该函数对多字节是可靠的。 REPEAT(str,count) 返回由重复countTimes次的字符串str组成的一个字符串。如果count &lt;= 0，返回一个空字符串。如果str或count是NULL，返回NULL。 mysql&gt; select REPEAT(‘MySQL’, 3); -&gt; ‘MySQLMySQLMySQL’ REVERSE(str) 返回颠倒字符顺序的字符串str。 mysql&gt; select REVERSE(‘abc’); -&gt; ‘cba’ 该函数对多字节可靠的。 INSERT(str,pos,len,newstr) 返回字符串str，在位置pos起始的子串且len个字符长得子串由字符串newstr代替。 mysql&gt; select INSERT(‘Quadratic’, 3, 4, ‘What’); -&gt; ‘QuWhattic’ 该函数对多字节是可靠的。 ELT(N,str1,str2,str3,) 如果N= 1，返回str1，如果N= 2，返回str2，等等。如果N小于1或大于参数个数，返回NULL。ELT()是FIELD()反运算。 mysql&gt; select ELT(1, ‘ej’, ‘Heja’, ‘hej’, ‘foo’); -&gt; ‘ej’ mysql&gt; select ELT(4, ‘ej’, ‘Heja’, ‘hej’, ‘foo’); -&gt; ‘foo’ FIELD(str,str1,str2,str3,) 返回str在str1, str2, str3, 清单的索引。如果str没找到，返回0。FIELD()是ELT()反运算。 mysql&gt; select FIELD(‘ej’, ‘Hej’, ‘ej’, ‘Heja’, ‘hej’, ‘foo’); -&gt; 2 mysql&gt; select FIELD(‘fo’, ‘Hej’, ‘ej’, ‘Heja’, ‘hej’, ‘foo’); -&gt; 0 FIND_IN_SET(str,strlist) 如果字符串str在由N子串组成的表strlist之中，返回一个1到N的值。一个字符串表是被“,”分隔的子串组成的一个字符串。如果第一个参数是一个常数字符串并且第二个参数是一种类型为SET的列，FIND_IN_SET()函数被优化而使用位运算！如果str不是在strlist里面或如果strlist是空字符串，返回0。如果任何一个参数是NULL，返回NULL。如果第一个参数包含一个“,”，该函数将工作不正常。 mysql&gt; SELECT FIND_IN_SET(‘b’,’a,b,c,d’); -&gt; 2 MAKE_SET(bits,str1,str2,) 返回一个集合 (包含由“,”字符分隔的子串组成的一个字符串)，由相应的位在bits集合中的的字符串组成。str1对应于位0，str2对应位1，等等。在str1, str2, 中的NULL串不添加到结果中。 mysql&gt; SELECT MAKE_SET(1,’a’,’b’,’c’); -&gt; ‘a’ mysql&gt; SELECT MAKE_SET(1 | 4,’hello’,’nice’,’world’); -&gt; ‘hello,world’ mysql&gt; SELECT MAKE_SET(0,’a’,’b’,’c’); -&gt; ‘’ EXPORT_SET(bits,on,off,[separator,[number_of_bits]]) 返回一个字符串，在这里对于在“bits”中设定每一位，你得到一个“on”字符串，并且对于每个复位(reset)的位，你得到一个“off”字符串。每个字符串用“separator”分隔(缺省“,”)，并且只有“bits”的“number_of_bits” (缺省64)位被使用。 mysql&gt; select EXPORT_SET(5,’Y’,’N’,’,’,4) -&gt; Y,N,Y,N LCASE(str) LOWER(str) 返回字符串str，根据当前字符集映射(缺省是ISO-8859-1 Latin1)把所有的字符改变成小写。该函数对多字节是可靠的。 mysql&gt; select LCASE(‘QUADRATICALLY’); -&gt; ‘quadratically’ UCASE(str) UPPER(str) 返回字符串str，根据当前字符集映射(缺省是ISO-8859-1 Latin1)把所有的字符改变成大写。该函数对多字节是可靠的。 mysql&gt; select UCASE(‘Hej’); -&gt; ‘HEJ’ 该函数对多字节是可靠的。 LOAD_FILE(file_name) 读入文件并且作为一个字符串返回文件内容。文件必须在服务器上，你必须指定到文件的完整路径名，而且你必须有file权限。文件必须所有内容都是可读的并且小于max_allowed_packet。如果文件不存在或由于上面原因之一不能被读出，函数返回NULL。 mysql&gt; UPDATE table_name SET blob_column=LOAD_FILE(“/tmp/picture”) WHERE id=1; MySQL必要时自动变换数字为字符串，并且反过来也如此： mysql&gt; SELECT 1+”1”; -&gt; 2 mysql&gt; SELECT CONCAT(2,’ test’); -&gt; ‘2 test’ 如果你想要明确地变换一个数字到一个字符串，把它作为参数传递到CONCAT()。 如果字符串函数提供一个二进制字符串作为参数，结果字符串也是一个二进制字符串。被变换到一个字符串的数字被当作是一个二进制字符串。这仅影响比较。   日期和时间函数   对于每个类型拥有的值范围以及并且指定日期何时间值的有效格式的描述见7.3.6 日期和时间类型。 这里是一个使用日期函数的例子。下面的查询选择了所有记录，其date_col的值是在最后30天以内： mysql&gt; SELECT something FROM table WHERE TO_DAYS(NOW()) - TO_DAYS(date_col) &lt;= 30; DAYOFWEEK(date) 返回日期date的星期索引(1=星期天，2=星期一, ……7=星期六)。这些索引值对应于ODBC标准。 mysql&gt; select DAYOFWEEK(‘1998-02-03’); -&gt; 3 WEEKDAY(date) 返回date的星期索引(0=星期一，1=星期二, ……6= 星期天)。 mysql&gt; select WEEKDAY(‘1997-10-04 22:23:00’); -&gt; 5 mysql&gt; select WEEKDAY(‘1997-11-05’); -&gt; 2 DAYOFMONTH(date) 返回date的月份中日期，在1到31范围内。 mysql&gt; select DAYOFMONTH(‘1998-02-03’); -&gt; 3 DAYOFYEAR(date) 返回date在一年中的日数, 在1到366范围内。 mysql&gt; select DAYOFYEAR(‘1998-02-03’); -&gt; 34 MONTH(date) 返回date的月份，范围1到12。 mysql&gt; select MONTH(‘1998-02-03’); -&gt; 2 DAYNAME(date) 返回date的星期名字。 mysql&gt; select DAYNAME(“1998-02-05”); -&gt; ‘Thursday’ MONTHNAME(date) 返回date的月份名字。 mysql&gt; select MONTHNAME(“1998-02-05”); -&gt; ‘February’ QUARTER(date) 返回date一年中的季度，范围1到4。 mysql&gt; select QUARTER(‘98-04-01’); -&gt; 2 WEEK(date) WEEK(date,first) 对于星期天是一周的第一天的地方，有一个单个参数，返回date的周数，范围在0到52。2个参数形式WEEK()允许你指定星期是否开始于星期天或星期一。如果第二个参数是0，星期从星期天开始，如果第二个参数是1，从星期一开始。 mysql&gt; select WEEK(‘1998-02-20’); -&gt; 7 mysql&gt; select WEEK(‘1998-02-20’,0); -&gt; 7 mysql&gt; select WEEK(‘1998-02-20’,1); -&gt; 8 YEAR(date) 返回date的年份，范围在1000到9999。 mysql&gt; select YEAR(‘98-02-03’); -&gt; 1998 HOUR(time) 返回time的小时，范围是0到23。 mysql&gt; select HOUR(‘10:05:03’); -&gt; 10 MINUTE(time) 返回time的分钟，范围是0到59。 mysql&gt; select MINUTE(‘98-02-03 10:05:03’); -&gt; 5 SECOND(time) 回来time的秒数，范围是0到59。 mysql&gt; select SECOND(‘10:05:03’); -&gt; 3 PERIOD_ADD(P,N) 增加N个月到阶段P（以格式YYMM或YYYYMM)。以格式YYYYMM返回值。注意阶段参数P不是日期值。 mysql&gt; select PERIOD_ADD(9801,2); -&gt; 199803 PERIOD_DIFF(P1,P2) 返回在时期P1和P2之间月数，P1和P2应该以格式YYMM或YYYYMM。注意，时期参数P1和P2不是日期值。 mysql&gt; select PERIOD_DIFF(9802,199703); -&gt; 11 DATE_ADD(date,INTERVAL expr type) DATE_SUB(date,INTERVAL expr type) ADDDATE(date,INTERVAL expr type) SUBDATE(date,INTERVAL expr type) 这些功能执行日期运算。对于MySQL 3.22，他们是新的。ADDDATE()和SUBDATE()是DATE_ADD()和DATE_SUB()的同义词。在MySQL 3.23中，你可以使用+和-而不是DATE_ADD()和DATE_SUB()。（见例子）date是一个指定开始日期的DATETIME或DATE值，expr是指定加到开始日期或从开始日期减去的间隔值一个表达式，expr是一个字符串；它可以以一个“-”开始表示负间隔。type是一个关键词，指明表达式应该如何被解释。EXTRACT(type FROM date)函数从日期中返回“type”间隔。下表显示了type和expr参数怎样被关联： type值  含义  期望的expr格式 SECOND  秒 SECONDS MINUTE  分钟 MINUTES HOUR  时间 HOURS DAY  天 DAYS MONTH  月 MONTHS YEAR  年 YEARS MINUTE_SECOND  分钟和秒 “MINUTES:SECONDS” HOUR_MINUTE  小时和分钟 “HOURS:MINUTES” DAY_HOUR  天和小时 “DAYS HOURS” YEAR_MONTH  年和月 “YEARS-MONTHS” HOUR_SECOND  小时, 分钟， “HOURS:MINUTES:SECONDS” DAY_MINUTE  天, 小时, 分钟 “DAYS HOURS:MINUTES” DAY_SECOND  天, 小时, 分钟, 秒 “DAYS HOURS:MINUTES:SECONDS” MySQL在expr格式中允许任何标点分隔符。表示显示的是建议的分隔符。如果date参数是一个DATE值并且你的计算仅仅包含YEAR、MONTH和DAY部分(即，没有时间部分)，结果是一个DATE值。否则结果是一个DATETIME值。 mysql&gt; SELECT “1997-12-31 23:59:59” + INTERVAL 1 SECOND; -&gt; 1998-01-01 00:00:00 mysql&gt; SELECT INTERVAL 1 DAY + “1997-12-31”; -&gt; 1998-01-01 mysql&gt; SELECT “1998-01-01” - INTERVAL 1 SECOND; -&gt; 1997-12-31 23:59:59 mysql&gt; SELECT DATE_ADD(“1997-12-31 23:59:59”, INTERVAL 1 SECOND); -&gt; 1998-01-01 00:00:00 mysql&gt; SELECT DATE_ADD(“1997-12-31 23:59:59”, INTERVAL 1 DAY); -&gt; 1998-01-01 23:59:59 mysql&gt; SELECT DATE_ADD(“1997-12-31 23:59:59”, INTERVAL “1:1” MINUTE_SECOND); -&gt; 1998-01-01 00:01:00 mysql&gt; SELECT DATE_SUB(“1998-01-01 00:00:00”, INTERVAL “1 1:1:1” DAY_SECOND); -&gt; 1997-12-30 22:58:59 mysql&gt; SELECT DATE_ADD(“1998-01-01 00:00:00”, INTERVAL “-1 10” DAY_HOUR); -&gt; 1997-12-30 14:00:00 mysql&gt; SELECT DATE_SUB(“1998-01-02”, INTERVAL 31 DAY); -&gt; 1997-12-02 mysql&gt; SELECT EXTRACT(YEAR FROM “1999-07-02”); -&gt; 1999 mysql&gt; SELECT EXTRACT(YEAR_MONTH FROM “1999-07-02 01:02:03”); -&gt; 199907 mysql&gt; SELECT EXTRACT(DAY_MINUTE FROM “1999-07-02 01:02:03”); -&gt; 20102 如果你指定太短的间隔值(不包括type关键词期望的间隔部分)，MySQL假设你省掉了间隔值的最左面部分。例如，如果你指定一个type是DAY_SECOND，值expr被希望有天、小时、分钟和秒部分。如果你象”1:10”这样指定值，MySQL假设日子和小时部分是丢失的并且值代表分钟和秒。换句话说，”1:10” DAY_SECOND以它等价于”1:10” MINUTE_SECOND的方式解释，这对那MySQL解释TIME值表示经过的时间而非作为一天的时间的方式有二义性。如果你使用确实不正确的日期，结果是NULL。如果你增加MONTH、YEAR_MONTH或YEAR并且结果日期大于新月份的最大值天数，日子在新月用最大的天调整。 mysql&gt; select DATE_ADD(‘1998-01-30’, Interval 1 month); -&gt; 1998-02-28 注意，从前面的例子中词INTERVAL和type关键词不是区分大小写的。  TO_DAYS(date) 给出一个日期date，返回一个天数(从0年的天数)。 mysql&gt; select TO_DAYS(950501); -&gt; 728779 mysql&gt; select TO_DAYS(‘1997-10-07’); -&gt; 729669 TO_DAYS()不打算用于使用格列高里历(1582)出现前的值。 FROM_DAYS(N) 给出一个天数N，返回一个DATE值。 mysql&gt; select FROM_DAYS(729669); -&gt; ‘1997-10-07’ TO_DAYS()不打算用于使用格列高里历(1582)出现前的值。 DATE_FORMAT(date,format) 根据format字符串格式化date值。下列修饰符可以被用在format字符串中： %M  月名字(January……December) %W  星期名字(Sunday……Saturday) %D  有英语前缀的月份的日期(1st, 2nd, 3rd, 等等。） %Y  年, 数字, 4 位 %y  年, 数字, 2 位 %a  缩写的星期名字(Sun……Sat) %d  月份中的天数, 数字(00……31) %e  月份中的天数, 数字(0……31) %m  月, 数字(01……12) %c  月, 数字(1……12) %b  缩写的月份名字(Jan……Dec) %j  一年中的天数(001……366) %H  小时(00……23) %k  小时(0……23) %h  小时(01……12) %I  小时(01……12) %l  小时(1……12) %i  分钟, 数字(00……59) %r  时间,12 小时(hh:mm:ss [AP]M) %T  时间,24 小时(hh:mm:ss) %S  秒(00……59) %s  秒(00……59) %p  AM或PM %w  一个星期中的天数(0=Sunday ……6=Saturday ） %U  星期(0……52), 这里星期天是星期的第一天 %u  星期(0……52), 这里星期一是星期的第一天 %%  一个文字“%”。 所有的其他字符不做解释被复制到结果中。 mysql&gt; select DATE_FORMAT(‘1997-10-04 22:23:00’, ‘%W %M %Y’); -&gt; ‘Saturday October 1997’ mysql&gt; select DATE_FORMAT(‘1997-10-04 22:23:00’, ‘%H:%i:%s’); -&gt; ‘22:23:00’ mysql&gt; select DATE_FORMAT(‘1997-10-04 22:23:00’, ‘%D %y %a %d %m %b %j’); -&gt; ‘4th 97 Sat 04 10 Oct 277’ mysql&gt; select DATE_FORMAT(‘1997-10-04 22:23:00’, ‘%H %k %I %r %T %S %w’); -&gt; ‘22 22 10 10:23:00 PM 22:23:00 00 6’MySQL3.23中，在格式修饰符字符前需要%。在MySQL更早的版本中，%是可选的。 TIME_FORMAT(time,format) 这象上面的DATE_FORMAT()函数一样使用，但是format字符串只能包含处理小时、分钟和秒的那些格式修饰符。其他修饰符产生一个NULL值或0。 CURDATE() CURRENT_DATE 以’YYYY-MM-DD’或YYYYMMDD格式返回今天日期值，取决于函数是在一个字符串还是数字上下文被使用。 mysql&gt; select CURDATE(); -&gt; ‘1997-12-15’ mysql&gt; select CURDATE() + 0; -&gt; 19971215 CURTIME() CURRENT_TIME 以’HH:MM:SS’或HHMMSS格式返回当前时间值，取决于函数是在一个字符串还是在数字的上下文被使用。 mysql&gt; select CURTIME(); -&gt; ‘23:50:26’ mysql&gt; select CURTIME() + 0; -&gt; 235026 NOW() SYSDATE() CURRENT_TIMESTAMP 以’YYYY-MM-DD HH:MM:SS’或YYYYMMDDHHMMSS格式返回当前的日期和时间，取决于函数是在一个字符串还是在数字的上下文被使用。 mysql&gt; select NOW(); -&gt; ‘1997-12-15 23:50:26’ mysql&gt; select NOW() + 0; -&gt; 19971215235026 UNIX_TIMESTAMP() UNIX_TIMESTAMP(date) 如果没有参数调用，返回一个Unix时间戳记(从’1970-01-01 00:00:00’GMT开始的秒数)。如果UNIX_TIMESTAMP()用一个date参数被调用，它返回从’1970-01-01 00:00:00’ GMT开始的秒数值。date可以是一个DATE字符串、一个DATETIME字符串、一个TIMESTAMP或以YYMMDD或YYYYMMDD格式的本地时间的一个数字。 mysql&gt; select UNIX_TIMESTAMP(); -&gt; 882226357 mysql&gt; select UNIX_TIMESTAMP(‘1997-10-04 22:23:00’); -&gt; 875996580 当UNIX_TIMESTAMP被用于一个TIMESTAMP列，函数将直接接受值，没有隐含的“string-to-unix-timestamp”变换。 FROM_UNIXTIME(unix_timestamp) 以’YYYY-MM-DD HH:MM:SS’或YYYYMMDDHHMMSS格式返回unix_timestamp参数所表示的值，取决于函数是在一个字符串还是或数字上下文中被使用。 mysql&gt; select FROM_UNIXTIME(875996580); -&gt; ‘1997-10-04 22:23:00’ mysql&gt; select FROM_UNIXTIME(875996580) + 0; -&gt; 19971004222300 FROM_UNIXTIME(unix_timestamp,format) 返回表示 Unix 时间标记的一个字符串，根据format字符串格式化。format可以包含与DATE_FORMAT()函数列出的条目同样的修饰符。 mysql&gt; select FROM_UNIXTIME(UNIX_TIMESTAMP(), ‘%Y %D %M %h:%i:%s %x’); -&gt; ‘1997 23rd December 03:43:30 x’ SEC_TO_TIME(seconds) 返回seconds参数，变换成小时、分钟和秒，值以’HH:MM:SS’或HHMMSS格式化，取决于函数是在一个字符串还是在数字上下文中被使用。 mysql&gt; select SEC_TO_TIME(2378); -&gt; ‘00:39:38’ mysql&gt; select SEC_TO_TIME(2378) + 0; -&gt; 3938 TIME_TO_SEC(time) 返回time参数，转换成秒。 mysql&gt; select TIME_TO_SEC(‘22:23:00’); -&gt; 80580 mysql&gt; select TIME_TO_SEC(‘00:39:38’); -&gt; 2378 其他函数 DATABASE() 返回当前的数据库名字。 mysql&gt; select DATABASE(); -&gt; ‘test’ 如果没有当前的数据库，DATABASE()返回空字符串。 USER() 　 SYSTEM_USER() 　 SESSION_USER() 返回当前MySQL用户名。 mysql&gt; select USER(); -&gt; ‘davida@localhost’ 在MySQL 3.22.11或以后版本中，这包括用户名和客户主机名。你可以象这样只提取用户名部分(值是否包括主机名部分均可工作)： mysql&gt; select substring_index(USER(),”@”,1); -&gt; ‘davida’ PASSWORD(str) 从纯文本口令str计算一个口令字符串。该函数被用于为了在user授权表的Password列中存储口令而加密MySQL口令。 mysql&gt; select PASSWORD(‘badpwd’); -&gt; ‘7f84554057dd964b’ PASSWORD()加密是非可逆的。PASSWORD()不以与Unix口令加密的相同的方法执行口令加密。你不应该假定如果你的Unix 口令和你的MySQL口令是一样的，PASSWORD()将导致与在Unix口令文件存储的相同的加密值。见ENCRYPT()。 ENCRYPT(str[,salt]) 使用Unix crypt()系统调用加密str。salt参数应该是一个有2个字符的字符串。（MySQL 3.22.16中，salt可以长于2个字符。） mysql&gt; select ENCRYPT(“hello”); -&gt; ‘VxuFAJXVARROc’ 如果crypt()在你的系统上不可用，ENCRYPT()总是返回NULL。ENCRYPT()只保留str起始8个字符而忽略所有其他，至少在某些系统上是这样。这将由底层的crypt()系统调用的行为决定。 ENCODE(str,pass_str) 使用pass_str作为口令加密str。为了解密结果，使用DECODE()。结果是一个二进制字符串，如果你想要在列中保存它，使用一个BLOB列类型。 DECODE(crypt_str,pass_str) 使用pass_str作为口令解密加密的字符串crypt_str。crypt_str应该是一个由ENCODE()返回的字符串。 MD5(string) 对字符串计算MD5校验和。值作为一个32长的十六进制数字被返回可以，例如用作哈希(hash)键。 mysql&gt; select MD5(“testing”) -&gt; ‘ae2b1fca515949e5d54fb22b8ed95575’ 这是一个“RSA数据安全公司的MD5消息摘要算法”。 LAST_INSERT_ID([expr]) 返回被插入一个AUTO_INCREMENT列的最后一个自动产生的值。见20.4.29 mysql_insert_id()。 mysql&gt; select LAST_INSERT_ID(); -&gt; 195 产生的最后ID以每个连接为基础在服务器被维护，它不会被其他客户改变。如果你更新另外一个有非魔术值(即，不是NULL和不是0的一个值)的AUTO_INCREMENT列，它甚至不会被改变。如果expr作为一个参数在一个UPDATE子句的LAST_INSERT_ID()里面给出，那么参数值作为一个LAST_INSERT_ID()值被返回。这可以用来模仿顺序：首先创建表： mysql&gt; create table sequence (id int not null); mysql&gt; insert into sequence values (0); 然后表能被用来产生顺序号，象这样： mysql&gt; update sequence set id=LAST_INSERT_ID(id+1); 你可以不调用LAST_INSERT_ID()而产生顺序，但是这样使用函数的实用程序在服务器上自动维护ID值作为最后自动产生的值。你可以检索新的ID值，就像你能读入正常MySQL中的任何正常的AUTO_INCREMENT值一样。例如，LAST_INSERT_ID()（没有一个参数 )将返回新ID。C API函数mysql_insert_id()也可被用来得到值。 FORMAT(X,D) 格式化数字X为类似于格式’#,###,###.##’，四舍五入到D为小数。如果D为0，结果将没有小数点和小数部分。 mysql&gt; select FORMAT(12332.123456, 4); -&gt; ‘12,332.1235’ mysql&gt; select FORMAT(12332.1,4); -&gt; ‘12,332.1000’ mysql&gt; select FORMAT(12332.2,0); -&gt; ‘12,332’ VERSION() 返回表明MySQL服务器版本的一个字符串。 mysql&gt; select VERSION(); -&gt; ‘3.22.19b-log’ GET_LOCK(str,timeout) 试图获得由字符串str给定的一个名字的锁定，第二个timeout为超时。如果锁定成功获得，返回1，如果尝试超时了，返回0，或如果发生一个错误，返回NULL(例如从存储器溢出或线程用mysqladmin kill被杀死)。当你执行RELEASE_LOCK()时、执行一个新的GET_LOCK()或线程终止时，一个锁定被释放。该函数可以用来实现应用锁或模拟记录锁，它阻止其他客户用同样名字的锁定请求；赞成一个给定的锁定字符串名字的客户可以使用字符串执行子协作建议的锁定。 mysql&gt; select GET_LOCK(“lock1”,10); -&gt; 1 mysql&gt; select GET_LOCK(“lock2”,10); -&gt; 1 mysql&gt; select RELEASE_LOCK(“lock2”); -&gt; 1 mysql&gt; select RELEASE_LOCK(“lock1”); -&gt; NULL 注意，第二个RELEASE_LOCK()调用返回NULL，因为锁”lock1”自动地被第二个GET_LOCK()调用释放。 RELEASE_LOCK(str) 释放字符串str命名的通过GET_LOCK()获得的锁。如果锁被释放，返回1，如果锁没被这个线程锁定(在此情况下锁没被释放)返回0，并且如果命名的锁不存在，返回NULL。如果锁从来没有通过调用GET_LOCK()获得或如果它已经被释放了，锁将不存在。 BENCHMARK(count,expr) BENCHMARK()函数重复countTimes次执行表达式expr，它可以用于计时MySQL处理表达式有多快。结果值总是0。意欲用于mysql客户，它报告查询的执行时间。 mysql&gt; select BENCHMARK(1000000,encode(“hello”,”goodbye”)); +———————————————-+ | BENCHMARK(1000000,encode(“hello”,”goodbye”)) | +———————————————-+ |                                            0 | +———————————————-+ 1 row in set (4.74 sec) 报告的时间是客户端的经过时间，不是在服务器端的CPU时间。执行BENCHMARK()若干次可能是明智的，并且注意服务器机器的负载有多重来解释结果。 与GROUP BY子句一起使用的函数 如果你在不包含GROUP BY子句的一个语句中使用聚合函数，它等价于聚合所有行。 COUNT(expr) 返回由一个SELECT语句检索出来的行的非NULL值的数目。 mysql&gt; select student.student_name,COUNT(<em>) from student,course where student.student_id=course.student_id GROUP BY student_name; COUNT(</em>)在它返回的检索出来的行数目上有些不同，不管他们是否包含NULL值。如果SELECT从一个表检索，或没有检索出其他列并且没有WHERE子句，COUNT(<em>)被优化以便快速地返回。例如： mysql&gt; select COUNT(</em>) from student; COUNT(DISTINCT expr,[expr]) 返回一个不同值的数目。 mysql&gt; select COUNT(DISTINCT results) from student; 在MySQL中，你可以通过给出一个表达式列表以得到不同的表达式组合的数目。在 ANSI SQL中，你可能必须在CODE(DISTINCT ..)内进行所有表达式的连接。 AVG(expr) 返回expr的平均值。 mysql&gt; select student_name, AVG(test_score) from student GROUP BY student_name; MIN(expr) 　 MAX(expr) 返回expr的最小或最大值。MIN()和MAX()可以有一个字符串参数；在这种的情况下，他们返回最小或最大的字符串值。 mysql&gt; select student_name, MIN(test_score), MAX(test_score) from student GROUP BY student_name; SUM(expr) 返回expr的和。注意，如果返回的集合没有行，它返回NULL！ STD(expr) 　 STDDEV(expr) 返回expr标准差(deviation)。这是对 ANSI SQL 的扩展。该函数的形式STDDEV()是提供与Oracle的兼容性。 BIT_OR(expr) 返回expr里所有位的位或。计算用 64 位(BIGINT)精度进行。 BIT_AND(expr) 返回expr里所有位的位与。计算用 64 位(BIGINT)精度进行。 MySQL扩展了GROUP BY的用法。你可以不出现在的GROUP BY部分的SELECT表达式中使用列或计算，这表示这个组的任何可能值。你可以使用它是性能更好，避免在不必要的项目上排序和分组。例如，你在下列查询中不需要在customer.name上聚合： mysql&gt; select order.custid,customer.name,max(payments) from order,customer where order.custid = customer.custid GROUP BY order.custid; 在 ANSI SQL中，你将必须将customer.name加到GROUP BY子句。在MySQL中，名字是冗余的。 如果你从GROUP BY部分省略的列在组中不是唯一的，不要使用这个功能。 在某些情况下，你可以使用MIN()和MAX()获得一个特定的列值，即使它不是唯一的。下例给出从包含sort列中最小值的行的column值： substr(MIN(concat(sort,space(6-length(sort)),column),7,length(column))) 注意，如果你正在使用MySQL 3.22(或更早)或如果你正在试图遵从ANSI SQL，你不能在GROUP BY或ORDER BY子句中使用表达式。你可以通过使用表达式的一个别名解决此限制： mysql&gt; SELECT id,FLOOR(value/100) AS val FROM tbl_name GROUP BY id,val ORDER BY val; 在MySQL3.23中，你可以这样做： mysql&gt; SELECT id,FLOOR(value/100) FROM tbl_name ORDER BY RAND(); 复制代码 学习的语句 /<strong><strong><strong>**</strong></strong></strong>字符串函数<strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong>/ select insert(‘ring’,2,0,’ok’); /<em>从2的地方插入ok字符，插入时替换0个字符</em>/ select repeat(‘ring’,2); /<em>重复输出字符串2次</em>/ select REVERSE(‘ring’); /<em>反写</em>/ select mid(‘ring’,2,2);/<em>从某个位置取某个长度的字符</em>/ select instr(‘ring’,’i’);/<em>查找字符</em>/ select replace(‘very good’,’o’,’O’); /<em>替换所有的字符</em>/ select LENGTH(‘very good’); /<em>返回字符串长度</em>/ select ascii(‘abc’);/<em>返回最左边的字符ascii码</em>/ select space(3);/<em>产生3次空格</em>/ select CONCAT(‘ri’,’n’,’g’,’ wang’); /<em>组合成字符串</em>/ select lcase(‘RING’); /<em>小写</em>/ select ucase(‘ring’); /<em>转换成大写</em>/ select substring_index(user(),‘@’,1); /<em>提取当前的用户名,表示提取@左边第一出现的字符，如果后面的为负数则提取右边的字符</em>/ /<strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong>数学函数<strong><strong><strong><strong>**</strong></strong></strong></strong>/ select conv(‘ee’,16,10); /<em>将’ee’从16转换成10，16和10可以是任意进制</em>/ select bin(10); /*2进制*/ select hex(10); /*16进制*/ select oct(10); /*10进制*/ select round(12.5678,2); /<em>将小数保留两位，四舍五入</em>/ select round(123.8767); /<em>转换为整形，因为没有小数位</em>/ select char(65,66,99); /<em>将ascill码组合成字符串</em>/ select least(3,6,5,1); /<em>最小数字</em>/ select greatest(6,3,2,8,3,1);  /<em>最大数字</em>/ select power(2,3); /*2的3次幂*/ select sqrt(9); /<em>开方</em>/ select pi(); /<em>圆周率 </em>/ select RAND(11); /<em>返回0-1的随机数，指定种子，每次的数都一样</em>/ select rand();  /<em>没有指定种子，默认为时间为种子</em>/ /<strong><em>**</em></strong>日期时间函数<strong><strong><strong><strong>*</strong></strong></strong></strong>/ select now(); select to_days(‘2008-07-6’); /<em>转换成天数</em>/ select to_days(‘2008-8-8’)-to_days(now());/<em>相差的天数</em>/ select day(now());/<em>该日期中的时，分，秒，天，月，年 hour(),minute(),second(),month(),year()</em>/ select dayofyear(‘2008-2-2’); /<em>返回该年已过的天数</em>/ select monthname(now()); /<em>返回月的英文名</em>/ select dayname(now());/<em>星期几的英文名</em>/ select week(now(),0); /<em>表示当前的日期是第几周，后面的数字0表示从周日开始算，1表示从周一开始算</em>/ select from_days(734215); /<em>返回该天数表示的日期</em>/ select DATEDIFF(now(),’2008-8-8’); /<em>前面的日期减去后面的日期所得的天数</em>/ select date_add(now(),interval 2 day); /<em>表示给当前的日期加2天</em>/ select date_add(now(),interval 2 month); /<em>表示给当前的日期加2个月</em>/ select CURRENT_DATE(); /<em>当前日期，短格式</em>/ select CURRENT_TIME();/<em>当前的时间</em>/ select current_user();/<em>当前的用户</em>/ select date_format(now(),’%Y-%m-%d %H:%i:%s’);/<em>日期的格式，Y表示4位，H表示24小时制</em>/ select date_format(now(),’%T’); /<em>只显示时间，没有日期，T表示24小时制,r表示12小时制</em>/ select date_format(‘2008-08-08 14:08:08’,’%Y-%m-%d’); /<em>显示日期部分，时间不要</em>/ select date_format(now(),’%Y-%m-%d %H:%i:%s %W’); /<em>带日期的</em>/ select date_format(‘2008-8-8’,’%W’);/<em>该日期的星期几</em>/ /<strong><strong>***</strong></strong>其他函数<strong><strong><strong><em>**</em></strong></strong></strong>/ select database();/<em>返回当前的数据库名字</em>/ select substring_index(CURRENT_USER(),‘@’,1);/<em>提取当前的用户名</em>/ select password(‘123’); /*mysql的加密方式*/ select MD5(‘123’);/*32位的md5加密*/ select LAST_INSERT_ID();/<em>返回最后一次自动产生的ID值</em>/ select format(123456789.565378,4);/<em>输出123,456,789.5654有四舍五入</em>/ /<strong><strong><strong>***</strong></strong></strong>控制流函数<strong><strong><strong>*</strong></strong></strong>/ select if(1,2,3);/<em>如果第一参数为空则输入第三参数，否则输入第二个参数,后面的参数可以是字符,第一为整形</em>/ select ifnull(null,2); /<em>如果第一参数为空则输出第二个参数，否则输出第一参数</em>/ select name, case when age&lt;=20 then ‘年轻’ when age&lt;=40 then ‘壮年’ when age&lt;=50 then ‘中年’ else ‘老年’ end as ‘agestr’, date_format(adddate,’%Y-%m-%d’) as ‘adddate’ from users; /*case 语句的用法*/</d></p>
+
+            
+            <p class="more">
+                <a href="/2015/12/22/2019030500073/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/22/2019030500073/" title="MySQL函数">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/16/2019030500100/">
+    		MySQL数据库调优分享
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-16T03:13:15.000Z">2015-12-16</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/数据库/" title="数据库">数据库</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>日常的困扰 *<em>反映查询某个数据越来越慢，怎么办？ 数据库监控页面显示某个操作频繁执行，每次执行都非常耗时，怎么办？ 1.Sql优化 2.合理使用索引 一、sql优化—常用方法 1）not in 子查询优化 2）模糊匹配 like ‘%abc%’ 3）limit分页优化 4）count(</em>)统计数据如何加快速度 5）or条件如何优化 6）用where子句代替having子句 1、not in 子查询优化 SELECT count(<em>) FROM t_cps t1  where t1.flag&gt;=2 and  sample_md5 not in (select sample_hash from t_sfa_sample  t2 where t2.sample_hash=t1.sample_md5); -1052661行记录 33.530s SELECT count(</em>) FROM t_cps t1  where t1.flag&gt;=2 and not exists(select sample_hash from t_sfa_sample   t2 where t2.sample_hash=t1.sample_md5); -1052661行记录 18.617s SELECT count(<em>) FROM t_cps t1 left join t_sfa_sample t2 on t1.sample_md5=t2.sample_hash where t1.flag&gt;=2  and t2.sample_hash is null; -1052661行记录 14.544s 生产环境中，尽量避免使用子查询，可用表连接join代替。可避免mysql在内存中创建临时表 in和exists SELECT count(</em>) FROM t_cps t1  where t1.flag&gt;=2 and  sample_md5  in (select sample_hash  from t_sfa_sample   t2 where t2.sample_hash=t1.sample_md5); 1227992行记录 30.762s SELECT count(<em>) FROM t_cps t1  where t1.flag&gt;=2 and  exists (select sample_hash from t_sfa_sample   t2 where t2.sample_hash=t1.sample_md5); 1227992行记录 15.581s in和exists执行时: in是先执行子查询中的查询，然后再执行主查询。 exists是先执行主查询，即外层表的查询，然后再执行子查询 exists 和 in 在执行时效率单从执行时间来说差不多，exists要稍微优于in。在使用时一般应该是用exists而不用in 而在not in 和 not exists比较时，not exists的效率要比not in的效率要高。 但也有少数时候并非如此。 建议是尽量多使用exists和not exists，少用in 和not in 2、模糊匹配 like ‘%abc%’ mysql&gt; explain select </em> from update_log_test where msg like ‘e%’; +—-+————-+—————–+——-+—————+———+———+——+——+———————–+ | id | select_type | table           | type  | possible_keys | key     | key_len | ref  | rows | Extra                 | +—-+————-+—————–+——-+—————+———+———+——+——+———————–+ |  1 | SIMPLE      | update_log_test | range | idx_msg       | idx_msg | 768     | NULL |    1 | Using index condition | +—-+————-+—————–+——-+—————+———+———+——+——+———————–+ 1 row in set (0.00 sec) mysql&gt; explain select <em> from update_log_test where msg like ‘%e%’; +—-+————-+—————–+——+—————+——+———+——+——+————-+ | id | select_type | table           | type | possible_keys | key  | key_len | ref  | rows | Extra       | +—-+————-+—————–+——+—————+——+———+——+——+————-+ |  1 | SIMPLE      | update_log_test | ALL  | NULL          | NULL | NULL    | NULL |    4 | Using where | +—-+————-+—————–+——+—————+——+———+——+——+————-+ 1 row in set (0.00 sec) like ‘abc%’可以用到索引，但like‘%abc%’却不行。 SELECT </em> FROM books  WHERE name like “MySQL%” ; 但是如果换用下面的查询，返回的结果一样，但速度就要快上很多： SELECT <em> FROM books  WHERE name&gt;=”MySQL”and name&lt;”MySQM” ; 补充：explain列的解释 table  显示这一行的数据是关于哪张表的 type   这是重要的列，显示连接使用了何种类型。从最好到最差的连接类型为const、eq_reg、ref、range、index和ALL possible_keys  显示可能应用在这张表中的索引。如果为空，没有可能的索引。 key 实际使用的索引。如果为NULL，则没有使用索引。很少的情况下，MYSQL会选择优化不足的索引。这种情况下，可以在SELECT语句中使用USE INDEX（indexname）来强制使用一个索引或者用IGNORE INDEX（indexname）来强制MYSQL忽略索引 key_len  使用的索引的长度。在不损失精确性的情况下，长度越短越好 ref     显示索引的哪一列被使用了，显示了哪些字段或者常量被用来和 key配合从表中查询记录出来。 rows   MYSQL认为必须检查的用来返回请求数据的行数 Extra  关于MYSQL如何解析查询的额外信息。这里可以看到的坏的例子是Using temporary和Using filesort，意思MYSQL根本不能使用索引，检索会很慢 type不同连接类型的解释（按照效率高低的顺序排序） const   索引可以是主键或惟一索引，因为只有一行，这个值实际就是常数，因为MYSQL先读这个值然后把它当做常数来对待 mysql&gt; explain select </em> from update_log_20141111 where id=2; +—-+————-+———————+——-+—————+———+———+——-+——+——-+ | id | select_type | table               | type  | possible_keys | key     | key_len | ref   | rows | Extra | +—-+————-+———————+——-+—————+———+———+——-+——+——-+ |  1 | SIMPLE      | update_log_20141111 | const | PRIMARY       | PRIMARY | 4       | const |    1 | NULL  | +—-+————-+———————+——-+—————+———+———+——-+——+——-+ eq_ref     从前面的表中，对每一个记录的联合都从表中读取一个记录，它在查询使用了索引为主键或惟一键的全部时使用 mysql&gt; explain select <em> from t1,t2 where t1.id=t2.id; +—-+————-+——-+——–+—————+———+———+————+——+——-+ | id | select_type | table | type   | possible_keys | key     | key_len | ref        | rows | Extra | +—-+————-+——-+——–+—————+———+———+————+——+——-+ |  1 | SIMPLE      | t2    | ALL    | PRIMARY       | NULL    | NULL    | NULL       |    9 | NULL  | |  1 | SIMPLE      | t1    | eq_ref | PRIMARY       | PRIMARY | 4       | test.t2.id |    1 | NULL  | +—-+————-+——-+——–+—————+———+———+————+——+——-+ 2 rows in set (0.00 sec) ref      只有在查询使用了不是惟一或主键的键或者是这些类型的部分（比如，利用最左边前缀）时发生。对于之前的表的每一个行联合，全部记录都将从表中读出。这个类型严重依赖于根据索引匹配的记录多少—越少越好 mysql&gt; explain select </em> from update_log_20141110 t1,update_log_test t2 where t1.action=t2.action; +—-+————-+——-+——+—————+———-+———+—————-+——+————-+ | id | select_type | table | type | possible_keys | key      | key_len | ref            | rows | Extra       | +—-+————-+——-+——+—————+———-+———+—————-+——+————-+ |  1 | SIMPLE      | t1    | ALL  | i_action      | NULL     | NULL    | NULL           |    2 | Using where | |  1 | SIMPLE      | t2    | ref  | i_action      | i_action | 2       | test.t1.action |    1 | NULL        | +—-+————-+——-+——+—————+———-+———+—————-+——+————-+ 2 rows in set (0.00 sec) range   返回一个范围中的行，比如使用&gt;或&lt;查找东西时 mysql&gt; explain select <em> from t1 where id&gt;=9900 order by id limit 10; +—-+————-+——-+——-+—————+———+———+——+——+————-+ | id | select_type | table | type  | possible_keys | key     | key_len | ref  | rows | Extra       | +—-+————-+——-+——-+—————+———+———+——+——+————-+ |  1 | SIMPLE      | t1    | range | PRIMARY       | PRIMARY | 4       | NULL |  101 | Using where | +—-+————-+——-+——-+—————+———+———+——+——+————-+ 1 row in set (0.00 sec) index   对前面的表中的每一个记录联合进行完全扫描（比ALL更好，因为索引一般小于表数据） ALL      对每一个记录联合进行完全扫描，这一般比较糟糕，应该尽量避免 Extra 列返回的描述的意义 Distinct  一旦MYSQL找到了与行相联合匹配的行，就不再搜索了 Not exists  MYSQL优化了LEFT JOIN，一旦它找到了匹配LEFT JOIN标准的行，就不再搜索 Record（index map:#）没有找到理想的索引，因此对于从前面表中来的每一个行组合，MYSQL检查使用哪个索引，并用它来从表中返回行。这是使用索引的最慢的连接之一 Using filesort   看到这个的时候，查询就需要优化了。MYSQL需要进行额外的步骤来发现如何对返回的行排序。它根据连接类型以及存储排序键值和匹配条件的全部行的行指针来排序全部行 Using index  列数据是从仅仅使用了索引中的信息而没有读取实际的行动的表返回的，这发生在对表的全部的请求列都是同一个索引的部分的时候 Using temporary 看到这个的时候，查询需要优化了。这里，MYSQL需要创建一个临时表来存储结果，这通常发生在对不同的列集进行ORDER BY上，而不是GROUP BY上 Using where 使用了WHERE从句来限制哪些行将与下一张表匹配或者是返回给用户。如果不想返回表中的全部行，并且连接类型ALL或index，这就会发生，或者是查询有问题 3、limit分页优化 Select  </em> from t1 order by id limit 9900,10; 上面的语句，虽然用到了id索引，但是从第一行开始起定位至9900行，然后再扫描后10行，相当于进行了一次全扫描，显然效率不高。 Select <em> from t1 where id&gt;=9900 order by id limit 10; 利用id索引直接定位到9900行，然后在扫描出后10行，相当于一个range范围扫描 mysql&gt; explain select  </em> from t1 order by id limit 9900,10; +—-+————-+——-+——-+—————+———+———+——+——+——-+ | id | select_type | table | type  | possible_keys | key     | key_len | ref  | rows | Extra | +—-+————-+——-+——-+—————+———+———+——+——+——-+ |  1 | SIMPLE      | t1    | index | NULL          | PRIMARY | 4       | NULL | 9910 | NULL  | +—-+————-+——-+——-+—————+———+———+——+——+——-+ 1 row in set (0.00 sec) mysql&gt; explain select <em> from t1 where id&gt;=9900 order by id limit 10; +—-+————-+——-+——-+—————+———+———+——+——+————-+ | id | select_type | table | type  | possible_keys | key     | key_len | ref  | rows | Extra       | +—-+————-+——-+——-+—————+———+———+——+——+————-+ |  1 | SIMPLE      | t1    | range | PRIMARY       | PRIMARY | 4       | NULL |  101 | Using where | +—-+————-+——-+——-+—————+———+———+——+——+————-+ 1 row in set (0.00 sec) 4、count(</em>)统计数据如何加快速度 select count(<em>)  from update_log; select count(</em>)  from update_log  where sid&gt;=0; 利用辅助索引 select count(distinct k) from t; select count(<em>) from (select distinct k from t) tmp;  利用索引来做排重操作。 注意：innodb count（</em>）必须全表扫，而不像myisam那样有一个计数器，直接从中取出数据。Innodb必须要全表扫一次才能得到count，而且会锁表。 5、or条件如何优化 select <em> from user where name=’d’ or age=31; name和age都建立了索引，但explain发现这个or条件用不到索引。 改成union all结果集合并 select </em> from user where name=’d’ union all select <em> from user where age=31; 6、用where子句代替having子句 select </em> from user group by id having id&gt;40 limit 3; select <em> from user where id&gt;40 group by id limit 3; having只会在检索出所有记录之后才对结果集进行过滤。这个处理需要排序、总计等操作。 如果能通过where子句限制记录的数目，那就能减少这方面的开销。 SQL优化的一般步骤 1、通过 show status 命令了解各种SQL的执行频率 show status like ‘uptime’ 当前MySQL运行时间 show status like ‘com_select’ 当前MySQL执行了多少次查询 show status like ‘com_insert’ 当前MySQL执行了多少次添加 show status like ‘com_update’ 当前MySQL执行了多少次更新 show status like ‘com_delete’ 当前MySQL执行了多少次删除 show status 语法： show [session|global] status like ‘’; 如果不写 [session|global] 表示默认是 session 指取出当前窗口的执行情况 如果想看所有(mysql启动到现在)的情况 加上 global show global status like ‘com_insert’; 2、 定位执行效率较低的SQL语句 （重点select） 3、通过 explain 分析低效率的SQL语句的执行情况 4、确定问题并采取相应的优化措施 二、合理使用索引 使用索引，why? 单列索引和联合索引 字段使用函数，将不能走索引 当取出的数据量超过表中数据的20%，索引是否有效？ order by 和group by优化 全文索引 1、适当的索引对应用的性能来说至关重要。 2、索引只对select有加速作用，但对写入（insert,update、delete）操作会带来额外的开销，如果带有一个或多个索引，那么数据更新的时候，mysql也要更新各个索引。 3、并不是所有经常查询的列都适合创建索引，区分度不高的，通常走全表扫浏览会更快。例如性别，只有男女两种，就不适合。 4、一条sql只能用一个索引，如果有多个，优化器会选择最优的。 1、单列索引和联合索引 mysql&gt; create index i_s_time on update_log(server,time); 联合索引要遵循最左侧原则 mysql&gt; explain select </em> from update_log where server=’115.29.138.24’ and time=’13:00:00’; +—-+————-+————+——+—————–+———-+———+————-+——+———————–+ | id | select_type | table      | type | possible_keys   | key      | key_len | ref         | rows | Extra                 | +—-+————-+————+——+—————–+———-+———+————-+——+———————–+ |  1 | SIMPLE      | update_log | ref  | i_time,i_s_time | i_s_time | 50      | const,const |    7 | Using index condition | +—-+————-+————+——+—————–+———-+———+————-+——+———————–+ 1 row in set (0.00 sec) mysql&gt; explain select <em> from update_log where server=’115.29.138.24’; +—-+————-+————+——+—————+———-+———+——-+———+———————–+ | id | select_type | table      | type | possible_keys | key      | key_len | ref   | rows    | Extra                 | +—-+————-+————+——+—————+———-+———+——-+———+———————–+ |  1 | SIMPLE      | update_log | ref  | i_s_time      | i_s_time | 46      | const | 2653264 | Using index condition | +—-+————-+————+——+—————+———-+———+——-+———+———————–+ 1 row in set (0.00 sec) mysql&gt; explain select </em> from update_log where server=’115.29.138.24’ and client=’14.197.74.21’ and time=’13:00:00’; +—-+————-+————+——+—————–+———-+———+————-+——+————————————+ | id | select_type | table      | type | possible_keys   | key      | key_len | ref         | rows | Extra                              | +—-+————-+————+——+—————–+———-+———+————-+——+————————————+ |  1 | SIMPLE      | update_log | ref  | i_time,i_s_time | i_s_time | 50      | const,const |    7 | Using index condition; Using where | +—-+————-+————+——+—————–+———-+———+————-+——+————————————+ 1 row in set (0.00 sec) mysql&gt; explain select <em> from update_log where  time=’13:00:00’; +—-+————-+————+——+—————+——+———+——+———-+————-+ | id | select_type | table      | type | possible_keys | key  | key_len | ref  | rows     | Extra       | +—-+————-+————+——+—————+——+———+——+———-+————-+ |  1 | SIMPLE      | update_log | ALL  | NULL          | NULL | NULL    | NULL | 21615394 | Using where | +—-+————-+————+——+—————+——+———+——+———-+————-+ 1 row in set (0.00 sec) 2、字段使用函数，将不能走索引 –mysql目前还不支持函数索引 mysql&gt; explain select </em> from update_log where year(date)&lt;2014; +—-+————-+————+——+—————+——+———+——+———-+————-+ | id | select_type | table      | type | possible_keys | key  | key_len | ref  | rows     | Extra       | +—-+————-+————+——+—————+——+———+——+———-+————-+ |  1 | SIMPLE      | update_log | ALL  | NULL          | NULL | NULL    | NULL | 21615394 | Using where | +—-+————-+————+——+—————+——+———+——+———-+————-+ 1 row in set (0.00 sec) 在where后面的查询条件字段使用了date()函数，是不会用到索引的。 mysql&gt; explain select <em> from update_log where date&lt;’2014-01-01’; +—-+————-+————+——-+—————+——+———+——+——+———————–+ | id | select_type | table      | type  | possible_keys | key  | key_len | ref  | rows | Extra                 | +—-+————-+————+——-+—————+——+———+——+——+———————–+ |  1 | SIMPLE      | update_log | range | date          | date | 4       | NULL |    1 | Using index condition | +—-+————-+————+——-+—————+——+———+——+——+———————–+ 1 row in set (0.00 sec) 同样的情形也会发生在对数值型字段进行计算的时候： SELECT </em> FROM t1  WHERE Amount/7&lt;24; SELECT <em> FROM t1  WHERE Amount&lt;24\</em>7; 3、无引号导致全表扫描，无法使用索引 mysql&gt; explain select * from update_log_test where msg=123; +—-+————-+—————–+——+—————+——+———+——+——+————-+ | id | select_type | table           | type | possible_keys | key  | key_len | ref  | rows | Extra       | +—-+————-+—————–+——+—————+——+———+——+——+————-+ |  1 | SIMPLE      | update_log_test | ALL  | i_msg         | NULL | NULL    | NULL |    4 | Using where | +—-+————-+—————–+——+—————+——+———+——+——+————-+ 1 row in set (0.00 sec) mysql&gt; explain select <em> from update_log_test where msg=’yoyo’; +—-+————-+—————–+——+—————+——-+———+——-+——+———————–+ | id | select_type | table           | type | possible_keys | key   | key_len | ref   | rows | Extra                 | +—-+————-+—————–+——+—————+——-+———+——-+——+———————–+ |  1 | SIMPLE      | update_log_test | ref  | i_msg         | i_msg | 768     | const |    1 | Using index condition | +—-+————-+—————–+——+—————+——-+———+——-+——+———————–+ 由于msg是varchar类型，因此查询的时候，必须加‘’ 数字当字符类型使用时，也一定要加上。 4、当取出的数据量超过表中数据的20%，优化器认为全表扫更快，不会走索引 mysql&gt; explain select </em> from update_log where time&lt;’14:00:00’; +—-+————-+————+——+—————+——+———+——+———-+————-+ | id | select_type | table      | type | possible_keys | key  | key_len | ref  | rows     | Extra       | +—-+————-+————+——+—————+——+———+——+———-+————-+ |  1 | SIMPLE      | update_log | ALL  | i_time        | NULL | NULL    | NULL | 21615394 | Using where | +—-+————-+————+——+—————+——+———+——+———-+————-+ 1 row in set (0.00 sec) mysql&gt; explain select <em> from update_log where time&lt;’14:00:00’ and time&gt;’13:00:00’; +—-+————-+————+——-+—————+——–+———+——+———+———————–+ | id | select_type | table      | type  | possible_keys | key    | key_len | ref  | rows    | Extra                 | +—-+————-+————+——-+—————+——–+———+——+———+———————–+ |  1 | SIMPLE      | update_log | range | i_time        | i_time | 4       | NULL | 3013332 | Using index condition | +—-+————-+————+——-+—————+——–+———+——+———+———————–+ 1 row in set (0.00 sec) 5、order by 和group by优化 mysql&gt; explain select </em> from update_log where server=’115.29.138.24’ order by time; +—-+————-+————+——+—————+——+———+——+———-+—————————–+ | id | select_type | table      | type | possible_keys | key  | key_len | ref  | rows     | Extra                       | +—-+————-+————+——+—————+——+———+——+———-+—————————–+ |  1 | SIMPLE      | update_log | ALL  | NULL          | NULL | NULL    | NULL | 21615394 | Using where; Using filesort | +—-+————-+————+——+—————+——+———+——+———-+—————————–+ 1 row in set (0.00 sec) 创建联合索引 mysql&gt; create index i_s_time on update_log(server,time); Query OK, 0 rows affected (3 min 18.94 sec) Records: 0  Duplicates: 0  Warnings: 0 mysql&gt; explain select <em> from update_log where server=’115.29.138.24’ order by time; +—-+————-+————+——+—————+———-+———+——-+———+————————————+ | id | select_type | table      | type | possible_keys | key      | key_len | ref   | rows    | Extra                              | +—-+————-+————+——+—————+———-+———+——-+———+————————————+ |  1 | SIMPLE      | update_log | ref  | i_s_time      | i_s_time | 46      | const | 2653264 | Using index condition; Using where | +—-+————-+————+——+—————+———-+———+——-+———+————————————+ 1 row in set (0.01 sec) 如果order by 后面有多个字段排序，它们的顺序要一致，如果一个是降序，一个是升序，也会出现using filesort排序。 6、全文索引 全文索引：主要是针对文件，文本的索引，比如文章(5.6开始innodb也支持） 字段类型：char、varchar、text 全文搜索通过 MATCH() 函数完成. mysql&gt; create table articles( -&gt; id int unsigned auto_increment not null primary key, -&gt; title varchar(200), -&gt; body text, -&gt; fulltext(title,body)); Query OK, 0 rows affected (0.05 sec) mysql&gt; INSERT INTO articles VALUES -&gt; (NULL,’MySQL Tutorial’, ‘DBMS stands for DataBase …’), -&gt;  (NULL,’How To Use MySQL Efficiently’, ‘After you went through a …’), -&gt; (NULL,’Optimising MySQL’,’In this tutorial we will show …’), -&gt; (NULL,’1001 MySQL Tricks’,’1. Never run mysqld as root. 2. …’), -&gt; (NULL,’MySQL vs. YourSQL’, ‘In the following database comparison …’), -&gt; (NULL,’MySQL Security’, ‘When configured properly, MySQL …’); Query OK, 6 rows affected (0.01 sec) Records: 6  Duplicates: 0  Warnings: 0 mysql&gt; explain select </em> from articles where match(title,body) against(‘database’); +—-+————-+———-+———-+—————+——-+———+——+——+————-+ | id | select_type | table    | type     | possible_keys | key   | key_len | ref  | rows | Extra       | +—-+————-+———-+———-+—————+——-+———+——+——+————-+ |  1 | SIMPLE      | articles | fulltext | title         | title | 0       | NULL |    1 | Using where | +—-+————-+———-+———-+—————+——-+———+——+——+————-+ 1 row in set (0.00 sec) 但如果某个单词单词出现在至少全文的50%的行中，它会被列入停止字。对于大型数据集，使用这个操作最合适不过了—-一个自然语言问询不会从一个1GB 的表每隔一行返回一次。对于小型数据集，它的用处可能比较小。不是大型的数据量，就不要用他，影响插入速度 7、mysql 5.6支持explain update/delete mysql&gt; explain update update_log_test set msg=’gugu’ where id=4; +—-+————-+—————–+——-+—————+———+———+——-+——+————-+ | id | select_type | table           | type  | possible_keys | key     | key_len | ref   | rows | Extra       | +—-+————-+—————–+——-+—————+———+———+——-+——+————-+ |  1 | SIMPLE      | update_log_test | range | PRIMARY       | PRIMARY | 4       | const |    1 | Using where | +—-+————-+—————–+——-+—————+———+———+——-+——+————-+ 1 row in set (0.01 sec) mysql&gt; explain delete from update_log_test  where id=4; +—-+————-+—————–+——-+—————+———+———+——-+——+————-+ | id | select_type | table           | type  | possible_keys | key     | key_len | ref   | rows | Extra       | +—-+————-+—————–+——-+—————+———+———+——-+——+————-+ |  1 | SIMPLE      | update_log_test | range | PRIMARY       | PRIMARY | 4       | const |    1 | Using where | +—-+————-+—————–+——-+—————+———+———+——-+——+————-+ 1 row in set (0.00 sec) 8、mysql5.6优化了合并索引 mysql&gt; explain select <em> from update_log where date=’2014-11-12’ or time=’14:00:00’; +—-+————-+————+————-+—————+————-+———+——+———-+—————————————+ | id | select_type | table      | type        | possible_keys | key         | key_len | ref  | rows     | Extra                                 | +—-+————-+————+————-+—————+————-+———+——+———-+—————————————+ |  1 | SIMPLE      | update_log | index_merge | date,i_time   | date,i_time | 4,4     | NULL | 10808103 | Using union(date,i_time); Using where | +—-+————-+————+————-+—————+————-+———+——+———-+—————————————+ 1 row in set (0.01 sec) mysql&gt; explain select </em> from update_log where date=’2014-11-12’ union select * from update_log where time=’14:00:00’; +—-+————–+————+——+—————+——–+———+——-+———-+———————–+ | id | select_type  | table      | type | possible_keys | key    | key_len | ref   | rows     | Extra                 | +—-+————–+————+——+—————+——–+———+——-+———-+———————–+ |  1 | PRIMARY      | update_log | ref  | date          | date   | 4       | const | 10807697 | NULL                  | |  2 | UNION        | update_log | ref  | i_time        | i_time | 4       | const |      406 | Using index condition | | NULL | UNION RESULT | &lt;union1,2&gt; | ALL  | NULL          | NULL   | NULL    | NULL  |     NULL | Using temporary       | +—-+————–+————+——+—————+——–+———+——-+———-+———————–+ 3 rows in set (0.00 sec) 实际测试2条sql，or的执行时间是union执行时间的两倍。 1、union all 不一定就比 or及in 快，要结合实际情况分析到底使用哪种情况。 2、对于索引列来最好使用union all，因复杂的查询【包含运算等】将使or、in放弃索引而全表扫描，除非你能确定or、in会使用索引。 3、对于只有非索引字段来说你就老老实实的用or 或者in，因为 非索引字段本来要全表扫描而union all 只成倍增加表扫描的次数。 Union：对两个结果集进行并集操作，不包括重复行，同时进行默认规则的排序；Union All：对两个结果集进行并集操作，包括重复行，不进行排序； union因为要进行重复值扫描，所以效率低。</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/16/2019030500100/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/16/2019030500100/" title="MySQL数据库调优分享">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/07/2019030500107/">
+    		mysql集群
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-07T04:35:02.000Z">2015-12-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/集群/" title="集群">集群</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>五台服务器篇 安装要求 安装环境：CentOS-6.3 安装方式：源码编译安装 软件名称：mysql-cluster-gpl-7.2.6-linux2.6-x86_64.tar.gz 下载地址：<a href="http://mysql.mirror.kangaroot.net/Downloads/" target="_blank" rel="noopener">http://mysql.mirror.kangaroot.net/Downloads/</a> 软件安装位置：/usr/local/mysql 数据存放位置：/var/mysql/data 日志存放位置：/var/mysql/logs 集群设计 首先设计集群的安装分配方式，我共需要5台服务器，服务器分配如下： 管理节点：    192.168.15.231 sql节点1：   192.168.15.232 sql节点2：   192.168.15.233 数据节点1：  192.168.15.234 数据节点2：  192.168.15.235 设备的连接方式如下图所示： 注意：目前这种设计存在的问题是管理节点是单点的，231挂掉后整个集群就会瘫痪，先不管这个问题，首先把这个简单的MySQL集群先搭建起来。 检查安装的mysql 检查系统中已经安装过的mysql信息，操作如下： [root@localhost /]# rpm -qa | grep mysql [root@localhost /]# service mysql status 如果安装过其他版本的mysql，请卸载，操作如下： [root@localhost /]# /etc/init.d/mysqld    stop  //关闭目前的mysql服务 [root@localhost /]# ps    -ef | grep mysql  //检验mysql是否已经关闭 #如果没关闭，执行kill -9 端口号 #执行删除 rpm -e –allmatches    –nodeps mysql mysql-server rm -rf /var/lib/mysql  // 删除mysql的安装目录 管理节点 管理节点安装 安装管理节点（192.168.15.231） [root@localhost /]#    groupadd mysql [root@localhost /]#  useradd mysql -g mysql [root@localhost /]# cd    /usr/local [root@localhost local]#    tar -zxv -f mysql-cluster-gpl-7.2.6-linux2.6-x86_64.tar.gz [root@localhost local]#    mv mysql-cluster-gpl-7.2.6-linux2.6-x86_64 mysql [root@localhost local]#    chown -R mysql:mysql mysql [root@localhost local]#    cd mysql [root@localhost mysql]#    scripts/mysql_install_db –user=mysql 管理节点配置 [root@localhost ~]#  mkdir /var/lib/mysql-cluster [root@localhost ~]# cd    /var/lib/mysql-cluster [root@localhost mysql-cluster]#    vi + /var/lib/mysql-cluster/config.ini 在config.ini 中添加以下内容: [NDBD DEFAULT] NoOfReplicas=1 [TCP DEFAULT] portnumber=3306 [NDB_MGMD] #设置管理节点服务器 HostName=192.168.15.231 DataDir=/var/mysql/data [NDBD] #设置存储节点服务器(NDB节点) HostName=192.168.15.234 DataDir=/var/mysql/data [NDBD] #第二个NDB节点 HostName=192.168.15.235 DataDir=/var/mysql/data [MYSQLD] #设置SQL节点服务器 HostName=192.168.15.232 [MYSQLD] #第二个SQL节点 HostName=192.168.15.233 管理节点启动 [root@localhost ~]#/usr/local/mysql/bin/ndb_mgmd -f /var/lib/mysql-cluster/config.ini [root@localhost ~]# mkdir  /var/mysql/logs [root@localhost ~]# netstat -lntpu 看到tcp 0 0 0.0.0.0:1186开放说明启动正常 开启管理节点服务器的1186端口 管理节点检验 执行以下操作： [root@localhost /]# ndb_mgm     // 管理节点 – NDB Cluster – Management Client – ndb_mgm&gt; show Connected to Management Server at:    localhost:1186 Cluster Configuration ——————— [ndbd(NDB)]        2 node(s) id=2 (not connected, accepting connect from    192.168.15.234) id=3 (not connected, accepting connect from    192.168.15.235) [ndb_mgmd(MGM)] 1 node(s) id=1       @192.168.15.231  (mysql-5.5.22    ndb-7.2.6) [mysqld(API)]      2 node(s) id=4 (not connected, accepting connect from    192.168.15.232) id=5 (not connected, accepting connect from    192.168.15.233) 管理节点关闭 [root@localhost /]#    /usr/local/mysql/bin/ndb_mgm -e shutdown #成功后终端打印出以下信息 Connected to Management    Server at: 192.168.15.236:1186 3 NDB Cluster node(s)    have shutdown. Disconnecting to allow    management server to shutdown. 数据节点 数据节点安装 数据节点1： 192.168.15.234 数据节点2： 192.168.15.235 [root@localhost /]#    groupadd mysql [root@localhost /]#    useradd mysql -g mysql [root@localhost /]# cd    /usr/local [root@localhost local]#    tar -zxv -f mysql-cluster-gpl-7.2.6-linux2.6-x86_64.tar.gz [root@localhost local]#    mv mysql-cluster-gpl-7.2.6-linux2.6-x86_64 mysql [root@localhost local]#    chown -R mysql:mysql mysql [root@localhost local]#    cd mysql [root@localhost mysql]#    scripts/mysql_install_db –user=mysql [root@localhost mysql]#    cp support-files/my-medium.cnf /etc/my.cnf [root@localhost mysql]#    cp support-files/mysql.server /etc/init.d/mysqld 数据节点配置 对数据节点进行配置，执行以下操作： [root@localhost mysql]#    mkdir /var/mysql/data [root@localhost mysql]#    mkdir /var/mysql/logs [root@localhost mysql]#    vi /etc/my.cnf 向文件追加以下内容： [MYSQLD] ndbcluster ndb-connectstring=192.168.15.231 [MYSQL_CLUSTER] ndb-connectstring=192.168.15.231 [NDB_MGM] connect-string=192.168.15.231 数据节点启动 启动此处时，管理节点服务器防火墙必须开启1186,3306端口。 注意：只是在第一次启动或在备份／恢复或配置变化后重启ndbd时，才加–initial参数！ 第一次启动如下： [root@localhost mysql]#/usr/local/mysql/bin/ndbd –initial 2013-01-30 13:43:53    [ndbd] INFO     – Angel connected to    ‘192.168.15.231:1186’ 2013-01-30 13:43:53    [ndbd] INFO     – Angel allocated    nodeid: 2 正常启动方式： [root@localhost mysql]# /usr/local/mysql/bin/ndbd 数据节点关闭 [root@localhost /]# /etc/rc.d/init.d/mysqld stop 或者 [root@localhost mysql]# /etc/init.d/mysql stop Shutting down MySQL.. SUCCESS! /usr/local/mysql/bin/mysqladmin -uroot shutdown SQL节点安装 SQL节点安装 SQL节点和存储节点(NDB节点)安装相同，都执行以下操作； sql节点1： 192.168.15.232 sql节点2： 192.168.15.233 [root@localhost /]#    groupadd mysql [root@localhost /]#    useradd mysql -g mysql [root@localhost /]# cd    /usr/local [root@localhost local]#    tar -zxv -f mysql-cluster-gpl-7.2.6-linux2.6-x86_64.tar.gz [root@localhost local]#    mv mysql-cluster-gpl-7.2.6-linux2.6-x86_64 mysql [root@localhost local]# chown    -R mysql:mysql mysql [root@localhost local]#    cd mysql [root@localhost mysql]#    scripts/mysql_install_db –user=mysql [root@localhost mysql]#    cp support-files/my-medium.cnf /etc/my.cnf [root@localhost mysql]#    cp support-files/mysql.server /etc/init.d/mysqld SQL节点配置 执行以下操作： [root@localhost mysql]#    mkdir /var/mysql/data     //创建存储数据的文件夹 [root@localhost mysql]#    mkdir /var/mysql/logs     //创建存储日志的文件夹 [root@localhost mysql]#    vi /usr/local/mysql/my.cnf  //修改配置文件 追加以下内容： [MYSQLD] ndbcluster ndb-connectstring=192.168.15.231 [MYSQL_CLUSTER] ndb-connectstring=192.168.15.231 [NDB_MGM] connect-string=192.168.15.231 SQL节点启动 执行以下操作： [root@localhost    mysql]# service mysqld start Starting    MySQL.. SUCCESS! SQL节点关闭 最直接的方式： [root@localhost mysql]# /usr/local/mysql/bin/mysqladmin    -uroot shutdown [root@localhost /]# /etc/rc.d/init.d/mysqld stop 或者 [root@localhost mysql]# /etc/init.d/mysql stop Shutting down MySQL.. SUCCESS! 功能测试 在管理节点（192.168.15.231）上查看服务状态 [root@localhost ~]#    /usr/local/mysql/bin/ndb_mgm – NDB Cluster – Management Client – ndb_mgm&gt; show Cluster Configuration ——————— [ndbd(NDB)]        2 node(s) id=2       @192.168.15.234  (mysql-5.5.22    ndb-7.2.6, Nodegroup: 0, Master) id=3       @192.168.15.235  (mysql-5.5.22    ndb-7.2.6, Nodegroup: 1) [ndb_mgmd(MGM)] 1 node(s) id=1       @192.168.15.231  (mysql-5.5.22    ndb-7.2.6) [mysqld(API)]      2 node(s) id=4       @192.168.15.232  (mysql-5.5.22    ndb-7.2.6) id=5       @192.168.15.233  (mysql-5.5.22    ndb-7.2.6) 可以看到这里的数据节点、管理节点、sql节点都是正常的。 注意： 在建表的时候一定要用ENGINE=NDB或ENGINE=NDBCLUSTER指定使用NDB集群存储引擎，或用ALTER TABLE选项更改表的存储引擎。 NDB表必须有一个主键，因此创建表的时候必须定义主键，否则NDB存储引擎将自动生成隐含的主键。 Sql节点的用户权限表仍然采用MYISAM存储引擎保存的，所以在一个Sql节点创建的MySql用户只能访问这个节点，如果要用同样的用户访 问别的Sql节点，需要在对应的Sql节点追加用户。虽然在MySql Cluster7.2版本开始提供了”用户权限共享”。 数据同步性测试 在一个数据节点上进行相关数据库的创建，然后到另外一个数据节点上看看数据是否同步。 第1步： SQL节点1（192.168.15.232）上增加数据： [root@localhost    mysql]#  /etc/rc.d/init.d/mysqld status                //检验mysql是否运行 [root@localhost mysql]#    /etc/rc.d/init.d/mysqld start                   //启动mysql [root@localhost mysql]#    /usr/local/mysql/bin/mysql -u root -p Enter password: mysql&gt; show databases; mysql&gt; create database    testdb2; mysql&gt; use testdb2; mysql&gt; CREATE TABLE    td_test2 (i INT) ENGINE=NDB; //这里必须指定数据库表的引擎为NDBCLUSTER，与配置文件中的名称相同 mysql&gt; INSERT INTO    td_test2() VALUES (1); mysql&gt; INSERT INTO    td_test2() VALUES (152); mysql&gt; SELECT <em> FROM    td_test2; 第2步： 进入到SQL节点2（192.168.15.233）上查看数据 mysql&gt; use testdb2; Database changed mysql&gt; SELECT </em> FROM td_test2; +——+ | i    | +——+ |  126 | |    1 | +——+ 2 rows in set (0.01 sec) 查看表的引擎是不是NDB： &gt;show create table td_test2; 第3步： 反向测试，SQL节点2（192.168.15.233）上增加数据： mysql&gt; create database    bb; mysql&gt; use bb; mysql&gt; CREATE TABLE    td_test3 (i INT) ENGINE=NDB; mysql&gt; INSERT INTO    td_test3 () VALUES (98); mysql&gt; SELECT <em> FROM    td_test3; SQL节点1（192.168.15.232）上查看数据： mysql&gt;  use bb; Database changed mysql&gt;  SELECT </em> FROM td_test3; +——+ | i    | +——+ |   98 | +——+ 1 row in set (0.00 sec) 关闭集群 先关闭管理节点，然后关闭SQL节点和数据节点。 集群启动操作顺序 要再次启动集群，按照以下顺序执行： 管理节点 -&gt; 数据节点 –&gt; SQL节点注意：此次启动数据节点时不要加”–initial”参数。 安装及测试中的错误 启动中的错误 错误提示： Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (2) 解决办法1（端口占用） netstat -anp |grep 3306 kill -9 进程号 解决办法1（权限问题） [root@localhost mysql]# chown -R mysql:mysql /var/mysql          //修改自定义文件夹的访问权限 三台服务器篇 一、介绍 ======== 这篇文档旨在介绍如何安装配置基于2台服务器的MySQL集群。并且实现任意一台服务器出现问题或宕机时MySQL依然能够继续运行。 注意！ 虽 然这是基于2台服务器的MySQL集群，但也必须有额外的第三台服务器作为管理节点，但这台服务器可以在集群启动完成后关闭。同时需要注意的是 并不推荐在集群启动完成后关闭作为管理节点的服务器。尽管理论上可以建立基于只有2台服务器的MySQL集群，但是这样的架构，一旦一台服务器宕机之后集 群就无法继续正常工作了，这样也就失去了集群的意义了。出于这个原因，就需要有第三台服务器作为管理节点运行。 另外，可能很多朋友都没有3台服务器的实际环境，可以考虑在VMWare或其他虚拟机中进行实验。 下面假设这3台服务的情况： Server1: mysql1.vmtest.net 192.168.0.1 Server2: mysql2.vmtest.net 192.168.0.2 Server3: mysql3.vmtest.net 192.168.0.3 Servers1 和Server2作为实际配置MySQL集群的服务器。对于作为管理节点的Server3则要求较低，只需对Server3的系 统进行很小的调整并且无需安装MySQL，Server3可以使用一台配置较低的计算机并且可以在Server3同时运行其他服务。 二、在Server1和Server2上安装MySQL ================================= 从<a href="http://www.mysql.com上下载mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz" target="_blank" rel="noopener">http://www.mysql.com上下载mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz</a> 注意：必须是max版本的MySQL，Standard版本不支持集群部署！ 以下步骤需要在Server1和Server2上各做一次 # mv mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz /usr/local/ # cd /usr/local/ # groupadd mysql # useradd -g mysql mysql # tar -zxvf mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz # rm -f mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz # mv mysql-max-4.1.9-pc-linux-gnu-i686 mysql # cd mysql # scripts/mysql_install_db –user=mysql # chown -R root  . # chown -R mysql data # chgrp -R mysql . # cp support-files/mysql.server /etc/rc.d/init.d/mysqld # chmod +x /etc/rc.d/init.d/mysqld # chkconfig –add mysqld 此时不要启动MySQL！ 三、安装并配置管理节点服务器(Server3) ===================================== 作为管理节点服务器，Server3需要ndb_mgm和ndb_mgmd两个文件： 从<a href="http://www.mysql.com上下载mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz" target="_blank" rel="noopener">http://www.mysql.com上下载mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz</a> # mkdir /usr/src/mysql-mgm # cd /usr/src/mysql-mgm # tar -zxvf mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz # rm mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz # cd mysql-max-4.1.9-pc-linux-gnu-i686 # mv bin/ndb_mgm . # mv bin/ndb_mgmd . # chmod +x ndb_mg<em> # mv ndb_mg</em> /usr/bin/ # cd # rm -rf /usr/src/mysql-mgm 现在开始为这台管理节点服务器建立配置文件： # mkdir /var/lib/mysql-cluster # cd /var/lib/mysql-cluster # vi config.ini 在config.ini中添加如下内容： [NDBD DEFAULT] NoOfReplicas=2 [MYSQLD DEFAULT] [NDB_MGMD DEFAULT] [TCP DEFAULT] # Managment Server [NDB_MGMD] HostName=192.168.0.3 #管理节点服务器Server3的IP地址 # Storage Engines [NDBD] HostName=192.168.0.1 #MySQL集群Server1的IP地址 DataDir= /var/lib/mysql-cluster [NDBD] HostName=192.168.0.2 #MySQL集群Server2的IP地址 DataDir=/var/lib/mysql-cluster # 以下2个[MYSQLD]可以填写Server1和Server2的主机名。 # 但为了能够更快的更换集群中的服务器，推荐留空，否则更换服务器后必须对这个配置进行更改。 [MYSQLD] [MYSQLD] 保存退出后，启动管理节点服务器Server3： # ndb_mgmd 启动管理节点后应该注意，这只是管理节点服务，并不是管理终端。因而你看不到任何关于启动后的输出信息。 四、配置集群服务器并启动MySQL ============================= 在Server1和Server2中都需要进行如下改动： # vi /etc/my.cnf [mysqld] ndbcluster ndb-connectstring=192.168.0.3 #Server3的IP地址 [mysql_cluster] ndb-connectstring=192.168.0.3 #Server3的IP地址 保存退出后，建立数据目录并启动MySQL： # mkdir /var/lib/mysql-cluster # cd /var/lib/mysql-cluster # /usr/local/mysql/bin/ndbd –initial # /etc/rc.d/init.d/mysqld start 可以把/usr/local/mysql/bin/ndbd加到/etc/rc.local中实现开机启动。 注意：只有在第一次启动ndbd时或者对Server3的config.ini进行改动后才需要使用–initial参数！ 五、检查工作状态 ================ 回到管理节点服务器Server3上，并启动管理终端： # /usr/bin/ndb_mgm 键入show命令查看当前工作状态：（下面是一个状态输出示例） [root@mysql3 root]# /usr/bin/ndb_mgm – NDB Cluster – Management Client – ndb_mgm&gt; show Connected to Management Server at: localhost:1186 Cluster Configuration ——————— [ndbd(NDB)]     2 node(s) id=2    @192.168.0.1  (Version: 4.1.9, Nodegroup: 0, Master) id=3    @192.168.0.2  (Version: 4.1.9, Nodegroup: 0) [ndb_mgmd(MGM)] 1 node(s) id=1    @192.168.0.3  (Version: 4.1.9) [mysqld(API)]   2 node(s) id=4   (Version: 4.1.9) id=5   (Version: 4.1.9) ndb_mgm&gt; 如果上面没有问题，现在开始测试MySQL： 注意，这篇文档对于MySQL并没有设置root密码，推荐你自己设置Server1和Server2的MySQL root密码。 在Server1中： # /usr/local/mysql/bin/mysql -u root -p &gt; use test; &gt; CREATE TABLE ctest (i INT) ENGINE=NDBCLUSTER; &gt; INSERT INTO ctest () VALUES (1); &gt; SELECT * FROM ctest; 应该可以看到1 row returned信息（返回数值1）。 如果上述正常，则换到Server2上重复上面的测试，观察效果。如果成功，则在Server2中执行INSERT再换回到Server1观察是否工作正常。 如果都没有问题，那么恭喜成功！ 六、破坏性测试 ============== 将Server1或Server2的网线拔掉，观察另外一台集群服务器工作是否正常（可以使用SELECT查询测试）。测试完毕后，重新插入网线即可。 如果你接触不到物理服务器，也就是说不能拔掉网线，那也可以这样测试： 在Server1或Server2上： # ps aux | grep ndbd 将会看到所有ndbd进程信息： root      5578  0.0  0.3  6220 1964 ?        S    03:14   0:00 ndbd root      5579  0.0 20.4 492072 102828 ?     R    03:14   0:04 ndbd root     23532  0.0  0.1  3680  684 pts/1    S    07:59   0:00 grep ndbd 然后杀掉一个ndbd进程以达到破坏MySQL集群服务器的目的： # kill -9 5578 5579 之后在另一台集群服务器上使用SELECT查询测试。并且在管理节点服务器的管理终端中执行show命令会看到被破坏的那台服务器的状态。 测试完成后，只需要重新启动被破坏服务器的ndbd进程即可： # ndbd 注意！前面说过了，此时是不用加–inital参数的！ 至此，MySQL集群就配置完成了！</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/07/2019030500107/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/07/2019030500107/" title="mysql集群">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/07/2019030500156/">
+    		sql之left join、right join、inner join的区别
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-07T04:11:13.000Z">2015-12-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/left-join/" title="left join">left join</a> / 
+    
+        <a href="/tags/inner-join/" title="inner join">inner join</a> / 
+    
+        <a href="/tags/right-join/" title="right join">right join</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>left join(左联接) 返回包括左表中的所有记录和右表中联结字段相等的记录 right join(右联接) 返回包括右表中的所有记录和左表中联结字段相等的记录 inner join(等值连接) 只返回两个表中联结字段相等的行 举例如下： ——————————————– 表A记录如下： aID　　　　　aNum 1　　　　　a20050111 2　　　　　a20050112 3　　　　　a20050113 4　　　　　a20050114 5　　　　　a20050115 表B记录如下: bID　　　　　bName 1　　　　　2006032401 2　　　　　2006032402 3　　　　　2006032403 4　　　　　2006032404 8　　　　　2006032408 ——————————————– 1.left join sql语句如下: select <em> from A left join B on A.aID = B.bID 结果如下: aID　　　　　aNum　　　　　bID　　　　　bName 1　　　　　a20050111　　　　1　　　　　2006032401 2　　　　　a20050112　　　　2　　　　　2006032402 3　　　　　a20050113　　　　3　　　　　2006032403 4　　　　　a20050114　　　　4　　　　　2006032404 5　　　　　a20050115　　　　NULL　　　　　NULL （所影响的行数为 5 行） 结果说明: left join是以A表的记录为基础的,A可以看成左表,B可以看成右表,left join是以左表为准的. 换句话说,左表(A)的记录将会全部表示出来,而右表(B)只会显示符合搜索条件的记录(例子中为: A.aID = B.bID). B表记录不足的地方均为NULL. ——————————————– 2.right join sql语句如下: select </em> from A right join B on A.aID = B.bID 结果如下: aID　　　　　aNum　　　　　bID　　　　　bName 1　　　　　a20050111　　　　1　　　　　2006032401 2　　　　　a20050112　　　　2　　　　　2006032402 3　　　　　a20050113　　　　3　　　　　2006032403 4　　　　　a20050114　　　　4　　　　　2006032404 NULL　　　　　NULL　　　　　8　　　　　2006032408 （所影响的行数为 5 行） 结果说明: 仔细观察一下,就会发现,和left join的结果刚好相反,这次是以右表(B)为基础的,A表不足的地方用NULL填充. ——————————————– 3.inner join sql语句如下: select * from A innerjoin B on A.aID = B.bID 结果如下: aID　　　　　aNum　　　　　bID　　　　　bName 1　　　　　a20050111　　　　1　　　　　2006032401 2　　　　　a20050112　　　　2　　　　　2006032402 3　　　　　a20050113　　　　3　　　　　2006032403 4　　　　　a20050114　　　　4　　　　　2006032404 结果说明: 很明显,这里只显示出了 A.aID = B.bID的记录.这说明inner join并不以谁为基础,它只显示符合条件的记录. ——————————————– 注: LEFT JOIN操作用于在任何的 FROM 子句中，组合来源表的记录。使用 LEFT JOIN 运算来创建一个左边外部联接。左边外部联接将包含了从第一个（左边）开始的两个表中的全部记录，即使在第二个（右边）表中并没有相符值的记录。 语法：FROM table1 LEFT JOIN table2 ON table1.field1 compopr table2.field2 说明：table1, table2参数用于指定要将记录组合的表的名称。 field1, field2参数指定被联接的字段的名称。且这些字段必须有相同的数据类型及包含相同类型的数据，但它们不需要有相同的名称。 compopr参数指定关系比较运算符：”=”， “&lt;”， “&gt;”， “&lt;=”， “&gt;=” 或 “&lt;&gt;”。 如果在INNER JOIN操作中要联接包含Memo 数据类型或 OLE Object 数据类型数据的字段，将会发生错误.</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/07/2019030500156/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/07/2019030500156/" title="sql之left join、right join、inner join的区别">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/04/2019030500066/">
+    		MySQL主从复制（Master-Slave）与读写分离
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-04T05:31:11.000Z">2015-12-04</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/Master/" title="Master">Master</a> / 
+    
+        <a href="/tags/Slave/" title="Slave">Slave</a> / 
+    
+        <a href="/tags/主从复制/" title="主从复制">主从复制</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1. 主从复制通过修改 mysql 配置文件实现。 2. 读写分离通过 Amoeba for Mysql/MySQL-Proxy <img src="/uploads/2015/12/42f7d87b-0c40-33a6-bc09-af7ff4f195f0.jpg" alt> 3. 4台服务器做的一套集群方案 <img src="/uploads/2015/12/935df5ae-e425-39c6-9bac-bbc9ab0c43de.png" alt> Amoeba for Mysql和 MySQL-Proxy： 1. Amoeba 是用JAVA写的功能异常强大，支持读写分离，表和库级别的读写分离，数据库水平分割，垂直分割，还有集群。 2.mysql-proxy 只是轻量级的读写分离程序C写的，驱动是需要lua的脚本跑，而且在高并发下经常挂掉。程序还忽略了一些字符设定，如果数据库不是同一编码还会出现乱码,amoeba就不存在 。 3. mysql proxy没有现成的 lua脚本。mysql proxy根本没有配置文件，lua脚本就是它的全部 。 而moeba for Mysql只需要进行相关的配置就可以满足需求</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/04/2019030500066/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/04/2019030500066/" title="MySQL主从复制（Master-Slave）与读写分离">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/03/2019030500090/">
+    		MySQL性能优化 - 修改配置文件my.cnf
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-03T06:45:30.000Z">2015-12-03</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/my-cnf/" title="my.cnf">my.cnf</a> / 
+    
+        <a href="/tags/优化/" title="优化">优化</a> / 
+    
+        <a href="/tags/性能/" title="性能">性能</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>在Apache, PHP, MySQL的体系架构中，MySQL对于性能的影响最大，也是关键的核心部分。对于Discuz!论坛程序也是如此，MySQL的设置是否合理优化，直接影响到论坛的速度和承载量！同时，MySQL也是优化难度最大的一个部分，不但需要理解一些MySQL专业知识，同时还需要长时间的观察统计并且根据经验进行判断，然后设置合理的参数。 下面我们了解一下MySQL优化的一些基础，MySQL的优化我分为两个部分，一是服务器物理硬件的优化，二是MySQL自身(my.cnf)的优化。 一、服务器硬件对MySQL性能的影响 ①磁盘寻道能力（磁盘I/O）,以目前高转速SCSI硬盘(7200转/秒)为例，这种硬盘理论上每秒寻道7200次，这是物理特性决定的，没有办法改变。MySQL每秒钟都在进行大量、复杂的查询操作，对磁盘的读写量可想而知。所以，通常认为磁盘I/O是制约MySQL性能的最大因素之一，对于日均访问量在100万PV以上的Discuz!论坛，由于磁盘I/O的制约，MySQL的性能会非常低下！解决这一制约因素可以考虑以下几种解决方案： 使用RAID-0+1磁盘阵列，注意不要尝试使用RAID-5，MySQL在RAID-5磁盘阵列上的效率不会像你期待的那样快。 ②CPU 对于MySQL应用，推荐使用S.M.P.架构的多路对称CPU，例如：可以使用两颗Intel Xeon 3.6GHz的CPU，现在我较推荐用4U的服务器来专门做数据库服务器，不仅仅是针对于mysql。 ③物理内存对于一台使用MySQL的Database Server来说，服务器内存建议不要小于2GB，推荐使用4GB以上的物理内存，不过内存对于现在的服务器而言可以说是一个可以忽略的问题，工作中遇到了高端服务器基本上内存都超过了16G。 二、MySQL自身因素当解决了上述服务器硬件制约因素后，让我们看看MySQL自身的优化是如何操作的。 对MySQL自身的优化主要是对其配置文件my.cnf中的各项参数进行优化调整。下面我们介绍一些对性能影响较大的参数。 由于my.cnf文件的优化设置是与服务器硬件配置息息相关的， 因而我们指定一个假想的服务器硬件环境：CPU: 2颗Intel Xeon 2.4GHz 内存: 4GB DDR 硬盘: SCSI 73GB(很常见的2U服务器 ) 。 下面，我们根据以上硬件配置结合一份已经优化好的my.cnf进行说明： [mysqld] port = 3306 serverid = 1 socket = /tmp/mysql.sock skip-locking #避免MySQL的外部锁定，减少出错几率增强稳定性。 skip-name-resolve #禁止MySQL对外部连接进行DNS解析，使用这一选项可以消除MySQL进行DNS解析的时间。但需要注意，如果开启该选项，则所有远程主机连接授权都要使用IP地址方式，否则MySQL将无法正常处理连接请求！ back_log = 384 #back_log参数的值指出在MySQL暂时停止响应新请求之前的短时间内多少个请求可以被存在堆栈中。 如果系统在一个短时间内有很多连接，则需要增大该参数的值，该参数值指定到来的TCP/IP连接的侦听队列的大小。不同的操作系统在这个队列大小上有它自己的限制。 试图设定back_log高于你的操作系统的限制将是无效的。默认值为50。对于Linux系统推荐设置为小于512的整数。 key_buffer_size = 256M #key_buffer_size指定用于索引的缓冲区大小，增加它可得到更好的索引处理性能。对于内存在4GB左右的服务器该参数可设置为256M或384M。注意：该参数值设置的过大反而会是服务器整体效率降低！ max_allowed_packet = 4M thread_stack = 256K table_cache = 128K sort_buffer_size = 6M #查询排序时所能使用的缓冲区大小。注意：该参数对应的分配内存是每连接独占，如果有100个连接，那么实际分配的总共排序缓冲区大小为100 × 6 ＝ 600MB。所以，对于内存在4GB左右的服务器推荐设置为6-8M。 read_buffer_size = 4M #读查询操作所能使用的缓冲区大小。和sort_buffer_size一样，该参数对应的分配内存也是每连接独享。 join_buffer_size = 8M #联合查询操作所能使用的缓冲区大小，和sort_buffer_size一样，该参数对应的分配内存也是每连接独享。 myisam_sort_buffer_size = 64M table_cache = 512 thread_cache_size = 64 query_cache_size = 64M #指定MySQL查询缓冲区的大小。可以通过在MySQL控制台观察，如果Qcache_lowmem_prunes的值非常大，则表明经常出现缓冲不够的情况；如果Qcache_hits的值非常大，则表明查询缓冲使用非常频繁，如果该值较小反而会影响效率，那么可以考虑不用查询缓冲；Qcache_free_blocks，如果该值非常大，则表明缓冲区中碎片很多。 tmp_table_size = 256M max_connections = 768 #指定MySQL允许的最大连接进程数。如果在访问论坛时经常出现Too Many Connections的错误提 示，则需要增大该参数值。 max_connect_errors = 10000000 wait_timeout = 10 #指定一个请求的最大连接时间，对于4GB左右内存的服务器可以设置为5-10。 thread_concurrency = 8 #该参数取值为服务器逻辑CPU数量*2，在本例中，服务器有2颗物理CPU，而每颗物理CPU又支持H.T超线程，所以实际取值为4*2=8 skip-networking #开启该选项可以彻底关闭MySQL的TCP/IP连接方式，如果WEB服务器是以远程连接的方式访问MySQL数据库服务器则不要开启该选项！否则将无法正常连接！ table_cache=1024 #物理内存越大,设置就越大.默认为2402,调到512-1024最佳 innodb_additional_mem_pool_size=4M #默认为2M innodb_flush_log_at_trx_commit=1 #设置为0就是等到innodb_log_buffer_size列队满后再统一储存,默认为1 innodb_log_buffer_size=2M #默认为1M innodb_thread_concurrency=8 #你的服务器CPU有几个就设置为几,建议用默认一般为8 key_buffer_size=256M #默认为218，调到128最佳 tmp_table_size=64M #默认为16M，调到64-256最挂 read_buffer_size=4M #默认为64K read_rnd_buffer_size=16M #默认为256K sort_buffer_size=32M #默认为256K thread_cache_size=120 #默认为60 query_cache_size=32M ※值得注意的是： 很多情况需要具体情况具体分析 一、如果Key_reads太大，则应该把my.cnf中Key_buffer_size变大，保持Key_reads/Key_read_requests至少1/100以上，越小越好。 二、如果Qcache_lowmem_prunes很大，就要增加Query_cache_size的值。</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/03/2019030500090/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/03/2019030500090/" title="MySQL性能优化 - 修改配置文件my.cnf">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/03/2019030500078/">
+    		mysql-存储引擎
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-03T06:44:18.000Z">2015-12-03</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/InnoDB/" title="InnoDB">InnoDB</a> / 
+    
+        <a href="/tags/MyISAM/" title="MyISAM">MyISAM</a> / 
+    
+        <a href="/tags/BDB/" title="BDB">BDB</a> / 
+    
+        <a href="/tags/EXAMPLE/" title="EXAMPLE">EXAMPLE</a> / 
+    
+        <a href="/tags/Federated/" title="Federated">Federated</a> / 
+    
+        <a href="/tags/Memory/" title="Memory">Memory</a> / 
+    
+        <a href="/tags/Merge/" title="Merge">Merge</a> / 
+    
+        <a href="/tags/存储引擎/" title="存储引擎">存储引擎</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h1 id="mysql-存储引擎"><a href="#mysql-存储引擎" class="headerlink" title="mysql-存储引擎"></a>mysql-存储引擎</h1><p>mysql 存储引擎一般有 MyISAM、InnoDB、Memory、Merge、BDB、EXAMPLE、Federated 存储引擎。 一、MyISAM存储引擎 不支持事务的存储引擎，它是基于更老的ISAM存储引擎，每个MyISAM 存储引擎类型的表在磁盘上存储3个文件：tablename.frm存储定义文件、tablename.MYD :存储表的数据文件 tableName.MYI存储表的索引文件。我们指明设置一个表的存储引擎为MyISAM 存储引擎可以：Create table t(i int primarykey) engine=MyISAM ，注意老版本（5.1之前）的是使用type关键字 ，而从5.1之后是使用engine关键字。MyISAM存储引擎是mysql默认的存储引擎，但是在5.5以及5.5版本之后mysql的默认存储引擎是InnoDB 存储引擎。 MyISAM存储引擎的特性： 1、每个MyISAM存储引擎的表最大支持64个索引文件 2、blob和text列可以被设置为索引 3、提供高速的存储和压缩表以及全文检索功能 4、MyISAM是对整个表进行加锁的，不是对行锁的，读取时候会对其读取的所有表进行加共享锁，写入的时候会对表加入排他锁，但是在表的读取查询的同时，也可以往表里插入新的记录。 5、MyISAM表使用了B型树的索引 索引文件大小为： （key_length +4） * 0.67 加上所有键的和。 6、MyISAM支持三种不同的存储格式：固定格式、动态格式和压缩格式，固定格式和动态格式根据正在使用的列进行自动选择，对于已经压缩的格式则必须使用myisampack工具来创建。 7、MyISAM存储引擎使用前缀压缩使得索引更小。 二、InnoDB存储引擎 InnoDB给mysql数据库提供了具有提交、回滚和崩溃恢复的事务安全存储引擎，InnoDB锁定在行级别并也在查询的select语句中非锁定读–这些特性增加了mysql数据库的吞吐量，我们都知道mysql在解决高并发的环境下使用了共享锁和排他锁（其实这就像我们在java语言中的JDK1.5中添加的并发包中的ReentrantReadWriteLock 类，多个线程可以持有读锁-共享锁，有且仅当有一个线程具有写锁-排他锁，并且写锁的优先级最高，当写锁到达的时候必须插入到所有读锁之前，其他获得的读锁的线程必须等待写锁完成）那如何看待Innodb的性能呢？ 1、innodb是行级别的锁定适合非常小的空间而不是像MyISAM存储引擎基本上是整张表进行锁定，innodb支持外键特性 innodb是为处理巨大数据量的最大性能而设计的，它为主内存中缓冲数据和索引而维护自己的缓冲池，innodb存储它的表和索引在一个表的空间中，表空间可以包含数个文件 innodb表可以使任何尺寸的，即使文件大小受操作系统的限制也是可以的。 被InnoDB存储引擎所管理的资源包含有innodb的表空间和它的日志文件。   转摘于：<a href="http://qq466862016.iteye.com/blog/2261069" target="_blank" rel="noopener">http://qq466862016.iteye.com/blog/2261069</a></p>
+
+            
+            <p class="more">
+                <a href="/2015/12/03/2019030500078/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/03/2019030500078/" title="mysql-存储引擎">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/01/2019030500065/">
+    		mysql中的字符串的拼接
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-01T07:01:03.000Z">2015-12-01</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/字符串/" title="字符串">字符串</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>字符串的拼接 1，Mysql 在Java、C#等编程语言中字符串的拼接可以通过加号“+”来实现，比如：”1”+”3”、”a”+”b”。 在MYSQL中也可以使用加号“+”来连接两个字符串，比如下面的SQL： Sql代码 复制代码 收藏代码 1.SELECT ‘12’+’33’,FAge+’1’ FROM T_Employee 执行结果 Sql代码 复制代码 收藏代码 1.’12’+’33’  FAge+’1’ 2.45    26 3.45  29 4.45  24 5.45  26 6.45  29 7.45  28 8.45  24 9.45  29 10.45  23 MYSQL会尝试将加号两端的字段值尝试转换为数字类型，如果转换失败则认为字段值为 0，比如我们执行下面的SQL语句： Sql代码 复制代码 收藏代码 1.SELECT ‘abc’+’123’,FAge+’a’ FROM T_Employee 执行完毕我们就能在输出结果中看到下面的执行结果： Html代码 复制代码 收藏代码 1. 2.’abc’+’123’  FAge+’a’ 3.123  25 4.123  28 5.123  23 6.123  25 7.123  28 8.123  27 9.123  23 10.123  28 11.123  22 在MYSQL中进行字符串的拼接要使用CONCAT函数，CONCAT函数支持一个或者多个参数， 参数类型可以为字符串类型也可以是非字符串类型，对于非字符串类型的参数MYSQL将尝试 将其转化为字符串类型，CONCAT函数会将所有参数按照参数的顺序拼接成一个字符串做为 返回值。比如下面的SQL语句用于将用户的多个字段信息以一个计算字段的形式查询出来： Sql代码 复制代码 收藏代码 1.SELECT CONCAT(‘工号为:’,FNumber,’的员工的幸福指数:’,FSalary/(FAge-21)) FROM T_Employee  执行完毕我们就能在输出结果中看到下面的执行结果： Java代码 复制代码 收藏代码 1.CONCAT(‘工号为:’,FNumber,’的员工的幸福指数:’,FSalary/(FAge-21)) 2.工号为:DEV001的员工的幸福指数:2075.000000 3.工号为:DEV002的员工的幸福指数:328.685714 4.工号为:HR001的员工的幸福指数:1100.440000 MYSQL中还提供了另外一个进行字符串拼接的函数CONCAT_WS， CONCAT_WS可以在待拼接的字符串之间加入指定的分隔符，它的第一个参数值为采用的分 隔符，而剩下的参数则为待拼接的字符串值，比如执行下面的SQL： Sql代码 复制代码 收藏代码 1.SELECT CONCAT_WS(‘,’,FNumber,FAge,FDepartment,FSalary) FROM T_Employee 执行完毕我们就能在输出结果中看到下面的执行结果： Java代码 复制代码 收藏代码 1.CONCAT_WS(‘,’,FNumber,FAge,FDepartment,FSalary) 2.DEV001,25,Development,8300.00 3.DEV002,28,Development,2300.80 4.HR001,23,HumanResource,2200.88 5.HR002,25,HumanResource,5200.36 6.IT001,28,InfoTech,3900.00 7.IT002,27,InfoTech,2800.00 8.SALES001,23,Sales,5000.00 9.SALES002,28,Sales,6200.00 10.SALES003,22,Sales,1200.00 2，oracle Oracle中使用“||”进行字符串拼接，其使用方式和MSSQLServer中的加号“+”一样。 比如执行下面的SQL语句： Sql代码 复制代码 收藏代码 1.SELECT ‘工号为’||FNumber||’的员工姓名为’||FName FROM T_Employee 2.WHERE FName IS NOT NULL 执行完毕我们就能在输出结果中看到下面的执行结果： Html代码 复制代码 收藏代码 1.工号为||FNUMBER||的员工姓名为||FNAME 2.工号为DEV001的员工姓名为Tom 3.工号为DEV002的员工姓名为Jerry 4.工号为SALES001的员工姓名为John 5.工号为SALES002的员工姓名为Kerry 6.工号为SALES003的员工姓名为Stone 7.工号为HR001的员工姓名为Jane 8.工号为HR002的员工姓名为Tina 9.工号为IT001的员工姓名为Smith 除了“||”，Oracle还支持使用CONCAT()函数进行字符串拼接，比如执行下面的SQL语句： Sql代码 复制代码 收藏代码 1.SELECT CONCAT(‘工号:’,FNumber) FROM T_Employee 执行完毕我们就能在输出结果中看到下面的执行结果： Html代码 复制代码 收藏代码 1.CONCAT(工号:,FNUMBER) 2.工号:DEV001 3.工号:DEV002 4.工号:HR001 5.工号:HR002 6.工号:IT001 7.工号:IT002 8.工号:SALES001 9.工号:SALES002 10.工号:SALES003 如果CONCAT中连接的值不是字符串，Oracle会尝试将其转换为字符串， 与MYSQL的CONCAT()函数不同，Oracle的CONCAT()函数只支持两个参数，不支持两个以 上字符串的拼接。如果要进行多个字符串的拼接的话，可以使用多个CONCAT()函数嵌套使用。 Sql代码 复制代码 收藏代码 1.SELECT CONCAT(CONCAT(CONCAT(‘工号为’,FNumber),’的员工姓名为’),FName) FROM 2.T_Employee 3.WHERE FName IS NOT NULL 执行完毕我们就能在输出结果中看到下面的执行结果： Html代码 复制代码 收藏代码 1.CONCAT(CONCAT(CONCAT(工号为,FNUMBER),的员工姓名为),FNAME) 2.工号为DEV001的员工姓名为Tom 3.工号为DEV002的员工姓名为Jerry 4.工号为SALES001的员工姓名为John 5.工号为SALES002的员工姓名为Kerry 6.工号为SALES003的员工姓名为Stone 7.工号为HR001的员工姓名为Jane 8.工号为HR002的员工姓名为Tina 9.工号为IT001的员工姓名为Smith</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/01/2019030500065/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/01/2019030500065/" title="mysql中的字符串的拼接">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/11/30/2019030500103/">
+    		mysql 用户管理和权限设置
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-11-30T05:37:20.000Z">2015-11-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/权限/" title="权限">权限</a> / 
+    
+        <a href="/tags/用户/" title="用户">用户</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>用户管理</p>
+<p>mysql&gt;use mysql;</p>
+<p>查看</p>
+<p>mysql&gt; select host,user,password from user ;</p>
+<p>创建</p>
+<p>mysql&gt; create user  zx_root   IDENTIFIED by ‘xxxxx’;   //identified by 会将纯文本密码加密作为散列值存储</p>
+<p>修改</p>
+<p>mysql&gt;rename   user  feng  to   newuser；//mysql 5之后可以使用，之前需要使用update 更新user表</p>
+<p>删除</p>
+<p>mysql&gt;drop user newuser;   //mysql5之前删除用户时必须先使用revoke 删除用户权限，然后删除用户，mysql5之后drop 命令可以删除用户的同时删除用户的相关权限</p>
+<p>更改密码</p>
+<p>mysql&gt; set password for zx_root =password(‘xxxxxx’);</p>
+<p> mysql&gt; update  mysql.user  set  password=password(‘xxxx’)  where user=’otheruser’</p>
+<p>查看用户权限</p>
+<p>mysql&gt; show grants for zx_root;</p>
+<p>赋予权限</p>
+<p>mysql&gt; grant select on dmc_db.*  to zx_root;</p>
+<p>回收权限</p>
+<p>mysql&gt; revoke  select on dmc_db.*  from  zx_root;  //如果权限不存在会报错</p>
+<p>上面的命令也可使用多个权限同时赋予和回收，权限之间使用逗号分隔</p>
+<p>mysql&gt; grant select，update，delete  ，insert  on dmc_db.*  to  zx_root;</p>
+<p>如果想立即看到结果使用</p>
+<p>flush  privileges ;</p>
+<p>命令更新</p>
+<p>设置权限时必须给出一下信息</p>
+<p>1，要授予的权限</p>
+<p>2，被授予访问权限的数据库或表</p>
+<p>3，用户名</p>
+<p>grant和revoke可以在几个层次上控制访问权限</p>
+<p>1，整个服务器，使用 grant ALL  和revoke  ALL</p>
+<p>2，整个数据库，使用on  database.*</p>
+<p>3，特点表，使用on  database.table</p>
+<p>4，特定的列</p>
+<p>5，特定的存储过程</p>
+<p>user表中host列的值的意义</p>
+<p>%              匹配所有主机</p>
+<p>localhost    localhost不会被解析成IP地址，直接通过UNIXsocket连接</p>
+<p>127.0.0.1      会通过TCP/IP协议连接，并且只能在本机访问；</p>
+<p>::1                 ::1就是兼容支持ipv6的，表示同ipv4的127.0.0.1</p>
+<p>grant 普通数据用户，查询、插入、更新、删除 数据库中所有表数据的权利。 grant select on testdb.<em> to common_user@’%’ grant insert on testdb.</em> to common_user@’%’ grant update on testdb.<em> to common_user@’%’ grant delete on testdb.</em> to common_user@’%’ 或者，用一条 MySQL 命令来替代： grant select, insert, update, delete on testdb.<em> to common_user@’%’ 9&gt;.grant 数据库开发人员，创建表、索引、视图、存储过程、函数。。。等权限。 grant 创建、修改、删除 MySQL 数据表结构权限。 grant create on testdb.</em> to developer@’192.168.0.%’; grant alter on testdb.<em> to developer@’192.168.0.%’; grant drop on testdb.</em> to developer@’192.168.0.%’; grant 操作 MySQL 外键权限。 grant references on testdb.<em> to developer@’192.168.0.%’; grant 操作 MySQL 临时表权限。 grant create temporary tables on testdb.</em> to developer@’192.168.0.%’; grant 操作 MySQL 索引权限。 grant index on testdb.<em> to developer@’192.168.0.%’; grant 操作 MySQL 视图、查看视图源代码 权限。 grant create view on testdb.</em> to developer@’192.168.0.%’; grant show view on testdb.<em> to developer@’192.168.0.%’; grant 操作 MySQL 存储过程、函数 权限。 grant create routine on testdb.</em> to developer@’192.168.0.%’; – now, can show procedure status grant alter routine on testdb.<em> to developer@’192.168.0.%’; – now, you can drop a procedure grant execute on testdb.</em> to developer@’192.168.0.%’; 10&gt;.grant 普通 DBA 管理某个 MySQL 数据库的权限。 grant all privileges on testdb to dba@’localhost’ 其中，关键字 “privileges” 可以省略。 11&gt;.grant 高级 DBA 管理 MySQL 中所有数据库的权限。 grant all on <em>.</em> to dba@’localhost’ 12&gt;.MySQL grant 权限，分别可以作用在多个层次上。 1. grant 作用在整个 MySQL 服务器上： grant select on <em>.</em> to dba@localhost; – dba 可以查询 MySQL 中所有数据库中的表。 grant all on <em>.</em> to dba@localhost; – dba 可以管理 MySQL 中的所有数据库 2. grant 作用在单个数据库上： grant select on testdb.* to dba@localhost; – dba 可以查询 testdb 中的表。 3. grant 作用在单个数据表上： grant select, insert, update, delete on testdb.orders to dba@localhost; 4. grant 作用在表中的列上： grant select(id, se, rank) on testdb.apache_log to dba@localhost; 5. grant 作用在存储过程、函数上： grant execute on procedure testdb.pr_add to ’dba’@’localhost’ grant execute on function testdb.fn_add to ’dba’@’localhost’ 注意：修改完权限以后 一定要刷新服务，或者重启服务，刷新服务用：FLUSH PRIVILEGES。</p>
+<p>权限表</p>
+<p>权限</p>
+<p>说明</p>
+<p>all</p>
+<p>alter</p>
+<p>alter routine</p>
+<p>使用alter procedure 和drop procedure</p>
+<p>create</p>
+<p>create routine</p>
+<p>使用create  procedure</p>
+<p>create temporary tables</p>
+<p>使用create temporary table</p>
+<p>create  user</p>
+<p>create view</p>
+<p>delete</p>
+<p>drop</p>
+<p>execute</p>
+<p>使用call和存储过程</p>
+<p>file</p>
+<p>使用select into outfile  和load data infile</p>
+<p>grant option</p>
+<p>可以使用grant和revoke</p>
+<p>index</p>
+<p>可以使用create index 和drop index</p>
+<p>insert</p>
+<p>lock tables</p>
+<p>锁表</p>
+<p>process</p>
+<p>使用show full processlist</p>
+<p>reload</p>
+<p>   使用flush</p>
+<p>replication client</p>
+<p>服务器位置访问</p>
+<p>replocation slave</p>
+<p>由复制从属使用</p>
+<p>select</p>
+<p>show databases</p>
+<p>show view</p>
+<p>shutdown</p>
+<p>使用mysqladmin shutdown 来关闭mysql</p>
+<p>super</p>
+<p>update</p>
+<p>usage</p>
+<p>无访问权限</p>
+
+            
+            <p class="more">
+                <a href="/2015/11/30/2019030500103/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/11/30/2019030500103/" title="mysql 用户管理和权限设置">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/11/27/2019030500007/">
+    		druid 心跳检测作用
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-11-27T04:36:55.000Z">2015-11-27</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/druid/" title="druid">druid</a> / 
+    
+        <a href="/tags/心跳/" title="心跳">心跳</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>数据库中连接时间设置：</p>
+<ol>
+<li>connect_timeout:  服务器关闭非交互连接之前等待活动的秒数</li>
+<li>interactive_timeout:服务器关闭交互式连接前等待活动的秒数</li>
+<li>这两个值默认都是288000（8小时），如果这两个值设置过大 或造成mysql产生大量的sleep进行，从而影响mysql的性能</li>
+<li><p>MySQL服务器所支持的最大连接数是有上限的，因为每个连接的建立都会消耗内存，因此我们希望客户端在连接到MySQL Server处理完相应的操作后，应该断开连接并释放占用的内存。如果你的MySQL Server有大量的闲置连接，他们不仅会白白消耗内存，而且如果连接一直在累加而不断开，最终肯定会达到MySQL Server的连接上限数，这会报’too many connections’的错误。</p>
+</li>
+<li><p>在交互模式下，interactive_timeout取代wait_timeout。这样，如果有的客户端是交互模式方式连接mysql server。那么客户端的timeout受制于interactive_timeout。如果有的客户端是非交互模式，长连接mysql server。那么客户端的timeout受制于wait_timeout。(是否是交互模式的连接，由客户端决定)</p>
+</li>
+</ol>
+<p>druid 规避  连接 异常：</p>
+<ol>
+<li>如果数据库连接超时 修改了的话，有可能为了提高数据库性能减小数据库压力，会将timeout设置的很小。那么 需要设置 druid的心跳检测来方式出现连接异常：</li>
+<li>t;!– 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 –&gt;</li>
+<li><property name="timeBetweenEvictionRunsMillis" value="5000">
+
+</property></li>
+</ol>
+<p><strong>注意：如果心跳检测的时间设置的大于数据库的timeout，那么心跳检测是不起作用的！！！！</strong></p>
+
+            
+            <p class="more">
+                <a href="/2015/11/27/2019030500007/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/11/27/2019030500007/" title="druid 心跳检测作用">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/categories/MySQL/page/3/">前一页</a><a class="page-number" href="/categories/MySQL/">1</a><a class="page-number" href="/categories/MySQL/page/2/">2</a><a class="page-number" href="/categories/MySQL/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/categories/MySQL/page/5/">5</a><a class="page-number" href="/categories/MySQL/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/categories/MySQL/page/10/">10</a><a class="extend next" rel="next" href="/categories/MySQL/page/5/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

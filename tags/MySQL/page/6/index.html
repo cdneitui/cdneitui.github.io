@@ -1,0 +1,1144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>`MySQL`标签下的文章 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/tags/MySQL/page/6/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/tags/MySQL/page/6/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/tags/MySQL/page/6/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/tags/MySQL/page/6/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 按标签分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `MySQL`标签下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/23/2019030500105/">
+    		mysql 设置远程登陆以及新增用户
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-23T09:55:45.000Z">2015-07-23</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>mysql 简单的管理命令：</strong> 启动mysql sudo start mysql 停止mysql sudo stop mysql <strong>允许远程访问的设置：</strong></p>
+<pre><code>sudo vi /etc/mysql/my.cnf
+注释掉  bind-address = 127.0.0.1
+</code></pre><p>增加新用户：</p>
+<pre><code>GRANT ALL PRIVILEGES ON *.* TO gino@&apos;%&apos; IDENTIFIED BY  &quot;123456&quot;;
+
+GRANT命令说明：
+    ALL PRIVILEGES 是表示所有权限，你也可以使用select、update等权限。
+
+    ON 用来指定权限针对哪些库和表。
+
+    *.* 中前面的*号用来指定数据库名，后面的*号用来指定表名。
+
+    TO 表示将权限赋予某个用户。
+
+    jack@&apos;localhost&apos; 表示jack用户，@后面接限制的主机，可以是IP、IP段、域名以及%，%表示任何地方。注意：这里%有的版本不包括本地，以前碰到过给某个用户设置了%允许任何地方登录，但是在本地登录不了，这个和版本有关系，遇到这个问题再加一个localhost的用户就可以了。
+
+    IDENTIFIED BY 指定用户的登录密码。
+
+    WITH GRANT OPTION 这个选项表示该用户可以将自己拥有的权限授权给别人。注意：经常有人在创建操作用户的时候不指定WITH GRANT OPTION选项导致后来该用户不能使用GRANT命令创建用户或者给其它用户授权。
+
+备注：可以使用GRANT重复给用户添加权限，权限叠加，比如你先给用户添加一个select权限，然后又给用户添加一个insert权限，那么该用户就同时拥有了select和insert权限。
+
+使用这个命令使权限生效，尤其是你对那些权限表user、db、host等做了update或者delete更新的时候。以前遇到过使用grant后权限没有更新的情况，只要对权限做了更改就使用FLUSH PRIVILEGES命令来刷新权限。
+
+flush privileges;
+</code></pre>
+            
+            <p class="more">
+                <a href="/2015/07/23/2019030500105/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/23/2019030500105/" title="mysql 设置远程登陆以及新增用户">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/09/2019030500069/">
+    		MySQL优化之——安全地关闭MySQL实例
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-09T05:42:18.000Z">2015-07-09</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<h4 id="关闭过程："><a href="#关闭过程：" class="headerlink" title="关闭过程："></a>关闭过程：</h4><ul>
+<li>1、发起shutdown，发出  SIGTERM信号</li>
+<li>2、有必要的话，新建一个关闭线程(shutdown thread)</li>
+</ul>
+<p>如果是客户端发起的关闭，则会新建一个专用的关闭线程 如果是直接收到 SIGTERM 信号进行关闭的话，专门负责信号处理的线程就会负责关闭工作，或者新建一个独立的线程负责这个事 当无法创建独立的关闭线程时（例如内存不足），MySQL Server会发出类似下面的告警信息： Error: Can’t create thread to kill server</p>
+<ul>
+<li>3、MySQL Server不再响应新的连接请求</li>
+</ul>
+<p>关闭TCP/IP网络监听，关闭Unix Socket等渠道</p>
+<ul>
+<li>4、逐渐关闭当前的连接、事务</li>
+</ul>
+<p>空闲连接，将立刻被终止； 当前还有事务、SQL活动的连接，会将其标识为 killed，并定期检查其状态，以便下次检查时将其关闭；（参考 KILL 语法） 当前有活跃事务的，该事物会被回滚，如果该事务中还修改了非事务表，则已经修改的数据无法回滚，可能只会完成部分变更； 如果是Master/Slave复制场景里的Master，则对复制线程的处理过程和普通线程也是一样的； 如果是Master/Slave复制场景里的Slave，则会依次关闭IO、SQL线程，如果这2个线程当前是活跃的，则也会加上 killed 标识，然后再关闭； Slave服务器上，SQL线程是允许直接停止当前的SQL操作的（为了避免复制问题），然后再关闭该线程； 在MySQl 5.0.80及以前的版本里，如果SQL线程当时正好执行一个事务到中间，该事务会回滚；从5.0.81开始，则会等待所有的操作结束，除非用户发起KILL操作。 当Slave的SQL线程对非事务表执行操作时被强制 KILL了，可能会导致Master、Slave数据不一致；</p>
+<ul>
+<li>5、MySQL Server进程关闭所有线程，关闭所有存储引擎；</li>
+</ul>
+<p>刷新所有表cache，关闭所有打开的表； 每个存储引擎各自负责相关的关闭操作，例如MyISAM会刷新所有等待写入的操作；InnoDB会将buffer pool刷新到磁盘中（从MySQL 5.0.5开始，如果innodb_fast_shutdown不设置为 2 的话），把当前的LSN记录到表空间中，然后关闭所有的内部线程。</p>
+<ul>
+<li>6、MySQL Server进程退出</li>
+</ul>
+<h4 id="关于KILL指令"><a href="#关于KILL指令" class="headerlink" title="关于KILL指令"></a>关于KILL指令</h4><p>从5.0开始，KILL 支持指定  CONNECTION | QUERY两种可选项：</p>
+<ul>
+<li>KILL CONNECTION和原来的一样，停止回滚事务，关闭该线程连接，释放相关资源；</li>
+<li>KILL QUERY则只停止线程当前提交执行的操作，其他的保持不变；</li>
+</ul>
+<p>提交KILL操作后，该线程上会设置一个特殊的 kill标记位。通常需要一段时间后才能真正关闭线程，因为kill标记位只在特定的情况下才检查：</p>
+<ul>
+<li>1、执行SELECT查询时，在ORDER BY或GROUP BY循环中，每次读完一些行记录块后会检查 kill标记位，如果发现存在，该语句会终止；</li>
+<li>2、执行ALTER TABLE时，在从原始表中每读取一些行记录块后会检查 kill 标记位，如果发现存在，该语句会终止，删除临时表；</li>
+<li>3、执行UPDATE和DELETE时，每读取一些行记录块并且更新或删除后会检查 kill 标记位，如果发现存在，该语句会终止，回滚事务，若是在非事务表上的操作，则已发生变更的数据不会回滚；</li>
+<li>4、GET_LOCK() 函数返回NULL；</li>
+<li>5、INSERT DELAY线程会迅速内存中的新增记录，然后终止；</li>
+<li>6、如果当前线程持有表级锁，则会释放，并终止；</li>
+<li>7、如果线程的写操作调用在等待释放磁盘空间，则会直接抛出“磁盘空间满”错误，然后终止；</li>
+<li>8、当MyISAM表在执行REPAIR TABLE 或 OPTIMIZE TABLE 时被 KILL的话，会导致该表损坏不可用，指导再次修复完成。</li>
+</ul>
+<h4 id="安全关闭MySQL几点建议"><a href="#安全关闭MySQL几点建议" class="headerlink" title="安全关闭MySQL几点建议"></a>安全关闭MySQL几点建议</h4><p>想要安全关闭 mysqld 服务进程，建议按照下面的步骤来进行：</p>
+<ul>
+<li>0、用具有SUPER、ALL等最高权限的账号连接MySQL，最好是用 unix socket 方式连接；</li>
+<li>1、在5.0及以上版本，设置innodb_fast_shutdown = 1，允许快速关闭InnoDB（不进行full purge、insert buffer merge），如果是为了升级或者降级MySQL版本，则不要设置；</li>
+<li>2、设置innodb_max_dirty_pages_pct = 0，让InnoDB把所有脏页都刷新到磁盘中去；</li>
+<li>3、设置max_connections和max_user_connections为1，也就最后除了自己当前的连接外，不允许再有新的连接创建；</li>
+<li>4、关闭所有不活跃的线程，也就是状态为Sleep  且 Time 大于 1 的线程ID；</li>
+<li>5、执行 SHOW PROCESSLIST  确认是否还有活跃的线程，尤其是会产生表锁的线程，例如有大数据集的SELECT，或者大范围的UPDATE，或者执行DDL，都是要特别谨慎的；</li>
+<li>6、执行 SHOW ENGINE INNODB STATUS 确认History list length的值较低（一般要低于500），也就是未PURGE的事务很少，并且确认Log sequence number、Log flushed up to、Last checkpoint at三个状态的值一样，也就是所有的LSN都已经做过检查点了；</li>
+<li>7、然后执行FLUSH LOCKAL TABLES 操作，刷新所有 table cache，关闭已打开的表（LOCAL的作用是该操作不记录BINLOG）；</li>
+<li>8、如果是SLAVE服务器，最好是先关闭 IO_THREAD，等待所有RELAY LOG都应用完后，再关闭 SQL_THREAD，避免 SQL_THREAD 在执行大事务被终止，耐心待其全部应用完毕，如果非要强制关闭的话，最好也等待大事务结束后再关闭SQL_THREAD；</li>
+<li>9、最后再执行 mysqladmin shutdown。</li>
+<li>10、紧急情况下，可以设置innodb_fast_shutdown = 1，然后直接执行 mysqladmin shutdown 即可，甚至直接在操作系统层调用 kill 或者 kill -9 杀掉 mysqld 进程（在innodb_flush_log_at_trx_commit = 0 的时候可能会丢失部分事务），不过mysqld进程再次启动时，会进行CRASH RECOVERY工作，需要有所权衡。</li>
+</ul>
+<p>以上说了那么多，其实正常情况下执行 mysqladmin shutdown 就够了，如果发生阻塞，再参考上面的内容进行分析和解决吧。</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/07/09/2019030500069/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/09/2019030500069/" title="MySQL优化之——安全地关闭MySQL实例">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/9.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/07/2019030500019/">
+    		小心InnoDB 和 MyISAM 创建 Hash 索引陷阱
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-07T05:43:55.000Z">2015-07-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/Hash索引/" title="Hash索引">Hash索引</a> / 
+    
+        <a href="/tags/InnoDB/" title="InnoDB">InnoDB</a> / 
+    
+        <a href="/tags/MyISAM/" title="MyISAM">MyISAM</a> / 
+    
+        <a href="/tags/索引优化/" title="索引优化">索引优化</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>MySql 常见存储引擎 InnoDB 和 MyISAM 都不支持 Hash 索引，它们默认的索引都是 B-Tree。但是如果你在创建索引的时候定义其类型为 Hash，MySql 并不会报错，而且你通过 SHOW CREATE TABLE 查看该索引也是 Hash，只不过该索引实际上还是 B-Tree。 比如表 data_dict 的 DDL：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>CREATE TABLE `data_dict` (</li>
+<li>`data_type` varchar(32) NOT NULL COMMENT ‘数据字典类型’,</li>
+<li>`data_code` tinyint(4) NOT NULL COMMENT ‘数据字典代码’,</li>
+<li>`data_name` varchar(64) NOT NULL COMMENT ‘数据字典值’,</li>
+<li>PRIMARY KEY (`data_type`,`data_code`)</li>
+<li>) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=’数据字典表’;</li>
+</ol>
+<p>我们为 data_name 字段建立 Hash 索引：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>ALTER TABLE data_dict ADD INDEX data_dict_dn USING HASH (data_name);</li>
+</ol>
+<p>打印结果： 受影响的行: 0 时间: 0.345s 然后查看建表 DDL：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>SHOW CREATE TABLE data_dict;</li>
+</ol>
+<p>打印结果： CREATE TABLE `data_dict` ( `data_type` varchar(32) NOT NULL COMMENT ‘数据字典类型’, `data_code` tinyint(4) NOT NULL COMMENT ‘数据字典代码’, `data_name` varchar(64) NOT NULL COMMENT ‘数据字典值’, PRIMARY KEY (`data_type`,`data_code`), KEY `data_dict_dn` (`data_name`) USING HASH ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=’数据字典表’ 是 Hash，所以我们以为创建 Hash 索引成功。 事实上并非如此，我们都被 MySql 给骗了，我们使用 SHOW INDEXES FROM 语句对该表索引进行检索：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>SHOW INDEXES FROM data_dict;</li>
+</ol>
+<p>打印结果： <img src="http://img.blog.csdn.net/20150707113055755?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="我们使用 SHOW INDEXES FROM 语句对该表索引进行检索"> 打回原形了。不过也不要失望，虽然常见存储引擎并不支持 Hash 索引，但 InnoDB 有另一种实现方法：自适应哈希索引。InnoDB 存储引擎会监控对表上索引的查找，如果观察到建立哈希索引可以带来速度的提升，则建立哈希索引。 我们可以通过 SHOW ENGINE INNODB STATUS 来查看当前自适应哈希索引的使用状况： ===================================== 2015-07-07 10:51:19 1d68 INNODB MONITOR OUTPUT ===================================== Per second averages calculated from the last 36 seconds …… ————————————- INSERT BUFFER AND ADAPTIVE HASH INDEX ————————————- Ibuf: size 1, free list len 2633, seg size 2635, 0 merges merged operations: insert 0, delete mark 0, delete 0 discarded operations: insert 0, delete mark 0, delete 0 Hash table size 348731, node heap has 2 buffer(s) 0.00 hash searches/s, 0.00 non-hash searches/s …… 从中我们可以看到自适应哈希索引的相关信息：有使用大小、使用情况、每秒使用自适应哈希索引搜索的情况等。 MySql 各种存储引擎的特性对比详单： <img src="http://img.blog.csdn.net/20150707113158731?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="MySql 各种存储引擎的特性对比详单"> 从中我们可以看出，</p>
+<ul>
+<li>InnoDB 支持事务，支持行级别锁定，支持 B-tree、Full-text 等索引，不支持 Hash 索引；</li>
+<li>MyISAM 不支持事务，支持表级别锁定，支持 B-tree、Full-text 等索引，不支持 Hash 索引；</li>
+<li>Memory 不支持事务，支持表级别锁定，支持 B-tree、Hash 等索引，不支持 Full-text 索引；</li>
+<li>NDB 支持事务，支持行级别锁定，支持 Hash 索引，不支持 B-tree、Full-text 等索引；</li>
+<li>Archive 不支持事务，支持表级别锁定，不支持 B-tree、Hash、Full-text 等索引；</li>
+</ul>
+<p>可以使用 SHOW ENGINES 语句查看你的 MySql Server 所支持的存储引擎，比如笔者用于本机测试的 5.6.25-log Win 版的查看结果如下： <img src="http://img.blog.csdn.net/20150707113246099?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="支持的存储引擎"> 从中可以看出，InnoDB 是该版本 MySql 的默认存储引擎，也只有 InnoDB 能够支持事务、行级别锁定、外键；支持的 MEMORY 是基于哈希的，数据都存放于内存，适用于临时表。没有看到既支持事务又支持哈希索引的 NDB 的身影。</p>
+
+            
+            <p class="more">
+                <a href="/2015/07/07/2019030500019/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/07/2019030500019/" title="小心InnoDB 和 MyISAM 创建 Hash 索引陷阱">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/02/2019030500104/">
+    		mysql行转列（拆分字符串场景）
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-02T05:52:29.000Z">2015-07-02</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>一对多没有建立中间表的时候经常会采用分隔符的形式将“多”存储在“一”的一个字段里，这样做的代价是无法向一对多的时候那样直接关联查询，一般采用在程序中分割后分别查询的办法。如下图： <img src="http://img.blog.csdn.net/20150701165850674?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFva3g=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 如何才能直接用sql语句查询出下图的效果呢？ <img src="http://img.blog.csdn.net/20150701170018457?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFva3g=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 可以借助一个序号表，该表中除了连续的id没有其它字段，id的值范围取决于”一”中存储的信息拆分后的数量。 <img src="http://img.blog.csdn.net/20150701170230086?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmFva3g=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 实现sql：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>SELECT</li>
+<li>NAME,</li>
+<li>REPLACE(</li>
+<li>SUBSTRING_INDEX(mobile, ‘,’, a.id),</li>
+<li>CONCAT(</li>
+<li>SUBSTRING_INDEX(mobile, ‘,’, a.id - 1),</li>
+<li>‘,’</li>
+<li>),</li>
+<li>‘’</li>
+<li>)AS mobile</li>
+<li>FROM</li>
+<li>squence a</li>
+<li>CROSS JOIN(</li>
+<li>SELECT</li>
+<li>NAME,</li>
+<li>CONCAT(mobile, ‘,’)AS mobile,</li>
+<li>LENGTH(mobile)- LENGTH(REPLACE(mobile, ‘,’, ‘’))+ 1 AS size</li>
+<li>FROM</li>
+<li><code>user</code></li>
+<li>)b ON a.id &lt;= b.size</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/07/02/2019030500104/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/02/2019030500104/" title="mysql行转列（拆分字符串场景）">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/02/2019030500109/">
+    		MYSQL错误1053:服务没有及时响应启动或控制请求
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-02T04:46:37.000Z">2015-07-02</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/1053/" title="1053">1053</a> / 
+    
+        <a href="/tags/my-ini/" title="my.ini">my.ini</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <ol>
+<li>错误描述 <img src="http://img.blog.csdn.net/20150701210957279" alt="这里写图片描述"></li>
+<li>错误原因 由于连接不上本地数据库，我将MySQL安装目录下的my.ini配置文件删除，结果导致MySQL56服务无法启动；再次将my.ini复制到安装目录指定位置下，但是MySQL服务还是无法启动</li>
+<li>解决办法 上述方法尝试失败后，我将原先安装的MySQL相关的程序全部卸载掉，然后重新安装MySQL，重装后可以启动MySQL服务</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/07/02/2019030500109/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/02/2019030500109/" title="MYSQL错误1053:服务没有及时响应启动或控制请求">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/30/2019030500095/">
+    		MySQL数据库主从同步
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-30T08:07:10.000Z">2015-06-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/主从同步/" title="主从同步">主从同步</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>1,准备工作 准备两台机器 ，各自安装一个 MySQL数据库 。比如 10.254.141.23 作为主数据库 10.254.166.60 作为从数据库 安装MySQL数据库参考 《MySQL数据库安装》 2,主库开启binlog 看主库上，是不是开启了 binlog ，主从同步需要开启这个。 mysql&gt; show master status; <img src="http://img.blog.csdn.net/20150630114918261" alt="这里写图片描述"> 有binlog文件 ，和 当前的位置显示出来 ，说明开启了binglog ，否则需要先去开这个， 修改/etc/my.cnf ,然后重启数据库。 配置文件中加这几句 log-bin = mysql-bin relay-log = relay-bin binlog_format = MIXED binlog_cache_size = 1M 3，主库上建立同步账号 在主机上 添加用于从库同步的账户 mysql&gt; GRANT REPLICATION SLAVE ON _._ to ‘repl’@’%’ identified by ‘123456’; Query OK, 0 rows affected (0.00 sec) mysql&gt; flush privileges; Query OK, 0 rows affected (0.00 sec) 4，备份主库的数据 如果主服务器上 已经存在 数据， 需要先对 主库的数据进行备份， 一次性导入从库上， 然后再主从同步 ，否则会出现数据冲突。 如果是全新安装的 主从数据库， 还没有任何的数据写入， 可以跳过这一步，直接去配置主从。 4.1 先对主库数据进行备份 mysql&gt; set sql_log_bin=0; [root@rs1 ~]# /usr/local/bin/mysqldump -uroot -p123456 –socket=/home/mysql/mysql.sock –all-databases –single-transaction –flush-logs –master-data=2 &gt; db.sql.2012-12-05 mysql&gt; set sql_log_bin=1; 4.2 将备份数据复制到从服务器上 [root@rs1 ~]# scp /home/work/db.sql.2012-12-05 10.136.51.111:/home/work 在从服务器上进行数据同步： mysql&gt; source /home/work/db.sql.2012-12-05 5, 在从库上 配置 head -30 db.sql.2012-12-05 找到以– CHANGE MASTER TO MASTER_LOG开头的行，如下所示： – CHANGE MASTER TO MASTER_LOG_FILE=’mysql-bin.000002’, MASTER_LOG_POS=107; 记录使用的二进制文件以及语句执行的位置。 因为要从这个位置开始 主从同步。 然后在从库上执行 mysql&gt; slave stop; mysql&gt; change master to master_host=’10.254.141.23’, master_user=’repl’, master_password=’123456’, master_port=3306, master_log_file=’mysql-bin.000007’, master_log_pos=107; mysql&gt; slave start; 看一下 从库的状态。 mysql&gt; show slave status\G;</p>
+<pre><code> Slave_IO_Running: Yes
+Slave_SQL_Running: Yes
+Seconds_Behind_Master: 0   0显示从服务器比主服务器慢多少秒
+</code></pre><p>主从同步完成。</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/30/2019030500095/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/30/2019030500095/" title="MySQL数据库主从同步">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/30/2019030500071/">
+    		Mysql双机热备主从配置
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-30T06:28:54.000Z">2015-06-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/主从配置/" title="主从配置">主从配置</a> / 
+    
+        <a href="/tags/双机热备/" title="双机热备">双机热备</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>replication on mysql: Master/Slave. Master server is the production MySQL instance. Slave server is the java host (123.57.39.<em>). First we need to install MySQL server and client on the java host(123.57.39.</em>). 1.in master execute: CREATE USER ‘replica‘@’123.57.39.<em>‘ IDENTIFIED BY ‘replica@123’; GRANT REPLICATION SLAVE ON </em>.<em> TO ‘replica‘@’123.57.39.</em>‘; flush privileges; 2. add the following to [mysqld] segment in /etc/my.cnf of master DB.  And make sure mysql user is the owner of log-bin direcotry.  Otherwise you will get error when you startup MySQL. server-id=1 log-bin=/var/lib/mysql/binlog/mysql-bin expire_logs_days=7 3. On Slave,add the following to [mysqld] segment in /etc/my.cnf server-id=2 innodb_flush_log_at_trx_commit=2 //this line is not required,just improve innodb performance expire_logs_days=7 4.in master,then copy data to slave mysqldump –master-data=2 –user=root –password=fadfafafaD  –single-transaction –all-databases &gt; replica.sql 5.copy the replica.sql to slave server,then import data in slave. mysql –user=root –password=fadfafafaD  &lt; replica.sql 6.change master settting on slave;view the privious replica.sql,using “more replica.sql”,you will see some text like the follwing, – CHANGE MASTER TO MASTER_LOG_FILE=’mysql-bin.000001’, MASTER_LOG_POS=107; record the red font part,then fill them into the following statement,then execute the following statement in slave mysql server. CHANGE MASTER TO MASTER_HOST = ‘123.57.38.*’, MASTER_USER = ‘replica’, MASTER_PASSWORD = ‘replica@123’, MASTER_LOG_FILE = ‘mysql-bin.000001’, MASTER_LOG_POS = 107; 7.finally start slave; Be don’t forget to issue “show slave status\G’ to check whether slave runs normally.</p>
+
+            
+            <p class="more">
+                <a href="/2015/06/30/2019030500071/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/30/2019030500071/" title="Mysql双机热备主从配置">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/29/2019030500022/">
+    		授权远程连接MySQL（Linux）
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-29T04:58:14.000Z">2015-06-29</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/Linux/" title="Linux">Linux</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>MySQL远程访问的命令 格式： mysql -h主机地址 -u用户名 -p用户密码 首先在目标服务器上（115.159.66.51）修改mysql的my.cnf文件： <img src="http://img.blog.csdn.net/20150629111912300" alt="这里写图片描述"> <img src="http://img.blog.csdn.net/20150629111941520" alt="这里写图片描述"> 修改退出后，重启mysql服务 命令：sudo service mysql restart 此时尝试用115.159.66.51主机来连接mysql ubuntu@VM-194-212-ubuntu:/etc/mysql$ mysql -h115.159.66.51 -uroot -pxiongchao 此时会出现无法连接的错误 原因：没有对远程主机115.159.66.51赋予访问mysql server的权限 赋予主机主机115.159.66.51以root的身份访问数据权限（注：访问haibao数据库）： grant all privileges on haibao.<em> to ‘root’@’115.159.66.51’ identified by ‘xiongchao’ with grant option; 赋予任何主机以root的身份访问数据权限（注：访问haibao数据库）： grant all privileges on haibao.</em> to ‘root’@’%’ identified by ‘xiongchao’ with grant option; 修改生效： flush privileges;</p>
+
+            
+            <p class="more">
+                <a href="/2015/06/29/2019030500022/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/29/2019030500022/" title="授权远程连接MySQL（Linux）">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/9.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/25/2019030500101/">
+    		MySQL的事件调度器使用介绍
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-25T09:29:23.000Z">2015-06-25</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<h1 id="MySQL的事件调度器使用介绍"><a href="#MySQL的事件调度器使用介绍" class="headerlink" title="MySQL的事件调度器使用介绍"></a>MySQL的事件调度器使用介绍</h1><p>自MySQL5.1.0起，增加了一个非常有特色的功能–事件调度器(Event Scheduler)，可以用做定时执行某些特定任务，可以看作基于时间的触发器。 <strong>一、开启</strong> 事件调度默认是关闭的，开启可执行</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>SET GLOBAL event_scheduler=1;</p>
+</li>
+<li><p>SET GLOBAL event_scheduler=ON;</p>
+</li>
+</ol>
+<p>或者在my.ini文件中加上event_scheduler=1 或者在启动命令后加上”-event_scheduler=1” 可以通过如下命令查看是否已开启事件调度器。</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>SHOW VARIABLES LIKE ‘event_scheduler’;</p>
+</li>
+<li><p>SELECT @@event_scheduler;</p>
+</li>
+</ol>
+<p><strong>二、创建</strong></p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>CREATE EVENT [IF NOT EXISTS] event_name</p>
+</li>
+<li><p>ON SCHEDULE schedule</p>
+</li>
+<li><p>[ON COMPLETION [NOT] PRESERVE]</p>
+</li>
+<li><p>[ENABLE | DISABLE]</p>
+</li>
+<li><p>[COMMENT ‘comment’]</p>
+</li>
+<li><p>DO sql_statement;</p>
+</li>
+<li><p>schedule:</p>
+</li>
+<li><p>AT TIMESTAMP [+ INTERVAL INTERVAL]</p>
+</li>
+<li><p>| EVERY INTERVAL [STARTS TIMESTAMP] [ENDS TIMESTAMP]</p>
+</li>
+<li><p>INTERVAL:</p>
+</li>
+<li><p>quantity {YEAR | QUARTER | MONTH | DAY | HOUR | MINUTE |</p>
+</li>
+<li><p>WEEK | SECOND | YEAR_MONTH</p>
+</li>
+</ol>
+<p>event_name：是你要创建的事件名称 schedule：是执行计划，有两个选项，第一是在某一时刻执行，第二是从某时到某时每隔一段时间执行。 INTERVAL：时间间隔，可以精确到秒(<a href="http://www.lai18.com/content/433742.html" target="_blank" rel="noopener"><strong>http://www.lai18.com/content/433742.html</strong></a>)。 ON COMPLETION [NOT] PRESERVE：结束后是否保存，默认不保存，一旦执行完，事件就被删除了，因此强烈建议此参数设为 ON COMPLETION PRESERVE。</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>ON SCHEDULE AT CURRENT_TIMESTAMP + INTERVAL 5 DAY</li>
+</ol>
+<p>是从现在起5日后执行</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>ON SCHEDULE AT TIMESTAMP ‘2012-03-07 12:00:00’</li>
+</ol>
+<p>在某一具体时刻执行</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>ON SCHEDULE EVERY 1 DAY</p>
+</li>
+<li><p>STARTS CURRENT_TIMESTAMP + INTERVAL 5 DAY</p>
+</li>
+<li><p>ENDS CURRENT_TIMESTAMP + INTERVAL 1 MONTH</p>
+</li>
+</ol>
+<p>5天后开始每天执行，一个月后结束 CURRENT_TIMESTAMP可以用具体时间替换，比如’2012-03-06 18:00:00’</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>CREATE EVENT `NewEvent`</p>
+</li>
+<li><p>ON SCHEDULE EVERY 1 MONTH STARTS ‘2012-04-01 00:00:00’ ENDS ‘2100-01-01 00:00:00’</p>
+</li>
+<li><p>ON COMPLETION PRESERVE</p>
+</li>
+<li><p>ENABLE</p>
+</li>
+<li><p>DO</p>
+</li>
+<li><p>update tb_test set amount=100 where id=2;;</p>
+</li>
+</ol>
+<p>这是一个完整的例子。 <strong>三、修改</strong></p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>ALTER EVENT event_name</p>
+</li>
+<li><p>[ON SCHEDULE schedule]</p>
+</li>
+<li><p>[RENAME TO new_event_name]</p>
+</li>
+<li><p>[ON COMPLETION [NOT] PRESERVE]</p>
+</li>
+<li><p>[COMMENT ‘comment’]</p>
+</li>
+<li><p>[ENABLE | DISABLE] [DO sql_statement]</p>
+</li>
+</ol>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>ALTER EVENT e_test DISABLE;</li>
+</ol>
+<p>关闭e_test事件。 注意，一旦MySQL重启，Disable的事件将全部消失。 <strong>四、删除</strong></p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>DROP EVENT [IF EXISTS] event_name</li>
+</ol>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/25/2019030500101/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/25/2019030500101/" title="MySQL的事件调度器使用介绍">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/16/2019030500064/">
+    		MySql中操作事务
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-16T05:46:13.000Z">2015-06-16</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>假如我们有一个表，为account，其内容为：</p>
+<p>ID</p>
+<p>NAME</p>
+<p>BALANCE</p>
+<p>1</p>
+<p>zhangsan</p>
+<p>1000</p>
+<p>2</p>
+<p>lisi</p>
+<p>1000</p>
+<h2 id="什么是事务"><a href="#什么是事务" class="headerlink" title="什么是事务"></a>什么是事务</h2><p>比如支付宝转账！张三转1000块到李四的账户，这其实需要两条SQL语句：</p>
+<ul>
+<li>给张三的账户减去1000元；</li>
+<li>给李四的账户加上1000元。</li>
+</ul>
+<p>如果在第一条SQL语句执行成功后，在执行第二条SQL语句之前，程序被中断了（可能地下光纤被挖掘机挖断了……确实存在的哦），那么李四的账户没有加上1000元，而张三却减去了1000元。这肯定是不行的！ 你现在可能已经知道什么是事务了吧！<strong>事务中的多个操作，要么完全成功，要么完全失败</strong>！不可能存在成功一半的情况！也就是说给张三的账户减去1000元如果成功了，那么给李四的账户加上1000元的操作也必须是成功的；否则给张三减去1000元，以及给李四加上1000元都是失败的！</p>
+<h2 id="事务的四大特性（ACID-）"><a href="#事务的四大特性（ACID-）" class="headerlink" title="事务的四大特性（ACID**）**"></a>事务的四大特性（<strong>ACID**</strong>）**</h2><ul>
+<li>原子性（Atomicity）：事务中所有操作是不可再分割的原子单位。事务中所有操作要么全部执行成功，要么全部执行失败。</li>
+<li>一致性（Consistency）：事务执行后，数据库状态与其它业务规则保持一致。如转账业务，无论事务执行成功与否，参与转账的两个账号余额之和应该是不变的。</li>
+<li>隔离性（Isolation）：隔离性是指在并发操作中，不同事务之间应该隔离开来，使每个并发中的事务不会相互干扰。</li>
+<li>持久性（Durability）：一旦事务提交成功，事务中所有的数据操作都必须被持久化到数据库中，即使提交事务后，数据库马上崩溃，在数据库重启时，也必须能保证通过某种机制恢复数据。</li>
+</ul>
+<h2 id="MySQL中的事务"><a href="#MySQL中的事务" class="headerlink" title="MySQL中的事务"></a>MySQL中的事务</h2><p>在默认情况下，MySQL每执行一条SQL语句，都是一个单独的事务。如果需要在一个事务中包含多条SQL语句，那么需要开启事务和结束事务。</p>
+<ul>
+<li>开启事务：start transaction；</li>
+<li>结束事务：commit或rollback。</li>
+</ul>
+<p>在执行SQL语句之前，先执行start transaction，这就开启了一个事务（事务的起点），然后可以去执行多条SQL语句，最后要结束事务，commit表示提交，即事务中的多条SQL语句所做出的影响会持久化到数据库中。或者rollback，表示回滚，即回滚到事务的起点，之前做的所有操作都被撤消了！ 下面演示zhangsan给lisi转账1000元的示例：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>START TRANSACTION;</li>
+<li>UPDATE account SET balance=balance-1000 WHERE id=1;</li>
+<li>UPDATE account SET balance=balance+1000 WHERE id=2;</li>
+<li>ROLLBACK;</li>
+</ol>
+<p>也可以为：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>START TRANSACTION;</li>
+<li>UPDATE account SET balance=balance-1000 WHERE id=1;</li>
+<li>UPDATE account SET balance=balance+1000 WHERE id=2;</li>
+<li>COMMIT;</li>
+</ol>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/16/2019030500064/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/16/2019030500064/" title="MySql中操作事务">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/tags/MySQL/page/5/">前一页</a><a class="page-number" href="/tags/MySQL/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/MySQL/page/4/">4</a><a class="page-number" href="/tags/MySQL/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/tags/MySQL/page/7/">7</a><a class="page-number" href="/tags/MySQL/page/8/">8</a><a class="extend next" rel="next" href="/tags/MySQL/page/7/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

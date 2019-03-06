@@ -1,0 +1,1333 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/page/5/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/page/5/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/page/5/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/page/5/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 首页 -->
+
+    
+    <h3 class="widget-hd">
+        <strong>
+            
+                最近动态
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/28/2019030500074/">
+    		MySQL 分区表
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-28T11:05:16.000Z">2015-12-28</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/分区表/" title="分区表">分区表</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>今天统计数据的时候发现一张表使用了表分区，借此机会记录一下。 1. 什么是表分区？ 表分区，是指根据一定规则，将数据库中的一张表分解成多个更小的，容易管理的部分。从逻辑上看，只有一张表，但是底层却是由多个物理分区组成。 2. 表分区与分表的区别 分表：指的是通过一定规则，将一张表分解成多张不同的表。比如将用户订单记录根据时间成多个表。 分表与分区的区别在于：分区从逻辑上来讲只有一张表，而分表则是将一张表分解成多张表。 3. 表分区有什么好处？ 1）分区表的数据可以分布在不同的物理设备上，从而高效地利用多个硬件设备。 2）和单个磁盘或者文件系统相比，可以存储更多数据 3）优化查询。在where语句中包含分区条件时，可以只扫描一个或多个分区表来提高查询效率；涉及sum和count语句时，也可以在多个分区上并行处 理，最后汇总结果。 4）分区表更容易维护。例如：想批量删除大量数据可以清除整个分区。 5）可以使用分区表来避免某些特殊的瓶颈，例如InnoDB的单个索引的互斥访问，ext3问价你系统的inode锁竞争等。 4. 分区表的限制因素 1）一个表最多只能有1024个分区 2） MySQL5.1中，分区表达式必须是整数，或者返回整数的表达式。在MySQL5.5中提供了非整数表达式分区的支持。 3）如果分区字段中有主键或者唯一索引的列，那么多有主键列和唯一索引列都必须包含进来。即：分区字段要么不包含主键或者索引列，要么包含全部主键和索引 列。 4）分区表中无法使用外键约束 5）MySQL的分区适用于一个表的所有数据和索引，不能只对表数据分区而不对索引分区，也不能只对索引分区而不对表分区，也不能只对表的一部分数据分 区。 5. 如何判断当前MySQL是否支持分区？ 命令：show variables like ‘%partition%’ 运行结果: mysql&gt; show variables like ‘%partition%’; +——————-+——-+ | Variable_name     | Value | +——————-+——-+ | have_partitioning | YES   | +——————-+——-+ 1 row in set (0.00 sec) have_partintioning 的值为YES，表示支持分区。 6. MySQL支持的分区类型有哪些？ 1）RANGE分区：按照数据的区间范围分区 2）LIST分区：按照List中的值分区，与RANGE的区别是，range分区的区间范围值是连续的。 3）HASH分区 4）KEY分区 说明 在MySQL5.1版本中，RANGE,LIST,HASH分区要求分区键必须是INT类型，或者通过表达式返回INT类型。但KEY分区的时候，可以使 用其他类型的列（BLOB，TEXT类型除外）作为分区键。 7. Range分区 利用取值范围进行分区，区间要连续并且不能互相重叠。 语法： partition by range(exp)( //exp可以为列名或者表达式，比如to_date(created_date) partition p0 values less than(num) ) 例如： mysql&gt; create table emp( -&gt; id INTNOT null, -&gt; store_id int not null -&gt; ) -&gt; partition by range(store_id)( -&gt;   partition p0 values less than(10), -&gt;   partition p1 values less than(20) -&gt; );上面的语句创建了emp表，并根据store_id字段进行分区，小于10的值存在分区p0中，大于等于10，小于20的值存在分区p1中。 注意 每个分区都是按顺序定义的，从最低到最高。上面的语句，如果将less than(10) 和less than (20)的顺序颠倒过来，那么将报错，如下： ERROR 1493 (HY000): VALUES LESS THAN value must be strictly increasing for each partition RANGE分区存在的问题 1.range范围覆盖问题：当插入的记录中对应的分区键的值不在分区定义的范围中的时候，插入语句会失败。 上面的例子，如果我插入一条store_id = 30的记录会怎么样呢？ 我们上面分区的时候，最大值是20，如果插入一条超过20的记录，会报错: mysql&gt; insert intoemp(id,store_id)values(2,30); ERROR 1526 (HY000): Table has no partition for value 30 提示30这个值没有对应的分区。 解决办法 A. 预估分区键的值，及时新增分区。 B. 设置分区的时候，使用values less than maxvalue 子句,MAXVALUE表示最大的可能的整数值。 C. 尽量选择能够全部覆盖的字段作为分区键，比如一年的十二个月等。 2.Range分区中，分区键的值如果是NULL，将被作为一个最小值来处理。 8. LIST分区 List分区是建立离散的值列表告诉数据库特定的值属于哪个分区。 语法： partition by list(exp)( //exp为列名或者表达式 partition p0 values in (3,5)  //值为3和5的在p0分区 ) 与Range不同的是，list分区不必生命任何特定的顺序。例如： mysql&gt; create table emp1( -&gt; id int not null, -&gt; store_id int not null -&gt; ) -&gt; partition by list(store_id)( -&gt;   partition p0 values in (3,5), -&gt;   partition p1 values in (2,6,7,9) -&gt; );注意 如果插入的记录对应的分区键的值不在list分区指定的值中，将会插入失败。并且，list不能像range分区那样提供maxvalue。 9. Columns分区 MySQL5.5中引入的分区类型，解决了5.5版本之前range分区和list分区只支持整数分区的问题。 Columns分区可以细分为 range columns分区和 list columns分区，他们都支持整数，日期时间，字符串三大数据类型。（不支持text和blob类型作为分区键） columns分区还支持多列分区（这里不详细展开）。 10. Hash分区 Hash分区主要用来分散热点读，确保数据在预先确定个数的分区中尽可能平均分布。 MySQL支持两种Hash分区:常规Hash分区和线性Hash分区。 A. 常规Hash分区:使用取模算法 语法： partition by hash(store_id) partitions 4; 上面的语句，根据store_id对4取模，决定记录存储位置。 比如store_id = 234的记录，MOD(234,4)=2,所以会被存储在第二个分区。 常规Hash分区的优点和不足 优点：能够使数据尽可能的均匀分布。 缺点：不适合分区经常变动的需求。假如我要新增加两个分区，现在有6个分区，那么MOD(234,6)的结果与之前MOD(234,4)的结果就会出现不 一致，这样大部分数据就需要重新计算分区。为解决此问题，MySQL提供了线性Hash分区。 B. 线性Hash分区：分区函数是一个线性的2的幂的运算法则。 语法： partition by LINER hash(store_id) partitions 4; 与常规Hash的不同在于，“Liner”关键字。 算法介绍: 假设要保存记录的分区编号为N,num为一个非负整数,表示分割成的分区的数量，那么N可以通过以下步骤得到： Step 1. 找到一个大于等于num的2的幂，这个值为V，V可以通过下面公式得到： V = Power(2,Ceiling(Log(2,num))) 例如：刚才设置了4个分区，num=4，Log(2,4)=2,Ceiling(2)=2,power(2,2)=4,即V=4 Step 2. 设置N=F(column_list)&amp;(V-1) 例如：刚才V=4，store_id=234对应的N值，N = 234&amp;（4-1） =2 Step 3. 当N&gt;=num,设置V=Ceiling(V/2),N=N&amp;(V-1) 例如：store_id=234,N=2&lt;4,所以N就取值2，即可。 假设上面算出来的N=5，那么V=Ceiling(4/2)=2,N=5&amp;(2-1)=1,即在第一个分区。 线性Hash的优点和不足 优点：在分区维护（增加，删除，合并，拆分分区）时，MySQL能够处理得更加迅速。 缺点：与常规Hash分区相比，线性Hash各个分区之间的数据分布不太均衡。 11. Key分区 类似Hash分区，Hash分区允许使用用户自定义的表达式，但Key分区不允许使用用户自定义的表达式。Hash仅支持整数分区，而Key分区支持除了Blob和text的其他类型的列作为分区键。 语法: partition by key(exp) partitions 4;//exp是零个或多个字段名的列表 key分区的时候，exp可以为空，如果为空，则默认使用主键作为分区键，没有主键的时候，会选择非空惟一键作为分区键。 12. 子分区 分区表中对每个分区再次分割，又成为复合分区。 13. 分区对于NULL值的处理 MySQ允许分区键值为NULL，分区键可能是一个字段或者一个用户定义的表达式。一般情况下，MySQL在分区的时候会把NULL值当作零值或者一个最小值进行处理。 注意 Range分区中：NULL值被当作最小值来处理 List分区中：NULL值必须出现在列表中，否则不被接受 Hash/Key分区中：NULL值会被当作零值来处理 14. 分区管理 分区管理包括对于分区的增加，删除，以及查询。 1.增加分区： 对于Range分区和LIst分区来说： alter table table_name add partition (partition p0 values …(exp)) values后面的内容根据分区的类型不同而不同。 对于Hash分区和Key分区来说： altertable table_name addpartition partitions 8; 上面的语句，指的是新增8个分区 。 2.删除分区 对于Range分区和List分区： altertable table_name droppartition p0; //p0为要删除的分区名称 删除了分区，同时也将删除该分区中的所有数据。同时，如果删除了分区导致分区不能覆盖所有值，那么插入数据的时候会报错。 对于Hash和Key分区： altertable table_name coalescepartition2; //将分区缩减到2个 coalesce [ˌkəʊəˈles] vi. 联合，合并 3.分区查询 1）查询某张表一共有多少个分区 mysql&gt; select -&gt;   partition_name, -&gt;   partition_expression, -&gt;   partition_description, -&gt;   table_rows -&gt; from -&gt;   INFORMATION_SCHEMA.partitions -&gt; where -&gt;   table_schema=’test’ -&gt;   and table_name = ‘emp’; +—————-+———————-+———————–+————+ | partition_name | partition_expression | partition_description | table_rows | +—————-+———————-+———————–+————+ | p0             | store_id             | 10                    |          0 | | p1             | store_id             | 20                    |          1 | +—————-+———————-+———————–+————+ 即，可以从information_schema.partitions表中查询。 2）查看执行计划，判断查询数据是否进行了分区过滤 mysql&gt; explain partitions select <em> from emp where store_id=10 \G; <strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong></em> 1. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> id: 1 select_type: SIMPLE table: emp partitions: p1 type: system possible_keys: NULL key: NULL key_len: NULL ref: NULL rows: 1 Extra: 1 row in set (0.00 sec) 上面的结果：partitions:p1 表示数据在p1分区进行检索。 [参考资料] 《深入MySQL数据库开发、优化与管理维护（第2版）》 《高性能MySQL》</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/28/2019030500074/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/28/2019030500074/" title="MySQL 分区表">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/28/2019030500108/">
+    		MYSQL通过SQL脚本创建存储过程(游标删除多表数据)
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-28T11:02:37.000Z">2015-12-28</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/游标/" title="游标">游标</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>首先描述一下业务处理存储过程功能：删除除系统管理员创建的角色和对应的业务表数据。 [size=medium]</p>
+<p>Sql代码</p>
+<ol>
+<li>–  CALL P_INTSYS(‘%_10006%’,’10006’);</li>
+<li><p>drop procedure if exists wmscloud_test.P_INTSYS;</p>
+</li>
+<li><p>CREATE PROCEDURE wmscloud_test.P_INTSYS(IN likeTableName VARCHAR(30),IN esCorCode VARCHAR(30))</p>
+</li>
+<li><p>BEGIN</p>
+</li>
+<li><p>– 需要定义接收游标数据的变量 </p>
+</li>
+<li>DECLARE table_ VARCHAR(50);</li>
+<li>– 遍历数据结束标志</li>
+<li>DECLARE done INT DEFAULT FALSE;</li>
+<li>– 游标</li>
+<li>DECLARE cur CURSOR FOR SELECT TABLE_NAME FROM (SELECT TABLE_NAME from information_schema.tables WHERE TABLE_NAME LIKE likeTableName ) allTables;</li>
+<li>– 将结束标志绑定到游标</li>
+<li>DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;</li>
+<li>– 打开游标</li>
+<li>OPEN cur;</li>
+<li>– 开始循环</li>
+<li><p>read_loop: LOOP</p>
+</li>
+<li><p>– 提取游标里的数据，这里只有一个，多个的话也一样；</p>
+</li>
+<li>FETCH cur INTO table_;</li>
+<li>– 声明结束的时候</li>
+<li>IF done THEN</li>
+<li>LEAVE read_loop;</li>
+<li><p>END IF;</p>
+</li>
+<li><p>– 这里做你想做的循环的事件</p>
+</li>
+<li>SET @delete_table=CONCAT(‘ DELETE FROM ‘,table_,’;’);</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>END LOOP;</p>
+</li>
+<li>– 关闭游标</li>
+<li><p>CLOSE cur;</p>
+</li>
+<li><p>– 删除,除去系统管理员创建的外其余用户和角色</p>
+</li>
+<li>SET @delete_table=CONCAT(‘ DELETE FROM es_user WHERE CREATOR!=1 and ES_COR_CODE=’,esCorCode);</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>SET @delete_table=CONCAT(‘ DELETE FROM es_role WHERE CREATOR!=1 and ES_COR_CODE=’,esCorCode);</p>
+</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>END</p>
+</li>
+</ol>
+<p>[/size] 执行脚本生成的函数</p>
+<p>Sql代码</p>
+<ol>
+<li><p>[size=medium]BEGIN</p>
+</li>
+<li><p>– 需要定义接收游标数据的变量 </p>
+</li>
+<li>DECLARE table_ VARCHAR(50);</li>
+<li>– 遍历数据结束标志</li>
+<li>DECLARE done INT DEFAULT FALSE;</li>
+<li>– 游标</li>
+<li>DECLARE cur CURSOR FOR SELECT TABLE_NAME FROM (SELECT TABLE_NAME from information_schema.tables WHERE TABLE_NAME LIKE likeTableName ) allTables;</li>
+<li>– 将结束标志绑定到游标</li>
+<li>DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;</li>
+<li>– 打开游标</li>
+<li>OPEN cur;</li>
+<li>– 开始循环</li>
+<li><p>read_loop: LOOP</p>
+</li>
+<li><p>– 提取游标里的数据，这里只有一个，多个的话也一样；</p>
+</li>
+<li>FETCH cur INTO table_;</li>
+<li>– 声明结束的时候</li>
+<li>IF done THEN</li>
+<li>LEAVE read_loop;</li>
+<li><p>END IF;</p>
+</li>
+<li><p>– 这里做你想做的循环的事件</p>
+</li>
+<li>SET @delete_table=CONCAT(‘ DELETE FROM ‘,table_,’;’);</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>END LOOP;</p>
+</li>
+<li>– 关闭游标</li>
+<li><p>CLOSE cur;</p>
+</li>
+<li><p>– 删除,除去系统管理员创建的外其余用户和角色</p>
+</li>
+<li>SET @delete_table=CONCAT(‘ DELETE FROM es_user WHERE CREATOR!=1 and ES_COR_CODE=’,esCorCode);</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>SET @delete_table=CONCAT(‘ DELETE FROM es_role WHERE CREATOR!=1 and ES_COR_CODE=’,esCorCode);</p>
+</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>END[/size]</p>
+</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/12/28/2019030500108/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/28/2019030500108/" title="MYSQL通过SQL脚本创建存储过程(游标删除多表数据)">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/23/2019030500023/">
+    		查询重复记录
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-23T07:59:41.000Z">2015-12-23</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/rowid/" title="rowid">rowid</a> / 
+    
+        <a href="/tags/重复/" title="重复">重复</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>在几千条记录里,存在着些相同的记录,如何能用SQL语句,删除掉重复的呢?谢谢! 1、查找表中多余的重复记录，重复记录是根据单个字段（peopleId）来判断 select <em> from people where peopleId in (select  peopleId  from  people  group  by  peopleId  having  count(peopleId) &gt; 1) 2、删除表中多余的重复记录，重复记录是根据单个字段（peopleId）来判断，只留有rowid最小的记录 delete from people where peopleId  in (select  peopleId  from people  group  by  peopleId  having  count(peopleId) &gt; 1) and rowid not in (select min(rowid) from  people  group by peopleId  having count(peopleId )&gt;1) 3、查找表中多余的重复记录（多个字段） select </em> from vitae a where (a.peopleId,a.seq) in  (select peopleId,seq from vitae group by peopleId,seq  having count(<em>) &gt; 1) 4、删除表中多余的重复记录（多个字段），只留有rowid最小的记录 delete from vitae a where (a.peopleId,a.seq) in  (select peopleId,seq from vitae group by peopleId,seq having count(</em>) &gt; 1) and rowid not in (select min(rowid) from vitae group by peopleId,seq having count(<em>)&gt;1) 5、查找表中多余的重复记录（多个字段），不包含rowid最小的记录 select </em> from vitae a where (a.peopleId,a.seq) in  (select peopleId,seq from vitae group by peopleId,seq having count(<em>) &gt; 1) and rowid not in (select min(rowid) from vitae group by peopleId,seq having count(</em>)&gt;1) 比方说在A表中存在一个字段“name”，而且不同记录之间的“name”值有可能会相同， 现在就是需要查询出在该表中的各记录之间，“name”值存在重复的项； Select Name,Count(<em>) From A Group By Name Having Count(</em>) &gt; 1 如果还查性别也相同大则如下: Select Name,sex,Count(<em>) From A Group By Name,sex Having Count(</em>) &gt; 1</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/23/2019030500023/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/23/2019030500023/" title="查询重复记录">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/23/2019030500072/">
+    		MySQL垂直和水平切分
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-23T07:46:17.000Z">2015-12-23</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/切分/" title="切分">切分</a> / 
+    
+        <a href="/tags/垂直/" title="垂直">垂直</a> / 
+    
+        <a href="/tags/水平/" title="水平">水平</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>replication的限制:一旦数据库过于庞大，尤其是当写入过于频繁，很难由一台主机支撑的时候，我们还是会面临到扩展瓶颈。数据切分(sharding):通过某种特定的条件，将我们存放在同一个数据库中的数据分散存放到多个数据库（主机）上面，以达到分散单台设备负载的效果。。数据的切分同时还可以提高系统的总体可用性，因为单台设备Crash之后，只有总体数据的某部分不可用，而不是所有的数据。   数据的切分（Sharding）模式   一种是按照不同的表（或者Schema）来切分到不同的数据库（主机）之上，这种切可以称之为数据的垂直（纵向）切分；另外一种则是根据表中的数据的逻辑关系，将同一个表中的数据按照某种条件拆分到多台数据库（主机）上面，这种切分称之为数据的水平（横向）切分。   垂直切分:   一个架构设计较好的应用系统，其总体功能肯定是由很多个功能模块所组成的，而每一个功能模块所需要的数据对应到数据库中就是一个或者多个表。而在架构设计中，各个功能模块相互之间的交互点越统一越少，系统的耦合度就越低，系统各个模块的维护性以及扩展性也就越好。这样的系统，实现数据的垂直切分也就越容易。   一般来说，如果是一个负载相对不是很大的系统，而且表关联又非常的频繁，那可能数据库让步，将几个相关模块合并在一起减少应用程序的工作的方案可以减少较多的工作量，这是一个可行的方案。一个垂直拆分的例子: 1.用户模块表：user,user_profile,user_group,user_photo_album 2.群组讨论表：groups,group_message,group_message_content,top_message 3.相册相关表：photo,photo_album,photo_album_relation,photo_comment   4.事件信息表：event <em>群组讨论模块和用户模块之间主要存在通过用户或者是群组关系来进行关联。一般关联的时候都会是通过用户的id或者nick_name以及group的id来进行关联，通过模块之间的接口实现不会带来太多麻烦； </em>相册模块仅仅与用户模块存在通过用户的关联。这两个模块之间的关联基本就有通过用户id关联的内容，简单清晰，接口明确；   *事件模块与各个模块可能都有关联，但是都只关注其各个模块中对象的ID信息，同样可以做到很容易分拆。 垂直切分的优点: 数据库的拆分简单明了，拆分规则明确； 应用程序模块清晰明确，整合容易； 数据维护方便易行，容易定位；   垂直切分的缺点: 部分表关联无法在数据库级别完成，需要在程序中完成； 对于访问极其频繁且数据量超大的表仍然存在性能瓶颈，不一定能满足要求； 事务处理相对更为复杂； 切分达到一定程度之后，扩展性会遇到限制； 过读切分可能会带来系统过渡复杂而难以维护。     水平切分   将某个访问极其频繁的表再按照某个字段的某种规则来分散到多个表之中，每个表中包含一部分数据。 对于上面的例子:所有数据都是和用户关联的，那么我们就可以根据用户来进行水平拆分，将不同用户的数据切分到不同的数据库中。现在互联网非常火爆的Web2.0类型的网站，基本上大部分数据都能够通过会员用户信息关联上，可能很多核心表都非常适合通过会员ID来进行数据的水平切分。而像论坛社区讨论系统，就更容易切分了，非常容易按照论坛编号来进行数据的水平切分。切分之后基本上不会出现各个库之间的交互。   水平切分的优点： 表关联基本能够在数据库端全部完成； 不会存在某些超大型数据量和高负载的表遇到瓶颈的问题； 应用程序端整体架构改动相对较少； 事务处理相对简单； 只要切分规则能够定义好，基本上较难遇到扩展性限制；   水平切分的缺点： 切分规则相对更为复杂，很难抽象出一个能够满足整个数据库的切分规则； 后期数据的维护难度有所增加，人为手工定位数据更困难； 应用系统各模块耦合度较高，可能会对后面数据的迁移拆分造成一定的困难。   两种切分结合用:   一般来说，我们数据库中的所有表很难通过某一个（或少数几个）字段全部关联起来，所以很难简单的仅仅通过数据的水平切分来解决所有问题。而垂直切分也只能解决部分问题，对于那些负载非常高的系统，即使仅仅只是单个表都无法通过单台数据库主机来承担其负载。我们必须结合“垂直”和“水平”两种切分方式同时使用   每一个应用系统的负载都是一步一步增长上来的，在开始遇到性能瓶颈的时候，大多数架构师和DBA都会选择先进行数据的垂直拆分，因为这样的成本最先，最符合这个时期所追求的最大投入产出比。然而，随着业务的不断扩张，系统负载的持续增长，在系统稳定一段时期之后，经过了垂直拆分之后的数据库集群可能又再一次不堪重负，遇到了性能瓶颈。   如果我们再一次像最开始那样继续细分模块，进行数据的垂直切分，那我们可能在不久的将来，又会遇到现在所面对的同样的问题。而且随着模块的不断的细化，应用系统的架构也会越来越复杂，整个系统很可能会出现失控的局面。   这时候我们就必须要通过数据的水平切分的优势，来解决这里所遇到的问题。而且，我们完全不必要在使用数据水平切分的时候，推倒之前进行数据垂直切分的成果，而是在其基础上利用水平切分的优势来避开垂直切分的弊端，解决系统复杂性不断扩大的问题。而水平拆分的弊端（规则难以统一）也已经被之前的垂直切分解决掉了，让水平拆分可以进行的得心应手。   示例数据库:   假设在最开始，我们进行了数据的垂直切分，然而随着业务的不断增长，数据库系统遇到了瓶颈，我们选择重构数据库集群的架构。如何重构？考虑到之前已经做好了数据的垂直切分，而且模块结构清晰明确。而业务增长的势头越来越猛，即使现在进一步再次拆分模块，也坚持不了太久。   ==&gt;选择了在垂直切分的基础上再进行水平拆分。   ==&gt;在经历过垂直拆分后的各个数据库集群中的每一个都只有一个功能模块，而每个功能模块中的所有表基本上都会与某个字段进行关联。如用户模块全部都可以通过用户ID进行切分，群组讨论模块则都通过群组ID来切分，相册模块则根据相册ID来进切分，最后的事件通知信息表考虑到数据的时限性（仅仅只会访问最近某个事件段的信息），则考虑按时间来切分。   数据切分以及整合方案.   数据库中的数据在经过垂直和（或）水平切分被存放在不同的数据库主机之后，应用系统面临的最大问题就是如何来让这些数据源得到较好的整合，其中存在两种解决思路：   在每个应用程序模块中配置管理自己需要的一个（或者多个）数据源，直接访问各个数据库，在模块内完成数据的整合； 通过中间代理层来统一管理所有的数据源，后端数据库集群对前端应用程序透明；   第二种方案,虽然短期内需要付出的成本可能会相对更大一些，但是对整个系统的扩展性来说，是非常有帮助的。针对第二种方案，可以选择的方法和思路有：   1.利用MySQLProxy 实现数据切分及整合.   可用来监视、分析或者传输他们之间的通讯信息。他的灵活性允许你最大限度的使用它，目前具备的功能主要有连接路由，Query分析，Query过滤和修改，负载均衡，以及基本的HA机制等。MySQLProxy 本身并不具有上述所有的这些功能，而是提供了实现上述功能的基础。要实现这些功能，还需要通过我们自行编写LUA脚本来实现。   原理:MySQLProxy 实际上是在客户端请求与MySQLServer 之间建立了一个连接池。所有客户端请求都是发向MySQLProxy，然后经由MySQLProxy 进行相应的分析，判断出是读操作还是写操作，分发至对应的MySQLServer 上。对于多节点Slave集群，也可以起做到负载均衡的效果。   2.利用Amoeba实现数据切分及整合   Amoeba是一个基于Java开发的，专注于解决分布式数据库数据源整合Proxy程序的开源框架，Amoeba已经具有Query路由，Query过滤，读写分离，负载均衡以及HA机制等相关内容。Amoeba主要解决的以下几个问题：   数据切分后复杂数据源整合； 提供数据切分规则并降低数据切分规则给数据库带来的影响； 降低数据库与客户端的连接数； 读写分离路由；   AmoebaFor MySQL 主要是专门针对MySQL数据库的解决方案，前端应用程序请求的协议以及后端连接的数据源数据库都必须是MySQL。对于客户端的任何应用程序来说，AmoebaForMySQL 和一个MySQL数据库没有什么区别，任何使用MySQL协议的客户端请求，都可以被AmoebaFor MySQL 解析并进行相应的处理。   Proxy程序常用的功能如读写分离，负载均衡等配置都在amoeba.xml中进行。Amoeba已经支持了实现数据的垂直切分和水平切分的自动路由，路由规则可以在rule.xml进行设置。   3.利用HiveDB实现数据切分及整合   HiveDB同样是一个基于Java针对MySQL数据库的提供数据切分及整合的开源框架，只是目前的HiveDB仅仅支持数据的水平切分。主要解决大数据量下数据库的扩展性及数据的高性能访问问题，同时支持数据的冗余及基本的HA机制。   HiveDB的实现机制与MySQLProxy 和Amoeba有一定的差异，他并不是借助MySQL的Replication功能来实现数据的冗余，而是自行实现了数据冗余机制，而其底层主要是基于HibernateShards 来实现的数据切分工作。数据切分与整合中可能存在的问题   引入分布式事务的问题? 一旦数据进行切分被分别存放在多个MySQLServer中之后，不管我们的切分规则设计的多么的完美（实际上并不存在完美的切分规则），都可能造成之前的某些事务所涉及到的数据已经不在同一个MySQLServer 中了。 ==&gt;将一个跨多个数据库的分布式事务分拆成多个仅处于单个数据库上面的小事务，并通过应用程序来总控各个小事务。   跨节点Join的问题? ==&gt;先从一个节点取出数据,然后根据这些数据,再到另一个表中取数据. ==&gt;使用Federated存储引擎,问题是:乎如果远端的表结构发生了变更，本地的表定义信息是不会跟着发生相应变化的。   跨节点合并排序分页问题? ==&gt;Join本身涉及到的多个表之间的数据读取一般都会存在一个顺序关系。但是排序分页就不太一样了，排序分页的数据源基本上可以说是一个表（或者一个结果集），本身并不存在一个顺序关系，所以在从多个数据源取数据的过程是完全可以并行的。这样，排序分页数据的取数效率我们可以做的比跨库Join更高，所以带来的性能损失相对的要更小。</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/23/2019030500072/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/23/2019030500072/" title="MySQL垂直和水平切分">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/22/2019030500120/">
+    		mysqldump命令使用笔记总结
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-22T06:34:53.000Z">2015-12-22</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/dump/" title="dump">dump</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>[size=small]mysqldump只导出数据或只导出表结构 1、备份数据库 #mysqldump -u 用户名 -p 数据库名 &gt; 导出文件名 2、导出表结构 #mysqldump -u 用户名 -p -d 数据库名 –add-drop-table 表名 &gt; 导出文件名  ##-d:表示没有数据，–add-drop-table 在每个creat语句之前增加一个drop table 3、导出表 #mysqldump -u 用户名 -p 数据库名 表名&gt; 导出文件名 4、导出数据 #mysqldump -u 用户名 -p -t 数据库名 &gt; 导出文件名 5、导入数据 #mysql 数据库名&lt;文件路径 -u 用户名 -p 实例： 备份数据库 #mysqldump　数据库名　&gt;数据库备份名 #mysqldump　-A　-u　用户名　-p密码　数据库名&gt;数据库备份名 #mysqldump　-d　-A　–add-drop-table　-uroot　-p　&gt;xxx.sql 导出结构不导出数据 mysqldump　–opt　-d　数据库名　-u　root　-p　&gt;　xxx.sql 导出数据不导出结构 mysqldump　-t　数据库名　-uroot　-p　&gt;　xxx.sql 导出数据和表结构 mysqldump　数据库名　-uroot　-p　&gt;　xxx.sql 导出特定表的结构 mysqldump　-uroot　-p　-B　数据库名　–table　表名　&gt;　xxx.sql 导入数据 #mysql　数据库名　&lt;　文件名 === 导出： mysqldump -u root -p week_system &gt; /bak_mysql/week_systembak.sql 导入： 必须先新建一个同名的库，才能恢复，不然会报错。 mysqldump: Got error: 1049: Unknown database ‘week_systembak’ when selecting the database mysql&gt; create database week_system character set utf8; Query OK, 1 row affected (0.02 sec) mysql&gt; \q Bye [root@localhost etc]# mysqldump -u root -p week_system &lt; /tmp/week_systembak.sql Enter password: – MySQL dump 10.13  Distrib 5.6.19, for Linux (x86_64) – – Host: localhost    Database: week_system – —————————————————— – Server version       5.6.19 /<em>!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT </em>/; /<em>!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS </em>/; /<em>!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION </em>/; /<em>!40101 SET NAMES utf8 </em>/; /<em>!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE </em>/; /<em>!40103 SET TIME_ZONE=’+00:00’ </em>/; /<em>!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 </em>/; /<em>!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 </em>/; /<em>!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=’NO_AUTO_VALUE_ON_ZERO’ </em>/; /<em>!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 </em>/; /<em>!40103 SET TIME_ZONE=@OLD_TIME_ZONE </em>/; /<em>!40101 SET SQL_MODE=@OLD_SQL_MODE </em>/; /<em>!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS </em>/; /<em>!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS </em>/; /<em>!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT </em>/; /<em>!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS </em>/; /<em>!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION </em>/; /<em>!40111 SET SQL_NOTES=@OLD_SQL_NOTES </em>/; – Dump completed on 2014-07-30  1:00:00 —-导入完成，但发现数据库是空的 –原来是命令用错了： mysql  -u root -p week_system &lt; /tmp/week_systembak.sql 就可以正常看到表了。 添加条件： mysqldump  -h rdsa3qfmmqriq3y.mysql.rds.aliyuncs.com -uweblog -pweblog -w “date=’2014-11-13’” weblog update_log &gt;/tmp/update.sql 先创建：mysql&gt;create database bugtracker character uft8; 再还原：root@viptest2 ~]# mysql -uroot -ptina1  bugtracker &lt; ./bugtracker.sql[/size]</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/22/2019030500120/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/22/2019030500120/" title="mysqldump命令使用笔记总结">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/22/2019030500050/">
+    		java插入mysql 300万-2200万数据，优化查询
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-22T06:31:31.000Z">2015-12-22</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/Java/" title="Java">Java</a> / 
+    
+        <a href="/tags/优化/" title="优化">优化</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>my.ini参数修改了下</p>
+<ol>
+<li>table_cache=512</li>
+<li>bulk_insert_buffer_size = 100M</li>
+<li>innodb_additional_mem_pool_size=30M</li>
+<li>innodb_flush_log_at_trx_commit=0</li>
+<li>innodb_buffer_pool_size=207M</li>
+<li>innodb_log_file_size=128M</li>
+</ol>
+<p>innodb_flush_log_at_trx_commit默认值1的意思是每一次事务提交或事务外的指令都需要把日志写入（flush）硬盘，这是很费时的。特别是使用电 池供电缓存（Battery backed up cache）时。设成2对于很多运用，特别是从MyISAM表转过来的是可以的，它的意思是不写入硬盘而是写入系统缓存。日志仍然会每秒flush到硬 盘，所以你一般不会丢失超过1-2秒的更新。设成0会更快一点，但安全方面比较差，即使MySQL挂了也可能会丢失事务的数据。而值2只会在整个操作系统 挂了时才可能丢数据。对于事务要求很强，设置为0 是存在安全问题的 mysql创建表</p>
+<p>Sql代码</p>
+<ol>
+<li>CREATE TABLE `news` (</li>
+<li>`id` int(19) NOT NULL AUTO_INCREMENT,</li>
+<li>`title` varchar(30) DEFAULT NULL,</li>
+<li>`content` varchar(400) DEFAULT NULL,</li>
+<li>`type` varchar(30) DEFAULT NULL,</li>
+<li>PRIMARY KEY (`id`),</li>
+<li>UNIQUE KEY `PK_NEWS_ID` (`id`),</li>
+<li>KEY `INDEX_NEWS_ID_TYPE` (`id`,`type`),</li>
+<li>KEY `INDEX_NEWS_TYPE` (`type`)</li>
+<li><p>) ENGINE=InnoDB AUTO_INCREMENT=1072779 DEFAULT CHARSET=utf8</p>
+<p>插入数据一定要用 addBatch 超过300万条数据在我的笔记本上只需要近10分钟</p>
+</li>
+</ol>
+<p>Java代码</p>
+<ol>
+<li>public static void main(String[] args) {</li>
+<li><p>Connection conn = null;</p>
+</li>
+<li><p>// MySQL的JDBC URL编写方式：jdbc:mysql://主机名称：连接端口/数据库的名称?参数=值</p>
+</li>
+<li>// 避免中文乱码要指定useUnicode和characterEncoding</li>
+<li>// 执行数据库操作之前要在数据库管理系统上创建一个数据库，名字自己定，</li>
+<li>// 下面语句之前就要先创建javademo数据库</li>
+<li>String url = “jdbc:mysql://localhost:3306/javademo?”</li>
+<li><ul>
+<li>“user=root&amp;password=root&amp;useUnicode=true&amp;characterEncoding=UTF8”;</li>
+</ul>
+</li>
+<li>try {</li>
+<li>Class.forName(“com.mysql.jdbc.Driver”);// 动态加载mysql驱动</li>
+<li><p>conn = DriverManager.getConnection(url);</p>
+</li>
+<li><p>String   sql = “insert into news(title,content,type) values(?,?,?)”;</p>
+</li>
+<li><p>PreparedStatement prep = conn.prepareStatement(sql);</p>
+</li>
+<li>// 将连接的自动提交关闭，数据在传送到数据库的过程中相当耗时</li>
+<li>conn.setAutoCommit(false);</li>
+<li>long start = System.currentTimeMillis();</li>
+<li>String type = “java”;</li>
+<li>String content = “SUN公司开发Java语言的时候，在数据库这里只是提供了一个标准的接口，或者说是规范，叫做JDBC，这个东西单独放在那里没有任何作用，根本无法连接任何的数据库，只有当你下载相应的数据库驱动程序之后，才可以用JDBC通过这个驱动程序和数据库通信。sqlsever就有它的专门的驱动程序，在微软网站上可以下载到。SUN公司自己也开发了数据库驱动程序，叫做JDBC-ODBC驱动程序，是通过建立ODBC桥来连接Windows数据库，但是因为效率低并且有限制，现在一般都不推荐使用”;</li>
+<li>for (int i = 0; i &lt; 30; i++) {</li>
+<li>long start2 = System.currentTimeMillis();</li>
+<li>// 一次性执行插入10万条数据</li>
+<li>if(i==2){type=”php”;}</li>
+<li>else if(i==3){type=”erlang”;}</li>
+<li>else if(i==4){type=”go”;}</li>
+<li>else if(i==5){type=”javascript”;}</li>
+<li>else if(i==6){type=”html”;}</li>
+<li>else if(i==7){type=”html5”;}</li>
+<li>else if(i==8){type=”css”;}</li>
+<li>else if(i==9){type=”python”;}</li>
+<li>else if(i==10){type=”ror”;}</li>
+<li>else if(i==11){type=”nodejs”;}</li>
+<li>else if(i==12){type=”spring”;}</li>
+<li>else if(i==13){type=”hibernate”;}</li>
+<li>else if(i==14){type=”ibatis”;}</li>
+<li>else if(i==15){type=”mybatis”;}</li>
+<li>else if(i==16){type=”mysql”;}</li>
+<li>else if(i==17){type=”msserver”;}</li>
+<li>else if(i==18){type=”oracle”;}</li>
+<li>else if(i==19){type=”redis”;}</li>
+<li>else if(i==20){type=”mangodb”;}</li>
+<li>else if(i==21){type=”c”;}</li>
+<li>else if(i==22){type=”c++”;}</li>
+<li>else if(i==23){type=”springside”;}</li>
+<li>else if(i==24){type=”springroo”;}</li>
+<li>else if(i==25){type=”sprintboot”;}</li>
+<li>else if(i==26){type=”sprintmvc”;}</li>
+<li>else if(i==27){type=”websocket”;}</li>
+<li>else if(i==28){type=”restful”;}</li>
+<li>else if(i==29){type=”comet”;}</li>
+<li>for (int j = 0; j &lt; 100000; j++) {</li>
+<li>prep.setString(1, “文章”+j);</li>
+<li>prep.setString(2, content);</li>
+<li>prep.setString(3, type);</li>
+<li>prep.addBatch();</li>
+<li>}</li>
+<li>// 预处理批量执行</li>
+<li>prep.executeBatch();</li>
+<li>prep.clearBatch();</li>
+<li>conn.commit();</li>
+<li>long end2 = System.currentTimeMillis();</li>
+<li><p>// 批量执行一次批量打印执行依次的时间</p>
+</li>
+<li><p>System.out.println(end2 - start2);</p>
+</li>
+<li>}</li>
+<li>long end = System.currentTimeMillis();</li>
+<li>System.out.print(“total: “);</li>
+<li>System.out.println(end - start);</li>
+<li>} catch (Exception e) {</li>
+<li>e.printStackTrace();</li>
+<li>} finally {</li>
+<li>try {</li>
+<li>conn.close();</li>
+<li>} catch (SQLException e) {</li>
+<li>// TODO Auto-generated catch block</li>
+<li>e.printStackTrace();</li>
+<li>}</li>
+<li>}</li>
+<li>}</li>
+</ol>
+<p>测试结果300万插入只需要597秒</p>
+<ol>
+<li>15031</li>
+<li>15248</li>
+<li>18522</li>
+<li>18419</li>
+<li>19223</li>
+<li>19613</li>
+<li>20822</li>
+<li>18701</li>
+<li>19468</li>
+<li>21290</li>
+<li>19766</li>
+<li>20956</li>
+<li>19490</li>
+<li>19089</li>
+<li>20290</li>
+<li>22568</li>
+<li>20079</li>
+<li>20556</li>
+<li>20922</li>
+<li>22659</li>
+<li>21155</li>
+<li>19782</li>
+<li>20378</li>
+<li>21053</li>
+<li>19459</li>
+<li>22388</li>
+<li>20323</li>
+<li>20011</li>
+<li>18158</li>
+<li>21199</li>
+<li><p>total: 596625</p>
+<p>机器上一共插入了300万的数据，测试下查询：</p>
+</li>
+<li><p>select COUNT(id) from news</p>
+</li>
+<li><p>Affected rows: 0</p>
+</li>
+<li>Time: 0.729ms</li>
+</ol>
+<p>查询下分页</p>
+<ol>
+<li><p>select id,title from news limit 1000000,20</p>
+</li>
+<li><p>Affected rows: 0</p>
+</li>
+<li><p>Time: 7.839ms</p>
+<p>从第100万条查询20条记录，耗费了八秒时间，速度慢  </p>
+</li>
+<li><p>[SQL] select id from news limit 1000000,20</p>
+</li>
+<li><p>Affected rows: 0</p>
+</li>
+<li>Time: 0.242ms</li>
+</ol>
+<p>id 是索引，所以更快点  </p>
+<ol>
+<li>[SQL]</li>
+<li><p>select id from news order by id limit 1000000,20</p>
+</li>
+<li><p>Affected rows: 0</p>
+</li>
+<li>Time: 7.841ms</li>
+</ol>
+<p>order 加上去慢的太多了  </p>
+<ol>
+<li><p>select id,title from news where id&gt;=(select id from news order by id limit 1000000,1) limit 20</p>
+</li>
+<li><p>Affected rows: 0</p>
+</li>
+<li>Time: 8.115ms</li>
+</ol>
+<p>只要有order by在效率是上不去  </p>
+<ol>
+<li>[SQL]</li>
+<li>select id  from news where type = ‘ibatis’    limit 1,500000;</li>
+<li>Affected rows: 0</li>
+<li>Time: 0.076ms</li>
+</ol>
+<ol>
+<li><p>select id,title from news where type = ‘ibatis’  limit 1000000,20</p>
+</li>
+<li><p>Affected rows: 0</p>
+</li>
+<li>Time: 0.163ms</li>
+</ol>
+<p>Java代码  <img src="/uploads/2015/12/icon_star.png" alt="收藏代码"></p>
+<ol>
+<li>[SQL]</li>
+<li>select id,title,type from news where type = ‘ibatis’    limit 1,500000;</li>
+<li>Affected rows: 0</li>
+<li>Time: 0.209ms</li>
+</ol>
+<p>Java代码  <img src="/uploads/2015/12/icon_star.png" alt="收藏代码"></p>
+<ol>
+<li>[SQL]</li>
+<li>select id,title,content,type from news where type = ‘ibatis’    limit 1,500000;</li>
+<li>Affected rows: 0</li>
+<li>Time: 0.471ms</li>
+</ol>
+<p>加上大字段会消耗一点性能 <img src="/uploads/2015/12/137ad894-49bd-31a6-9fa4-3e2f99930c72.png" alt title="点击查看原始大小图片"> 可见复合索引带来性能的优势 <img src="/uploads/2015/12/f54e794d-5d08-3f01-9aff-6f251ae141b1.png" alt title="点击查看原始大小图片"> in的速度是惊人的，300万条记录里面里用in仅仅 0.004ms，最主要也是因为加了索引。 这里面有2个惊人的查询，这也刚好是分页的功能的查询</p>
+<ol>
+<li>select id  from news where type = ‘ibatis’    limit 1,500000;</li>
+<li><p>select *  from news where id in(xxx,xxx,xxx,xxx……………)</p>
+<p>最后把in的代码贴出来，大家也试试in的威力</p>
+</li>
+<li><p>select *  from news where id in(</p>
+</li>
+<li>2999999,2999998,2999997,2999996,2999995,2999994,2999993,2999992,2999991,2999990,2999989,</li>
+<li>2999988,2999987,2999986,2999985,2999984,2999983,2999982,2999981,2999980,2999979,2999978,</li>
+<li>2999977,2999976,2999975,2999974,2999973,2999972,2999971,2999970,2999969,2999968,2999967,</li>
+<li>2999966,2999965,2999964,2999963,2999962,2999961,2999960,2999959,2999958,2999957,2999956,</li>
+<li>2999955,2999954,2999953,2999952,2999951,2999950,2999949,2999948,2999947,2999946,2999945,</li>
+<li>2999944,2999943,2999942,2999941,2999940,2999939,2999938,2999937,2999936,2999935,2999934,</li>
+<li>2999933,2999932,2999931,2999930,2999929,2999928,2999927,2999926,2999925,2999924,2999923,</li>
+<li>2999922,2999921,2999920,2999919,2999918,2999917,2999916,2999915,2999914,2999913,2999912,</li>
+<li>2999911,2999910,2999909,2999908,2999907,2999906,2999905,2999904,2999903,2999902,2999901,</li>
+<li>2999900,2999899,2999898,2999897,2999896,2999895,2999894,2999893,2999892,2999891,2999890,</li>
+<li>2999889,2999888,2999887,2999886,2999885,2999884,2999883,2999882,2999881,2999880,2999879,</li>
+<li>2999878,2999877,2999876,2999875,2999874,2999873,2999872,2999871,2999870,2999869,2999868,</li>
+<li>2999867,2999866,2999865,2999864,2999863,2999862,2999861,2999860,2999859,2999858,2999857,</li>
+<li>2999856,2999855,2999854,2999853,2999852,2999851,2999850,2999849,2999848,2999847,2999846,</li>
+<li>2999845,2999844,2999843,2999842,2999841,2999840,2999839,2999838,2999837,2999836,2999835,</li>
+<li>2999834,2999833,2999832,2999831,2999830,2999829,2999828,2999827,2999826,2999825,2999824,</li>
+<li>2999823,2999822,2999821,2999820,2999819,2999818,2999817,2999816,2999815,2999814,2999813,2999812</li>
+<li><p>)</p>
+<p><img src="/uploads/2015/12/b70cf91e-9fac-3792-bfed-5c6474d64ae0.png" alt title="点击查看原始大小图片"> 最快的是0.003ms   试试in里面放1188个参数   <img src="/uploads/2015/12/8830527f-e550-3795-b315-d15c7bf395a3.jpg" alt title="点击查看原始大小图片"> 速度依然很惊人   现在数据已经添加到了至少2200万条数据，看看in的效果 <img src="/uploads/2015/12/09409dd7-0647-382b-a090-0a17a785894b.png" alt title="点击查看原始大小图片"> 几千万数据中in语句只需0.001ms <img src="/uploads/2015/12/500dea44-6342-3b6e-bfa5-9b0f35408310.png" alt title="点击查看原始大小图片"> 数据大了，这个语句消耗的时间也增加了点 0.406ms 返回记录49.9999万条</p>
+</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/12/22/2019030500050/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/22/2019030500050/" title="java插入mysql 300万-2200万数据，优化查询">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/22/2019030500073/">
+    		MySQL函数
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-22T06:24:35.000Z">2015-12-22</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/函数/" title="函数">函数</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>复制代码 控制流函数 IFNULL(expr1,expr2) 如果expr1不是NULL，IFNULL()返回expr1，否则它返回expr2。IFNULL()返回一个数字或字符串值，取决于它被使用的上下文环境。 mysql&gt; select IFNULL(1,0); -&gt; 1 mysql&gt; select IFNULL(0,10); -&gt; 0 mysql&gt; select IFNULL(1/0,10); -&gt; 10 mysql&gt; select IFNULL(1/0,’yes’); -&gt; ‘yes’ IF(expr1,expr2,expr3) 如果expr1是TRUE(expr1&lt;&gt;0且expr1&lt;&gt;NULL)，那么IF()返回expr2，否则它返回expr3。IF()返回一个数字或字符串值，取决于它被使用的上下文。 mysql&gt; select IF(1&gt;2,2,3); -&gt; 3 mysql&gt; select IF(1&lt;2,’yes’,’no’); -&gt; ‘yes’ mysql&gt; select IF(strcmp(‘test’,’test1’),’yes’,’no’); -&gt; ‘no’ expr1作为整数值被计算，它意味着如果你正在测试浮点或字符串值，你应该使用一个比较操作来做。 mysql&gt; select IF(0.1,1,0); -&gt; 0 mysql&gt; select IF(0.1&lt;&gt;0,1,0); -&gt; 1 在上面的第一种情况中，IF(0.1)返回0，因为0.1被变换到整数值, 导致测试IF(0)。这可能不是你期望的。在第二种情况中，比较测试原来的浮点值看它是否是非零，比较的结果被用作一个整数。 CASE value WHEN [compare-value] THEN result [WHEN [compare-value] THEN result ] [ELSE result] END CASE WHEN [condition] THEN result [WHEN [condition] THEN result ] [ELSE result] END 第一个版本返回result，其中value=compare-value。第二个版本中如果第一个条件为真，返回result。如果没有匹配的result值，那么结果在ELSE后的result被返回。如果没有ELSE部分，那么NULL被返回。 mysql&gt; SELECT CASE 1 WHEN 1 THEN “one” WHEN 2 THEN “two” ELSE “more” END; -&gt; “one” mysql&gt; SELECT CASE WHEN 1&gt;0 THEN “true” ELSE “false” END; -&gt; “true” mysql&gt; SELECT CASE BINARY “B” when “a” then 1 when “b” then 2 END; -&gt; NULL 数学函数 所有的数学函数在一个出错的情况下返回NULL。 - 单目减。改变参数的符号。 mysql&gt; select - 2; 注意，如果这个操作符与一个BIGINT使用，返回值是一个BIGINT！这意味着你应该避免在整数上使用-，那可能有值-2^63！ ABS(X) 返回X的绝对值。 mysql&gt; select ABS(2); -&gt; 2 mysql&gt; select ABS(-32); -&gt; 32 该功能可安全用于BIGINT值。 SIGN(X) 返回参数的符号，为-1、0或1，取决于X是否是负数、零或正数。 mysql&gt; select SIGN(-32); -&gt; -1 mysql&gt; select SIGN(0); -&gt; 0 mysql&gt; select SIGN(234); -&gt; 1 MOD(N,M) % 模 (类似C中的%操作符)。返回N被M除的余数。 mysql&gt; select MOD(234, 10); -&gt; 4 mysql&gt; select 253 % 7; -&gt; 1 mysql&gt; select MOD(29,9); -&gt; 2 这个函数可安全用于BIGINT值。  FLOOR(X) 返回不大于X的最大整数值。 mysql&gt; select FLOOR(1.23); -&gt; 1 mysql&gt; select FLOOR(-1.23); -&gt; -2 注意返回值被变换为一个BIGINT！  CEILING(X) 返回不小于X的最小整数值。 mysql&gt; select CEILING(1.23); -&gt; 2 mysql&gt; select CEILING(-1.23); -&gt; -1 注意返回值被变换为一个BIGINT！ ROUND(X) 返回参数X的四舍五入的一个整数。 mysql&gt; select ROUND(-1.23); -&gt; -1 mysql&gt; select ROUND(-1.58); -&gt; -2 mysql&gt; select ROUND(1.58); -&gt; 2 注意返回值被变换为一个BIGINT! ROUND(X,D) 返回参数X的四舍五入的有D为小数的一个数字。如果D为0，结果将没有小数点或小数部分。 mysql&gt; select ROUND(1.298, 1); -&gt; 1.3 mysql&gt; select ROUND(1.298, 0); -&gt; 1 注意返回值被变换为一个BIGINT! EXP(X) 返回值e（自然对数的底）的X次方。 mysql&gt; select EXP(2); -&gt; 7.389056 mysql&gt; select EXP(-2); -&gt; 0.135335 LOG(X) 返回X的自然对数。 mysql&gt; select LOG(2); -&gt; 0.693147 mysql&gt; select LOG(-2); -&gt; NULL 如果你想要一个数字X的任意底B的对数，使用公式LOG(X)/LOG(B)。 LOG10(X) 返回X的以10为底的对数。 mysql&gt; select LOG10(2); -&gt; 0.301030 mysql&gt; select LOG10(100); -&gt; 2.000000 mysql&gt; select LOG10(-100); -&gt; NULL POW(X,Y) POWER(X,Y) 返回值X的Y次幂。 mysql&gt; select POW(2,2); -&gt; 4.000000 mysql&gt; select POW(2,-2); -&gt; 0.250000SQRT(X) 返回非负数X的平方根。 mysql&gt; select SQRT(4); -&gt; 2.000000 mysql&gt; select SQRT(20); -&gt; 4.472136 PI() 返回PI的值（圆周率）。 mysql&gt; select PI(); -&gt; 3.141593 COS(X) 返回X的余弦, 在这里X以弧度给出。 mysql&gt; select COS(PI()); -&gt; -1.000000 SIN(X) 返回X的正弦值，在此X以弧度给出。 mysql&gt; select SIN(PI()); -&gt; 0.000000 TAN(X) 返回X的正切值，在此X以弧度给出。 mysql&gt; select TAN(PI()+1); -&gt; 1.557408 ACOS(X) 返回X反余弦，即其余弦值是X。如果X不在-1到1的范围，返回NULL。 mysql&gt; select ACOS(1); -&gt; 0.000000 mysql&gt; select ACOS(1.0001); -&gt; NULL mysql&gt; select ACOS(0); -&gt; 1.570796 ASIN(X) 返回X反正弦值，即其正弦值是X。L如果X不在-1到1的范围，返回NULL。 mysql&gt; select ASIN(0.2); -&gt; 0.201358 mysql&gt; select ASIN(‘foo’); -&gt; 0.000000 ATAN(X) 返回X的反正切值，即其正切值是X。 mysql&gt; select ATAN(2); -&gt; 1.107149 mysql&gt; select ATAN(-2); -&gt; -1.107149ATAN2(X,Y) 返回2个变量X和Y的反正切。它类似于计算Y/X的反正切，除了两个参数的符号被用来决定结果的象限。 mysql&gt; select ATAN(-2,2); -&gt; -0.785398 mysql&gt; select ATAN(PI(),0); -&gt; 1.570796 COT(X) 返回X的余切。 mysql&gt; select COT(12); -&gt; -1.57267341 mysql&gt; select COT(0); -&gt; NULL RAND() RAND(N) 返回在范围0到1.0内的随机浮点值。如果一个整数参数N被指定，它被用作种子值。 mysql&gt; select RAND(); -&gt; 0.5925 mysql&gt; select RAND(20); -&gt; 0.1811 mysql&gt; select RAND(20); -&gt; 0.1811 mysql&gt; select RAND(); -&gt; 0.2079 mysql&gt; select RAND(); -&gt; 0.7888 你不能在一个ORDER BY子句用RAND()值使用列，因为ORDER BY将重复计算列多次。然而在MySQL3.23中，你可以做： SELECT <em> FROM table_name ORDER BY RAND()，这是有利于得到一个来自SELECT </em> FROM table1,table2 WHERE a=b AND c<d order by rand() limit 1000的集合的随机样本。注意在一个where子句里的一个rand()将在每次where被执行时重新评估。 least(x,y,) 有2和2个以上的参数，返回最小(最小值)的参数。参数使用下列规则进行比较： 如果返回值被使用在一个integer上下文，或所有的参数都是整数值，他们作为整数比较。 如果返回值被使用在一个real上下文，或所有的参数是实数值，他们作为实数比较。 如果任何参数是一个大小敏感的字符串，参数作为大小写敏感的字符串被比较。 在其他的情况下，参数作为大小写无关的字符串被比较。 mysql> select LEAST(2,0); -&gt; 0 mysql&gt; select LEAST(34.0,3.0,5.0,767.0); -&gt; 3.0 mysql&gt; select LEAST(“B”,”A”,”C”); -&gt; “A” 在MySQL 3.22.5以前的版本，你可以使用MIN()而不是LEAST。 GREATEST(X,Y,) 返回最大(最大值)的参数。参数使用与LEAST一样的规则进行比较。 mysql&gt; select GREATEST(2,0); -&gt; 2 mysql&gt; select GREATEST(34.0,3.0,5.0,767.0); -&gt; 767.0 mysql&gt; select GREATEST(“B”,”A”,”C”); -&gt; “C” 在MySQL在 3.22.5 以前的版本, 你能使用MAX()而不是GREATEST.  DEGREES(X) 返回参数X，从弧度变换为角度。 mysql&gt; select DEGREES(PI()); -&gt; 180.000000RADIANS(X) 返回参数X，从角度变换为弧度。 mysql&gt; select RADIANS(90); -&gt; 1.570796 TRUNCATE(X,D) 返回数字X，截断为D位小数。如果D为0，结果将没有小数点或小数部分。 mysql&gt; select TRUNCATE(1.223,1); -&gt; 1.2 mysql&gt; select TRUNCATE(1.999,1); -&gt; 1.9 mysql&gt; select TRUNCATE(1.999,0); -&gt; 1 字符串函数对于针对字符串位置的操作，第一个位置被标记为1。 ASCII(str) 返回字符串str的最左面字符的ASCII代码值。如果str是空字符串，返回0。如果str是NULL，返回NULL。 mysql&gt; select ASCII(‘2’); -&gt; 50 mysql&gt; select ASCII(2); -&gt; 50 mysql&gt; select ASCII(‘dx’); -&gt; 100也可参见ORD()函数。 ORD(str) 如果字符串str最左面字符是一个多字节字符，通过以格式((first byte ASCII code)*256+(second byte ASCII code))[*256+third byte ASCII code]返回字符的ASCII代码值来返回多字节字符代码。如果最左面的字符不是一个多字节字符。返回与ASCII()函数返回的相同值。 mysql&gt; select ORD(‘2’); -&gt; 50 CONV(N,from_base,to_base) 在不同的数字基之间变换数字。返回数字N的字符串数字，从from_base基变换为to_base基，如果任何参数是NULL，返回NULL。参数N解释为一个整数，但是可以指定为一个整数或一个字符串。最小基是2且最大的基是36。如果to_base是一个负数，N被认为是一个有符号数，否则，N被当作无符号数。 CONV以64位点精度工作。 mysql&gt; select CONV(“a”,16,2); -&gt; ‘1010’ mysql&gt; select CONV(“6E”,18,8); -&gt; ‘172’ mysql&gt; select CONV(-17,10,-18); -&gt; ‘-H’ mysql&gt; select CONV(10+”10”+’10’+0xa,10,10); -&gt; ‘40’ BIN(N) 返回二进制值N的一个字符串表示，在此N是一个长整数(BIGINT)数字，这等价于CONV(N,10,2)。如果N是NULL，返回NULL。 mysql&gt; select BIN(12); -&gt; ‘1100’ OCT(N) 返回八进制值N的一个字符串的表示，在此N是一个长整型数字，这等价于CONV(N,10,8)。如果N是NULL，返回NULL。 mysql&gt; select OCT(12); -&gt; ‘14’ HEX(N) 返回十六进制值N一个字符串的表示，在此N是一个长整型(BIGINT)数字，这等价于CONV(N,10,16)。如果N是NULL，返回NULL。 mysql&gt; select HEX(255); -&gt; ‘FF’ CHAR(N,) CHAR()将参数解释为整数并且返回由这些整数的ASCII代码字符组成的一个字符串。NULL值被跳过。 mysql&gt; select CHAR(77,121,83,81,’76’); -&gt; ‘MySQL’ mysql&gt; select CHAR(77,77.3,’77.3’); -&gt; ‘MMM’ CONCAT(str1,str2,) 返回来自于参数连结的字符串。如果任何参数是NULL，返回NULL。可以有超过2个的参数。一个数字参数被变换为等价的字符串形式。 mysql&gt; select CONCAT(‘My’, ‘S’, ‘QL’); -&gt; ‘MySQL’ mysql&gt; select CONCAT(‘My’, NULL, ‘QL’); -&gt; NULL mysql&gt; select CONCAT(14.3); -&gt; ‘14.3’ LENGTH(str) OCTET_LENGTH(str) CHAR_LENGTH(str) CHARACTER_LENGTH(str) 返回字符串str的长度。 mysql&gt; select LENGTH(‘text’); -&gt; 4 mysql&gt; select OCTET_LENGTH(‘text’); -&gt; 4 注意，对于多字节字符，其CHAR_LENGTH()仅计算一次。 LOCATE(substr,str) POSITION(substr IN str) 返回子串substr在字符串str第一个出现的位置，如果substr不是在str里面，返回0. mysql&gt; select LOCATE(‘bar’, ‘foobarbar’); -&gt; 4 mysql&gt; select LOCATE(‘xbar’, ‘foobar’); -&gt; 0 该函数是多字节可靠的。  LOCATE(substr,str,pos) 返回子串substr在字符串str第一个出现的位置，从位置pos开始。如果substr不是在str里面，返回0。 mysql&gt; select LOCATE(‘bar’, ‘foobarbar’,5); -&gt; 7 这函数是多字节可靠的。 INSTR(str,substr) 返回子串substr在字符串str中的第一个出现的位置。这与有2个参数形式的LOCATE()相同，除了参数被颠倒。 mysql&gt; select INSTR(‘foobarbar’, ‘bar’); -&gt; 4 mysql&gt; select INSTR(‘xbar’, ‘foobar’); -&gt; 0 这函数是多字节可靠的。 LPAD(str,len,padstr) 返回字符串str，左面用字符串padstr填补直到str是len个字符长。 mysql&gt; select LPAD(‘hi’,4,’??’); -&gt; ‘??hi’ RPAD(str,len,padstr) 返回字符串str，右面用字符串padstr填补直到str是len个字符长。 mysql&gt; select RPAD(‘hi’,5,’?’); -&gt; ‘hi???’ LEFT(str,len) 返回字符串str的最左面len个字符。 mysql&gt; select LEFT(‘foobarbar’, 5); -&gt; ‘fooba’ 该函数是多字节可靠的。 RIGHT(str,len) 返回字符串str的最右面len个字符。 mysql&gt; select RIGHT(‘foobarbar’, 4); -&gt; ‘rbar’ 该函数是多字节可靠的。 SUBSTRING(str,pos,len) SUBSTRING(str FROM pos FOR len) MID(str,pos,len) 从字符串str返回一个len个字符的子串，从位置pos开始。使用FROM的变种形式是ANSI SQL92语法。 mysql&gt; select SUBSTRING(‘Quadratically’,5,6); -&gt; ‘ratica’ 该函数是多字节可靠的。 SUBSTRING(str,pos) SUBSTRING(str FROM pos) 从字符串str的起始位置pos返回一个子串。 mysql&gt; select SUBSTRING(‘Quadratically’,5); -&gt; ‘ratically’ mysql&gt; select SUBSTRING(‘foobarbar’ FROM 4); -&gt; ‘barbar’ 该函数是多字节可靠的。 SUBSTRING_INDEX(str,delim,count) 返回从字符串str的第count个出现的分隔符delim之后的子串。如果count是正数，返回最后的分隔符到左边(从左边数) 的所有字符。如果count是负数，返回最后的分隔符到右边的所有字符(从右边数)。 mysql&gt; select SUBSTRING_INDEX(‘<a href="http://www.mysql.com&#39;" target="_blank" rel="noopener">www.mysql.com&#39;</a>, ‘.’, 2); -&gt; ‘<a href="http://www.mysql&#39;" target="_blank" rel="noopener">www.mysql&#39;</a> mysql&gt; select SUBSTRING_INDEX(‘<a href="http://www.mysql.com&#39;" target="_blank" rel="noopener">www.mysql.com&#39;</a>, ‘.’, -2); -&gt; ‘mysql.com’ 该函数对多字节是可靠的。 LTRIM(str) 返回删除了其前置空格字符的字符串str。 mysql&gt; select LTRIM(‘  barbar’); -&gt; ‘barbar’ RTRIM(str) 返回删除了其拖后空格字符的字符串str。 mysql&gt; select RTRIM(‘barbar   ‘); -&gt; ‘barbar’ 该函数对多字节是可靠的。  TRIM([[BOTH | LEADING | TRAILING] [remstr] FROM] str) 返回字符串str，其所有remstr前缀或后缀被删除了。如果没有修饰符BOTH、LEADING或TRAILING给出，BOTH被假定。如果remstr没被指定，空格被删除。 mysql&gt; select TRIM(‘  bar   ‘); -&gt; ‘bar’ mysql&gt; select TRIM(LEADING ‘x’ FROM ‘xxxbarxxx’); -&gt; ‘barxxx’ mysql&gt; select TRIM(BOTH ‘x’ FROM ‘xxxbarxxx’); -&gt; ‘bar’ mysql&gt; select TRIM(TRAILING ‘xyz’ FROM ‘barxxyz’); -&gt; ‘barx’ 该函数对多字节是可靠的。 SOUNDEX(str) 返回str的一个同音字符串。听起来“大致相同”的2个字符串应该有相同的同音字符串。一个“标准”的同音字符串长是4个字符，但是SOUNDEX()函数返回一个任意长的字符串。你可以在结果上使用SUBSTRING()得到一个“标准”的 同音串。所有非数字字母字符在给定的字符串中被忽略。所有在A-Z之外的字符国际字母被当作元音。 mysql&gt; select SOUNDEX(‘Hello’); -&gt; ‘H400’ mysql&gt; select SOUNDEX(‘Quadratically’); -&gt; ‘Q36324’ SPACE(N) 返回由N个空格字符组成的一个字符串。 mysql&gt; select SPACE(6); -&gt; ‘      ‘ REPLACE(str,from_str,to_str) 返回字符串str，其字符串from_str的所有出现由字符串to_str代替。 mysql&gt; select REPLACE(‘<a href="http://www.mysql.com&#39;" target="_blank" rel="noopener">www.mysql.com&#39;</a>, ‘w’, ‘Ww’); -&gt; ‘WwWwWw.mysql.com’ 该函数对多字节是可靠的。 REPEAT(str,count) 返回由重复countTimes次的字符串str组成的一个字符串。如果count &lt;= 0，返回一个空字符串。如果str或count是NULL，返回NULL。 mysql&gt; select REPEAT(‘MySQL’, 3); -&gt; ‘MySQLMySQLMySQL’ REVERSE(str) 返回颠倒字符顺序的字符串str。 mysql&gt; select REVERSE(‘abc’); -&gt; ‘cba’ 该函数对多字节可靠的。 INSERT(str,pos,len,newstr) 返回字符串str，在位置pos起始的子串且len个字符长得子串由字符串newstr代替。 mysql&gt; select INSERT(‘Quadratic’, 3, 4, ‘What’); -&gt; ‘QuWhattic’ 该函数对多字节是可靠的。 ELT(N,str1,str2,str3,) 如果N= 1，返回str1，如果N= 2，返回str2，等等。如果N小于1或大于参数个数，返回NULL。ELT()是FIELD()反运算。 mysql&gt; select ELT(1, ‘ej’, ‘Heja’, ‘hej’, ‘foo’); -&gt; ‘ej’ mysql&gt; select ELT(4, ‘ej’, ‘Heja’, ‘hej’, ‘foo’); -&gt; ‘foo’ FIELD(str,str1,str2,str3,) 返回str在str1, str2, str3, 清单的索引。如果str没找到，返回0。FIELD()是ELT()反运算。 mysql&gt; select FIELD(‘ej’, ‘Hej’, ‘ej’, ‘Heja’, ‘hej’, ‘foo’); -&gt; 2 mysql&gt; select FIELD(‘fo’, ‘Hej’, ‘ej’, ‘Heja’, ‘hej’, ‘foo’); -&gt; 0 FIND_IN_SET(str,strlist) 如果字符串str在由N子串组成的表strlist之中，返回一个1到N的值。一个字符串表是被“,”分隔的子串组成的一个字符串。如果第一个参数是一个常数字符串并且第二个参数是一种类型为SET的列，FIND_IN_SET()函数被优化而使用位运算！如果str不是在strlist里面或如果strlist是空字符串，返回0。如果任何一个参数是NULL，返回NULL。如果第一个参数包含一个“,”，该函数将工作不正常。 mysql&gt; SELECT FIND_IN_SET(‘b’,’a,b,c,d’); -&gt; 2 MAKE_SET(bits,str1,str2,) 返回一个集合 (包含由“,”字符分隔的子串组成的一个字符串)，由相应的位在bits集合中的的字符串组成。str1对应于位0，str2对应位1，等等。在str1, str2, 中的NULL串不添加到结果中。 mysql&gt; SELECT MAKE_SET(1,’a’,’b’,’c’); -&gt; ‘a’ mysql&gt; SELECT MAKE_SET(1 | 4,’hello’,’nice’,’world’); -&gt; ‘hello,world’ mysql&gt; SELECT MAKE_SET(0,’a’,’b’,’c’); -&gt; ‘’ EXPORT_SET(bits,on,off,[separator,[number_of_bits]]) 返回一个字符串，在这里对于在“bits”中设定每一位，你得到一个“on”字符串，并且对于每个复位(reset)的位，你得到一个“off”字符串。每个字符串用“separator”分隔(缺省“,”)，并且只有“bits”的“number_of_bits” (缺省64)位被使用。 mysql&gt; select EXPORT_SET(5,’Y’,’N’,’,’,4) -&gt; Y,N,Y,N LCASE(str) LOWER(str) 返回字符串str，根据当前字符集映射(缺省是ISO-8859-1 Latin1)把所有的字符改变成小写。该函数对多字节是可靠的。 mysql&gt; select LCASE(‘QUADRATICALLY’); -&gt; ‘quadratically’ UCASE(str) UPPER(str) 返回字符串str，根据当前字符集映射(缺省是ISO-8859-1 Latin1)把所有的字符改变成大写。该函数对多字节是可靠的。 mysql&gt; select UCASE(‘Hej’); -&gt; ‘HEJ’ 该函数对多字节是可靠的。 LOAD_FILE(file_name) 读入文件并且作为一个字符串返回文件内容。文件必须在服务器上，你必须指定到文件的完整路径名，而且你必须有file权限。文件必须所有内容都是可读的并且小于max_allowed_packet。如果文件不存在或由于上面原因之一不能被读出，函数返回NULL。 mysql&gt; UPDATE table_name SET blob_column=LOAD_FILE(“/tmp/picture”) WHERE id=1; MySQL必要时自动变换数字为字符串，并且反过来也如此： mysql&gt; SELECT 1+”1”; -&gt; 2 mysql&gt; SELECT CONCAT(2,’ test’); -&gt; ‘2 test’ 如果你想要明确地变换一个数字到一个字符串，把它作为参数传递到CONCAT()。 如果字符串函数提供一个二进制字符串作为参数，结果字符串也是一个二进制字符串。被变换到一个字符串的数字被当作是一个二进制字符串。这仅影响比较。   日期和时间函数   对于每个类型拥有的值范围以及并且指定日期何时间值的有效格式的描述见7.3.6 日期和时间类型。 这里是一个使用日期函数的例子。下面的查询选择了所有记录，其date_col的值是在最后30天以内： mysql&gt; SELECT something FROM table WHERE TO_DAYS(NOW()) - TO_DAYS(date_col) &lt;= 30; DAYOFWEEK(date) 返回日期date的星期索引(1=星期天，2=星期一, ……7=星期六)。这些索引值对应于ODBC标准。 mysql&gt; select DAYOFWEEK(‘1998-02-03’); -&gt; 3 WEEKDAY(date) 返回date的星期索引(0=星期一，1=星期二, ……6= 星期天)。 mysql&gt; select WEEKDAY(‘1997-10-04 22:23:00’); -&gt; 5 mysql&gt; select WEEKDAY(‘1997-11-05’); -&gt; 2 DAYOFMONTH(date) 返回date的月份中日期，在1到31范围内。 mysql&gt; select DAYOFMONTH(‘1998-02-03’); -&gt; 3 DAYOFYEAR(date) 返回date在一年中的日数, 在1到366范围内。 mysql&gt; select DAYOFYEAR(‘1998-02-03’); -&gt; 34 MONTH(date) 返回date的月份，范围1到12。 mysql&gt; select MONTH(‘1998-02-03’); -&gt; 2 DAYNAME(date) 返回date的星期名字。 mysql&gt; select DAYNAME(“1998-02-05”); -&gt; ‘Thursday’ MONTHNAME(date) 返回date的月份名字。 mysql&gt; select MONTHNAME(“1998-02-05”); -&gt; ‘February’ QUARTER(date) 返回date一年中的季度，范围1到4。 mysql&gt; select QUARTER(‘98-04-01’); -&gt; 2 WEEK(date) WEEK(date,first) 对于星期天是一周的第一天的地方，有一个单个参数，返回date的周数，范围在0到52。2个参数形式WEEK()允许你指定星期是否开始于星期天或星期一。如果第二个参数是0，星期从星期天开始，如果第二个参数是1，从星期一开始。 mysql&gt; select WEEK(‘1998-02-20’); -&gt; 7 mysql&gt; select WEEK(‘1998-02-20’,0); -&gt; 7 mysql&gt; select WEEK(‘1998-02-20’,1); -&gt; 8 YEAR(date) 返回date的年份，范围在1000到9999。 mysql&gt; select YEAR(‘98-02-03’); -&gt; 1998 HOUR(time) 返回time的小时，范围是0到23。 mysql&gt; select HOUR(‘10:05:03’); -&gt; 10 MINUTE(time) 返回time的分钟，范围是0到59。 mysql&gt; select MINUTE(‘98-02-03 10:05:03’); -&gt; 5 SECOND(time) 回来time的秒数，范围是0到59。 mysql&gt; select SECOND(‘10:05:03’); -&gt; 3 PERIOD_ADD(P,N) 增加N个月到阶段P（以格式YYMM或YYYYMM)。以格式YYYYMM返回值。注意阶段参数P不是日期值。 mysql&gt; select PERIOD_ADD(9801,2); -&gt; 199803 PERIOD_DIFF(P1,P2) 返回在时期P1和P2之间月数，P1和P2应该以格式YYMM或YYYYMM。注意，时期参数P1和P2不是日期值。 mysql&gt; select PERIOD_DIFF(9802,199703); -&gt; 11 DATE_ADD(date,INTERVAL expr type) DATE_SUB(date,INTERVAL expr type) ADDDATE(date,INTERVAL expr type) SUBDATE(date,INTERVAL expr type) 这些功能执行日期运算。对于MySQL 3.22，他们是新的。ADDDATE()和SUBDATE()是DATE_ADD()和DATE_SUB()的同义词。在MySQL 3.23中，你可以使用+和-而不是DATE_ADD()和DATE_SUB()。（见例子）date是一个指定开始日期的DATETIME或DATE值，expr是指定加到开始日期或从开始日期减去的间隔值一个表达式，expr是一个字符串；它可以以一个“-”开始表示负间隔。type是一个关键词，指明表达式应该如何被解释。EXTRACT(type FROM date)函数从日期中返回“type”间隔。下表显示了type和expr参数怎样被关联： type值  含义  期望的expr格式 SECOND  秒 SECONDS MINUTE  分钟 MINUTES HOUR  时间 HOURS DAY  天 DAYS MONTH  月 MONTHS YEAR  年 YEARS MINUTE_SECOND  分钟和秒 “MINUTES:SECONDS” HOUR_MINUTE  小时和分钟 “HOURS:MINUTES” DAY_HOUR  天和小时 “DAYS HOURS” YEAR_MONTH  年和月 “YEARS-MONTHS” HOUR_SECOND  小时, 分钟， “HOURS:MINUTES:SECONDS” DAY_MINUTE  天, 小时, 分钟 “DAYS HOURS:MINUTES” DAY_SECOND  天, 小时, 分钟, 秒 “DAYS HOURS:MINUTES:SECONDS” MySQL在expr格式中允许任何标点分隔符。表示显示的是建议的分隔符。如果date参数是一个DATE值并且你的计算仅仅包含YEAR、MONTH和DAY部分(即，没有时间部分)，结果是一个DATE值。否则结果是一个DATETIME值。 mysql&gt; SELECT “1997-12-31 23:59:59” + INTERVAL 1 SECOND; -&gt; 1998-01-01 00:00:00 mysql&gt; SELECT INTERVAL 1 DAY + “1997-12-31”; -&gt; 1998-01-01 mysql&gt; SELECT “1998-01-01” - INTERVAL 1 SECOND; -&gt; 1997-12-31 23:59:59 mysql&gt; SELECT DATE_ADD(“1997-12-31 23:59:59”, INTERVAL 1 SECOND); -&gt; 1998-01-01 00:00:00 mysql&gt; SELECT DATE_ADD(“1997-12-31 23:59:59”, INTERVAL 1 DAY); -&gt; 1998-01-01 23:59:59 mysql&gt; SELECT DATE_ADD(“1997-12-31 23:59:59”, INTERVAL “1:1” MINUTE_SECOND); -&gt; 1998-01-01 00:01:00 mysql&gt; SELECT DATE_SUB(“1998-01-01 00:00:00”, INTERVAL “1 1:1:1” DAY_SECOND); -&gt; 1997-12-30 22:58:59 mysql&gt; SELECT DATE_ADD(“1998-01-01 00:00:00”, INTERVAL “-1 10” DAY_HOUR); -&gt; 1997-12-30 14:00:00 mysql&gt; SELECT DATE_SUB(“1998-01-02”, INTERVAL 31 DAY); -&gt; 1997-12-02 mysql&gt; SELECT EXTRACT(YEAR FROM “1999-07-02”); -&gt; 1999 mysql&gt; SELECT EXTRACT(YEAR_MONTH FROM “1999-07-02 01:02:03”); -&gt; 199907 mysql&gt; SELECT EXTRACT(DAY_MINUTE FROM “1999-07-02 01:02:03”); -&gt; 20102 如果你指定太短的间隔值(不包括type关键词期望的间隔部分)，MySQL假设你省掉了间隔值的最左面部分。例如，如果你指定一个type是DAY_SECOND，值expr被希望有天、小时、分钟和秒部分。如果你象”1:10”这样指定值，MySQL假设日子和小时部分是丢失的并且值代表分钟和秒。换句话说，”1:10” DAY_SECOND以它等价于”1:10” MINUTE_SECOND的方式解释，这对那MySQL解释TIME值表示经过的时间而非作为一天的时间的方式有二义性。如果你使用确实不正确的日期，结果是NULL。如果你增加MONTH、YEAR_MONTH或YEAR并且结果日期大于新月份的最大值天数，日子在新月用最大的天调整。 mysql&gt; select DATE_ADD(‘1998-01-30’, Interval 1 month); -&gt; 1998-02-28 注意，从前面的例子中词INTERVAL和type关键词不是区分大小写的。  TO_DAYS(date) 给出一个日期date，返回一个天数(从0年的天数)。 mysql&gt; select TO_DAYS(950501); -&gt; 728779 mysql&gt; select TO_DAYS(‘1997-10-07’); -&gt; 729669 TO_DAYS()不打算用于使用格列高里历(1582)出现前的值。 FROM_DAYS(N) 给出一个天数N，返回一个DATE值。 mysql&gt; select FROM_DAYS(729669); -&gt; ‘1997-10-07’ TO_DAYS()不打算用于使用格列高里历(1582)出现前的值。 DATE_FORMAT(date,format) 根据format字符串格式化date值。下列修饰符可以被用在format字符串中： %M  月名字(January……December) %W  星期名字(Sunday……Saturday) %D  有英语前缀的月份的日期(1st, 2nd, 3rd, 等等。） %Y  年, 数字, 4 位 %y  年, 数字, 2 位 %a  缩写的星期名字(Sun……Sat) %d  月份中的天数, 数字(00……31) %e  月份中的天数, 数字(0……31) %m  月, 数字(01……12) %c  月, 数字(1……12) %b  缩写的月份名字(Jan……Dec) %j  一年中的天数(001……366) %H  小时(00……23) %k  小时(0……23) %h  小时(01……12) %I  小时(01……12) %l  小时(1……12) %i  分钟, 数字(00……59) %r  时间,12 小时(hh:mm:ss [AP]M) %T  时间,24 小时(hh:mm:ss) %S  秒(00……59) %s  秒(00……59) %p  AM或PM %w  一个星期中的天数(0=Sunday ……6=Saturday ） %U  星期(0……52), 这里星期天是星期的第一天 %u  星期(0……52), 这里星期一是星期的第一天 %%  一个文字“%”。 所有的其他字符不做解释被复制到结果中。 mysql&gt; select DATE_FORMAT(‘1997-10-04 22:23:00’, ‘%W %M %Y’); -&gt; ‘Saturday October 1997’ mysql&gt; select DATE_FORMAT(‘1997-10-04 22:23:00’, ‘%H:%i:%s’); -&gt; ‘22:23:00’ mysql&gt; select DATE_FORMAT(‘1997-10-04 22:23:00’, ‘%D %y %a %d %m %b %j’); -&gt; ‘4th 97 Sat 04 10 Oct 277’ mysql&gt; select DATE_FORMAT(‘1997-10-04 22:23:00’, ‘%H %k %I %r %T %S %w’); -&gt; ‘22 22 10 10:23:00 PM 22:23:00 00 6’MySQL3.23中，在格式修饰符字符前需要%。在MySQL更早的版本中，%是可选的。 TIME_FORMAT(time,format) 这象上面的DATE_FORMAT()函数一样使用，但是format字符串只能包含处理小时、分钟和秒的那些格式修饰符。其他修饰符产生一个NULL值或0。 CURDATE() CURRENT_DATE 以’YYYY-MM-DD’或YYYYMMDD格式返回今天日期值，取决于函数是在一个字符串还是数字上下文被使用。 mysql&gt; select CURDATE(); -&gt; ‘1997-12-15’ mysql&gt; select CURDATE() + 0; -&gt; 19971215 CURTIME() CURRENT_TIME 以’HH:MM:SS’或HHMMSS格式返回当前时间值，取决于函数是在一个字符串还是在数字的上下文被使用。 mysql&gt; select CURTIME(); -&gt; ‘23:50:26’ mysql&gt; select CURTIME() + 0; -&gt; 235026 NOW() SYSDATE() CURRENT_TIMESTAMP 以’YYYY-MM-DD HH:MM:SS’或YYYYMMDDHHMMSS格式返回当前的日期和时间，取决于函数是在一个字符串还是在数字的上下文被使用。 mysql&gt; select NOW(); -&gt; ‘1997-12-15 23:50:26’ mysql&gt; select NOW() + 0; -&gt; 19971215235026 UNIX_TIMESTAMP() UNIX_TIMESTAMP(date) 如果没有参数调用，返回一个Unix时间戳记(从’1970-01-01 00:00:00’GMT开始的秒数)。如果UNIX_TIMESTAMP()用一个date参数被调用，它返回从’1970-01-01 00:00:00’ GMT开始的秒数值。date可以是一个DATE字符串、一个DATETIME字符串、一个TIMESTAMP或以YYMMDD或YYYYMMDD格式的本地时间的一个数字。 mysql&gt; select UNIX_TIMESTAMP(); -&gt; 882226357 mysql&gt; select UNIX_TIMESTAMP(‘1997-10-04 22:23:00’); -&gt; 875996580 当UNIX_TIMESTAMP被用于一个TIMESTAMP列，函数将直接接受值，没有隐含的“string-to-unix-timestamp”变换。 FROM_UNIXTIME(unix_timestamp) 以’YYYY-MM-DD HH:MM:SS’或YYYYMMDDHHMMSS格式返回unix_timestamp参数所表示的值，取决于函数是在一个字符串还是或数字上下文中被使用。 mysql&gt; select FROM_UNIXTIME(875996580); -&gt; ‘1997-10-04 22:23:00’ mysql&gt; select FROM_UNIXTIME(875996580) + 0; -&gt; 19971004222300 FROM_UNIXTIME(unix_timestamp,format) 返回表示 Unix 时间标记的一个字符串，根据format字符串格式化。format可以包含与DATE_FORMAT()函数列出的条目同样的修饰符。 mysql&gt; select FROM_UNIXTIME(UNIX_TIMESTAMP(), ‘%Y %D %M %h:%i:%s %x’); -&gt; ‘1997 23rd December 03:43:30 x’ SEC_TO_TIME(seconds) 返回seconds参数，变换成小时、分钟和秒，值以’HH:MM:SS’或HHMMSS格式化，取决于函数是在一个字符串还是在数字上下文中被使用。 mysql&gt; select SEC_TO_TIME(2378); -&gt; ‘00:39:38’ mysql&gt; select SEC_TO_TIME(2378) + 0; -&gt; 3938 TIME_TO_SEC(time) 返回time参数，转换成秒。 mysql&gt; select TIME_TO_SEC(‘22:23:00’); -&gt; 80580 mysql&gt; select TIME_TO_SEC(‘00:39:38’); -&gt; 2378 其他函数 DATABASE() 返回当前的数据库名字。 mysql&gt; select DATABASE(); -&gt; ‘test’ 如果没有当前的数据库，DATABASE()返回空字符串。 USER() 　 SYSTEM_USER() 　 SESSION_USER() 返回当前MySQL用户名。 mysql&gt; select USER(); -&gt; ‘davida@localhost’ 在MySQL 3.22.11或以后版本中，这包括用户名和客户主机名。你可以象这样只提取用户名部分(值是否包括主机名部分均可工作)： mysql&gt; select substring_index(USER(),”@”,1); -&gt; ‘davida’ PASSWORD(str) 从纯文本口令str计算一个口令字符串。该函数被用于为了在user授权表的Password列中存储口令而加密MySQL口令。 mysql&gt; select PASSWORD(‘badpwd’); -&gt; ‘7f84554057dd964b’ PASSWORD()加密是非可逆的。PASSWORD()不以与Unix口令加密的相同的方法执行口令加密。你不应该假定如果你的Unix 口令和你的MySQL口令是一样的，PASSWORD()将导致与在Unix口令文件存储的相同的加密值。见ENCRYPT()。 ENCRYPT(str[,salt]) 使用Unix crypt()系统调用加密str。salt参数应该是一个有2个字符的字符串。（MySQL 3.22.16中，salt可以长于2个字符。） mysql&gt; select ENCRYPT(“hello”); -&gt; ‘VxuFAJXVARROc’ 如果crypt()在你的系统上不可用，ENCRYPT()总是返回NULL。ENCRYPT()只保留str起始8个字符而忽略所有其他，至少在某些系统上是这样。这将由底层的crypt()系统调用的行为决定。 ENCODE(str,pass_str) 使用pass_str作为口令加密str。为了解密结果，使用DECODE()。结果是一个二进制字符串，如果你想要在列中保存它，使用一个BLOB列类型。 DECODE(crypt_str,pass_str) 使用pass_str作为口令解密加密的字符串crypt_str。crypt_str应该是一个由ENCODE()返回的字符串。 MD5(string) 对字符串计算MD5校验和。值作为一个32长的十六进制数字被返回可以，例如用作哈希(hash)键。 mysql&gt; select MD5(“testing”) -&gt; ‘ae2b1fca515949e5d54fb22b8ed95575’ 这是一个“RSA数据安全公司的MD5消息摘要算法”。 LAST_INSERT_ID([expr]) 返回被插入一个AUTO_INCREMENT列的最后一个自动产生的值。见20.4.29 mysql_insert_id()。 mysql&gt; select LAST_INSERT_ID(); -&gt; 195 产生的最后ID以每个连接为基础在服务器被维护，它不会被其他客户改变。如果你更新另外一个有非魔术值(即，不是NULL和不是0的一个值)的AUTO_INCREMENT列，它甚至不会被改变。如果expr作为一个参数在一个UPDATE子句的LAST_INSERT_ID()里面给出，那么参数值作为一个LAST_INSERT_ID()值被返回。这可以用来模仿顺序：首先创建表： mysql&gt; create table sequence (id int not null); mysql&gt; insert into sequence values (0); 然后表能被用来产生顺序号，象这样： mysql&gt; update sequence set id=LAST_INSERT_ID(id+1); 你可以不调用LAST_INSERT_ID()而产生顺序，但是这样使用函数的实用程序在服务器上自动维护ID值作为最后自动产生的值。你可以检索新的ID值，就像你能读入正常MySQL中的任何正常的AUTO_INCREMENT值一样。例如，LAST_INSERT_ID()（没有一个参数 )将返回新ID。C API函数mysql_insert_id()也可被用来得到值。 FORMAT(X,D) 格式化数字X为类似于格式’#,###,###.##’，四舍五入到D为小数。如果D为0，结果将没有小数点和小数部分。 mysql&gt; select FORMAT(12332.123456, 4); -&gt; ‘12,332.1235’ mysql&gt; select FORMAT(12332.1,4); -&gt; ‘12,332.1000’ mysql&gt; select FORMAT(12332.2,0); -&gt; ‘12,332’ VERSION() 返回表明MySQL服务器版本的一个字符串。 mysql&gt; select VERSION(); -&gt; ‘3.22.19b-log’ GET_LOCK(str,timeout) 试图获得由字符串str给定的一个名字的锁定，第二个timeout为超时。如果锁定成功获得，返回1，如果尝试超时了，返回0，或如果发生一个错误，返回NULL(例如从存储器溢出或线程用mysqladmin kill被杀死)。当你执行RELEASE_LOCK()时、执行一个新的GET_LOCK()或线程终止时，一个锁定被释放。该函数可以用来实现应用锁或模拟记录锁，它阻止其他客户用同样名字的锁定请求；赞成一个给定的锁定字符串名字的客户可以使用字符串执行子协作建议的锁定。 mysql&gt; select GET_LOCK(“lock1”,10); -&gt; 1 mysql&gt; select GET_LOCK(“lock2”,10); -&gt; 1 mysql&gt; select RELEASE_LOCK(“lock2”); -&gt; 1 mysql&gt; select RELEASE_LOCK(“lock1”); -&gt; NULL 注意，第二个RELEASE_LOCK()调用返回NULL，因为锁”lock1”自动地被第二个GET_LOCK()调用释放。 RELEASE_LOCK(str) 释放字符串str命名的通过GET_LOCK()获得的锁。如果锁被释放，返回1，如果锁没被这个线程锁定(在此情况下锁没被释放)返回0，并且如果命名的锁不存在，返回NULL。如果锁从来没有通过调用GET_LOCK()获得或如果它已经被释放了，锁将不存在。 BENCHMARK(count,expr) BENCHMARK()函数重复countTimes次执行表达式expr，它可以用于计时MySQL处理表达式有多快。结果值总是0。意欲用于mysql客户，它报告查询的执行时间。 mysql&gt; select BENCHMARK(1000000,encode(“hello”,”goodbye”)); +———————————————-+ | BENCHMARK(1000000,encode(“hello”,”goodbye”)) | +———————————————-+ |                                            0 | +———————————————-+ 1 row in set (4.74 sec) 报告的时间是客户端的经过时间，不是在服务器端的CPU时间。执行BENCHMARK()若干次可能是明智的，并且注意服务器机器的负载有多重来解释结果。 与GROUP BY子句一起使用的函数 如果你在不包含GROUP BY子句的一个语句中使用聚合函数，它等价于聚合所有行。 COUNT(expr) 返回由一个SELECT语句检索出来的行的非NULL值的数目。 mysql&gt; select student.student_name,COUNT(<em>) from student,course where student.student_id=course.student_id GROUP BY student_name; COUNT(</em>)在它返回的检索出来的行数目上有些不同，不管他们是否包含NULL值。如果SELECT从一个表检索，或没有检索出其他列并且没有WHERE子句，COUNT(<em>)被优化以便快速地返回。例如： mysql&gt; select COUNT(</em>) from student; COUNT(DISTINCT expr,[expr]) 返回一个不同值的数目。 mysql&gt; select COUNT(DISTINCT results) from student; 在MySQL中，你可以通过给出一个表达式列表以得到不同的表达式组合的数目。在 ANSI SQL中，你可能必须在CODE(DISTINCT ..)内进行所有表达式的连接。 AVG(expr) 返回expr的平均值。 mysql&gt; select student_name, AVG(test_score) from student GROUP BY student_name; MIN(expr) 　 MAX(expr) 返回expr的最小或最大值。MIN()和MAX()可以有一个字符串参数；在这种的情况下，他们返回最小或最大的字符串值。 mysql&gt; select student_name, MIN(test_score), MAX(test_score) from student GROUP BY student_name; SUM(expr) 返回expr的和。注意，如果返回的集合没有行，它返回NULL！ STD(expr) 　 STDDEV(expr) 返回expr标准差(deviation)。这是对 ANSI SQL 的扩展。该函数的形式STDDEV()是提供与Oracle的兼容性。 BIT_OR(expr) 返回expr里所有位的位或。计算用 64 位(BIGINT)精度进行。 BIT_AND(expr) 返回expr里所有位的位与。计算用 64 位(BIGINT)精度进行。 MySQL扩展了GROUP BY的用法。你可以不出现在的GROUP BY部分的SELECT表达式中使用列或计算，这表示这个组的任何可能值。你可以使用它是性能更好，避免在不必要的项目上排序和分组。例如，你在下列查询中不需要在customer.name上聚合： mysql&gt; select order.custid,customer.name,max(payments) from order,customer where order.custid = customer.custid GROUP BY order.custid; 在 ANSI SQL中，你将必须将customer.name加到GROUP BY子句。在MySQL中，名字是冗余的。 如果你从GROUP BY部分省略的列在组中不是唯一的，不要使用这个功能。 在某些情况下，你可以使用MIN()和MAX()获得一个特定的列值，即使它不是唯一的。下例给出从包含sort列中最小值的行的column值： substr(MIN(concat(sort,space(6-length(sort)),column),7,length(column))) 注意，如果你正在使用MySQL 3.22(或更早)或如果你正在试图遵从ANSI SQL，你不能在GROUP BY或ORDER BY子句中使用表达式。你可以通过使用表达式的一个别名解决此限制： mysql&gt; SELECT id,FLOOR(value/100) AS val FROM tbl_name GROUP BY id,val ORDER BY val; 在MySQL3.23中，你可以这样做： mysql&gt; SELECT id,FLOOR(value/100) FROM tbl_name ORDER BY RAND(); 复制代码 学习的语句 /<strong><strong><strong>**</strong></strong></strong>字符串函数<strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong>/ select insert(‘ring’,2,0,’ok’); /<em>从2的地方插入ok字符，插入时替换0个字符</em>/ select repeat(‘ring’,2); /<em>重复输出字符串2次</em>/ select REVERSE(‘ring’); /<em>反写</em>/ select mid(‘ring’,2,2);/<em>从某个位置取某个长度的字符</em>/ select instr(‘ring’,’i’);/<em>查找字符</em>/ select replace(‘very good’,’o’,’O’); /<em>替换所有的字符</em>/ select LENGTH(‘very good’); /<em>返回字符串长度</em>/ select ascii(‘abc’);/<em>返回最左边的字符ascii码</em>/ select space(3);/<em>产生3次空格</em>/ select CONCAT(‘ri’,’n’,’g’,’ wang’); /<em>组合成字符串</em>/ select lcase(‘RING’); /<em>小写</em>/ select ucase(‘ring’); /<em>转换成大写</em>/ select substring_index(user(),‘@’,1); /<em>提取当前的用户名,表示提取@左边第一出现的字符，如果后面的为负数则提取右边的字符</em>/ /<strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong>数学函数<strong><strong><strong><strong>**</strong></strong></strong></strong>/ select conv(‘ee’,16,10); /<em>将’ee’从16转换成10，16和10可以是任意进制</em>/ select bin(10); /*2进制*/ select hex(10); /*16进制*/ select oct(10); /*10进制*/ select round(12.5678,2); /<em>将小数保留两位，四舍五入</em>/ select round(123.8767); /<em>转换为整形，因为没有小数位</em>/ select char(65,66,99); /<em>将ascill码组合成字符串</em>/ select least(3,6,5,1); /<em>最小数字</em>/ select greatest(6,3,2,8,3,1);  /<em>最大数字</em>/ select power(2,3); /*2的3次幂*/ select sqrt(9); /<em>开方</em>/ select pi(); /<em>圆周率 </em>/ select RAND(11); /<em>返回0-1的随机数，指定种子，每次的数都一样</em>/ select rand();  /<em>没有指定种子，默认为时间为种子</em>/ /<strong><em>**</em></strong>日期时间函数<strong><strong><strong><strong>*</strong></strong></strong></strong>/ select now(); select to_days(‘2008-07-6’); /<em>转换成天数</em>/ select to_days(‘2008-8-8’)-to_days(now());/<em>相差的天数</em>/ select day(now());/<em>该日期中的时，分，秒，天，月，年 hour(),minute(),second(),month(),year()</em>/ select dayofyear(‘2008-2-2’); /<em>返回该年已过的天数</em>/ select monthname(now()); /<em>返回月的英文名</em>/ select dayname(now());/<em>星期几的英文名</em>/ select week(now(),0); /<em>表示当前的日期是第几周，后面的数字0表示从周日开始算，1表示从周一开始算</em>/ select from_days(734215); /<em>返回该天数表示的日期</em>/ select DATEDIFF(now(),’2008-8-8’); /<em>前面的日期减去后面的日期所得的天数</em>/ select date_add(now(),interval 2 day); /<em>表示给当前的日期加2天</em>/ select date_add(now(),interval 2 month); /<em>表示给当前的日期加2个月</em>/ select CURRENT_DATE(); /<em>当前日期，短格式</em>/ select CURRENT_TIME();/<em>当前的时间</em>/ select current_user();/<em>当前的用户</em>/ select date_format(now(),’%Y-%m-%d %H:%i:%s’);/<em>日期的格式，Y表示4位，H表示24小时制</em>/ select date_format(now(),’%T’); /<em>只显示时间，没有日期，T表示24小时制,r表示12小时制</em>/ select date_format(‘2008-08-08 14:08:08’,’%Y-%m-%d’); /<em>显示日期部分，时间不要</em>/ select date_format(now(),’%Y-%m-%d %H:%i:%s %W’); /<em>带日期的</em>/ select date_format(‘2008-8-8’,’%W’);/<em>该日期的星期几</em>/ /<strong><strong>***</strong></strong>其他函数<strong><strong><strong><em>**</em></strong></strong></strong>/ select database();/<em>返回当前的数据库名字</em>/ select substring_index(CURRENT_USER(),‘@’,1);/<em>提取当前的用户名</em>/ select password(‘123’); /*mysql的加密方式*/ select MD5(‘123’);/*32位的md5加密*/ select LAST_INSERT_ID();/<em>返回最后一次自动产生的ID值</em>/ select format(123456789.565378,4);/<em>输出123,456,789.5654有四舍五入</em>/ /<strong><strong><strong>***</strong></strong></strong>控制流函数<strong><strong><strong>*</strong></strong></strong>/ select if(1,2,3);/<em>如果第一参数为空则输入第三参数，否则输入第二个参数,后面的参数可以是字符,第一为整形</em>/ select ifnull(null,2); /<em>如果第一参数为空则输出第二个参数，否则输出第一参数</em>/ select name, case when age&lt;=20 then ‘年轻’ when age&lt;=40 then ‘壮年’ when age&lt;=50 then ‘中年’ else ‘老年’ end as ‘agestr’, date_format(adddate,’%Y-%m-%d’) as ‘adddate’ from users; /*case 语句的用法*/</d></p>
+
+            
+            <p class="more">
+                <a href="/2015/12/22/2019030500073/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/22/2019030500073/" title="MySQL函数">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/21/2019030500016/">
+    		大批量数据修改时发现有一行数据被锁住了，一直处于等待状态的问题解决
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-21T09:07:58.000Z">2015-12-21</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/批量/" title="批量">批量</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>最近写了个轻量级的分布式并行处理框架用来处理大批量的业务数据， 从业务监控数据中发现少量业务数据修改时一直处于等待状态，很明显是出现类似  for update 锁表，锁行的情况。 这种问题是系统设计（复杂的业务逻辑）导致的，暂时只能从数据库层次解决，因为修改系统设计比较复杂，也没有那么多时间。 解决思路： 1.查出锁住该表的会话id,serial#</p>
+<ol>
+<li>SELECT object_name,machine,s.sid,s.serial#</li>
+<li>FROM gv$locked_object l,dba_objects o,gv$session s</li>
+<li>WHERE l.object_id=o.object_id</li>
+<li>AND l.session_id=s.sid;</li>
+</ol>
+<p>SQL代码</p>
+<ol>
+<li>SELECT o.object_name,s.sid, s.serial#</li>
+<li>FROM v$lock l, dba_objects o, v$session s</li>
+<li>WHERE l.id1　= o.object_id</li>
+<li>AND l.sid = s.sid</li>
+<li>AND o.object_name=’SJ_AFFAIR’;</li>
+</ol>
+<p>2.kill掉该会话 alter system kill session ‘sid, serial#’; 3.代码临时优化：修改“初始表”数据时进行锁表尝试：for update nowait ，这个成本貌似有点高， 由于这种场景通常是数据异常场景，所以有监控就够了，因为7万票才偶尔出现一次，暂时不处理代码。 理论扫盲： 二、V$LOCK和V$LOCKED_OBJECT 查询锁表都会用到V$LOCK和V$LOCKED_OBJECT,但这两者不是相同的。我们先看看它们各自的主要字段： 1.v$lock sid：     会话SID，通常与v$session关联。 type：     锁类型，TM表示表锁或DML锁，TX表示行锁或事务锁，UL表示用户锁。我们主要关注TX和TM两种型的锁其它均为系统锁，会很快自动释放，不用关注。行锁不会单独存，行级锁之前需要先加表级共享锁。 lmode：     会话保持的锁的模式。 0＝None；1＝Null；2＝Row-S (SS,行级共享锁，其他对象只能查询这些数据行)；3＝Row-X (SX,行级排它锁,在提交前不允许做DML操作)；4＝Share(共享锁)；5＝S/Row-X (SSX,共享行级排它锁)；6＝Exclusive(排它锁) ID1,ID2:      ID1,ID2的取值含义根据type的取值而有所不同，对于TM 锁ID1表示被锁定表的object_id 可以和dba_objects视图关联取得具体表信息，ID2 值为0；对于TX 锁ID1以十进制数值表示该事务所占用的回滚段号和事务槽slot number号,其组形式: 0xRRRRSSSS,RRRR=RBS/UNDO NUMBER,SSSS=SLOT NUMBER，ID2 以十进制数值表示环绕wrap的次数，即事务槽被重用的次数 2.V$LOCKED_OBJECT session_id：         会话id。通常与v$session关联。 object_id：          被锁对象标识。通常与dba_objects关联。 oracle_username：    登录oracle用户名。 os_user_name：       电脑用户名如：Administrator locked_mode：        会话保持的锁的模式。 三、两者的区别 1.V$LOCKED_OBJECT只能报发生等待的表级锁,不能报发生等待的行级锁。 注：这句话是网上别人说的，暂时未验证，需慎重考虑。但是从我遇到的问题来看，似乎是正确的。只是我的问题已经无法重现，也就失去了验证它的机会。 2.v$locked_object包含的是当前DB中被锁住的OBJECT，而v$lock不仅包含用户的，还包括系统被锁住的object，即： V$LOCK&gt;v$locked_object</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/21/2019030500016/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/21/2019030500016/" title="大批量数据修改时发现有一行数据被锁住了，一直处于等待状态的问题解决">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/NOSQL/">NOSQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/21/2019030500045/">
+    		非关系型数据库redis的yum安装及使用
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-21T03:16:12.000Z">2015-12-21</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/redis/" title="redis">redis</a> / 
+    
+        <a href="/tags/yum/" title="yum">yum</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>安装Apache yum install httpd rpm -qi httpd 查看Apache信息 centos7 安装redis 安装EPEL wget <a href="http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm" target="_blank" rel="noopener">http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm</a> rpm -ivh epel-release-7-5.noarch.rpm yum install redis systemctl start redis.service systemctl status redis.service systemctl enable redis.service 遵循事务，一个不成功都不成功 redis-cli string类型 set name zouhuying get name  同一个建只允许用一次 setnx  key存在则返回0，不存在就设置 setex 指定键值对对应的有效期 setex haircolor 10 red setrange  替换一部分字符串 zouhuiying/ setrange name 1 h /zhuhuiying mset 设置多个key的值 mset name zouhuiying age 18 mesetnx getset name haoning设置新值获取旧值 getrang name 0 3获取name的0-3个字符 mget 获取多个key的值 incr 递增值 incrby incrby age （+-）3(指定的数字增加减) decr decrby 递减 append append name hhh追加，返回新字符串的长度 strlen  value的长度 hashes类型 hset hset myhash(表) field1（字段） Hello hsetnx setnx hmset  hmget hincr hincrby hdecr hdecrby hexits 测试表中字段是否存在 hlen 表中字段的个数 hdel 删除表中某个字段 hmset user:001 age 66 height 178 hmget useer:001 age height hdel user:001 age hkeys 返回所以字段hkeys user:001 hvals hvals user:001 hgetall user:001   keys and values list类型(双向链表 栈和队列) 栈：先进后出（存放值） 队列：先进先出 （从上到下） push pop lpush mylist zouhuiying（先进后出） rpush mylist ying（先进先出） lrange mylist 0 -1 linsert (插入元素) linsert mylist before “ying” “yingying” lset 替换指定下标的元素  lset mylist 0 “xiaoying” lrem 删除n个和value相同的值 返回删除值得个数 lrem mylist 1 “hello” 删除1个 n= 0：全部删除 n&lt;0 :从尾部删除 ltrim:保留ltrim mylist 1 -1（保留的范围），其他删除 lpop 从头部删除元素 rpop 从尾部删除 rpoplpush （边取边加，可以是两个表） lindex: lindex mylist 0（下标为0的元素） llen:llen mylist (mylist的长度) set sadd scard sdiff sdiffstore sinter sinterstore sismember smembers smove spop srandmember srem sunion sunionstore sscan sortedset zadd zcard zcount zrange zrangebyscore zrank zrem zremrangebyrank zremrangebyscore zrevrange zrevrangebyscore zrevrank zscore zunionstore zscan <a href="http://www.icoolxue.com/play/1489" target="_blank" rel="noopener">http://www.icoolxue.com/play/1489</a> 视频 <a href="http://doc.redisfans.com/" target="_blank" rel="noopener">http://doc.redisfans.com/</a>  命令 redis 常用命令 1.建值相关命令 keys * 返回所以建 keys 正则表达式 exists key检查key是否存在 del key expire key time 设置过期时间（key要存在） ttl key 查看建还有几秒过期 -1：表示已经过期 select （0-15）选择数据库 move key (0-15) persist:移除过期时间 randomkey随机返回一个key rename 重命名 type key :返回key的数据类型 2.服务器相关命令 ping (PONG，表示ping 通) echo 普通echo select quit/exit/control-c退出客户端 dbsize 当前数据库中的key的数量 info：返回相关信息 config get key 返回key的信息 flushdb 删除当前数据库下的所有key flushall 删除所有数据库下的所有key redis的高级应用 安全性：redis.conf-&gt;requirepass mima   登陆redis-cli -a mima   或者redis-cli  auth mima 主从复制：修改redis.conf -&gt;增加slaveof 192.168.139.213 6379(主机IP和端口)   and   masterauth mima（主机redis密码）and bind 0.0.0.0  (telnet 检查从机能否访问主机的端口) 事务处理：multi 进去事务 所有的命令保存在queued中，并不执行。exec后再按照顺序执行命令   取消事务：discard取消所有命令 乐观锁：session1：set age 20/ watch age  / multi/ set age 30/ exec(执行会失败) session2 set age 20 unwatch 清除监视 持久化机制：数据快照 redis.conf -&gt; save 9000 1  快照存在/var/lib/redis/dump.rdb中，二进制文件无法查看 存储操作aof   redis.conf -&gt;appendonly yes-&gt;appendfsync always(最快，性能不好)/appendfsync everysec(每一秒0/appendfsync no（完全依赖os，性能最好，持久化没有保证）快照存在/var/lib/redis/dump.rdb 发布订阅信息：subscribe tv1 /publish tv1 zouhuiying(两个session) 虚拟内存的使用：更改配置文件vm-enabled</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/21/2019030500045/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/21/2019030500045/" title="非关系型数据库redis的yum安装及使用">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/16/2019030500134/">
+    		Oracle常用语句
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-16T03:15:11.000Z">2015-12-16</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <ol>
+<li>– 查看表信息</li>
+<li><p>DESC 表名;</p>
+</li>
+<li><p>– 表添加注释</p>
+</li>
+<li><p>COMMENT ON TABLE 表名 IS ‘注释信息’;</p>
+</li>
+<li><p>– 列添加注释</p>
+</li>
+<li><p>COMMENT ON COLUMN 表名.列名 IS ‘注释信息’;</p>
+</li>
+<li><p>– 修改表名  </p>
+</li>
+<li><p>ALTER TABLE 原表名  RENAME TO 新表名;</p>
+</li>
+<li><p>– 修改字段名</p>
+</li>
+<li><p>ALTER TABLE 表名 RENAME COLUMN 原字段名 TO 新字段名;</p>
+</li>
+<li><p>– 在表的后面增加一个字段  </p>
+</li>
+<li>ALTER TABLE 表名 ADD 字段名 数据类型(数据大小);</li>
+<li><p>ALTER TABLE 表名 ADD(字段名1 数据类型(数据大小) 约束条件, 字段名2 数据类型(数据大小) 约束条件, …);</p>
+</li>
+<li><p>– 在表中删除一列  </p>
+</li>
+<li>ALTER TABLE 表名 DROP COLUMN 列名;</li>
+<li><p>ALTER TABLE 表名 DROP (字段名1, 字段名2, …);</p>
+</li>
+<li><p>– 修改表里字段的定义描述  </p>
+</li>
+<li><p>ALTER TABLE 表名 MODIFY 字段名 数据类型(数据大小);</p>
+</li>
+<li><p>– 给表里的字段加上约束条件  </p>
+</li>
+<li>ALTER TABLE 表名 ADD CONSTRAINT 约束名 PRIMARY KEY (字段名, …);– 主键  </li>
+<li>ALTER TABLE 表名 ADD CONSTRAINT 约束名 UNIQUE (字段名, …);– 唯一键  </li>
+<li>– 外键</li>
+<li>ALTER TABLE 表名 ADD CONSTRAINT 约束名 FOREIGN KEY(字段名) REFERENCES 外键表名(外键字段名) ON DELETE CASCADE;</li>
+<li>– 注：ON DELETE CASCADE和ON DELETE SET NULL的作用是用来处理级联删除问题的，也可以不加。</li>
+<li>– CHECK约束</li>
+<li>ALTER TABLE 表名 ADD CONSTRAINT 约束名 CHECK (约束条件);</li>
+<li>– 非空约束，增加非空约束时用的是关键字MODIFY，其它四种约束都是ADD</li>
+<li><p>ALTER TABLE 表名 MODIFY 字段名 NOT NULL;</p>
+</li>
+<li><p>– 删除表里的约束条件</p>
+</li>
+<li>– 非空约束不能指定约束名，应该先通过查询表和列所对应的的约束信息，找出约束名，再删除。</li>
+<li><p>ALTER TABLE 表名 DROP CONSTRAINT 约束名;</p>
+</li>
+<li><p>– 修改主键，可以先删除主键约束，再重新创建新主键约束。</p>
+</li>
+<li><p>– 重命令约束</p>
+</li>
+<li><p>ALTER TABLE 表名 RENAME CONSTRAINT 原约束名 TO 新约束名;</p>
+</li>
+<li><p>– 创建索引</p>
+</li>
+<li>CREATE [unique] INDEX [user.]index</li>
+<li>ON [user.]table (column [ASC | DESC] [,column [ASC | DESC] ] … )</li>
+<li>[CLUSTER [scheam.]cluster]</li>
+<li>[INITRANS n]</li>
+<li>[MAXTRANS n]</li>
+<li>[PCTFREE n]</li>
+<li>[STORAGE storage]</li>
+<li>[TABLESPACE tablespace]</li>
+<li>[NO SORT]</li>
+<li><p>Advanced</p>
+</li>
+<li><p>其中：</p>
+</li>
+<li>schema ORACLE模式，缺省即为当前帐户</li>
+<li>index 索引名</li>
+<li>table 创建索引的基表名</li>
+<li>column 基表中的列名，一个索引最多有16列，long列、long raw列不能建索引列</li>
+<li>DESC、ASC 缺省为ASC即升序排序</li>
+<li>CLUSTER 指定一个聚簇(Hash cluster不能建索引)</li>
+<li>INITRANS、MAXTRANS 指定初始和最大事务入口数</li>
+<li>Tablespace 表空间名</li>
+<li>STORAGE 存储参数，同create table 中的storage.</li>
+<li>PCTFREE 索引数据块空闲空间的百分比(不能指定pctused)</li>
+<li><p>NO SORT 不(能)排序(存储时就已按升序，所以指出不再排序)</p>
+</li>
+<li><p>CREATE INDEX 索引名 ON 表名 (字段名, …);</p>
+</li>
+<li><p>– 删除索引，当表结构被删除时，有其相关的所有索引也随之被删除。</p>
+</li>
+<li>DROP INDEX [schema.]indexname</li>
+<li>drop index 索引名;</li>
+</ol>
+<p>-- 查看表信息<br>DESC 表名;</p>
+<p>-- 表添加注释<br>COMMENT ON TABLE 表名 IS ‘注释信息’;</p>
+<p>-- 列添加注释<br>COMMENT ON COLUMN 表名.列名 IS ‘注释信息’;</p>
+<p>-- 修改表名<br>ALTER TABLE 原表名  RENAME TO 新表名;  </p>
+<p>-- 修改字段名<br>ALTER TABLE 表名 RENAME COLUMN 原字段名 TO 新字段名;</p>
+<p>-- 在表的后面增加一个字段<br>ALTER TABLE 表名 ADD 字段名 数据类型(数据大小);<br>ALTER TABLE 表名 ADD(字段名1 数据类型(数据大小) 约束条件, 字段名2 数据类型(数据大小) 约束条件, …);</p>
+<p>-- 在表中删除一列<br>ALTER TABLE 表名 DROP COLUMN 列名;<br>ALTER TABLE 表名 DROP (字段名1, 字段名2, …);  </p>
+<p>-- 修改表里字段的定义描述<br>ALTER TABLE 表名 MODIFY 字段名 数据类型(数据大小);  </p>
+<p>-- 给表里的字段加上约束条件<br>ALTER TABLE 表名 ADD CONSTRAINT 约束名 PRIMARY KEY (字段名, …);– 主键<br>ALTER TABLE 表名 ADD CONSTRAINT 约束名 UNIQUE (字段名, …);– 唯一键<br>-- 外键<br>ALTER TABLE 表名 ADD CONSTRAINT 约束名 FOREIGN KEY(字段名) REFERENCES 外键表名(外键字段名) ON DELETE CASCADE;<br>-- 注：ON DELETE CASCADE和ON DELETE SET NULL的作用是用来处理级联删除问题的，也可以不加。<br>-- CHECK约束<br>ALTER TABLE 表名 ADD CONSTRAINT 约束名 CHECK (约束条件);<br>-- 非空约束，增加非空约束时用的是关键字MODIFY，其它四种约束都是ADD<br>ALTER TABLE 表名 MODIFY 字段名 NOT NULL;</p>
+<p>-- 删除表里的约束条件<br>-- 非空约束不能指定约束名，应该先通过查询表和列所对应的的约束信息，找出约束名，再删除。<br>ALTER TABLE 表名 DROP CONSTRAINT 约束名;</p>
+<p>-- 修改主键，可以先删除主键约束，再重新创建新主键约束。</p>
+<p>-- 重命令约束<br>ALTER TABLE 表名 RENAME CONSTRAINT 原约束名 TO 新约束名;</p>
+<p>-- 创建索引<br>CREATE [unique] INDEX [user.]index<br>ON [user.]table (column [ASC | DESC] [,column [ASC | DESC] ] … )<br>[CLUSTER [scheam.]cluster]<br>[INITRANS n]<br>[MAXTRANS n]<br>[PCTFREE n]<br>[STORAGE storage]<br>[TABLESPACE tablespace]<br>[NO SORT]<br>Advanced</p>
+<p>其中：<br>   schema ORACLE模式，缺省即为当前帐户<br>   index 索引名<br>   table 创建索引的基表名<br>   column 基表中的列名，一个索引最多有16列，long列、long raw列不能建索引列<br>   DESC、ASC 缺省为ASC即升序排序<br>   CLUSTER 指定一个聚簇(Hash cluster不能建索引)<br>   INITRANS、MAXTRANS 指定初始和最大事务入口数<br>   Tablespace 表空间名<br>   STORAGE 存储参数，同create table 中的storage.<br>   PCTFREE 索引数据块空闲空间的百分比(不能指定pctused)<br>   NO SORT 不(能)排序(存储时就已按升序，所以指出不再排序)</p>
+<p>CREATE INDEX 索引名 ON 表名 (字段名, …);</p>
+<p>-- 删除索引，当表结构被删除时，有其相关的所有索引也随之被删除。<br>DROP INDEX [schema.]indexname<br>drop index 索引名;</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/16/2019030500134/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/16/2019030500134/" title="Oracle常用语句">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/page/4/">前一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/6/">后一页</a>
+    </nav>
+    
+
+
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

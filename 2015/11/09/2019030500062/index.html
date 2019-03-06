@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>MySQL 5.6关闭DNS查询 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2015/11/09/2019030500062/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2015/11/09/2019030500062/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/2015/11/09/2019030500062/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2015/11/09/2019030500062/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>MySQL 5.6关闭DNS查询</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2015-11-09T09:07:50.000Z">2015-11-09</time>
+    </p>
+    <div class="post-content">
+        <p>MySQL服务器的日志记录中看到如下的警告：</p>
+<pre><code>2015-11-09 08:37:02 1489 [Warning] IP address &apos;104.223.72.XXX&apos; has been resolved to the host name &apos;104.223.72.XXX.static.quadranet.com&apos;, which resembles IPv4-address itself.
+</code></pre><p>分析：104.223.72.XXX经查询，是美国的IP地址，国内有XX防火墙阻拦，DNS解析不了很正常。由于MySQL服务器在内存中维持了一个Host缓存，用于存储客户端的信息，包括：IP地址、Host主机名、错误信息等。对于非本地的TCP连接，MySQL服务器都会查询此缓存。对于使用本地环回地址（比如：127.0.0.1或者::1）的TCP连接、或者是使用Unix套接字文件的TCP连接、命名管道的TCP连接、共享内存的TCP连接，都不会使用Host缓存。 注：Loopback，本地环回接口（或地址），亦称回送地址。此类接口是应用最为广泛的一种虚接口，几乎在每台路由器上都会使用。在Windows系统中，采用127.0.0.1作为本地环回地址。 对于每一个新的客户端连接，MySQL服务器使用客户端的IP地址进行检索，查看客户端的主机名是否在Host缓存中。如果Host缓存中不存在，MySQL服务器会尝试解析主机名。首先，MySQL服务器会解析主机名对应的IP地址，并与客户端的原始IP地址进行比较，确保是同一个IP地址。然后MySQL服务器把这些信息写入Host缓存中。如果Host缓存已满，MySQL服务器会使用最近最少使用算法，删除部分缓存数据。 MySQL服务器执行主机名解析使用了线程安全的gethostbyaddr_r()函数调用和gethostbyname_r()函数调用，只要操作系统支持。否则，执行查找的线程会锁定一个互斥变量，再调用gethostbyaddr()函数和gethostbyname()函数。在这种情况下，如果主机名不在缓存中，也没有别的线程能解析主机名，必须等到互斥变量被释放后才可以。 MySQL服务器使用Host缓存主要有几个目的： 1）通过缓存的IP和主机名的对应关系，避免了对于客户端的每个连接都要做DNS查询。相反，对于给定的主机，只需针对首次连接进行DNS查询。 2）Host缓存中还保护了连接过程中发生的错误信息。有些错误可能是“阻塞”信息，对于给定的客户端如果连续出现这种信息，那么服务器会阻塞来自此客户端的进一步的连接。MySQL的系统变量max_connect_errors就描述了这种情况，意思是MySQL服务器在阻塞客户端连接之前允许客户端连接错误的次数。 要解除已经被阻塞的主机，需要刷新Host缓存，执行语句：</p>
+<pre><code>mysql&gt; flush hosts
+</code></pre><p>或者是在Shell环境下执行：</p>
+<pre><code># mysqladmin flush-hosts
+</code></pre><p>Host缓存在MySQL中是默认开启的，要关闭Host缓存，可以在启动MySQL时添加–skip-host-cache参数选项。 要禁用DNS主机名查找，可以在启动MySQL时添加–skip-name-resolve参数选项。在这种情况下，MySQL服务器会只使用IP地址来匹配连接。如果DNS查询很慢，或者是客户端非常多，那么关闭DNS查询可以改进MySQL服务器的性能。 解决办法： 修改my.cnf配置文件，找到[mysqld]处，添加：</p>
+<pre><code>skip-name-resolve
+</code></pre><p>再重启MySQL服务。 证明：</p>
+<pre><code>mysql&gt; show variables like &quot;%skip%&quot;;
++------------------------+-------+
+| Variable_name          | Value |
++------------------------+-------+
+| skip_external_locking  | ON    |
+| skip_name_resolve      | ON    |
+| skip_networking        | OFF   |
+| skip_show_database     | OFF   |
+| slave_skip_errors      | OFF   |
+| sql_slave_skip_counter | 0     |
++------------------------+-------+
+6 rows in set (0.00 sec)
+</code></pre>
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br>
+        <a href="/2015/11/23/2019030500049/">
+            
+                java 中的断言assert的使用
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br>
+        <a href="/2015/11/06/2019030500082/">
+            
+                mysql 学习记录（三）--字段
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '2019030500062' || '2015/11/09/2019030500062/',
+    owner: 'your_github_id',
+    repo: 'your_blog_comments',
+    clientId: 'your_client_id',
+    clientSecret: 'your_client_secret'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

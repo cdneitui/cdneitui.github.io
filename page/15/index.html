@@ -1,0 +1,1850 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/page/15/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/page/15/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/page/15/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/page/15/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 首页 -->
+
+    
+    <h3 class="widget-hd">
+        <strong>
+            
+                最近动态
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/15/2019030500013/">
+    		关于SQL的几道小题详解
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-15T03:25:42.000Z">2015-06-15</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>当我们拿到题目的时候，并不是急于作答，那样会得不偿失的，而是分析思路，采用什么方法，达到什么目的，还要思考有没有简单的方法或者通用的方法等等，这样才会达到以一当十的效果，这样的惯性思维其实早在我们度高中的时候就被领教了，所谓“万变不离其宗”吧。以下各题来自日常所见，或QQ群，或面试题，或博客园。 <strong>题目一</strong>：如下表所示，现需要按照收款员统计收款和退款合计金额。 <img src="http://img.blog.csdn.net/20150615083823366?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvVElBTlRBTkdERUdFWkk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt> 实现结果需如下显示： <img src="http://img.blog.csdn.net/20150615083901467?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvVElBTlRBTkdERUdFWkk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt> 分析：想要的结果（记为表B）和源数据（记为表A）相比，有共同的列（收款员），不同的是表A的金额根据标记和收款员分成了两列，所以这个需求可以用语言表述一下：首先根据收款员分组（group by）,然后当标记为“收”时，金额计入收款合计（sum）；当标记为“退”时，金额计入退款合计（sum）。当……时……，这不就是SQL的条件判断嘛？盘点SQL的条件语句不多，if……else……和case……when……then……else……end。这样问题就迎刃而解了。 解决方案如下：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>with ta as</li>
+<li>(select ‘收’ as 标记,’100’ as 收款员,150 as 金额</li>
+<li>union</li>
+<li>select ‘收’,’100’,375</li>
+<li>union</li>
+<li>select ‘退’,’100’,78</li>
+<li>union select ‘收’,’200’,74</li>
+<li><p>)</p>
+</li>
+<li><p>select 收款员,sum(case when 标记=’收’ then 金额 else 0 end) as 收款合计,</p>
+</li>
+<li>sum(case when 标记=’退’ then 金额 else 0 end) as 退款合计 from ta</li>
+<li><p>group by 收款员</p>
+<p><strong> 题目二</strong>：如下表A（左边）职员信息表，其中ID为职员工号，name为职员姓名；表B（右边）为职员任务分配表，其中ID为职员工号（和表A中ID对应），Task为任务编号。 <img src="http://img.blog.csdn.net/20150615083951856?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvVElBTlRBTkdERUdFWkk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt>                              <img src="http://img.blog.csdn.net/20150615084009684?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvVElBTlRBTkdERUdFWkk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt> 现需求每个职员的任务数。结果如下显示： <img src="http://img.blog.csdn.net/20150615084026033?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvVElBTlRBTkdERUdFWkk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt> 其实原题是这样的：只有一张表B，求求每个职员的任务数。没有找到比较好的方法实现，不做讨论，欢迎高人指点。 分析：此题的难点在于表B中的ID复杂表示，其实这样有悖于数据库的设计原则，理应表A和表B的ID一一对应。既然是题，我们只能从当前的条件入手了，攻破难点的关键在于判断A中ID在B中ID出现与否，如果出现那么如何统计出现的次数。判断出现与否需要用到函数CHARINDEX。 解决方案如下：</p>
+</li>
+</ol>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–创建测试数据</li>
+<li>WITH TA</li>
+<li>AS</li>
+<li>(SELECT ‘1,2’ AS ID,’job1’ AS task</li>
+<li>UNION SELECT ‘1,2,3’,’job3’</li>
+<li>UNION SELECT ‘2,3’,’job2’</li>
+<li>UNION SELECT ‘3,4,5’,’job4’)</li>
+<li>,TB AS</li>
+<li>(SELECT ‘1’ AS ID,’张三’ as name</li>
+<li>UNION SELECT ‘2’,’王二’</li>
+<li>UNION SELECT ‘3’,’李四’</li>
+<li>UNION SELECT ‘4’,’李明’</li>
+<li><p>UNION SELECT ‘5’,’王五’)</p>
+</li>
+<li><p>SELECT B.ID,B.name,COUNT(1) AS TASKS</p>
+</li>
+<li>FROM TA A,TB B</li>
+<li>WHERE CHARINDEX(B.ID,A.ID)&gt;0</li>
+<li>GROUP BY B.ID,B.name</li>
+<li><p>order by B.ID</p>
+<p><strong>题目三</strong>：原题参见博客：<a href="http://www.cnblogs.com/Lumia1020/p/4571301.html" target="_blank" rel="noopener">http://www.cnblogs.com/Lumia1020/p/4571301.html</a> 如下表City所示，code为行政区域码（六位数字，前两代表省级，中间两位代表市级，最后两位代表县级，不考虑xx00xx情况），city为城市名称，CCode为该城市所属的省级或者市级行政区域码。 <img src="http://img.blog.csdn.net/20150615084051636?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvVElBTlRBTkdERUdFWkk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt> 现需求如下结果： <img src="http://img.blog.csdn.net/20150615084111955?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvVElBTlRBTkdERUdFWkk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt> 分析：分析表city，code的含义十分明显，所需要的结果也很明显，如果是省就是显示省份；是市则显示为所属省级+市级；是县级则显示为所属省级+所属市级+县级。貌似可以用题目一分析中提到的SQL条件语句实现，但是转念一想，还是有差别，这里需要先判断city属于省级？市级？县级？然后在对应起来的，这样还得有参照表，复杂了。回到结果表中来进行分析，其实判定city属于省市县的问题并不难，code的含义已经说明了，只要转换表述：在表City中，当code的后四位为“0000”时，肯定是省级；当code的后两位为“00”，并且后四位不为“0000”时，肯定是市级；当code后两位不为“00”时，为县级。这样省市县的判定就一目了然了，然后，根据市级编码追朔所属的省级，并得出所属省级+市级，县级追朔所属的市级，得出所属省级+所属市级+所属县级，通过运用这种简单的递归思想，解决方案便跃然纸上了。 解决方案如下：</p>
+</li>
+</ol>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–测试数据</li>
+<li>with ta as</li>
+<li>(select ‘110000’ as code, ‘北京市’ city, ‘110000’ Ccode</li>
+<li>union</li>
+<li>select N’110200’, N’西城区’, N’110200’</li>
+<li>union</li>
+<li>select N’110300’, N’崇文区’, N’110300’</li>
+<li>union</li>
+<li>select N’430000’, N’湖南省’, N’430000’</li>
+<li>union</li>
+<li>select N’430100’, N’长沙市’, N’430100’</li>
+<li>union</li>
+<li><p>select N’430101’, N’望城县’, N’430100’)</p>
+</li>
+<li><p>select * into City from ta</p>
+</li>
+<li><p>select * from City;</p>
+</li>
+<li><p>–解决方案</p>
+</li>
+<li>with ta</li>
+<li>as(</li>
+<li>–省级</li>
+<li>select code,city,Ccode,city content from City where right(code,4)=’0000’),</li>
+<li>tb as(</li>
+<li>–市级</li>
+<li>select b.code,b.city,b.Ccode,a.city+’,’+b.city as content from ta a,City b where left(a.Ccode,2)=left(b.Ccode,2)</li>
+<li>and right(b.code,2)=’00’ and right(b.code,4)&lt;&gt;’0000’),</li>
+<li>tc as(</li>
+<li>select c.code,c.city,c.Ccode,b.content+’,’+c.city content from tb b,City c where left(b.Ccode,4)=left(c.Ccode,4)</li>
+<li>and right(c.code,2)&lt;&gt;’00’)</li>
+<li>select * from ta</li>
+<li>union</li>
+<li>select * from tb</li>
+<li>union</li>
+<li><p>select * from tc</p>
+<p>通过上述几道小题，常思常新，温故了SQL的部分知识，当然方法很多，变式很多，如题目二统计表B中每个Task的人数等。不足之处，欢迎各位指点！</p>
+</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/06/15/2019030500013/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/15/2019030500013/" title="关于SQL的几道小题详解">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/12/2019030500158/">
+    		SQL结构化查询语言
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-12T04:37:40.000Z">2015-06-12</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>SQL结构化查询语言</strong> 数据操作(管理)语言（DML，DataManipulationLanguage）（DQL+DML） DQL 查询：获得数据。 DML 管理：增加，删除，修改数据。 数据定义语言（DDL，DataDefinitionLanguage）对保存数据的格式进行定义。 数据库控制语言（DCL，DataBaseControlLanguage）针对数据库软件服务进行操作。 <img src="http://img.blog.csdn.net/20150611090734393" alt> SQL=DDL，DML(DQL+DML)，DCL</p>
+<h3 id="数据库操作：DDL"><a href="#数据库操作：DDL" class="headerlink" title="数据库操作：DDL"></a><strong>数据库操作：</strong>DDL</h3><h4 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a><strong>创建数据库</strong></h4><pre><code>create database [if not exists]  数据库名 [数据库选项] ;
+eg:
+create database liguodong;
+create database `1234`;    特殊字符串
+create database `create`;  关键字
+
+set names GBK;
+create database `成都`;
+</code></pre><p>数据库名：可以是任意字符（目录可以创建成功），但特殊的字符需要使用反引号包裹。标识符的大小写区别于操作系统的大小写特征。 If not exists 表示在数据库不存在时创建。 数据库选项中，可以设定数据库字符集（character set utf8)和校对集(collate utf8_general_ci)。 <strong>注：</strong> 语句要求要使用语句结束符 <code>;</code> 标识符（数据库）命名规则： 大小写取决于当前操作系统（认为是区分的） 见名知意。推荐使用下划线方式。 标识符的字符： 使用任意字符，数字，符号甚至是中文。但是一些特殊的组合，例如纯数字组合，特殊符号，包括mysql是内部关键字，应该使用标识符限定符来包裹。 限定符：反引号。 中文可以，但是不建议使用。（字符集编码要正确）<code>set names GBK;</code> 每当我们创建一个数据库，在mysql的数据目录，形成一个目录，目录名是数据库名（如果是特殊字符，则使用编码的形式保存）。目录内，存在一个文件，用于保存数据库的选项信息。<code>db.opt</code></p>
+<h4 id="查询数据库"><a href="#查询数据库" class="headerlink" title="查询数据库"></a><strong>查询数据库</strong></h4><p>查询已经存在的数据库：</p>
+<pre><code>show databases [like &apos;pattern&apos;]
+
+show databases;
+</code></pre><p><code>like pattern</code> 指的是显示符合哪些命名规则的。不存在指的是所有的数据库。 查询创建数据库的语句：<code>show create database db_name;</code> <img src="http://img.blog.csdn.net/20150611095924639" alt> <strong>注意：</strong>并不是只有用户可以创建数据库，还有mysql内部维护自己的数据库。</p>
+<h4 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a><strong>删除数据库</strong></h4><pre><code>drop database [if exists] db_name;  慎用
+
+drop database test;
+</code></pre><p><code>If exists</code> 表示数据库存在才删除。 当删除一个数据库时，同时删除该数据库相关的目录及其目录内容。</p>
+<h4 id="修改数据库"><a href="#修改数据库" class="headerlink" title="修改数据库"></a><strong>修改数据库</strong></h4><pre><code>alter database db_name [修改指令]
+
+alter database test character set gbk；
+</code></pre><p>指令：数据库属性的修改。 <strong>修改名字：</strong> 方式一、简单的可以直接修改目录名。（并不适用所用方式） 方式二、将数据库内容导出，新建一个数据库，将内容导入，删除旧数据库。</p>
+<h3 id="表操作"><a href="#表操作" class="headerlink" title="表操作"></a><strong>表操作</strong></h3><p>数据库是表的容器。 表必须数据某个数据库。 可以通过<code>.</code>语法指明所属的数据库。eg: 库.表 database.table。如果任何的标识符，出现的特殊字符，需要使用反引号包裹。不同的标识符需要分别包裹。 进行表操作时，都会指定当前的默认数据库。 <code>use db_name;</code> <strong>注意：</strong>选择了默认的数据库，只会影响默认行为。可以操作任何的数据库。</p>
+<h4 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a><strong>创建表</strong></h4><pre><code>create table [if not exists] tbl_name （列定义） [表选项] 
+create table [if not exists] tbl_name like old_tbl_name; 
+create table [if not exists] tbl_name select 语句; 
+
+eg:
+create table liguodong.classroom(
+stu_id varchar(20),
+stu_name  varchar(20),
+stu_data  date
+);
+</code></pre><p><img src="http://img.blog.csdn.net/20150611103606154" alt> 每当创建一个表，会在数据目录创建对应的文件保存表信息。 先分析，需要保存的实体数据，拥有哪些属性，这些属性应该如何保存。 例如：学生信息 学号，姓名，出生日期 <strong>列定义：</strong> 列名：列的数据类型[列的属性 （约束）]</p>
+<h4 id="查看表"><a href="#查看表" class="headerlink" title="查看表"></a><strong>查看表</strong></h4><pre><code>show tables [from db_name] [like ‘pattern’]; 
+如果没有数据库名，则采用当前数据库，如果没有like，则获得所有表。
+eg:
+use liguodong;
+show tables;
+
+show tables from liguodong;
+</code></pre><p><img src="http://img.blog.csdn.net/20150611151502876" alt> 表名前缀： 为了区分<strong>相同逻辑表名</strong>的<strong>不同应用</strong>，给逻辑表名，增加前缀，形成真实表名。</p>
+<pre><code>/*学生管理系统*/
+create table info_student(
+stu_name varchar(20),
+stu_no varchar(20)
+);
+/*在线考试系统*/
+create table exam_student(
+stu_name varchar(20),
+stu_no varchar(20)
+);
+</code></pre><p><img src="http://img.blog.csdn.net/20150611152216853" alt></p>
+<pre><code>show tables like &apos;exam_%&apos;;
+%称之为通配符，表示任意字符的任意个数的组合。
+</code></pre><p><img src="http://img.blog.csdn.net/20150611152434885" alt></p>
+<pre><code>show create table exam_student;
+</code></pre><p><img src="http://img.blog.csdn.net/20150611155358616" alt> 当一个数据非常多的时候，可以使用\G作为语句结束符。 <img src="http://img.blog.csdn.net/20150611155716294" alt></p>
+<pre><code>describe liguodong.exam_student;
+</code></pre><p><img src="http://img.blog.csdn.net/20150611161139279" alt> 数据库对应目录，而数据库中的内容对应<strong>目录的内容，文件</strong>。 <img src="http://img.blog.csdn.net/20150611171559589" alt></p>
+<h4 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a><strong>删除表</strong></h4><pre><code>drop table [if exists] tbl_name;
+
+eg:
+drop table exam_student;
+表不存在，不能删除，会报告错误。
+drop table if exists exam_student;
+不会报错，因为已经做了一次判断。
+</code></pre><h4 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a><strong>修改表</strong></h4><p>重命名表名：<code>rename table tbl_name to new_tbl_name;</code> 。可以<strong>同时针对多个表进行重命名，甚至可以跨数据库。</strong> 修改表结构：<code>alter table</code>。可以提供对表选项和列定义的修改。</p>
+<pre><code>重名名相当于剪切操作
+eg:
+rename table classroom to stu_class;
+
+支持同时修改多个表名。
+rename table classroom to stu_class,info_student to exam_user;
+支持跨数据库重命名。
+rename table exam_user to `1234`.user;
+
+重命名数据库（数据库不支持rename）
+创建一个新的数据库，就的数据库内的表，都rename到新的数据库内，删除旧的数据库。
+</code></pre><p>修改列定义：</p>
+<pre><code>add     增加  可以同时增加多个列，使用括号括起来多个列的定义。
+modify  修改
+change  重命名
+drop    删除
+</code></pre><p>修改表结构：</p>
+<pre><code>alter table exam [add|drop|change|modify]
+
+eg:
+添加:
+alter table info_student add age int;
+desc info_student; 
+删除:
+alter table info_student drop age;
+desc info_student;
+修改:
+alter table info_student modify stu_no varchar(40);
+desc info_student;
+重命名:
+alter table info_student change age stu_age int;
+desc info_student;
+</code></pre><p><img src="http://img.blog.csdn.net/20150611193800787" alt> <img src="http://img.blog.csdn.net/20150611194805231" alt> 修改表选项</p>
+<pre><code>alter table info_student character set gbk;
+</code></pre><p><img src="http://img.blog.csdn.net/20150611195529208" alt></p>
+
+            
+            <p class="more">
+                <a href="/2015/06/12/2019030500158/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/12/2019030500158/" title="SQL结构化查询语言">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/11/2019030500106/">
+    		MYSQL设计优化
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-11T04:44:09.000Z">2015-06-11</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>本文将从各方面介绍优化mysql设计的一些方式。</p>
+<h2 id="1、优化sql语句"><a href="#1、优化sql语句" class="headerlink" title="1、优化sql语句"></a>1、优化sql语句</h2><h3 id="1-定位需要优化的sql语句"><a href="#1-定位需要优化的sql语句" class="headerlink" title="(1)定位需要优化的sql语句"></a>(1)定位需要优化的sql语句</h3><h4 id="1-show-status统计SQL语句频率"><a href="#1-show-status统计SQL语句频率" class="headerlink" title="1)show status统计SQL语句频率"></a>1)show status统计SQL语句频率</h4><p>对Myisam和Innodb存储引擎都计数的参数： SHOW STATUS可以根据需要显示session级别的统计结果和global级别的统计结果。 1.Com_select  执行select操作的次数，一次查询只累加1； 2.Com_insert 执行insert操作的次数，对于批量插入的insert操作，只累加一次； 3.Com_update 执行update操作的次数； 4.Com_delete　执行delete操作的次数； 执行如：SHOW STATUS WHERE Variable_name = ‘Com_select’; 对Innodb存储引擎计数的参数（计算的方式不一样）： 1.Innodb_rows_read select查询返回的行数； 2.Innodb_rows_inserted 执行Insert操作插入的行数； 3.Innodb_rows_updated 执行update操作更新的行数； 4.Innodb_rows_deleted 执行delete操作删除的行数； 通过以上几个参数，可以很容易的了解当前数据库的应用是以插入更新为主还是以查询操作为主，以及各种类型的SQL大致的执行比例是多少。 对于更新操作的计数，是对执行次数的计数，不论提交还是回滚都会累加。 对于事务型的参数 1.Com_commit 事务提交次数 2.Com_rollback 事务回滚次数 对于回滚操作非常频繁的数据库，可能意味着应用编写存在问题。 数据库的基本情况的参数： 1.Connections 试图连接Mysql服务器的次数 2.Uptime 服务器工作时间 3.Slow_queries 慢查询的次数</p>
+<h4 id="2-定位执行效率较低的SQL语句"><a href="#2-定位执行效率较低的SQL语句" class="headerlink" title="2)定位执行效率较低的SQL语句"></a>2)定位执行效率较低的SQL语句</h4><p>两种方式定位执行效率较低的SQL语句： (1)通过慢查询日志定位那些执行效率较低的sql语句（需要查询结束后），用–log-slow-queries[=file_name]选项启动时，mysqld写一个包含所有执行时间超过long_query_time秒的SQL语句的日志文件. (2)使用show processlist命令查看当前MySQL在进行的线程，包括线程的状态，是否锁表等等，可以实时的查看SQL执行情况，同时对一些锁表操作进行优化。</p>
+<h4 id="3-EXPLAIN命令分析SQL语句"><a href="#3-EXPLAIN命令分析SQL语句" class="headerlink" title="3)EXPLAIN命令分析SQL语句"></a>3)EXPLAIN命令分析SQL语句</h4><p>通过explain或者desc 获取MySQL如何执行SELECT语句的信息 EXPLAIN SELECT * FROM message a LEFT JOIN mytable b ON a.id = b.id WHERE a.id=1; 返回结果 +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ |   id   | select_type   | table | type  | possible_keys| key            | key_len   | ref   |  rows  |  Extra       | +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ |   1    | SIMPLE        | a     | const | PRIMARY      | PRIMARY        | 4         | const | 1      |              | |   1    | SIMPLE        | b     | ALL    | NULL             | NULL           | NULL      |       | 9999   |              | +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ select_type：select 类型 table：      输出结果集的表 type：       表示表的连接类型 ①当表中仅有一行是最佳的连接类型； ②当select操作中使用索引进行表连接时type的值为ref； ③当select的表连接没有使用索引时，经常会看到type的值为ALL，表示对该表进行了全表扫描，这时需要考虑通过创建索引来提高表连接的效率。 possible_keys：表示查询时,可以使用的索引列. key：          表示使用的索引 key_len：      索引长度 rows：         扫描范围 Extra：执行情况的说明和描述 例如上面的例子，因为是对b表的全表扫描导致效率下降，则对b表的 id 字段创建索引，查询需要扫描的行数将会减少。 返回结果 +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ |   id   | select_type   | table | type  | possible_keys| key            | key_len   | ref   |  rows  |  Extra       | +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ |   1    | SIMPLE        | a     | const | PRIMARY      | PRIMARY        | 4         | const | 1      |              | |   1    | SIMPLE        | b     | const | PRIMARY      | PRIMARY        | 4         | const | 1      |              | +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+</p>
+<h3 id="2-sql语句优化方式"><a href="#2-sql语句优化方式" class="headerlink" title="(2)sql语句优化方式"></a>(2)sql语句优化方式</h3><p>1)大批量插入数据 1)对于Myisam类型的表，可以通过以下步骤快速的导入大量的数据。 前后两个命令用来打开或者关闭Myisam表非唯一索引的更新。在导入大量的数据到一个非空的Myisam表时，通过设置这两个命令，可以提高导入的效率。 ALTER TABLE mytable DISABLE KEYS; INSERT INTO mytable(id, username, city, age) VALUES(1, ‘name1’, ‘city1’, 10),(2, ‘name2’, ‘city2’, 20),(3, ‘name3’, ‘city3’, 30); ALTER TABLE mytable ENABLE KEYS; 对于导入大量数据到一个空的Myisam表，默认就是先导入数据然后才创建索引的，所以不用进行设置。 2)对于Innodb类型的表，我们有以下几种方式可以提高导入的效率（对Innodb类型的表，上面的方式并不能提高导入数据的效率） ①因为Innodb类型的表是按照主键的顺序保存的，所以将导入的数据按照主键的顺序排列，可以有效的提高导入数据的效率。 如果Innodb表没有主键，那么系统会默认创建一个内部列作为主键，所以如果可以给表创建一个主键，将可以利用这个优势提高导入数据的效率。 ②在导入数据前执行SET UNIQUE_CHECKS=0，关闭唯一性校验，在导入结束后执行SET UNIQUE_CHECKS=1，恢复唯一性校验，可以提高导入的效率。 SET UNIQUE_CHECKS=0; SET UNIQUE_CHECKS=1; ③如果使用自动提交的方式，建议在导入前执行SET AUTOCOMMIT=0，关闭自动提交，导入结束后再执行SET AUTOCOMMIT=1，打开自动提交，也可以提高导入的效率。 SET AUTOCOMMIT=0; SET AUTOCOMMIT=1; 2)优化insert语句 1)如果同时插入很多行，请使用多个值的INSERT语句。这比使用分开INSERT语句快(在一些情况中几倍)。 Insert into test values(1,2),(1,3),(1,4)… 2)如果从不同客户插入很多行，能通过使用INSERT DELAYED 语句得到更高的速度。 Delayed 的含义是让insert 语句马上执行，其实数据都被放在内存的队列中，并没有真正写入磁盘；这比每条语句分别插入要快的多； LOW_PRIORITY 刚好相反，在所有其他用户对表的读写完后才进行插入； 3)将索引文件和数据文件分在不同的磁盘上存放（利用建表中的选项）； 4)如果批量插入，可以增加bulk_insert_buffer_size变量值的方法来提高速度，但是，这只能对myisam表使用； 5)当从一个文本文件装载一个表时，使用LOAD DATA INFILE。这通常比使用很多INSERT语句快20倍； 6)根据应用情况使用 replace 语句代替 insert； 7)根据应用情况使用 ignore 关键字忽略重复记录。 INSERT DELAYED INTO mytable(id, username, city, age) VALUES(4, ‘name4’, ‘city4’, 40); INSERT LOW_PRIORITY INTO mytable(id, username, city, age) VALUES(5, ‘name5’, ‘city5’, 50); REPLACE INTO mytable(id, username, city, age) VALUES(5, ‘name5’, ‘city5’, 50); INSERT IGNORE INTO mytable(id, username, city, age) VALUES(5, ‘name5’, ‘city5’, 50); 3)优化group by语句 默认情况下，MySQL排序所有GROUP BY col1，col2，….（如同指定了ORDER BY  col1，col2，…） 如果查询包括GROUP BY但想避免排序结果的消耗，可以指定 ORDER BY NULL禁止排序。 例如： SELECT <em> FROM mytable GROUP BY username ORDER BY NULL; 4)优化order by语句 以下情况可以使用索引: SELECT </em> FROM t1 ORDER BY key_part1,key_part2,… ;  –order by字段都为同一组合索引的一部分 SELECT <em> FROM t1 WHERE key_part1=1 ORDER BY key_part1 DESC, –key_part2 DESC;–where条件和order by使用相同的索引字段 SELECT </em> FROM t1 ORDER BY key_part1 DESC, key_part2 DESC;–order by的的所有字段顺序相同 以下情况不使用索引: 1)SELECT <em> FROM t1 ORDER BY key_part1 DESC, key_part2 ASC；–order by的字段混合ASC和DESC 2)SELECT </em> FROM t1 WHERE key2=constant ORDER BY key1；–用于查询行的关键字与ORDER BY中所使用的不相同 3)SELECT <em> FROM t1 ORDER BY key1, key2；–对不同的关键字使用ORDER BY 5)优化join语句 Mysql4.1开始支持SQL的子查询。这个技术可以使用SELECT语句来创建一个单列的查询结果，然后把这个结果作为过滤条件用在另一个查询中。 使用子查询可以一次性的完成很多逻辑上需要多个步骤才能完成的SQL操作，同时也可以避免事务或者表锁死，并且写起来也很容易。 但是，有些情况下，子查询可以被更有效率的连接(JOIN).. 替代。 假设我们要将所有没有订单记录的用户取出来，可以用下面这个查询完成： SELECT </em> FROM customerinfo WHERE CustomerID NOT in (SELECT CustomerID FROM salesinfo ) 如果使用连接(JOIN).. 来完成这个查询工作，速度将会快很多。尤其是当salesinfo表中对CustomerID建有索引的话，性能将会更好，查询如下： SELECT * FROM customerinfo LEFT JOIN salesinfo ON customerinfo.CustomerID=salesinfo.CustomerID WHERE salesinfo.CustomerID IS NULL 连接(JOIN).. 之所以更有效率一些，是因为 MySQL不需要在内存中创建临时表来完成这个逻辑上的需要两个步骤的查询工作。 6)insert update delete的调度优先级 MySQL还允许改变语句调度的优先级，使来自多个客户端的操作更好地协作(需要判断应用是以查询为主还是以更新为主的)。 以下改变调度策略的方法主要是针对Myisam存储引擎的（对于Innodb存储引擎，语句的执行是由获得行锁的顺序决定的） 默认调度策略： 1）写入操作优先于读取操作。 2）对某张数据表的写入操作某一时刻只能发生一次，写入请求按照它们到达的次序来处理。 3）对某张数据表的多个读取操作可以同时地进行。 语句调节符可以修改调度策略（以下是查询为主的）： 1）LOW_PRIORITY 关键字应用于 DELETE 、 INSERT 、 LOAD DATA 、 REPLACE和UPDATE 。 2）HIGH_PRIORITY关键字应用于SELECT和INSERT语句。 3）DELAYED关键字应用于INSERT和REPLACE语句。 如果写入操作是一个LOW_PRIORITY（低优先级）请求，那么读取操作优先级会高于写操作。（在这种情况下，如果写入者在等待的时候，第二个读取者到达了，那么就允许第二个读取者插到写入者之前。只有在没有其它的读取者的时候，才允许写入者开始操作。这种调度方式可能存在LOW_PRIORITY的写入操作永远被阻塞的情况。） SELECT查询被设置为HIGH_PRIORITY（高优先级），则也会调整SELECT操作到正在等待的写入操作之前。 设置方式： 1）启动方式 如果你希望所有支持LOW_PRIORITY选项的语句都默认地按照低优先级来处理，那么请使用–low-priority-updates选项来启动服务器。 2）sql方式 通过使用INSERT HIGH_PRIORITY来把INSERT语句提高到正常的写入优先级，可以消除该选项对单个INSERT语句的影响。 INSERT LOW_PRIORITY INTO mytable(id, username, city, age) VALUES(7, ‘name7’, ‘city7’, 70);</p>
+<h2 id="2、优化数据表"><a href="#2、优化数据表" class="headerlink" title="2、优化数据表"></a>2、优化数据表</h2><h3 id="1-优化表的数据类型"><a href="#1-优化表的数据类型" class="headerlink" title="(1)优化表的数据类型"></a>(1)优化表的数据类型</h3><p>函数PROCEDURE ANALYSE()可以对数据表中的列的数据类型提出优化建议，根据实际情况考虑是否实施优化。(虽然应用设计的时候需要考虑字段的长度留有一定的冗余，但是不推荐让很多字段都留有大量的冗余，这样即浪费存储也浪费内存) 语法： SELECT <em> FROM tbl_name PROCEDURE ANALYSE(); –输出的对数据表中的每一列的数据类型提出优化建议 SELECT </em> FROM tbl_name PROCEDURE ANALYSE(16,256);–不要为那些包含的值多于16个或者256字节的ENUM类型提出建议。(如果没有这样的限制，输出信息可能很长；ENUM定义通常很难阅读)</p>
+<h3 id="2-拆分表提高访问效率"><a href="#2-拆分表提高访问效率" class="headerlink" title="(2)拆分表提高访问效率"></a>(2)拆分表提高访问效率</h3><p>这里我们所说的拆分，主要是针对Myisam类型的表，拆分的方法可以分成两种情况： 纵向拆分： 纵向拆分是只按照应用访问的频度，将表中经常访问的字段和不经常访问的字段拆分成两个表，经常访问的字段尽量是定长的，这样可以有效的提高表的查询和更新的效率。 横向拆分： 横向拆分是指按照应用的情况，有目的的将数据横向拆分成几个表或者通过分区分到多个分区中，这样可以有效的避免Myisam表的读取和更新导致的锁问题。</p>
+<h3 id="3-规范化和逆规范化"><a href="#3-规范化和逆规范化" class="headerlink" title="(3)规范化和逆规范化"></a>(3)规范化和逆规范化</h3><p>根据实际情况考虑以下两个需求： 规范化的需求： 规范化设计强调数据的独立性，数据应该尽可能少地冗余，因为存在过多的冗余数据，意味着要占用了更多的物理空间，同时也对数据的维护和一致性检查带来了麻烦。 逆规范化的需求： 对于查询操作很多的应用，一次查询可能需要访问多表进行，如果通过冗余相同数据纪录在一个表中，更新的代价增加不多，但是查询操作效率可以有明显提高。</p>
+<h3 id="4-内存临时表"><a href="#4-内存临时表" class="headerlink" title="(4)内存临时表"></a>(4)内存临时表</h3><p>使用create temporary table语法创建临时表，它是基于session的表，数据保存在内存里面，当session断掉后，表自然消除。 比如，对于统计分析的表，如果统计的数据量不大，利用insert和select将数据移到临时表中比直接在表上做统计要效率更高。</p>
+<h3 id="5-选择更合适的表类型"><a href="#5-选择更合适的表类型" class="headerlink" title="(5)选择更合适的表类型"></a>(5)选择更合适的表类型</h3><p>1）如果应用出现比较严重的锁冲突，请考虑是否更改存储引擎到innodb，行锁机制可以有效的减少锁冲突的出现。 2）如果应用查询操作很多，且对事务完整性要求不严格，则可以考虑使用Myisam存储引擎。</p>
+<h2 id="3、优化客户端应用"><a href="#3、优化客户端应用" class="headerlink" title="3、优化客户端应用"></a>3、优化客户端应用</h2><h3 id="1-使用连接池"><a href="#1-使用连接池" class="headerlink" title="(1)使用连接池"></a>(1)使用连接池</h3><p>对于访问数据库来说，建立连接的代价比较昂贵，因此，我们有必要建立”连接池”以提高访问的性能。 我们可以把连接当作对象或者设备，池中又有许多已经建立的连接，访问本来需要与数据库的连接的地方，都改为和池相连，池临时分配连接供访问使用，结果返回后，访问将连接交还。</p>
+<h3 id="2-避免重复检索"><a href="#2-避免重复检索" class="headerlink" title="(2)避免重复检索"></a>(2)避免重复检索</h3><p>理清访问逻辑，需要对相同表的访问，尽量集中在相同sql访问，一次提取结果，减少对数据库的重复访问。</p>
+<h2 id="4、优化数据库服务器"><a href="#4、优化数据库服务器" class="headerlink" title="4、优化数据库服务器"></a>4、优化数据库服务器</h2><h3 id="1-使用mysql查询缓存"><a href="#1-使用mysql查询缓存" class="headerlink" title="(1)使用mysql查询缓存"></a>(1)使用mysql查询缓存</h3><p>作用： 查询缓存存储SELECT查询的文本以及发送给客户端的相应结果。如果随后收到一个相同的查询，服务器从查询缓存中重新得到查询结果，而不再需要解析和执行查询。 适用范围： 不发生数据更新的表。当表更改（包括表结构和表数据）后，查询缓存值的相关条目会被清空。 查询缓存的主要参数： SHOW VARIABLES LIKE ‘%query_cache%’; （或者 SHOW VARIABLES WHERE Variable_name LIKE ‘%query_cache%’;) ： have_query_cache  表示服务器在安装时已经配置了高速缓存 query_cache_size  表示缓存区大小，单位为字节(1024字节为1KB) query_cache_type  值从0到2，含义分别为 0或者off（缓存关闭） 1或者on（缓存打开，使用sql_no_cache的select除外） 2或者demand（只有带sql_cache的select语句提供高速缓存） SET GLOBAL query_cache_size=1024*50; 设置查询缓存大小，单位字节，1024字节为 1KB，query_cache_size大小的设置必须大于40KB SHOW STATUS命令实时监视查询缓存: SHOW STATUS LIKE ‘%Qcache%’; Qcache_queries_in_cache  在缓存中已注册的查询数目 Qcache_inserts           被加入到缓存中的查询数目 Qcache_hits              缓存采样数数目 Qcache_lowmem_prunes     因为缺少内存而被从缓存中删除的查询数目 Qcache_not_cached        没有被缓存的查询数目 (不能被缓存的，或由于 QUERY_CACHE_TYPE) Qcache_free_memory       查询缓存的空闲内存总数 Qcache_free_blocks       查询缓存中的空闲内存块的数目 Qcache_total_blocks      查询缓存中的块的总数目</p>
+<h3 id="2-使用机器高速缓存"><a href="#2-使用机器高速缓存" class="headerlink" title="(2)使用机器高速缓存"></a>(2)使用机器高速缓存</h3><p>Cache（高速缓存）、Memory（内存）、Hard disk（硬盘）都是数据存取单元，但存取速度却有很大差异，呈依次递减的顺序。 对于CPU来说，它可以从距离自己最近的Cache高速地存取数据，而不是从内存和硬盘以低几个数量级的速度来存取数据。 而Cache中所存储的数据，往往是CPU要反复存取的数据，有特定的机制（或程序）来保证Cache内数据的命中率（Hit Rate）。 因此，CPU存取数据的速度在应用高速缓存后得到了巨大的提高。 因为将数据写入高速缓存的任务由Cache Manager负责，所以对用户来说高速缓存的内容肯定是只读的。 需要你做的工作很少，程序中的SQL语句和直接访问DBMS时没有分别，返回的结果也看不出有什么差别。而数据库厂商往往会在DB Server的配置文件中提供与Cache相关的参数，通过修改它们，可针对我们的应用优化Cache的管理。</p>
+<h3 id="3-均衡负载"><a href="#3-均衡负载" class="headerlink" title="(3)均衡负载"></a>(3)均衡负载</h3><p>1)读写分流（主从复制） 利用mysql的主从复制可以有效的分流更新操作和查询操作。 具体的实现是一个主服务器，承担更新操作（为了数据的一致性），多台从服务器，承担查询操作（多台从服务器一方面用来确保可用性，一方面可以创建不同的索引满足不同查询的需要），主从之间通过复制实现数据的同步。 主从复制优化： 对于主从之间不需要复制全部表的情况，可以通过在主的服务器上搭建一个虚拟的从服务器，将需要复制到从服务器的表设置成blackhole引擎，然后定义replicate-do-table参数只复制这些表，这样就过滤出需要复制的binlog，减少了传输binlog的带宽。因为搭建的虚拟的从服务器只起到过滤binlog的作用，并没有实际纪录任何数据，所以对主数据库服务器的性能影响也非常的有限。 注意： 通过复制分流查询的存在的问题是主数据库上更新频繁或者网络出现问题的时候，主从之间的数据可能存在差异，造成查询结果的异议，应用在设计的时候需要有所考虑。 2)分布式的数据库 分布式的数据库设计适合大数据量，负载高的情况，可平均多台服务器的负载，有良好的扩展性和高效性（读写效率）。 分布式事务： mysql从5.0.3开始支持分布式事务，目前分布式事务只对Innodb存储引擎支持。 也可以使用mysql的Cluster功能（NDB引擎）或者使用自己用mysql api来实现全局事务。</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/11/2019030500106/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/11/2019030500106/" title="MYSQL设计优化">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/11/2019030500115/">
+    		MySQL Study之--Mysql启动失败“mysql.host”
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-11T04:33:56.000Z">2015-06-11</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>MySQL Study之–Mysql启动失败“mysql.host”</strong></p>
+<p>系统环境： 操作系统：RedHat EL55 DB Soft：  Mysql 5.6.4-m7</p>
+<p><strong>通过源码包安装mysql后，在启动mysqld时出现错误：</strong></p>
+<p><strong>[root@rh55 mysql]# bin/mysqld_safe &amp;</strong> [1] 15846 [root@rh55 mysql]# 150610 17:04:36 mysqld_safe Logging to ‘/usr/local/mysql/data/mysql/rh55.err’. 150610 17:04:36 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data/mysql 150610 17:04:37 mysqld_safe mysqld from pid file /usr/local/mysql/data/mysql/rh55.pid ended [1]+  Done                    bin/mysqld_safe</p>
+<p><strong>查看mysql日志：</strong></p>
+<p>[root@rh55 mysql]# more /usr/local/mysql/data/mysql/rh55.err</p>
+<p><strong>[html]</strong></p>
+<ol>
+<li>150610 16:56:59 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data/mysql</li>
+<li>/usr/local/mysql/bin/mysqld: Table ‘mysql.plugin’ doesn’t exist</li>
+<li>150610 16:57:00 [ERROR] Can’t open the mysql.plugin table. Please run mysql_upgrade to create it.</li>
+<li>150610 16:57:00 InnoDB: The InnoDB memory heap is disabled</li>
+<li>150610 16:57:00 InnoDB: Mutexes and rw_locks use InnoDB’s own implementation</li>
+<li>150610 16:57:00 InnoDB: Compressed tables use zlib 1.2.3</li>
+<li>150610 16:57:00 InnoDB: CPU does not support crc32 instructions</li>
+<li>150610 16:57:00 InnoDB: Initializing buffer pool, size = 128.0M</li>
+<li>150610 16:57:00 InnoDB: Completed initialization of buffer pool</li>
+<li>InnoDB: The first specified data file ./ibdata1 did not exist:</li>
+<li>InnoDB: a new database to be created!</li>
+<li>150610 16:57:00 InnoDB: Setting file ./ibdata1 size to 10 MB</li>
+<li>InnoDB: Database physically writes the file full: wait…</li>
+<li>150610 16:57:01 InnoDB: Log file ./ib_logfile0 did not exist: new to be created</li>
+<li>InnoDB: Setting log file ./ib_logfile0 size to 5 MB</li>
+<li>InnoDB: Database physically writes the file full: wait…</li>
+<li>150610 16:57:02 InnoDB: Log file ./ib_logfile1 did not exist: new to be created</li>
+<li>InnoDB: Setting log file ./ib_logfile1 size to 5 MB</li>
+<li>InnoDB: Database physically writes the file full: wait…</li>
+<li>InnoDB: Doublewrite buffer not found: creating new</li>
+<li>InnoDB: Doublewrite buffer created</li>
+<li>150610 16:57:04 InnoDB: 128 rollback segment(s) are active.</li>
+<li>InnoDB: Creating foreign key constraint system tables</li>
+<li>InnoDB: Foreign key constraint system tables created</li>
+<li>150610 16:57:04 InnoDB: Waiting for the background threads to start</li>
+<li>150610 16:57:05 InnoDB: 1.2.4 started; log sequence number 0</li>
+<li>150610 16:57:05 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been</li>
+<li>started. Generating a new UUID: ab19e2d2-0f4e-11e5-b157-080027973e8a.</li>
+<li>150610 16:57:05 [ERROR] Fatal error: Can’t open and lock privilege tables: Table ‘mysql.host’ doesn’t exist</li>
+<li>150610 16:57:05 mysqld_safe mysqld from pid file /usr/local/mysql/data/mysql/rh55.pid ended</li>
+<li>150610 17:04:36 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data/mysql</li>
+<li>/usr/local/mysql/bin/mysqld: Table ‘mysql.plugin’ doesn’t exist</li>
+<li>150610 17:04:36 [ERROR] Can’t open the mysql.plugin table. Please run mysql_upgrade to create it.</li>
+<li>150610 17:04:36 InnoDB: The InnoDB memory heap is disabled</li>
+<li>150610 17:04:36 InnoDB: Mutexes and rw_locks use InnoDB’s own implementation</li>
+<li>150610 17:04:36 InnoDB: Compressed tables use zlib 1.2.3</li>
+<li>150610 17:04:36 InnoDB: CPU does not support crc32 instructions</li>
+<li>150610 17:04:36 InnoDB: Initializing buffer pool, size = 128.0M</li>
+<li>150610 17:04:36 InnoDB: Completed initialization of buffer pool</li>
+<li>150610 17:04:36 InnoDB: highest supported file format is Barracuda.</li>
+<li>InnoDB: Log scan progressed past the checkpoint lsn 48961</li>
+<li>150610 17:04:36  InnoDB: Database was not shut down normally!</li>
+<li>InnoDB: Starting crash recovery.</li>
+<li>InnoDB: Reading tablespace information from the .ibd files…</li>
+<li>InnoDB: Restoring possible half-written data pages from the doublewrite</li>
+<li>InnoDB: buffer…</li>
+<li>InnoDB: Doing recovery: scanned up to log sequence number 1595695</li>
+<li>150610 17:04:36  InnoDB: Starting an apply batch of log records to the database…</li>
+<li>InnoDB: Progress in percents: 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</li>
+<li>77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</li>
+<li>InnoDB: Apply batch completed</li>
+<li>150610 17:04:37 InnoDB: 128 rollback segment(s) are active.</li>
+<li>150610 17:04:37 InnoDB: 1.2.4 started; log sequence number 1595695</li>
+<li>150610 17:04:37 [Note] Recovering after a crash using mysql-bin</li>
+<li>150610 17:04:37 [Note] Starting crash recovery…</li>
+<li>150610 17:04:37 [Note] Crash recovery finished.</li>
+<li>150610 17:04:37 [ERROR] Fatal error: Can’t open and lock privilege tables: Table ‘mysql.host’ doesn’t exist</li>
+<li>150610 17:04:37 mysqld_safe mysqld from pid file /usr/local/mysql/data/mysql/rh55.pid ended</li>
+</ol>
+<p><strong>查看mysql配置文件:</strong> <strong>[root@rh55 ~]# cat /etc/my.cnf</strong></p>
+<p><strong>[html]</strong></p>
+<ol>
+<li>[mysqld]</li>
+<li>port            = 3306</li>
+<li>socket          = /tmp/mysql.sock</li>
+<li>skip-external-locking</li>
+<li>key_buffer_size = 16M</li>
+<li>max_allowed_packet = 1M</li>
+<li>table_open_cache = 64</li>
+<li>sort_buffer_size = 512K</li>
+<li>net_buffer_length = 8K</li>
+<li>read_buffer_size = 256K</li>
+<li>read_rnd_buffer_size = 512K</li>
+<li>myisam_sort_buffer_size = 8M</li>
+<li>datadir=/usr/local/mysql/data/mysql</li>
+</ol>
+<p><strong>解决方案：</strong> <strong>[root@rh55 mysql]# scripts/mysql_install_db –user=mysql –datadir=/usr/local/mysql/data/mysql</strong></p>
+<p><strong>[html]</strong></p>
+<ol>
+<li>WARNING: The host ‘rh55’ could not be looked up with resolveip.</li>
+<li>This probably means that your libc libraries are not 100 % compatible</li>
+<li>with this binary MySQL version. The MySQL daemon, mysqld, should work</li>
+<li>normally with the exception that host name resolving will not work.</li>
+<li>This means that you should use IP addresses instead of hostnames</li>
+<li>when specifying MySQL privileges !</li>
+<li>Installing MySQL system tables…</li>
+<li>150610 17:07:10 InnoDB: The InnoDB memory heap is disabled</li>
+<li>150610 17:07:10 InnoDB: Mutexes and rw_locks use InnoDB’s own implementation</li>
+<li>150610 17:07:10 InnoDB: Compressed tables use zlib 1.2.3</li>
+<li>150610 17:07:10 InnoDB: CPU does not support crc32 instructions</li>
+<li>150610 17:07:10 InnoDB: Initializing buffer pool, size = 128.0M</li>
+<li>150610 17:07:10 InnoDB: Completed initialization of buffer pool</li>
+<li>150610 17:07:10 InnoDB: highest supported file format is Barracuda.</li>
+<li>InnoDB: Log scan progressed past the checkpoint lsn 48961</li>
+<li>150610 17:07:10  InnoDB: Database was not shut down normally!</li>
+<li>InnoDB: Starting crash recovery.</li>
+<li>InnoDB: Reading tablespace information from the .ibd files…</li>
+<li>InnoDB: Restoring possible half-written data pages from the doublewrite</li>
+<li>InnoDB: buffer…</li>
+<li>InnoDB: Doing recovery: scanned up to log sequence number 1595695</li>
+<li>150610 17:07:11  InnoDB: Starting an apply batch of log records to the database…</li>
+<li>InnoDB: Progress in percents: 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</li>
+<li>InnoDB: Apply batch completed</li>
+<li>150610 17:07:11 InnoDB: 128 rollback segment(s) are active.</li>
+<li>150610 17:07:11 InnoDB: Waiting for the background threads to start</li>
+<li>150610 17:07:12 InnoDB: 1.2.4 started; log sequence number 1595695</li>
+<li>150610 17:07:12 [Note] Recovering after a crash using mysql-bin</li>
+<li>150610 17:07:12 [Note] Starting crash recovery…</li>
+<li>150610 17:07:12 [Note] Crash recovery finished.</li>
+<li>150610 17:07:14 [Warning] Info table is not ready to be used. Table ‘mysql.slave_master_info’ cannot be opened.</li>
+<li>150610 17:07:14 [Warning] Error while checking replication metadata. Setting the requested repository in order to give users the chance to fix the problem and restart the server. If this is a live upgrade please consider using mysql_upgrade to fix the problem.</li>
+<li>150610 17:07:14 [Warning] Info table is not ready to be used. Table ‘mysql.slave_relay_log_info’ cannot be opened.</li>
+<li>150610 17:07:14 [Warning] Error while checking replication metadata. Setting the requested repository in order to give users the chance to fix the problem and restart the server. If this is a live upgrade please consider using mysql_upgrade to fix the problem.</li>
+<li>150610 17:07:15 [Note] Binlog end</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘partition’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_FOREIGN_COLS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_FOREIGN’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_FIELDS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_COLUMNS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_INDEXES’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_TABLESTATS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_TABLES’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_INDEX_TABLE’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_INDEX_CACHE’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_CONFIG’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_BEING_DELETED’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_DELETED’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_INSERTED’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_DEFAULT_STOPWORD’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_METRICS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_BUFFER_POOL_STATS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_BUFFER_PAGE_LRU’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_BUFFER_PAGE’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_CMPMEM_RESET’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_CMPMEM’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_CMP_RESET’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_CMP’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_LOCK_WAITS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_LOCKS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_TRX’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘InnoDB’</li>
+<li>150610 17:07:15  InnoDB: FTS optimize thread exiting.</li>
+<li>150610 17:07:15  InnoDB: Starting shutdown…</li>
+<li>150610 17:07:16 InnoDB: Shutdown completed; log sequence number 1602851</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘PERFORMANCE_SCHEMA’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘CSV’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘MRG_MYISAM’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘MEMORY’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘MyISAM’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘mysql_old_password’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘mysql_native_password’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘binlog’</li>
+<li>OK</li>
+<li>Filling help tables…</li>
+<li>150610 17:07:16 InnoDB: The InnoDB memory heap is disabled</li>
+<li>150610 17:07:16 InnoDB: Mutexes and rw_locks use InnoDB’s own implementation</li>
+<li>150610 17:07:16 InnoDB: Compressed tables use zlib 1.2.3</li>
+<li>150610 17:07:16 InnoDB: CPU does not support crc32 instructions</li>
+<li>150610 17:07:16 InnoDB: Initializing buffer pool, size = 128.0M</li>
+<li>150610 17:07:16 InnoDB: Completed initialization of buffer pool</li>
+<li>150610 17:07:16 InnoDB: highest supported file format is Barracuda.</li>
+<li>150610 17:07:17 InnoDB: 128 rollback segment(s) are active.</li>
+<li>150610 17:07:17 InnoDB: 1.2.4 started; log sequence number 1602851</li>
+<li>150610 17:07:17 [Note] Binlog end</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘partition’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_FOREIGN_COLS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_FOREIGN’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_FIELDS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_COLUMNS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_INDEXES’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_TABLESTATS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_TABLES’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_INDEX_TABLE’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_INDEX_CACHE’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_CONFIG’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_BEING_DELETED’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_DELETED’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_INSERTED’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_DEFAULT_STOPWORD’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_METRICS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_BUFFER_POOL_STATS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_BUFFER_PAGE_LRU’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_BUFFER_PAGE’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_CMPMEM_RESET’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_CMPMEM’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_CMP_RESET’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_CMP’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_LOCK_WAITS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_LOCKS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_TRX’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘InnoDB’</li>
+<li>150610 17:07:17  InnoDB: FTS optimize thread exiting.</li>
+<li>150610 17:07:17  InnoDB: Starting shutdown…</li>
+<li>150610 17:07:18 InnoDB: Shutdown completed; log sequence number 1602861</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘PERFORMANCE_SCHEMA’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘CSV’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘MRG_MYISAM’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘MEMORY’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘MyISAM’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘mysql_old_password’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘mysql_native_password’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘binlog’</li>
+<li><p>OK</p>
+</li>
+<li><p>To start mysqld at boot time you have to copy</p>
+</li>
+<li><p>support-files/mysql.server to the right place for your system</p>
+</li>
+<li><p>PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !</p>
+</li>
+<li><p>To do so, start the server, then issue the following commands:</p>
+</li>
+<li><p>./bin/mysqladmin -u root password ‘new-password’</p>
+</li>
+<li><p>./bin/mysqladmin -u root -h rh55 password ‘new-password’</p>
+</li>
+<li><p>Alternatively you can run:</p>
+</li>
+<li><p>./bin/mysql_secure_installation</p>
+</li>
+<li><p>which will also give you the option of removing the test</p>
+</li>
+<li>databases and anonymous user created by default.  This is</li>
+<li><p>strongly recommended for production servers.</p>
+</li>
+<li><p>See the manual for more instructions.</p>
+</li>
+<li><p>You can start the MySQL daemon with:</p>
+</li>
+<li><p>cd . ; ./bin/mysqld_safe &amp;</p>
+</li>
+<li><p>You can test the MySQL daemon with mysql-test-run.pl</p>
+</li>
+<li><p>cd ./mysql-test ; perl mysql-test-run.pl</p>
+</li>
+<li><p>Please report any problems with the ./bin/mysqlbug script!</p>
+</li>
+</ol>
+<p><strong>启动mysql server：</strong> <strong>[root@rh55 mysql]# bin/mysqld_safe &amp;</strong> [1] 16199 [root@rh55 mysql]# 150610 17:08:22 mysqld_safe Logging to ‘/usr/local/mysql/data/mysql/rh55.err’. 150610 17:08:22 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data/mysql <strong>验证启动成功：</strong> <strong>[root@rh55 mysql]# netstat -an |grep 3306</strong> tcp        0      0 :::3306                     :::*                        LISTEN</p>
+
+            
+            <p class="more">
+                <a href="/2015/06/11/2019030500115/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/11/2019030500115/" title="MySQL Study之--Mysql启动失败“mysql.host”">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/NOSQL/">NOSQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/10/2019030500057/">
+    		MongoDB常用命令
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-10T04:33:16.000Z">2015-06-10</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MongoDB/" title="MongoDB">MongoDB</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>首先我们先安装这个数据库，你可以使用windows或者linux，但推荐使用的是linux，我使用的是ubuntu12.04.在下方的网址中共可以下载，基本都是64位的系统。如果位linux系统也可以使用命令行安装，我就是使用sudo apt-get install mongodb。</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><span style="font-size:14px;"><a href="https://www.mongodb.org/downloads" target="_blank" rel="noopener">https://www.mongodb.org/downloads</a></span></li>
+</ol>
+<p>MongoDB 由 databases 组成,databases 由 collections 组成,collections 由documents(相当于行)组成,而 documents 有 fields(相当于列)组成。 help 最开始应该介绍的就是help函数，学习一个东西最好的文档就是官方文档，下面我会给出几个指令的执行过程。最基本的形式就是db.help()，也可以在中间加上数据库的名称如db.douban.help()。</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><blockquote>
+<p>db.help()</p>
+</blockquote>
+</li>
+<li>DB methods:</li>
+<li>db.addUser(username, password[, readOnly=false])</li>
+<li>db.auth(username, password)</li>
+<li>db.cloneDatabase(fromhost)</li>
+<li>db.commandHelp(name) returns the help for the command</li>
+<li>db.copyDatabase(fromdb, todb, fromhost)</li>
+<li>db.createCollection(name, { size : …, capped : …, max : … } )</li>
+<li>db.currentOp() displays the current operation in the db</li>
+<li>db.dropDatabase()</li>
+<li>db.eval(func, args) run code server-side</li>
+<li>db.getCollection(cname) same as db[‘cname’] or db.cname</li>
+<li>db.getCollectionNames()</li>
+<li>db.getLastError() - just returns the err msg string</li>
+<li>db.getLastErrorObj() - return full status object</li>
+<li>db.getMongo() get the server connection object</li>
+<li>db.getMongo().setSlaveOk() allow this connection to read from the nonmaster member of a replica pair</li>
+<li>db.getName()</li>
+<li>db.getPrevError()</li>
+<li>db.getProfilingLevel() - deprecated</li>
+<li>db.getProfilingStatus() - returns if profiling is on and slow threshold</li>
+<li>db.getReplicationInfo()</li>
+<li>db.getSiblingDB(name) get the db at the same server as this one</li>
+<li>db.isMaster() check replica primary status</li>
+<li>db.killOp(opid) kills the current operation in the db</li>
+<li>db.listCommands() lists all the db commands</li>
+<li>db.logout()</li>
+<li>db.printCollectionStats()</li>
+<li>db.printReplicationInfo()</li>
+<li>db.printSlaveReplicationInfo()</li>
+<li>db.printShardingStatus()</li>
+<li>db.removeUser(username)</li>
+<li>db.repairDatabase()</li>
+<li>db.resetError()</li>
+<li>db.runCommand(cmdObj) run a database command.  if cmdObj is a string, turns it into { cmdObj : 1 }</li>
+<li>db.serverStatus()</li>
+<li>db.setProfilingLevel(level,<slowms>) 0=off 1=slow 2=all</slowms></li>
+<li>db.shutdownServer()</li>
+<li>db.stats()</li>
+<li>db.version() current version of the server</li>
+<li>db.getMongo().setSlaveOk() allow queries on a replication slave server</li>
+<li>db.fsyncLock() flush data to disk and lock server for backups</li>
+<li>db.fsyncUnock() unlocks server following a db.fsyncLock()</li>
+</ol>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><blockquote>
+<p>db.douban.help()</p>
+</blockquote>
+</li>
+<li>DBCollection help</li>
+<li>db.douban.find().help() - show DBCursor help</li>
+<li>db.douban.count()</li>
+<li>db.douban.dataSize()</li>
+<li>db.douban.distinct( key ) - eg. db.douban.distinct( ‘x’ )</li>
+<li>db.douban.drop() drop the collection</li>
+<li>db.douban.dropIndex(name)</li>
+<li>db.douban.dropIndexes()</li>
+<li>db.douban.ensureIndex(keypattern[,options]) - options is an object with these possible fields: name, unique, dropDups</li>
+<li>db.douban.reIndex()</li>
+<li>db.douban.find([query],[fields]) - query is an optional query filter. fields is optional set of fields to return.</li>
+<li>e.g. db.douban.find( {x:77} , {name:1, x:1} )</li>
+<li>db.douban.find(…).count()</li>
+<li>db.douban.find(…).limit(n)</li>
+<li>db.douban.find(…).skip(n)</li>
+<li>db.douban.find(…).sort(…)</li>
+<li>db.douban.findOne([query])</li>
+<li>db.douban.findAndModify( { update : … , remove : bool [, query: {}, sort: {}, ‘new’: false] } )</li>
+<li>db.douban.getDB() get DB object associated with collection</li>
+<li>db.douban.getIndexes()</li>
+<li>db.douban.group( { key : …, initial: …, reduce : …[, cond: …] } )</li>
+<li>db.douban.mapReduce( mapFunction , reduceFunction , <optional params> )</optional></li>
+<li>db.douban.remove(query)</li>
+<li>db.douban.renameCollection( newName , <droptarget> ) renames the collection.</droptarget></li>
+<li>db.douban.runCommand( name , <options> ) runs a db command with the given name where the first param is the collection name</options></li>
+<li>db.douban.save(obj)</li>
+<li>db.douban.stats()</li>
+<li>db.douban.storageSize() - includes free space allocated to this collection</li>
+<li>db.douban.totalIndexSize() - size in bytes of all the indexes</li>
+<li>db.douban.totalSize() - storage allocated for all data and indexes</li>
+<li>db.douban.update(query, object[, upsert_bool, multi_bool])</li>
+<li>db.douban.validate( <full> ) - SLOW</full></li>
+<li>db.douban.getShardVersion() - only for use with sharding</li>
+<li>db.douban.getShardDistribution() - prints statistics about data distribution in the cluster</li>
+</ol>
+<p>use use deng可以用来创建 deng,不用担心 deng 不会创建,当创建第一个 collection 时,deng会自动创建。 insert         db.unicorns.insert({name: ‘demo’, sex: ‘m’, weight: 70})，插入一个数据 collection 为 unicorns，使 用 db.getCollectionNames() , 会 得 到 unicorns 和 system.indexes 。system.indexes 对每个 DB 都会有,用于记录 index。可以通过find函数查看是否插入成功。 find  db.unicorns.find()会看到 document。就相当于mysql中的select * from table; 查看集合中的所有内容。</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><span style="font-size:14px;">使用查询</span></li>
+<li><p><span style="font-size:14px;">db.unicorns.find({name: ‘Dunx’})</span></p>
+</li>
+<li><p>其他说明:</p>
+</li>
+<li>$lt, $lte, $gt, $gte and $ne 分别表示小于、小于等于、大于、大于等于、不等于</li>
+<li><p>db.unicorns.find({gender: {$ne: ‘f’}, weight: {$gte: 701}})</p>
+</li>
+<li><p>$exists 用于表示 field 是否存在</p>
+</li>
+<li><p>db.unicorns.find({vampires: {$exists: false}})</p>
+</li>
+<li><p>or 和 and</p>
+</li>
+<li>db.unicorns.find({gender: ‘f’, $or: [{loves: ‘apple’}, {loves: ‘orange’}, {weight: {$lt: 500}}]})</li>
+</ol>
+<p>db.unicorns.find(null, {name: 1}) 只返回 name 这个 field,具体如下所示:</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><blockquote>
+<p>db.unicorns.find(null, {name: 1})</p>
+</blockquote>
+</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cf7”), “name” : “Aurora” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cf6”), “name” : “Horny” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cf8”), “name” : “Unicrom” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cf9”), “name” : “Roooooodles” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cfa”), “name” : “Solnara” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cfb”), “name” : “Ayna” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cfc”), “name” : “Kenny” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cfd”), “name” : “Raleigh” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cfe”), “name” : “Leia” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cff”), “name” : “Pilot” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081d00”), “name” : “Nimue” }</li>
+<li>{ “_id” : ObjectId(“4da6f231a8d5cd3b72081d01”), “name” : “Dunx” }</li>
+<li><blockquote>
+<p>db.unicorns.find(null, {name: 1,_id:0})</p>
+</blockquote>
+</li>
+<li>{ “name” : “Aurora” }</li>
+<li>{ “name” : “Horny” }</li>
+<li>{ “name” : “Unicrom” }</li>
+<li>{ “name” : “Roooooodles” }</li>
+<li>{ “name” : “Solnara” }</li>
+<li>{ “name” : “Ayna” }</li>
+<li>{ “name” : “Kenny” }</li>
+<li>{ “name” : “Raleigh” }</li>
+<li>{ “name” : “Leia” }</li>
+<li>{ “name” : “Pilot” }</li>
+<li>{ “name” : “Nimue” }</li>
+<li>{ “name” : “Dunx” }</li>
+</ol>
+<p>sort</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li>db.unicorns.find().sort({weight: -1})</li>
+<li>db.unicorns.find().sort({name: 1, vampires: -1})</li>
+<li><p>#1 表示升序,-1 表示降序</p>
+</li>
+<li><p><pre name="code" class="cpp">db.unicorns.find().sort({weight: -1}).limit(2).skip(1)</pre></p>
+</li>
+<li>#得到第二个和第三个，limit 规定查询个数,skip 规定忽略几个。</li>
+</ol>
+<p>count</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li>db.unicorns.count({vampires: {$gt: 50}})</li>
+<li>#or</li>
+<li>db.unicorns.find({vampires: {$gt: 50}}).count()</li>
+</ol>
+<p>remove</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li>db.unicorns.remove()</li>
+<li>如下面所示。</li>
+<li><blockquote>
+<p>db.unicorns.remove()</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>db.unicorns.find()</p>
+</blockquote>
+</li>
+<li><blockquote>
+</blockquote>
+</li>
+</ol>
+<p>update</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><span style="font-size:14px;">db.unicorns.update({name: ‘jingdong’}, {weight: 590})</span></li>
+</ol>
+<p>注意:此语句执行后,先查询 name 是’jingdong’的所有数据,然后将 name是’jingdong’的整个 document 都替换为{weight: 590}。 即 db.unicorns.insert({name: ‘jingdong’, dob: new Date(1979, 7, 18, 18, 44),loves:[‘apple’], weight: 575, gender: ‘m’, vampires: 99});整个替换为{weight: 590}，最后只剩一个{weight: 590}。 执行$set，不会替换原有数据，因此正确的更新方式如下：</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><span style="font-size:14px;">db.unicorns.update({name: ‘jingdong’}, {$set: {weight: 590}})</span></li>
+</ol>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li>db.unicorns.update({name: ‘Pilot’}, {$inc: {<span style="font-size:14px;">weight: 500</span>}})</li>
+<li><p>$inc 增加或减少数字 如果原来为500之后会变为1000，因为500+500 = 1000</p>
+</li>
+<li><p>db.unicorns.update({name: ‘Aurora’}, {$push: {loves: ‘sugar’}})</p>
+</li>
+<li>$push 增加数组元素</li>
+<li>$pop 减少数组元素</li>
+</ol>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li>若存在则更新,否则添加</li>
+<li>db.hits.update({page: ‘unicorns’}, {$inc: {hits: 1}}, true);</li>
+<li>db.hits.find();</li>
+<li>使用第三个参数设置是否 true(upset)</li>
+<li>,默认是 false</li>
+</ol>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li>#批量更新</li>
+<li>db.unicorns.update({}, {$set: {vaccinated: true }});</li>
+<li>db.unicorns.find({vaccinated: true});</li>
+<li>不会将所有的数据的 vaccinated 都更新为 true</li>
+<li>若将所有的数据的 vaccinated 都更新为 true,则如下:</li>
+<li>db.unicorns.update({}, {$set: {vaccinated: true }}, false, true);</li>
+<li>db.unicorns.find({vaccinated: true});</li>
+</ol>
+<p>ensureIndex 创建索引的方式 db.unicorns.ensureIndex({name: 1}) 删除索引的方式 db.unicorns.dropIndex({name: 1}) 创建独立索引 db.unicorns.ensureIndex({name: 1}, {unique: true}) 创建联合索引 db.unicorns.dropIndex({name: 1, vampires: -1}) 使用 web 获得 mongoDB 的信息 使用 <a href="http://localhost:28017/" target="_blank" rel="noopener">http://localhost:28017/</a> 获得 MongoDB 的信息。 数据备份和恢复 使用 mongodump备份数据库 mongodump 使用 mongorestore恢复数据库 mongorestore</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/10/2019030500057/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/10/2019030500057/" title="MongoDB常用命令">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/SQL-Server/">SQL Server</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/10/2019030500166/">
+    		SqlServer 2012 FileTable 文件表
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-10T04:31:42.000Z">2015-06-10</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/sqlserver/" title="sqlserver">sqlserver</a> / 
+    
+        <a href="/tags/FileTable/" title="FileTable">FileTable</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>SQL Server 2012 提供一种特殊的“文件表”，也称为“FileTable”。 FileTable 是一种专用的用户表，它包含存储 FILESTREAM 数据的预定义架构以及文件和目录层次结构信息、文件属性。FileTable 功能为 SQL Server 中存储的文件数据提供对 Windows 文件命名空间的支持以及与 Windows 应用程序的兼容性支持。即可以在 SQL Server 中将文件和文档存储在称作 FileTable 的特别的表中，但是从 Windows 应用程序访问它们，就好像它们存储在文件系统中，而不必对客户端应用程序进行任何更改。 <img src="http://img.blog.csdn.net/20150609204720802?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2sxODU4MDA5NjE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> <strong>在实例级别启用 FILESTREAM：（参考 <a href="https://msdn.microsoft.com/zh-cn/library/cc645923(v=sql.110" target="_blank" rel="noopener">启用和配置 FILESTREAM </a>.aspx)）</strong> 右键SQLserver服务——属性——FILESTREAM ——勾选——重启服务 <img src="http://img.blog.csdn.net/20150609205409788?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2sxODU4MDA5NjE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> <strong>更改此 SQL Server 实例的 FILESTREAM 访问级别 ：（参考 <a href="https://msdn.microsoft.com/zh-cn/library/cc645956(v=sql.110" target="_blank" rel="noopener">filestream access level 服务器配置选项</a>.aspx)）</strong></p>
+<p><strong>[plain]</strong></p>
+<ol>
+<li>exec sp_configure N’filestream access level’ ,2</li>
+<li>reconfigure with override</li>
+</ol>
+<p>可能需要配置<a href="https://msdn.microsoft.com/zh-cn/library/dd283098%28v=sql.110%29.aspx?f=255&amp;MSPPError=-2147217396" target="_blank" rel="noopener">将防火墙配置为进行 FILESTREAM 访问</a>。 <strong>数据库级别创建 FILESTREAM 文件组：</strong> 数据库必须首先具有 FILESTREAM 文件组，然后您才能在该数据库中创建 FileTable。</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–  创建数据库时创建 FILESTREAM 文件组</li>
+<li>CREATE DATABASE FileStreamDB</li>
+<li>ON</li>
+<li>PRIMARY (</li>
+<li>NAME = FileStreamDB,</li>
+<li>FILENAME = ‘G:\database\FileStreamDB.mdf’,</li>
+<li>SIZE = 5MB,</li>
+<li>MAXSIZE = 25MB,</li>
+<li>FILEGROWTH = 5MB</li>
+<li>),</li>
+<li>FILEGROUP FileStreamGroup CONTAINS FILESTREAM(</li>
+<li>NAME = FileStreamFile,</li>
+<li>FILENAME = ‘G:\database\FileStreamFile’,</li>
+<li>MAXSIZE = 50 MB</li>
+<li>)</li>
+<li>LOG ON (</li>
+<li>NAME = FileStreamDB_log,</li>
+<li>FILENAME = ‘G:\database\FileStreamDB_log.ldf’</li>
+<li>)</li>
+<li>WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N’FileStreamPath’ )</li>
+<li>GO</li>
+</ol>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–  或者在当前数据库中添加 FILESTREAM 文件组</li>
+<li>ALTER DATABASE [AdventureWorks2012]</li>
+<li><p>ADD FILEGROUP FileStreamGroup CONTAINS FILESTREAM;</p>
+</li>
+<li><p>ALTER DATABASE [AdventureWorks2012]</p>
+</li>
+<li>ADD FILE</li>
+<li>(</li>
+<li>NAME = FileStreamFile,</li>
+<li>FILENAME = ‘G:\database\FileStreamFile’,</li>
+<li>MAXSIZE = 50 MB</li>
+<li>)</li>
+<li>TO FILEGROUP FileStreamGroup</li>
+<li>GO</li>
+</ol>
+<p>创建文件时 filename 只指定目录，并且目录 FileStreamFile 在文件系统不存在，创建后会自动生成该目录文件夹 <img src="http://img.blog.csdn.net/20150609210835377?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2sxODU4MDA5NjE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> <strong>在数据库级别上指定 非事务性访问级别 和 FileTable目录(数据库须独占):</strong></p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–  在数据库级别上指定 非事务性访问级别 和 FileTable目录(数据库须独占)</li>
+<li>ALTER DATABASE [AdventureWorks2012]</li>
+<li><p>SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N’FileStreamPath’ )</p>
+</li>
+<li><p>–  启用后即可查看到其状态信息</p>
+</li>
+<li>SELECT DB_NAME(database_id) [database],non_transacted_access, non_transacted_access_desc</li>
+<li>FROM sys.database_filestream_options</li>
+<li><p>WHERE non_transacted_access_desc &lt;&gt; ‘OFF’</p>
+</li>
+<li><p>SELECT DB_NAME(database_id) [database],directory_name</p>
+</li>
+<li>FROM sys.database_filestream_options</li>
+<li>WHERE directory_name IS NOT NULL</li>
+</ol>
+<p><img src="http://img.blog.csdn.net/20150609211853856?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2sxODU4MDA5NjE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> <strong>将新表创建为 FileTable :（参考 <a href="https://msdn.microsoft.com/zh-cn/library/ms174979%28v=sql.110%29.aspx?f=255&amp;MSPPError=-2147217396" target="_blank" rel="noopener">CREATE TABLE (Transact-SQL) </a>）</strong></p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>USE [AdventureWorks2012]</li>
+<li>GO</li>
+<li>CREATE TABLE [DocumentStore]</li>
+<li>AS FileTable</li>
+<li>WITH (</li>
+<li>–文件目录,不区分大小写,不指定则为filetable名称[DocumentStore]</li>
+<li>FileTable_Directory = N’FileStreamPath’,</li>
+<li>FileTable_Collate_Filename = database_default   –排序规则</li>
+<li>);</li>
+<li><p>GO</p>
+</li>
+<li><p>–  更改目录</p>
+</li>
+<li>ALTER TABLE [DocumentStore]</li>
+<li>SET ( FILETABLE_DIRECTORY = N’FileStreamPath’ );</li>
+<li>GO</li>
+</ol>
+<p>每个目录创建都会在文件系统中生成一个文件夹： <img src="http://img.blog.csdn.net/20150609213142822?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2sxODU4MDA5NjE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> <strong>相关查询:（<a href="https://msdn.microsoft.com/zh-cn/library/gg492084(v=sql.110" target="_blank" rel="noopener">FileTable 架构</a>.aspx)）</strong></p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–  查看 FileTable 信息</li>
+<li>SELECT * FROM sys.filetables;</li>
+<li><p>SELECT * FROM sys.tables WHERE is_filetable = 1;</p>
+</li>
+<li><p>–  FileTable 的相关对象</p>
+</li>
+<li>SELECT parent_object_id,OBJECT_NAME(parent_object_id) AS ‘FileTable’</li>
+<li>,object_id,OBJECT_NAME(object_id) AS ‘System-defined Object’</li>
+<li>FROM sys.filetable_system_defined_objects</li>
+<li>ORDER BY FileTable, ‘System-defined Object’;</li>
+</ol>
+<p><img src="http://img.blog.csdn.net/20150609213607570?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2sxODU4MDA5NjE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> <strong>至此，已经配置完成！~</strong> 现在查看文件表，没有记录。可以查看该表的 UNC 路径，在系统文件中打开该路径。</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–  查看 FileTable</li>
+<li><p>SELECT * FROM [dbo].[DocumentStore]</p>
+</li>
+<li><p>–  获取特定 FileTable 或当前数据库的根级 UNC 路径。</p>
+</li>
+<li>SELECT FileTableRootPath();</li>
+<li>SELECT FileTableRootPath(N’DocumentStore’);</li>
+<li>SELECT FileTableRootPath(N’dbo.DocumentStore’);</li>
+</ol>
+<p>在该路径中，可以直接将系统其它文件拷贝进去： <img src="http://img.blog.csdn.net/20150609214713551?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2sxODU4MDA5NjE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 再查看 FileTable ，数据已经自动记录</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–  查看 FileTable</li>
+<li>SELECT * FROM [dbo].[DocumentStore]</li>
+</ol>
+<p><img src="http://img.blog.csdn.net/20150609215045243?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2sxODU4MDA5NjE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–  也可以用GetFileNamespacePath查看 FileTable 中文件或目录的 UNC 路径。</li>
+<li>SELECT</li>
+<li>file_stream.GetFileNamespacePath()</li>
+<li>,file_stream.GetFileNamespacePath(1, 0)</li>
+<li><p>FROM [dbo].[DocumentStore]</p>
+<p>删除表 FileTable 中的记录，文件也会被删除：</p>
+</li>
+</ol>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–  删除表 FileTable 中的记录，文件也会被删除</li>
+<li><p>DELETE FROM [dbo].[DocumentStore] WHERE stream_id = ‘BA483ECA-AE0E-E511-8367-005056C00008’</p>
+</li>
+<li><p>SELECT * FROM [dbo].[DocumentStore]</p>
+</li>
+</ol>
+<p><img src="http://img.blog.csdn.net/20150609215447418?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQva2sxODU4MDA5NjE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> <strong>若要获取执行某些管理任务所需的独占访问权限，可能必须暂时禁用非事务性访问权限。</strong> 禁用完全非事务性访问权限：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>ALTER DATABASE [AdventureWorks2012]</li>
+<li>SET FILESTREAM ( NON_TRANSACTED_ACCESS = OFF );</li>
+<li>GO</li>
+<li>–  关闭后,路径无法打开</li>
+<li>–  \\Kk-pc\mssqlserver\FileStreamPath\FileStreamPath</li>
+<li><p>–  此时文件表 [DocumentStore] 仍可正常操作</p>
+</li>
+<li><p>ALTER DATABASE [AdventureWorks2012]</p>
+</li>
+<li>SET FILESTREAM ( NON_TRANSACTED_ACCESS = READ_ONLY );</li>
+<li>GO</li>
+<li>–  只读状态,路径可拷贝文件出来,但无法拷贝文件到该目录</li>
+<li>–  \\Kk-pc\mssqlserver\FileStreamPath\FileStreamPath</li>
+<li>–  此时文件表 [DocumentStore] 仍可正常操作</li>
+</ol>
+<p>重新启用完全非事务性访问权限：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–  重新启用完全非事务性访问权限</li>
+<li>ALTER DATABASE [AdventureWorks2012]</li>
+<li>SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );</li>
+<li><p>GO</p>
+<p><strong>禁用 FileTable 命名空间将会禁用所有系统定义的约束并触发使用 FileTable 创建的约束。</strong></p>
+</li>
+</ol>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–  禁用 FileTable 命名空间</li>
+<li>–  (禁用后路径 \\Kk-pc\mssqlserver\FileStreamPath\FileStreamPath 不可访问)</li>
+<li>ALTER TABLE [DocumentStore] DISABLE FILETABLE_NAMESPACE;</li>
+<li>GO</li>
+</ol>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>–  重新启用 FileTable 命名空间</li>
+<li>ALTER TABLE [DocumentStore] ENABLE FILETABLE_NAMESPACE;</li>
+<li>GO</li>
+</ol>
+<p>更多注意的事情还需要到参考官方文档：<a href="https://msdn.microsoft.com/zh-cn/library/gg492086%28v=sql.110%29.aspx?f=255&amp;MSPPError=-2147217396" target="_blank" rel="noopener">FileTable 与其他 SQL Server 功能的兼容性</a> 更多参考：<a href="https://msdn.microsoft.com/zh-cn/library/ff929144(v=sql.110" target="_blank" rel="noopener">FileTable (SQL Server)</a>.aspx)</p>
+
+            
+            <p class="more">
+                <a href="/2015/06/10/2019030500166/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/10/2019030500166/" title="SqlServer 2012 FileTable 文件表">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/10/2019030500132/">
+    		oracle复制列值
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-10T04:28:51.000Z">2015-06-10</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>需求描述：在测试环境中已存在的表中添加一个字段，并将表中一部分数据的这一列进行了手工添加数据，现在希望能在正式环境中添加这个字段后，并把将测试环境已存在的值复制到正式环境。 由于测试环境和正式环境的表结构一样，但是没有在同一个库，所以解决办法是： 1、在测试环境新建一个Database links 2、通过如下语句进行复制：</p>
+<pre><code>UPDATE ext_organinfo eop
+SET    eop.thumbnailmap = (SELECT eo.thumbnailmap
+                           FROM   ext_organinfo@puam eo
+                           WHERE  eo.organ_id = eop.organ_id)
+WHERE  eop.organ_id IN (SELECT eo.organ_id
+                        FROM   ext_organinfo@puam eo
+                        WHERE  eo.thumbnailmap IS NOT NULL )
+</code></pre><p>新建Database Links过程如下： 1、在plsql左侧栏中找到Database links 右键 new ，Database links的创建截图如下： <img src="http://img.blog.csdn.net/20150610084728666" alt="这里写图片描述"></p>
+
+            
+            <p class="more">
+                <a href="/2015/06/10/2019030500132/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/10/2019030500132/" title="oracle复制列值">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/NOSQL/">NOSQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/09/2019030500036/">
+    		方法说---mac下安装homebrew与mongodb
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-09T06:03:41.000Z">2015-06-09</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/homebrew/" title="homebrew">homebrew</a> / 
+    
+        <a href="/tags/mac/" title="mac">mac</a> / 
+    
+        <a href="/tags/MongoDB/" title="MongoDB">MongoDB</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>由于mac是类unix系统，unix下的神器基本都可以使用。 在mac中 homebrew 就类似于linux的 apt-get install  或 yum 等工具 ，一行命令完成你所需要的工具安装。 就两个字 简单！ 所以 尽管 打开你的 mac终端吧 然后去homebrew的官网 与 mongodb的官网粘贴几条命令搞定吧！</p>
+<p><img src="http://img.blog.csdn.net/20150609133327030?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZmFudjIwMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt></p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/09/2019030500036/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/09/2019030500036/" title="方法说---mac下安装homebrew与mongodb">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/9.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/09/2019030500017/">
+    		存在外键关联的主表truncate如何做
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-09T04:32:58.000Z">2015-06-09</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/truncate/" title="truncate">truncate</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>主外键是数据库提供的一种两表之间强制关联的方法，也可以从应用层实现。</p>
+<p>优点</p>
+<p>缺点</p>
+<p>数据库实现的主外键</p>
+<p>由数据库层机制保证，无需应用额外实现</p>
+<p>强关联，不易扩展变更</p>
+<p>应用实现的主外键</p>
+<p>易扩展变更</p>
+<p>完全由应用控制，要求较高</p>
+<p>我认为需要根据实际情况进行取舍，例如表不复杂，可以由应用实现，若表之间关联较多且复杂，那么交由数据库处理，至少保证不会错。 存在主外键关联的主表，由于存在外键关联关系，因此有些操作就会禁止，例如truncate。 实验 1. 创建测试表</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>SQL&gt; create table tbl_a(id number, remark varchar2(1));</li>
+<li><p>Table created.</p>
+</li>
+<li><p>SQL&gt; create table tbl_b(id number, a_id number, remark varchar2(1));</p>
+</li>
+<li><p>Table created.</p>
+</li>
+<li><p>SQL&gt; alter table tbl_a add constraint pk_tbl_a primary key(id);</p>
+</li>
+<li><p>Table altered.</p>
+</li>
+<li><p>SQL&gt; alter table tbl_b add constraint pk_tbl_b primary key(id);</p>
+</li>
+<li><p>Table altered.</p>
+</li>
+<li><p>SQL&gt; alter table tbl_b add constraint fk_tbl_b_a foreign key(a_id) references tbl_a(id);</p>
+</li>
+<li>Table altered.</li>
+</ol>
+<p>tbl_a是主表，tbl_b是子表，关联tbl_a。 <strong>2. 现在主表和子表没有任何数据，此时执行truncate主表</strong></p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><span style="font-size:14px;">SQL&gt; truncate table tbl_a;</span></li>
+<li>Table truncated.</li>
+</ol>
+<p>可以执行。 3. 向主表插入一条记录，再次执行truncate</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>SQL&gt; insert into tbl_a values(1, ‘a’);</li>
+<li><p>1 row created.</p>
+</li>
+<li><p>SQL&gt; commit;</p>
+</li>
+<li><p>Commit complete.</p>
+</li>
+<li><p>SQL&gt; truncate table tbl_a;</p>
+</li>
+<li>truncate table tbl_a</li>
+<li>*</li>
+<li>ERROR at line 1:</li>
+<li>ORA-02266: unique/primary keys in table referenced by enabled foreign keys</li>
+</ol>
+<p>此时提示了ORA-02266：唯一/主键被启用的外键引用 看看ORA-02266的解释： 02266, 00000, “unique/primary keys in table referenced by enabled foreign keys” // *Cause: An attempt was made to truncate a table with unique or //         primary keys referenced by foreign keys enabled in another table. //         Other operations not allowed are dropping/truncating a partition of a //         partitioned table or an ALTER TABLE EXCHANGE PARTITION. // *Action: Before performing the above operations the table, disable the //          foreign key constraints in other tables. You can see what //          constraints are referencing a table by issuing the following //          command: //          SELECT * FROM USER_CONSTRAINTS WHERE TABLE_NAME = “tabnam”; 比较清楚地说明了问题，以及解决方法：可以在执行前，先禁用外键约束，执行truncate后再恢复外键约束。 4. 禁用外键约束，删除后执行恢复操作 看到外键约束名称：FK_TBL_B_A：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>SQL&gt; select constraint_name, constraint_type, status from user_constraints where table_name=’TBL_B’;</p>
+</li>
+<li><p>CONSTRAINT_NAME                C STATUS</p>
+</li>
+<li><hr>
+</li>
+<li>PK_TBL_B                       P ENABLED</li>
+<li>FK_TBL_B_A                     R ENABLED</li>
+</ol>
+<p>禁止外键约束：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>SQL&gt; alter table tbl_b disable constraint FK_TBL_B_A;</p>
+</li>
+<li><p>Table altered.</p>
+</li>
+<li><p>SQL&gt; select constraint_name, constraint_type, status from user_constraints where table_name=’TBL_B’;</p>
+</li>
+<li><p>CONSTRAINT_NAME                C STATUS</p>
+</li>
+<li><hr>
+</li>
+<li>PK_TBL_B                       P ENABLED</li>
+<li>FK_TBL_B_A                     R DISABLED</li>
+</ol>
+<p>STATUS状态变为DISABLED了。 truncate表：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>SQL&gt; truncate table tbl_a;</p>
+</li>
+<li><p>Table truncated.</p>
+</li>
+</ol>
+<p>恢复约束：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>SQL&gt; alter table tbl_b enable constraint FK_TBL_B_A;</p>
+</li>
+<li><p>Table altered.</p>
+</li>
+<li><p>SQL&gt; select constraint_name, constraint_type, status from user_constraints where table_name=’TBL_B’;</p>
+</li>
+<li><p>CONSTRAINT_NAME                C STATUS</p>
+</li>
+<li><hr>
+</li>
+<li>PK_TBL_B                       P ENABLED</li>
+<li><p>FK_TBL_B_A                     R ENABLED</p>
+<p>总结： 1. 主外键是数据库提供的强约束，可以帮助我们控制主子表之间的关系，但同时还是一把双刃剑，当然，我们认为既然定义了主外键，就是需要这种强制关系，但有时可能就会有一些变更，因此，如何取舍，需要根据实际情况来决策。 2. 主外键关联中的主表，如果有数据，则不能直接用truncate方式删除，因为会认为有外键和其关联，不能直接截断主表，若需要做，可以先禁止外键约束，主表变成一个独立的表，这样就可以执行truncate了。</p>
+</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/06/09/2019030500017/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/09/2019030500017/" title="存在外键关联的主表truncate如何做">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/9.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/08/2019030500028/">
+    		数据库中为什么需要Implict Commit（隐式提交事务）
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-08T08:55:11.000Z">2015-06-08</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Commit/" title="Commit">Commit</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>先看一段SQL，最后一条SQL的输出你认为是什么？</p>
+<ol>
+<li>SET AUTOCOMMIT = 1;</li>
+<li>BEGIN;</li>
+<li>INSERT INTO t1 VALUES (1);</li>
+<li>CREATE TABLE t2 (pk int primary key);</li>
+<li>INSERT INTO t2 VALUES (2);</li>
+<li>ROLLBACK;</li>
+<li>SHOW TABLES;</li>
+</ol>
+<p>答案是：t1, t2都存在！</p>
+<ol>
+<li>mysql&gt; show tables;</li>
+<li>+—————-+</li>
+<li>| Tables_in_test |</li>
+<li>+—————-+</li>
+<li>| t1             |</li>
+<li>| t2             |</li>
+<li>+—————-+</li>
+<li>2 rows in set (0.00 sec)</li>
+</ol>
+<p>更奇怪的是：t1中的1也插入成功了！</p>
+<ol>
+<li>mysql&gt; select * from t1;</li>
+<li>+—-+</li>
+<li>| pk |</li>
+<li>+—-+</li>
+<li>|  1 |</li>
+<li>+—-+</li>
+<li>1 row in set (0.00 sec)</li>
+</ol>
+<p>为什么ROLLBACK没有生效呢？答案是：<strong>Implict Commit</strong> 执行CREATE TABLE语句前，之前的事务被隐式提交。因为AUTOCOMMIT=1，所以提交后也不会自动新创建任何事务，INSERT语句执行后立即提交，ROLLBACK不会作用在任何事务上，所以得到了我们最后看到的结果。稍微改一下，让AUTOCOMMIT=0，会怎样呢？</p>
+<ol>
+<li>SET AUTOCOMMIT = 0;</li>
+<li>BEGIN;</li>
+<li>INSERT INTO t1 VALUES (1);</li>
+<li>CREATE TABLE t2 (pk int primary key);</li>
+<li>INSERT INTO t2 VALUES (2);</li>
+<li>ROLLBACK;</li>
+<li>SHOW TABLES;</li>
+</ol>
+<p>答案是：t1, t2都存在！插入到t1中的1被提交（插入成功）但插入到t2中得2被回滚（没有插入成功）。之所以t1中的1被提交，是因为CREATE TABLE导致Implict<strong>COMMIT（注意，是COMMIT，不是ROLLBACK哦！)，执行INSERT的时候，会自动开启一个新事务（AUTOCOMMIT=0的语义要求的行为）。所以t2中的2被ROLLBACK回滚。</strong> <strong>为什么部分操作会导致Implict Commit？为什么这样设计？ 为了保证直观上的原子性。假设不做Implict Commit，看看上面的语句会怎样：用户的心理预期是回滚t1的INSERT操作，以及t2的CREATE操作，INSERT操作。如果我们有能力做到这样，那的确是很完美的。但实际上我们很难做到，特别是在分布式系统中更难！因为CREATE TABLE操作背后涉及到了大量的操作，不仅仅包括对核心表的操作，还包括大量内存数据结构的更新（如Schema），以及存储系统的变更（如创建相应的数据块），工程上很难把这些操作做成原子的。</strong> <strong>那么，应该如何做呢？比较折中的方式就是跟用户做一个约定：CREATE TABLE操作总默认COMMIT它之前的事务，这就是implict commit。</strong> 从MySQL文档看，他们做这一块的时候遇到了很多问题，至少在这里踩过两个坑。并且，随着版本的进化，他们还不断的让更多语句能引发implict commit。到底哪些语句会引发implict commit，请参考MySQL文档： <a href="http://dev.mysql.com/doc/refman/5.1/en/implicit-commit.html" target="_blank" rel="noopener">http://dev.mysql.com/doc/refman/5.1/en/implicit-commit.html</a></p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/08/2019030500028/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/08/2019030500028/" title="数据库中为什么需要Implict Commit（隐式提交事务）">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/page/14/">前一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/16/">后一页</a>
+    </nav>
+    
+
+
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

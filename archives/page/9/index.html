@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>文章归档 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/archives/page/9/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/archives/page/9/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/archives/page/9/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/archives/page/9/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章归档 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                文章归档
+                <!-- 文章归档，可以根据日期分类 -->
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/10/15/2019030500144/">
+    		Oracle MySql SqlServer分页查询
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-10-15T15:14:25.000Z">2015-10-15</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/sqlserver/" title="sqlserver">sqlserver</a> / 
+    
+        <a href="/tags/分页查询/" title="分页查询">分页查询</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>SQL Server</strong> 从数据库表中的第M条记录开始取N条记录，利用Top关键字：注意如果Select语句中既有top，又有order by，则是从排序好的结果集中选择：</p>
+<ol>
+<li>SELECT *</li>
+<li>FROM  ( SELECT Top N *</li>
+<li>FROM    (SELECT Top (M + N - 1) * FROM 表名称 Order by 主键 desc) t1 ) t2</li>
+<li><p>Order by 主键 asc</p>
+<p>例如从表Sys_option（主键为sys_id)中从10条记录还是检索20条记录，语句如下：</p>
+</li>
+<li><p>SELECT *</p>
+</li>
+<li>FROM ( SELECT TOP 20 *</li>
+<li>FROM (SELECT TOP 29 * FROM Sys_option order by sys_id desc) t1) t2</li>
+<li><p>Order by sys_id asc</p>
+<p><strong> Oralce数据库</strong> 从数据库表中第M条记录开始检索N条记录</p>
+</li>
+<li><p>SELECT *</p>
+</li>
+<li>FROM (SELECT ROWNUM r,t1.* From 表名称 t1 where rownum &lt; M + N) t2</li>
+<li>where t2.r &gt;= M</li>
+</ol>
+<p>例如从表Sys_option（主键为sys_id)中从10条记录还是检索20条记录，语句如下：</p>
+<ol>
+<li>SELECT *</li>
+<li>FROM (SELECT ROWNUM R,t1.* From Sys_option where rownum &lt; 30 ) t2</li>
+<li>Where t2.R &gt;= 10</li>
+</ol>
+<p><strong>My sql数据库</strong> My sql数据库最简单，是利用mysql的LIMIT函数,LIMIT [offset,] rows从数据库表中M条记录开始检索N条记录的语句为：</p>
+<ol>
+<li><p>SELECT * FROM 表名称 LIMIT M,N</p>
+<p>例如从表Sys_option（主键为sys_id)中从10条记录还是检索20条记录，语句如下：</p>
+</li>
+<li><p>select * from sys_option limit 10,20</p>
+</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/10/15/2019030500144/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/10/15/2019030500144/" title="Oracle MySql SqlServer分页查询">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/10/15/2019030500140/">
+    		Oracle联合索引
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-10-15T15:10:42.000Z">2015-10-15</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/sql优化/" title="sql优化">sql优化</a> / 
+    
+        <a href="/tags/联合索引/" title="联合索引">联合索引</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>我现在用的是oracle 1.一个表建立多少个索引比较合适？比如说不大于5个 这个没有定论，楼主要综合查询效率和dml效率自己确定，索引可以加快select的查询速度，但也会降低delete，insert和update等dml语句的执行速度。 2.联合索引比单索引的效率高么？ 如果联合索引中的多个字段都在where谓词中出现了，则联合索引效率比单列索引高，因为通过多个条件可以从索引中过滤得到更少的记录条数，也就减少了需要回表扫描的次数，甚至可以直接在联合索引中得到所查的所有结果，则不再需要回表。 但是由于多列的联合索引肯定要比单列索引大，也就是说同样的索引需要存储的物理块要多于单列索引，所以，如果查询中只出现了联合索引中的某一列，则其效率不如单列索引。 3.compress 这个压缩 ，能起到什么作用？ 没研究过 4.上网上查资料时，都说oracle使用联合索引需要前导列，这个和版本有关系吗？ 前导列跟版本没有关系。 前导列的概念是这样的，如果建立了f1，f2上的联合索引，则在查询时必须要用到f1，也就是所谓的前导列，该索引才会有效，因为索引是按照前导列排序的，如果where条件谓词中没有前导列，则需要执行索引扫描才能得到想要的结果，这种情况下其效率往往较差。 5.如果不需要前导列的话，reverse 这个反转 又起到什么作用呢？ 鉴于前面描述的前导列的概念，我们考虑如下表存储table(f1,f2); aa  1 ab  2 ac  3 ad  4 ae  5 如果我们对表table建立f1上的普通索引，由于按照f1进行排序，所以针对where f1=ad则需要遍历所有的a开始的索引，而如果对f1建立reverse索引，则由于da只有一个，则可以更快的得到需要的结果。</p>
+
+            
+            <p class="more">
+                <a href="/2015/10/15/2019030500140/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/10/15/2019030500140/" title="Oracle联合索引">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/10/12/2019030500112/">
+    		MySQL EXPLAIN SQL 输出信息描述
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-10-12T04:41:26.000Z">2015-10-12</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/EXPLAIN/" title="EXPLAIN">EXPLAIN</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>EXPLAIN语句能够被用于获取一些关于SQL执行时的相关信息，比如表的连接顺序，对表的方式方式等等。通过对该相关信息进行进一步的分析，我们    可以通过对表添加适当的索引，以及优化连接顺序，使用提示等等手段来达到使SQL高效运行的目的。本文描述了EXPLAIN的用法并给出了相关示例。 一、EXPLAIN概述 EXPLAIN 语句主要是用于解析SQL执行计划，通过分析执行计划采取适当的优化方式提高SQL运行的效率。EXPLAIN 语句输出通常包括id列，select_type，table，type，possible_keys，key等等列信息MySQL 5.6.3后支持SELECT, DELETE, INSERT,REPLACE, and UPDATE. EXPLAIN EXTENDED支持一些额外的执行计划相关的信息EXPLAIN PARTITIONS支持基于分区表查询执行计划的相关信息 二、EXPLAIN输出列描述 – 下面通过示例来展示EXPLAIN输出列(root@localhost) [sakila]&gt; explain select sum(amount) from customer a,    -&gt; payment b where 1=1 and a.customer_id=b.customer_id and    -&gt; <a href="mailto:email=&#39;JANE.BENNETT@sakilacustomer.org" target="_blank" rel="noopener">email=&#39;JANE.BENNETT@sakilacustomer.org</a>‘\G<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> 1. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>           id: 1  select_type: SIMPLE        table: a         type: ALLpossible_keys: PRIMARY          key: NULL      key_len: NULL          ref: NULL         rows: 590        Extra: Using where<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> 2. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>           id: 1  select_type: SIMPLE        table: b         type: refpossible_keys: idx_fk_customer_id          key: idx_fk_customer_id      key_len: 2          ref: sakila.a.customer_id         rows: 14        Extra: 1、各列表示的意义 Column        Meaning——        ————————————id            The SELECT identifier                       select_type   The SELECT typetable         The table for the output rowpartitions    The matching partitionstype          The join typepossible_keys The possible indexes to choosekey           index actually chosenkey_len       The length of the chosen keyref           The columns compared to the indexrows          Estimate of rows to be examinedfiltered      Percentage of rows filtered by table conditionExtra         Additional information 2、各列上的具体描述 id：    包含一组数字，表示查询中执行select子句或操作表的顺序    id相同，执行顺序由上至下，否则id值越大(通常子查询会产生)优先级越高，越先被执行    id如果相同，可以认为是一组，从上往下顺序执行；在所有组中，id值越大，优先级越高，越先执行 select_type:      表示查询中每个select子句的类型（简单 OR复杂）    select_type              Value Meaning    ————-            ———————————————–    SIMPLE                   Simple SELECT (not using UNION or subqueries)    PRIMARY                  Outermost SELECT 最外层select    UNION                    Second or later SELECT statement in a UNION    DEPENDENT UNION          Second or later SELECT statement in a UNION, dependent on outer query    UNION                    RESULT Result of a UNION.    SUBQUERY                 First SELECT in subquery    DEPENDENT SUBQUERY       First SELECT in subquery, dependent on outer query(通常为相关子查询)    DERIVED                  Derived table SELECT (subquery in FROM clause)    MATERIALIZED             Materialized subquery    UNCACHEABLE SUBQUERY     A subquery for which the result cannot be cached and must be reevaluated                             for each row of the outer query    UNCACHEABLE UNION        The second or later select in a UNION that belongs to an uncacheable                             subquery (see UNCACHEABLE SUBQUERY)    table：      从哪个表(表名)上输出行记录，也可能是下列值:     • &lt;unionM,N&gt;: The row refers to the union of the rows with id values of M and N.    • <derivedn>: The row refers to the derived table result for the row with an id value of N.                   A derived table may result, for example, from a subquery in the FROM clause.    • <subqueryn>: The row refers to the result of a materialized subquery for the row with an id value of N.  partitions:     查询匹配的记录来自哪一个分区，当使用EXPLAIN，分区PARTITIONS关键字被指定时 type：    连接类型    system          表只有一行    const           表最多只有一行匹配，通用用于主键或者唯一索引比较时    eq_ref          每次与之前的表合并行都只在该表读取一行，这是除了system，const之外最好的一种，                    特点是使用=，而且索引的所有部分都参与join且索引是主键或非空唯一键的索引    ref             如果每次只匹配少数行，那就是比较好的一种，使用=或&lt;=&gt;，可以是左覆盖索引或非主键或非唯一键    fulltext        全文搜索    ref_or_null     与ref类似，但包括NULL    index_merge     表示出现了索引合并优化(包括交集，并集以及交集之间的并集)，但不包括跨表和全文索引。                    这个比较复杂，目前的理解是合并单表的范围索引扫描（如果成本估算比普通的range要更优的话）    unique_subquery 在in子查询中，就是value in (select…)把形如“select unique_key_column”的子查询替换。                    PS：所以不一定in子句中使用子查询就是低效的！    index_subquery  同上，但把形如”select non_unique_key_column“的子查询替换    range           常数值的范围    index           a.当查询是索引覆盖的，即所有数据均可从索引树获取的时候（Extra中有Using Index）；                    b.以索引顺序从索引中查找数据行的全表扫描（无 Using Index）；                    c.如果Extra中Using Index与Using Where同时出现的话，则是利用索引查找键值的意思；                    d.如单独出现，则是用读索引来代替读行，但不用于查找    all             全表扫描 possible_keys：    指出MySQL能使用哪个索引在表中找到行。    查询涉及到的字段上若存在索引则该索引将被列出，但不一定被查询使用。    如果改列为NULL，说明该查询不会使用到当前表上的相关索引，考虑是否有必要添加索引key    显示MySQL在查询中实际使用的索引，若没有使用索引，显示为NULL    也可能存在key不等于possible_keys的情形，即possible_keys不适合提取所需的行    而查询所选择的列在使用其他索引时更高效    TIPS：查询中若使用了覆盖索引，则该索引仅出现在key列表中 key_len    表示索引中使用的字节数，可通过该列计算查询中使用的索引的长度 ref    表示上述表的连接匹配条件，即哪些列或常量被用于查找索引列上的值rows    表示MySQL根据表统计信息及索引选用情况，估算的找到所需的记录所需要读取的行数    对于InnoDB，该值为预估，不一定精确 Extra    包含不适合在其他列中显示但十分重要的额外信息 三、使用EXPLAIN EXTENDED 示例 (root@localhost) [sakila]&gt; explain extended select <em> from city where country_id in    -&gt; ( select country_id from country where country=’China’) and 1=1 \G<strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong></em> 1. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>           id: 1  select_type: SIMPLE        table: country         type: ALLpossible_keys: PRIMARY          key: NULL      key_len: NULL          ref: NULL         rows: 109     filtered: 100.00        Extra: Using where<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> 2. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>           id: 1  select_type: SIMPLE        table: city         type: refpossible_keys: idx_fk_country_id          key: idx_fk_country_id      key_len: 2          ref: sakila.country.country_id         rows: 1     filtered: 100.00        Extra: NULL2 rows in set, 1 warning (0.00 sec) (root@localhost) [sakila]&gt; show warnings\G<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> 1. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>  Level: Note   Code: 1003Message: /<em> select#1 </em>/ select `city`.`city_id` AS `city_id`,`city`.`city` AS `city`,`city`.`country_id` AS `country_id`,`city`.`last_update` AS `last_update` from `sakila`.`country` join `sakila`.`city` where ((`city`.`country_id` = `country`.`country_id`) and (`country`.`country` = ‘China’))1 row in set (0.00 sec) – 从上面的extended使用可以看出，查询中多出了filtered列– 其次原来的SQL语句真正在执行的时候被改写，即原来的1=1的条件被去掉– 对于复杂的SQL语句我们可以通过该方式获得一个比较清晰的真正被执行的SQL语句 四、EXPLAIN PARTITIONS示例 (root@localhost) [sakila]&gt; CREATE TABLE `actor_part` (    -&gt;   `actor_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,    -&gt;   `first_name` varchar(45) NOT NULL,    -&gt;   `last_name` varchar(45) NOT NULL,    -&gt;   `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,    -&gt;   PRIMARY KEY (`actor_id`),    -&gt;   KEY `idx_actor_last_name` (`last_name`)    -&gt; ) partition by hash(actor_id) partitions 4;Query OK, 0 rows affected (0.11 sec) (root@localhost) [sakila]&gt; insert into actor_part select <em> from actor;Query OK, 200 rows affected (0.02 sec)Records: 200  Duplicates: 0  Warnings: 0(root@localhost) [sakila]&gt; explain select </em> from actor_part where actor_id=10;  – 未使用partitions时+—-+————-+————+——-+—————+———+———+——-+——+——-+| id | select_type | table      | type  | possible_keys | key     | key_len | ref   | rows | Extra |+—-+————-+————+——-+—————+———+———+——-+——+——-+|  1 | SIMPLE      | actor_part | const | PRIMARY       | PRIMARY | 2       | const |    1 | NULL  |+—-+————-+————+——-+—————+———+———+——-+——+——-+1 row in set (0.00 sec) (root@localhost) [sakila]&gt; explain partitions select * from actor_part where actor_id=10; – 使用partitions时+—-+————-+————+————+——-+—————+———+———+——-+——+——-+| id | select_type | table      | partitions | type  | possible_keys | key     | key_len | ref   | rows | Extra |+—-+————-+————+————+——-+—————+———+———+——-+——+——-+|  1 | SIMPLE      | actor_part | p2         | const | PRIMARY       | PRIMARY | 2       | const |    1 | NULL  |+—-+————-+————+————+——-+—————+———+———+——-+——+——-+1 row in set (0.00 sec)– 多出了partitions列</subqueryn></derivedn></p>
+
+            
+            <p class="more">
+                <a href="/2015/10/12/2019030500112/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/10/12/2019030500112/" title="MySQL EXPLAIN SQL 输出信息描述">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/10/08/2019030500126/">
+    		Oracle中查询、禁用、启用、删除表外键
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-10-08T09:57:21.000Z">2015-10-08</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/外键/" title="外键">外键</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1、查询所有表的外键：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>select table_name, constraint_name from user_constraints where constraint_type = ‘R’;</li>
+</ol>
+<p>2、禁用所有外键约束, 使用下面的sql生成对应sql脚本:</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>select ‘alter table ‘ || table_name || ‘ disable constraint ‘ || constraint_name || ‘;’</li>
+<li>from user_constraints</li>
+<li>where constraint_type = ‘R’;</li>
+</ol>
+<p>生成的sql类似下面的语句：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>alter table HRMIS_RELIC_DAMAGE disable constraint FK_HRMIS_RE_0927;</li>
+<li>alter table HRMIS_RELIC_BASE disable constraint FK_HRMIS_RE_0922;</li>
+</ol>
+<p>3、启用所有外键约束, 使用下面的sql生成对应sql脚本:</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>select ‘alter table ‘ || table_name || ‘ enable constraint ‘ ||  constraint_name || ‘;’</li>
+<li>from user_constraints</li>
+<li>where constraint_type = ‘R’;</li>
+</ol>
+<p>生成的sql类似下面的语句：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>alter table HRMIS_RELIC_DAMAGE enable constraint FK_HRMIS_RE_0927;</li>
+<li>alter table HRMIS_RELIC_BASE enable constraint FK_HRMIS_RE_0922;</li>
+</ol>
+<p>4、删除所有外键约束, 使用下面的sql生成对应sql脚本:</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>select ‘alter table ‘ || table_name || ‘ drop constraint ‘ || constraint_name || ‘;’</li>
+<li>from user_constraints</li>
+<li>where constraint_type = ‘R’;</li>
+</ol>
+<p>生成的sql类似下面的语句：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>alter table HRMIS_RELIC_DAMAGE drop constraint FK_HRMIS_RE_0927;</li>
+<li>alter table HRMIS_RELIC_BASE drop constraint FK_HRMIS_RE_0922;</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/10/08/2019030500126/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/10/08/2019030500126/" title="Oracle中查询、禁用、启用、删除表外键">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/09/22/2019030500009/">
+    		使用消息系统避免分布式事务
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-09-22T02:17:09.000Z">2015-09-22</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/事务/" title="事务">事务</a> / 
+    
+        <a href="/tags/分布式/" title="分布式">分布式</a> / 
+    
+        <a href="/tags/消息/" title="消息">消息</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>首先举个例子：比如通过支付宝向余额宝转账1000元，这样一种生活中很平凡的事情，却可以引出很多问题：如果系统宕机挂掉，交易没有完成？那么数据就出现了不一致。等等类似的事情，在各类系统中都能找到类似情形。那么也可以换句专业的说法：当一个表update之后，如何保证另外一个与之关联的表也能完成update。 1、本地事务： 支付宝账户表：A  id uid amount 余额宝账户表：B  id uid amount 用户id：uid = 100 执行上面的过程分两部分： 1、支付宝账户表-1000：update A set amount=amount - 1000 where uid = 100； 2、余额宝账户表+1000：update B set amount=amount + 1000 where uid = 100； 如何保证两部分都能够完成，保证两部分“收支平衡” 对数据库熟悉的同学会那么我们使用transaction（事务）不就解决了 BEGIN TRANSACTION update A set amount=amount - 1000 where uid = 100； update B set amount=amount + 1000 where uid = 100； END TRANSACTION COMMIT; OK,上面的操作是没有问题的 那么对spring熟悉的同学也知道 其实在spring只需要使用注解就OK了 @Transactional(rollbackFor=Exception.class) public void updateAmount(){ updateA(); updateB(); } 是的，没有错的。能够完成。但是这些情况只是针对系统规模小，数据表在一个数据库实例上的；那么系统规模大，对应的数据表分布在不同的数据库实例上，分布在不同的物理节点上，前面采用的本地事务的方式就无用武之地了。 2、分布式事务（两阶段提交协议） 两阶段提交协议经常用来实现分布式事务;一般需要两个角色：协调器C和若干个事务执行者Si；那么事务执行者多半是具体的数据库，同时协调器和事务执行器可在一台机器上。 1、应用程序application发起一个请求到TC（事务协调器） 2、TC(事务协调器)将消息写到本地日志，再向所有的SI（事务执行者）的发送消息。 3、Si（事务执行者）接受到消息之后，执行本地事务但是不commit，如果成功返回yes否则no；同样返回      之前仍要进行日志记录。 4、Tc（事务协调器）接受到所有执行器返回的结果，如果所有的执行全部返回yes，那么发送commit消息给各个执行器，本地事务执行commit；若是有一个返回no，那么tc就会发送abort消息给各个执行器 注：tc和si把发送和接收到的消息存放到本地日志里，主要为了故障恢复复用，如若某一个si从故障中恢复后，先检查本地日志的内容，如果已接收到commit则本地事务执行器commit；若是abort，则回滚； 若是yes则在tc询问，确定下一步；若是什么都没有则可能前面执行已经崩溃，需要回滚。 熟悉java的同学可以看：<a href="http://acen-chen.iteye.com/blog/1055481" target="_blank" rel="noopener">http://acen-chen.iteye.com/blog/1055481</a> 采用分布式事务，也满足了我们前面的需求，同时新的问题随之而来 1、两阶段提交涉及多个节点的网络通信，通信时间如果过长 2、事务的相对时间长了，那么锁定资源的时间也就长了 那么在高并发的服务中，就会存在严重的性能问题。 3、消息队列 在高并发的环境中，我们一般会采用消息队列来避免分布式事务的执行 这和实际生活中，我们去饭店吃饭很类似，首先点单，这时服务员给你一张小票，等待服务器给你端上你的饭菜。 在使用消息队列我们需要做到可靠凭证的保存(分布式事务的消息)，有如下两种方式 方式1、支付宝完成扣钱的动作时，并记录消息数据，消息数据和业务数据在同一个数据库实例 BEGIN TRANSACTION update A set amount=amount - 1000 where uid = 100； INSERT INTO MESSAGE(UID，AMOUNT,STATUS) VALUES(1，1000，1) END TRANSACTION COMMIT; 那么我们可以将支付宝完成扣钱操作的消息通过及时服务发给余额宝，余额宝完成处理返回成功消息，支付宝收到消息，清除消息表中对应的消息记录，即完成本次扣钱操作。 方式2、 1）支付宝在扣款事务提交之前，向实时消息服务请求发送消息，实时消息服务只记录消       息数据，而不真正发送，只有消息发送成功后才会提交事务； 2）当支付宝扣款事务被提交成功后，向实时消息服务确认发送。只有在得到确认发送指令后，实时消息服务才真正发送该消息； 3）当支付宝扣款事务提交失败回滚后，向实时消息服务取消发送。在得到取消发送指令后，该消息将不会被发送； 4）对于那些未确认的消息或者取消的消息，需要有一个消息状态确认系统定时去支付宝系统查询这个消息的状态并进行更新。为什么需要这一步骤，举个例子：假设在第2步支付宝扣款事务被成功提交后，系统挂了，此时消息状态并未被更新为“确认发送”，从而导致消息不能被发送。 优点：消息数据独立存储，降低业务系统与消息系统间的耦合； 缺点：一次消息发送需要两次请求；业务处理服务需要实现消息状态回查接口 ———————————————————————————————————————————— 那么如上的消息队列也就解决了我们实际业务中的高并发情况下分布式事务处理性能低下的问题 在使用消息队列防止重复投递消息 解决方法很简单，增加消息应用状态表（message_apply），通俗来说就是个账本，用于记录消息的消费情况，每次来一个消息，在真正执行之前，先去消息应用状态表中查询一遍，如果找到说明是重复消息，丢弃即可，如果没找到才执行，同时插入到消息应用状态表（同一事务）。 for each msg in queue Begin transaction select count(*) as cnt from message_apply where msg_id=msg.msg_id; if cnt==0 then update B set amount=amount+10000 where userId=1; insert into message_apply(msg_id) values(msg.msg_id); End transaction commit;</p>
+
+            
+            <p class="more">
+                <a href="/2015/09/22/2019030500009/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/09/22/2019030500009/" title="使用消息系统避免分布式事务">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/09/21/2019030500075/">
+    		mysql启动的四种方式
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-09-21T08:30:04.000Z">2015-09-21</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>在创建库的时候指定字符集 GBK: create database  database_name  DEFAULT CHARACTER SET gbk COLLATE gbk_chinese_ci; UTF8: CREATE DATABASE `test2` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; 在创建表的时候你可以通过添加一个ENGINE 或TYPE 选项到CREATE TABLE语句来告诉MySQL你要创建什么类表并指定表的存储引擎： CREATE TABLE t (i INT) ENGINE = INNODB; CREATE TABLE t (i INT) TYPE = MEMORY; 要把一个表从一个类型转到另一个类型，可使用ALTER TABLE语句，这个语句指明新的类型： ALTER TABLE t ENGINE = MYISAM; ALTER TABLE t TYPE = BDB mysql 建表字符集 1.列出MYSQL支持的所有字符集： SHOW CHARACTER SET; 2.当前MYSQL服务器字符集设置 SHOW VARIABLES LIKE ‘character_set_%’; 3.当前MYSQL服务器字符集校验设置 SHOW VARIABLES LIKE ‘collation_%’; 4.显示某数据库字符集设置 show create database 数据库名; 5.显示某数据表字符集设置 show create table 表名; 6.修改数据库字符集 alter database 数据库名 default character set ‘utf8’; 7.修改数据表字符集 alter table 表名 default character set ‘utf8’; 8.建库时指定字符集 create database 数据库名 character set gbk collate gbk_chinese_ci; 9.建表时指定字符集 CREATE TABLE `mysqlcode` ( `id` TINYINT( 255 ) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY , `content` VARCHAR( 255 ) NOT NULL  <a href="http://www.2cto.com" target="_blank" rel="noopener">www.2cto.com</a> ) TYPE = MYISAM CHARACTER SET gbk COLLATE gbk_chinese_ci; 库字符集，在my.cnf中缺少了如下代码： [client] default-character-set=utf8 [mysqld] default-character-set=utf8 10.修改数据库的字符集 mysql&gt;use mydb mysql&gt;alter database mydb character set utf-8; 创建数据库指定数据库的字符集 mysql&gt;create database mydb character set utf-8; 通过配置文件修改: 修改/var/lib/mysql/mydb/db.opt default-character-set=latin1 default-collation=latin1_swedish_ci 为  <a href="http://www.2cto.com" target="_blank" rel="noopener">www.2cto.com</a> default-character-set=utf8 default-collation=utf8_general_ci 11.MySQL服务器能够支持多种字符集。可以使用SHOW CHARACTER SET语句列出可用的字符集： mysql&gt; SHOW CHARACTER SET; 如果不加以上代码，那么即便MYSQL编译安装时指定的编码是UTF8，那么在建库时其默认编码仍是LATIN1，而由于字符集的继承性，库中的表也是LATIN1的了。mysql的四种启动方式: 1、mysqld 启动mysql服务器:./mysqld –defaults-file=/etc/my.cnf –user=root 客户端连接: mysql –defaults-file=/etc/my.cnf or mysql -S /tmp/mysql.sock 2、mysqld_safe 启动mysql服务器:./mysqld_safe –defaults-file=/etc/my.cnf –user=root &amp; 客户端连接: mysql –defaults-file=/etc/my.cnf or mysql -S /tm/mysql.sock 3、mysql.server cp -v /usr/local/mysql/support-files/mysql.server /etc/init.d/ chkconfig –add mysql.server 启动mysql服务器:service mysql.server {start|stop|restart|reload|force-reload|status} 客户端连接:同1、2 4、mysqld_multi mkdir $MYSQL_BASE/data2 cat &lt;<-eof>&gt; /etc/my.cnf [mysqld_multi] mysqld    = /usr/local/mysql/bin/mysqld_safe mysqladmin = /user/local/mysql/bin/mysqladmin user = mysqladmin password = mysqladmin [mysqld3306] port            = 3306 socket          = /tmp/mysql3306.sock pid-file    = /tmp/mysql3306.pid skip-external-locking key_buffer_size = 16M max_allowed_packet = 1M table_open_cache = 64 sort_buffer_size = 512K net_buffer_length = 8K read_buffer_size = 256K read_rnd_buffer_size = 512K myisam_sort_buffer_size = 8M basedir        = /usr/local/mysql datadir        = /usr/local/mysql/data [mysqld3307] port            = 3307 socket          = /tmp/mysql3307.sock pid-file    = /tmp/mysql3307.pid skip-external-locking key_buffer_size = 16M max_allowed_packet = 1M table_open_cache = 64 sort_buffer_size = 512K net_buffer_length = 8K read_buffer_size = 256K read_rnd_buffer_size = 512K myisam_sort_buffer_size = 8M basedir        = /usr/local/mysql datadir        = /usr/local/mysql/data2 EOF #mysql -S /tmp/mysql3306.sock mysql&gt;GRANT SHUTDOWN ON <em>.</em> TO ‘mysqladmin‘@’localhost’ identified by ‘mysqladmin’ with grant option; #mysql -S /tmp/mysql3307.sock mysql&gt;GRANT SHUTDOWN ON <em>.</em> TO ‘mysqladmin‘@’localhost’ identified by ‘mysqladmin’ with grant option; 启动mysql服务器:./mysqld_multi –defaults-file=/etc/my.cnf start 3306-3307 关闭mysql服务器:mysqladmin shutdown</-eof></p>
+
+            
+            <p class="more">
+                <a href="/2015/09/21/2019030500075/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/09/21/2019030500075/" title="mysql启动的四种方式">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/09/21/2019030500037/">
+    		死锁的预防和解除
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-09-21T08:26:38.000Z">2015-09-21</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/死锁/" title="死锁">死锁</a> / 
+    
+        <a href="/tags/解除/" title="解除">解除</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>产生死锁的原因主要是： （1）系统资源不足。 （2） 进程运行推进的顺序不合适。 （3）资源分配不当等。 如果系统资源充足，进程的资源请求都能够得到满足，死锁出现的可能性就很低，否则就会因争夺有限的资源而陷入死锁。其次，进程运行推进顺序与速度不同，也可能产生死锁。 产生死锁的四个必要条件： （1） 互斥条件：一个资源每次只能被一个进程使用。 （2） 请求与保持条件：一个进程因请求资源而阻塞时，对已获得的资源保持不放。 （3） 不剥夺条件:进程已获得的资源，在末使用完之前，不能强行剥夺。 （4） 循环等待条件:若干进程之间形成一种头尾相接的循环等待资源关系。 这四个条件是死锁的必要条件，只要系统发生死锁，这些条件必然成立，而只要上述条件之一不满足，就不会发生死锁。 死锁的预防和解除： 理解了死锁的原因，尤其是产生死锁的四个必要条件，就可以最大可能地避免、预防和解除死锁。所以，在系统设计、进程调度等方面注意如何不让这四个必要条件成立，如何确定资源的合理分配算法，避免进程永久占据系统资源。此外，也要防止进程在处于等待状态的情况下占用资源,在系统运行过程中，对进程发出的每一个系统能够满足的资源申请进行动态检查，并根据检查结果决定是否分配资源，若分配后系统可能发生死锁，则不予分配，否则予以分配 。因此，对资源的分配要给予合理的规划。 如何将死锁减至最少 虽然不能完全避免死锁，但可以使死锁的数量减至最少。将死锁减至最少可以增加事务的吞吐量并减少系统开销，因为只有很少的事务回滚，而回滚会取消事务执行的所有工作。由于死锁时回滚而由应用程序重新提交。 下列方法有助于最大限度地降低死锁： （1）按同一顺序访问对象。 （2）避免事务中的用户交互。 （3）保持事务简短并在一个批处理中。 （4）使用低隔离级别。 （5）使用绑定连接。 按同一顺序访问对象 如果所有并发事务按同一顺序访问对象，则发生死锁的可能性会降低。例如，如果两个并发事务获得 Supplier 表上的锁，然后获得 Part 表上的锁，则在其中一个事务完成之前，另一个事务被阻塞在 Supplier 表上。第一个事务提交或回滚后，第二个事务继续进行。不发生死锁。将存储过程用于所有的数据修改可以标准化访问对象的顺序。 避免事务中的用户交互 避免编写包含用户交互的事务，因为运行没有用户交互的批处理的速度要远远快于用户手动响应查询的速度，例如答复应用程序请求参数的提示。例如，如果事务正在等待用户输入，而用户去吃午餐了或者甚至回家过周末了，则用户将此事务挂起使之不能完成。这样将降低系统的吞吐量，因为事务持有的任何锁只有在事务提交或回滚时才会释放。即使不出现死锁的情况，访问同一资源的其它事务也会被阻塞，等待该事务完成。 保持事务简短并在一个批处理中 在同一数据库中并发执行多个需要长时间运行的事务时通常发生死锁。事务运行时间越长，其持有排它锁或更新锁的时间也就越长，从而堵塞了其它活动并可能导致死锁。 保持事务在一个批处理中，可以最小化事务的网络通信往返量，减少完成事务可能的延迟并释放锁。 使用低隔离级别 确定事务是否能在更低的隔离级别上运行。执行提交读允许事务读取另一个事务已读取（未修改）的数据，而不必等待第一个事务完成。使用较低的隔离级别（例如提交读）而不使用较高的隔离级别（例如可串行读）可以缩短持有共享锁的时间，从而降低了锁定争夺。 使用绑定连接 使用绑定连接使同一应用程序所打开的两个或多个连接可以相互合作。次级连接所获得的任何锁可以象由主连接获得的锁那样持有，反之亦然，因此不会相互阻塞。 用存储过程查出引起死锁的进程和SQL语句 假如发生了死锁，我们怎么去检测具体发生死锁的是哪条SQL语句或存储过程？此时我们可以使用以下存储过程来检测，就可以查出引起死锁的进程和SQL语句。</p>
+
+            
+            <p class="more">
+                <a href="/2015/09/21/2019030500037/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/09/21/2019030500037/" title="死锁的预防和解除">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/09/21/2019030500038/">
+    		浅谈事务隔离级别
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-09-21T08:25:01.000Z">2015-09-21</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/事务/" title="事务">事务</a> / 
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>一、对于同时运行的多个事务, 当这些事务访问数据库中相同的数据时, 如果没有采取必要的隔离机制, 就会导致各种并发问题: 脏读: 对于两个事务 T1, T2, T1 读取了已经被 T2 更新但还没有被提交的字段. 之后, 若 T2 回滚, T1读取的内容就是临时且无效的. 不可重复读: 对于两个事务T1, T2, T1 读取了一个字段, 然后 T2 更新了该字段. 之后, T1再次读取同一个字段, 值就不同了. 幻读: 对于两个事务T1, T2, T1 从一个表中读取了一个字段, 然后 T2 在该表中插入了一些新的行. 之后, 如果 T1 再次读取同一个表, 就会多出几行. 二、数据库事务的隔离性: 数据库系统必须具有隔离并发运行各个事务的能力, 使它们不会相互影响, 避免各种并发问题. 三、一个事务与其他事务隔离的程度称为隔离级别. 数据库规定了多种事务隔离级别, 不同隔离级别对应不同的干扰程度, 隔离级别越高, 数据一致性就越好, 但并发性越弱. 四、数据库提供的 4 种事务隔离级别: ●READ UNCOMMITTED(读未提交数据)：允许事物读取未被其他事物提交的变更、脏读、不可重复读和幻读的问题都会出现。 ●READ COMMITED(读已提交数据)：只允许事物读取已经被其他事物提交的变更，可以避免脏读，但不可重复读和幻读问题仍然可能出现。 ●REPEATABLE READ(可重复读)：确保一个事物可以多次从一个字段中读取相同的值，在合格事物持续期间，禁止其他事物岁这个字段进行更新，可以避免脏读和不可重复读，但幻读问题仍然存在。 ●SERIALIZABLE(串行化)：确保事物可以从一个表中读取相同的行，在这个事物持续期间，禁止其他事物对该表执行插入、更新和删除操作。所有并发问题都可以避免，但性能十分低下。 五、Oracle 支持的 2 种事务隔离级别：READ COMMITED, SERIALIZABLE。 Oracle 默认的事务隔离级别为: READ COMMITED 六、Mysql 支持 4 种事务隔离级别. Mysql 默认的事务隔离级别为: REPEATABLE READ</p>
+
+            
+            <p class="more">
+                <a href="/2015/09/21/2019030500038/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/09/21/2019030500038/" title="浅谈事务隔离级别">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/09/17/2019030500039/">
+    		用plsql连接数据库创建视图
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-09-17T09:00:26.000Z">2015-09-17</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/PL-SQL/" title="PL/SQL">PL/SQL</a> / 
+    
+        <a href="/tags/数据库/" title="数据库">数据库</a> / 
+    
+        <a href="/tags/视图/" title="视图">视图</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1 视图介绍 视图是一个逻辑表，也是一个非常重要的方案对象。实际上，视图是查看表的一种方式。视图是对根据预定义的选择标准由一个或多个行的集合建立起来的动态表的静态定义。视图可以用来定义来自一个或多个表的行和列的多种连接。通过视图，可以查看到表中的数据。 视图是查看数据库表中的数据的一种方法。视图提供了存储预定义的查询语句作为数据库中的对象以备以后使用的能力。视图只是一种逻辑对象，是一种虚拟表，并不是物理对象，因为视图不占物理存储空间。在视图中被查询的表称为视图的基表。 通常通过它就像使用表一样访问数据。要记住通过视图引用的数据通常来自它后面的基表。视图应该使用一致的命名约定。例如，给所有的视图增加一个前缀，如每一个视图都以v_、view_或vw_开头。这样，可以使用户在看到名称时就立即知道它代表的对象是视图。 2 视图好处 使用视图的优点，如集中用户使用的数据、掩码数据的复杂性、简化权限管理以及为向其他应用程序输出而重新组织数据等。 集中用户使用的数据： 视图创建了一种可以控制的环境，即表中的一部分数据允许访问，而另外一部分数据则不允许访问。那些没有必要的，敏感的或不适合的数据都从视图中排除掉了。 掩盖数据库的复杂性： 视图把数据库设计的复杂性与用户屏蔽分开。这样就为数据库开发人员提供了一种改变数据库的设计而不影响用户使用的能力。用户只需要查询视图就可以得到所需的数据，而不用编写复杂的查询语句或者执行脚本。 简化用户权限的管理：   数据库所有者可以把视图的权限授予需要查询的用户，而不必将基表中某些列的查询权限授予用户。 3 视图创建 可以使用3种方法创建视图，一种方法是使用create view 语句，另一种方法是使用DBA studio 图形工具，还可以使用创建视图向导来创建。 使用create view 语句创建视图 create [or replace][force | noforce] view [user.] viewName (column [,column2]…) as query [with check option[Constraint constraint]] [with read only] or replace 表示如果同名的视图存在，则使用新视图替代已有的视图。 force 强制创建视图，不考虑基表是否存在，是否具有使用基表数据的权限。 noforce 只有基表存在且具有权限，才可以创建视图。 user    表示创建视图的用户名。 viewName  表示将要在数据库上创建的视图名称。 column  指定视图中的列名。 query 表示生成视图的select语句。 with check option 指定强制检查通过视图修改数据的操作。 constraint  表示指定的约束名称。 with read only： 表示创建的视图只能检索数据，不能修改数据。   <img src="/uploads/2015/09/0_1315294657xlxy.bmp" alt>   4 视图和表的关系 视图和表是两种不同的数据库对象，其中的区别之一是在修改数据方面。修改表中的数据是直接修改数据，而修改视图中的数据是间接修改数据。因为视图本身并不包含数据，修改视图中的数据就是通过视图修改表中的数据。因此，修改视图中的数据有许多特殊的限制。 <img src="/uploads/2015/09/0_1315294856I5t5.bmp" alt></p>
+
+            
+            <p class="more">
+                <a href="/2015/09/17/2019030500039/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/09/17/2019030500039/" title="用plsql连接数据库创建视图">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/09/16/2019030500150/">
+    		PL/SQL Developer配置使用说明
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-09-16T07:26:42.000Z">2015-09-16</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/PL-SQL/" title="PL/SQL">PL/SQL</a> / 
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>PL/SQL Developer是一个集成开发环境，专门面向Oracle数据库存储程序单元的开发。如今，有越来越多的商业逻辑和应用逻辑转向了Oracle Server，因此，PL/SQL编程也成了整个开发过程的一个重要组成部分。PL/SQL Developer侧重于易用性、代码品质和生产力，充分发挥Oracle应用程序开发过程中的主要优势。 <strong>以下测试环境为 windows 7 32位。</strong> PL/SQL Developer绿色版 下载链接：<a href="http://pan.baidu.com/s/1hqwDToo" target="_blank" rel="noopener">http://pan.baidu.com/s/1hqwDToo</a> Oracle9i客户端精简版下载链接：<a href="http://pan.baidu.com/s/1mgL8pXu" target="_blank" rel="noopener">http://pan.baidu.com/s/1mgL8pXu</a> <strong>详细配置说明：</strong> 1）解压 PLSQLDeveloper.zip，此为绿色包，解压即可用： <img src="http://img.blog.csdn.net/20150914215145422" alt> 2）进入解压后的文件夹，plsqldev.exe 即为其可执行程序，暂时不能使用，还得相应配置，请看后面介绍： <img src="http://img.blog.csdn.net/20150914215245113" alt> 3）解压 Oracle9i客户端精简版.rar ： <img src="http://img.blog.csdn.net/20150914215437897" alt> 4）解压后，双击安装其中的安装包，默认只能安装在 C 盘： <img src="http://img.blog.csdn.net/20150914215631435" alt> 5）安装成功，C 盘多出一个Oracle文件夹： <img src="http://img.blog.csdn.net/20150914215824988" alt> 6）给 oracle 客户端设置 Path 环境变量： a)先拷贝需要设置环境变量的那个路径： <img src="http://img.blog.csdn.net/20150914220149021" alt> b)右击电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 高级 -&gt; 环境变量： <img src="http://img.blog.csdn.net/20150914220356736" alt> <img src="http://img.blog.csdn.net/20150914220443731" alt> <img src="http://img.blog.csdn.net/20150914220537246" alt> <img src="http://img.blog.csdn.net/20150914220629589" alt> Path 开头添加如下路径，路径和路径之间以分号分割： <img src="http://img.blog.csdn.net/20150914220847220" alt> 7)配置 PL/SQL Developer，打开时会跳出一个登陆窗口，取消即可，然后跳进一个 Developer 界面（没有登录）： <img src="http://img.blog.csdn.net/20150914221600770" alt> <img src="http://img.blog.csdn.net/20150914221657105" alt> 8）工具 -&gt; 首选项：</p>
+<blockquote>
+<blockquote>
+<p>Oracle 主目录名 -&gt; C:\Oracle\ora90\BIN</p>
+</blockquote>
+<blockquote>
+<p>OCI 库 -&gt; C:\Oracle\ora90\BIN\oci.dll</p>
+</blockquote>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20150914221939746" alt> <img src="http://img.blog.csdn.net/20150914222054689" alt> 9）应用 -&gt; 确定 -&gt; 重新运行软件，发现比之前的登录界面多了一个选项“连接为”： <img src="http://img.blog.csdn.net/20150914222432701" alt> 10）添加数据库服务器信息，在 tnsnames.ora 配置文件，添加服务器信息： <img src="http://img.blog.csdn.net/20150914222647347" alt> 11）本示例中，在 tnsnames.ora 的最后添加如下内容：</p>
+<p><strong>[plain]</strong></p>
+<ol>
+<li>ORA90 =</li>
+<li>(DESCRIPTION =</li>
+<li>(ADDRESS_LIST =</li>
+<li>(ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.161.90)(PORT = 1521))</li>
+<li>)</li>
+<li>(CONNECT_DATA =</li>
+<li>(SERVICE_NAME = ora11)</li>
+<li>)</li>
+<li>)</li>
+</ol>
+<p><img src="http://img.blog.csdn.net/20150914222848472" alt> 12）登录数据库服务器，填写登录信息： <img src="http://img.blog.csdn.net/20150914222940988" alt> 13）成功登录后的操作界面： <img src="http://img.blog.csdn.net/20150914223251032" alt> <img src="http://img.blog.csdn.net/20150914223359442" alt></p>
+
+            
+            <p class="more">
+                <a href="/2015/09/16/2019030500150/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/09/16/2019030500150/" title="PL/SQL Developer配置使用说明">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/archives/page/8/">前一页</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/7/">7</a><a class="page-number" href="/archives/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/archives/page/10/">10</a><a class="page-number" href="/archives/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/18/">18</a><a class="extend next" rel="next" href="/archives/page/10/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

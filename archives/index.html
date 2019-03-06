@@ -1,0 +1,1114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>文章归档 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/archives/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/archives/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/archives/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/archives/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章归档 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                文章归档
+                <!-- 文章归档，可以根据日期分类 -->
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2019/01/15/2019030500044/">
+    		组合索引的使用示例
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2019-01-15T07:29:37.000Z">2019-01-15</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/B-Tree/" title="B+Tree">B+Tree</a> / 
+    
+        <a href="/tags/索引/" title="索引">索引</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>总结：通常说的索引是B+Tree索引,树状的，搜索需要从根节点出发，上层节点对应靠左的值，搜索需要从根节点出发，否则不从根节点出发，后面的节点对应下层的值，依旧是乱序的，需要遍历，所以索引就失效了，所以有最左原则。</p>
+<p>组合索引的使用：</p>
+<p>例如组合索引（a,b,c），组合索引的生效原则是</p>
+<p>从前往后依次使用生效，如果中间某个索引没有使用，那么断点前面的索引部分起作用，断点后面的索引没有起作用；</p>
+<p>比如</p>
+<p>where a=3 and b=45 and c=5 …. 这种三个索引顺序使用中间没有断点，全部发挥作用；</p>
+<p>where a=3 and c=5… 这种情况下b就是断点，a发挥了效果，c没有效果</p>
+<p>where b=3 and c=4… 这种情况下a就是断点，在a后面的索引都没有发挥作用，这种写法联合索引没有发挥任何效果；</p>
+<p>where b=45 and a=3 and c=5 …. 这个跟第一个一样，全部发挥作用，abc只要用上了就行，跟写的顺序无关</p>
+<p>组合索引使用判断：</p>
+<p>(0) select * from mytable where a=3 and b=5 and c=4;</p>
+<p>abc三个索引都在where条件里面用到了，而且都发挥了作用</p>
+<p>(1) select * from mytable where c=4 and b=6 and a=3;</p>
+<p>这条语句列出来只想说明 mysql没有那么笨，where里面的条件顺序在查询之前会被mysql自动优化，效果跟上一句一样</p>
+<p>(2) select * from mytable where a=3 and c=7;</p>
+<p>a用到索引，b没有用，所以c是没有用到索引效果的</p>
+<p>(3) select * from mytable where a=3 and b&gt;7 and c=3;(范围值就算是断点)</p>
+<p>a用到了，b也用到了，c没有用到，这个地方b是范围值，也算断点，只不过自身用到了索引</p>
+<p>(4) select * from mytable where b=3 and c=4;</p>
+<p>因为a索引没有使用，所以这里 bc都没有用上索引效果</p>
+<p>(5) select * from mytable where a&gt;4 and b=7 and c=9;</p>
+<p>a用到了 b没有使用，c没有使用</p>
+<p>(6) select * from mytable where a=3 order by b;</p>
+<p>a用到了索引，b在结果排序中也用到了索引的效果，前面说了，a下面任意一段的b是排好序的</p>
+<p>(7) select * from mytable where a=3 order by c;</p>
+<p>a用到了索引，但是这个地方c没有发挥排序效果，因为中间断点了，使用 explain 可以看到 filesort</p>
+<p>(8) select * from mytable where b=3 order by a;</p>
+<p>b没有用到索引，排序中a也没有发挥索引效果</p>
+
+            
+            <p class="more">
+                <a href="/2019/01/15/2019030500044/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2019/01/15/2019030500044/" title="组合索引的使用示例">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2017/05/19/2019030500092/">
+    		MySQL性能分析及explain的使用
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2017-05-19T05:36:34.000Z">2017-05-19</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>MySQL性能分析</strong>及<strong>explain</strong>用法的知识是本文我们主要要介绍的内容，接下来就让我们通过一些实际的例子来介绍这一过程，希望能够对您有所帮助。 <strong>1.使用explain语句去查看分析结果</strong> 如explain select * from test1 where id=1;会出现：id  selecttype  table  type possible_keys  key key_len  ref rows  extra各列。 其中， type=const表示通过索引一次就找到了； key=primary的话，表示使用了主键； type=all,表示为全表扫描； key=null表示没用到索引。type=ref,因为这时认为是多个匹配行，在联合查询中，一般为REF。 <strong>2.MYSQL中的组合索引</strong> 假设表有id,key1,key2,key3,把三者形成一个组合索引，则 如：</p>
+<ol>
+<li>where key1=….</li>
+<li>where key1=1 and key2=2</li>
+<li>where key1=3 and key3=3 and key2=2</li>
+</ol>
+<p>根据最左原则，这些都是可以使用索引的，如from test where key1=1 order by key3，用explain分析的话，只用到了normal_key索引，但只对where子句起作用，而后面的order by需要排序。 <strong>3.使用慢查询分析</strong> 在my.ini中： long_query_time=1 log-slow-queries=d:\mysql5\logs\mysqlslow.log 把超过1秒的记录在慢查询日志中 可以用mysqlsla来分析之。也可以在mysqlreport中，有如 DMS分别分析了select ,update,insert,delete,replace等所占的百份比 <strong>4.MYISAM和INNODB的锁定</strong> myisam中，注意是表锁来的，比如在多个UPDATE操作后，再SELECT时，会发现SELECT操作被锁定了，必须等所有UPDATE操作完毕后，再能SELECT innodb的话则不同了，用的是行锁，不存在上面问题。 <strong>5.MYSQL的事务配置项</strong> innodb_flush_log_at_trx_commit=1 表示事务提交时立即把事务日志写入磁盘，同时数据和索引也更新。 innodb_flush_log_at_trx_commit=0 事务提交时，不立即把事务日志写入磁盘，每隔1秒写一次 innodb_flush_log_at_trx_commit=2 事务提交时，立即写入磁盘文件（这里只是写入到内核缓冲区，但不立即刷新到磁盘，而是每隔1秒刷新到盘，同时更新数据和索引 <strong>explain用法</strong> EXPLAIN tbl_name或：EXPLAIN [EXTENDED] SELECT select_options 前者可以得出一个表的字段结构等等，后者主要是给出相关的一些索引信息，而今天要讲述的重点是后者。 举例</p>
+<ol>
+<li>mysql&gt; explain select * from event;</li>
+<li>+—-+————-+——-+——+—————+——+———+——+——+——-+</li>
+<li>| id | select_type | table | type | possible_keys | key | key_len | ref | rows | Extra |</li>
+<li>+—-+————-+——-+——+—————+——+———+——+——+——-+</li>
+<li>| 1 | SIMPLE | event | ALL | NULL | NULL | NULL | NULL | 13 | |</li>
+<li>+—-+————-+——-+——+—————+——+———+——+——+——-+</li>
+<li>1 row in set (0.00 sec)</li>
+</ol>
+<p><strong>各个属性的含义</strong> id select查询的序列号 select_type select查询的类型，主要是区别普通查询和联合查询、子查询之类的复杂查询。 table 输出的行所引用的表。 type 联合查询所使用的类型。 type显示的是访问类型，是较为重要的一个指标，结果值从好到坏依次是： system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL 一般来说，得保证查询至少达到range级别，最好能达到ref。 possible_keys 指出MySQL能使用哪个索引在该表中找到行。如果是空的，没有相关的索引。这时要提高性能，可通过检验WHERE子句，看是否引用某些字段，或者检查字段不是适合索引。 key 显示MySQL实际决定使用的键。如果没有索引被选择，键是NULL。 key_len 显示MySQL决定使用的键长度。如果键是NULL，长度就是NULL。文档提示特别注意这个值可以得出一个多重主键里mysql实际使用了哪一部分。 ref 显示哪个字段或常数与key一起被使用。 rows 这个数表示mysql要遍历多少数据才能找到，在innodb上是不准确的。 Extra 如果是Only index，这意味着信息只用索引树中的信息检索出的，这比扫描整个表要快。 如果是where used，就是使用上了where限制。 如果是impossible where 表示用不着where，一般就是没查出来啥。 如果此信息显示Using filesort或者Using temporary的话会很吃力，WHERE和ORDER BY的索引经常无法兼顾，如果按照WHERE来确定索引，那么在ORDER BY时，就必然会引起Using filesort，这就要看是先过滤再排序划算，还是先排序再过滤划算。</p>
+
+            
+            <p class="more">
+                <a href="/2017/05/19/2019030500092/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2017/05/19/2019030500092/" title="MySQL性能分析及explain的使用">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/9.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/05/30/2019030500010/">
+    		使用KeepAlived搭建MySQL高可用环境
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-05-30T06:51:09.000Z">2016-05-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/KeepAlived/" title="KeepAlived">KeepAlived</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><img src="/uploads/2016/05/29254281_1408887120Zv80.png" alt> 使用KeepAlived搭建MySQL的高可用环境。 首先搭建MySQL的主从复制 在Master开启binlog,创建复制帐号, 然后在Slave输入命令</p>
+<ol>
+<li>change master to</li>
+<li>master_host=’192.168.1.70’,</li>
+<li>master_port=3306,</li>
+<li>master_user=’xx’,</li>
+<li>master_password=’xx’;</li>
+</ol>
+<p>然后使用start slave开启复制。 然后编译安装KeepAlived 进入keepalived-1.2.12目录 然后使用 ./configure make &amp;&amp; make install 然后在Master服务器编辑KeepAlived的配置文件 vim /etc/keepalived/keepalived.conf</p>
+<ol>
+<li><p>! Configuration File for keepalived</p>
+</li>
+<li><p>global_defs {</p>
+</li>
+<li>router_id HA_MySQL</li>
+<li><p>}</p>
+</li>
+<li><p>vrrp_instance VI_1 {</p>
+</li>
+<li>state BACKUP</li>
+<li>interface eth0</li>
+<li>virtual_router_id 51</li>
+<li>priority 100</li>
+<li>advert_int 1</li>
+<li>nopreempt</li>
+<li>authentication {</li>
+<li>auth_type PASS</li>
+<li>auth_pass 1111</li>
+<li>}</li>
+<li>virtual_ipaddress {</li>
+<li>192.168.1.199</li>
+<li>}</li>
+<li><p>}</p>
+</li>
+<li><p>virtual_server 192.168.1.199 3306 {</p>
+</li>
+<li>delay_loop 2</li>
+<li>lb_algo wrr</li>
+<li>lb_kind DR</li>
+<li>persistence_timeout 60</li>
+<li>protocol TCP</li>
+<li>real_server 192.168.1.70 3306 {</li>
+<li>weight 3</li>
+<li>notify_down /root/shutdown.sh</li>
+<li>TCP_CHECK {</li>
+<li>connect_timeout 10</li>
+<li>nb_get_retry 3</li>
+<li>delay_before_retry 3</li>
+<li>connect_port 3306</li>
+<li>}</li>
+<li>}</li>
+<li>}</li>
+</ol>
+<p>然后编辑Slave的配置文件 vim /etc/keepalived/keepalived.conf</p>
+<ol>
+<li>! Configuration File for keepalived</li>
+<li>global_defs {</li>
+<li>router_id HA_MySQL</li>
+<li><p>}</p>
+</li>
+<li><p>vrrp_instance VI_1 {</p>
+</li>
+<li>state BACKUP</li>
+<li>interface eth0</li>
+<li>virtual_router_id 51</li>
+<li>priority 90</li>
+<li>advert_int 1</li>
+<li>nopreempt</li>
+<li>authentication {</li>
+<li>auth_type PASS</li>
+<li>auth_pass 1111</li>
+<li>}</li>
+<li>virtual_ipaddress {</li>
+<li>192.168.1.199</li>
+<li>}</li>
+<li><p>}</p>
+</li>
+<li><p>virtual_server 192.168.1.199 3306 {</p>
+</li>
+<li>delay_loop 2</li>
+<li>lb_algo wrr</li>
+<li>lb_kind DR</li>
+<li>persistence_timeout 60</li>
+<li>protocol TCP</li>
+<li>real_server 192.168.1.80 3306 {</li>
+<li>weight 3</li>
+<li>notify_down /root/shutdown.sh</li>
+<li>TCP_CHECK {</li>
+<li>connect_timeout 10</li>
+<li>nb_get_retry 3</li>
+<li>delay_before_retry 3</li>
+<li>connect_port 3306</li>
+<li>}</li>
+<li>}</li>
+<li>}</li>
+</ol>
+<p>其中 priority                      表示优先级 virtual_ipaddress      虚拟的IP地址(VIP) delay_loop                每个2秒检查一次real_server状态 notify_down              检测到服务down后执行的脚本 connect_timeout      连接超时时间 nb_get_retry             重连次数 delay_before_retry   重连间隔时间 connect_port            健康检查端口 shutdown.sh 可以考虑加入邮件告警的功能。</p>
+<ol>
+<li>#!/bin/bash</li>
+<li>pkill keepalived</li>
+</ol>
+<p>在两个服务器上启动MySQL和KeepAlived服务 service mysql start service keepalived start Master的server_id为1 Slave的server_id为2 然后 连接VIP的MySQL,可以看到已经连接到了Master服务器(server_id为1) <img src="/uploads/2016/05/29254281_14088901415ktB.png" alt> 如果kill掉Master的MySQL,KeepAlived会自动转移到Slave 在Master服务器上执行 killall mysqld 然后再次查看server_id, 短暂的失去连接之后,再次连接上VIP,server_id已经变为2,说明VIP已经指向了Slave <img src="/uploads/2016/05/29254281_1408890396C3OE.png" alt> nopreempt参数表示Master恢复正常之后，是否将VIP继续指向Master 这样的话，会再次引发切换。 两台服务器的KeepAlived会有心跳检测, 如果Master的MySQL服务挂了(3306端口挂了),那么他会选择自杀. Slave的KeepAlived通过心跳检测发现这个情况，就会将VIP的请求接管。 KeepAlived还有很多参数没有明白是什么意思 生产环境的切换脚本,在Slave提升为Master之后,应该等待所有的中继日志应用完毕,否则可能丢失数据</p>
+
+            
+            <p class="more">
+                <a href="/2016/05/30/2019030500010/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/05/30/2019030500010/" title="使用KeepAlived搭建MySQL高可用环境">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/05/30/2019030500088/">
+    		mysql查看和修改注释
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-05-30T02:41:23.000Z">2016-05-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>mysql查看和修改注释，这里创建一张学生表来进行说明。 <strong>一.如何创建表</strong> 创建表的时候写注释。</p>
+<p>Sql代码</p>
+<ol>
+<li>create table test1</li>
+<li>(</li>
+<li>field_name int comment ‘字段的注释’</li>
+<li>)comment=’表的注释’;</li>
+</ol>
+<p>创建学生表示例如下： <img src="/uploads/2016/05/1a664fd4-b184-32ba-9372-4a4f9fc95563.png" alt> <strong>二.修改表的注释和创建</strong></p>
+<p>Sql代码</p>
+<ol>
+<li>alter table test1 comment ‘修改后的表的注释’;</li>
+</ol>
+<p>示例代码如下：</p>
+<p>Sql代码</p>
+<ol>
+<li>ALTER TABLE `student` COMMENT ‘学生表2.0’;</li>
+</ol>
+<p>结果如下图所示： <img src="/uploads/2016/05/570a3c84-7541-3916-8cd0-ec540f731da3.png" alt> <img src="/uploads/2016/05/9ea6bfc0-2cbc-328a-a7d0-f89a508b438f.png" alt> <strong>三. 修改字段的注释</strong></p>
+<p>Sql代码</p>
+<ol>
+<li>alter table test1 modify column field_name int comment ‘修改后的字段注释’;</li>
+</ol>
+<p>注意：字段名和字段类型照写就行 修改示例如下：</p>
+<p>Sql代码</p>
+<ol>
+<li>ALTER TABLE `student` MODIFY COLUMN `id` COMMENT ‘学号’;</li>
+</ol>
+<p>查看字段的信息，代码如下：</p>
+<p>Sql代码</p>
+<ol>
+<li>SHOW FULL COLUMNS  FROM `student`;</li>
+</ol>
+<p>结果如图所示： <img src="/uploads/2016/05/f2f6e77e-12e4-3a11-87ec-bbd1bbe30afa.png" alt> <img src="/uploads/2016/05/b4bf7bfc-4957-3bd4-9cc1-c1aaf76253ab.png" alt> <strong>四.**</strong>查看表注释的方法** 1.在生成的SQL语句中看</p>
+<p>Sql代码</p>
+<ol>
+<li><p>show create table test1;</p>
+<pre><code>如查看student表的注释
+</code></pre></li>
+</ol>
+<p>Sql代码</p>
+<ol>
+<li>SHOW CREATE TABLE `student`</li>
+</ol>
+<p><img src="/uploads/2016/05/6ebfafc4-acb6-32e7-af2a-c06bbc3692d2.png" alt title="点击查看原始大小图片"></p>
+<p>2.在元数据的表里面看</p>
+<p>Sql代码</p>
+<ol>
+<li>use information_schema;</li>
+<li><p>select * from TABLES where TABLE_SCHEMA=’my_db’ and TABLE_NAME=’test1’</p>
+<pre><code>或
+</code></pre></li>
+</ol>
+<p>Sql代码</p>
+<ol>
+<li>select * from information_schema.tables where table_schema=’my_db’ and table_name=’test1’;</li>
+</ol>
+<p><strong>五.查看字段注释的方法</strong></p>
+<p>1.show方法</p>
+<p>Sql代码</p>
+<ol>
+<li>show full columns from test1;</li>
+</ol>
+<p>2.在元数据的表里面看</p>
+<p>Sql代码</p>
+<ol>
+<li>select * from COLUMNS where TABLE_SCHEMA=’my_db’ and TABLE_NAME=’test1’</li>
+</ol>
+<p>或  </p>
+<p>Sql代码</p>
+<ol>
+<li>select * from information_schema.columns where table_schema=’my_db’ and table_name=’test1’</li>
+</ol>
+<p><strong>六.查看表的约束信息</strong></p>
+<pre><code>mysql 客户端提供的describe table_name命令，只能显示一个表的primary key和foreign key。
+
+mysql所有有关数据schema的信息都保存在INFORMATION\_SCHEMA这个database instance里面。其中的TABLE\_CONSTRAINTS和KEY\_COLUMN\_USAGE表，保存了表的所有key信息。
+
+TABLE\_CONSTRAINTS，保存了表的约束条件，而KEY\_COLUMN_USAGE保存了表的详细column对应的约束条件信息。
+
+示例如下：
+</code></pre><p>Sql代码</p>
+<ol>
+<li>select * from information_schema.TABLE_CONSTRAINTS t where t.table_name = ‘student’;</li>
+</ol>
+<p><img src="/uploads/2016/05/06d93b86-b513-3c3d-8857-379b7006cbd5.png" alt title="点击查看原始大小图片"></p>
+<p>Sql代码</p>
+<ol>
+<li>select * from information_schema.KEY_COLUMN_USAGE t where t.table_name = ‘student’ and t.CONSTRAINT_NAME = ‘PRIMARY’;</li>
+</ol>
+<p><img src="/uploads/2016/05/5f2f3622-18ac-3ccf-b5c9-23e0af4b84ea.png" alt title="点击查看原始大小图片"></p>
+
+            
+            <p class="more">
+                <a href="/2016/05/30/2019030500088/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/05/30/2019030500088/" title="mysql查看和修改注释">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/05/27/2019030500087/">
+    		mySQL常见错误
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-05-27T07:45:33.000Z">2016-05-27</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>一、使用命令行进行查询时中文显示为乱码：</strong> 在命令行模式下，使用select 语句查询表中数据时，若表中数据存在中文那么显示的就是乱码，而且insert中文的时候也会报错： Incorrect string value: ‘\xB0\xCB’ for column ‘name’ at row 1，如图： <img src="/uploads/2016/05/cf0b7b68-eb8b-3885-b13c-6e5892578ab4.jpg" alt> 这是数据库编码格式格式的：set names uft8。再查询就会显示正常，而且insert也能成功。 <img src="/uploads/2016/05/065c4c8c-c142-3d0f-b68d-6aa66bb426bd.jpg" alt> <strong>2、delete语句：</strong> 在SQL Server中，删除语句可以用delete …..，也可以用delete from…，也就是使用”delete test where id=1”和”delete from test where id=1” 效果是一样滴，都可以删除数据。 但是在MySql里面，必须得用delete from….才能删除数据，直接使用delete…会报错。   <strong>3、添加后缀或前缀：</strong> 为一个字段添加后缀或前缀，譬如说为table1的field2字段添加前缀abc，后缀abc。 使用SQL Server很简单，就像JS中的拼接一样： 前缀：update table1 set field2=’abc’+field2 where field1=1; 后缀：update table1 set field2=field2+’abc’ where field1=1; 在MySQL里面，这么添加会报错，得使用concat函数进行添加。 前缀：update table1 set field2=concat(‘abc’,field2) where field1=1; 后缀：update table1 set field2=concat(field2,’abc’) where field1=1;   <strong>4、去除前缀或后缀：</strong> 在SQL Server里面可以使用stuff函数， 删除前缀：update test set field2=stuff(field2,1,3,’’) where field1=1; 删除后缀：update test set field2=stuff(field2,7,3,’’) where field1=1; stuff()函数四个参数简析： param1:要删除的字符串； param2:从哪个下标开始删除，下标从1开始 param3:删除的字符串的个数 param4：在删除字符串的地方插入的字符串 所以上面删除前缀和后缀的原理就是：前缀中abc在最前面，所以下标从1开始，删除3个，删除完成之后插入空格，这样子前缀就没有了。也因此,后缀abc的下标就从7开始了。 当然也可以用substring()函数，这个函数更简单： substring()函数三个参数简析： param1:要进行截取的字符串 param2:从哪个下标开始截取，下标从1开始 param3:截取的长度。 因此，删除前缀和后缀的方法为： 前缀：update test set field2=substring(field2,4,len(field2)-3) where field1=1; 后缀：update test set field2=substring(field2,1,len(field2)-3) where field1=1; 前缀删除中，abc在最前面，所以下标从1开始，截取“字符串的长度减去abc的长度”,也就是len(field2)-3。删除前缀之后，直接从第一个字符开始截取，其长度为字符串长度减去最后的三个字符串长度。   MySQL中也可以用substr函数，用法与SQL Server相同，但是我们也可以用right()函数，这个函数与substring差不多，它用来返回字符串的最右面指定个数的字符。因此，删除前缀比较简单，删除后缀有点费劲此时就可以用substring来处理： 前缀：update test set field2=right(field2,length(field2)-3) where field1=1; 后缀：update test set field2=substr(field2,1,len(field2)-3) where field1=1;</p>
+
+            
+            <p class="more">
+                <a href="/2016/05/27/2019030500087/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/05/27/2019030500087/" title="mySQL常见错误">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/05/04/2019030500171/">
+    		TPS和QPS的区别
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-05-04T08:14:04.000Z">2016-05-04</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/QPS/" title="QPS">QPS</a> / 
+    
+        <a href="/tags/TPS/" title="TPS">TPS</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>一、TPS：Transactions Per Second（每秒传输的事物处理个数），即服务器每秒处理的事务数。TPS包括一条消息入和一条消息出，加上一次用户数据库访问。（业务TPS = CAPS × 每个呼叫平均TPS） TPS是软件测试结果的测量单位。一个事务是指一个客户机向服务器发送请求然后服务器做出反应的过程。客户机在发送请求时开始计时，收到服务器响应后结束计时，以此来计算使用的时间和完成的事务个数。 一般的，评价系统性能均以每秒钟完成的技术交易的数量来衡量。系统整体处理能力取决于处理能力最低模块的TPS值。 二、QPS：每秒查询率QPS是对一个特定的查询服务器在规定时间内所处理流量多少的衡量标准，在因特网上，作为域名系统服务器的机器的性能经常用每秒查询率来衡量。 对应fetches/sec，即每秒的响应请求数，也即是最大吞吐能力。</p>
+
+            
+            <p class="more">
+                <a href="/2016/05/04/2019030500171/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/05/04/2019030500171/" title="TPS和QPS的区别">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/05/04/2019030500114/">
+    		mysql qpress压缩备份恢复
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-05-04T01:58:29.000Z">2016-05-04</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/gzip/" title="gzip">gzip</a> / 
+    
+        <a href="/tags/qpress/" title="qpress">qpress</a> / 
+    
+        <a href="/tags/备份/" title="备份">备份</a> / 
+    
+        <a href="/tags/备份恢复/" title="备份恢复">备份恢复</a> / 
+    
+        <a href="/tags/恢复/" title="恢复">恢复</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1.估计大家都会gzip压缩方法，备份正常，但后来恢复的时候，发现命中bug，报错如下： InnoDB: Page [page id: space=9494, page number=27743946] log sequence number 2332453520996 is in the future! Current system log sequence number 2332453312855. InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to <a href="http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html" target="_blank" rel="noopener">http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html</a> for information about forcing recovery. InnoDB: Page [page id: space=9494, page number=27735123] log sequence number 2332456427612 is in the future! Current system log sequence number 2332453312855. InnoDB: Your database may be corrupt or you may have copied the InnoDB tablespace but not the InnoDB log files. Please refer to <a href="http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html" target="_blank" rel="noopener">http://dev.mysql.com/doc/refman/5.7/en/forcing-innodb-recovery.html</a> for information about forcing recovery. InnoDB: Apply batch completed InnoDB: xtrabackup: Last MySQL binlog file position 513900963, file name mysql-bin.000436 InnoDB: Creating shared tablespace for temporary tables InnoDB: Starting in background the rollback of uncommitted transactions InnoDB: Rolling back trx with id 661140886, 1 rows to undo InnoDB: Setting file ‘./ibtmp1’ size to 12 MB. Physically writing the file full; Please wait … InnoDB: Rollback of trx with id 661140886 completed InnoDB: Rolling back trx with id 661140885, 1 rows to undo InnoDB: Rollback of trx with id 661140885 completed InnoDB: Rolling back trx with id 661140884, 1 rows to undo InnoDB: Rollback of trx with id 661140884 completed InnoDB: Rollback of non-prepared transactions completed InnoDB: File ‘./ibtmp1’ size is now 12 MB. InnoDB: 96 redo rollback segment(s) found. 1 redo rollback segment(s) are active. InnoDB: 32 non-redo rollback segment(s) are active. InnoDB: 5.7.10 started; log sequence number 2332453312097 InnoDB: page_cleaner: 1000ms intended loop took 341221ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.) InnoDB: not started InnoDB: xtrabackup: Last MySQL binlog file position 513900963, file name mysql-bin.000436 xtrabackup: error: The transaction log file is corrupted. xtrabackup: error: The log was not applied to the intended LSN! 2.本文采用了qpress的压缩方式，并发备份，速度比原来要快5倍，压缩比率比gzip稍微低一些，gzip约为117/775,qpress 约为157/775 一、备份机制 一周全备份一次 每天做一次增备（全备份当天除外） 二、备份 2.1全备： innobackupex –defaults-file=/etc/my.cnf –use-memory=10G –user=root –password=root –compress –compress-threads=8 –parallel=4 –stream=xbstream /mysql/full –extra-lsndir=/tmp  &gt; /mysql/full/backup.xbstream 若需要传到其他主机，可使用下述命令： innobackupex –defaults-file=/etc/my.cnf –use-memory=10G –user=root –password=root –compress –compress-threads=8 –parallel=4 –stream=xbstream /mysql/full –extra-lsndir=/tmp |ssh  <a href="mailto:root@180.153.62.136" target="_blank" rel="noopener">root@180.153.62.136</a>“ xbstream -x -C /mysql/full” 2.2增量备份：–必须是在全备的基础上进行 innobackupex –defaults-file=/etc/my.cnf –use-memory=10G –user=root –password=root –compress –compress-threads=8 –parallel=4 –stream=xbstream  –incremental –incremental-basedir=/tmp –extra-lsndir=/tmp  /mysql/incre1&gt; /mysql/incre1/backup_incre1.xbstream 三、备份恢复举例 当前环境： mysql&gt; use testdb Reading table information for completion of table and column names You can turn off this feature to get a quicker startup with -A Database changed mysql&gt; show tables; +———————+ | Tables_in_testdb    | +———————+ | fq_1                | | milestat            | | miletest            | | runningrecord       | | runningrecordlatest | | t1                  | | t2                  | | t3                  | | t4                  | | t_timetest          | | testrun             | | testrun2            | | v_1                 | +———————+ 13 rows in set (0.01 sec) mysql&gt; select <em> from t1; +——+ | id   | +——+ |    1 | |    2 | |    3 | |    4 | +——+ 4 rows in set (0.04 sec) 1）全备：–并发数可自定义 innobackupex –defaults-file=/etc/my.cnf –use-memory=500m –user=root –password=root –compress –compress-threads=2 –parallel=2 –stream=xbstream /mysql/full –extra-lsndir=/tmp  &gt; /mysql/full/backup.xbstream [root@kafka1 full]# ll 总用量 9492 -rw-r–r–. 1 root root 9716168 5月   3 11:55 backup.xbstream [root@kafka1 full]# cat /tmp/xtrabackup_checkpoints   –记录位置点的文件 backup_type = full-backuped from_lsn = 0                      –开始点 to_lsn = 50779787                 –结束点 last_lsn = 50779796 compact = 0 recover_binlog_info = 0 [root@kafka1 full]# 说明：因为全备要拷贝走，因此需要额外的一份lsn保留下来，以便下次读取位置做增备 2）做一些操作： mysql&gt; insert into t1 values (5),(6),(7),(8); Query OK, 4 rows affected (0.33 sec) Records: 4  Duplicates: 0  Warnings: 0 mysql&gt; select </em> from t1; +——+ | id   | +——+ |    1 | |    2 | |    3 | |    4 | |    5 | |    6 | |    7 | |    8 | +——+ 8 rows in set (0.00 sec) mysql&gt; drop table t4; Query OK, 0 rows affected (0.10 sec) 3）第一次增量备份 innobackupex –defaults-file=/etc/my.cnf –use-memory=400m –user=root –password=root –compress –compress-threads=2 –parallel=2 –stream=xbstream  –incremental –incremental-basedir=/tmp –extra-lsndir=/tmp  /mysql/incre1&gt; /mysql/incre1/backup_incre1.xbstream 说明： –incremental-basedir 指向的是上一次备份的lsn所在目录； –extra-lsndir 指向的是这一次备份的额外xtrabackup_checkpoints的存放目录； /mysql/incre1 指向的是这次备份的存放目录。 [root@kafka1 incre1]# ll 总用量 488 -rw-r–r–. 1 root root 496194 5月   3 12:03 backup_incre1.xbstream [root@kafka1 tmp]# cat xtrabackup_checkpoints    –名字跟之前一个相同，内容覆盖了 backup_type = incremental from_lsn = 50779787           –开始点（上一次的结束点） to_lsn = 50804287             –结束点 last_lsn = 50804296 compact = 0 recover_binlog_info = 0 4）再做一些操作 mysql&gt; truncate table t1; Query OK, 0 rows affected (0.14 sec) 5）第二次增量备份 innobackupex –defaults-file=/etc/my.cnf –use-memory=400m –user=root –password=root –compress –compress-threads=2 –parallel=2 –stream=xbstream  –incremental –incremental-basedir=/tmp –extra-lsndir=/tmp  /mysql/incre2&gt; /mysql/incre2/backup_incre2.xbstream [root@kafka1 mysql]# cd incre2 [root@kafka1 incre2]# ll 总用量 456 -rw-r–r–. 1 root root 465003 5月   3 13:38 backup_incre2.xbstream [root@kafka1 incre2]# cat /tmp/xtrabackup_checkpoints backup_type = incremental from_lsn = 50804287              –开始点 to_lsn = 50811553                –结束点 last_lsn = 50811562 compact = 0 recover_binlog_info = 0 [root@kafka1 incre2]# cd /mysql [root@kafka1 mysql]# du -sh <em> 9.3M full 488K incre1 456K incre2 [root@kafka1 mysql]# ll 总用量 0 drwxrwxrwx. 2 root root 28 5月   3 11:55 full drwxrwxrwx. 2 root root 35 5月   3 12:02 incre1 drwxrwxrwx. 2 root root 35 5月   3 13:38 incre2 6）模拟灾难 磁盘故障，整个数据丢失，在新机器上装好mysql后（目录相同，进行初始化） [root@kafka1 incre1]# service mysql57 stop Shutting down MySQL… SUCCESS! [root@kafka1 incre1]# cd /usr/local/mysql [root@kafka1 mysql]# ll 总用量 304 drwxr-xr-x.  2 mysql mysql   4096 11月 30 03:54 bin -rw-r–r–.  1 mysql mysql  17987 11月 30 03:16 COPYING drwxr-xr-x.  7 mysql mysql   4096 5月   3 13:43 data drwxr-xr-x.  6 mysql mysql   4096 4月  11 14:26 data_old drwxr-xr-x.  2 mysql mysql     52 11月 30 03:54 docs drwxr-xr-x.  3 mysql mysql   4096 11月 30 03:54 include -rw-r–r–.  1 mysql mysql 108090 11月 30 03:26 INSTALL-BINARY drwxr-xr-x.  5 mysql mysql   4096 11月 30 03:54 lib drwxr-xr-x.  4 mysql mysql     28 11月 30 03:54 man -rw-r—–.  1 mysql mysql 141349 5月   3 13:43 mysqlerr.log -rw-r–r–.  1 mysql mysql   2478 11月 30 03:16 README drwxr-xr-x. 28 mysql mysql   4096 11月 30 03:54 share drwxr-xr-x.  2 mysql mysql   4096 11月 30 03:54 support-files [root@kafka1 mysql]# mv data data_bak     —整个data目录移走 [root@kafka1 mysql]# mkdir data [root@kafka1 mysql]# chown mysql:mysql data  –新建一个空的，准备恢复 7）解压全备包 [root@kafka1 full]# xbstream -x &lt;backup.xbstream  -C /tmp/test [root@kafka1 full]# cd /tmp/test [root@kafka1 test]# ll 总用量 3568 -rw-r—–. 1 root root     407 5月   3 14:58 backup-my.cnf.qp -rw-r—–. 1 root root     308 5月   3 14:58 ib_buffer_pool.qp -rw-r—–. 1 root root 3594072 5月   3 14:58 ibdata1.qp drwxr-x—. 2 root root    4096 5月   3 14:58 mysql drwxr-x—. 2 root root    8192 5月   3 14:58 performance_schema drwxr-x—. 2 root root    4096 5月   3 14:58 sakila drwxr-x—. 2 root root    8192 5月   3 14:58 sys drwxr-x—. 2 root root    4096 5月   3 14:58 testdb -rw-r—–. 1 root root     115 5月   3 14:58 xtrabackup_checkpoints -rw-r—–. 1 root root     540 5月   3 14:58 xtrabackup_info.qp -rw-r—–. 1 root root     369 5月   3 14:58 xtrabackup_logfile.qp 8）解压增量包 [root@kafka1 incre1]# xbstream -x &lt;backup_incre1.xbstream [root@kafka1 incre1]# ll total 640 -rw-r–r–. 1 root root 496194 May  3 12:03 backup_incre1.xbstream -rw-r—–. 1 root root    407 May  3 15:02 backup-my.cnf.qp -rw-r—–. 1 root root    308 May  3 15:02 ib_buffer_pool.qp -rw-r—–. 1 root root  79915 May  3 15:02 ibdata1.delta.qp -rw-r—–. 1 root root     44 May  3 15:02 ibdata1.meta drwxr-x—. 2 root root   4096 May  3 15:02 mysql drwxr-x—. 2 root root   8192 May  3 15:02 performance_schema drwxr-x—. 2 root root   4096 May  3 15:02 sakila drwxr-x—. 2 root root   8192 May  3 15:02 sys drwxr-x—. 2 root root   4096 May  3 15:02 testdb -rw-r—–. 1 root root    120 May  3 15:02 xtrabackup_checkpoints -rw-r—–. 1 root root    565 May  3 15:02 xtrabackup_info.qp -rw-r—–. 1 root root    329 May  3 15:02 xtrabackup_logfile.qp [root@kafka1 incre2]# xbstream -x &lt;backup_incre2.xbstream [root@kafka1 incre2]# ll total 584 -rw-r–r–. 1 root root 465003 May  3 13:38 backup_incre2.xbstream -rw-r—–. 1 root root    407 May  3 15:02 backup-my.cnf.qp -rw-r—–. 1 root root    308 May  3 15:02 ib_buffer_pool.qp -rw-r—–. 1 root root  56172 May  3 15:02 ibdata1.delta.qp -rw-r—–. 1 root root     44 May  3 15:02 ibdata1.meta drwxr-x—. 2 root root   4096 May  3 15:02 mysql drwxr-x—. 2 root root   8192 May  3 15:02 performance_schema drwxr-x—. 2 root root   4096 May  3 15:02 sakila drwxr-x—. 2 root root   8192 May  3 15:02 sys drwxr-x—. 2 root root   4096 May  3 15:02 testdb -rw-r—–. 1 root root    120 May  3 15:02 xtrabackup_checkpoints -rw-r—–. 1 root root    567 May  3 15:02 xtrabackup_info.qp -rw-r—–. 1 root root    400 May  3 15:02 xtrabackup_logfile.qp 9）解压所有qp文件 9.1 安装 tar –xvf qpress-11-linux-x64.tar cp qpress /usr/bin chmod 777 qpress 9.2解压全备 [root@kafka1 test]# for f in `find ./ -iname “</em>\.qp”`; do qpress -dT2 $f  $(dirname $f) &amp;&amp; rm -f $f; done [root@kafka1 test]# ll 总用量 77880 -rw-r–r–. 1 root root      412 5月   3 15:14 backup-my.cnf -rw-r–r–. 1 root root      300 5月   3 15:14 ib_buffer_pool -rw-r–r–. 1 root root 79691776 5月   3 15:14 ibdata1 drwxr-x—. 2 root root     4096 5月   3 15:14 mysql drwxr-x—. 2 root root     8192 5月   3 15:14 performance_schema drwxr-x—. 2 root root     4096 5月   3 15:14 sakila drwxr-x—. 2 root root     8192 5月   3 15:14 sys drwxr-x—. 2 root root     4096 5月   3 15:14 testdb -rw-r—–. 1 root root      115 5月   3 14:58 xtrabackup_checkpoints -rw-r–r–. 1 root root      563 5月   3 15:14 xtrabackup_info -rw-r–r–. 1 root root     2560 5月   3 15:14 xtrabackup_logfile 9.3解压增备1 [root@kafka1 incre1]# for f in `find ./ -iname “<em>\.qp”`; do qpress -dT2 $f  $(dirname $f) &amp;&amp; rm -f $f; done [root@kafka1 incre1]# ll 总用量 1220 -rw-r–r–. 1 root root 496194 5月   3 12:03 backup_incre1.xbstream -rw-r–r–. 1 root root    412 5月   3 15:26 backup-my.cnf -rw-r–r–. 1 root root    300 5月   3 15:26 ib_buffer_pool -rw-r–r–. 1 root root 671744 5月   3 15:26 ibdata1.delta -rw-r—–. 1 root root     44 5月   3 15:02 ibdata1.meta drwxr-x—. 2 root root   4096 5月   3 15:26 mysql drwxr-x—. 2 root root   8192 5月   3 15:26 performance_schema drwxr-x—. 2 root root   8192 5月   3 15:26 sakila drwxr-x—. 2 root root   8192 5月   3 15:26 sys drwxr-x—. 2 root root   4096 5月   3 15:26 testdb -rw-r—–. 1 root root    120 5月   3 15:02 xtrabackup_checkpoints -rw-r–r–. 1 root root    612 5月   3 15:26 xtrabackup_info -rw-r–r–. 1 root root   2560 5月   3 15:26 xtrabackup_logfile 9.4解压增备2 [root@kafka1 incre2]# for f in `find ./ -iname “</em>\.qp”`; do qpress -dT2 $f  $(dirname $f) &amp;&amp; rm -f $f; done [root@kafka1 incre2]# ll 总用量 1072 -rw-r–r–. 1 root root 465003 5月   3 13:38 backup_incre2.xbstream -rw-r–r–. 1 root root    412 5月   3 15:10 backup-my.cnf -rw-r–r–. 1 root root    300 5月   3 15:10 ib_buffer_pool -rw-r–r–. 1 root root 557056 5月   3 15:10 ibdata1.delta -rw-r—–. 1 root root     44 5月   3 15:02 ibdata1.meta drwxr-x—. 2 root root   4096 5月   3 15:10 mysql drwxr-x—. 2 root root   8192 5月   3 15:10 performance_schema drwxr-x—. 2 root root   4096 5月   3 15:10 sakila drwxr-x—. 2 root root   8192 5月   3 15:10 sys drwxr-x—. 2 root root   4096 5月   3 15:10 testdb -rw-r—–. 1 root root    120 5月   3 15:02 xtrabackup_checkpoints -rw-r–r–. 1 root root    613 5月   3 15:10 xtrabackup_info -rw-r–r–. 1 root root   2560 5月   3 15:10 xtrabackup_logfile 10）应用所有日志 10.1 应用全备日志 innobackupex –use-memory=400m –apply-log  –redo-only /tmp/test xtrabackup: starting shutdown with innodb_fast_shutdown = 1 InnoDB: Starting shutdown… InnoDB: Shutdown completed; log sequence number 50779805 InnoDB: Number of pools: 1 160503 15:23:35 completed OK! 10.2 应用增备日志1 innobackupex   –use-memory=400m –apply-log –redo-only  /tmp/test –incremental-dir=/mysql/incre1 ……………… 160503 15:27:41 [01] Copying /mysql/incre1/performance_schema/db.opt to ./performance_schema/db.opt 160503 15:27:41 [01]        …done 160503 15:27:41 [01] Copying /mysql/incre1/performance_schema/cond_instances.frm to ./performance_schema/cond_instances.frm 160503 15:27:41 [01]        …done 160503 15:27:41 [00] Copying /mysql/incre1/xtrabackup_info to ./xtrabackup_info 160503 15:27:41 [00]        …done 160503 15:27:41 completed OK! 10.3 应用增备日志2 innobackupex   –use-memory=400m –apply-log  /tmp/test –incremental-dir=/mysql/incre2 说明：其实就是将增备1和增备2中的所有操作日志应用到全备目录，那么此时的全备目录就是增备2的最新数据，直接使用这个全备目录还原即可。 最后一次的增备不带redo-only参数 11)将数据目录拷贝回data 11.1 可使用copy-back innobackupex –defaults-file=/etc/my.cnf  –user=’root’ –password=’root’ –copy-back  /tmp/test 11.2 也可直接修改名称，mv过去 [root@kafka1 mysql]# cd  /tmp/test [root@kafka1 test]# cp -r <em> ../data/ [root@kafka1 mysql]# chown -R mysql:mysql data 12）启动mysql [root@kafka1 mysql]# service mysql57 start Starting MySQL… SUCCESS! [root@kafka1 mysql]# /usr/local/mysql/bin/mysql -uroot -p Enter password: Welcome to the MySQL monitor.  Commands end with ; or \g. Your MySQL connection id is 2 Server version: 5.7.10 MySQL Community Server (GPL) Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved. Oracle is a registered trademark of Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners. Type ‘help;’ or ‘\h’ for help. Type ‘\c’ to clear the current input statement. mysql&gt; show databases; +——————–+ | Database           | +——————–+ | information_schema | | mysql              | | performance_schema | | sakila             | | sys                | | testdb             | +——————–+ 6 rows in set (0.08 sec) mysql&gt; use testdb Reading table information for completion of table and column names You can turn off this feature to get a quicker startup with -A Database changed mysql&gt; show tables; +———————+ | Tables_in_testdb    | +———————+ | fq_1                | | milestat            | | miletest            | | runningrecord       | | runningrecordlatest | | t1                  | | t2                  | | t3                  | | t_timetest          | | testrun             | | testrun2            | | v_1                 | +———————+ 12 rows in set (0.00 sec) mysql&gt; select </em> from t1; Empty set (0.00 sec) 验证可发现，所有备份的操作都在，恢复成功！ 13）利用binlog恢复到当天最新数据（由于我测试环境没开binlog，因此后续没测试） –获取最后一次增量的log position cd /mysql/incre2 more xtrabackup_binlog_info mysql-binlog.000453     774 –使用start-position 和stop-datetime  将日志追加到最新 mysqlbinlog /mysql/mysql-binlog/mysql-binlog.000453 –start-position=774 –stop-datetime=”2016-05-03 10:00:00” \ &gt; |mysql -uroot -proot –P2021</p>
+
+            
+            <p class="more">
+                <a href="/2016/05/04/2019030500114/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/05/04/2019030500114/" title="mysql qpress压缩备份恢复">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/04/11/2019030500089/">
+    		MySQL查询表内重复记录（总汇）
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-04-11T03:21:51.000Z">2016-04-11</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h1 id="MySQL查询表内重复记录"><a href="#MySQL查询表内重复记录" class="headerlink" title="MySQL查询表内重复记录"></a>MySQL查询表内重复记录</h1><p>  查询及删除重复记录的方法 (一) 1、查找表中多余的重复记录，重复记录是根据单个字段（peopleId）来判断 select <em> from people where peopleId in (select peopleId from people group by peopleId having count(peopleId) &gt; 1) 2、删除表中多余的重复记录，重复记录是根据单个字段（peopleId）来判断，只留有一个记录 delete from people where peopleId in (select peopleId from people group by peopleId having count(peopleId) &gt; 1) and min(id) not in (select id from people group by peopleId having count(peopleId )&gt;1) 3、查找表中多余的重复记录（多个字段） select </em> from vitae a where (a.peopleId,a.seq) in (select peopleId,seq from vitae group by peopleId,seq having count(<em>) &gt; 1) 4、删除表中多余的重复记录（多个字段），只留有rowid最小的记录 delete from vitae a where (a.peopleId,a.seq) in (select peopleId,seq from vitae group by peopleId,seq having count(</em>) &gt; 1) and rowid not in (select min(rowid) from vitae group by peopleId,seq having count(<em>)&gt;1) 5、查找表中多余的重复记录（多个字段），不包含rowid最小的记录 select </em> from vitae a where (a.peopleId,a.seq) in (select peopleId,seq from vitae group by peopleId,seq having count(<em>) &gt; 1) and rowid not in (select min(rowid) from vitae group by peopleId,seq having count(</em>)&gt;1) (二) 比方说 在A表中存在一个字段“name”， 而且不同记录之间的“name”值有可能会相同， 现在就是需要查询出在该表中的各记录之间，“name”值存在重复的项； Select Name,Count(<em>) From A Group By Name Having Count(</em>) &gt; 1 如果还查性别也相同大则如下: Select Name,sex,Count(<em>) From A Group By Name,sex Having Count(</em>) &gt; 1 (三) 方法一 declare @max integer,@id integer declare cur_rows cursor local for select 主字段,count(<em>) from 表名 group by 主字段 having count(</em>) &gt;； 1 open cur_rows fetch cur_rows into @id,@max while @@fetch_status=0 begin select @max = @max -1 set rowcount @max delete from 表名 where 主字段 = @id fetch cur_rows into @id,@max end close cur_rows set rowcount 0</p>
+
+            
+            <p class="more">
+                <a href="/2016/04/11/2019030500089/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/04/11/2019030500089/" title="MySQL查询表内重复记录（总汇）">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/04/07/2019030500027/">
+    		数据仓库建设
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-04-07T04:55:54.000Z">2016-04-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/数据仓库/" title="数据仓库">数据仓库</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>数据仓库要解决的关键问题是：如何将客观世界的复杂业务逻辑用一张张表组织起来，而这种组织方式能更加高效地应对业务变更以及更加灵活、稳定的支撑业务需求。</p>
+<h1 id="关于数据开发"><a href="#关于数据开发" class="headerlink" title="关于数据开发"></a>关于数据开发</h1><p>数据仓库严格来说是一种体系结构，在工作过程中，有的同学认为数据开发相对系统开发技术含量低，个人认为造成这种想法的主要原因是：只单纯的通过ETL方式解决单个的需求，没有站在一个全局的角度来解决问题，建设数据。</p>
+<p>我们在处理需求过程中，要加深业务理解，不能停留在处理单个需求层面上，注重总结积累，进行指标体系建设等。</p>
+<p>系统开发和仓库建设的目的都是为了解决问题，本质上是一样的，两者都面临着各种各样难以解决的问题，能建设好数据仓库是相当不容易的，建设数据仓库过程中也是非常需要采用工程方法来提升效率的，所以仓库建设和系统开发并不矛盾，我们应该积极寻找结合点，而不能陷入疲于应付需求的泥潭。</p>
+<h1 id="仓库建模"><a href="#仓库建模" class="headerlink" title="仓库建模"></a>仓库建模</h1><p>较好的组织方式会提升数据质量，让数据仓库发挥更大价值。不好的组织方式可能会导致各种问题，比如数据重复建设，复用率低，一致性差，进而带来口径不一致，理解困难、不易于使用等问题，失去数据仓库建设的价值，造成各种资源浪费。</p>
+<p>数据仓库在企业里面发挥着重要的作用，数据平台是为数据仓库服务的，hadoop、hive等作为数据仓库的支撑系统存在，建设好数据仓库需要多个环节合作，是一件非常重要也相当不容易的事情，如何强调其重要性都不为过。</p>
+<h2 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h2><p>将客观世界划分成关系与实体，数据仓库由一系列的关系以及实体组成，严格遵守3nf范式，数据一致性比较强，冗余度低。</p>
+<p>通过参照完整性来保证一致性，采用关系模型生成的数据仓库往往成蜘蛛网结构，可读性差，不容易入手，对于非仓库建设人员要使用数据仓库中的数据成本是非常高的。</p>
+<h2 id="维度建模"><a href="#维度建模" class="headerlink" title="维度建模"></a>维度建模</h2><p>维度建模方式将客户世界分解成事实和维度，建模过程的一大部分工作体现在抽取维度以及事实，相对来说更加直观，容易理解，在业务变更较为频繁的场景可以更加有效地覆盖业务需求。</p>
+<p>数据仓库由一系列的事实表以及维度表组成，事实表与维表之间呈星型连接，事实表之间又通过特定维度联系，形成雪花结构。</p>
+<h2 id="3NF范式"><a href="#3NF范式" class="headerlink" title="3NF范式"></a>3NF范式</h2><p>3nf在第一范式原子性、第二范式不存在部分依赖基础上加入消除传递依赖，其目的是降低数据冗余度，提高数据一致性。关系模型有时候也被称为范式建模，但是这种说法是不太严谨的。因为关系模型好维度建模生成的表都可以符合3nf范式。</p>
+<h1 id="模型选择"><a href="#模型选择" class="headerlink" title="模型选择"></a>模型选择</h1><p>划分世界的方式不一样：一个是实体关系，一个是维度模型，但都可以使用范式。</p>
+<h2 id="关系模型-1"><a href="#关系模型-1" class="headerlink" title="关系模型"></a>关系模型</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol>
+<li>灵活性</li>
+<li>冗余度低</li>
+<li>一致性</li>
+<li>易维护</li>
+</ol>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol>
+<li>不直观</li>
+<li>获取效率不高</li>
+</ol>
+<h2 id="维度模型"><a href="#维度模型" class="headerlink" title="维度模型"></a>维度模型</h2><h3 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h3><ol>
+<li>直观性</li>
+<li>易用性</li>
+<li>访问高效</li>
+</ol>
+<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3><ol>
+<li>容易不一致</li>
+<li>数据冗余</li>
+<li>灵活性差</li>
+<li>适用范围有限</li>
+</ol>
+<h2 id="数据仓库建设人员"><a href="#数据仓库建设人员" class="headerlink" title="数据仓库建设人员"></a>数据仓库建设人员</h2><p>追求数据一致性、灵活性、易维护。</p>
+<h2 id="最终用户"><a href="#最终用户" class="headerlink" title="最终用户"></a>最终用户</h2><p>  追求数据访问高效性、直观，易用使用。</p>
+
+            
+            <p class="more">
+                <a href="/2016/04/07/2019030500027/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/04/07/2019030500027/" title="数据仓库建设">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/03/22/2019030500135/">
+    		Oracle序列号简述
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-03-22T08:03:30.000Z">2016-03-22</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/SEQUENCE/" title="SEQUENCE">SEQUENCE</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>序列号SEQUENCE：是Oracle提供的用于产生一系列唯一数字的数据库对象。   序列号在数据库中是一个共享对象, 序列号是一个计数器，它并不会与特定的表关联。 主要用于提供主键值或唯一约束值。 将序列值装入内存可以提高访问效率。   <strong>创建序列号语法：</strong> CREATE SEQUENCE [SCHEMA.]SEQUENCE_NAME [INCREMENT BY N] [START WITH N] [{MAXVALUE N | NOMAXVALUE}] [{MINVALUE N | NOMINVALUE}] [{CYCLE | NOCYCLE}] [{CACHE N | NOCACHE}];   SEQUENCE_NAME:序列号名称 INCREMENT BY用于定义序列的步长，如果省略，则默认为1，如果出现负值，则代表Oracle序列的值是按照此步长递减的。 START WITH 定义序列的初始值(即产生的第一个值)，默认为1。 MAXVALUE 定义序列生成器能产生的最大值。选项NOMAXVALUE是默认选项，代表没有最大值定义，这时对于递增Oracle序列，系统能够产生的最大值是10的27次方;对于递减序列，最大值是-1。 MINVALUE定义序列生成器能产生的最小值。选项NOMAXVALUE是默认选项，代表没有最小值定义，这时对于递减序列，系统能够产生的最小值是-10的26次方;对于递增序列，最小值是1。 CYCLE和NOCYCLE 表示当序列生成器的值达到限制值后是否循环。CYCLE代表循环，NOCYCLE代表不循环。如果循环，则当递增序列达到最大值时，循环到最小值;最小值为1。对于递减序列达到最小值时，循环到最大值。如果不循环，达到限制值后，继续产生新值就会发生错误。 CACHE(缓冲)定义存放序列的内存块的大小，默认为20。NOCACHE表示不对序列进行内存缓冲。对序列进行内存缓冲，可以改善序列的性能。 缓存选项会造成数据丢失，当实例异常关闭时。   如果指定CACHE值，ORACLE就可以<strong>预先在内存里面放置一些SEQUENCE</strong>，这样存取的快些。CACHE里面的取完后，ORACLE自动再取一组到CACHE。使用CACHE或许会跳号， 比如数据库突然不正常DOWN掉（SHUTDOWN ABORT),CACHE中的SEQUENCE就会丢失。举个例子：比如你的SEQUENCE中CACHE 100，那当你SEQUENCE取到90时突然断电，那么在你重启数据库后，SEQUENCE的值将从101开始。   如果指定NOCACHE值，ORACLE就不会预先在内存里面存放SEQUENCE，当然这也就可以避免数据库不正常DOWN掉的SEQUENCE丢失。不过会产生一些问题：创建NOCACHE SEQUENCE在高并发访问时，容易导致ROW CACHE LOCK等待事件，主要原因是每次获取NEXTVAL时都需要修改ROWCACHE中的字典信息。使用NOCACHE SEQUENCE，还会导致如下问题: 由于每次修改字典信息都需要COMMIT,可能导致LOG FILE SYNC等待，NOCACHE SEQUENCE在RAC环境下，会对基于SEQUENCE生成的列创建的索引，造成实例间大量索引块争用，基于以上问题,避免创建NOCACHE SEQUENCE。   SEQUENCE相关保护机制： ROW CACHE LOCK：在调用SEQUENCE.NEXTVAL情况下需要修改数据字典时发生，对应ROW CACHE LOCK事件。 SQ LOCK：在内存缓存(并非ROW CACHE)上获取SEQUENCE.NEXTVAL时发生，对应ENQ:SQ-CONTENTION事件。 SV LOCK：RAC环境下获取CACHE+ORDER属性的SEQUENCE.NEXTVAL时发生，对应DFS LOCK HANDLE事件。   使用序列号会产生跳号，序列在下列情况下出现裂缝: 回滚 系统异常 多个表同时使用同一序列   <strong>序列号使用：</strong> -- 返回序列中下一个有效的值，任何用户都可以引用 SELECT SEQUENCE_NAME.NEXTVAL FROM DUAL; – 序列的当前值 SELECT SEQUENCE_NAME.CURRVAL FROM DUAL;   实例应用：实现ID的自动递增 创建序列号 CREATE SEQUENCE TEST_SEQ INCREMENT BY 1 START WITH 1 MAXVALUE 30000 MINVALUE 1 CACHE 2;   创建表 CREATE TABLE TEST_TABLE( ID NUMBER(6), NAME VARCHAR2(30), CONSTRAINT PK_ID PRIMARY KEY(ID) );   插入数据 INSERT INTO TEST_TABLE VALUES(TEST_SEQ.NEXTVAL,’TOM’); COMMIT;   查看数据库中的序列号： SELECT <em> FROM USER_SEQUENCES; SELECT </em> FROM ALL_SEQUENCES; SELECT * FROM DBA_SEQUENCES;   <strong>修改序列号:</strong> ALTER SEQUENCE SEQUENCE_NAME [INCREMENT BY N] [{MAXVALUE N | NOMAXVALUE}] [{MINVALUE N | NOMINVALUE}] [{CYCLE | NOCYCLE}] [{CACHE N | NOCACHE}];   <strong>不能修改序列的初始值,否则会报ORA-02283:无法更改启动序列号</strong>   <strong>删除序列号：</strong> DROP SEQUENCE [SCHEMA.]序列名;</p>
+
+            
+            <p class="more">
+                <a href="/2016/03/22/2019030500135/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/03/22/2019030500135/" title="Oracle序列号简述">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/18/">18</a><a class="extend next" rel="next" href="/archives/page/2/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1282 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>`MySQL`分类下的文章 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/categories/MySQL/page/3/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/categories/MySQL/page/3/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/categories/MySQL/page/3/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/categories/MySQL/page/3/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `MySQL`分类下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/12/2019030500084/">
+    		MySQL实现统计数据并插入数据的存储过程
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-12T04:33:24.000Z">2016-01-12</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>统计存储过程，这里是将统计的结果插入一个表中，后台可以有定时任务来调此存储过程。以下业务是统计仓库中商品流转情况，包括：日期、商品总数、入库数量、出库数量。 BEGIN DECLARE ES_COR_CODE VARCHAR(20); – 需要定义接收游标数据的变量 DECLARE table_ VARCHAR(50); – 遍历数据结束标志 DECLARE done INT DEFAULT FALSE; – 游标 DECLARE cur CURSOR FOR SELECT TABLE_NAME FROM (SELECT TABLE_NAME from information_schema.tables WHERE TABLE_NAME LIKE ‘%wm_item_transfer_%’ AND TABLE_SCHEMA=’wmscloud_test’ ) allTables; – 将结束标志绑定到游标 DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE; – 打开游标 OPEN cur; – 开始循环 read_loop: LOOP – 提取游标里的数据，这里只有一个，多个的话也一样； FETCH cur INTO table_; – 声明结束的时候 IF done THEN LEAVE read_loop; END IF; SET ES_COR_CODE=substring(table_,18); SET @INSERT_ITEM_TRANSFER=CONCAT(‘INSERT INTO wm_item_transfer_’,ES_COR_CODE,’ (WMIT_DATE,WMIT_STOCK_NUM,WMIT_INTO_ITEM_NUM,WMIT_OUT_ITEM_NUM) SELECT (SELECT date_sub(curdate(),interval 1 day) ) WMIT_DATE , (SELECT IFNULL(SUM(WMST_NOW_NUMBER),0) FROM wm_stock_’,ES_COR_CODE,’) WMIT_STOCK_NUM, (SELECT IFNULL(SUM(WMST_NOW_NUMBER),0) FROM wm_stock_‘,ES_COR_CODE,’ WHERE WMST_RECEIVE_DATE BETWEEN date_sub(curdate(),interval 1 day) AND NOW() ) WMIT_INTO_ITEM_NUM, (SELECT IFNULL(SUM(WMOO_OUT_NUMBER),0) FROM wm_out_order_’,ES_COR_CODE,’ where SURE_DATE BETWEEN date_sub(curdate(),interval 1 day) AND NOW() ) WMIT_OUT_ITEM_NUM’); PREPARE INSERT_ITEM_TRANSFER FROM @INSERT_ITEM_TRANSFER; EXECUTE INSERT_ITEM_TRANSFER; END LOOP; – 关闭游标 CLOSE cur; END</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/12/2019030500084/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/12/2019030500084/" title="MySQL实现统计数据并插入数据的存储过程">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/07/2019030500113/">
+    		mysql MyISAM引擎延迟更新索引
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-07T05:25:10.000Z">2016-01-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/MyISAM/" title="MyISAM">MyISAM</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>MySQL延迟更新索引（Delayed Key Write）： 使用表创建选项DELAY_KEY_WRITE创建的myisam表，在查询结束后，不会将索引的改变数据写入磁盘，而是在内存的健缓冲区（In-memory key buffer）中缓存索引改变数据。它只会在清理缓存区，或关闭表时，才将索引块转储到磁盘。对于数据经常改变，并且使用频繁的表，这种模式大大提高了表的处理性能。 不过，如果在服务器或系统奔溃，索引将肯定损坏，并需要修复。用户可以使用脚本，如运行myisamchk工具，在重启服务器前进行修复，也可以使用自动修复（Automatic Recovery）选项进行修复（即使没有选用DELAY_KEY_WRITE选项，这些修复上的安全措施也是很有价值的）。延迟更新索引特性可以被全局配置，也可以为个别表单独配置。   <strong>MySQL数据库参数DELAY_KEY_WRITE</strong>： DELAY_KEY_WRITE是指在表关闭之前，将对表的update操作只更新数据到磁盘，而不更新索引到磁盘，把对索引的更改记录在内存。（这个选项的作用是暂时制止MySQL在该命令每插入一条新记录和每修改一条现有之后立刻对索引进行刷新，对索引的刷新将等到全部记录插入/修改完毕之后再进行） 这样MyISAM表可以使索引更新更快。在关闭表的时候一起更新索引到磁盘。   <strong>使用：</strong>1：create table的时候，指定DELAY_KEY_WRITE。 2： 当表已经存在的时候：ALTER TABLE table_name DELAY_KEY_WRITE= 1。 <strong>场景：</strong>表有update操作，duang duang的体现出优势了。因为这个参数能延迟更新索引到表关闭。经常更新一个大表的时候，可以用这个参数 <strong>小提示：</strong>当DELAY_KEY_WRITE使用的时候，如果出现重启或者掉电啥的情况，会导致在cache的索引update没来得及更新，所以必须在启动参数加上 –myisam-recover，这样在你启动mysql的时候会检查你的表并同步表和索引.或者在重启服务器之前运行myisamchk。使用该特性，应用–myisam-recover选项启动服务器，为所有MyISAM表添加自动检查。</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/07/2019030500113/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/07/2019030500113/" title="mysql MyISAM引擎延迟更新索引">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/30/2019030500068/">
+    		MySQL会话锁等待关系原理
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-30T12:44:39.000Z">2015-12-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/会话锁/" title="会话锁">会话锁</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>会话依赖关系主要需要理解锁等待相关四张表的关系： 先查询当前会话持有哪些事务的锁和依赖哪些事务的锁，通过这两种锁就可以得到一种图关系。 <strong>一：查询当前会话持有的锁：</strong> 1.查询当前会话processlist.id 2.processlist.id对应innodb_trx表中的TRX_MYSQL_THREAD_ID，这样就可以查询到当前会话的事务id 3.到lock_waits中查询blocking_trx_id 为当前会话的事务id,这样就获得了当前会话的持有lock_id 4.根据lock_id到innodb_lock可以查询出当前会话持有锁信息。 其实如果只需要查询会话的依赖的关系不需要知道锁信息的话，到第三步就可以了，通过第三步的REQUESTING_TRX_ID来反查innodb_trx表获取trx_id，反查processlist表就可以得到被当前会话阻塞的会话列表。   <strong>二：查询当前会话正等待的锁</strong> 1.查询当前会话processlist.id 2.processlist.id对应innodb_trx表中的TRX_MYSQL_THREAD_ID，这样就可以查询到当前会话的事务id 3.到lock_waits中查询REQUESTING_TRX_ID为当前会话的事务id,这样就获得了当前会话的正等待lock_id 4.根据lock_id到innodb_lock可以查询出当前会话正在等待的锁信息。 同样，其实如果只需要查询会话的依赖的关系不需要知道锁信息的话，到第三步就可以了，通过第三步的blocking_trx_id来反查innodb_trx表获取trx_id，反查processlist表就可以得到被当前会话等待的锁被哪些会话占用了。     下面列出相关表部分表结构：</p>
+<h2 id="1-INFORMATION-SCHEMA-PROCESSLIST"><a href="#1-INFORMATION-SCHEMA-PROCESSLIST" class="headerlink" title="1.INFORMATION_SCHEMA.PROCESSLIST"></a>1.INFORMATION_SCHEMA.PROCESSLIST</h2><p>  The <a href="http://dev.mysql.com/doc/refman/5.6/en/processlist-table.html" title="21.15 The INFORMATION_SCHEMA PROCESSLIST Table" target="_blank" rel="noopener"><code>PROCESSLIST</code></a> table provides information about which threads are running. <code>INFORMATION_SCHEMA</code> Name <a href="http://dev.mysql.com/doc/refman/5.6/en/show.html" title="13.7.5 SHOW Syntax" target="_blank" rel="noopener"><code>SHOW</code></a> Name Remarks</p>
+<p><code>ID</code></p>
+<p><code>Id</code></p>
+<p>MySQL extension</p>
+<p><code>USER</code></p>
+<p><code>User</code></p>
+<p>MySQL extension</p>
+<p><code>HOST</code></p>
+<p><code>Host</code></p>
+<p>MySQL extension</p>
+<p><code>DB</code></p>
+<p><code>db</code></p>
+<p>MySQL extension</p>
+<p><code>COMMAND</code></p>
+<p><code>Command</code></p>
+<p>MySQL extension</p>
+<p><code>TIME</code></p>
+<p><code>Time</code></p>
+<p>MySQL extension</p>
+<p><code>STATE</code></p>
+<p><code>State</code></p>
+<p>MySQL extension</p>
+<p><code>INFO</code></p>
+<p><code>Info</code></p>
+<p>MySQL extension</p>
+<h3 id="2-The-INFORMATION-SCHEMA-INNODB-TRX-Table"><a href="#2-The-INFORMATION-SCHEMA-INNODB-TRX-Table" class="headerlink" title="2.The INFORMATION_SCHEMA INNODB_TRX Table"></a>2.The INFORMATION_SCHEMA INNODB_TRX Table</h3><p><strong>Table 21.4 INNODB_TRX Columns</strong></p>
+<p>Column name Description</p>
+<p><code>TRX_ID</code></p>
+<p>Unique transaction ID number, internal to <code>InnoDB</code>. (Starting in MySQL 5.6, these IDs are not created for transactions that are read-only and non-locking. See <a href="http://dev.mysql.com/doc/refman/5.6/en/innodb-performance-ro-txn.html" title="8.5.3 Optimizing InnoDB Read-Only Transactions" target="_blank" rel="noopener">Section 8.5.3, “Optimizing InnoDB Read-Only Transactions”</a>for details.)</p>
+<p><code>TRX_MYSQL_THREAD_ID</code></p>
+<p>MySQL thread ID. Can be used for joining with <code>PROCESSLIST</code> on <code>ID</code>. See <a href="http://dev.mysql.com/doc/refman/5.6/en/innodb-information-schema-rapidly_changing_internal_data.html#innodb-information-schema-note_inconsistency" title="14.12.2.3.1 Potential Inconsistency with PROCESSLIST Data" target="_blank" rel="noopener">Section 14.12.2.3.1, “Potential Inconsistency with PROCESSLIST Data”</a>.</p>
+<p><code>TRX_REQUESTED_LOCK_ID</code></p>
+<p>ID of the lock the transaction is currently waiting for (if <code>TRX_STATE</code> is<code>LOCK WAIT</code>, otherwise <code>NULL</code>). Details about the lock can be found by joining with <code>INNODB_LOCKS</code> on <code>LOCK_ID</code>.</p>
+<h3 id="3-The-INFORMATION-SCHEMA-INNODB-LOCK-WAITS-Table"><a href="#3-The-INFORMATION-SCHEMA-INNODB-LOCK-WAITS-Table" class="headerlink" title="3.The INFORMATION_SCHEMA INNODB_LOCK_WAITS Table"></a>3.The INFORMATION_SCHEMA INNODB_LOCK_WAITS Table</h3><p><strong>Table 21.6 INNODB_LOCK_WAITS Columns</strong></p>
+<p>Column name Description</p>
+<p><code>REQUESTING_TRX_ID</code></p>
+<p>ID of the requesting transaction.</p>
+<p><code>REQUESTED_LOCK_ID</code></p>
+<p>ID of the lock for which a transaction is waiting. Details about the lock can be found by joining with <code>INNODB_LOCKS</code> on <code>LOCK_ID</code>.</p>
+<p><code>BLOCKING_TRX_ID</code></p>
+<p>ID of the blocking transaction.</p>
+<p><code>BLOCKING_LOCK_ID</code></p>
+<p>ID of a lock held by a transaction blocking another transaction from proceeding. Details about the lock can be found by joining with <code>INNODB_LOCKS</code> on <code>LOCK_ID</code>.</p>
+<h3 id="4-The-INFORMATION-SCHEMA-INNODB-LOCKS-Table"><a href="#4-The-INFORMATION-SCHEMA-INNODB-LOCKS-Table" class="headerlink" title="4.The INFORMATION_SCHEMA INNODB_LOCKS Table"></a>4.The INFORMATION_SCHEMA INNODB_LOCKS Table</h3><p><strong>Table 21.5 INNODB_LOCKS Columns</strong></p>
+<p>  Column name Description</p>
+<p><code>LOCK_ID</code></p>
+<p>Unique lock ID number, internal to <code>InnoDB</code>. Treat it as an opaque string. Although <code>LOCK_ID</code>currently contains <code>TRX_ID</code>, the format of the data in <code>LOCK_ID</code> is not guaranteed to remain the same in future releases. Do not write programs that parse the <code>LOCK_ID</code> value.</p>
+<p><code>LOCK_TRX_ID</code></p>
+<p>ID of the transaction holding this lock. Details about the transaction can be found by joining with <code>INNODB_TRX</code> on <code>TRX_ID</code>.</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/30/2019030500068/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/30/2019030500068/" title="MySQL会话锁等待关系原理">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/28/2019030500102/">
+    		MySQL的语句执行顺序
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-28T11:23:28.000Z">2015-12-28</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>MySQL的语句一共分为11步，如下图所标注的那样，最先执行的总是 FROM操作，最后执行的是LIMIT操作。其中每一个操作都会产生一张虚拟的表，这个虚拟的表作为一个处理的输入，只是这些虚拟的表对用户来说是透明 的，但是只有最后一个虚拟的表才会被作为结果返回。如果没有在语句中指定某一个子句，那么将会跳过相应的步骤。</p>
+<p>Sql代码</p>
+<ol>
+<li>(8)SELECT (9)DISTINCT&lt;select_list&gt;</li>
+<li>(1)FROM&lt;left_table&gt;</li>
+<li>(3)&lt;join_type&gt;JOIN&lt;right_table&gt;</li>
+<li>(2)        ON&lt;jion_condition&gt;</li>
+<li>(4)WHERE&lt;where_condition&gt;</li>
+<li>(5)GROUP BY&lt;group_by_list&gt;</li>
+<li>(6)WITH{CUBE|ROLLUP}</li>
+<li>(7)HAVING&lt;having_condition&gt;</li>
+<li>(8)ORDER BY&lt;order_by_list&gt;</li>
+<li>(11)LIMIT&lt;limit_member&gt;</li>
+</ol>
+<h2 id="下面我们来具体分析一下查询处理的每一个阶段"><a href="#下面我们来具体分析一下查询处理的每一个阶段" class="headerlink" title="下面我们来具体分析一下查询处理的每一个阶段"></a>下面我们来具体分析一下查询处理的每一个阶段</h2><ol>
+<li><strong>FORM</strong>: 对FROM的左边的表和右边的表计算笛卡尔积。产生虚表VT1</li>
+<li><strong>ON</strong>: 对虚表VT1进行ON筛选，只有那些符合<join-condition>的行才会被记录在虚表VT2中。</join-condition></li>
+<li><strong>JOIN</strong>： 如果指定了OUTER JOIN（比如left join、 right join），那么保留表中未匹配的行就会作为外部行添加到虚拟表VT2中，产生虚拟表VT3, rug from子句中包含两个以上的表的话，那么就会对上一个join连接产生的结果VT3和下一个表重复执行步骤1~3这三个步骤，一直到处理完所有的表为 止。</li>
+<li><strong>WHERE</strong>： 对虚拟表VT3进行WHERE条件过滤。只有符合<where-condition>的记录才会被插入到虚拟表VT4中。</where-condition></li>
+<li><strong>GROUP BY</strong>: 根据group by子句中的列，对VT4中的记录进行分组操作，产生VT5.</li>
+<li><strong>CUBE | ROLLUP</strong>: 对表VT5进行cube或者rollup操作，产生表VT6.</li>
+<li><strong>HAVING</strong>： 对虚拟表VT6应用having过滤，只有符合<having-condition>的记录才会被 插入到虚拟表VT7中。</having-condition></li>
+<li><strong>SELECT</strong>： 执行select操作，选择指定的列，插入到虚拟表VT8中。</li>
+<li><strong>DISTINCT</strong>： 对VT8中的记录进行去重。产生虚拟表VT9.</li>
+<li><strong>ORDER BY</strong>: 将虚拟表VT9中的记录按照&lt;order_by_list&gt;进行排序操作，产生虚拟表VT10.</li>
+<li><strong>LIMIT</strong>：取出指定行的记录，产生虚拟表VT11, 并将结果返回。</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/12/28/2019030500102/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/28/2019030500102/" title="MySQL的语句执行顺序">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/28/2019030500116/">
+    		MySQL Timestamp的几个坑
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-28T11:21:06.000Z">2015-12-28</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/Timestamp/" title="Timestamp">Timestamp</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>问题1：一个表中，是否可以有多个timestamp的列的默认值是 now()? 可以   问题2：timestamp类型，可以为null时，默认插入是 0000-00 还是 null?  null   问题3：timestamp类型，不设置任何属性时，或者设置not null 默认插入是 0000-00 还是 null? 设置not null  插入 null就是now() 不指定值第一个now() 后面都是 0000-00-00 如果可以为null 则插入null时 才是null，不指定的话就是now() 还有一个坑就是你把timestamp调整为第一个timestamp时。他自动加上默认 current_timestamp和on update . 你把带有 default current_timestamp和 on update 的第一个字段调整到其他的timestamp后面时，原来后面的那个不变，原来的第一个属性就丢了。   问题4：replace into 在流模式和statement模式下，会不会自增ID出现问题？ 二者都不会出现问题</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/28/2019030500116/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/28/2019030500116/" title="MySQL Timestamp的几个坑">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/28/2019030500074/">
+    		MySQL 分区表
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-28T11:05:16.000Z">2015-12-28</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/分区表/" title="分区表">分区表</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>今天统计数据的时候发现一张表使用了表分区，借此机会记录一下。 1. 什么是表分区？ 表分区，是指根据一定规则，将数据库中的一张表分解成多个更小的，容易管理的部分。从逻辑上看，只有一张表，但是底层却是由多个物理分区组成。 2. 表分区与分表的区别 分表：指的是通过一定规则，将一张表分解成多张不同的表。比如将用户订单记录根据时间成多个表。 分表与分区的区别在于：分区从逻辑上来讲只有一张表，而分表则是将一张表分解成多张表。 3. 表分区有什么好处？ 1）分区表的数据可以分布在不同的物理设备上，从而高效地利用多个硬件设备。 2）和单个磁盘或者文件系统相比，可以存储更多数据 3）优化查询。在where语句中包含分区条件时，可以只扫描一个或多个分区表来提高查询效率；涉及sum和count语句时，也可以在多个分区上并行处 理，最后汇总结果。 4）分区表更容易维护。例如：想批量删除大量数据可以清除整个分区。 5）可以使用分区表来避免某些特殊的瓶颈，例如InnoDB的单个索引的互斥访问，ext3问价你系统的inode锁竞争等。 4. 分区表的限制因素 1）一个表最多只能有1024个分区 2） MySQL5.1中，分区表达式必须是整数，或者返回整数的表达式。在MySQL5.5中提供了非整数表达式分区的支持。 3）如果分区字段中有主键或者唯一索引的列，那么多有主键列和唯一索引列都必须包含进来。即：分区字段要么不包含主键或者索引列，要么包含全部主键和索引 列。 4）分区表中无法使用外键约束 5）MySQL的分区适用于一个表的所有数据和索引，不能只对表数据分区而不对索引分区，也不能只对索引分区而不对表分区，也不能只对表的一部分数据分 区。 5. 如何判断当前MySQL是否支持分区？ 命令：show variables like ‘%partition%’ 运行结果: mysql&gt; show variables like ‘%partition%’; +——————-+——-+ | Variable_name     | Value | +——————-+——-+ | have_partitioning | YES   | +——————-+——-+ 1 row in set (0.00 sec) have_partintioning 的值为YES，表示支持分区。 6. MySQL支持的分区类型有哪些？ 1）RANGE分区：按照数据的区间范围分区 2）LIST分区：按照List中的值分区，与RANGE的区别是，range分区的区间范围值是连续的。 3）HASH分区 4）KEY分区 说明 在MySQL5.1版本中，RANGE,LIST,HASH分区要求分区键必须是INT类型，或者通过表达式返回INT类型。但KEY分区的时候，可以使 用其他类型的列（BLOB，TEXT类型除外）作为分区键。 7. Range分区 利用取值范围进行分区，区间要连续并且不能互相重叠。 语法： partition by range(exp)( //exp可以为列名或者表达式，比如to_date(created_date) partition p0 values less than(num) ) 例如： mysql&gt; create table emp( -&gt; id INTNOT null, -&gt; store_id int not null -&gt; ) -&gt; partition by range(store_id)( -&gt;   partition p0 values less than(10), -&gt;   partition p1 values less than(20) -&gt; );上面的语句创建了emp表，并根据store_id字段进行分区，小于10的值存在分区p0中，大于等于10，小于20的值存在分区p1中。 注意 每个分区都是按顺序定义的，从最低到最高。上面的语句，如果将less than(10) 和less than (20)的顺序颠倒过来，那么将报错，如下： ERROR 1493 (HY000): VALUES LESS THAN value must be strictly increasing for each partition RANGE分区存在的问题 1.range范围覆盖问题：当插入的记录中对应的分区键的值不在分区定义的范围中的时候，插入语句会失败。 上面的例子，如果我插入一条store_id = 30的记录会怎么样呢？ 我们上面分区的时候，最大值是20，如果插入一条超过20的记录，会报错: mysql&gt; insert intoemp(id,store_id)values(2,30); ERROR 1526 (HY000): Table has no partition for value 30 提示30这个值没有对应的分区。 解决办法 A. 预估分区键的值，及时新增分区。 B. 设置分区的时候，使用values less than maxvalue 子句,MAXVALUE表示最大的可能的整数值。 C. 尽量选择能够全部覆盖的字段作为分区键，比如一年的十二个月等。 2.Range分区中，分区键的值如果是NULL，将被作为一个最小值来处理。 8. LIST分区 List分区是建立离散的值列表告诉数据库特定的值属于哪个分区。 语法： partition by list(exp)( //exp为列名或者表达式 partition p0 values in (3,5)  //值为3和5的在p0分区 ) 与Range不同的是，list分区不必生命任何特定的顺序。例如： mysql&gt; create table emp1( -&gt; id int not null, -&gt; store_id int not null -&gt; ) -&gt; partition by list(store_id)( -&gt;   partition p0 values in (3,5), -&gt;   partition p1 values in (2,6,7,9) -&gt; );注意 如果插入的记录对应的分区键的值不在list分区指定的值中，将会插入失败。并且，list不能像range分区那样提供maxvalue。 9. Columns分区 MySQL5.5中引入的分区类型，解决了5.5版本之前range分区和list分区只支持整数分区的问题。 Columns分区可以细分为 range columns分区和 list columns分区，他们都支持整数，日期时间，字符串三大数据类型。（不支持text和blob类型作为分区键） columns分区还支持多列分区（这里不详细展开）。 10. Hash分区 Hash分区主要用来分散热点读，确保数据在预先确定个数的分区中尽可能平均分布。 MySQL支持两种Hash分区:常规Hash分区和线性Hash分区。 A. 常规Hash分区:使用取模算法 语法： partition by hash(store_id) partitions 4; 上面的语句，根据store_id对4取模，决定记录存储位置。 比如store_id = 234的记录，MOD(234,4)=2,所以会被存储在第二个分区。 常规Hash分区的优点和不足 优点：能够使数据尽可能的均匀分布。 缺点：不适合分区经常变动的需求。假如我要新增加两个分区，现在有6个分区，那么MOD(234,6)的结果与之前MOD(234,4)的结果就会出现不 一致，这样大部分数据就需要重新计算分区。为解决此问题，MySQL提供了线性Hash分区。 B. 线性Hash分区：分区函数是一个线性的2的幂的运算法则。 语法： partition by LINER hash(store_id) partitions 4; 与常规Hash的不同在于，“Liner”关键字。 算法介绍: 假设要保存记录的分区编号为N,num为一个非负整数,表示分割成的分区的数量，那么N可以通过以下步骤得到： Step 1. 找到一个大于等于num的2的幂，这个值为V，V可以通过下面公式得到： V = Power(2,Ceiling(Log(2,num))) 例如：刚才设置了4个分区，num=4，Log(2,4)=2,Ceiling(2)=2,power(2,2)=4,即V=4 Step 2. 设置N=F(column_list)&amp;(V-1) 例如：刚才V=4，store_id=234对应的N值，N = 234&amp;（4-1） =2 Step 3. 当N&gt;=num,设置V=Ceiling(V/2),N=N&amp;(V-1) 例如：store_id=234,N=2&lt;4,所以N就取值2，即可。 假设上面算出来的N=5，那么V=Ceiling(4/2)=2,N=5&amp;(2-1)=1,即在第一个分区。 线性Hash的优点和不足 优点：在分区维护（增加，删除，合并，拆分分区）时，MySQL能够处理得更加迅速。 缺点：与常规Hash分区相比，线性Hash各个分区之间的数据分布不太均衡。 11. Key分区 类似Hash分区，Hash分区允许使用用户自定义的表达式，但Key分区不允许使用用户自定义的表达式。Hash仅支持整数分区，而Key分区支持除了Blob和text的其他类型的列作为分区键。 语法: partition by key(exp) partitions 4;//exp是零个或多个字段名的列表 key分区的时候，exp可以为空，如果为空，则默认使用主键作为分区键，没有主键的时候，会选择非空惟一键作为分区键。 12. 子分区 分区表中对每个分区再次分割，又成为复合分区。 13. 分区对于NULL值的处理 MySQ允许分区键值为NULL，分区键可能是一个字段或者一个用户定义的表达式。一般情况下，MySQL在分区的时候会把NULL值当作零值或者一个最小值进行处理。 注意 Range分区中：NULL值被当作最小值来处理 List分区中：NULL值必须出现在列表中，否则不被接受 Hash/Key分区中：NULL值会被当作零值来处理 14. 分区管理 分区管理包括对于分区的增加，删除，以及查询。 1.增加分区： 对于Range分区和LIst分区来说： alter table table_name add partition (partition p0 values …(exp)) values后面的内容根据分区的类型不同而不同。 对于Hash分区和Key分区来说： altertable table_name addpartition partitions 8; 上面的语句，指的是新增8个分区 。 2.删除分区 对于Range分区和List分区： altertable table_name droppartition p0; //p0为要删除的分区名称 删除了分区，同时也将删除该分区中的所有数据。同时，如果删除了分区导致分区不能覆盖所有值，那么插入数据的时候会报错。 对于Hash和Key分区： altertable table_name coalescepartition2; //将分区缩减到2个 coalesce [ˌkəʊəˈles] vi. 联合，合并 3.分区查询 1）查询某张表一共有多少个分区 mysql&gt; select -&gt;   partition_name, -&gt;   partition_expression, -&gt;   partition_description, -&gt;   table_rows -&gt; from -&gt;   INFORMATION_SCHEMA.partitions -&gt; where -&gt;   table_schema=’test’ -&gt;   and table_name = ‘emp’; +—————-+———————-+———————–+————+ | partition_name | partition_expression | partition_description | table_rows | +—————-+———————-+———————–+————+ | p0             | store_id             | 10                    |          0 | | p1             | store_id             | 20                    |          1 | +—————-+———————-+———————–+————+ 即，可以从information_schema.partitions表中查询。 2）查看执行计划，判断查询数据是否进行了分区过滤 mysql&gt; explain partitions select <em> from emp where store_id=10 \G; <strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong></em> 1. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> id: 1 select_type: SIMPLE table: emp partitions: p1 type: system possible_keys: NULL key: NULL key_len: NULL ref: NULL rows: 1 Extra: 1 row in set (0.00 sec) 上面的结果：partitions:p1 表示数据在p1分区进行检索。 [参考资料] 《深入MySQL数据库开发、优化与管理维护（第2版）》 《高性能MySQL》</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/28/2019030500074/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/28/2019030500074/" title="MySQL 分区表">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/28/2019030500108/">
+    		MYSQL通过SQL脚本创建存储过程(游标删除多表数据)
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-28T11:02:37.000Z">2015-12-28</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/游标/" title="游标">游标</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>首先描述一下业务处理存储过程功能：删除除系统管理员创建的角色和对应的业务表数据。 [size=medium]</p>
+<p>Sql代码</p>
+<ol>
+<li>–  CALL P_INTSYS(‘%_10006%’,’10006’);</li>
+<li><p>drop procedure if exists wmscloud_test.P_INTSYS;</p>
+</li>
+<li><p>CREATE PROCEDURE wmscloud_test.P_INTSYS(IN likeTableName VARCHAR(30),IN esCorCode VARCHAR(30))</p>
+</li>
+<li><p>BEGIN</p>
+</li>
+<li><p>– 需要定义接收游标数据的变量 </p>
+</li>
+<li>DECLARE table_ VARCHAR(50);</li>
+<li>– 遍历数据结束标志</li>
+<li>DECLARE done INT DEFAULT FALSE;</li>
+<li>– 游标</li>
+<li>DECLARE cur CURSOR FOR SELECT TABLE_NAME FROM (SELECT TABLE_NAME from information_schema.tables WHERE TABLE_NAME LIKE likeTableName ) allTables;</li>
+<li>– 将结束标志绑定到游标</li>
+<li>DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;</li>
+<li>– 打开游标</li>
+<li>OPEN cur;</li>
+<li>– 开始循环</li>
+<li><p>read_loop: LOOP</p>
+</li>
+<li><p>– 提取游标里的数据，这里只有一个，多个的话也一样；</p>
+</li>
+<li>FETCH cur INTO table_;</li>
+<li>– 声明结束的时候</li>
+<li>IF done THEN</li>
+<li>LEAVE read_loop;</li>
+<li><p>END IF;</p>
+</li>
+<li><p>– 这里做你想做的循环的事件</p>
+</li>
+<li>SET @delete_table=CONCAT(‘ DELETE FROM ‘,table_,’;’);</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>END LOOP;</p>
+</li>
+<li>– 关闭游标</li>
+<li><p>CLOSE cur;</p>
+</li>
+<li><p>– 删除,除去系统管理员创建的外其余用户和角色</p>
+</li>
+<li>SET @delete_table=CONCAT(‘ DELETE FROM es_user WHERE CREATOR!=1 and ES_COR_CODE=’,esCorCode);</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>SET @delete_table=CONCAT(‘ DELETE FROM es_role WHERE CREATOR!=1 and ES_COR_CODE=’,esCorCode);</p>
+</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>END</p>
+</li>
+</ol>
+<p>[/size] 执行脚本生成的函数</p>
+<p>Sql代码</p>
+<ol>
+<li><p>[size=medium]BEGIN</p>
+</li>
+<li><p>– 需要定义接收游标数据的变量 </p>
+</li>
+<li>DECLARE table_ VARCHAR(50);</li>
+<li>– 遍历数据结束标志</li>
+<li>DECLARE done INT DEFAULT FALSE;</li>
+<li>– 游标</li>
+<li>DECLARE cur CURSOR FOR SELECT TABLE_NAME FROM (SELECT TABLE_NAME from information_schema.tables WHERE TABLE_NAME LIKE likeTableName ) allTables;</li>
+<li>– 将结束标志绑定到游标</li>
+<li>DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;</li>
+<li>– 打开游标</li>
+<li>OPEN cur;</li>
+<li>– 开始循环</li>
+<li><p>read_loop: LOOP</p>
+</li>
+<li><p>– 提取游标里的数据，这里只有一个，多个的话也一样；</p>
+</li>
+<li>FETCH cur INTO table_;</li>
+<li>– 声明结束的时候</li>
+<li>IF done THEN</li>
+<li>LEAVE read_loop;</li>
+<li><p>END IF;</p>
+</li>
+<li><p>– 这里做你想做的循环的事件</p>
+</li>
+<li>SET @delete_table=CONCAT(‘ DELETE FROM ‘,table_,’;’);</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>END LOOP;</p>
+</li>
+<li>– 关闭游标</li>
+<li><p>CLOSE cur;</p>
+</li>
+<li><p>– 删除,除去系统管理员创建的外其余用户和角色</p>
+</li>
+<li>SET @delete_table=CONCAT(‘ DELETE FROM es_user WHERE CREATOR!=1 and ES_COR_CODE=’,esCorCode);</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>SET @delete_table=CONCAT(‘ DELETE FROM es_role WHERE CREATOR!=1 and ES_COR_CODE=’,esCorCode);</p>
+</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>END[/size]</p>
+</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/12/28/2019030500108/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/28/2019030500108/" title="MYSQL通过SQL脚本创建存储过程(游标删除多表数据)">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/23/2019030500072/">
+    		MySQL垂直和水平切分
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-23T07:46:17.000Z">2015-12-23</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/切分/" title="切分">切分</a> / 
+    
+        <a href="/tags/垂直/" title="垂直">垂直</a> / 
+    
+        <a href="/tags/水平/" title="水平">水平</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>replication的限制:一旦数据库过于庞大，尤其是当写入过于频繁，很难由一台主机支撑的时候，我们还是会面临到扩展瓶颈。数据切分(sharding):通过某种特定的条件，将我们存放在同一个数据库中的数据分散存放到多个数据库（主机）上面，以达到分散单台设备负载的效果。。数据的切分同时还可以提高系统的总体可用性，因为单台设备Crash之后，只有总体数据的某部分不可用，而不是所有的数据。   数据的切分（Sharding）模式   一种是按照不同的表（或者Schema）来切分到不同的数据库（主机）之上，这种切可以称之为数据的垂直（纵向）切分；另外一种则是根据表中的数据的逻辑关系，将同一个表中的数据按照某种条件拆分到多台数据库（主机）上面，这种切分称之为数据的水平（横向）切分。   垂直切分:   一个架构设计较好的应用系统，其总体功能肯定是由很多个功能模块所组成的，而每一个功能模块所需要的数据对应到数据库中就是一个或者多个表。而在架构设计中，各个功能模块相互之间的交互点越统一越少，系统的耦合度就越低，系统各个模块的维护性以及扩展性也就越好。这样的系统，实现数据的垂直切分也就越容易。   一般来说，如果是一个负载相对不是很大的系统，而且表关联又非常的频繁，那可能数据库让步，将几个相关模块合并在一起减少应用程序的工作的方案可以减少较多的工作量，这是一个可行的方案。一个垂直拆分的例子: 1.用户模块表：user,user_profile,user_group,user_photo_album 2.群组讨论表：groups,group_message,group_message_content,top_message 3.相册相关表：photo,photo_album,photo_album_relation,photo_comment   4.事件信息表：event <em>群组讨论模块和用户模块之间主要存在通过用户或者是群组关系来进行关联。一般关联的时候都会是通过用户的id或者nick_name以及group的id来进行关联，通过模块之间的接口实现不会带来太多麻烦； </em>相册模块仅仅与用户模块存在通过用户的关联。这两个模块之间的关联基本就有通过用户id关联的内容，简单清晰，接口明确；   *事件模块与各个模块可能都有关联，但是都只关注其各个模块中对象的ID信息，同样可以做到很容易分拆。 垂直切分的优点: 数据库的拆分简单明了，拆分规则明确； 应用程序模块清晰明确，整合容易； 数据维护方便易行，容易定位；   垂直切分的缺点: 部分表关联无法在数据库级别完成，需要在程序中完成； 对于访问极其频繁且数据量超大的表仍然存在性能瓶颈，不一定能满足要求； 事务处理相对更为复杂； 切分达到一定程度之后，扩展性会遇到限制； 过读切分可能会带来系统过渡复杂而难以维护。     水平切分   将某个访问极其频繁的表再按照某个字段的某种规则来分散到多个表之中，每个表中包含一部分数据。 对于上面的例子:所有数据都是和用户关联的，那么我们就可以根据用户来进行水平拆分，将不同用户的数据切分到不同的数据库中。现在互联网非常火爆的Web2.0类型的网站，基本上大部分数据都能够通过会员用户信息关联上，可能很多核心表都非常适合通过会员ID来进行数据的水平切分。而像论坛社区讨论系统，就更容易切分了，非常容易按照论坛编号来进行数据的水平切分。切分之后基本上不会出现各个库之间的交互。   水平切分的优点： 表关联基本能够在数据库端全部完成； 不会存在某些超大型数据量和高负载的表遇到瓶颈的问题； 应用程序端整体架构改动相对较少； 事务处理相对简单； 只要切分规则能够定义好，基本上较难遇到扩展性限制；   水平切分的缺点： 切分规则相对更为复杂，很难抽象出一个能够满足整个数据库的切分规则； 后期数据的维护难度有所增加，人为手工定位数据更困难； 应用系统各模块耦合度较高，可能会对后面数据的迁移拆分造成一定的困难。   两种切分结合用:   一般来说，我们数据库中的所有表很难通过某一个（或少数几个）字段全部关联起来，所以很难简单的仅仅通过数据的水平切分来解决所有问题。而垂直切分也只能解决部分问题，对于那些负载非常高的系统，即使仅仅只是单个表都无法通过单台数据库主机来承担其负载。我们必须结合“垂直”和“水平”两种切分方式同时使用   每一个应用系统的负载都是一步一步增长上来的，在开始遇到性能瓶颈的时候，大多数架构师和DBA都会选择先进行数据的垂直拆分，因为这样的成本最先，最符合这个时期所追求的最大投入产出比。然而，随着业务的不断扩张，系统负载的持续增长，在系统稳定一段时期之后，经过了垂直拆分之后的数据库集群可能又再一次不堪重负，遇到了性能瓶颈。   如果我们再一次像最开始那样继续细分模块，进行数据的垂直切分，那我们可能在不久的将来，又会遇到现在所面对的同样的问题。而且随着模块的不断的细化，应用系统的架构也会越来越复杂，整个系统很可能会出现失控的局面。   这时候我们就必须要通过数据的水平切分的优势，来解决这里所遇到的问题。而且，我们完全不必要在使用数据水平切分的时候，推倒之前进行数据垂直切分的成果，而是在其基础上利用水平切分的优势来避开垂直切分的弊端，解决系统复杂性不断扩大的问题。而水平拆分的弊端（规则难以统一）也已经被之前的垂直切分解决掉了，让水平拆分可以进行的得心应手。   示例数据库:   假设在最开始，我们进行了数据的垂直切分，然而随着业务的不断增长，数据库系统遇到了瓶颈，我们选择重构数据库集群的架构。如何重构？考虑到之前已经做好了数据的垂直切分，而且模块结构清晰明确。而业务增长的势头越来越猛，即使现在进一步再次拆分模块，也坚持不了太久。   ==&gt;选择了在垂直切分的基础上再进行水平拆分。   ==&gt;在经历过垂直拆分后的各个数据库集群中的每一个都只有一个功能模块，而每个功能模块中的所有表基本上都会与某个字段进行关联。如用户模块全部都可以通过用户ID进行切分，群组讨论模块则都通过群组ID来切分，相册模块则根据相册ID来进切分，最后的事件通知信息表考虑到数据的时限性（仅仅只会访问最近某个事件段的信息），则考虑按时间来切分。   数据切分以及整合方案.   数据库中的数据在经过垂直和（或）水平切分被存放在不同的数据库主机之后，应用系统面临的最大问题就是如何来让这些数据源得到较好的整合，其中存在两种解决思路：   在每个应用程序模块中配置管理自己需要的一个（或者多个）数据源，直接访问各个数据库，在模块内完成数据的整合； 通过中间代理层来统一管理所有的数据源，后端数据库集群对前端应用程序透明；   第二种方案,虽然短期内需要付出的成本可能会相对更大一些，但是对整个系统的扩展性来说，是非常有帮助的。针对第二种方案，可以选择的方法和思路有：   1.利用MySQLProxy 实现数据切分及整合.   可用来监视、分析或者传输他们之间的通讯信息。他的灵活性允许你最大限度的使用它，目前具备的功能主要有连接路由，Query分析，Query过滤和修改，负载均衡，以及基本的HA机制等。MySQLProxy 本身并不具有上述所有的这些功能，而是提供了实现上述功能的基础。要实现这些功能，还需要通过我们自行编写LUA脚本来实现。   原理:MySQLProxy 实际上是在客户端请求与MySQLServer 之间建立了一个连接池。所有客户端请求都是发向MySQLProxy，然后经由MySQLProxy 进行相应的分析，判断出是读操作还是写操作，分发至对应的MySQLServer 上。对于多节点Slave集群，也可以起做到负载均衡的效果。   2.利用Amoeba实现数据切分及整合   Amoeba是一个基于Java开发的，专注于解决分布式数据库数据源整合Proxy程序的开源框架，Amoeba已经具有Query路由，Query过滤，读写分离，负载均衡以及HA机制等相关内容。Amoeba主要解决的以下几个问题：   数据切分后复杂数据源整合； 提供数据切分规则并降低数据切分规则给数据库带来的影响； 降低数据库与客户端的连接数； 读写分离路由；   AmoebaFor MySQL 主要是专门针对MySQL数据库的解决方案，前端应用程序请求的协议以及后端连接的数据源数据库都必须是MySQL。对于客户端的任何应用程序来说，AmoebaForMySQL 和一个MySQL数据库没有什么区别，任何使用MySQL协议的客户端请求，都可以被AmoebaFor MySQL 解析并进行相应的处理。   Proxy程序常用的功能如读写分离，负载均衡等配置都在amoeba.xml中进行。Amoeba已经支持了实现数据的垂直切分和水平切分的自动路由，路由规则可以在rule.xml进行设置。   3.利用HiveDB实现数据切分及整合   HiveDB同样是一个基于Java针对MySQL数据库的提供数据切分及整合的开源框架，只是目前的HiveDB仅仅支持数据的水平切分。主要解决大数据量下数据库的扩展性及数据的高性能访问问题，同时支持数据的冗余及基本的HA机制。   HiveDB的实现机制与MySQLProxy 和Amoeba有一定的差异，他并不是借助MySQL的Replication功能来实现数据的冗余，而是自行实现了数据冗余机制，而其底层主要是基于HibernateShards 来实现的数据切分工作。数据切分与整合中可能存在的问题   引入分布式事务的问题? 一旦数据进行切分被分别存放在多个MySQLServer中之后，不管我们的切分规则设计的多么的完美（实际上并不存在完美的切分规则），都可能造成之前的某些事务所涉及到的数据已经不在同一个MySQLServer 中了。 ==&gt;将一个跨多个数据库的分布式事务分拆成多个仅处于单个数据库上面的小事务，并通过应用程序来总控各个小事务。   跨节点Join的问题? ==&gt;先从一个节点取出数据,然后根据这些数据,再到另一个表中取数据. ==&gt;使用Federated存储引擎,问题是:乎如果远端的表结构发生了变更，本地的表定义信息是不会跟着发生相应变化的。   跨节点合并排序分页问题? ==&gt;Join本身涉及到的多个表之间的数据读取一般都会存在一个顺序关系。但是排序分页就不太一样了，排序分页的数据源基本上可以说是一个表（或者一个结果集），本身并不存在一个顺序关系，所以在从多个数据源取数据的过程是完全可以并行的。这样，排序分页数据的取数效率我们可以做的比跨库Join更高，所以带来的性能损失相对的要更小。</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/23/2019030500072/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/23/2019030500072/" title="MySQL垂直和水平切分">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/22/2019030500120/">
+    		mysqldump命令使用笔记总结
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-22T06:34:53.000Z">2015-12-22</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/dump/" title="dump">dump</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>[size=small]mysqldump只导出数据或只导出表结构 1、备份数据库 #mysqldump -u 用户名 -p 数据库名 &gt; 导出文件名 2、导出表结构 #mysqldump -u 用户名 -p -d 数据库名 –add-drop-table 表名 &gt; 导出文件名  ##-d:表示没有数据，–add-drop-table 在每个creat语句之前增加一个drop table 3、导出表 #mysqldump -u 用户名 -p 数据库名 表名&gt; 导出文件名 4、导出数据 #mysqldump -u 用户名 -p -t 数据库名 &gt; 导出文件名 5、导入数据 #mysql 数据库名&lt;文件路径 -u 用户名 -p 实例： 备份数据库 #mysqldump　数据库名　&gt;数据库备份名 #mysqldump　-A　-u　用户名　-p密码　数据库名&gt;数据库备份名 #mysqldump　-d　-A　–add-drop-table　-uroot　-p　&gt;xxx.sql 导出结构不导出数据 mysqldump　–opt　-d　数据库名　-u　root　-p　&gt;　xxx.sql 导出数据不导出结构 mysqldump　-t　数据库名　-uroot　-p　&gt;　xxx.sql 导出数据和表结构 mysqldump　数据库名　-uroot　-p　&gt;　xxx.sql 导出特定表的结构 mysqldump　-uroot　-p　-B　数据库名　–table　表名　&gt;　xxx.sql 导入数据 #mysql　数据库名　&lt;　文件名 === 导出： mysqldump -u root -p week_system &gt; /bak_mysql/week_systembak.sql 导入： 必须先新建一个同名的库，才能恢复，不然会报错。 mysqldump: Got error: 1049: Unknown database ‘week_systembak’ when selecting the database mysql&gt; create database week_system character set utf8; Query OK, 1 row affected (0.02 sec) mysql&gt; \q Bye [root@localhost etc]# mysqldump -u root -p week_system &lt; /tmp/week_systembak.sql Enter password: – MySQL dump 10.13  Distrib 5.6.19, for Linux (x86_64) – – Host: localhost    Database: week_system – —————————————————— – Server version       5.6.19 /<em>!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT </em>/; /<em>!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS </em>/; /<em>!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION </em>/; /<em>!40101 SET NAMES utf8 </em>/; /<em>!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE </em>/; /<em>!40103 SET TIME_ZONE=’+00:00’ </em>/; /<em>!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 </em>/; /<em>!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 </em>/; /<em>!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=’NO_AUTO_VALUE_ON_ZERO’ </em>/; /<em>!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 </em>/; /<em>!40103 SET TIME_ZONE=@OLD_TIME_ZONE </em>/; /<em>!40101 SET SQL_MODE=@OLD_SQL_MODE </em>/; /<em>!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS </em>/; /<em>!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS </em>/; /<em>!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT </em>/; /<em>!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS </em>/; /<em>!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION </em>/; /<em>!40111 SET SQL_NOTES=@OLD_SQL_NOTES </em>/; – Dump completed on 2014-07-30  1:00:00 —-导入完成，但发现数据库是空的 –原来是命令用错了： mysql  -u root -p week_system &lt; /tmp/week_systembak.sql 就可以正常看到表了。 添加条件： mysqldump  -h rdsa3qfmmqriq3y.mysql.rds.aliyuncs.com -uweblog -pweblog -w “date=’2014-11-13’” weblog update_log &gt;/tmp/update.sql 先创建：mysql&gt;create database bugtracker character uft8; 再还原：root@viptest2 ~]# mysql -uroot -ptina1  bugtracker &lt; ./bugtracker.sql[/size]</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/22/2019030500120/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/22/2019030500120/" title="mysqldump命令使用笔记总结">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/22/2019030500050/">
+    		java插入mysql 300万-2200万数据，优化查询
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-22T06:31:31.000Z">2015-12-22</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/Java/" title="Java">Java</a> / 
+    
+        <a href="/tags/优化/" title="优化">优化</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>my.ini参数修改了下</p>
+<ol>
+<li>table_cache=512</li>
+<li>bulk_insert_buffer_size = 100M</li>
+<li>innodb_additional_mem_pool_size=30M</li>
+<li>innodb_flush_log_at_trx_commit=0</li>
+<li>innodb_buffer_pool_size=207M</li>
+<li>innodb_log_file_size=128M</li>
+</ol>
+<p>innodb_flush_log_at_trx_commit默认值1的意思是每一次事务提交或事务外的指令都需要把日志写入（flush）硬盘，这是很费时的。特别是使用电 池供电缓存（Battery backed up cache）时。设成2对于很多运用，特别是从MyISAM表转过来的是可以的，它的意思是不写入硬盘而是写入系统缓存。日志仍然会每秒flush到硬 盘，所以你一般不会丢失超过1-2秒的更新。设成0会更快一点，但安全方面比较差，即使MySQL挂了也可能会丢失事务的数据。而值2只会在整个操作系统 挂了时才可能丢数据。对于事务要求很强，设置为0 是存在安全问题的 mysql创建表</p>
+<p>Sql代码</p>
+<ol>
+<li>CREATE TABLE `news` (</li>
+<li>`id` int(19) NOT NULL AUTO_INCREMENT,</li>
+<li>`title` varchar(30) DEFAULT NULL,</li>
+<li>`content` varchar(400) DEFAULT NULL,</li>
+<li>`type` varchar(30) DEFAULT NULL,</li>
+<li>PRIMARY KEY (`id`),</li>
+<li>UNIQUE KEY `PK_NEWS_ID` (`id`),</li>
+<li>KEY `INDEX_NEWS_ID_TYPE` (`id`,`type`),</li>
+<li>KEY `INDEX_NEWS_TYPE` (`type`)</li>
+<li><p>) ENGINE=InnoDB AUTO_INCREMENT=1072779 DEFAULT CHARSET=utf8</p>
+<p>插入数据一定要用 addBatch 超过300万条数据在我的笔记本上只需要近10分钟</p>
+</li>
+</ol>
+<p>Java代码</p>
+<ol>
+<li>public static void main(String[] args) {</li>
+<li><p>Connection conn = null;</p>
+</li>
+<li><p>// MySQL的JDBC URL编写方式：jdbc:mysql://主机名称：连接端口/数据库的名称?参数=值</p>
+</li>
+<li>// 避免中文乱码要指定useUnicode和characterEncoding</li>
+<li>// 执行数据库操作之前要在数据库管理系统上创建一个数据库，名字自己定，</li>
+<li>// 下面语句之前就要先创建javademo数据库</li>
+<li>String url = “jdbc:mysql://localhost:3306/javademo?”</li>
+<li><ul>
+<li>“user=root&amp;password=root&amp;useUnicode=true&amp;characterEncoding=UTF8”;</li>
+</ul>
+</li>
+<li>try {</li>
+<li>Class.forName(“com.mysql.jdbc.Driver”);// 动态加载mysql驱动</li>
+<li><p>conn = DriverManager.getConnection(url);</p>
+</li>
+<li><p>String   sql = “insert into news(title,content,type) values(?,?,?)”;</p>
+</li>
+<li><p>PreparedStatement prep = conn.prepareStatement(sql);</p>
+</li>
+<li>// 将连接的自动提交关闭，数据在传送到数据库的过程中相当耗时</li>
+<li>conn.setAutoCommit(false);</li>
+<li>long start = System.currentTimeMillis();</li>
+<li>String type = “java”;</li>
+<li>String content = “SUN公司开发Java语言的时候，在数据库这里只是提供了一个标准的接口，或者说是规范，叫做JDBC，这个东西单独放在那里没有任何作用，根本无法连接任何的数据库，只有当你下载相应的数据库驱动程序之后，才可以用JDBC通过这个驱动程序和数据库通信。sqlsever就有它的专门的驱动程序，在微软网站上可以下载到。SUN公司自己也开发了数据库驱动程序，叫做JDBC-ODBC驱动程序，是通过建立ODBC桥来连接Windows数据库，但是因为效率低并且有限制，现在一般都不推荐使用”;</li>
+<li>for (int i = 0; i &lt; 30; i++) {</li>
+<li>long start2 = System.currentTimeMillis();</li>
+<li>// 一次性执行插入10万条数据</li>
+<li>if(i==2){type=”php”;}</li>
+<li>else if(i==3){type=”erlang”;}</li>
+<li>else if(i==4){type=”go”;}</li>
+<li>else if(i==5){type=”javascript”;}</li>
+<li>else if(i==6){type=”html”;}</li>
+<li>else if(i==7){type=”html5”;}</li>
+<li>else if(i==8){type=”css”;}</li>
+<li>else if(i==9){type=”python”;}</li>
+<li>else if(i==10){type=”ror”;}</li>
+<li>else if(i==11){type=”nodejs”;}</li>
+<li>else if(i==12){type=”spring”;}</li>
+<li>else if(i==13){type=”hibernate”;}</li>
+<li>else if(i==14){type=”ibatis”;}</li>
+<li>else if(i==15){type=”mybatis”;}</li>
+<li>else if(i==16){type=”mysql”;}</li>
+<li>else if(i==17){type=”msserver”;}</li>
+<li>else if(i==18){type=”oracle”;}</li>
+<li>else if(i==19){type=”redis”;}</li>
+<li>else if(i==20){type=”mangodb”;}</li>
+<li>else if(i==21){type=”c”;}</li>
+<li>else if(i==22){type=”c++”;}</li>
+<li>else if(i==23){type=”springside”;}</li>
+<li>else if(i==24){type=”springroo”;}</li>
+<li>else if(i==25){type=”sprintboot”;}</li>
+<li>else if(i==26){type=”sprintmvc”;}</li>
+<li>else if(i==27){type=”websocket”;}</li>
+<li>else if(i==28){type=”restful”;}</li>
+<li>else if(i==29){type=”comet”;}</li>
+<li>for (int j = 0; j &lt; 100000; j++) {</li>
+<li>prep.setString(1, “文章”+j);</li>
+<li>prep.setString(2, content);</li>
+<li>prep.setString(3, type);</li>
+<li>prep.addBatch();</li>
+<li>}</li>
+<li>// 预处理批量执行</li>
+<li>prep.executeBatch();</li>
+<li>prep.clearBatch();</li>
+<li>conn.commit();</li>
+<li>long end2 = System.currentTimeMillis();</li>
+<li><p>// 批量执行一次批量打印执行依次的时间</p>
+</li>
+<li><p>System.out.println(end2 - start2);</p>
+</li>
+<li>}</li>
+<li>long end = System.currentTimeMillis();</li>
+<li>System.out.print(“total: “);</li>
+<li>System.out.println(end - start);</li>
+<li>} catch (Exception e) {</li>
+<li>e.printStackTrace();</li>
+<li>} finally {</li>
+<li>try {</li>
+<li>conn.close();</li>
+<li>} catch (SQLException e) {</li>
+<li>// TODO Auto-generated catch block</li>
+<li>e.printStackTrace();</li>
+<li>}</li>
+<li>}</li>
+<li>}</li>
+</ol>
+<p>测试结果300万插入只需要597秒</p>
+<ol>
+<li>15031</li>
+<li>15248</li>
+<li>18522</li>
+<li>18419</li>
+<li>19223</li>
+<li>19613</li>
+<li>20822</li>
+<li>18701</li>
+<li>19468</li>
+<li>21290</li>
+<li>19766</li>
+<li>20956</li>
+<li>19490</li>
+<li>19089</li>
+<li>20290</li>
+<li>22568</li>
+<li>20079</li>
+<li>20556</li>
+<li>20922</li>
+<li>22659</li>
+<li>21155</li>
+<li>19782</li>
+<li>20378</li>
+<li>21053</li>
+<li>19459</li>
+<li>22388</li>
+<li>20323</li>
+<li>20011</li>
+<li>18158</li>
+<li>21199</li>
+<li><p>total: 596625</p>
+<p>机器上一共插入了300万的数据，测试下查询：</p>
+</li>
+<li><p>select COUNT(id) from news</p>
+</li>
+<li><p>Affected rows: 0</p>
+</li>
+<li>Time: 0.729ms</li>
+</ol>
+<p>查询下分页</p>
+<ol>
+<li><p>select id,title from news limit 1000000,20</p>
+</li>
+<li><p>Affected rows: 0</p>
+</li>
+<li><p>Time: 7.839ms</p>
+<p>从第100万条查询20条记录，耗费了八秒时间，速度慢  </p>
+</li>
+<li><p>[SQL] select id from news limit 1000000,20</p>
+</li>
+<li><p>Affected rows: 0</p>
+</li>
+<li>Time: 0.242ms</li>
+</ol>
+<p>id 是索引，所以更快点  </p>
+<ol>
+<li>[SQL]</li>
+<li><p>select id from news order by id limit 1000000,20</p>
+</li>
+<li><p>Affected rows: 0</p>
+</li>
+<li>Time: 7.841ms</li>
+</ol>
+<p>order 加上去慢的太多了  </p>
+<ol>
+<li><p>select id,title from news where id&gt;=(select id from news order by id limit 1000000,1) limit 20</p>
+</li>
+<li><p>Affected rows: 0</p>
+</li>
+<li>Time: 8.115ms</li>
+</ol>
+<p>只要有order by在效率是上不去  </p>
+<ol>
+<li>[SQL]</li>
+<li>select id  from news where type = ‘ibatis’    limit 1,500000;</li>
+<li>Affected rows: 0</li>
+<li>Time: 0.076ms</li>
+</ol>
+<ol>
+<li><p>select id,title from news where type = ‘ibatis’  limit 1000000,20</p>
+</li>
+<li><p>Affected rows: 0</p>
+</li>
+<li>Time: 0.163ms</li>
+</ol>
+<p>Java代码  <img src="/uploads/2015/12/icon_star.png" alt="收藏代码"></p>
+<ol>
+<li>[SQL]</li>
+<li>select id,title,type from news where type = ‘ibatis’    limit 1,500000;</li>
+<li>Affected rows: 0</li>
+<li>Time: 0.209ms</li>
+</ol>
+<p>Java代码  <img src="/uploads/2015/12/icon_star.png" alt="收藏代码"></p>
+<ol>
+<li>[SQL]</li>
+<li>select id,title,content,type from news where type = ‘ibatis’    limit 1,500000;</li>
+<li>Affected rows: 0</li>
+<li>Time: 0.471ms</li>
+</ol>
+<p>加上大字段会消耗一点性能 <img src="/uploads/2015/12/137ad894-49bd-31a6-9fa4-3e2f99930c72.png" alt title="点击查看原始大小图片"> 可见复合索引带来性能的优势 <img src="/uploads/2015/12/f54e794d-5d08-3f01-9aff-6f251ae141b1.png" alt title="点击查看原始大小图片"> in的速度是惊人的，300万条记录里面里用in仅仅 0.004ms，最主要也是因为加了索引。 这里面有2个惊人的查询，这也刚好是分页的功能的查询</p>
+<ol>
+<li>select id  from news where type = ‘ibatis’    limit 1,500000;</li>
+<li><p>select *  from news where id in(xxx,xxx,xxx,xxx……………)</p>
+<p>最后把in的代码贴出来，大家也试试in的威力</p>
+</li>
+<li><p>select *  from news where id in(</p>
+</li>
+<li>2999999,2999998,2999997,2999996,2999995,2999994,2999993,2999992,2999991,2999990,2999989,</li>
+<li>2999988,2999987,2999986,2999985,2999984,2999983,2999982,2999981,2999980,2999979,2999978,</li>
+<li>2999977,2999976,2999975,2999974,2999973,2999972,2999971,2999970,2999969,2999968,2999967,</li>
+<li>2999966,2999965,2999964,2999963,2999962,2999961,2999960,2999959,2999958,2999957,2999956,</li>
+<li>2999955,2999954,2999953,2999952,2999951,2999950,2999949,2999948,2999947,2999946,2999945,</li>
+<li>2999944,2999943,2999942,2999941,2999940,2999939,2999938,2999937,2999936,2999935,2999934,</li>
+<li>2999933,2999932,2999931,2999930,2999929,2999928,2999927,2999926,2999925,2999924,2999923,</li>
+<li>2999922,2999921,2999920,2999919,2999918,2999917,2999916,2999915,2999914,2999913,2999912,</li>
+<li>2999911,2999910,2999909,2999908,2999907,2999906,2999905,2999904,2999903,2999902,2999901,</li>
+<li>2999900,2999899,2999898,2999897,2999896,2999895,2999894,2999893,2999892,2999891,2999890,</li>
+<li>2999889,2999888,2999887,2999886,2999885,2999884,2999883,2999882,2999881,2999880,2999879,</li>
+<li>2999878,2999877,2999876,2999875,2999874,2999873,2999872,2999871,2999870,2999869,2999868,</li>
+<li>2999867,2999866,2999865,2999864,2999863,2999862,2999861,2999860,2999859,2999858,2999857,</li>
+<li>2999856,2999855,2999854,2999853,2999852,2999851,2999850,2999849,2999848,2999847,2999846,</li>
+<li>2999845,2999844,2999843,2999842,2999841,2999840,2999839,2999838,2999837,2999836,2999835,</li>
+<li>2999834,2999833,2999832,2999831,2999830,2999829,2999828,2999827,2999826,2999825,2999824,</li>
+<li>2999823,2999822,2999821,2999820,2999819,2999818,2999817,2999816,2999815,2999814,2999813,2999812</li>
+<li><p>)</p>
+<p><img src="/uploads/2015/12/b70cf91e-9fac-3792-bfed-5c6474d64ae0.png" alt title="点击查看原始大小图片"> 最快的是0.003ms   试试in里面放1188个参数   <img src="/uploads/2015/12/8830527f-e550-3795-b315-d15c7bf395a3.jpg" alt title="点击查看原始大小图片"> 速度依然很惊人   现在数据已经添加到了至少2200万条数据，看看in的效果 <img src="/uploads/2015/12/09409dd7-0647-382b-a090-0a17a785894b.png" alt title="点击查看原始大小图片"> 几千万数据中in语句只需0.001ms <img src="/uploads/2015/12/500dea44-6342-3b6e-bfa5-9b0f35408310.png" alt title="点击查看原始大小图片"> 数据大了，这个语句消耗的时间也增加了点 0.406ms 返回记录49.9999万条</p>
+</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/12/22/2019030500050/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/22/2019030500050/" title="java插入mysql 300万-2200万数据，优化查询">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/categories/MySQL/page/2/">前一页</a><a class="page-number" href="/categories/MySQL/">1</a><a class="page-number" href="/categories/MySQL/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/categories/MySQL/page/4/">4</a><a class="page-number" href="/categories/MySQL/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/categories/MySQL/page/10/">10</a><a class="extend next" rel="next" href="/categories/MySQL/page/4/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>加快mydumper与myloader导出导入 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2015/09/11/2019030500011/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2015/09/11/2019030500011/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/2015/09/11/2019030500011/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2015/09/11/2019030500011/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>加快mydumper与myloader导出导入</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2015-09-11T04:58:23.000Z">2015-09-11</time>
+    </p>
+    <div class="post-content">
+        <p>mydumper与myloader是一个优秀的第三方mysql数据库逻辑备份恢复工具，使用多线程的导出与导入。弥补了mysqldump单线程的不足。本文描述的是如何加快mydumper与myloader的导出与导入供大家参考。 1、基于MyIsam引擎导出导入 a、表不分块导出及导入 [root@GZAPP tmp]# mydumper -u inno -p xxx -B bsom -T tb_access_log -o /backup/tmp/ [root@GZAPP tmp]# ls -hltr   ###导出的数据文件为单个文件，大小在2.6GB total 2.6G -rw-r–r– 1 root root 1.6K Jul 24 08:51 bsom.tb_access_log-schema.sql -rw-r–r– 1 root root  214 Jul 24 08:52 metadata -rw-r–r– 1 root root 2.6G Jul 24 08:52 bsom.tb_access_log.sql ###基于缺省线程数导入，且设定每个事务查询数为10000，此参数此时其实作用不大，因为表为myisam引擎 [root@GZAPP tmp]# myloader -u inno -p xxx -B tempdb -d /backup/tmp -v 3 -q 10000 [root@GZAPP tmp]# myloader -u inno -p xxx -B tempdb -d /backup/tmp -v 3 -q 10000 <strong> Message: 4 threads created </strong> Message: Creating table `tempdb`.`tb_access_log` <strong> Message: Thread 4 shutting down </strong> Message: Thread 1 restoring `bsom`.`tb_access_log` part 0 <strong> Message: Thread 3 shutting down </strong> Message: Thread 2 shutting down root@localhost[tempdb]&gt; show processlist; +———+———+———-+——–+———+——–+———+————————————————+ | Id      | User    | Host     | db     | Command | Time   | State   | Info                                           | +———+———+———-+——–+———+——–+———+————————————————+ | 4452079 | root    | localhost| tempdb | Query   |      0 | init    | show processlist                               | | 4453793 | inno    | localhost| tempdb | Sleep   |    420 |         | NULL                                           | | 4453794 | inno    | localhost| tempdb | Query   |      4 | update  | INSERT INTO `tb_access_log` VALUES (506873,”325| +———+———+———-+——–+———+——–+———+————————————————+ ###从上面的线程数可以看出只有一个单线程在执行insert操作 b、表分块导出及导入 ###下面的示例中使用500MB进行分块 [root@GZAPP tmp]# mydumper -u inno -p xxx -B bsom -T tb_access_log -F 500 -o /backup/tmp/ [root@GZAPP tmp]# ls -hltr total 2.6G -rw-r–r– 1 root root 1.6K Jul 24 08:21 bsom.tb_access_log-schema.sql -rw-r–r– 1 root root 478M Jul 24 08:21 bsom.tb_access_log.00001.sql -rw-r–r– 1 root root 478M Jul 24 08:21 bsom.tb_access_log.00002.sql -rw-r–r– 1 root root 478M Jul 24 08:21 bsom.tb_access_log.00003.sql -rw-r–r– 1 root root 478M Jul 24 08:21 bsom.tb_access_log.00004.sql -rw-r–r– 1 root root 478M Jul 24 08:22 bsom.tb_access_log.00005.sql -rw-r–r– 1 root root  214 Jul 24 08:22 metadata -rw-r–r– 1 root root 241M Jul 24 08:22 bsom.tb_access_log.00006.sql ###由上可知，大表tb_access_log按接近500M被分割成了多个文件 [root@GZAPP tmp]# myloader -u inno -p xxx -B tempdb -t 6 -d /backup/tmp -v 3 <strong> Message: 6 threads created </strong> Message: Creating database `tempdb` <strong> Message: Creating table `tempdb`.`tb_access_log` </strong> Message: Thread 1 restoring `bsom`.`tb_access_log` part 3 <strong> Message: Thread 2 restoring `bsom`.`tb_access_log` part 5 </strong> Message: Thread 5 restoring `bsom`.`tb_access_log` part 4 <strong> Message: Thread 3 restoring `bsom`.`tb_access_log` part 6 </strong> Message: Thread 4 restoring `bsom`.`tb_access_log` part 1 <strong> Message: Thread 6 restoring `bsom`.`tb_access_log` part 2 #在下面的processlist可以看到，存在表级锁等待 +———+——-+———–+———+———+——–+—————————–+————————————————+ | Id      | User  | Host      | db      | Command | Time   | State                       | Info                                           | +———+——-+———–+———+———+——–+—————————–+————————————————+ | 4452079 | root  | localhost | bsom    | Query   |      0 | init                        | show processlist                               | | 4452167 | inno  | localhost | tempdb  | Sleep   |    769 |                             | NULL                                           | | 4452168 | inno  | localhost | tempdb  | Query   |     36 | update                      | INSERT INTO `tb_access_log` VALUES (6367402,”0,| | 4452169 | inno  | localhost | tempdb  | Query   |     21 | Waiting for table level lock| INSERT INTO `tb_access_log` VALUES (12593865,” | | 4452170 | inno  | localhost | tempdb  | Query   |     26 | Waiting for table level lock| INSERT INTO `tb_access_log` VALUES (15643029,””| | 4452171 | inno  | localhost | tempdb  | Query   |      6 | Waiting for table level lock| INSERT INTO `tb_access_log` VALUES (173947,”70 | | 4452172 | inno  | localhost | tempdb  | Query   |     15 | Waiting for table level lock| INSERT INTO `tb_access_log` VALUES (9490507,”7 | | 4452173 | inno  | localhost | tempdb  | Query   |     30 | Waiting for table level lock| INSERT INTO `tb_access_log` VALUES (3271602,”4 | +———+———+———–+———+———+——–+—————————–+———————————————-+ c、调整myisam有关参数后导入 [root@GZ-APP-BAK01 tmp]# time myloader -u innobk -p InnoBK -B tempdb -t 6 -d /backup/tmp -v 3 </strong> Message: 6 threads created <strong> Message: Creating table `tempdb`.`tb_mobile_access_log` </strong> Message: Thread 1 restoring `blossom`.`tb_mobile_access_log` part 3 <strong> Message: Thread 6 restoring `blossom`.`tb_mobile_access_log` part 6 </strong> Message: Thread 2 restoring `blossom`.`tb_mobile_access_log` part 5 <strong> Message: Thread 3 restoring `blossom`.`tb_mobile_access_log` part 4 </strong> Message: Thread 4 restoring `blossom`.`tb_mobile_access_log` part 1 <strong> Message: Thread 5 restoring `blossom`.`tb_mobile_access_log` part 2 </strong> Message: Thread 6 shutting down <strong> Message: Thread 5 shutting down </strong> Message: Thread 1 shutting down <strong> Message: Thread 2 shutting down </strong> Message: Thread 4 shutting down <strong> Message: Thread 3 shutting down real    266m28.903s user    0m6.008s sys     0m1.681s ###调整以下相关参数，后尝试再次导入， concurrent_insert  AUTO 改成 ALWAYS bulk_insert_buffer_size 8388608 改成 256M myisam_sort_buffer_size 67108864 改成 128M [root@GZ-APP-BAK01 tmp]# time myloader -u innobk -p InnoBK -B tempdb -t 6 -o -d /backup/tmp -v 3 </strong> Message: 6 threads created <strong> Message: Dropping table (if exists) `tempdb`.`tb_mobile_access_log` </strong> Message: Creating table `tempdb`.`tb_mobile_access_log` <strong> Message: Thread 1 restoring `blossom`.`tb_mobile_access_log` part 3 </strong> Message: Thread 2 restoring `blossom`.`tb_mobile_access_log` part 6 <strong> Message: Thread 3 restoring `blossom`.`tb_mobile_access_log` part 5 </strong> Message: Thread 4 restoring `blossom`.`tb_mobile_access_log` part 4 <strong> Message: Thread 6 restoring `blossom`.`tb_mobile_access_log` part 1 </strong> Message: Thread 5 restoring `blossom`.`tb_mobile_access_log` part 2 <strong> Message: Thread 2 shutting down </strong> Message: Thread 1 shutting down <strong> Message: Thread 6 shutting down </strong> Message: Thread 5 shutting down <strong> Message: Thread 3 shutting down </strong> Message: Thread 4 shutting down real    253m42.460s   ###此时导入时间并无明显减少 user    0m5.924s sys     0m1.637s 2、基于innodb引擎的导出导入 a、表未分块导出，数据文件大小为3.9GB [root@GZAPP tmp]# ls -hltr total 3.9G -rw-r–r– 1 root root 1.8K Jul 24 00:09 bscom.tb_message-schema.sql -rw-r–r– 1 root root 3.9G Jul 24 00:25 bscom.tb_message.sql -rw-r–r– 1 root root  215 Jul 24 09:14 metadata ###下面使用6个线程导入，实际上可以看到，只有1个线程在工作，因为数据文件只有1个 [root@GZAPP tmp]# myloader -u inno -p xxx -B tempdb -t 6 -d /backup/tmp -v 3 <strong> Message: 6 threads created </strong> Message: Creating table `tempdb`.`tb_message` <strong> Message: Thread 1 restoring `bscom`.`tb_message` part 0 </strong> Message: Thread 5 shutting down <strong> Message: Thread 2 shutting down </strong> Message: Thread 6 shutting down <strong> Message: Thread 3 shutting down </strong> Message: Thread 4 shutting down b、表分块导出 [root@GZAPP tmp]# mydumper -u inno -p xxx -B bscom -T tb_message -F 500 -o /backup/tmp/ [root@GZAPP tmp]# ls -hltr total 3.9G -rw-r–r– 1 root root 1.8K Jul 24 09:55 bscom.tb_message-schema.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00001.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00002.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00003.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00004.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00005.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00006.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00007.sql -rw-r–r– 1 root root 481M Jul 24 09:55 bscom.tb_message.00008.sql -rw-r–r– 1 root root  135 Jul 24 09:55 metadata -rw-r–r– 1 root root  93M Jul 24 09:55 bscom.tb_message.00009.sql ###下面尝试使用6线程导入，可以看到有6个线程在并发导入 [root@GZAPP tmp]# myloader -u inno -p xxx -B tempdb -t 6 -d /backup/tmp/ -v 3 <strong> Message: 6 threads created </strong> Message: Creating database `tempdb` <strong> Message: Creating table `tempdb`.`tb_message` </strong> Message: Thread 2 restoring `bscom`.`tb_message` part 5 <strong> Message: Thread 1 restoring `bscom`.`tb_message` part 9 </strong> Message: Thread 3 restoring `bscom`.`tb_message` part 1 <strong> Message: Thread 4 restoring `bscom`.`tb_message` part 8 </strong> Message: Thread 5 restoring `bscom`.`tb_message` part 4 <strong> Message: Thread 6 restoring `bscom`.`tb_message` part 6 </strong> Message: Thread 1 restoring `bscom`.`tb_message` part 7 <strong> Message: Thread 6 restoring `bscom`.`tb_message` part 3 </strong> Message: Thread 2 restoring `bscom`.`tb_message` part 2 <strong> Message: Thread 3 shutting down </strong> Message: Thread 5 shutting down <strong> Message: Thread 4 shutting down </strong> Message: Thread 1 shutting down <strong> Message: Thread 2 shutting down </strong> Message: Thread 6 shutting down 3、小结 a、mydumper在导出的时候可以根据服务器可用资源来合理地设置线程数。 b、mydumper在导出的时候尽可能地指定chunk-filesize或者rows参数以分块导出。 c、myloader在针对myisam引擎时建议调整相关参数至合理值以提高无法提高性能，主要是表级锁的问题。 d、myloader在针对innodb引擎时建议调整参数至合理值以提高性能，如以下参数等： innodb_buffer_pool_size innodb_flush_log_at_trx_commit innodb_log_buffer_size e、通过使用分块导出与导入可以显著利用并发来加快inndbo表导入。 f、注意mydumper导出时不会导出存储过程，函数，触发器等。</p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/数据库/" title="数据库">数据库</a> / 
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/Database/" title="Database">Database</a> / 
+    
+        <a href="/tags/dba/" title="dba">dba</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br>
+        <a href="/2015/09/11/2019030500067/">
+            
+                MYSQL主备复制结构搭建与切换
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br>
+        <a href="/2015/09/07/2019030500076/">
+            
+                Mysql复合主键中自增长字段
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '2019030500011' || '2015/09/11/2019030500011/',
+    owner: 'your_github_id',
+    repo: 'your_blog_comments',
+    clientId: 'your_client_id',
+    clientSecret: 'your_client_secret'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

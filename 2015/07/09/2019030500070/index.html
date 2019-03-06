@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>MySQL优化之——安全地关闭MySQL实例 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2015/07/09/2019030500070/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2015/07/09/2019030500070/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/2015/07/09/2019030500070/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2015/07/09/2019030500070/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>MySQL优化之——安全地关闭MySQL实例</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2015-07-09T05:42:18.000Z">2015-07-09</time>
+    </p>
+    <div class="post-content">
+        <blockquote>
+<h4 id="关闭过程："><a href="#关闭过程：" class="headerlink" title="关闭过程："></a>关闭过程：</h4><ul>
+<li>1、发起shutdown，发出  SIGTERM信号</li>
+<li>2、有必要的话，新建一个关闭线程(shutdown thread)</li>
+</ul>
+<p>如果是客户端发起的关闭，则会新建一个专用的关闭线程 如果是直接收到 SIGTERM 信号进行关闭的话，专门负责信号处理的线程就会负责关闭工作，或者新建一个独立的线程负责这个事 当无法创建独立的关闭线程时（例如内存不足），MySQL Server会发出类似下面的告警信息： Error: Can’t create thread to kill server</p>
+<ul>
+<li>3、MySQL Server不再响应新的连接请求</li>
+</ul>
+<p>关闭TCP/IP网络监听，关闭Unix Socket等渠道</p>
+<ul>
+<li>4、逐渐关闭当前的连接、事务</li>
+</ul>
+<p>空闲连接，将立刻被终止； 当前还有事务、SQL活动的连接，会将其标识为 killed，并定期检查其状态，以便下次检查时将其关闭；（参考 KILL 语法） 当前有活跃事务的，该事物会被回滚，如果该事务中还修改了非事务表，则已经修改的数据无法回滚，可能只会完成部分变更； 如果是Master/Slave复制场景里的Master，则对复制线程的处理过程和普通线程也是一样的； 如果是Master/Slave复制场景里的Slave，则会依次关闭IO、SQL线程，如果这2个线程当前是活跃的，则也会加上 killed 标识，然后再关闭； Slave服务器上，SQL线程是允许直接停止当前的SQL操作的（为了避免复制问题），然后再关闭该线程； 在MySQl 5.0.80及以前的版本里，如果SQL线程当时正好执行一个事务到中间，该事务会回滚；从5.0.81开始，则会等待所有的操作结束，除非用户发起KILL操作。 当Slave的SQL线程对非事务表执行操作时被强制 KILL了，可能会导致Master、Slave数据不一致；</p>
+<ul>
+<li>5、MySQL Server进程关闭所有线程，关闭所有存储引擎；</li>
+</ul>
+<p>刷新所有表cache，关闭所有打开的表； 每个存储引擎各自负责相关的关闭操作，例如MyISAM会刷新所有等待写入的操作；InnoDB会将buffer pool刷新到磁盘中（从MySQL 5.0.5开始，如果innodb_fast_shutdown不设置为 2 的话），把当前的LSN记录到表空间中，然后关闭所有的内部线程。</p>
+<ul>
+<li>6、MySQL Server进程退出</li>
+</ul>
+<h4 id="关于KILL指令"><a href="#关于KILL指令" class="headerlink" title="关于KILL指令"></a>关于KILL指令</h4><p>从5.0开始，KILL 支持指定  CONNECTION | QUERY两种可选项：</p>
+<ul>
+<li>KILL CONNECTION和原来的一样，停止回滚事务，关闭该线程连接，释放相关资源；</li>
+<li>KILL QUERY则只停止线程当前提交执行的操作，其他的保持不变；</li>
+</ul>
+<p>提交KILL操作后，该线程上会设置一个特殊的 kill标记位。通常需要一段时间后才能真正关闭线程，因为kill标记位只在特定的情况下才检查：</p>
+<ul>
+<li>1、执行SELECT查询时，在ORDER BY或GROUP BY循环中，每次读完一些行记录块后会检查 kill标记位，如果发现存在，该语句会终止；</li>
+<li>2、执行ALTER TABLE时，在从原始表中每读取一些行记录块后会检查 kill 标记位，如果发现存在，该语句会终止，删除临时表；</li>
+<li>3、执行UPDATE和DELETE时，每读取一些行记录块并且更新或删除后会检查 kill 标记位，如果发现存在，该语句会终止，回滚事务，若是在非事务表上的操作，则已发生变更的数据不会回滚；</li>
+<li>4、GET_LOCK() 函数返回NULL；</li>
+<li>5、INSERT DELAY线程会迅速内存中的新增记录，然后终止；</li>
+<li>6、如果当前线程持有表级锁，则会释放，并终止；</li>
+<li>7、如果线程的写操作调用在等待释放磁盘空间，则会直接抛出“磁盘空间满”错误，然后终止；</li>
+<li>8、当MyISAM表在执行REPAIR TABLE 或 OPTIMIZE TABLE 时被 KILL的话，会导致该表损坏不可用，指导再次修复完成。</li>
+</ul>
+<h4 id="安全关闭MySQL几点建议"><a href="#安全关闭MySQL几点建议" class="headerlink" title="安全关闭MySQL几点建议"></a>安全关闭MySQL几点建议</h4><p>想要安全关闭 mysqld 服务进程，建议按照下面的步骤来进行：</p>
+<ul>
+<li>0、用具有SUPER、ALL等最高权限的账号连接MySQL，最好是用 unix socket 方式连接；</li>
+<li>1、在5.0及以上版本，设置innodb_fast_shutdown = 1，允许快速关闭InnoDB（不进行full purge、insert buffer merge），如果是为了升级或者降级MySQL版本，则不要设置；</li>
+<li>2、设置innodb_max_dirty_pages_pct = 0，让InnoDB把所有脏页都刷新到磁盘中去；</li>
+<li>3、设置max_connections和max_user_connections为1，也就最后除了自己当前的连接外，不允许再有新的连接创建；</li>
+<li>4、关闭所有不活跃的线程，也就是状态为Sleep  且 Time 大于 1 的线程ID；</li>
+<li>5、执行 SHOW PROCESSLIST  确认是否还有活跃的线程，尤其是会产生表锁的线程，例如有大数据集的SELECT，或者大范围的UPDATE，或者执行DDL，都是要特别谨慎的；</li>
+<li>6、执行 SHOW ENGINE INNODB STATUS 确认History list length的值较低（一般要低于500），也就是未PURGE的事务很少，并且确认Log sequence number、Log flushed up to、Last checkpoint at三个状态的值一样，也就是所有的LSN都已经做过检查点了；</li>
+<li>7、然后执行FLUSH LOCKAL TABLES 操作，刷新所有 table cache，关闭已打开的表（LOCAL的作用是该操作不记录BINLOG）；</li>
+<li>8、如果是SLAVE服务器，最好是先关闭 IO_THREAD，等待所有RELAY LOG都应用完后，再关闭 SQL_THREAD，避免 SQL_THREAD 在执行大事务被终止，耐心待其全部应用完毕，如果非要强制关闭的话，最好也等待大事务结束后再关闭SQL_THREAD；</li>
+<li>9、最后再执行 mysqladmin shutdown。</li>
+<li>10、紧急情况下，可以设置innodb_fast_shutdown = 1，然后直接执行 mysqladmin shutdown 即可，甚至直接在操作系统层调用 kill 或者 kill -9 杀掉 mysqld 进程（在innodb_flush_log_at_trx_commit = 0 的时候可能会丢失部分事务），不过mysqld进程再次启动时，会进行CRASH RECOVERY工作，需要有所权衡。</li>
+</ul>
+<p>以上说了那么多，其实正常情况下执行 mysqladmin shutdown 就够了，如果发生阻塞，再参考上面的内容进行分析和解决吧。</p>
+</blockquote>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br>
+        <a href="/2015/07/14/2019030500009/">
+            
+                Android ORMLite数据库简介
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br>
+        <a href="/2015/07/09/2019030500018/">
+            
+                关于Oracle 10g的schedule job
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '2019030500070' || '2015/07/09/2019030500070/',
+    owner: 'your_github_id',
+    repo: 'your_blog_comments',
+    clientId: 'your_client_id',
+    clientSecret: 'your_client_secret'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/hibernate/" title="hibernate">hibernate (2)</a>
+  
+    <a class="tag-item" href="/tags/session/" title="session">session (1)</a>
+  
+    <a class="tag-item" href="/tags/方法/" title="方法">方法 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

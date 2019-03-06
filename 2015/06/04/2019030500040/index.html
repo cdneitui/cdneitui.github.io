@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>简单查询部分sql练习题 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2015/06/04/2019030500040/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2015/06/04/2019030500040/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/2015/06/04/2019030500040/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2015/06/04/2019030500040/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>简单查询部分sql练习题</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2015-06-04T05:30:59.000Z">2015-06-04</time>
+    </p>
+    <div class="post-content">
+        <p>简单查询部分sql练习题:</p>
+<ol>
+<li>– 选择部门30中的所有职工</li>
+<li><p>select * from emp where deptno = 30;</p>
+</li>
+<li><p>– 列出所有业务员(CLERK)的姓名，编号，和部门编号</p>
+</li>
+<li><p>select e.ename, e.empno, e.deptno from emp e where e.job = ‘CLERK’;</p>
+</li>
+<li><p>– 找出奖金高于薪金的员工</p>
+</li>
+<li><p>select * from emp where comm &gt; sal;</p>
+</li>
+<li><p>– 找出奖金高于薪金的60%的员工</p>
+</li>
+<li><p>select <em> from emp where comm &gt; sal </em> 0.6;</p>
+</li>
+<li><p>– 找出部门10中所有经理(MANAGER)和部门20中所有业务员(CLERK)的详细资料</p>
+</li>
+<li>select * from emp e</li>
+<li>where e.deptno = 10 and e.job = ‘MANAGER’</li>
+<li><p>or e.deptno = 20 and e.job = ‘CLERK’;</p>
+</li>
+<li><p>select * from emp e</p>
+</li>
+<li>where (e.deptno = 10 and e.job = ‘MANAGER’)</li>
+<li><p>or (e.deptno = 20 and e.job = ‘CLERK’);</p>
+</li>
+<li><p>select * from emp e where e.deptno = 10 and e.job = ‘MANAGER’</p>
+</li>
+<li>union</li>
+<li><p>select * from emp e where e.deptno = 20 and e.job = ‘CLERK’;</p>
+</li>
+<li><p>– 找出部门10中所有经理(MANAGER),部门20中所有业务员(CLERK),既不是经理又不是业务员但其薪水大于等于2000的所有员工的详细资料</p>
+</li>
+<li>select * from emp e where e.deptno = 10 and e.job = ‘MANAGER’</li>
+<li>union</li>
+<li>select * from emp e where e.deptno = 20 and e.job = ‘CLERK’</li>
+<li>union</li>
+<li><p>select * from emp e where e.sal &gt; 2000 and e.job not in(‘MANAGER’, ‘CLERK’);</p>
+</li>
+<li><p>– 找出收取奖金的员工的不同工作</p>
+</li>
+<li><p>select distinct e.job from emp e;</p>
+</li>
+<li><p>– 找出不收取奖金或收取的奖金低于100的员工</p>
+</li>
+<li><p>select * from emp e where e.comm is null or e.comm &lt; 100;</p>
+</li>
+<li><p>– 找出各月倒数第3天受雇的所有员工</p>
+</li>
+<li><p>select * from emp e where e.hiredate between last_day(hiredate)-3 and last_day(hiredate);</p>
+</li>
+<li><p>– 找出早于30年前受雇的员工</p>
+</li>
+<li><p>select * from emp e where (sysdate - e.hiredate)/365 &gt; 30;</p>
+</li>
+<li><p>– 以首字母大写的方式显示所有员工的姓名</p>
+</li>
+<li><p>select initcap(ename) from emp;</p>
+</li>
+<li><p>– 显示正好为5个字符的员工姓名</p>
+</li>
+<li><p>select * from emp where length(ename) = 5;</p>
+</li>
+<li><p>– 显示不带有”R”的员工姓名</p>
+</li>
+<li><p>select * from emp where ename not like ‘%K%’;</p>
+</li>
+<li><p>– 显示所有员工姓名的前三个字符</p>
+</li>
+<li><p>select substr(ename, 0, 3) from emp;</p>
+</li>
+<li><p>– 显示所有员工的姓名，并用’a’替换所有’A’</p>
+</li>
+<li><p>select replace(ename, ‘A’, ‘a’) from emp;</p>
+</li>
+<li><p>– 显示满30年服务年限的员工姓名和受雇日期</p>
+</li>
+<li><p>select * from emp where (sysdate - hiredate)/365 &gt; 30;</p>
+</li>
+<li><p>– 显示员工的详细资料，按姓名由大到小排序</p>
+</li>
+<li><p>select * from emp order by ename desc;</p>
+</li>
+<li><p>– 显示员工的姓名和受雇日期，根据其服务年限，将最老的员工排在最前面</p>
+</li>
+<li><p>select ename, hiredate from emp order by hiredate asc;</p>
+</li>
+<li><p>– 显示所有员工的姓名，工作和薪金，按工作降序排列，若工作相同则按薪金升序排序</p>
+</li>
+<li>select ename, job, sal from emp order by job desc, sal asc;</li>
+<li><p>select ename, job, sal from emp order by 2 desc, 3;</p>
+</li>
+<li><p>– 显示所有员工的姓名，加入公司的年份和月份，按受雇日期所在的月排序，若月份相同，则将最早年份排在最前面</p>
+</li>
+<li><p>select ename, to_number(to_char(hiredate, ‘yyyy’)) Year, to_number(to_char(hiredate, ‘mm’)) from emp order by 3 desc, 2 asc;</p>
+</li>
+<li><p>– 显示一个月为30天的情况所员工的日薪金，忽略余数</p>
+</li>
+<li><p>select round(sal/30) 日薪 from emp;</p>
+</li>
+<li><p>– 找出在(任何年份)2月受聘的所有员工</p>
+</li>
+<li><p>select * from emp where to_number(to_char(hiredate, ‘mm’)）= 2;</p>
+</li>
+<li><p>– 对每个员工，显示其加入公司的天数</p>
+</li>
+<li><p>select ename, round(sysdate - hiredate) Days from emp;</p>
+</li>
+<li><p>– 显示姓名中任意位置包含“A”的所有员工姓名</p>
+</li>
+<li><p>select * from emp where upper(ename) like ‘%A%’;</p>
+</li>
+<li><p>– 以年月日方式显示所有员工的服务年限</p>
+</li>
+<li>select ename, hiredate,</li>
+<li>trunc(months_between(sysdate, hiredate) /12)  year  ,</li>
+<li>trunc(mod(months_between(sysdate, hiredate) ,  12 ) ) months  ,</li>
+<li>trunc(sysdate - add_months(hiredate,months_between(sysdate, hiredate))) day</li>
+<li>from emp ;</li>
+</ol>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br>
+        <a href="/2015/06/04/2019030500143/">
+            
+                Oracle问题--远程登录失败原因分析
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br>
+        <a href="/2015/06/02/2019030500173/">
+            
+                win7 64位安装mysql
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '2019030500040' || '2015/06/04/2019030500040/',
+    owner: 'your_github_id',
+    repo: 'your_blog_comments',
+    clientId: 'your_client_id',
+    clientSecret: 'your_client_secret'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>MYSQL设计优化 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2015/06/11/2019030500106/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2015/06/11/2019030500106/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/2015/06/11/2019030500106/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2015/06/11/2019030500106/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>MYSQL设计优化</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2015-06-11T04:44:09.000Z">2015-06-11</time>
+    </p>
+    <div class="post-content">
+        <blockquote>
+<p>本文将从各方面介绍优化mysql设计的一些方式。</p>
+<h2 id="1、优化sql语句"><a href="#1、优化sql语句" class="headerlink" title="1、优化sql语句"></a>1、优化sql语句</h2><h3 id="1-定位需要优化的sql语句"><a href="#1-定位需要优化的sql语句" class="headerlink" title="(1)定位需要优化的sql语句"></a>(1)定位需要优化的sql语句</h3><h4 id="1-show-status统计SQL语句频率"><a href="#1-show-status统计SQL语句频率" class="headerlink" title="1)show status统计SQL语句频率"></a>1)show status统计SQL语句频率</h4><p>对Myisam和Innodb存储引擎都计数的参数： SHOW STATUS可以根据需要显示session级别的统计结果和global级别的统计结果。 1.Com_select  执行select操作的次数，一次查询只累加1； 2.Com_insert 执行insert操作的次数，对于批量插入的insert操作，只累加一次； 3.Com_update 执行update操作的次数； 4.Com_delete　执行delete操作的次数； 执行如：SHOW STATUS WHERE Variable_name = ‘Com_select’; 对Innodb存储引擎计数的参数（计算的方式不一样）： 1.Innodb_rows_read select查询返回的行数； 2.Innodb_rows_inserted 执行Insert操作插入的行数； 3.Innodb_rows_updated 执行update操作更新的行数； 4.Innodb_rows_deleted 执行delete操作删除的行数； 通过以上几个参数，可以很容易的了解当前数据库的应用是以插入更新为主还是以查询操作为主，以及各种类型的SQL大致的执行比例是多少。 对于更新操作的计数，是对执行次数的计数，不论提交还是回滚都会累加。 对于事务型的参数 1.Com_commit 事务提交次数 2.Com_rollback 事务回滚次数 对于回滚操作非常频繁的数据库，可能意味着应用编写存在问题。 数据库的基本情况的参数： 1.Connections 试图连接Mysql服务器的次数 2.Uptime 服务器工作时间 3.Slow_queries 慢查询的次数</p>
+<h4 id="2-定位执行效率较低的SQL语句"><a href="#2-定位执行效率较低的SQL语句" class="headerlink" title="2)定位执行效率较低的SQL语句"></a>2)定位执行效率较低的SQL语句</h4><p>两种方式定位执行效率较低的SQL语句： (1)通过慢查询日志定位那些执行效率较低的sql语句（需要查询结束后），用–log-slow-queries[=file_name]选项启动时，mysqld写一个包含所有执行时间超过long_query_time秒的SQL语句的日志文件. (2)使用show processlist命令查看当前MySQL在进行的线程，包括线程的状态，是否锁表等等，可以实时的查看SQL执行情况，同时对一些锁表操作进行优化。</p>
+<h4 id="3-EXPLAIN命令分析SQL语句"><a href="#3-EXPLAIN命令分析SQL语句" class="headerlink" title="3)EXPLAIN命令分析SQL语句"></a>3)EXPLAIN命令分析SQL语句</h4><p>通过explain或者desc 获取MySQL如何执行SELECT语句的信息 EXPLAIN SELECT * FROM message a LEFT JOIN mytable b ON a.id = b.id WHERE a.id=1; 返回结果 +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ |   id   | select_type   | table | type  | possible_keys| key            | key_len   | ref   |  rows  |  Extra       | +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ |   1    | SIMPLE        | a     | const | PRIMARY      | PRIMARY        | 4         | const | 1      |              | |   1    | SIMPLE        | b     | ALL    | NULL             | NULL           | NULL      |       | 9999   |              | +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ select_type：select 类型 table：      输出结果集的表 type：       表示表的连接类型 ①当表中仅有一行是最佳的连接类型； ②当select操作中使用索引进行表连接时type的值为ref； ③当select的表连接没有使用索引时，经常会看到type的值为ALL，表示对该表进行了全表扫描，这时需要考虑通过创建索引来提高表连接的效率。 possible_keys：表示查询时,可以使用的索引列. key：          表示使用的索引 key_len：      索引长度 rows：         扫描范围 Extra：执行情况的说明和描述 例如上面的例子，因为是对b表的全表扫描导致效率下降，则对b表的 id 字段创建索引，查询需要扫描的行数将会减少。 返回结果 +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ |   id   | select_type   | table | type  | possible_keys| key            | key_len   | ref   |  rows  |  Extra       | +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ |   1    | SIMPLE        | a     | const | PRIMARY      | PRIMARY        | 4         | const | 1      |              | |   1    | SIMPLE        | b     | const | PRIMARY      | PRIMARY        | 4         | const | 1      |              | +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+</p>
+<h3 id="2-sql语句优化方式"><a href="#2-sql语句优化方式" class="headerlink" title="(2)sql语句优化方式"></a>(2)sql语句优化方式</h3><p>1)大批量插入数据 1)对于Myisam类型的表，可以通过以下步骤快速的导入大量的数据。 前后两个命令用来打开或者关闭Myisam表非唯一索引的更新。在导入大量的数据到一个非空的Myisam表时，通过设置这两个命令，可以提高导入的效率。 ALTER TABLE mytable DISABLE KEYS; INSERT INTO mytable(id, username, city, age) VALUES(1, ‘name1’, ‘city1’, 10),(2, ‘name2’, ‘city2’, 20),(3, ‘name3’, ‘city3’, 30); ALTER TABLE mytable ENABLE KEYS; 对于导入大量数据到一个空的Myisam表，默认就是先导入数据然后才创建索引的，所以不用进行设置。 2)对于Innodb类型的表，我们有以下几种方式可以提高导入的效率（对Innodb类型的表，上面的方式并不能提高导入数据的效率） ①因为Innodb类型的表是按照主键的顺序保存的，所以将导入的数据按照主键的顺序排列，可以有效的提高导入数据的效率。 如果Innodb表没有主键，那么系统会默认创建一个内部列作为主键，所以如果可以给表创建一个主键，将可以利用这个优势提高导入数据的效率。 ②在导入数据前执行SET UNIQUE_CHECKS=0，关闭唯一性校验，在导入结束后执行SET UNIQUE_CHECKS=1，恢复唯一性校验，可以提高导入的效率。 SET UNIQUE_CHECKS=0; SET UNIQUE_CHECKS=1; ③如果使用自动提交的方式，建议在导入前执行SET AUTOCOMMIT=0，关闭自动提交，导入结束后再执行SET AUTOCOMMIT=1，打开自动提交，也可以提高导入的效率。 SET AUTOCOMMIT=0; SET AUTOCOMMIT=1; 2)优化insert语句 1)如果同时插入很多行，请使用多个值的INSERT语句。这比使用分开INSERT语句快(在一些情况中几倍)。 Insert into test values(1,2),(1,3),(1,4)… 2)如果从不同客户插入很多行，能通过使用INSERT DELAYED 语句得到更高的速度。 Delayed 的含义是让insert 语句马上执行，其实数据都被放在内存的队列中，并没有真正写入磁盘；这比每条语句分别插入要快的多； LOW_PRIORITY 刚好相反，在所有其他用户对表的读写完后才进行插入； 3)将索引文件和数据文件分在不同的磁盘上存放（利用建表中的选项）； 4)如果批量插入，可以增加bulk_insert_buffer_size变量值的方法来提高速度，但是，这只能对myisam表使用； 5)当从一个文本文件装载一个表时，使用LOAD DATA INFILE。这通常比使用很多INSERT语句快20倍； 6)根据应用情况使用 replace 语句代替 insert； 7)根据应用情况使用 ignore 关键字忽略重复记录。 INSERT DELAYED INTO mytable(id, username, city, age) VALUES(4, ‘name4’, ‘city4’, 40); INSERT LOW_PRIORITY INTO mytable(id, username, city, age) VALUES(5, ‘name5’, ‘city5’, 50); REPLACE INTO mytable(id, username, city, age) VALUES(5, ‘name5’, ‘city5’, 50); INSERT IGNORE INTO mytable(id, username, city, age) VALUES(5, ‘name5’, ‘city5’, 50); 3)优化group by语句 默认情况下，MySQL排序所有GROUP BY col1，col2，….（如同指定了ORDER BY  col1，col2，…） 如果查询包括GROUP BY但想避免排序结果的消耗，可以指定 ORDER BY NULL禁止排序。 例如： SELECT <em> FROM mytable GROUP BY username ORDER BY NULL; 4)优化order by语句 以下情况可以使用索引: SELECT </em> FROM t1 ORDER BY key_part1,key_part2,… ;  –order by字段都为同一组合索引的一部分 SELECT <em> FROM t1 WHERE key_part1=1 ORDER BY key_part1 DESC, –key_part2 DESC;–where条件和order by使用相同的索引字段 SELECT </em> FROM t1 ORDER BY key_part1 DESC, key_part2 DESC;–order by的的所有字段顺序相同 以下情况不使用索引: 1)SELECT <em> FROM t1 ORDER BY key_part1 DESC, key_part2 ASC；–order by的字段混合ASC和DESC 2)SELECT </em> FROM t1 WHERE key2=constant ORDER BY key1；–用于查询行的关键字与ORDER BY中所使用的不相同 3)SELECT <em> FROM t1 ORDER BY key1, key2；–对不同的关键字使用ORDER BY 5)优化join语句 Mysql4.1开始支持SQL的子查询。这个技术可以使用SELECT语句来创建一个单列的查询结果，然后把这个结果作为过滤条件用在另一个查询中。 使用子查询可以一次性的完成很多逻辑上需要多个步骤才能完成的SQL操作，同时也可以避免事务或者表锁死，并且写起来也很容易。 但是，有些情况下，子查询可以被更有效率的连接(JOIN).. 替代。 假设我们要将所有没有订单记录的用户取出来，可以用下面这个查询完成： SELECT </em> FROM customerinfo WHERE CustomerID NOT in (SELECT CustomerID FROM salesinfo ) 如果使用连接(JOIN).. 来完成这个查询工作，速度将会快很多。尤其是当salesinfo表中对CustomerID建有索引的话，性能将会更好，查询如下： SELECT * FROM customerinfo LEFT JOIN salesinfo ON customerinfo.CustomerID=salesinfo.CustomerID WHERE salesinfo.CustomerID IS NULL 连接(JOIN).. 之所以更有效率一些，是因为 MySQL不需要在内存中创建临时表来完成这个逻辑上的需要两个步骤的查询工作。 6)insert update delete的调度优先级 MySQL还允许改变语句调度的优先级，使来自多个客户端的操作更好地协作(需要判断应用是以查询为主还是以更新为主的)。 以下改变调度策略的方法主要是针对Myisam存储引擎的（对于Innodb存储引擎，语句的执行是由获得行锁的顺序决定的） 默认调度策略： 1）写入操作优先于读取操作。 2）对某张数据表的写入操作某一时刻只能发生一次，写入请求按照它们到达的次序来处理。 3）对某张数据表的多个读取操作可以同时地进行。 语句调节符可以修改调度策略（以下是查询为主的）： 1）LOW_PRIORITY 关键字应用于 DELETE 、 INSERT 、 LOAD DATA 、 REPLACE和UPDATE 。 2）HIGH_PRIORITY关键字应用于SELECT和INSERT语句。 3）DELAYED关键字应用于INSERT和REPLACE语句。 如果写入操作是一个LOW_PRIORITY（低优先级）请求，那么读取操作优先级会高于写操作。（在这种情况下，如果写入者在等待的时候，第二个读取者到达了，那么就允许第二个读取者插到写入者之前。只有在没有其它的读取者的时候，才允许写入者开始操作。这种调度方式可能存在LOW_PRIORITY的写入操作永远被阻塞的情况。） SELECT查询被设置为HIGH_PRIORITY（高优先级），则也会调整SELECT操作到正在等待的写入操作之前。 设置方式： 1）启动方式 如果你希望所有支持LOW_PRIORITY选项的语句都默认地按照低优先级来处理，那么请使用–low-priority-updates选项来启动服务器。 2）sql方式 通过使用INSERT HIGH_PRIORITY来把INSERT语句提高到正常的写入优先级，可以消除该选项对单个INSERT语句的影响。 INSERT LOW_PRIORITY INTO mytable(id, username, city, age) VALUES(7, ‘name7’, ‘city7’, 70);</p>
+<h2 id="2、优化数据表"><a href="#2、优化数据表" class="headerlink" title="2、优化数据表"></a>2、优化数据表</h2><h3 id="1-优化表的数据类型"><a href="#1-优化表的数据类型" class="headerlink" title="(1)优化表的数据类型"></a>(1)优化表的数据类型</h3><p>函数PROCEDURE ANALYSE()可以对数据表中的列的数据类型提出优化建议，根据实际情况考虑是否实施优化。(虽然应用设计的时候需要考虑字段的长度留有一定的冗余，但是不推荐让很多字段都留有大量的冗余，这样即浪费存储也浪费内存) 语法： SELECT <em> FROM tbl_name PROCEDURE ANALYSE(); –输出的对数据表中的每一列的数据类型提出优化建议 SELECT </em> FROM tbl_name PROCEDURE ANALYSE(16,256);–不要为那些包含的值多于16个或者256字节的ENUM类型提出建议。(如果没有这样的限制，输出信息可能很长；ENUM定义通常很难阅读)</p>
+<h3 id="2-拆分表提高访问效率"><a href="#2-拆分表提高访问效率" class="headerlink" title="(2)拆分表提高访问效率"></a>(2)拆分表提高访问效率</h3><p>这里我们所说的拆分，主要是针对Myisam类型的表，拆分的方法可以分成两种情况： 纵向拆分： 纵向拆分是只按照应用访问的频度，将表中经常访问的字段和不经常访问的字段拆分成两个表，经常访问的字段尽量是定长的，这样可以有效的提高表的查询和更新的效率。 横向拆分： 横向拆分是指按照应用的情况，有目的的将数据横向拆分成几个表或者通过分区分到多个分区中，这样可以有效的避免Myisam表的读取和更新导致的锁问题。</p>
+<h3 id="3-规范化和逆规范化"><a href="#3-规范化和逆规范化" class="headerlink" title="(3)规范化和逆规范化"></a>(3)规范化和逆规范化</h3><p>根据实际情况考虑以下两个需求： 规范化的需求： 规范化设计强调数据的独立性，数据应该尽可能少地冗余，因为存在过多的冗余数据，意味着要占用了更多的物理空间，同时也对数据的维护和一致性检查带来了麻烦。 逆规范化的需求： 对于查询操作很多的应用，一次查询可能需要访问多表进行，如果通过冗余相同数据纪录在一个表中，更新的代价增加不多，但是查询操作效率可以有明显提高。</p>
+<h3 id="4-内存临时表"><a href="#4-内存临时表" class="headerlink" title="(4)内存临时表"></a>(4)内存临时表</h3><p>使用create temporary table语法创建临时表，它是基于session的表，数据保存在内存里面，当session断掉后，表自然消除。 比如，对于统计分析的表，如果统计的数据量不大，利用insert和select将数据移到临时表中比直接在表上做统计要效率更高。</p>
+<h3 id="5-选择更合适的表类型"><a href="#5-选择更合适的表类型" class="headerlink" title="(5)选择更合适的表类型"></a>(5)选择更合适的表类型</h3><p>1）如果应用出现比较严重的锁冲突，请考虑是否更改存储引擎到innodb，行锁机制可以有效的减少锁冲突的出现。 2）如果应用查询操作很多，且对事务完整性要求不严格，则可以考虑使用Myisam存储引擎。</p>
+<h2 id="3、优化客户端应用"><a href="#3、优化客户端应用" class="headerlink" title="3、优化客户端应用"></a>3、优化客户端应用</h2><h3 id="1-使用连接池"><a href="#1-使用连接池" class="headerlink" title="(1)使用连接池"></a>(1)使用连接池</h3><p>对于访问数据库来说，建立连接的代价比较昂贵，因此，我们有必要建立”连接池”以提高访问的性能。 我们可以把连接当作对象或者设备，池中又有许多已经建立的连接，访问本来需要与数据库的连接的地方，都改为和池相连，池临时分配连接供访问使用，结果返回后，访问将连接交还。</p>
+<h3 id="2-避免重复检索"><a href="#2-避免重复检索" class="headerlink" title="(2)避免重复检索"></a>(2)避免重复检索</h3><p>理清访问逻辑，需要对相同表的访问，尽量集中在相同sql访问，一次提取结果，减少对数据库的重复访问。</p>
+<h2 id="4、优化数据库服务器"><a href="#4、优化数据库服务器" class="headerlink" title="4、优化数据库服务器"></a>4、优化数据库服务器</h2><h3 id="1-使用mysql查询缓存"><a href="#1-使用mysql查询缓存" class="headerlink" title="(1)使用mysql查询缓存"></a>(1)使用mysql查询缓存</h3><p>作用： 查询缓存存储SELECT查询的文本以及发送给客户端的相应结果。如果随后收到一个相同的查询，服务器从查询缓存中重新得到查询结果，而不再需要解析和执行查询。 适用范围： 不发生数据更新的表。当表更改（包括表结构和表数据）后，查询缓存值的相关条目会被清空。 查询缓存的主要参数： SHOW VARIABLES LIKE ‘%query_cache%’; （或者 SHOW VARIABLES WHERE Variable_name LIKE ‘%query_cache%’;) ： have_query_cache  表示服务器在安装时已经配置了高速缓存 query_cache_size  表示缓存区大小，单位为字节(1024字节为1KB) query_cache_type  值从0到2，含义分别为 0或者off（缓存关闭） 1或者on（缓存打开，使用sql_no_cache的select除外） 2或者demand（只有带sql_cache的select语句提供高速缓存） SET GLOBAL query_cache_size=1024*50; 设置查询缓存大小，单位字节，1024字节为 1KB，query_cache_size大小的设置必须大于40KB SHOW STATUS命令实时监视查询缓存: SHOW STATUS LIKE ‘%Qcache%’; Qcache_queries_in_cache  在缓存中已注册的查询数目 Qcache_inserts           被加入到缓存中的查询数目 Qcache_hits              缓存采样数数目 Qcache_lowmem_prunes     因为缺少内存而被从缓存中删除的查询数目 Qcache_not_cached        没有被缓存的查询数目 (不能被缓存的，或由于 QUERY_CACHE_TYPE) Qcache_free_memory       查询缓存的空闲内存总数 Qcache_free_blocks       查询缓存中的空闲内存块的数目 Qcache_total_blocks      查询缓存中的块的总数目</p>
+<h3 id="2-使用机器高速缓存"><a href="#2-使用机器高速缓存" class="headerlink" title="(2)使用机器高速缓存"></a>(2)使用机器高速缓存</h3><p>Cache（高速缓存）、Memory（内存）、Hard disk（硬盘）都是数据存取单元，但存取速度却有很大差异，呈依次递减的顺序。 对于CPU来说，它可以从距离自己最近的Cache高速地存取数据，而不是从内存和硬盘以低几个数量级的速度来存取数据。 而Cache中所存储的数据，往往是CPU要反复存取的数据，有特定的机制（或程序）来保证Cache内数据的命中率（Hit Rate）。 因此，CPU存取数据的速度在应用高速缓存后得到了巨大的提高。 因为将数据写入高速缓存的任务由Cache Manager负责，所以对用户来说高速缓存的内容肯定是只读的。 需要你做的工作很少，程序中的SQL语句和直接访问DBMS时没有分别，返回的结果也看不出有什么差别。而数据库厂商往往会在DB Server的配置文件中提供与Cache相关的参数，通过修改它们，可针对我们的应用优化Cache的管理。</p>
+<h3 id="3-均衡负载"><a href="#3-均衡负载" class="headerlink" title="(3)均衡负载"></a>(3)均衡负载</h3><p>1)读写分流（主从复制） 利用mysql的主从复制可以有效的分流更新操作和查询操作。 具体的实现是一个主服务器，承担更新操作（为了数据的一致性），多台从服务器，承担查询操作（多台从服务器一方面用来确保可用性，一方面可以创建不同的索引满足不同查询的需要），主从之间通过复制实现数据的同步。 主从复制优化： 对于主从之间不需要复制全部表的情况，可以通过在主的服务器上搭建一个虚拟的从服务器，将需要复制到从服务器的表设置成blackhole引擎，然后定义replicate-do-table参数只复制这些表，这样就过滤出需要复制的binlog，减少了传输binlog的带宽。因为搭建的虚拟的从服务器只起到过滤binlog的作用，并没有实际纪录任何数据，所以对主数据库服务器的性能影响也非常的有限。 注意： 通过复制分流查询的存在的问题是主数据库上更新频繁或者网络出现问题的时候，主从之间的数据可能存在差异，造成查询结果的异议，应用在设计的时候需要有所考虑。 2)分布式的数据库 分布式的数据库设计适合大数据量，负载高的情况，可平均多台服务器的负载，有良好的扩展性和高效性（读写效率）。 分布式事务： mysql从5.0.3开始支持分布式事务，目前分布式事务只对Innodb存储引擎支持。 也可以使用mysql的Cluster功能（NDB引擎）或者使用自己用mysql api来实现全局事务。</p>
+</blockquote>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br>
+        <a href="/2015/06/12/2019030500158/">
+            
+                SQL结构化查询语言
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br>
+        <a href="/2015/06/11/2019030500115/">
+            
+                MySQL Study之--Mysql启动失败“mysql.host”
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '2019030500106' || '2015/06/11/2019030500106/',
+    owner: 'your_github_id',
+    repo: 'your_blog_comments',
+    clientId: 'your_client_id',
+    clientSecret: 'your_client_secret'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

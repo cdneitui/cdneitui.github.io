@@ -1,0 +1,1465 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/page/16/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/page/16/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/page/16/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/page/16/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 首页 -->
+
+    
+    <h3 class="widget-hd">
+        <strong>
+            
+                最近动态
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/08/2019030500005/">
+    		centos6.5安装mysql5.6
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-08T08:35:13.000Z">2015-06-08</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/CentOS/" title="CentOS">CentOS</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h4 id="1-先查看版本号"><a href="#1-先查看版本号" class="headerlink" title="1. 先查看版本号"></a>1. 先查看版本号</h4><pre><code># uname -a
+</code></pre><h4 id="2-下载并安装Mysql的yum仓库"><a href="#2-下载并安装Mysql的yum仓库" class="headerlink" title="2. 下载并安装Mysql的yum仓库"></a>2. 下载并安装Mysql的yum仓库</h4><p>下载Mysql的yum仓库 <a href="http://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">http://dev.mysql.com/downloads/repo/yum/</a> 然后安装一下这个仓库列表</p>
+<pre><code>$ sudo yum localinstall mysql-community-release-el6-5.noarch.rpm 
+</code></pre><h4 id="3-搜索可安装的mysql版本"><a href="#3-搜索可安装的mysql版本" class="headerlink" title="3. 搜索可安装的mysql版本"></a>3. 搜索可安装的mysql版本</h4><p>执行这个命令后就能看到可安装的mysql：</p>
+<pre><code># yum repolist enabled | grep &quot;mysql.*-community.*&quot;
+</code></pre><p>如果我们是要安装最新的版本，那么可以直接执行</p>
+<pre><code># sudo yum install mysql-community-server
+</code></pre><p>如果我们要选择版本，可以先执行下面这个命令查看一下有哪些版本：</p>
+<pre><code># yum repolist all | grep mysql
+</code></pre><p>如果要选择版本的话，有两种方式，一种是使用命令来</p>
+<pre><code>$ sudo yum-config-manager --disable mysql56-community
+$ sudo yum-config-manager --enable mysql57-community-dmr
+</code></pre><p>这个命令就是在仓库中启用5.7版本的，禁用5.6版本子仓库 或者编辑/etc/yum.repos.d/mysql-community.repo文件</p>
+<pre><code># Enable to use MySQL 5.6
+[mysql56-community]
+name=MySQL 5.6 Community Server
+baseurl=//repo.mysql.com/yum/mysql-5.6-community/el/5/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql 
+</code></pre><p>enabled=0表示禁用 比如要安装5.7版本的mysql，要确定5.6的enabled=0，5.7的enabled=1，一次保证只启用一个子仓库</p>
+<pre><code># Note: MySQL 5.7 is currently in development. For use at your own risk.
+# Please read with sub pages: https://dev.mysql.com/doc/relnotes/mysql/5.7/en/
+[mysql57-community-dmr]
+name=MySQL 5.7 Community Server Development Milestone Release
+baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/6/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+</code></pre><p>然后我们又可以愉快的安装mysql了</p>
+<pre><code>$ sudo yum install mysql-community-server
+</code></pre><p>安装完成后我们启动mysql</p>
+<pre><code>$ sudo service mysqld start
+</code></pre><p>查看mysql状态</p>
+<pre><code>$ sudo service mysqld status
+</code></pre><p>启动mysql服务并初始化：</p>
+<pre><code># /etc/init.d/mysqld start
+Initializing MySQL database: 
+PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !
+To do so, start the server, then issue the following commands:
+
+/usr/bin/mysqladmin -u root password &apos;new-password&apos;
+/usr/bin/mysqladmin -u root -h iZ94vana2fdZ password &apos;new-password&apos;
+
+Alternatively you can run:
+/usr/bin/mysql_secure_installation
+
+which will also give you the option of removing the test
+databases and anonymous user created by default. This is
+strongly recommended for production servers.
+
+See the manual for more instructions.
+
+Please report any problems at http://bugs.mysql.com/
+
+[ OK ]
+Starting mysqld: [ OK ]
+</code></pre><h4 id="4-相关命令"><a href="#4-相关命令" class="headerlink" title="4. 相关命令"></a>4. 相关命令</h4><p>启动mysql服务</p>
+<pre><code># service mysqld start
+</code></pre><p>重启mysql服务</p>
+<pre><code># service mysqld restart
+</code></pre><p>停止mysql服务</p>
+<pre><code># service mysqld stop
+</code></pre>
+            
+            <p class="more">
+                <a href="/2015/06/08/2019030500005/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/08/2019030500005/" title="centos6.5安装mysql5.6">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/04/2019030500143/">
+    		Oracle问题--远程登录失败原因分析
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-04T07:23:25.000Z">2015-06-04</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>远程机：        安装 Oracle 的计算机； 本地机：        访问远程机上 Oracle 数据库的计算机。 一、问题描述     在远程计算机安装 Oracle 数据库。     在本地机上，配置 InstantClient 后，        使用 PLSql Developer 远程登录 Oracle 数据库，报 Oracle 错误。   二、解决思路     根据 Oracle 错误代码分析原因，如ORA-1455。   三、原因分析     常常是远程或本地计算机配置错误。   四、解决方案 (1)、先确保能在远程计算机上，使用 PLSql 访问远程机上的 Oracle 数据库。         若不能访问，重新配置远程计算机上的 Oracle 数据库； (2)、安装 Oracle 数据库后，数据库的连接配置是针对数据库所在机器。     因此在其他计算机上，无法登录另一台机器上的 Oracle 数据库。     此时需要更改远程计算机（安装 Oracle 的计算机）上的配置文件； (3)、修改两个文件：listener.ora和tnsnames.ora     可从Oracle安装目录检索到。     –所有的 SID_NAME、SID 的值，           改为与 InstantClient 中 tnsnames.ora 中 SERVICE_NAME 相同的值；     –所有HOST的值，改为 Oracle 数据库所在计算机的 IP 地址； (4)、重启远程机上的 Oracle 数据库，     在本地机上启动 PLSql Developer，     即可成功登录到远程机上的  Oracle 数据库。   <strong>环境：</strong>  –远程机环境：</p>
+<blockquote>
+<p>Win7 SP1</p>
+</blockquote>
+<blockquote>
+<p>Oracle 11g</p>
+</blockquote>
+<pre><code>--本地机环境：
+</code></pre><blockquote>
+<p>Win7 SP1</p>
+</blockquote>
+<blockquote>
+<p>PLSql Developer 8.0.4.1514</p>
+</blockquote>
+<blockquote>
+<p> InstantClient 11.2</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/04/2019030500143/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/04/2019030500143/" title="Oracle问题--远程登录失败原因分析">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/04/2019030500040/">
+    		简单查询部分sql练习题
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-04T05:30:59.000Z">2015-06-04</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>简单查询部分sql练习题:</p>
+<ol>
+<li>– 选择部门30中的所有职工</li>
+<li><p>select * from emp where deptno = 30;</p>
+</li>
+<li><p>– 列出所有业务员(CLERK)的姓名，编号，和部门编号</p>
+</li>
+<li><p>select e.ename, e.empno, e.deptno from emp e where e.job = ‘CLERK’;</p>
+</li>
+<li><p>– 找出奖金高于薪金的员工</p>
+</li>
+<li><p>select * from emp where comm &gt; sal;</p>
+</li>
+<li><p>– 找出奖金高于薪金的60%的员工</p>
+</li>
+<li><p>select <em> from emp where comm &gt; sal </em> 0.6;</p>
+</li>
+<li><p>– 找出部门10中所有经理(MANAGER)和部门20中所有业务员(CLERK)的详细资料</p>
+</li>
+<li>select * from emp e</li>
+<li>where e.deptno = 10 and e.job = ‘MANAGER’</li>
+<li><p>or e.deptno = 20 and e.job = ‘CLERK’;</p>
+</li>
+<li><p>select * from emp e</p>
+</li>
+<li>where (e.deptno = 10 and e.job = ‘MANAGER’)</li>
+<li><p>or (e.deptno = 20 and e.job = ‘CLERK’);</p>
+</li>
+<li><p>select * from emp e where e.deptno = 10 and e.job = ‘MANAGER’</p>
+</li>
+<li>union</li>
+<li><p>select * from emp e where e.deptno = 20 and e.job = ‘CLERK’;</p>
+</li>
+<li><p>– 找出部门10中所有经理(MANAGER),部门20中所有业务员(CLERK),既不是经理又不是业务员但其薪水大于等于2000的所有员工的详细资料</p>
+</li>
+<li>select * from emp e where e.deptno = 10 and e.job = ‘MANAGER’</li>
+<li>union</li>
+<li>select * from emp e where e.deptno = 20 and e.job = ‘CLERK’</li>
+<li>union</li>
+<li><p>select * from emp e where e.sal &gt; 2000 and e.job not in(‘MANAGER’, ‘CLERK’);</p>
+</li>
+<li><p>– 找出收取奖金的员工的不同工作</p>
+</li>
+<li><p>select distinct e.job from emp e;</p>
+</li>
+<li><p>– 找出不收取奖金或收取的奖金低于100的员工</p>
+</li>
+<li><p>select * from emp e where e.comm is null or e.comm &lt; 100;</p>
+</li>
+<li><p>– 找出各月倒数第3天受雇的所有员工</p>
+</li>
+<li><p>select * from emp e where e.hiredate between last_day(hiredate)-3 and last_day(hiredate);</p>
+</li>
+<li><p>– 找出早于30年前受雇的员工</p>
+</li>
+<li><p>select * from emp e where (sysdate - e.hiredate)/365 &gt; 30;</p>
+</li>
+<li><p>– 以首字母大写的方式显示所有员工的姓名</p>
+</li>
+<li><p>select initcap(ename) from emp;</p>
+</li>
+<li><p>– 显示正好为5个字符的员工姓名</p>
+</li>
+<li><p>select * from emp where length(ename) = 5;</p>
+</li>
+<li><p>– 显示不带有”R”的员工姓名</p>
+</li>
+<li><p>select * from emp where ename not like ‘%K%’;</p>
+</li>
+<li><p>– 显示所有员工姓名的前三个字符</p>
+</li>
+<li><p>select substr(ename, 0, 3) from emp;</p>
+</li>
+<li><p>– 显示所有员工的姓名，并用’a’替换所有’A’</p>
+</li>
+<li><p>select replace(ename, ‘A’, ‘a’) from emp;</p>
+</li>
+<li><p>– 显示满30年服务年限的员工姓名和受雇日期</p>
+</li>
+<li><p>select * from emp where (sysdate - hiredate)/365 &gt; 30;</p>
+</li>
+<li><p>– 显示员工的详细资料，按姓名由大到小排序</p>
+</li>
+<li><p>select * from emp order by ename desc;</p>
+</li>
+<li><p>– 显示员工的姓名和受雇日期，根据其服务年限，将最老的员工排在最前面</p>
+</li>
+<li><p>select ename, hiredate from emp order by hiredate asc;</p>
+</li>
+<li><p>– 显示所有员工的姓名，工作和薪金，按工作降序排列，若工作相同则按薪金升序排序</p>
+</li>
+<li>select ename, job, sal from emp order by job desc, sal asc;</li>
+<li><p>select ename, job, sal from emp order by 2 desc, 3;</p>
+</li>
+<li><p>– 显示所有员工的姓名，加入公司的年份和月份，按受雇日期所在的月排序，若月份相同，则将最早年份排在最前面</p>
+</li>
+<li><p>select ename, to_number(to_char(hiredate, ‘yyyy’)) Year, to_number(to_char(hiredate, ‘mm’)) from emp order by 3 desc, 2 asc;</p>
+</li>
+<li><p>– 显示一个月为30天的情况所员工的日薪金，忽略余数</p>
+</li>
+<li><p>select round(sal/30) 日薪 from emp;</p>
+</li>
+<li><p>– 找出在(任何年份)2月受聘的所有员工</p>
+</li>
+<li><p>select * from emp where to_number(to_char(hiredate, ‘mm’)）= 2;</p>
+</li>
+<li><p>– 对每个员工，显示其加入公司的天数</p>
+</li>
+<li><p>select ename, round(sysdate - hiredate) Days from emp;</p>
+</li>
+<li><p>– 显示姓名中任意位置包含“A”的所有员工姓名</p>
+</li>
+<li><p>select * from emp where upper(ename) like ‘%A%’;</p>
+</li>
+<li><p>– 以年月日方式显示所有员工的服务年限</p>
+</li>
+<li>select ename, hiredate,</li>
+<li>trunc(months_between(sysdate, hiredate) /12)  year  ,</li>
+<li>trunc(mod(months_between(sysdate, hiredate) ,  12 ) ) months  ,</li>
+<li>trunc(sysdate - add_months(hiredate,months_between(sysdate, hiredate))) day</li>
+<li>from emp ;</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/06/04/2019030500040/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/04/2019030500040/" title="简单查询部分sql练习题">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/02/2019030500173/">
+    		win7 64位安装mysql
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-02T07:37:32.000Z">2015-06-02</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>版本：mysql官网，下载win7-64位的mysql服务端安装包。 解压：C:\Program Files\mysql\mysql-5.6.25-winx64。 配置环境变量：MYSQL_HOME=C:\Program Files\mysql\mysql-5.6.25-winx64，添加到Path中：%MYSQL_HOME%/bin 配置：更改my-default.ini文件名为my.ini，在[mysqld]下面添加一行编码：character-set-server = gbk 添加3个服务启动参数： basedir = C:/Program Files/mysql/mysql-5.6.25-winx64/ datadir = C:/Program Files/mysql/mysql-5.6.25-winx64/data/ tmpdir = C:/Program Files/mysql/mysql-5.6.25-winx64/temp/ user=mysql 此时安装mysql，命令：mysqld –install MySQL –defaults-file=”my.ini” 启动mysql，命令：net start MySQL 会发现报错“无法启动 发生系统错误2”，是因为免安装，系统不知道配置文件加载路径，系统默认加载了一个不存在的路径， 所以需要更改路径，进到注册表： HKEY_LOCAL_MACHINE-SYSTEM-CurrentControlSet-services-mysql(服务名)-ImagePath 讲值改为：”C:\Program Files\mysql\mysql-5.6.25-winx64\bin\mysqld” –defaults-file=”C:\Program Files\mysql\mysql-5.6.25-winx64\my.ini” MySQL 再次执行命令：net start MySQL，如果参数都配置正确，切tmpdir路径已经存在，则启动成功； 反之报错，修改参数，重新启动即可。 注意：datadir位安装包解压出来的data目录，tmpdir目录必须存在，mysql启动时会检查目录是否存在，不会自动创建。</p>
+<h3 id="MySQL服务的启动、停止与卸载"><a href="#MySQL服务的启动、停止与卸载" class="headerlink" title="MySQL服务的启动、停止与卸载"></a>MySQL服务的启动、停止与卸载</h3><p>在 Windows 命令提示符下运行: <strong>启动:</strong> net start MySQL <strong>停止:</strong> net stop MySQL <strong>卸载:</strong> sc delete MySQL</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/02/2019030500173/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/02/2019030500173/" title="win7 64位安装mysql">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/02/2019030500079/">
+    		mysql存储过程事务回滚
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-02T04:58:26.000Z">2015-06-02</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/存储过程/" title="存储过程">存储过程</a> / 
+    
+        <a href="/tags/事务/" title="事务">事务</a> / 
+    
+        <a href="/tags/回滚/" title="回滚">回滚</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>SQL过程代码：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>DELIMITER $$</p>
+</li>
+<li><p>CREATE DEFINER=`root`@`localhost` PROCEDURE `test_procedure`()</p>
+</li>
+<li>BEGIN</li>
+<li>DECLARE errno int;</li>
+<li>declare continue HANDLER for sqlexception</li>
+<li>begin</li>
+<li>rollback;</li>
+<li>set errno=1;</li>
+<li>end;</li>
+<li>start transaction;</li>
+<li>set errno=0;</li>
+<li>insert into test(name) values (‘kaka’);</li>
+<li>insert into test(id, name) values(1,’papa’);</li>
+<li>commit;</li>
+<li>select errno;</li>
+<li>END</li>
+</ol>
+<p>过程说明： 1、首先表中已经存在一条记录(1,’baby’)； 2、调用测试存储过程； 3、该过程首先声明error变量，和一个SQL异常处理handler，该handler触发时会回滚事务，并将error置为1； 事务开始，将error置为0，插入一条数据name为‘kaka’，再插入一条数据(1,’papa’)，然后提交； 但第二次插入数据时，主键id已存在，此处会报异常触发我们的SQL异常处理handler。实现回滚并将error置为1； 查看error值； 4、调用存储过程之后查看测试表中的数据是否回滚； 调用前： <img src="http://img.blog.csdn.net/20150601213911848?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc29tZV90aW1lcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 调用中: <img src="http://img.blog.csdn.net/20150601213920210?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc29tZV90aW1lcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 调用后： <img src="http://img.blog.csdn.net/20150601213927885?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc29tZV90aW1lcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 建库SQL：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>CREATE DATABASE  IF NOT EXISTS `test`;</li>
+<li>USE `test`;</li>
+<li>DROP TABLE IF EXISTS `test`;</li>
+<li>CREATE TABLE `test` (</li>
+<li>`id` int(11) NOT NULL AUTO_INCREMENT,</li>
+<li><code>name</code> varchar(45) DEFAULT NULL,</li>
+<li>PRIMARY KEY (`id`)</li>
+<li>) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;</li>
+</ol>
+<p>综上，可以通过在存储过程中声明异常处理handler使得我们的事物达到回滚效果。</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/02/2019030500079/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/02/2019030500079/" title="mysql存储过程事务回滚">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/SQL-Server/">SQL Server</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/02/2019030500167/">
+    		sqlserver CAST 和 CONVERT函数
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-02T04:55:40.000Z">2015-06-02</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/sqlserver/" title="sqlserver">sqlserver</a> / 
+    
+        <a href="/tags/CAST/" title="CAST">CAST</a> / 
+    
+        <a href="/tags/CONVERT/" title="CONVERT">CONVERT</a> / 
+    
+        <a href="/tags/函数/" title="函数">函数</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>1.sqlserver CAST 和 CONVERT函数将某种数据类型的表达式显式转换为另一种数据类型。CAST 和 CONVERT 提供相似的功能。 语法 使用 CAST： CAST ( expression AS data_type ) 使用 CONVERT： CONVERT (data_type[(length)], expression [, style]) 参数 expression 是任何有效的 Microsoft SQL Server” 表达式。有关更多信息，请参见表达式。 data_type 目标系统所提供的数据类型，包括 bigint 和 sql_variant。不能使用用户定义的数据类型。有关可用的数据类型的更多信息，请参见数据类型。 length nchar、nvarchar、char、varchar、binary 或 varbinary 数据类型的可选参数。 style 日期格式样式，借以将 datetime 或 smalldatetime 数据转换为字符数据（nchar、nvarchar、char、varchar、nchar 或 nvarchar 数据类型）；或者字符串格式样式，借以将 float、real、money 或 smallmoney 数据转换为字符数据（nchar、nvarchar、char、varchar、nchar 或 nvarchar 数据类型）。 将某种数据类型的表达式显式转换为另一种数据类型。有关可用的数据类型的更多信息，请参见数据类型。日期格式样式，借以将 datetime 或 smalldatetime 数据转换为字符数据（nchar、nvarchar、char、varchar、nchar 或 nvarchar 数据类型）；或者字符串格式样式，借以将 float、real、money 或 smallmoney 数据转换为字符数据（nchar、nvarchar、char、varchar、nchar 或 nvarchar 数据类型）。当转换为字符数据时输出。 隐性转换对于用户是不可见的。 SQL Server 自动将数据从一种数据类型转换成另一种数据类型。例如，如果一个 smallint 变量和一个 int 变量相比较，这个 smallint 变量在比较前即被隐性转换成 int 变量。 显式转换使用 CAST 或 CONVERT 函数。 CAST 和 CONVERT 函数将数值从一个数据类型（局部变量、列或其它表达式）转换到另一个数据类型。例如，下面的 CAST 函数将数值 $157.27 转换成字符串 ‘’$157.27’’：CAST ( $157.27 AS VARCHAR(10) )CAST 函数基于 SQL-92 标准并且优先于 CONVERT。 当从一个 SQL Server 对象的数据类型向另一个转换时，一些隐性和显式数据类型转换是不支持的。例如，nchar 数值根本就不能被转换成 image 数值。nchar 只能显式地转换成 binary，隐性地转换到 binary 是不支持的。nchar 可以显式地或者隐性地转换成 nvarchar。 当处理 sql_variant 数据类型时，SQL Server 支持将具有其它数据类型的对象隐性转换成 sql_variant 类型。然而，SQL Server 并不支持从 sql_variant 数据隐性地转换到其它数据类型的对象。</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/02/2019030500167/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/02/2019030500167/" title="sqlserver CAST 和 CONVERT函数">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/02/2019030500002/">
+    		61
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-02T04:53:59.000Z">2015-06-02</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/sqlplus/" title="sqlplus">sqlplus</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h1 id="1-sqlplus交互界面存在的问题"><a href="#1-sqlplus交互界面存在的问题" class="headerlink" title="1 sqlplus交互界面存在的问题"></a>1 sqlplus交互界面存在的问题</h1><p>sqlplus是ORACLE数据库的最重要的官方命令行客户端软件，是DBA的必备工具，使用它可以完成几乎全部的管理任务。然而，sqlplus的交互界面并不是非常友好，输入命令时不具有历史命令记录功能；默认的输出结果更是不堪入目。在易用性方面，sqlplus确实比mysql客户端差了不少。 既然sqlplus交互模式存在这么多的不便，那么不如干脆直接使用非交互模式使用它，再借助操作系统提供的shell工具集来协助完成更复杂的任务。sqlplus本身就是支持非交互式使用的，而且支持的非常好，符合一般的Unix设计哲学：<strong>从标准输入读取命令，把结果写到标准输出</strong>。</p>
+<h1 id="2-sqlplus的两种非交互式使用方式"><a href="#2-sqlplus的两种非交互式使用方式" class="headerlink" title="2 sqlplus的两种非交互式使用方式"></a>2 sqlplus的两种非交互式使用方式</h1><p>sqlplus在非交互模式下，可以从两个地方为其提供sql命令：一是通过外部文件，而是通过标准输入。</p>
+<h2 id="2-1-通过外部命令文件"><a href="#2-1-通过外部命令文件" class="headerlink" title="2.1 通过外部命令文件"></a>2.1 通过外部命令文件</h2><pre><code>sqlplus 用户名/密码@服务器IP/侦听服务名 @命令文件名
+</code></pre><p>下面举一个例子。 命令文件名为 1.sql，内容如下：</p>
+<pre><code>select count(*) from dba_objects;
+exit;
+</code></pre><ul>
+<li>1</li>
+<li>2</li>
+</ul>
+<p>执行命令为：</p>
+<pre><code>sqlplus sys/***@172.16.2.190/xgdb.db001.xigang @1.sql
+</code></pre><p>此时执行完毕会把结果输出。 这种外部命令文件的方式，需要建立单独的物理文件来存储命令，适合经常使用的大批量管理任务。</p>
+<h2 id="2-2-通过标准输入"><a href="#2-2-通过标准输入" class="headerlink" title="2.2 通过标准输入"></a>2.2 通过标准输入</h2><p>既然sqlplus从标准输入来读取命令，那么就可以利用管道把命令发送给它。</p>
+<pre><code>echo 命令 | sqlplus 用户名/密码@服务器IP/侦听服务名
+</code></pre><p>这种方式不需要在命令中包含 exit；,因为sqlplus执行后自动退出。下面是个例子：</p>
+<pre><code>echo &apos;select count(*) from dba_objects;&apos; | sqlplus sys/***@172.16.2.190/xgdb.db001.xigang as sysdba
+</code></pre><p>这样执行后结果输出到屏幕，由于sql语句是bash命令的参数，而整个命令行可以通过bash方便的历史记录来重复调用。又可以方便的使用上下箭头来重复使用执行过的sql语句了。</p>
+<h1 id="3-利用管道做后续处理"><a href="#3-利用管道做后续处理" class="headerlink" title="3 利用管道做后续处理"></a>3 利用管道做后续处理</h1><p>既然sqlplus把结果输出到了标准输出，那么就可以借助管道，使用sed,awk等文字处理工具来得到想要的输出。</p>
+<pre><code>echo -e &apos;set pagesize 0\nselect table_name,owner from dba_tables;&apos; | sqlplus -S sys/***@172.16.2.190/xgdb.db001.xigang as sysdba | awk &apos;{printf(&quot;%-10d%-30s%-20s\n&quot;,NR,$1,$2);}&apos;
+</code></pre><h1 id="4-需要注意的地方"><a href="#4-需要注意的地方" class="headerlink" title="4 需要注意的地方"></a>4 需要注意的地方</h1><p>使用外部文件时，文件中的命令与交互式使用完全相同，无需担心。</p>
+<ul>
+<li><p>使用echo + 管道输入时，要避免 bash 元字符的干扰。一定要把sql命令使用单引号或双引号保护起来。当sql命令中有单引号时，应选择使用双引号保护。如</p>
+<pre><code>echo  &quot;insert into t1(name) values(&apos;奥巴马&apos;);&quot; | sqlplus ...
+</code></pre></li>
+</ul>
+<ul>
+<li><p>由于$在双引号里也会被当成元字符，所以需要对其进行转义</p>
+<pre><code>echo &quot;select * from v\$nls_valid_values where parameter=&apos;LANGUAGE&apos;;&quot; | sqlplus ...
+</code></pre></li>
+</ul>
+<ul>
+<li><p>另外，sqlplus不允许把sqlplus指令和sql命令混合在一行使用。而且sql命令必须以;结尾。这样必须使用echo -e 选项来开启把”\n”解释成换行符。例如</p>
+<pre><code>echo -e &apos;set pagesize 0\nset linesize 100\nselect * from dba_objects;&apos; | sqlplus ...
+</code></pre></li>
+</ul>
+<h1 id="5-一个简单的脚本"><a href="#5-一个简单的脚本" class="headerlink" title="5 一个简单的脚本"></a>5 一个简单的脚本</h1><p>上述命令行方式虽然可以方便的通过bash的历史记录功能调用执行过的sql语句，但是命令行中除了sql语句还有大量的其他内容，显得繁琐。所以，写一个小脚本（文件名为sql）会让调用起来非常方便，如下：</p>
+<pre><code>#!/bin/bash -
+if [ $# -ne 1 ]
+then
+    echo &quot;Usage: $0 &apos;SQL statement&apos;&quot;
+else
+    SQL=&quot;set pagesize 0\nset linesize 300\n$1&quot;
+    echo -e &quot;$SQL&quot;
+    echo -e &quot;$SQL&quot; | sqlplus -S sys/***@172.16.2.190/xgdb.db001.xigang as sysdba
+fi
+</code></pre><ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+<li>5</li>
+<li>6</li>
+<li>7</li>
+<li>8</li>
+<li>9</li>
+<li>10</li>
+</ul>
+<p>这样调用起来就像下面一样。</p>
+<pre><code>sql &apos;select * from dba_objects;&apos;
+</code></pre><p>这样显得非常干净利落，而且也不会在历史命令中记下ORACLE的账户信息，相对也安全。</p>
+
+            
+            <p class="more">
+                <a href="/2015/06/02/2019030500002/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/02/2019030500002/" title="61">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/05/28/2019030500001/">
+    		50条SQL查询技巧
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-05-28T07:03:17.000Z">2015-05-28</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <ol>
+<li>Student(S#,Sname,Sage,Ssex) 学生表</li>
+<li>Course(C#,Cname,T#) 课程表</li>
+<li>SC(S#,C#,score) 成绩表</li>
+<li><p>Teacher(T#,Tname) 教师表</p>
+</li>
+<li><p>问题：</p>
+</li>
+<li>1、查询“001”课程比“002”课程成绩高的所有学生的学号；</li>
+<li>select a.S# from (select s#,score from SC where C#=’001’) a,(select s#,score</li>
+<li>from SC where C#=’002’) b</li>
+<li>where a.score&gt;b.score and a.s#=b.s#;</li>
+<li>2、查询平均成绩大于60分的同学的学号和平均成绩；</li>
+<li>select S#,avg(score)</li>
+<li>from sc</li>
+<li>group by S# having avg(score) &gt;60;</li>
+<li>3、查询所有同学的学号、姓名、选课数、总成绩；</li>
+<li>select Student.S#,Student.Sname,count(SC.C#),sum(score)</li>
+<li>from Student left Outer join SC on Student.S#=SC.S#</li>
+<li>group by Student.S#,Sname</li>
+<li>4、查询姓“李”的老师的个数；</li>
+<li>select count(distinct(Tname))</li>
+<li>from Teacher</li>
+<li>where Tname like ‘李%’;</li>
+<li>5、查询没学过“叶平”老师课的同学的学号、姓名；</li>
+<li>select Student.S#,Student.Sname</li>
+<li>from Student</li>
+<li>where S# not in (select distinct( SC.S#) from SC,Course,Teacher where SC.C#=Course.C# and Teacher.T#=Course.T# and Teacher.Tname=’叶平’);</li>
+<li>6、查询学过“001”并且也学过编号“002”课程的同学的学号、姓名；</li>
+<li>select Student.S#,Student.Sname from Student,SC where Student.S#=SC.S# and SC.C#=’001’and exists( Select * from SC as SC_2 where SC_2.S#=SC.S# and SC_2.C#=’002’);</li>
+<li>7、查询学过“叶平”老师所教的所有课的同学的学号、姓名；</li>
+<li>select S#,Sname</li>
+<li>from Student</li>
+<li>where S# in (select S# from SC ,Course ,Teacher where SC.C#=Course.C# and Teacher.T#=Course.T# and Teacher.Tname=’叶平’ group by S# having count(SC.C#)=(select count(C#) from Course,Teacher where Teacher.T#=Course.T# and Tname=’叶平’));</li>
+<li>8、查询课程编号“002”的成绩比课程编号“001”课程低的所有同学的学号、姓名；</li>
+<li>Select S#,Sname from (select Student.S#,Student.Sname,score ,(select score from SC SC_2 where SC_2.S#=Student.S# and SC_2.C#=’002’) score2</li>
+<li>from Student,SC where Student.S#=SC.S# and C#=’001’) S_2 where score2 &lt;score;</li>
+<li>9、查询所有课程成绩小于60分的同学的学号、姓名；</li>
+<li>select S#,Sname</li>
+<li>from Student</li>
+<li>where S# not in (select Student.S# from Student,SC where S.S#=SC.S# and score&gt;60);</li>
+<li>10、查询没有学全所有课的同学的学号、姓名；</li>
+<li>select Student.S#,Student.Sname</li>
+<li>from Student,SC</li>
+<li><p>where Student.S#=SC.S# group by Student.S#,Student.Sname having count(C#) &lt;(select count(C#) from Course);</p>
+</li>
+<li><p>11、查询至少有一门课与学号为“1001”的同学所学相同的同学的学号和姓名；</p>
+</li>
+<li>select S#,Sname from Student,SC where Student.S#=SC.S# and C# in select C# from SC where S#=’1001’;</li>
+<li>12、查询至少学过学号为“001”同学所有一门课的其他同学学号和姓名；</li>
+<li>select distinct SC.S#,Sname</li>
+<li>from Student,SC</li>
+<li>where Student.S#=SC.S# and C# in (select C# from SC where S#=’001’);</li>
+<li>13、把“SC”表中“叶平”老师教的课的成绩都更改为此课程的平均成绩；</li>
+<li>update SC set score=(select avg(SC_2.score)</li>
+<li>from SC SC_2</li>
+<li>where SC_2.C#=SC.C# ) from Course,Teacher where Course.C#=SC.C# and Course.T#=Teacher.T# and Teacher.Tname=’叶平’);</li>
+<li>14、查询和“1002”号的同学学习的课程完全相同的其他同学学号和姓名；</li>
+<li>select S# from SC where C# in (select C# from SC where S#=’1002’)</li>
+<li>group by S# having count(<em>)=(select count(</em>) from SC where S#=’1002’);</li>
+<li>15、删除学习“叶平”老师课的SC表记录；</li>
+<li>Delect SC</li>
+<li>from course ,Teacher</li>
+<li>where Course.C#=SC.C# and Course.T#= Teacher.T# and Tname=’叶平’;</li>
+<li>16、向SC表中插入一些记录，这些记录要求符合以下条件：没有上过编号“003”课程的同学学号、2、</li>
+<li>号课的平均成绩；</li>
+<li>Insert SC select S#,’002’,(Select avg(score)</li>
+<li>from SC where C#=’002’) from Student where S# not in (Select S# from SC where C#=’002’);</li>
+<li>17、按平均成绩从高到低显示所有学生的“数据库”、“企业管理”、“英语”三门的课程成绩，按如下形式显示： 学生ID,,数据库,企业管理,英语,有效课程数,有效平均分</li>
+<li>SELECT S# as 学生ID</li>
+<li>,(SELECT score FROM SC WHERE SC.S#=t.S# AND C#=’004’) AS 数据库</li>
+<li>,(SELECT score FROM SC WHERE SC.S#=t.S# AND C#=’001’) AS 企业管理</li>
+<li>,(SELECT score FROM SC WHERE SC.S#=t.S# AND C#=’006’) AS 英语</li>
+<li>,COUNT(*) AS 有效课程数, AVG(t.score) AS 平均成绩</li>
+<li>FROM SC AS t</li>
+<li>GROUP BY S#</li>
+<li>ORDER BY avg(t.score)</li>
+<li>18、查询各科成绩最高和最低的分：以如下形式显示：课程ID，最高分，最低分</li>
+<li>SELECT L.C# As 课程ID,L.score AS 最高分,R.score AS 最低分</li>
+<li>FROM SC L ,SC AS R</li>
+<li>WHERE L.C# = R.C# and</li>
+<li>L.score = (SELECT MAX(IL.score)</li>
+<li>FROM SC AS IL,Student AS IM</li>
+<li>WHERE L.C# = IL.C# and IM.S#=IL.S#</li>
+<li>GROUP BY IL.C#)</li>
+<li>AND</li>
+<li>R.Score = (SELECT MIN(IR.score)</li>
+<li>FROM SC AS IR</li>
+<li>WHERE R.C# = IR.C#</li>
+<li>GROUP BY IR.C#</li>
+<li>);</li>
+<li>19、按各科平均成绩从低到高和及格率的百分数从高到低顺序</li>
+<li>SELECT t.C# AS 课程号,max(course.Cname)AS 课程名,isnull(AVG(score),0) AS 平均成绩</li>
+<li>,100 <em> SUM(CASE WHEN isnull(score,0)&gt;=60 THEN 1 ELSE 0 END)/COUNT(</em>) AS 及格百分数</li>
+<li>FROM SC T,Course</li>
+<li>where t.C#=course.C#</li>
+<li>GROUP BY t.C#</li>
+<li>ORDER BY 100 <em> SUM(CASE WHEN isnull(score,0)&gt;=60 THEN 1 ELSE 0 END)/COUNT(</em>) DESC</li>
+<li>20、查询如下课程平均成绩和及格率的百分数(用”1行”显示): 企业管理（001），马克思（002），OO&amp;UML （003），数据库（004）</li>
+<li>SELECT SUM(CASE WHEN C# =’001’ THEN score ELSE 0 END)/SUM(CASE C# WHEN ‘001’ THEN 1 ELSE 0 END) AS 企业管理平均分</li>
+<li>,100 * SUM(CASE WHEN C# = ‘001’ AND score &gt;= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN C# = ‘001’ THEN 1 ELSE 0 END) AS 企业管理及格百分数</li>
+<li>,SUM(CASE WHEN C# = ‘002’ THEN score ELSE 0 END)/SUM(CASE C# WHEN ‘002’ THEN 1 ELSE 0 END) AS 马克思平均分</li>
+<li>,100 * SUM(CASE WHEN C# = ‘002’ AND score &gt;= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN C# = ‘002’ THEN 1 ELSE 0 END) AS 马克思及格百分数</li>
+<li>,SUM(CASE WHEN C# = ‘003’ THEN score ELSE 0 END)/SUM(CASE C# WHEN ‘003’ THEN 1 ELSE 0 END) AS UML平均分</li>
+<li>,100 * SUM(CASE WHEN C# = ‘003’ AND score &gt;= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN C# = ‘003’ THEN 1 ELSE 0 END) AS UML及格百分数</li>
+<li>,SUM(CASE WHEN C# = ‘004’ THEN score ELSE 0 END)/SUM(CASE C# WHEN ‘004’ THEN 1 ELSE 0 END) AS 数据库平均分</li>
+<li>,100 * SUM(CASE WHEN C# = ‘004’ AND score &gt;= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN C# = ‘004’ THEN 1 ELSE 0 END) AS 数据库及格百分数</li>
+<li><p>FROM SC</p>
+</li>
+<li><p>21、查询不同老师所教不同课程平均分从高到低显示</p>
+</li>
+<li>SELECT max(Z.T#) AS 教师ID,MAX(Z.Tname) AS 教师姓名,C.C# AS 课程ＩＤ,MAX(C.Cname) AS 课程名称,AVG(Score) AS 平均成绩</li>
+<li>FROM SC AS T,Course AS C ,Teacher AS Z</li>
+<li>where T.C#=C.C# and C.T#=Z.T#</li>
+<li>GROUP BY C.C#</li>
+<li>ORDER BY AVG(Score) DESC</li>
+<li>22、查询如下课程成绩第 3 名到第 6 名的学生成绩单：企业管理（001），马克思（002），UML （003），数据库（004）</li>
+<li>[学生ID],[学生姓名],企业管理,马克思,UML,数据库,平均成绩</li>
+<li>SELECT DISTINCT top 3</li>
+<li>SC.S# As 学生学号,</li>
+<li>Student.Sname AS 学生姓名 ,</li>
+<li>T1.score AS 企业管理,</li>
+<li>T2.score AS 马克思,</li>
+<li>T3.score AS UML,</li>
+<li>T4.score AS 数据库,</li>
+<li>ISNULL(T1.score,0) + ISNULL(T2.score,0) + ISNULL(T3.score,0) + ISNULL(T4.score,0) as 总分</li>
+<li>FROM Student,SC LEFT JOIN SC AS T1</li>
+<li>ON SC.S# = T1.S# AND T1.C# = ‘001’</li>
+<li>LEFT JOIN SC AS T2</li>
+<li>ON SC.S# = T2.S# AND T2.C# = ‘002’</li>
+<li>LEFT JOIN SC AS T3</li>
+<li>ON SC.S# = T3.S# AND T3.C# = ‘003’</li>
+<li>LEFT JOIN SC AS T4</li>
+<li>ON SC.S# = T4.S# AND T4.C# = ‘004’</li>
+<li>WHERE student.S#=SC.S# and</li>
+<li>ISNULL(T1.score,0) + ISNULL(T2.score,0) + ISNULL(T3.score,0) + ISNULL(T4.score,0)</li>
+<li>NOT IN</li>
+<li>(SELECT</li>
+<li>DISTINCT</li>
+<li>TOP 15 WITH TIES</li>
+<li>ISNULL(T1.score,0) + ISNULL(T2.score,0) + ISNULL(T3.score,0) + ISNULL(T4.score,0)</li>
+<li>FROM sc</li>
+<li>LEFT JOIN sc AS T1</li>
+<li>ON sc.S# = T1.S# AND T1.C# = ‘k1’</li>
+<li>LEFT JOIN sc AS T2</li>
+<li>ON sc.S# = T2.S# AND T2.C# = ‘k2’</li>
+<li>LEFT JOIN sc AS T3</li>
+<li>ON sc.S# = T3.S# AND T3.C# = ‘k3’</li>
+<li>LEFT JOIN sc AS T4</li>
+<li>ON sc.S# = T4.S# AND T4.C# = ‘k4’</li>
+<li><p>ORDER BY ISNULL(T1.score,0) + ISNULL(T2.score,0) + ISNULL(T3.score,0) + ISNULL(T4.score,0) DESC);</p>
+</li>
+<li><p>23、统计列印各科成绩,各分数段人数:课程ID,课程名称,[100-85],[85-70],[70-60],[ &lt;60]</p>
+</li>
+<li>SELECT SC.C# as 课程ID, Cname as 课程名称</li>
+<li>,SUM(CASE WHEN score BETWEEN 85 AND 100 THEN 1 ELSE 0 END) AS [100 - 85]</li>
+<li>,SUM(CASE WHEN score BETWEEN 70 AND 85 THEN 1 ELSE 0 END) AS [85 - 70]</li>
+<li>,SUM(CASE WHEN score BETWEEN 60 AND 70 THEN 1 ELSE 0 END) AS [70 - 60]</li>
+<li>,SUM(CASE WHEN score &lt; 60 THEN 1 ELSE 0 END) AS [60 -]</li>
+<li>FROM SC,Course</li>
+<li>where SC.C#=Course.C#</li>
+<li><p>GROUP BY SC.C#,Cname;</p>
+</li>
+<li><p>24、查询学生平均成绩及其名次</p>
+</li>
+<li>SELECT 1+(SELECT COUNT( distinct 平均成绩)</li>
+<li>FROM (SELECT S#,AVG(score) AS 平均成绩</li>
+<li>FROM SC</li>
+<li>GROUP BY S#</li>
+<li>) AS T1</li>
+<li>WHERE 平均成绩 &gt; T2.平均成绩) as 名次,</li>
+<li>S# as 学生学号,平均成绩</li>
+<li>FROM (SELECT S#,AVG(score) 平均成绩</li>
+<li>FROM SC</li>
+<li>GROUP BY S#</li>
+<li>) AS T2</li>
+<li><p>ORDER BY 平均成绩 desc;</p>
+</li>
+<li><p>25、查询各科成绩前三名的记录:(不考虑成绩并列情况)</p>
+</li>
+<li>SELECT t1.S# as 学生ID,t1.C# as 课程ID,Score as 分数</li>
+<li>FROM SC t1</li>
+<li>WHERE score IN (SELECT TOP 3 score</li>
+<li>FROM SC</li>
+<li>WHERE t1.C#= C#</li>
+<li>ORDER BY score DESC</li>
+<li>)</li>
+<li>ORDER BY t1.C#;</li>
+<li>26、查询每门课程被选修的学生数</li>
+<li>select c#,count(S#) from sc group by C#;</li>
+<li>27、查询出只选修了一门课程的全部学生的学号和姓名</li>
+<li>select SC.S#,Student.Sname,count(C#) AS 选课数</li>
+<li>from SC ,Student</li>
+<li>where SC.S#=Student.S# group by SC.S# ,Student.Sname having count(C#)=1;</li>
+<li>28、查询男生、女生人数</li>
+<li>Select count(Ssex) as 男生人数 from Student group by Ssex having Ssex=’男’;</li>
+<li>Select count(Ssex) as 女生人数 from Student group by Ssex having Ssex=’女’；</li>
+<li>29、查询姓“张”的学生名单</li>
+<li>SELECT Sname FROM Student WHERE Sname like ‘张%’;</li>
+<li>30、查询同名同性学生名单，并统计同名人数</li>
+<li>select Sname,count(<em>) from Student group by Sname having count(</em>)&gt;1;</li>
+<li>31、1981年出生的学生名单(注：Student表中Sage列的类型是datetime)</li>
+<li>select Sname, CONVERT(char (11),DATEPART(year,Sage)) as age</li>
+<li>from student</li>
+<li>where CONVERT(char(11),DATEPART(year,Sage))=’1981’;</li>
+<li>32、查询每门课程的平均成绩，结果按平均成绩升序排列，平均成绩相同时，按课程号降序排列</li>
+<li>Select C#,Avg(score) from SC group by C# order by Avg(score),C# DESC ;</li>
+<li>33、查询平均成绩大于85的所有学生的学号、姓名和平均成绩</li>
+<li>select Sname,SC.S# ,avg(score)</li>
+<li>from Student,SC</li>
+<li>where Student.S#=SC.S# group by SC.S#,Sname having avg(score)&gt;85;</li>
+<li>34、查询课程名称为“数据库”，且分数低于60的学生姓名和分数</li>
+<li>Select Sname,isnull(score,0)</li>
+<li>from Student,SC,Course</li>
+<li>where SC.S#=Student.S# and SC.C#=Course.C# and Course.Cname=’数据库’and score &lt;60;</li>
+<li>35、查询所有学生的选课情况；</li>
+<li>SELECT SC.S#,SC.C#,Sname,Cname</li>
+<li>FROM SC,Student,Course</li>
+<li>where SC.S#=Student.S# and SC.C#=Course.C# ;</li>
+<li>36、查询任何一门课程成绩在70分以上的姓名、课程名称和分数；</li>
+<li>SELECT distinct student.S#,student.Sname,SC.C#,SC.score</li>
+<li>FROM student,Sc</li>
+<li>WHERE SC.score&gt;=70 AND SC.S#=student.S#;</li>
+<li>37、查询不及格的课程，并按课程号从大到小排列</li>
+<li>select c# from sc where scor e &lt;60 order by C# ;</li>
+<li>38、查询课程编号为003且课程成绩在80分以上的学生的学号和姓名；</li>
+<li>select SC.S#,Student.Sname from SC,Student where SC.S#=Student.S# and Score&gt;80 and C#=’003’;</li>
+<li>39、求选了课程的学生人数</li>
+<li>select count(*) from sc;</li>
+<li>40、查询选修“叶平”老师所授课程的学生中，成绩最高的学生姓名及其成绩</li>
+<li>select Student.Sname,score</li>
+<li>from Student,SC,Course C,Teacher</li>
+<li>where Student.S#=SC.S# and SC.C#=C.C# and C.T#=Teacher.T# and Teacher.Tname=’叶平’ and SC.score=(select max(score)from SC where C#=C.C# );</li>
+<li>41、查询各个课程及相应的选修人数</li>
+<li>select count(*) from sc group by C#;</li>
+<li>42、查询不同课程成绩相同的学生的学号、课程号、学生成绩</li>
+<li>select distinct A.S#,B.score from SC A ,SC B where A.Score=B.Score and A.C# &lt;&gt;B.C# ;</li>
+<li>43、查询每门功成绩最好的前两名</li>
+<li>SELECT t1.S# as 学生ID,t1.C# as 课程ID,Score as 分数</li>
+<li>FROM SC t1</li>
+<li>WHERE score IN (SELECT TOP 2 score</li>
+<li>FROM SC</li>
+<li>WHERE t1.C#= C#</li>
+<li>ORDER BY score DESC</li>
+<li>)</li>
+<li>ORDER BY t1.C#;</li>
+<li>44、统计每门课程的学生选修人数（超过10人的课程才统计）。要求输出课程号和选修人数，查询结果按人数降序排列，查询结果按人数降序排列，若人数相同，按课程号升序排列</li>
+<li>select C# as 课程号,count(*) as 人数</li>
+<li>from sc</li>
+<li>group by C#</li>
+<li>order by count(*) desc,c#</li>
+<li>45、检索至少选修两门课程的学生学号</li>
+<li>select S#</li>
+<li>from sc</li>
+<li>group by s#</li>
+<li>having count(*) &gt; = 2</li>
+<li>46、查询全部学生都选修的课程的课程号和课程名</li>
+<li>select C#,Cname</li>
+<li>from Course</li>
+<li>where C# in (select c# from sc group by c#)</li>
+<li>47、查询没学过“叶平”老师讲授的任一门课程的学生姓名</li>
+<li>select Sname from Student where S# not in (select S# from Course,Teacher,SC where Course.T#=Teacher.T# and SC.C#=course.C# and Tname=’叶平’);</li>
+<li>48、查询两门以上不及格课程的同学的学号及其平均成绩</li>
+<li>select S#,avg(isnull(score,0)) from SC where S# in (select S# from SC where score <60 group by s# having count(*)>2)group by S#;</60></li>
+<li>49、检索“004”课程分数小于60，按分数降序排列的同学学号</li>
+<li>select S# from SC where C#=’004’and score &lt;60 order by score desc;</li>
+<li>50、删除“002”同学的“001”课程的成绩</li>
+<li>delete from Sc where S#=’001’and C#=’001’;</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/05/28/2019030500001/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/05/28/2019030500001/" title="50条SQL查询技巧">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/开发语言/">开发语言</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/05/27/2019030500004/">
+    		Apache配置文件中的deny和allow的使用
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-05-27T06:54:44.000Z">2015-05-27</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/allow/" title="allow">allow</a> / 
+    
+        <a href="/tags/Apache/" title="Apache">Apache</a> / 
+    
+        <a href="/tags/deny/" title="deny">deny</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p><strong>Apache配置文件中的deny和allow的使用</strong> 由于产品的需要，最近在配置apache的负载均衡功能，但是在配置虚拟主机的访问权限的时候我们遇到了一些问题。主要问题是deny和allow的执行顺序，抽时间研究了下这两个参数的使用，现把deny和allow的使用情况总结如下。 <strong>一、   使用情况总结</strong> 我们来看下下面的apache的一个配置，具体代码如下：</p>
+<directory> Order allow,deny  #1 Allow from all #2 deny from 192.9.200.69 #3 </directory>
+
+<p>以前使用这两个参数的时候比较混乱，具体不太清楚到底是哪个参数在起作用。通过实验，我们可以总结下规律，具体规律如下：</p>
+<ol>
+<li><strong>规律</strong></li>
+</ol>
+<p>当我们看到一个apache的配置时，可以从下面的角度来理解。一默认，二顺序，三重叠。</p>
+<ol start="2">
+<li><strong>上面配置说明</strong></li>
+</ol>
+<p><strong>[1] 一默认</strong> <strong>Order allow,deny</strong> ，这句话的作用是配置allow和deny的顺序，默认只有最后一个关键字起作用，这里起作用的关键字就是“deny”，默认拒绝所有请求。为了便于理解，我们可以画一个圆，圆的背景色涂上黑色，我们给这个圆起个编号，叫圆1。 <strong>[2] 二顺序</strong> 由于上边的Order指出判断的顺序是先判断allow的规则，然后才是deny的规则。所以我们要先判断allow的请求，由于该请求中配置的是<strong>allow from all</strong>， 所以表示该请求允许所有请求。这时我们再画一个圆，背景色涂上白色，我们给圆起个编号，叫圆2。 我们再来看deny的判断规则，由于 <strong>deny from 192.9.200.69 </strong>，表示拒绝来自ip地址为“<strong>192.9.200.69</strong>”，所以我们可以画出一块红色区域，表示“<strong>192.9.200.69</strong>”，我们把这块区域叫区域3。 <strong>注意</strong>:即使把“Allow from all”写在“deny from 192.9.200.69”下面，依然是需要先判断allow规则，也就是说只有Order才能决定allow和order的优先顺序。 <strong>[3] 三重叠</strong> 我们把上边产生的圆1、圆2和区域3依次从下往上堆叠在一起。每个层都是不透明的，这时我们可以看到最终效果是除了“<strong>192.9.200.69</strong>”这块红色区域外，其他的所有都是白色区域。也就是只有“<strong>192.9.200.69</strong>”这个ip地址没有权限访问该目录，其他的请求都有权限访问该目录。 <strong>二、   看看下面的例子</strong> 也许上边没有说明白，我们再来看下面的例子，每个配置后面都有简单的说明，配置文件中的“#”号后边的数字表示配置项起作用的先后顺序。</p>
+<ol>
+<li><strong>只允许192.9.200.69请求访问目录</strong></li>
+</ol>
+<directory> Order deny,allow #1.默认允许全部请求 deny from all #2.按照顺序，先判断deny规则，拒绝所有请求 Allow from 192.9.200.69 #3.重叠，允许IP192.9.200.69的请求 </directory>
+
+<ol start="2">
+<li><strong>允许所有请求访问目录</strong></li>
+</ol>
+<directory> Order deny,allow #1.默认允许全部请求 deny from 192.9.200.69 #2.按照顺序，先判断deny规则，拒绝192.9.200.69的请求 Allow from all #3.重叠，允许所有请求 </directory>
+
+<ol start="3">
+<li><strong>拒绝所有请求访问目录</strong></li>
+</ol>
+<directory> Order allow,deny #1.默认拒绝全部请求 Allow from 192.9.200.69 #2.顺序，允许 192.9.200.69请求 deny from  all#3.重叠，拒绝所有请求 </directory>
+
+<ol start="4">
+<li><strong>除了192.9.200.69的请求外，其他请求都可以访问目录</strong></li>
+</ol>
+<directory> Order allow,deny #1.默认拒绝全部请求 Allow from all #2.顺序，允许所有请求 deny from  192.9.200.69#3.重叠，拒绝192.9.200.69请求 </directory>
+
+<p>Allow和Deny可以用于apache的conf文件或者.htaccess文件中（配合Directory, Location, Files等），用来控制目录和文件的访问授权。 所以，最常用的是： Order Deny,Allow Allow from All 注意“Deny,Allow”中间只有一个逗号，也只能有一个逗号，有空格都会出错；单词的大小写不限。上面设定的含义是先设定“先检查禁止设定，没有禁止的全部允许”，而第二句没有Deny，也就是没有禁止访问的设定，直接就是允许所有访问了。这个主要是用来确保或者覆盖上级目录的设置，开放所有内容的访问权。 按照上面的解释，下面的设定是无条件禁止访问： Order Allow,Deny Deny from All 如果要禁止部分内容的访问，其他的全部开放： Order Deny,Allow Deny from ip1 ip2 或者 Order Allow,Deny Allow from all Deny from ip1 ip2 apache会按照order决定最后使用哪一条规则，比如上面的第二种方式，虽然第二句allow允许了访问，但由于在order中allow不是最后规则，因此还需要看有没有deny规则，于是到了第三句，符合ip1和ip2的访问就被禁止了。注意，order决定的“最后”规则非常重要，下面是两个错误的例子和改正方式： Order Deny,Allow Allow from all Deny from domain.org 错误：想禁止来自domain.org的访问，但是deny不是最后规则，apache在处理到第二句allow的时候就已经匹配成功，根本就不会去看第三句。 解决方法：Order Allow,Deny，后面两句不动，即可。 Order Allow,Deny Allow from ip1 Deny from all 错误：想只允许来自ip1的访问，但是，虽然第二句中设定了allow规则，由于order中deny在后，所以会以第三句deny为准，而第三句的范围中又明显包含了ip1（all include ip1），所以所有的访问都被禁止了。 解决方法一：直接去掉第三句。 解决方法二： Order Deny,Allow Deny from all Allow from ip1</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/05/27/2019030500004/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/05/27/2019030500004/" title="Apache配置文件中的deny和allow的使用">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/05/27/2019030500015/">
+    		利用Navicat工具实现MySQL数据库结构同步
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-05-27T06:34:25.000Z">2015-05-27</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/数据库/" title="数据库">数据库</a> / 
+    
+        <a href="/tags/结构同步/" title="结构同步">结构同步</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>Navicat 是一套快速、可靠并价格相宜的数据库管理工具，专为简化数据库的管理及降低系统管理成本而设。Navicat提供多达 7 种语言供客户选择，被公认为全球最受欢迎的数据库前端用户界面工具。 Navicat旗下有多个产品成员 ，可以用来对本机或远程的 MySQL、SQL Server、SQLite、Oracle 及 PostgreSQL 数据库进行管理及开发。因为文中介绍的是MySQL数据库，因此我们要用到的是Navicat旗下的Navicat For MySQL工具。Navicat For MySQL下载链接。 我们在开发项目时一般会用到一个开发版和一个正式版的数据库，在开发版中修改了数据库表结构如何才能快速同步到正式版呢？如果自己手动一个个字段或属性去修改，实在是太麻烦，而且容易遗漏，有了Navicat 工具，就能快速实现数据库直接的同步，包括结构同步，数据同步等。下面介绍如何利用Navicat For MySQL实现MySQL数据库间结构同步。</p>
+<h4 id="1-打开Navicat-For-MySQL"><a href="#1-打开Navicat-For-MySQL" class="headerlink" title="1.打开Navicat For MySQL"></a>1.打开Navicat For MySQL</h4><h4 id="2-创建数据库连接，可连接本地数据库服务器，也可远程连接。如图所示创建一个本地连接。"><a href="#2-创建数据库连接，可连接本地数据库服务器，也可远程连接。如图所示创建一个本地连接。" class="headerlink" title="2.创建数据库连接，可连接本地数据库服务器，也可远程连接。如图所示创建一个本地连接。"></a>2.创建数据库连接，可连接本地数据库服务器，也可远程连接。如图所示创建一个本地连接。</h4><p><img src="http://img.blog.csdn.net/20150527110818261" alt="这里写图片描述"> 连接名可自己任意命名，方便自己识别就行。填好地址用户名密码等之后，可点击测试连接，看能够创建连接，若成功则会弹窗提示。 <img src="http://img.blog.csdn.net/20150527111134502" alt="这里写图片描述"></p>
+<h4 id="3-连接成功后，选中工具→结构同步，便可对该连接下的数据库进行同步操作了。"><a href="#3-连接成功后，选中工具→结构同步，便可对该连接下的数据库进行同步操作了。" class="headerlink" title="3.连接成功后，选中工具→结构同步，便可对该连接下的数据库进行同步操作了。"></a>3.连接成功后，选中工具→结构同步，便可对该连接下的数据库进行同步操作了。</h4><p><img src="http://img.blog.csdn.net/20150527111311753" alt="这里写图片描述"></p>
+<h4 id="4-选中要同步的数据的源和目标，源便是结构同步的参考数据库，目标则是要修改结构进行同步的那个数据库。并选择要对比的项。你可以选择仅同步表，或仅同步视图或存储过程等。都设置好后点击比对按钮即可对比这两个数据库的结构，找出其中的不同。"><a href="#4-选中要同步的数据的源和目标，源便是结构同步的参考数据库，目标则是要修改结构进行同步的那个数据库。并选择要对比的项。你可以选择仅同步表，或仅同步视图或存储过程等。都设置好后点击比对按钮即可对比这两个数据库的结构，找出其中的不同。" class="headerlink" title="4.选中要同步的数据的源和目标，源便是结构同步的参考数据库，目标则是要修改结构进行同步的那个数据库。并选择要对比的项。你可以选择仅同步表，或仅同步视图或存储过程等。都设置好后点击比对按钮即可对比这两个数据库的结构，找出其中的不同。"></a>4.选中要同步的数据的源和目标，源便是结构同步的参考数据库，目标则是要修改结构进行同步的那个数据库。并选择要对比的项。你可以选择仅同步表，或仅同步视图或存储过程等。都设置好后点击比对按钮即可对比这两个数据库的结构，找出其中的不同。</h4><p><img src="http://img.blog.csdn.net/20150527111308842" alt="这里写图片描述"></p>
+<h4 id="5-比对结果如下图所示，可以在上面的源对象和目标对象列表中看出哪些表或视图或函数等结构有不同，具体的不同则可以通过下面的查询语句来看。选中要执行的查询语句点击运行便可进行同步修改。"><a href="#5-比对结果如下图所示，可以在上面的源对象和目标对象列表中看出哪些表或视图或函数等结构有不同，具体的不同则可以通过下面的查询语句来看。选中要执行的查询语句点击运行便可进行同步修改。" class="headerlink" title="5.比对结果如下图所示，可以在上面的源对象和目标对象列表中看出哪些表或视图或函数等结构有不同，具体的不同则可以通过下面的查询语句来看。选中要执行的查询语句点击运行便可进行同步修改。"></a>5.比对结果如下图所示，可以在上面的源对象和目标对象列表中看出哪些表或视图或函数等结构有不同，具体的不同则可以通过下面的查询语句来看。选中要执行的查询语句点击运行便可进行同步修改。</h4><p><img src="http://img.blog.csdn.net/20150527111642032" alt="这里写图片描述"></p>
+<h4 id="6-运行结果将在信息日志中显示，如果出现执行不成功的查询，则会以红色字体显示，可自己再手动进行修改。若无错误，则结构同步完成。可到数据库中查看，两个表要同步的部分是否结构已经一致。"><a href="#6-运行结果将在信息日志中显示，如果出现执行不成功的查询，则会以红色字体显示，可自己再手动进行修改。若无错误，则结构同步完成。可到数据库中查看，两个表要同步的部分是否结构已经一致。" class="headerlink" title="6.运行结果将在信息日志中显示，如果出现执行不成功的查询，则会以红色字体显示，可自己再手动进行修改。若无错误，则结构同步完成。可到数据库中查看，两个表要同步的部分是否结构已经一致。"></a>6.运行结果将在信息日志中显示，如果出现执行不成功的查询，则会以红色字体显示，可自己再手动进行修改。若无错误，则结构同步完成。可到数据库中查看，两个表要同步的部分是否结构已经一致。</h4><p><img src="http://img.blog.csdn.net/20150527112235429" alt="这里写图片描述"></p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/05/27/2019030500015/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/05/27/2019030500015/" title="利用Navicat工具实现MySQL数据库结构同步">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/page/15/">前一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/17/">后一页</a>
+    </nav>
+    
+
+
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

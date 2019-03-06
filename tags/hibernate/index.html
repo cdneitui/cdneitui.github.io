@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>`hibernate`标签下的文章 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/tags/hibernate/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/tags/hibernate/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/tags/hibernate/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/tags/hibernate/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 按标签分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `hibernate`标签下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/04/2019030500029/">
+    		数据库中的字段和Java里面的类型匹配
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-04T05:29:42.000Z">2015-12-04</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/hibernate/" title="hibernate">hibernate</a> / 
+    
+        <a href="/tags/Java/" title="Java">Java</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>当在hibernate中运用原始的sql语句进行操作的的时候，常常会报错，错误很多都是关于 No Dialect mapping for JDBC type:?这里的问号是不同的数字如：-1,1，-9,3等等，每种数字代表一种类型。经过分析和查找，问题常常发生在几个地方 1、错误的配置了hibernate的方言 2、就是你的数据库中的字段和Java里面的类型不匹配的问题 错误如下： org.hibernate.MappingException: No Dialect mapping for JDBC type: -1 Error message: org.hibernate.MappingException: No Dialect mapping for JDBC type: -1 at org.hibernate.dialect.TypeNames.get(TypeNames.java:56) at org.hibernate.dialect.TypeNames.get(TypeNames.java:81) at org.hibernate.dialect.Dialect.getHibernateTypeName(Dialect.java:370) at org.hibernate.loader.custom.CustomLoader$Metadata.getHibernateType(CustomLoader.java:559) at org.hibernate.loader.custom.CustomLoader$ScalarResultColumnProcessor.performDiscovery(CustomLoader.java:485) at org.hibernate.loader.custom.CustomLoader.autoDiscoverTypes(CustomLoader.java:501) at org.hibernate.loader.Loader.getResultSet(Loader.java:1796) at org.hibernate.loader.Loader.doQuery(Loader.java:674) at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:236) at org.hibernate.loader.Loader.doList(Loader.java:2220) at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2104) at org.hibernate.loader.Loader.list(Loader.java:2099) at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:289) at org.hibernate.impl.SessionImpl.listCustomQuery(SessionImpl.java:1695) at org.hibernate.impl.AbstractSessionImpl.list(AbstractSessionImpl.java:142) at org.hibernate.impl.SQLQueryImpl.list(SQLQueryImpl.java:152) at com.tilsi.solr.dao.summary.EntryDAO.queryByEntryId(EntryDAO.java:164) at com.tilsi.solr.service.db.DbSearchThread.searchSummary(DbSearchThread.java:69) at com.tilsi.solr.service.db.DbSearchThread.call(DbSearchThread.java:48) at com.tilsi.solr.service.db.DbSearchThread.call(DbSearchThread.java:1) at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303) at java.util.concurrent.FutureTask.run(FutureTask.java:138) at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886) at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908) at java.lang.Thread.run(Thread.java:662) 解决方法为：通过查询hibernate的源码，找到问题的根本所在，就是hibernate中不支持对应的数据类型，具体数据类型的值，请查看下表 查看 java.sql.Types 类，可以找到对应类型，调整相应的数据库里的类型，或者其他支持这个类型的方言。 public final static int BIT   =  -7; public final static int TINYINT  =  -6; public final static int SMALLINT =   5; public final static int INTEGER  =   4; public final static int BIGINT   =  -5; public final static int FLOAT   =   6; public final static int REAL   =   7; public final static int DOUBLE   =   8; public final static int NUMERIC  =   2; public final static int DECIMAL  =   3; public final static int CHAR  =   1; public final static int VARCHAR  =  12; public final static int LONGVARCHAR  =  -1; public final static int DATE   =  91; public final static int TIME   =  92; public final static int TIMESTAMP  =  93; public final static int BINARY  =  -2; public final static int VARBINARY  =  -3; public final static int LONGVARBINARY  =  -4; public final static int NULL  =   0; public final static int OTHER  = 1111; public final static int JAVA_OBJECT         = 2000; public final static int DISTINCT            = 2001; public final static int STRUCT              = 2002; public final static int ARRAY               = 2003; public final static int BLOB                = 2004; public final static int CLOB                = 2005; public final static int REF                 = 2006; public final static int DATALINK = 70; public final static int BOOLEAN = 16; public final static int ROWID = -8; public static final int NCHAR = -15; public static final int NVARCHAR = -9; public static final int LONGNVARCHAR = -16; public static final int NCLOB = 2011; public static final int SQLXML = 2009; 这类错误，最后的问号表示不确定的数字，但是解决的方法都一样。 首先，自定义一个方言类——Hibernate Dialect，该类需要继承与我们使用的数据库相应的方言类。比如：如果我们用的是mysql（版本为5.x.x），我们需要继承“org.hibernate.dialect.MySQL5Dialect”；如果我们使用的是DB2，那么我们应该继承“org.hibernate.dialect.DB2Dialect”；我用的是SqlServer2008，所以我要继承“org.hibernate.dialect.SQLServerDialect”，参考代码如下： import java.sql.Types; import org.hibernate.Hibernate; import org.hibernate.dialect.SQLServerDialect; public class SqlServer2008Dialect extends SQLServerDialect { public SqlServer2008Dialect() { super(); registerHibernateType(Types.CHAR, Hibernate.STRING.getName()); registerHibernateType(Types.NVARCHAR, Hibernate.STRING.getName()); registerHibernateType(Types.LONGNVARCHAR, Hibernate.STRING.getName()); registerHibernateType(Types.DECIMAL, Hibernate.DOUBLE.getName()); } } 总之大家可以在“org.hibernate.dialect”这个package中找到与数据库相对应的方言类。在其中，我们需要注意三点： a、在默认构造方法中继承父类构造方法，同时调用“registerHibernateType(int code, String name)”方法将数据库中该数据类型映射到相应的java类型。code表示数据库中的数据类型整数表示，可以在“java.sql.Types”类中查到相应的数据库类型。name表示我们要映射的java类型。可以从“org.hibernate.Hibernate”中查到。 b、Types类。在Types中定义了数据库常用的字段类型，如： …… public final static int LONGVARCHAR =  -1; public final static int TIMESTAMP =  93; …… 也就是上面我列出的java.sql.Types。 我们可以根据“No Dialect mapping for JDBC type : ”后面紧跟的数字在该类（Types）中找到相应的类型。我们也可以根据数据表中字段的类型找到相应的值。这个值就是registerHibernateType(int code, String name)的第一个参数。 c、Hibernate类。Hibernate中定义了转换的目的类型，如第一段代码所示。能够转化成什么类型，可以在该类中查找。通过调用“getName()”方法得到一个String型。当然，如果你记住了，我们还可以这样写 import org.hibernate.dialect.SQLServerDialect; public class SqlServer2008Dialect extends SQLServerDialect { public SqlServer2008Dialect() { super(); registerHibernateType(1, “string”); registerHibernateType(-9, “string”); registerHibernateType(-16, “string”); registerHibernateType(3, “double”); } } 其实和上面是一样的，只是把上面所代表的值直接写出来了。需要注意的是super()方法的调用，不调用该方法是否会出现错误，这个我就不知道了，我没有测试，所以最好调一下。 然后，我们还需要在配置文件中作修改，我将连接数据库的方法放在了spring配置文件中了，这段代码就写在applicationContext.xml里面了： <property name="hibernateProperties"> <props> <!-- <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect </prop> --> <prop key="hibernate.dialect">com.sense.workflow.util.SqlServer2008Dialect</prop> <prop key="hibernate.hbm2ddl.auto">update</prop> <prop key="hibernate.show\_sql">true</prop> <prop key="hibernate.cache.use\_query\_cache">false</prop> <!-- 显示sql格式 --> <prop key="hibernate.format_sql">false</prop> </props> </property> 最后还有一个解决方法：如果你的数据库表中某个字段不可以不用text类型的，将其改成其他类型（如：varchar等）也可以，这个方法虽然简单，当数据库字段必须用text类型的时候该方法就不行了。</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/04/2019030500029/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/04/2019030500029/" title="数据库中的字段和Java里面的类型匹配">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/开发语言/">开发语言</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/08/20/2019030500041/">
+    		精通Hibernate——Session的保存、更新、删除和查询
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-08-20T11:34:47.000Z">2015-08-20</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/hibernate/" title="hibernate">hibernate</a> / 
+    
+        <a href="/tags/session/" title="session">session</a> / 
+    
+        <a href="/tags/方法/" title="方法">方法</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>session的save方法 使一个临时对象变为持久化对象。 session的save方法完成以下操作： 1、把customer对象加入到缓存中，使他变为持久化对象 2、选用映射文件指定的标识符生成器为持久化对象分配唯一的OID。Customer.hbm.xml文件中id元素的 子元素指定标识符生成器： <generator> <id name="id" column="ID"> <generator class="increment"> </generator></id> 在配置文件配置了id自增后，在程序中在setId();是无效的。 3、计划执行一个insert语句，把customer对象当前的属性组装到insert语句中，save方法并不会立即执行sql语句。只有当清理缓存时才会执行insert语句。如果在save方法之后又修改了持久化对象的属性，这会使得Session在清理缓存的时候额外执行Sql 的update语句。以下两段代码尽管都能完成相同功能，第一段代码仅执行了一条insert语句，而右边执行了一条insert语句和一条update语句。第一段代码减少了数据库访问次数，具有更好的性能。 Customer customer = new Customer(); // 先设置customer属性再保存 customer.setName(“Tom”); session.save(customer); tx.commit(); Customer customer = new Customer(); session.save(customer); // 先保存再设置customer属性 customer.setName(“Tom”); tx.commit(); Hibernate通过持久化对象的OID来维持他和数据库相关记录的对应关系。当Customer对象处于持久化状态时，不允许随意修改他的OID。 session的update方法 使一个游离对象转变为持久化对象 session的update方法完成以下操作： 1、把Customer对象重新加入到Session缓存中，使他变为持久化对象 2、计划执行一个update语句。值得注意的是session只在清理缓存的时候执行update 只要通过update方法使游离对象被一个Session关联，即使没有修改Customer对象的任何属性，Session在清理缓存时也会执行由update方法计划的update语句。 如果希望session仅仅当修改了Customer对象的属性时才执行update语句，可以把映射文件中class元素的select-before-update设为true，默认为false； <class name="mypack.Customers" table="CUSTOMERS" select-before-update="true"> 当update方法关联一个游离对象时，如果在session缓存中已经存在相同的OID的持久化对象，会抛出异常。 session的saveOrUpdate方法 saveOrUpdate方法同时包含了save与update方法，如果传入的参数是临时对象，就调用save方法，如果传入的是游离对象就调用update方法，如果传入的是持久化对象就直接返回。那么Hibernate如何判断对象的状态呢？ 下面看看临时对象的判断条件： 1、Java对象的OID取值为null 2、Java对象具有version属性并且取值为null 3、在映射文件中为id元素设置了unsaved-value属性，并且OID取值与unsaved-value属性值匹配 4、在映射文件中为version属性设置了unsaved-value属性，并且OID取值与unsaved-value属性值匹配 5、自定义了Hibernate的Interceptor实现类，并且Interceptor的isUnsaved方法返回true session的load和get方法 Session的load和get方法都能根据OID从数据库中加载一个持久化对象，区别在于：当数据库中没有与之对应的记录时load方法会抛出ObjectNotFoundException异常，get方法返回null。 get方法会在调用之后立即向数据库发出sql语句（不考虑缓存的情况下），返回持久化对象；而load方法会在调用后返回一个代理对象，该代理对象只保存了实体对象的id，直到使用对象的非主键属性时才会发出sql语句 Session的delete方法 delete方法用于从数据库中删除与Java对象对应的记录，如果传入的参数是持久化对象，session就计划执行一个delete语句，如果传入的是游离对象，先使游离对象被session关联，使他变为持久化对象，然后计划执行一个delete语句。Session只有在清理缓存的时候才会执行delete语句，只有调用session.close才会从session缓存中删除对象。</class></generator></p>
+
+            
+            <p class="more">
+                <a href="/2015/08/20/2019030500041/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/08/20/2019030500041/" title="精通Hibernate——Session的保存、更新、删除和查询">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <span class="page-number current">1</span>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

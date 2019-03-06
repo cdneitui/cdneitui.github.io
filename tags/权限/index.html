@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>`权限`标签下的文章 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/tags/权限/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/tags/权限/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/tags/权限/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/tags/权限/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 按标签分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `权限`标签下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/11/30/2019030500103/">
+    		mysql 用户管理和权限设置
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-11-30T05:37:20.000Z">2015-11-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/权限/" title="权限">权限</a> / 
+    
+        <a href="/tags/用户/" title="用户">用户</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>用户管理</p>
+<p>mysql&gt;use mysql;</p>
+<p>查看</p>
+<p>mysql&gt; select host,user,password from user ;</p>
+<p>创建</p>
+<p>mysql&gt; create user  zx_root   IDENTIFIED by ‘xxxxx’;   //identified by 会将纯文本密码加密作为散列值存储</p>
+<p>修改</p>
+<p>mysql&gt;rename   user  feng  to   newuser；//mysql 5之后可以使用，之前需要使用update 更新user表</p>
+<p>删除</p>
+<p>mysql&gt;drop user newuser;   //mysql5之前删除用户时必须先使用revoke 删除用户权限，然后删除用户，mysql5之后drop 命令可以删除用户的同时删除用户的相关权限</p>
+<p>更改密码</p>
+<p>mysql&gt; set password for zx_root =password(‘xxxxxx’);</p>
+<p> mysql&gt; update  mysql.user  set  password=password(‘xxxx’)  where user=’otheruser’</p>
+<p>查看用户权限</p>
+<p>mysql&gt; show grants for zx_root;</p>
+<p>赋予权限</p>
+<p>mysql&gt; grant select on dmc_db.*  to zx_root;</p>
+<p>回收权限</p>
+<p>mysql&gt; revoke  select on dmc_db.*  from  zx_root;  //如果权限不存在会报错</p>
+<p>上面的命令也可使用多个权限同时赋予和回收，权限之间使用逗号分隔</p>
+<p>mysql&gt; grant select，update，delete  ，insert  on dmc_db.*  to  zx_root;</p>
+<p>如果想立即看到结果使用</p>
+<p>flush  privileges ;</p>
+<p>命令更新</p>
+<p>设置权限时必须给出一下信息</p>
+<p>1，要授予的权限</p>
+<p>2，被授予访问权限的数据库或表</p>
+<p>3，用户名</p>
+<p>grant和revoke可以在几个层次上控制访问权限</p>
+<p>1，整个服务器，使用 grant ALL  和revoke  ALL</p>
+<p>2，整个数据库，使用on  database.*</p>
+<p>3，特点表，使用on  database.table</p>
+<p>4，特定的列</p>
+<p>5，特定的存储过程</p>
+<p>user表中host列的值的意义</p>
+<p>%              匹配所有主机</p>
+<p>localhost    localhost不会被解析成IP地址，直接通过UNIXsocket连接</p>
+<p>127.0.0.1      会通过TCP/IP协议连接，并且只能在本机访问；</p>
+<p>::1                 ::1就是兼容支持ipv6的，表示同ipv4的127.0.0.1</p>
+<p>grant 普通数据用户，查询、插入、更新、删除 数据库中所有表数据的权利。 grant select on testdb.<em> to common_user@’%’ grant insert on testdb.</em> to common_user@’%’ grant update on testdb.<em> to common_user@’%’ grant delete on testdb.</em> to common_user@’%’ 或者，用一条 MySQL 命令来替代： grant select, insert, update, delete on testdb.<em> to common_user@’%’ 9&gt;.grant 数据库开发人员，创建表、索引、视图、存储过程、函数。。。等权限。 grant 创建、修改、删除 MySQL 数据表结构权限。 grant create on testdb.</em> to developer@’192.168.0.%’; grant alter on testdb.<em> to developer@’192.168.0.%’; grant drop on testdb.</em> to developer@’192.168.0.%’; grant 操作 MySQL 外键权限。 grant references on testdb.<em> to developer@’192.168.0.%’; grant 操作 MySQL 临时表权限。 grant create temporary tables on testdb.</em> to developer@’192.168.0.%’; grant 操作 MySQL 索引权限。 grant index on testdb.<em> to developer@’192.168.0.%’; grant 操作 MySQL 视图、查看视图源代码 权限。 grant create view on testdb.</em> to developer@’192.168.0.%’; grant show view on testdb.<em> to developer@’192.168.0.%’; grant 操作 MySQL 存储过程、函数 权限。 grant create routine on testdb.</em> to developer@’192.168.0.%’; – now, can show procedure status grant alter routine on testdb.<em> to developer@’192.168.0.%’; – now, you can drop a procedure grant execute on testdb.</em> to developer@’192.168.0.%’; 10&gt;.grant 普通 DBA 管理某个 MySQL 数据库的权限。 grant all privileges on testdb to dba@’localhost’ 其中，关键字 “privileges” 可以省略。 11&gt;.grant 高级 DBA 管理 MySQL 中所有数据库的权限。 grant all on <em>.</em> to dba@’localhost’ 12&gt;.MySQL grant 权限，分别可以作用在多个层次上。 1. grant 作用在整个 MySQL 服务器上： grant select on <em>.</em> to dba@localhost; – dba 可以查询 MySQL 中所有数据库中的表。 grant all on <em>.</em> to dba@localhost; – dba 可以管理 MySQL 中的所有数据库 2. grant 作用在单个数据库上： grant select on testdb.* to dba@localhost; – dba 可以查询 testdb 中的表。 3. grant 作用在单个数据表上： grant select, insert, update, delete on testdb.orders to dba@localhost; 4. grant 作用在表中的列上： grant select(id, se, rank) on testdb.apache_log to dba@localhost; 5. grant 作用在存储过程、函数上： grant execute on procedure testdb.pr_add to ’dba’@’localhost’ grant execute on function testdb.fn_add to ’dba’@’localhost’ 注意：修改完权限以后 一定要刷新服务，或者重启服务，刷新服务用：FLUSH PRIVILEGES。</p>
+<p>权限表</p>
+<p>权限</p>
+<p>说明</p>
+<p>all</p>
+<p>alter</p>
+<p>alter routine</p>
+<p>使用alter procedure 和drop procedure</p>
+<p>create</p>
+<p>create routine</p>
+<p>使用create  procedure</p>
+<p>create temporary tables</p>
+<p>使用create temporary table</p>
+<p>create  user</p>
+<p>create view</p>
+<p>delete</p>
+<p>drop</p>
+<p>execute</p>
+<p>使用call和存储过程</p>
+<p>file</p>
+<p>使用select into outfile  和load data infile</p>
+<p>grant option</p>
+<p>可以使用grant和revoke</p>
+<p>index</p>
+<p>可以使用create index 和drop index</p>
+<p>insert</p>
+<p>lock tables</p>
+<p>锁表</p>
+<p>process</p>
+<p>使用show full processlist</p>
+<p>reload</p>
+<p>   使用flush</p>
+<p>replication client</p>
+<p>服务器位置访问</p>
+<p>replocation slave</p>
+<p>由复制从属使用</p>
+<p>select</p>
+<p>show databases</p>
+<p>show view</p>
+<p>shutdown</p>
+<p>使用mysqladmin shutdown 来关闭mysql</p>
+<p>super</p>
+<p>update</p>
+<p>usage</p>
+<p>无访问权限</p>
+
+            
+            <p class="more">
+                <a href="/2015/11/30/2019030500103/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/11/30/2019030500103/" title="mysql 用户管理和权限设置">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <span class="page-number current">1</span>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>50条SQL查询技巧 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2015/05/28/2019030500001/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2015/05/28/2019030500001/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/2015/05/28/2019030500001/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2015/05/28/2019030500001/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>50条SQL查询技巧</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2015-05-28T07:03:17.000Z">2015-05-28</time>
+    </p>
+    <div class="post-content">
+        <ol>
+<li>Student(S#,Sname,Sage,Ssex) 学生表</li>
+<li>Course(C#,Cname,T#) 课程表</li>
+<li>SC(S#,C#,score) 成绩表</li>
+<li><p>Teacher(T#,Tname) 教师表</p>
+</li>
+<li><p>问题：</p>
+</li>
+<li>1、查询“001”课程比“002”课程成绩高的所有学生的学号；</li>
+<li>select a.S# from (select s#,score from SC where C#=’001’) a,(select s#,score</li>
+<li>from SC where C#=’002’) b</li>
+<li>where a.score&gt;b.score and a.s#=b.s#;</li>
+<li>2、查询平均成绩大于60分的同学的学号和平均成绩；</li>
+<li>select S#,avg(score)</li>
+<li>from sc</li>
+<li>group by S# having avg(score) &gt;60;</li>
+<li>3、查询所有同学的学号、姓名、选课数、总成绩；</li>
+<li>select Student.S#,Student.Sname,count(SC.C#),sum(score)</li>
+<li>from Student left Outer join SC on Student.S#=SC.S#</li>
+<li>group by Student.S#,Sname</li>
+<li>4、查询姓“李”的老师的个数；</li>
+<li>select count(distinct(Tname))</li>
+<li>from Teacher</li>
+<li>where Tname like ‘李%’;</li>
+<li>5、查询没学过“叶平”老师课的同学的学号、姓名；</li>
+<li>select Student.S#,Student.Sname</li>
+<li>from Student</li>
+<li>where S# not in (select distinct( SC.S#) from SC,Course,Teacher where SC.C#=Course.C# and Teacher.T#=Course.T# and Teacher.Tname=’叶平’);</li>
+<li>6、查询学过“001”并且也学过编号“002”课程的同学的学号、姓名；</li>
+<li>select Student.S#,Student.Sname from Student,SC where Student.S#=SC.S# and SC.C#=’001’and exists( Select * from SC as SC_2 where SC_2.S#=SC.S# and SC_2.C#=’002’);</li>
+<li>7、查询学过“叶平”老师所教的所有课的同学的学号、姓名；</li>
+<li>select S#,Sname</li>
+<li>from Student</li>
+<li>where S# in (select S# from SC ,Course ,Teacher where SC.C#=Course.C# and Teacher.T#=Course.T# and Teacher.Tname=’叶平’ group by S# having count(SC.C#)=(select count(C#) from Course,Teacher where Teacher.T#=Course.T# and Tname=’叶平’));</li>
+<li>8、查询课程编号“002”的成绩比课程编号“001”课程低的所有同学的学号、姓名；</li>
+<li>Select S#,Sname from (select Student.S#,Student.Sname,score ,(select score from SC SC_2 where SC_2.S#=Student.S# and SC_2.C#=’002’) score2</li>
+<li>from Student,SC where Student.S#=SC.S# and C#=’001’) S_2 where score2 &lt;score;</li>
+<li>9、查询所有课程成绩小于60分的同学的学号、姓名；</li>
+<li>select S#,Sname</li>
+<li>from Student</li>
+<li>where S# not in (select Student.S# from Student,SC where S.S#=SC.S# and score&gt;60);</li>
+<li>10、查询没有学全所有课的同学的学号、姓名；</li>
+<li>select Student.S#,Student.Sname</li>
+<li>from Student,SC</li>
+<li><p>where Student.S#=SC.S# group by Student.S#,Student.Sname having count(C#) &lt;(select count(C#) from Course);</p>
+</li>
+<li><p>11、查询至少有一门课与学号为“1001”的同学所学相同的同学的学号和姓名；</p>
+</li>
+<li>select S#,Sname from Student,SC where Student.S#=SC.S# and C# in select C# from SC where S#=’1001’;</li>
+<li>12、查询至少学过学号为“001”同学所有一门课的其他同学学号和姓名；</li>
+<li>select distinct SC.S#,Sname</li>
+<li>from Student,SC</li>
+<li>where Student.S#=SC.S# and C# in (select C# from SC where S#=’001’);</li>
+<li>13、把“SC”表中“叶平”老师教的课的成绩都更改为此课程的平均成绩；</li>
+<li>update SC set score=(select avg(SC_2.score)</li>
+<li>from SC SC_2</li>
+<li>where SC_2.C#=SC.C# ) from Course,Teacher where Course.C#=SC.C# and Course.T#=Teacher.T# and Teacher.Tname=’叶平’);</li>
+<li>14、查询和“1002”号的同学学习的课程完全相同的其他同学学号和姓名；</li>
+<li>select S# from SC where C# in (select C# from SC where S#=’1002’)</li>
+<li>group by S# having count(<em>)=(select count(</em>) from SC where S#=’1002’);</li>
+<li>15、删除学习“叶平”老师课的SC表记录；</li>
+<li>Delect SC</li>
+<li>from course ,Teacher</li>
+<li>where Course.C#=SC.C# and Course.T#= Teacher.T# and Tname=’叶平’;</li>
+<li>16、向SC表中插入一些记录，这些记录要求符合以下条件：没有上过编号“003”课程的同学学号、2、</li>
+<li>号课的平均成绩；</li>
+<li>Insert SC select S#,’002’,(Select avg(score)</li>
+<li>from SC where C#=’002’) from Student where S# not in (Select S# from SC where C#=’002’);</li>
+<li>17、按平均成绩从高到低显示所有学生的“数据库”、“企业管理”、“英语”三门的课程成绩，按如下形式显示： 学生ID,,数据库,企业管理,英语,有效课程数,有效平均分</li>
+<li>SELECT S# as 学生ID</li>
+<li>,(SELECT score FROM SC WHERE SC.S#=t.S# AND C#=’004’) AS 数据库</li>
+<li>,(SELECT score FROM SC WHERE SC.S#=t.S# AND C#=’001’) AS 企业管理</li>
+<li>,(SELECT score FROM SC WHERE SC.S#=t.S# AND C#=’006’) AS 英语</li>
+<li>,COUNT(*) AS 有效课程数, AVG(t.score) AS 平均成绩</li>
+<li>FROM SC AS t</li>
+<li>GROUP BY S#</li>
+<li>ORDER BY avg(t.score)</li>
+<li>18、查询各科成绩最高和最低的分：以如下形式显示：课程ID，最高分，最低分</li>
+<li>SELECT L.C# As 课程ID,L.score AS 最高分,R.score AS 最低分</li>
+<li>FROM SC L ,SC AS R</li>
+<li>WHERE L.C# = R.C# and</li>
+<li>L.score = (SELECT MAX(IL.score)</li>
+<li>FROM SC AS IL,Student AS IM</li>
+<li>WHERE L.C# = IL.C# and IM.S#=IL.S#</li>
+<li>GROUP BY IL.C#)</li>
+<li>AND</li>
+<li>R.Score = (SELECT MIN(IR.score)</li>
+<li>FROM SC AS IR</li>
+<li>WHERE R.C# = IR.C#</li>
+<li>GROUP BY IR.C#</li>
+<li>);</li>
+<li>19、按各科平均成绩从低到高和及格率的百分数从高到低顺序</li>
+<li>SELECT t.C# AS 课程号,max(course.Cname)AS 课程名,isnull(AVG(score),0) AS 平均成绩</li>
+<li>,100 <em> SUM(CASE WHEN isnull(score,0)&gt;=60 THEN 1 ELSE 0 END)/COUNT(</em>) AS 及格百分数</li>
+<li>FROM SC T,Course</li>
+<li>where t.C#=course.C#</li>
+<li>GROUP BY t.C#</li>
+<li>ORDER BY 100 <em> SUM(CASE WHEN isnull(score,0)&gt;=60 THEN 1 ELSE 0 END)/COUNT(</em>) DESC</li>
+<li>20、查询如下课程平均成绩和及格率的百分数(用”1行”显示): 企业管理（001），马克思（002），OO&amp;UML （003），数据库（004）</li>
+<li>SELECT SUM(CASE WHEN C# =’001’ THEN score ELSE 0 END)/SUM(CASE C# WHEN ‘001’ THEN 1 ELSE 0 END) AS 企业管理平均分</li>
+<li>,100 * SUM(CASE WHEN C# = ‘001’ AND score &gt;= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN C# = ‘001’ THEN 1 ELSE 0 END) AS 企业管理及格百分数</li>
+<li>,SUM(CASE WHEN C# = ‘002’ THEN score ELSE 0 END)/SUM(CASE C# WHEN ‘002’ THEN 1 ELSE 0 END) AS 马克思平均分</li>
+<li>,100 * SUM(CASE WHEN C# = ‘002’ AND score &gt;= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN C# = ‘002’ THEN 1 ELSE 0 END) AS 马克思及格百分数</li>
+<li>,SUM(CASE WHEN C# = ‘003’ THEN score ELSE 0 END)/SUM(CASE C# WHEN ‘003’ THEN 1 ELSE 0 END) AS UML平均分</li>
+<li>,100 * SUM(CASE WHEN C# = ‘003’ AND score &gt;= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN C# = ‘003’ THEN 1 ELSE 0 END) AS UML及格百分数</li>
+<li>,SUM(CASE WHEN C# = ‘004’ THEN score ELSE 0 END)/SUM(CASE C# WHEN ‘004’ THEN 1 ELSE 0 END) AS 数据库平均分</li>
+<li>,100 * SUM(CASE WHEN C# = ‘004’ AND score &gt;= 60 THEN 1 ELSE 0 END)/SUM(CASE WHEN C# = ‘004’ THEN 1 ELSE 0 END) AS 数据库及格百分数</li>
+<li><p>FROM SC</p>
+</li>
+<li><p>21、查询不同老师所教不同课程平均分从高到低显示</p>
+</li>
+<li>SELECT max(Z.T#) AS 教师ID,MAX(Z.Tname) AS 教师姓名,C.C# AS 课程ＩＤ,MAX(C.Cname) AS 课程名称,AVG(Score) AS 平均成绩</li>
+<li>FROM SC AS T,Course AS C ,Teacher AS Z</li>
+<li>where T.C#=C.C# and C.T#=Z.T#</li>
+<li>GROUP BY C.C#</li>
+<li>ORDER BY AVG(Score) DESC</li>
+<li>22、查询如下课程成绩第 3 名到第 6 名的学生成绩单：企业管理（001），马克思（002），UML （003），数据库（004）</li>
+<li>[学生ID],[学生姓名],企业管理,马克思,UML,数据库,平均成绩</li>
+<li>SELECT DISTINCT top 3</li>
+<li>SC.S# As 学生学号,</li>
+<li>Student.Sname AS 学生姓名 ,</li>
+<li>T1.score AS 企业管理,</li>
+<li>T2.score AS 马克思,</li>
+<li>T3.score AS UML,</li>
+<li>T4.score AS 数据库,</li>
+<li>ISNULL(T1.score,0) + ISNULL(T2.score,0) + ISNULL(T3.score,0) + ISNULL(T4.score,0) as 总分</li>
+<li>FROM Student,SC LEFT JOIN SC AS T1</li>
+<li>ON SC.S# = T1.S# AND T1.C# = ‘001’</li>
+<li>LEFT JOIN SC AS T2</li>
+<li>ON SC.S# = T2.S# AND T2.C# = ‘002’</li>
+<li>LEFT JOIN SC AS T3</li>
+<li>ON SC.S# = T3.S# AND T3.C# = ‘003’</li>
+<li>LEFT JOIN SC AS T4</li>
+<li>ON SC.S# = T4.S# AND T4.C# = ‘004’</li>
+<li>WHERE student.S#=SC.S# and</li>
+<li>ISNULL(T1.score,0) + ISNULL(T2.score,0) + ISNULL(T3.score,0) + ISNULL(T4.score,0)</li>
+<li>NOT IN</li>
+<li>(SELECT</li>
+<li>DISTINCT</li>
+<li>TOP 15 WITH TIES</li>
+<li>ISNULL(T1.score,0) + ISNULL(T2.score,0) + ISNULL(T3.score,0) + ISNULL(T4.score,0)</li>
+<li>FROM sc</li>
+<li>LEFT JOIN sc AS T1</li>
+<li>ON sc.S# = T1.S# AND T1.C# = ‘k1’</li>
+<li>LEFT JOIN sc AS T2</li>
+<li>ON sc.S# = T2.S# AND T2.C# = ‘k2’</li>
+<li>LEFT JOIN sc AS T3</li>
+<li>ON sc.S# = T3.S# AND T3.C# = ‘k3’</li>
+<li>LEFT JOIN sc AS T4</li>
+<li>ON sc.S# = T4.S# AND T4.C# = ‘k4’</li>
+<li><p>ORDER BY ISNULL(T1.score,0) + ISNULL(T2.score,0) + ISNULL(T3.score,0) + ISNULL(T4.score,0) DESC);</p>
+</li>
+<li><p>23、统计列印各科成绩,各分数段人数:课程ID,课程名称,[100-85],[85-70],[70-60],[ &lt;60]</p>
+</li>
+<li>SELECT SC.C# as 课程ID, Cname as 课程名称</li>
+<li>,SUM(CASE WHEN score BETWEEN 85 AND 100 THEN 1 ELSE 0 END) AS [100 - 85]</li>
+<li>,SUM(CASE WHEN score BETWEEN 70 AND 85 THEN 1 ELSE 0 END) AS [85 - 70]</li>
+<li>,SUM(CASE WHEN score BETWEEN 60 AND 70 THEN 1 ELSE 0 END) AS [70 - 60]</li>
+<li>,SUM(CASE WHEN score &lt; 60 THEN 1 ELSE 0 END) AS [60 -]</li>
+<li>FROM SC,Course</li>
+<li>where SC.C#=Course.C#</li>
+<li><p>GROUP BY SC.C#,Cname;</p>
+</li>
+<li><p>24、查询学生平均成绩及其名次</p>
+</li>
+<li>SELECT 1+(SELECT COUNT( distinct 平均成绩)</li>
+<li>FROM (SELECT S#,AVG(score) AS 平均成绩</li>
+<li>FROM SC</li>
+<li>GROUP BY S#</li>
+<li>) AS T1</li>
+<li>WHERE 平均成绩 &gt; T2.平均成绩) as 名次,</li>
+<li>S# as 学生学号,平均成绩</li>
+<li>FROM (SELECT S#,AVG(score) 平均成绩</li>
+<li>FROM SC</li>
+<li>GROUP BY S#</li>
+<li>) AS T2</li>
+<li><p>ORDER BY 平均成绩 desc;</p>
+</li>
+<li><p>25、查询各科成绩前三名的记录:(不考虑成绩并列情况)</p>
+</li>
+<li>SELECT t1.S# as 学生ID,t1.C# as 课程ID,Score as 分数</li>
+<li>FROM SC t1</li>
+<li>WHERE score IN (SELECT TOP 3 score</li>
+<li>FROM SC</li>
+<li>WHERE t1.C#= C#</li>
+<li>ORDER BY score DESC</li>
+<li>)</li>
+<li>ORDER BY t1.C#;</li>
+<li>26、查询每门课程被选修的学生数</li>
+<li>select c#,count(S#) from sc group by C#;</li>
+<li>27、查询出只选修了一门课程的全部学生的学号和姓名</li>
+<li>select SC.S#,Student.Sname,count(C#) AS 选课数</li>
+<li>from SC ,Student</li>
+<li>where SC.S#=Student.S# group by SC.S# ,Student.Sname having count(C#)=1;</li>
+<li>28、查询男生、女生人数</li>
+<li>Select count(Ssex) as 男生人数 from Student group by Ssex having Ssex=’男’;</li>
+<li>Select count(Ssex) as 女生人数 from Student group by Ssex having Ssex=’女’；</li>
+<li>29、查询姓“张”的学生名单</li>
+<li>SELECT Sname FROM Student WHERE Sname like ‘张%’;</li>
+<li>30、查询同名同性学生名单，并统计同名人数</li>
+<li>select Sname,count(<em>) from Student group by Sname having count(</em>)&gt;1;</li>
+<li>31、1981年出生的学生名单(注：Student表中Sage列的类型是datetime)</li>
+<li>select Sname, CONVERT(char (11),DATEPART(year,Sage)) as age</li>
+<li>from student</li>
+<li>where CONVERT(char(11),DATEPART(year,Sage))=’1981’;</li>
+<li>32、查询每门课程的平均成绩，结果按平均成绩升序排列，平均成绩相同时，按课程号降序排列</li>
+<li>Select C#,Avg(score) from SC group by C# order by Avg(score),C# DESC ;</li>
+<li>33、查询平均成绩大于85的所有学生的学号、姓名和平均成绩</li>
+<li>select Sname,SC.S# ,avg(score)</li>
+<li>from Student,SC</li>
+<li>where Student.S#=SC.S# group by SC.S#,Sname having avg(score)&gt;85;</li>
+<li>34、查询课程名称为“数据库”，且分数低于60的学生姓名和分数</li>
+<li>Select Sname,isnull(score,0)</li>
+<li>from Student,SC,Course</li>
+<li>where SC.S#=Student.S# and SC.C#=Course.C# and Course.Cname=’数据库’and score &lt;60;</li>
+<li>35、查询所有学生的选课情况；</li>
+<li>SELECT SC.S#,SC.C#,Sname,Cname</li>
+<li>FROM SC,Student,Course</li>
+<li>where SC.S#=Student.S# and SC.C#=Course.C# ;</li>
+<li>36、查询任何一门课程成绩在70分以上的姓名、课程名称和分数；</li>
+<li>SELECT distinct student.S#,student.Sname,SC.C#,SC.score</li>
+<li>FROM student,Sc</li>
+<li>WHERE SC.score&gt;=70 AND SC.S#=student.S#;</li>
+<li>37、查询不及格的课程，并按课程号从大到小排列</li>
+<li>select c# from sc where scor e &lt;60 order by C# ;</li>
+<li>38、查询课程编号为003且课程成绩在80分以上的学生的学号和姓名；</li>
+<li>select SC.S#,Student.Sname from SC,Student where SC.S#=Student.S# and Score&gt;80 and C#=’003’;</li>
+<li>39、求选了课程的学生人数</li>
+<li>select count(*) from sc;</li>
+<li>40、查询选修“叶平”老师所授课程的学生中，成绩最高的学生姓名及其成绩</li>
+<li>select Student.Sname,score</li>
+<li>from Student,SC,Course C,Teacher</li>
+<li>where Student.S#=SC.S# and SC.C#=C.C# and C.T#=Teacher.T# and Teacher.Tname=’叶平’ and SC.score=(select max(score)from SC where C#=C.C# );</li>
+<li>41、查询各个课程及相应的选修人数</li>
+<li>select count(*) from sc group by C#;</li>
+<li>42、查询不同课程成绩相同的学生的学号、课程号、学生成绩</li>
+<li>select distinct A.S#,B.score from SC A ,SC B where A.Score=B.Score and A.C# &lt;&gt;B.C# ;</li>
+<li>43、查询每门功成绩最好的前两名</li>
+<li>SELECT t1.S# as 学生ID,t1.C# as 课程ID,Score as 分数</li>
+<li>FROM SC t1</li>
+<li>WHERE score IN (SELECT TOP 2 score</li>
+<li>FROM SC</li>
+<li>WHERE t1.C#= C#</li>
+<li>ORDER BY score DESC</li>
+<li>)</li>
+<li>ORDER BY t1.C#;</li>
+<li>44、统计每门课程的学生选修人数（超过10人的课程才统计）。要求输出课程号和选修人数，查询结果按人数降序排列，查询结果按人数降序排列，若人数相同，按课程号升序排列</li>
+<li>select C# as 课程号,count(*) as 人数</li>
+<li>from sc</li>
+<li>group by C#</li>
+<li>order by count(*) desc,c#</li>
+<li>45、检索至少选修两门课程的学生学号</li>
+<li>select S#</li>
+<li>from sc</li>
+<li>group by s#</li>
+<li>having count(*) &gt; = 2</li>
+<li>46、查询全部学生都选修的课程的课程号和课程名</li>
+<li>select C#,Cname</li>
+<li>from Course</li>
+<li>where C# in (select c# from sc group by c#)</li>
+<li>47、查询没学过“叶平”老师讲授的任一门课程的学生姓名</li>
+<li>select Sname from Student where S# not in (select S# from Course,Teacher,SC where Course.T#=Teacher.T# and SC.C#=course.C# and Tname=’叶平’);</li>
+<li>48、查询两门以上不及格课程的同学的学号及其平均成绩</li>
+<li>select S#,avg(isnull(score,0)) from SC where S# in (select S# from SC where score <60 group by s# having count(*)>2)group by S#;</60></li>
+<li>49、检索“004”课程分数小于60，按分数降序排列的同学学号</li>
+<li>select S# from SC where C#=’004’and score &lt;60 order by score desc;</li>
+<li>50、删除“002”同学的“001”课程的成绩</li>
+<li>delete from Sc where S#=’001’and C#=’001’;</li>
+</ol>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br>
+        <a href="/2015/06/02/2019030500002/">
+            
+                61
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br>
+        <a href="/2015/05/27/2019030500004/">
+            
+                Apache配置文件中的deny和allow的使用
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '2019030500001' || '2015/05/28/2019030500001/',
+    owner: 'your_github_id',
+    repo: 'your_blog_comments',
+    clientId: 'your_client_id',
+    clientSecret: 'your_client_secret'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

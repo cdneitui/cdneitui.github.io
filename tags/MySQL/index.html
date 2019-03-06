@@ -1,0 +1,1463 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>`MySQL`标签下的文章 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/tags/MySQL/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/tags/MySQL/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/tags/MySQL/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/tags/MySQL/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 按标签分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `MySQL`标签下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2019/01/15/2019030500044/">
+    		组合索引的使用示例
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2019-01-15T07:29:37.000Z">2019-01-15</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/B-Tree/" title="B+Tree">B+Tree</a> / 
+    
+        <a href="/tags/索引/" title="索引">索引</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>总结：通常说的索引是B+Tree索引,树状的，搜索需要从根节点出发，上层节点对应靠左的值，搜索需要从根节点出发，否则不从根节点出发，后面的节点对应下层的值，依旧是乱序的，需要遍历，所以索引就失效了，所以有最左原则。</p>
+<p>组合索引的使用：</p>
+<p>例如组合索引（a,b,c），组合索引的生效原则是</p>
+<p>从前往后依次使用生效，如果中间某个索引没有使用，那么断点前面的索引部分起作用，断点后面的索引没有起作用；</p>
+<p>比如</p>
+<p>where a=3 and b=45 and c=5 …. 这种三个索引顺序使用中间没有断点，全部发挥作用；</p>
+<p>where a=3 and c=5… 这种情况下b就是断点，a发挥了效果，c没有效果</p>
+<p>where b=3 and c=4… 这种情况下a就是断点，在a后面的索引都没有发挥作用，这种写法联合索引没有发挥任何效果；</p>
+<p>where b=45 and a=3 and c=5 …. 这个跟第一个一样，全部发挥作用，abc只要用上了就行，跟写的顺序无关</p>
+<p>组合索引使用判断：</p>
+<p>(0) select * from mytable where a=3 and b=5 and c=4;</p>
+<p>abc三个索引都在where条件里面用到了，而且都发挥了作用</p>
+<p>(1) select * from mytable where c=4 and b=6 and a=3;</p>
+<p>这条语句列出来只想说明 mysql没有那么笨，where里面的条件顺序在查询之前会被mysql自动优化，效果跟上一句一样</p>
+<p>(2) select * from mytable where a=3 and c=7;</p>
+<p>a用到索引，b没有用，所以c是没有用到索引效果的</p>
+<p>(3) select * from mytable where a=3 and b&gt;7 and c=3;(范围值就算是断点)</p>
+<p>a用到了，b也用到了，c没有用到，这个地方b是范围值，也算断点，只不过自身用到了索引</p>
+<p>(4) select * from mytable where b=3 and c=4;</p>
+<p>因为a索引没有使用，所以这里 bc都没有用上索引效果</p>
+<p>(5) select * from mytable where a&gt;4 and b=7 and c=9;</p>
+<p>a用到了 b没有使用，c没有使用</p>
+<p>(6) select * from mytable where a=3 order by b;</p>
+<p>a用到了索引，b在结果排序中也用到了索引的效果，前面说了，a下面任意一段的b是排好序的</p>
+<p>(7) select * from mytable where a=3 order by c;</p>
+<p>a用到了索引，但是这个地方c没有发挥排序效果，因为中间断点了，使用 explain 可以看到 filesort</p>
+<p>(8) select * from mytable where b=3 order by a;</p>
+<p>b没有用到索引，排序中a也没有发挥索引效果</p>
+
+            
+            <p class="more">
+                <a href="/2019/01/15/2019030500044/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2019/01/15/2019030500044/" title="组合索引的使用示例">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/05/30/2019030500010/">
+    		使用KeepAlived搭建MySQL高可用环境
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-05-30T06:51:09.000Z">2016-05-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/KeepAlived/" title="KeepAlived">KeepAlived</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><img src="/uploads/2016/05/29254281_1408887120Zv80.png" alt> 使用KeepAlived搭建MySQL的高可用环境。 首先搭建MySQL的主从复制 在Master开启binlog,创建复制帐号, 然后在Slave输入命令</p>
+<ol>
+<li>change master to</li>
+<li>master_host=’192.168.1.70’,</li>
+<li>master_port=3306,</li>
+<li>master_user=’xx’,</li>
+<li>master_password=’xx’;</li>
+</ol>
+<p>然后使用start slave开启复制。 然后编译安装KeepAlived 进入keepalived-1.2.12目录 然后使用 ./configure make &amp;&amp; make install 然后在Master服务器编辑KeepAlived的配置文件 vim /etc/keepalived/keepalived.conf</p>
+<ol>
+<li><p>! Configuration File for keepalived</p>
+</li>
+<li><p>global_defs {</p>
+</li>
+<li>router_id HA_MySQL</li>
+<li><p>}</p>
+</li>
+<li><p>vrrp_instance VI_1 {</p>
+</li>
+<li>state BACKUP</li>
+<li>interface eth0</li>
+<li>virtual_router_id 51</li>
+<li>priority 100</li>
+<li>advert_int 1</li>
+<li>nopreempt</li>
+<li>authentication {</li>
+<li>auth_type PASS</li>
+<li>auth_pass 1111</li>
+<li>}</li>
+<li>virtual_ipaddress {</li>
+<li>192.168.1.199</li>
+<li>}</li>
+<li><p>}</p>
+</li>
+<li><p>virtual_server 192.168.1.199 3306 {</p>
+</li>
+<li>delay_loop 2</li>
+<li>lb_algo wrr</li>
+<li>lb_kind DR</li>
+<li>persistence_timeout 60</li>
+<li>protocol TCP</li>
+<li>real_server 192.168.1.70 3306 {</li>
+<li>weight 3</li>
+<li>notify_down /root/shutdown.sh</li>
+<li>TCP_CHECK {</li>
+<li>connect_timeout 10</li>
+<li>nb_get_retry 3</li>
+<li>delay_before_retry 3</li>
+<li>connect_port 3306</li>
+<li>}</li>
+<li>}</li>
+<li>}</li>
+</ol>
+<p>然后编辑Slave的配置文件 vim /etc/keepalived/keepalived.conf</p>
+<ol>
+<li>! Configuration File for keepalived</li>
+<li>global_defs {</li>
+<li>router_id HA_MySQL</li>
+<li><p>}</p>
+</li>
+<li><p>vrrp_instance VI_1 {</p>
+</li>
+<li>state BACKUP</li>
+<li>interface eth0</li>
+<li>virtual_router_id 51</li>
+<li>priority 90</li>
+<li>advert_int 1</li>
+<li>nopreempt</li>
+<li>authentication {</li>
+<li>auth_type PASS</li>
+<li>auth_pass 1111</li>
+<li>}</li>
+<li>virtual_ipaddress {</li>
+<li>192.168.1.199</li>
+<li>}</li>
+<li><p>}</p>
+</li>
+<li><p>virtual_server 192.168.1.199 3306 {</p>
+</li>
+<li>delay_loop 2</li>
+<li>lb_algo wrr</li>
+<li>lb_kind DR</li>
+<li>persistence_timeout 60</li>
+<li>protocol TCP</li>
+<li>real_server 192.168.1.80 3306 {</li>
+<li>weight 3</li>
+<li>notify_down /root/shutdown.sh</li>
+<li>TCP_CHECK {</li>
+<li>connect_timeout 10</li>
+<li>nb_get_retry 3</li>
+<li>delay_before_retry 3</li>
+<li>connect_port 3306</li>
+<li>}</li>
+<li>}</li>
+<li>}</li>
+</ol>
+<p>其中 priority                      表示优先级 virtual_ipaddress      虚拟的IP地址(VIP) delay_loop                每个2秒检查一次real_server状态 notify_down              检测到服务down后执行的脚本 connect_timeout      连接超时时间 nb_get_retry             重连次数 delay_before_retry   重连间隔时间 connect_port            健康检查端口 shutdown.sh 可以考虑加入邮件告警的功能。</p>
+<ol>
+<li>#!/bin/bash</li>
+<li>pkill keepalived</li>
+</ol>
+<p>在两个服务器上启动MySQL和KeepAlived服务 service mysql start service keepalived start Master的server_id为1 Slave的server_id为2 然后 连接VIP的MySQL,可以看到已经连接到了Master服务器(server_id为1) <img src="/uploads/2016/05/29254281_14088901415ktB.png" alt> 如果kill掉Master的MySQL,KeepAlived会自动转移到Slave 在Master服务器上执行 killall mysqld 然后再次查看server_id, 短暂的失去连接之后,再次连接上VIP,server_id已经变为2,说明VIP已经指向了Slave <img src="/uploads/2016/05/29254281_1408890396C3OE.png" alt> nopreempt参数表示Master恢复正常之后，是否将VIP继续指向Master 这样的话，会再次引发切换。 两台服务器的KeepAlived会有心跳检测, 如果Master的MySQL服务挂了(3306端口挂了),那么他会选择自杀. Slave的KeepAlived通过心跳检测发现这个情况，就会将VIP的请求接管。 KeepAlived还有很多参数没有明白是什么意思 生产环境的切换脚本,在Slave提升为Master之后,应该等待所有的中继日志应用完毕,否则可能丢失数据</p>
+
+            
+            <p class="more">
+                <a href="/2016/05/30/2019030500010/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/05/30/2019030500010/" title="使用KeepAlived搭建MySQL高可用环境">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/05/30/2019030500088/">
+    		mysql查看和修改注释
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-05-30T02:41:23.000Z">2016-05-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>mysql查看和修改注释，这里创建一张学生表来进行说明。 <strong>一.如何创建表</strong> 创建表的时候写注释。</p>
+<p>Sql代码</p>
+<ol>
+<li>create table test1</li>
+<li>(</li>
+<li>field_name int comment ‘字段的注释’</li>
+<li>)comment=’表的注释’;</li>
+</ol>
+<p>创建学生表示例如下： <img src="/uploads/2016/05/1a664fd4-b184-32ba-9372-4a4f9fc95563.png" alt> <strong>二.修改表的注释和创建</strong></p>
+<p>Sql代码</p>
+<ol>
+<li>alter table test1 comment ‘修改后的表的注释’;</li>
+</ol>
+<p>示例代码如下：</p>
+<p>Sql代码</p>
+<ol>
+<li>ALTER TABLE `student` COMMENT ‘学生表2.0’;</li>
+</ol>
+<p>结果如下图所示： <img src="/uploads/2016/05/570a3c84-7541-3916-8cd0-ec540f731da3.png" alt> <img src="/uploads/2016/05/9ea6bfc0-2cbc-328a-a7d0-f89a508b438f.png" alt> <strong>三. 修改字段的注释</strong></p>
+<p>Sql代码</p>
+<ol>
+<li>alter table test1 modify column field_name int comment ‘修改后的字段注释’;</li>
+</ol>
+<p>注意：字段名和字段类型照写就行 修改示例如下：</p>
+<p>Sql代码</p>
+<ol>
+<li>ALTER TABLE `student` MODIFY COLUMN `id` COMMENT ‘学号’;</li>
+</ol>
+<p>查看字段的信息，代码如下：</p>
+<p>Sql代码</p>
+<ol>
+<li>SHOW FULL COLUMNS  FROM `student`;</li>
+</ol>
+<p>结果如图所示： <img src="/uploads/2016/05/f2f6e77e-12e4-3a11-87ec-bbd1bbe30afa.png" alt> <img src="/uploads/2016/05/b4bf7bfc-4957-3bd4-9cc1-c1aaf76253ab.png" alt> <strong>四.**</strong>查看表注释的方法** 1.在生成的SQL语句中看</p>
+<p>Sql代码</p>
+<ol>
+<li><p>show create table test1;</p>
+<pre><code>如查看student表的注释
+</code></pre></li>
+</ol>
+<p>Sql代码</p>
+<ol>
+<li>SHOW CREATE TABLE `student`</li>
+</ol>
+<p><img src="/uploads/2016/05/6ebfafc4-acb6-32e7-af2a-c06bbc3692d2.png" alt title="点击查看原始大小图片"></p>
+<p>2.在元数据的表里面看</p>
+<p>Sql代码</p>
+<ol>
+<li>use information_schema;</li>
+<li><p>select * from TABLES where TABLE_SCHEMA=’my_db’ and TABLE_NAME=’test1’</p>
+<pre><code>或
+</code></pre></li>
+</ol>
+<p>Sql代码</p>
+<ol>
+<li>select * from information_schema.tables where table_schema=’my_db’ and table_name=’test1’;</li>
+</ol>
+<p><strong>五.查看字段注释的方法</strong></p>
+<p>1.show方法</p>
+<p>Sql代码</p>
+<ol>
+<li>show full columns from test1;</li>
+</ol>
+<p>2.在元数据的表里面看</p>
+<p>Sql代码</p>
+<ol>
+<li>select * from COLUMNS where TABLE_SCHEMA=’my_db’ and TABLE_NAME=’test1’</li>
+</ol>
+<p>或  </p>
+<p>Sql代码</p>
+<ol>
+<li>select * from information_schema.columns where table_schema=’my_db’ and table_name=’test1’</li>
+</ol>
+<p><strong>六.查看表的约束信息</strong></p>
+<pre><code>mysql 客户端提供的describe table_name命令，只能显示一个表的primary key和foreign key。
+
+mysql所有有关数据schema的信息都保存在INFORMATION\_SCHEMA这个database instance里面。其中的TABLE\_CONSTRAINTS和KEY\_COLUMN\_USAGE表，保存了表的所有key信息。
+
+TABLE\_CONSTRAINTS，保存了表的约束条件，而KEY\_COLUMN_USAGE保存了表的详细column对应的约束条件信息。
+
+示例如下：
+</code></pre><p>Sql代码</p>
+<ol>
+<li>select * from information_schema.TABLE_CONSTRAINTS t where t.table_name = ‘student’;</li>
+</ol>
+<p><img src="/uploads/2016/05/06d93b86-b513-3c3d-8857-379b7006cbd5.png" alt title="点击查看原始大小图片"></p>
+<p>Sql代码</p>
+<ol>
+<li>select * from information_schema.KEY_COLUMN_USAGE t where t.table_name = ‘student’ and t.CONSTRAINT_NAME = ‘PRIMARY’;</li>
+</ol>
+<p><img src="/uploads/2016/05/5f2f3622-18ac-3ccf-b5c9-23e0af4b84ea.png" alt title="点击查看原始大小图片"></p>
+
+            
+            <p class="more">
+                <a href="/2016/05/30/2019030500088/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/05/30/2019030500088/" title="mysql查看和修改注释">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/05/27/2019030500087/">
+    		mySQL常见错误
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-05-27T07:45:33.000Z">2016-05-27</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>一、使用命令行进行查询时中文显示为乱码：</strong> 在命令行模式下，使用select 语句查询表中数据时，若表中数据存在中文那么显示的就是乱码，而且insert中文的时候也会报错： Incorrect string value: ‘\xB0\xCB’ for column ‘name’ at row 1，如图： <img src="/uploads/2016/05/cf0b7b68-eb8b-3885-b13c-6e5892578ab4.jpg" alt> 这是数据库编码格式格式的：set names uft8。再查询就会显示正常，而且insert也能成功。 <img src="/uploads/2016/05/065c4c8c-c142-3d0f-b68d-6aa66bb426bd.jpg" alt> <strong>2、delete语句：</strong> 在SQL Server中，删除语句可以用delete …..，也可以用delete from…，也就是使用”delete test where id=1”和”delete from test where id=1” 效果是一样滴，都可以删除数据。 但是在MySql里面，必须得用delete from….才能删除数据，直接使用delete…会报错。   <strong>3、添加后缀或前缀：</strong> 为一个字段添加后缀或前缀，譬如说为table1的field2字段添加前缀abc，后缀abc。 使用SQL Server很简单，就像JS中的拼接一样： 前缀：update table1 set field2=’abc’+field2 where field1=1; 后缀：update table1 set field2=field2+’abc’ where field1=1; 在MySQL里面，这么添加会报错，得使用concat函数进行添加。 前缀：update table1 set field2=concat(‘abc’,field2) where field1=1; 后缀：update table1 set field2=concat(field2,’abc’) where field1=1;   <strong>4、去除前缀或后缀：</strong> 在SQL Server里面可以使用stuff函数， 删除前缀：update test set field2=stuff(field2,1,3,’’) where field1=1; 删除后缀：update test set field2=stuff(field2,7,3,’’) where field1=1; stuff()函数四个参数简析： param1:要删除的字符串； param2:从哪个下标开始删除，下标从1开始 param3:删除的字符串的个数 param4：在删除字符串的地方插入的字符串 所以上面删除前缀和后缀的原理就是：前缀中abc在最前面，所以下标从1开始，删除3个，删除完成之后插入空格，这样子前缀就没有了。也因此,后缀abc的下标就从7开始了。 当然也可以用substring()函数，这个函数更简单： substring()函数三个参数简析： param1:要进行截取的字符串 param2:从哪个下标开始截取，下标从1开始 param3:截取的长度。 因此，删除前缀和后缀的方法为： 前缀：update test set field2=substring(field2,4,len(field2)-3) where field1=1; 后缀：update test set field2=substring(field2,1,len(field2)-3) where field1=1; 前缀删除中，abc在最前面，所以下标从1开始，截取“字符串的长度减去abc的长度”,也就是len(field2)-3。删除前缀之后，直接从第一个字符开始截取，其长度为字符串长度减去最后的三个字符串长度。   MySQL中也可以用substr函数，用法与SQL Server相同，但是我们也可以用right()函数，这个函数与substring差不多，它用来返回字符串的最右面指定个数的字符。因此，删除前缀比较简单，删除后缀有点费劲此时就可以用substring来处理： 前缀：update test set field2=right(field2,length(field2)-3) where field1=1; 后缀：update test set field2=substr(field2,1,len(field2)-3) where field1=1;</p>
+
+            
+            <p class="more">
+                <a href="/2016/05/27/2019030500087/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/05/27/2019030500087/" title="mySQL常见错误">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/04/11/2019030500089/">
+    		MySQL查询表内重复记录（总汇）
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-04-11T03:21:51.000Z">2016-04-11</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h1 id="MySQL查询表内重复记录"><a href="#MySQL查询表内重复记录" class="headerlink" title="MySQL查询表内重复记录"></a>MySQL查询表内重复记录</h1><p>  查询及删除重复记录的方法 (一) 1、查找表中多余的重复记录，重复记录是根据单个字段（peopleId）来判断 select <em> from people where peopleId in (select peopleId from people group by peopleId having count(peopleId) &gt; 1) 2、删除表中多余的重复记录，重复记录是根据单个字段（peopleId）来判断，只留有一个记录 delete from people where peopleId in (select peopleId from people group by peopleId having count(peopleId) &gt; 1) and min(id) not in (select id from people group by peopleId having count(peopleId )&gt;1) 3、查找表中多余的重复记录（多个字段） select </em> from vitae a where (a.peopleId,a.seq) in (select peopleId,seq from vitae group by peopleId,seq having count(<em>) &gt; 1) 4、删除表中多余的重复记录（多个字段），只留有rowid最小的记录 delete from vitae a where (a.peopleId,a.seq) in (select peopleId,seq from vitae group by peopleId,seq having count(</em>) &gt; 1) and rowid not in (select min(rowid) from vitae group by peopleId,seq having count(<em>)&gt;1) 5、查找表中多余的重复记录（多个字段），不包含rowid最小的记录 select </em> from vitae a where (a.peopleId,a.seq) in (select peopleId,seq from vitae group by peopleId,seq having count(<em>) &gt; 1) and rowid not in (select min(rowid) from vitae group by peopleId,seq having count(</em>)&gt;1) (二) 比方说 在A表中存在一个字段“name”， 而且不同记录之间的“name”值有可能会相同， 现在就是需要查询出在该表中的各记录之间，“name”值存在重复的项； Select Name,Count(<em>) From A Group By Name Having Count(</em>) &gt; 1 如果还查性别也相同大则如下: Select Name,sex,Count(<em>) From A Group By Name,sex Having Count(</em>) &gt; 1 (三) 方法一 declare @max integer,@id integer declare cur_rows cursor local for select 主字段,count(<em>) from 表名 group by 主字段 having count(</em>) &gt;； 1 open cur_rows fetch cur_rows into @id,@max while @@fetch_status=0 begin select @max = @max -1 set rowcount @max delete from 表名 where 主字段 = @id fetch cur_rows into @id,@max end close cur_rows set rowcount 0</p>
+
+            
+            <p class="more">
+                <a href="/2016/04/11/2019030500089/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/04/11/2019030500089/" title="MySQL查询表内重复记录（总汇）">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/03/21/2019030500096/">
+    		MYSQL数据库备份与恢复
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-03-21T11:24:57.000Z">2016-03-21</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>mysqldump -h主机名  -P端口 -u用户名 -p密码 (–database) 数据库名 &gt; 文件名.sql 备份MySQL数据库的命令 mysqldump -hhostname -uusername -ppassword databasename &gt; backupfile.sql 备份MySQL数据库为带删除表的格式，能够让该备份覆盖已有数据库而不需要手动删除原有数据库。 mysqldump -–add-drop-table -uusername -ppassword databasename &gt; backupfile.sql 直接将MySQL数据库压缩备份 mysqldump -hhostname -uusername -ppassword databasename | gzip &gt; backupfile.sql.gz 备份MySQL数据库某个(些)表 mysqldump -hhostname -uusername -ppassword databasename specific_table1 specific_table2 &gt; backupfile.sql 同时备份多个MySQL数据库 mysqldump -hhostname -uusername -ppassword –databases databasename1 databasename2 databasename3 &gt; multibackupfile.sql 仅仅备份数据库结构 mysqldump –no-data –databases databasename1 databasename2 databasename3 &gt; structurebackupfile.sql 备份服务器上所有数据库 mysqldump –all-databases &gt; allbackupfile.sql 还原MySQL数据库的命令 mysql -hhostname -uusername -ppassword databasename &lt; backupfile.sql 还原压缩的MySQL数据库 gunzip &lt; backupfile.sql.gz | mysql -uusername -ppassword databasename 将数据库转移到新服务器 mysqldump -uusername -ppassword databasename | mysql –host=<em>.</em>.<em>.</em> -C databasename =============================================================== JAVA代码调用命令的方法</p>
+<ol>
+<li>Process p = Runtime.getRuntime().exec(“cmd /c mysqldump -h127.0.0.1 -P3306 -uroot -p123456  customer &gt; d:/opt/customer/dbback/backupfile-1351022418812.sql”);</li>
+<li>// 等待编译结束</li>
+<li>p.waitFor();</li>
+<li>// 检查返回码，看编译是否出错。</li>
+<li>int ret = p.exitValue();</li>
+<li>System.out.println(ret);</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2016/03/21/2019030500096/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/03/21/2019030500096/" title="MYSQL数据库备份与恢复">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/02/29/2019030500098/">
+    		mysql 数据库性能查看
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-02-29T09:24:34.000Z">2016-02-29</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>主要方法： show status , show profile ,检查慢查询日志   # 检测执行的sql，具体那个位置比较慢 SELECT <em> FROM phone_sts   #数据库版本 SELECT  VERSION();   #查询sql对资源的占用情况 SHOW profiles ; #查询当前sql执行过程中的时间消耗 SHOW profile ;   SHOW profile  block io,cpu FOR  QUERY 31969             #检查profiling是否开启 SHOW VARIABLES LIKE ‘%pro%’; #开启 SET profiling=1;     SHOW profiles;     #c查询各个表占用大小 SELECT table_schema AS ‘Db Name’, ROUND( SUM( data_length + index_length ) / 1024 / 1024, 3 ) AS ‘Db Size (MB)’, ROUND( SUM( data_free ) / 1024 / 1024, 3 ) AS ‘Free Space (MB)’ FROM information_schema.tables GROUP BY table_schema ;         SHOW DATABASES; USE information_schema;   SHOW TABLES;   # 表超过1000行的 SELECT CONCAT(table_schema,’.’,table_name) AS table_name,table_rows FROM information_schema.tables WHERE table_rows &gt; 1000 ORDER BY table_rows DESC;   # 最大的10个表 SELECT CONCAT(table_schema,’.’,table_name) table_name, CONCAT(ROUND(data_length/(1024\</em>1024),2),’M’) data_length FROM information_schema.TABLES ORDER BY data_length DESC LIMIT 10;     # 查询一个sql语句的时间消耗在哪里 SET @query_id=1 ; SELECT state,SUM(duration)  AS total_R, ROUND( 100*SUM(duration)/ (SELECT  SUM(DURATION) FROM information_schema.PROFILING WHERE query_id=@query_id ),2) AS calls , SUM(duration )/COUNT(<em>) AS “R/Call” FROM information_schema.PROFILING WHERE query_id=@query_id GROUP BY state ORDER BY total_R DESC ;         # 查询一个sql语句的时间消耗在哪里 SET @query_id=31969 ; SELECT state,SUM(duration)  AS total_R, ROUND( 100\</em>SUM(duration)/ (SELECT  SUM(DURATION) FROM information_schema.PROFILING ),2) AS calls , SUM(duration )/COUNT(*) AS “R/Call” FROM information_schema.PROFILING   GROUP BY state ORDER BY total_R DESC ;</p>
+
+            
+            <p class="more">
+                <a href="/2016/02/29/2019030500098/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/02/29/2019030500098/" title="mysql 数据库性能查看">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/9.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/02/29/2019030500093/">
+    		Mysql 性能配置
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-02-29T09:23:45.000Z">2016-02-29</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>按照从大到小，从主要到次要的形式，分析 mysql 性能优化点，达到最终优化的效果。 利用 mindmanger 整理了思路，形成如下图，每个点在网上都能找到说明，并记录下。形成了优化的思路： <img src="/uploads/2016/02/22231911-4b9ea8379bf04fbba8ba72bc0a57e7f9.jpg" alt title="点击查看原始大小图片">  </p>
+<p><strong>1 连接 Connections</strong></p>
+<p>经常会遇见”mysql: error 1040: too many connections”的情况，一种是访问量确实很高，mysql服务器抗不住，这个时候就要考虑增加从服务器分散读压力，另外一种情况是mysql配置文件中max_connections值过小： mysql&gt; show variables like ‘max_connections‘; +—————–+——-+ | variable_name　 | value   | +—————–+——-+ | max_connections | 256　 | +—————–+——-+ 这台mysql服务器最大连接数是256，然后查询一下服务器响应的最大连接数： mysql&gt; show global status like ‘max_used_connections‘; mysql服务器过去的最大连接数是245，没有达到服务器连接数上限256，应该没有出现1040错误，比较理想的设置是 max_used_connections / max_connections * 100% ≈ 85% 最大连接数占上限连接数的85％左右，如果发现比例在10%以下，mysql服务器连接数上限设置的过高了。  </p>
+<p><strong>2  线程 Thread</strong></p>
+<p>mysql&gt; show global status like ‘thread%‘; +——————-+——-+ | variable_name　　 |   value | +——————-+——-+ | threads_cached　 |    46　 | | threads_connected | 2　　 | | threads_created　| 570　  | | threads_running  | 1　  　 | +——————-+——-+ 如果我们在mysql服务器配置文件中设置了thread_cache_size，当客户端断开之后，服务器处理此客户的线程将会缓存起来以响应下一个客户而不是销毁（前提是缓存数未达上限）。 threads_created表示创建过的线程数，如果发现threads_created值过大的话，表明mysql服务器一直在创建线程，这也是比较耗资源，可以适当增加配置文件中thread_cache_size值， 查询服务器 thread_cache_size 配置： mysql&gt; show variables like ‘thread_cache_size‘; +——————-+——-+ | variable_name　　 | value   | +——————-+——-+ | thread_cache_size | 64　　 | +——————-+——-+ 示例中的服务器还是挺健康的。  </p>
+<p><strong>3  缓存 cache</strong></p>
+<p><strong>3.1 文件打开数</strong></p>
+<p>mysql&gt; show global status like ‘open_files‘; +—————+——-+ | variable_name | value | +—————+——-+ | open_files　　 | 1410　 | +—————+——-+ mysql&gt; show variables like ‘open_files_limit‘; +——————+——-+ | variable_name　　 | value | +——————+——-+ | open_files_limit    | 4590 | +——————+——-+ 比较合适的设置：open_files / open_files_limit * 100% &lt;= 75％</p>
+<p><strong>3.2 数据表</strong></p>
+<p><strong>3.2.1 打开数 open_tables</strong></p>
+<p>mysql&gt; show global status like ‘open%tables%‘; +—————+——-+ | variable_name | value   | +—————+——-+ | open_tables　 | 919　 | | opened_tables | 1951 | +—————+——-+ open_tables: 打开表的数量 opened_tables: 打开过的表数量 如果 opened_tables 数量过大，说明配置中 table_cache(5.1.3之后这个值叫做table_open_cache)值可能太小，我们查询一下服务器table_cache值： mysql&gt; show variables like ‘table_cache‘; +—————+——-+ | variable_name | value | +—————+——-+ | table_cache　　　 | 2048　 | +—————+——-+ 比较合适的值为： open_tables / opened_tables <em> 100% &gt;= 85% open_tables / table_cache </em> 100% &lt;= 95% <strong>3.2.2 临时表 tmp_table</strong> mysql&gt; show global status like ‘created_tmp%‘; +————————-+———+ | variable_name　　　　　 | value　　 | +————————-+———+ | created_tmp_disk_tables | 21197　 | | created_tmp_files　　　　| 58　　　 | | created_tmp_tables　　  | 1771587 | +————————-+———+ 每次创建临时表，created_tmp_tables 增加，如果是在磁盘上创建临时表，created_tmp_disk_tables也增加,created_tmp_files表示mysql服务创建的临时文件文件数，比较理想的配置是： created_tmp_disk_tables / created_tmp_tables <em> 100% &lt;= 25% 比如上面的服务器 created_tmp_disk_tables / created_tmp_tables </em> 100% ＝ 1.20%，应该相当好了。我们再看一下mysql服务器对临时表的配置： mysql&gt; show variables where variable_name in (‘tmp_table_size‘, ‘max_heap_table_size‘); +———————+———–+ | variable_name　　　 | value　　　　　 | +———————+———–+ | max_heap_table_size | 268435456 | | tmp_table_size　　　 | 536870912 | +———————+———–+ 只有 256mb 以下的临时表才能全部放内存，超过的就会用到硬盘临时表。</p>
+<p><strong>3.2.3 表锁情况</strong></p>
+<p>mysql&gt; show global status like ‘table_locks%‘; +———————–+———–+ | variable_name　　　　 | value　　　 | +———————–+———–+ | table_locks_immediate | 490206328 | | table_locks_waited　　| 2084912　 | +———————–+———–+ table_locks_immediate 表示立即释放表锁数， table_locks_waited 表示需要等待的表锁数， 如果 table_locks_immediate / table_locks_waited &gt; 5000，最好采用innodb引擎，因为innodb是行锁而myisam是表锁，对于高并发写入的应用innodb效果会好些。 示例中的服务器 table_locks_immediate / table_locks_waited ＝ 235，myisam就足够了。</p>
+<p><strong>3.2.4 表扫描情况</strong></p>
+<p>mysql&gt; show global status like ‘handler_read%‘; +———————–+————-+ | variable_name　　　　 | value　　　　 | +———————–+————-+ | handler_read_first　　| 5803750　　   | | handler_read_key　　 | 6049319850  | | handler_read_next　  | 94440908210 | | handler_read_prev　  | 34822001724 | | handler_read_rnd　　 | 405482605　 | | handler_read_rnd_next | 18912877839 | +———————–+————-+ 各字段解释参见 <a href="http://hi.baidu.com/thinkinginlamp/blog/item/31690cd7c4bc5cdaa144df9c.html" target="_blank" rel="noopener">http://hi.baidu.com/thinkinginlamp/blog/item/31690cd7c4bc5cdaa144df9c.html</a> ，调出服务器完成的查询请求次数： mysql&gt; show global status like ‘com_select‘; +—————+———–+ | variable_name | value　　　　　 | +—————+———–+ | com_select　　　　 | 222693559 | +—————+———–+ 计算表扫描率： 表扫描率 ＝ handler_read_rnd_next / com_select 如果表扫描率超过 4000，说明进行了太多表扫描，很有可能索引没有建好，增加 read_buffer_size 值会有一些好处，但最好不要超过8mb。</p>
+<p><strong>3.3 key_buffer_size</strong></p>
+<p>key_buffer_size是对myisam表性能影响最大的一个参数，下面一台以myisam为主要存储引擎服务器的配置： mysql&gt; show variables like ‘key_buffer_size‘; +—————–+————+ | variable_name　 | value　　　 | +—————–+————+ | key_buffer_size | 536870912 | +—————–+————+ 分配了 512mb 内存给 key_buffer_size ，我们再看一下 key_buffer_size 的使用情况： mysql&gt; show global status like ‘key_read%‘; +————————+————-+ | variable_name　　　　　| value　 　　 | +————————+————-+ | key_read_requests　　 | 27813678764 | | key_reads　　　　　　 | 6798830　　　 | +————————+————-+ 一共有 27813678764个 索引读取请求，有 6798830个 请求在内存中没有找到直接从硬盘读取索引，计算索引未命中缓存的概率： key_cache_miss_rate ＝ key_reads / key_read_requests <em> 100% 比如上面的数据，key_cache_miss_rate为0.0244%，4000个索引读取请求才有一个直接读硬盘，已经很bt了，key_cache_miss_rate在0.1%以下都很好（每1000个请求有一个直接读硬盘），如果key_cache_miss_rate在0.01%以下的话，key_buffer_size分配的过多，可以适当减少。 【注意】key_read_buffer 默认值为 8M 。在专有的数据库服务器上，该值可设置为 RAM </em> 1/4 mysql服务器还提供了key_blocks_<em>参数： mysql&gt; show global status like ‘key_blocks_u%‘; +————————+————-+ | variable_name　　　　 | value　　　　 | +————————+————-+ | key_blocks_unused　　| 0　　　　　　 | | key_blocks_used　　　 | 413543  　　 | +————————+————-+ key_blocks_unused 表示未使用的缓存簇(blocks)数 key_blocks_used 表示曾经用到的最大的blocks数 比如这台服务器，所有的缓存都用到了，要么增加 key_buffer_size，要么就是过渡索引了，把缓存占满了。比较理想的设置： key_blocks_used / (key_blocks_unused + key_blocks_used) </em> 100% ≈ 80%</p>
+<p><strong>3.4 排序使用情况 sort_buffer</strong></p>
+<p>mysql&gt; show global status like ‘sort%‘; +——————-+————+ | variable_name　　 | value　　　 | +——————-+————+ | sort_merge_passes | 29　　　 | | sort_range　　　　| 37432840　 | | sort_rows　　　　 | 9178691532 | | sort_scan　　　　 | 1860569　　 | +——————-+————+ sort_merge_passes 包括两步。mysql 首先会尝试在内存中做排序，使用的内存大小由系统变量 sort_buffer_size 决定，如果它的大小不够把所有的记录都读到内存中，mysql 就会把每次在内存中排序的结果存到临时文件中，等 mysql 找到所有记录之后，再把临时文件中的记录做一次排序。这再次排序就会增加 sort_merge_passes。实际上，mysql 会用另一个临时文件来存再次排序的结果，所以通常会看到 sort_merge_passes 增加的数值是建临时文件数的两倍。因为用到了临时文件，所以速度可能会比较慢，增加 sort_buffer_size 会减少 sort_merge_passes 和 创建临时文件的次数。但盲目的增加 sort_buffer_size 并不一定能提高速度，见 how fast can you sort data with mysql?（引自<a href="http://qroom.blogspot.com/2007/09/mysql-select-sort.html" target="_blank" rel="noopener">http://qroom.blogspot.com/2007/09/mysql-select-sort.html</a> ，貌似被墙） 另外，增加read_rnd_buffer_size(3.2.3是record_rnd_buffer_size)的值对排序的操作也有一点的好处，参见：<a href="http://www.mysqlperformanceblog.com/2007/07/24/what-exactly-is-read_rnd_buffer_size/" target="_blank" rel="noopener">http://www.mysqlperformanceblog.com/2007/07/24/what-exactly-is-read_rnd_buffer_size/</a></p>
+<p><strong>3.5 查询缓存</strong></p>
+<p>mysql&gt; show global status like ‘qcache%‘; +————————-+———–+ | variable_name　　　　　| value　　　 | +————————-+———–+ | qcache_free_blocks　   | 22756　　 | | qcache_free_memory　| 76764704　 | | qcache_hits　　　　　　| 213028692 | | qcache_inserts　　　　 | 208894227 | | qcache_lowmem_prunes | 4010916  | | qcache_not_cached　　| 13385031  | | qcache_queries_in_cache | 43560　 | | qcache_total_blocks　 | 111212  　 | +————————-+———–+ mysql 查询缓存变量解释： qcache_free_blocks：缓存中相邻内存块的个数。数目大说明可能有碎片。flush query cache会对缓存中的碎片进行整理，从而得到一个空闲块。 qcache_free_memory：缓存中的空闲内存。 qcache_hits：每次查询在缓存中命中时就增大 qcache_inserts：每次插入一个查询时就增大。命中次数除以插入次数就是命中比率。 qcache_lowmem_prunes：缓存出现内存不足并且必须要进行清理以便为更多查询提供空间的次数。这个数字最好长时间来看；如果这个数字在不断增长，就表示可能碎片非常严重，或者内存很少。（上面的 free_blocks和free_memory可以告诉您属于哪种情况） qcache_not_cached：不适合进行缓存的查询的数量，通常是由于这些查询不是 select 语句或者用了now()之类的函数。 qcache_queries_in_cache：当前缓存的查询（和响应）的数量。 qcache_total_blocks：缓存中块的数量。   我们再查询一下服务器关于query_cache的配置： mysql&gt; show variables like ‘query_cache%‘; +——————————+———–+ | variable_name　　　　　　　 | value　　　 | +——————————+———–+ | query_cache_limit　　　　　 | 2097152　 | | query_cache_min_res_unit　| 4096　　　| | query_cache_size　　　　　  | 203423744 | | query_cache_type　　　　　| on　　　　 | | query_cache_wlock_invalidate | off　　   | +——————————+———-+ 各字段的解释： query_cache_limit：超过此大小的查询将不缓存 query_cache_min_res_unit：缓存块的最小大小 query_cache_size：查询缓存大小 query_cache_type：缓存类型，决定缓存什么样的查询，示例中表示不缓存 select sql_no_cache 查询 query_cache_wlock_invalidate：当有其他客户端正在对myisam表进行写操作时，如果查询在query cache中，是否返回cache结果还是等写操作完成再读表获取结果。 query_cache_min_res_unit的配置是一柄”双刃剑”，默认是4kb，设置值大对大数据查询有好处，但如果你的查询都是小数据查询，就容易造成内存碎片和浪费。 查询缓存碎片率 = qcache_free_blocks / qcache_total_blocks <em> 100% 如果查询缓存碎片率超过20%，可以用flush query cache整理缓存碎片，或者试试减小query_cache_min_res_unit，如果你的查询都是小数据量的话。 查询缓存利用率 = (query_cache_size - qcache_free_memory) / query_cache_size </em> 100% 查询缓存利用率在25%以下的话说明query_cache_size设置的过大，可适当减小；查询缓存利用率在80％以上而且qcache_lowmem_prunes &gt; 50的话说明query_cache_size可能有点小，要不就是碎片太多。 查询缓存命中率 = (qcache_hits - qcache_inserts) / qcache_hits * 100% 示例服务器 查询缓存碎片率 ＝ 20.46％，查询缓存利用率 ＝ 62.26％，查询缓存命中率 ＝ 1.94％，命中率很差，可能写操作比较频繁吧，而且可能有些碎片。</p>
+<p><strong>4 其他</strong></p>
+<p><strong>4.1 read_buffer_size</strong></p>
+<p><strong>4.2 慢查询</strong></p>
+<p>mysql&gt; show variables like ‘%slow%‘; +——————+——-+ | variable_name　   | value  | +——————+——-+ | log_slow_queries | on　　 | | slow_launch_time | 2　 　 | +——————+——-+ mysql&gt; show global status like ‘%slow%‘; +———————+——-+ | variable_name　　　 | value   | +———————+——-+ | slow_launch_threads | 0  　  | | slow_queries　　　　| 4148  | +———————+——-+ 配置中打开了记录慢查询，执行时间超过2秒的即为慢查询，系统显示有4148个慢查询，你可以分析慢查询日志，找出有问题的sql语句，慢查询时间不宜设置过长，否则意义不大，最好在5秒以内，如果你需要微秒级别的慢查询，可以考虑给mysql打补丁：<a href="http://www.percona.com/docs/wiki/release:start" target="_blank" rel="noopener">http://www.percona.com/docs/wiki/release:start</a>，记得找对应的版本。 打开慢查询日志可能会对系统性能有一点点影响，如果你的mysql是主－从结构，可以考虑打开其中一台从服务器的慢查询日志，这样既可以监控慢查询，对系统性能影响又小。</p>
+
+            
+            <p class="more">
+                <a href="/2016/02/29/2019030500093/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/02/29/2019030500093/" title="Mysql 性能配置">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/9.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/02/23/2019030500080/">
+    		mysql存储过程详解
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-02-23T05:52:19.000Z">2016-02-23</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/存储过程/" title="存储过程">存储过程</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>mysql存储过程详解</strong> <strong>1.     </strong> <strong>存储过程简介</strong>  我们常用的操作数据库语言SQL语句在执行的时候需要要先编译，然后执行，而存储过程（Stored Procedure）是一组为了完成特定功能的SQL语句集，经编译后存储在数据库中，用户通过指定存储过程的名字并给定参数（如果该存储过程带有参数）来调用执行它。 一个存储过程是一个可编程的函数，它在数据库中创建并保存。它可以有SQL语句和一些特殊的控制结构组成。当希望在不同的应用程序或平台上执行相同的函数，或者封装特定功能时，存储过程是非常有用的。数据库中的存储过程可以看做是对编程中面向对象方法的模拟。它允许控制数据的访问方式。 存储过程通常有以下优点： (1).存储过程增强了SQL语言的功能和灵活性。存储过程可以用流控制语句编写，有很强的灵活性，可以完成复杂的判断和较复杂的运算。 (2).存储过程允许标准组件是编程。存储过程被创建后，可以在程序中被多次调用，而不必重新编写该存储过程的SQL语句。而且数据库专业人员可以随时对存储过程进行修改，对应用程序源代码毫无影响。 (3).存储过程能实现较快的执行速度。如果某一操作包含大量的Transaction-SQL代码或分别被多次执行，那么存储过程要比批处理的执行速度快很多。因为存储过程是预编译的。在首次运行一个存储过程时查询，优化器对其进行分析优化，并且给出最终被存储在系统表中的执行计划。而批处理的Transaction-SQL语句在每次运行时都要进行编译和优化，速度相对要慢一些。 (4).存储过程能过减少网络流量。针对同一个数据库对象的操作（如查询、修改），如果这一操作所涉及的Transaction-SQL语句被组织程存储过程，那么当在客户计算机上调用该存储过程时，网络中传送的只是该调用语句，从而大大增加了网络流量并降低了网络负载。 (5).存储过程可被作为一种安全机制来充分利用。系统管理员通过执行某一存储过程的权限进行限制，能够实现对相应的数据的访问权限的限制，避免了非授权用户对数据的访问，保证了数据的安全。       <strong>2.     </strong> <strong>关于**</strong>MySQL<strong>**的存储过程</strong> 存储过程是数据库存储的一个重要的功能，但是MySQL在5.0以前并不支持存储过程，这使得MySQL在应用上大打折扣。好在MySQL 5.0终于开始已经支持存储过程，这样即可以大大提高数据库的处理速度，同时也可以提高数据库编程的灵活性。 <strong>3.     </strong> <strong>MySQL**</strong>存储过程的创建<strong>  </strong>(1).<strong> </strong>格式** MySQL存储过程创建的格式：CREATE PROCEDURE 过程名 ([过程参数[,…]]) [特性 …] 过程体 这里先举个例子：</p>
+<ol>
+<li>mysql&gt; DELIMITER //</li>
+<li>mysql&gt; CREATE PROCEDURE proc1(OUT s int)</li>
+<li>-&gt; BEGIN</li>
+<li>-&gt; SELECT COUNT(*) INTO s FROM user;</li>
+<li>-&gt; END</li>
+<li>-&gt; //</li>
+<li>mysql&gt; DELIMITER ;</li>
+</ol>
+<p>注： （1）这里需要注意的是DELIMITER //和DELIMITER ;两句，DELIMITER是分割符的意思，因为MySQL默认以”;”为分隔符，如果我们没有声明分割符，那么编译器会把存储过程当成SQL语句进行处理，则存储过程的编译过程会报错，所以要事先用DELIMITER关键字申明当前段分隔符，这样MySQL才会将”;”当做存储过程中的代码，不会执行这些代码，用完了之后要把分隔符还原。 （2）存储过程根据需要可能会有输入、输出、输入输出参数，这里有一个输出参数s，类型是int型，如果有多个参数用”,”分割开。 （3）过程体的开始与结束使用BEGIN与END进行标识。 这样，我们的一个MySQL存储过程就完成了，是不是很容易呢?看不懂也没关系，接下来，我们详细的讲解。       <strong>(2).</strong> <strong>声明分割符</strong>  其实，关于声明分割符，上面的注解已经写得很清楚，不需要多说，只是稍微要注意一点的是：如果是用MySQL的Administrator管理工具时，可以直接创建，不再需要声明。   <strong>(3).</strong> <strong>参数</strong> MySQL存储过程的参数用在存储过程的定义，共有三种参数类型,IN,OUT,INOUT,形式如： CREATE PROCEDURE([[IN |OUT |INOUT ] 参数名 数据类形…]) <strong>IN</strong> <strong>输入参数:</strong>表示该参数的值必须在调用存储过程时指定，在存储过程中修改该参数的值不能被返回，为默认值 <strong>OUT</strong> <strong>输出参数:</strong>该值可在存储过程内部被改变，并可返回 <strong>INOUT</strong> <strong>输入输出参数:</strong>调用时指定，并且可被改变和返回 <strong>Ⅰ. IN**</strong>参数例子** 创建:</p>
+<ol>
+<li>mysql &gt; DELIMITER //</li>
+<li>mysql &gt; CREATE PROCEDURE demo_in_parameter(IN p_in int)</li>
+<li>-&gt; BEGIN</li>
+<li>-&gt; SELECT p_in;</li>
+<li>-&gt; SET p_in=2;</li>
+<li>-&gt; SELECT p_in;</li>
+<li>-&gt; END;</li>
+<li>-&gt; //</li>
+<li>mysql &gt; DELIMITER ;</li>
+</ol>
+<p>执行结果:</p>
+<ol>
+<li>mysql &gt; SET @p_in=1;</li>
+<li>mysql &gt; CALL demo_in_parameter(@p_in);</li>
+<li>+——+</li>
+<li>| p_in |</li>
+<li>+——+</li>
+<li>|   1  |</li>
+<li><p>+——+</p>
+</li>
+<li><p>+——+</p>
+</li>
+<li>| p_in |</li>
+<li>+——+</li>
+<li>|   2  |</li>
+<li><p>+——+</p>
+</li>
+<li><p>mysql&gt; SELECT @p_in;</p>
+</li>
+<li>+——-+</li>
+<li>| @p_in |</li>
+<li>+——-+</li>
+<li>|  1    |</li>
+<li>+——-+</li>
+</ol>
+<p>以上可以看出，p_in虽然在存储过程中被修改，但并不影响@p_id的值   <strong>Ⅱ.OUT**</strong>参数例子** 创建:</p>
+<ol>
+<li>mysql &gt; DELIMITER //</li>
+<li>mysql &gt; CREATE PROCEDURE demo_out_parameter(OUT p_out int)</li>
+<li>-&gt; BEGIN</li>
+<li>-&gt; SELECT p_out;</li>
+<li>-&gt; SET p_out=2;</li>
+<li>-&gt; SELECT p_out;</li>
+<li>-&gt; END;</li>
+<li>-&gt; //</li>
+<li>mysql &gt; DELIMITER ;</li>
+</ol>
+<p>执行结果:</p>
+<ol>
+<li>mysql &gt; SET @p_out=1;</li>
+<li>mysql &gt; CALL sp_demo_out_parameter(@p_out);</li>
+<li>+——-+</li>
+<li>| p_out |</li>
+<li>+——-+</li>
+<li>| NULL  |</li>
+<li><p>+——-+</p>
+</li>
+<li><p>+——-+</p>
+</li>
+<li>| p_out |</li>
+<li>+——-+</li>
+<li>|   2   |</li>
+<li><p>+——-+</p>
+</li>
+<li><p>mysql&gt; SELECT @p_out;</p>
+</li>
+<li>+——-+</li>
+<li>| p_out |</li>
+<li>+——-+</li>
+<li>|   2   |</li>
+<li>+——-+</li>
+</ol>
+<p><strong>Ⅲ. INOUT**</strong>参数例子** 创建:</p>
+<ol>
+<li>mysql &gt; DELIMITER //</li>
+<li>mysql &gt; CREATE PROCEDURE demo_inout_parameter(INOUT p_inout int)</li>
+<li>-&gt; BEGIN</li>
+<li>-&gt; SELECT p_inout;</li>
+<li>-&gt; SET p_inout=2;</li>
+<li>-&gt; SELECT p_inout;</li>
+<li>-&gt; END;</li>
+<li>-&gt; //</li>
+<li><p>mysql &gt; DELIMITER ;</p>
+<p>执行结果:</p>
+</li>
+<li><p>mysql &gt; SET @p_inout=1;</p>
+</li>
+<li>mysql &gt; CALL demo_inout_parameter(@p_inout) ;</li>
+<li>+———+</li>
+<li>| p_inout |</li>
+<li>+———+</li>
+<li>|    1    |</li>
+<li><p>+———+</p>
+</li>
+<li><p>+———+</p>
+</li>
+<li>| p_inout |</li>
+<li>+———+</li>
+<li>|    2    |</li>
+<li><p>+———+</p>
+</li>
+<li><p>mysql &gt; SELECT @p_inout;</p>
+</li>
+<li>+———-+</li>
+<li>| @p_inout |</li>
+<li>+———-+</li>
+<li>|    2     |</li>
+<li><p>+———-+</p>
+<p><strong>(4).</strong> <strong>变量</strong> <strong>Ⅰ.</strong> <strong>变量定义</strong> DECLARE variable_name [,variable_name…] datatype [DEFAULT value]; 其中，datatype为MySQL的数据类型，如:int, float, date, varchar(length) 例如:</p>
+</li>
+<li><p>DECLARE l_int int unsigned default 4000000;</p>
+</li>
+<li>DECLARE l_numeric number(8,2) DEFAULT 9.95;</li>
+<li>DECLARE l_date date DEFAULT ‘1999-12-31’;</li>
+<li>DECLARE l_datetime datetime DEFAULT ‘1999-12-31 23:59:59’;</li>
+<li><p>DECLARE l_varchar varchar(255) DEFAULT ‘This will not be padded’;</p>
+<p><strong>Ⅱ.</strong> <strong>变量赋值</strong> SET 变量名 = 表达式值 [,variable_name = expression …]   <strong>Ⅲ.</strong> <strong>用户变量</strong>   ⅰ. 在MySQL客户端使用用户变量</p>
+</li>
+<li><p>mysql &gt; SELECT ‘Hello World’ into @x;</p>
+</li>
+<li>mysql &gt; SELECT @x;</li>
+<li>+————-+</li>
+<li>|   @x        |</li>
+<li>+————-+</li>
+<li>| Hello World |</li>
+<li>+————-+</li>
+<li>mysql &gt; SET @y=’Goodbye Cruel World’;</li>
+<li>mysql &gt; SELECT @y;</li>
+<li>+———————+</li>
+<li>|     @y              |</li>
+<li>+———————+</li>
+<li>| Goodbye Cruel World |</li>
+<li><p>+———————+</p>
+</li>
+<li><p>mysql &gt; SET @z=1+2+3;</p>
+</li>
+<li>mysql &gt; SELECT @z;</li>
+<li>+——+</li>
+<li>| @z   |</li>
+<li>+——+</li>
+<li>|  6   |</li>
+<li>+——+</li>
+</ol>
+<p>ⅱ. 在存储过程中使用用户变量</p>
+<ol>
+<li>mysql &gt; CREATE PROCEDURE GreetWorld( ) SELECT CONCAT(@greeting,’ World’);</li>
+<li>mysql &gt; SET @greeting=’Hello’;</li>
+<li>mysql &gt; CALL GreetWorld( );</li>
+<li>+—————————-+</li>
+<li>| CONCAT(@greeting,’ World’) |</li>
+<li>+—————————-+</li>
+<li>|  Hello World               |</li>
+<li><p>+—————————-+</p>
+<p>ⅲ. 在存储过程间传递全局范围的用户变量</p>
+</li>
+<li><p>mysql&gt; CREATE PROCEDURE p1()   SET @last_procedure=’p1’;</p>
+</li>
+<li>mysql&gt; CREATE PROCEDURE p2() SELECT CONCAT(‘Last procedure was ‘,@last_proc);</li>
+<li>mysql&gt; CALL p1( );</li>
+<li>mysql&gt; CALL p2( );</li>
+<li>+———————————————–+</li>
+<li>| CONCAT(‘Last procedure was ‘,@last_proc  |</li>
+<li>+———————————————–+</li>
+<li>| Last procedure was p1                         |</li>
+<li><p>+———————————————–+</p>
+<p>注意: ①用户变量名一般以@开头 ②滥用用户变量会导致程序难以理解及管理   <strong>(5).</strong> <strong>注释</strong>  MySQL存储过程可使用两种风格的注释 双模杠：– 该风格一般用于单行注释 c风格： 一般用于多行注释 例如：  </p>
+</li>
+<li><p>mysql &gt; DELIMITER //</p>
+</li>
+<li>mysql &gt; CREATE PROCEDURE proc1 –name存储过程名</li>
+<li>-&gt; (IN parameter1 INTEGER)</li>
+<li>-&gt; BEGIN</li>
+<li>-&gt; DECLARE variable1 CHAR(10);</li>
+<li>-&gt; IF parameter1 = 17 THEN</li>
+<li>-&gt; SET variable1 = ‘birds’;</li>
+<li>-&gt; ELSE</li>
+<li>-&gt; SET variable1 = ‘beasts’;</li>
+<li>-&gt; END IF;</li>
+<li>-&gt; INSERT INTO table1 VALUES (variable1);</li>
+<li>-&gt; END</li>
+<li>-&gt; //</li>
+<li><p>mysql &gt; DELIMITER ;</p>
+<p><strong>4.     </strong> <strong>MySQL**</strong>存储过程的调用<strong> 用call和你过程名以及一个括号，括号里面根据需要，加入参数，参数包括输入参数、输出参数、输入输出参数。具体的调用方法可以参看上面的例子。 </strong>5.     <strong> </strong>MySQL<strong>**存储过程的查询</strong> 我们像知道一个数据库下面有那些表，我们一般采用show tables;进行查看。那么我们要查看某个数据库下面的存储过程，是否也可以采用呢？答案是，我们可以查看某个数据库下面的存储过程，但是是令一钟方式。 我们可以用 select name from mysql.proc where db=’数据库名’; 或者 select routine_name from information_schema.routines where routine_schema=’数据库名’; 或者 show procedure status where db=’数据库名’; 进行查询。 如果我们想知道，某个存储过程的详细，那我们又该怎么做呢？是不是也可以像操作表一样用describe 表名进行查看呢？ 答案是：我们可以查看存储过程的详细，但是需要用另一种方法： SHOW CREATE PROCEDURE 数据库.存储过程名; 就可以查看当前存储过程的详细。   <strong>6.     </strong> <strong>MySQL**</strong>存储过程的修改<strong> ALTER PROCEDURE 更改用CREATE PROCEDURE 建立的预先指定的存储过程，其不会影响相关存储过程或存储功能。   </strong>7.     <strong> </strong>MySQL<strong>**存储过程的删除</strong> 删除一个存储过程比较简单，和删除表一样： DROP PROCEDURE 从MySQL的表格中删除一个或多个存储过程。   <strong>8.     </strong> <strong>MySQL**</strong>存储过程的控制语句<strong> </strong>(1).<strong> </strong>变量作用域** 内部的变量在其作用域范围内享有更高的优先权，当执行到end。变量时，内部变量消失，此时已经在其作用域外，变量不再可见了，应为在存储 过程外再也不能找到这个申明的变量，但是你可以通过out参数或者将其值指派 给会话变量来保存其值。    </p>
+</li>
+<li><p>mysql &gt; DELIMITER //</p>
+</li>
+<li>mysql &gt; CREATE PROCEDURE proc3()</li>
+<li>-&gt; begin</li>
+<li>-&gt; declare x1 varchar(5) default ‘outer’;</li>
+<li>-&gt; begin</li>
+<li>-&gt; declare x1 varchar(5) default ‘inner’;</li>
+<li>-&gt; select x1;</li>
+<li>-&gt; end;</li>
+<li>-&gt; select x1;</li>
+<li>-&gt; end;</li>
+<li>-&gt; //</li>
+<li><p>mysql &gt; DELIMITER ;</p>
+<p><strong> (2).</strong> <strong>条件语句</strong> <strong>Ⅰ**</strong>. if-then -else<strong>**语句</strong>      </p>
+</li>
+<li><p>mysql &gt; DELIMITER //</p>
+</li>
+<li>mysql &gt; CREATE PROCEDURE proc2(IN parameter int)</li>
+<li>-&gt; begin</li>
+<li>-&gt; declare var int;</li>
+<li>-&gt; set var=parameter+1;</li>
+<li>-&gt; if var=0 then</li>
+<li>-&gt; insert into t values(17);</li>
+<li>-&gt; end if;</li>
+<li>-&gt; if parameter=0 then</li>
+<li>-&gt; update t set s1=s1+1;</li>
+<li>-&gt; else</li>
+<li>-&gt; update t set s1=s1+2;</li>
+<li>-&gt; end if;</li>
+<li>-&gt; end;</li>
+<li>-&gt; //</li>
+<li>mysql &gt; DELIMITER ;</li>
+</ol>
+<p><strong>Ⅱ**</strong>. case<strong>**语句：</strong></p>
+<ol>
+<li>mysql &gt; DELIMITER //</li>
+<li>mysql &gt; CREATE PROCEDURE proc3 (in parameter int)</li>
+<li>-&gt; begin</li>
+<li>-&gt; declare var int;</li>
+<li>-&gt; set var=parameter+1;</li>
+<li>-&gt; case var</li>
+<li>-&gt; when 0 then</li>
+<li>-&gt; insert into t values(17);</li>
+<li>-&gt; when 1 then</li>
+<li>-&gt; insert into t values(18);</li>
+<li>-&gt; else</li>
+<li>-&gt; insert into t values(19);</li>
+<li>-&gt; end case;</li>
+<li>-&gt; end;</li>
+<li>-&gt; //</li>
+<li><p>mysql &gt; DELIMITER ;</p>
+<p><strong>(3).</strong> <strong>循环语句</strong> <strong>Ⅰ**</strong>. while ···· end while<strong>**：</strong></p>
+</li>
+<li><p>mysql &gt; DELIMITER //</p>
+</li>
+<li>mysql &gt; CREATE PROCEDURE proc4()</li>
+<li>-&gt; begin</li>
+<li>-&gt; declare var int;</li>
+<li>-&gt; set var=0;</li>
+<li>-&gt; while var&lt;6 do</li>
+<li>-&gt; insert into t values(var);</li>
+<li>-&gt; set var=var+1;</li>
+<li>-&gt; end while;</li>
+<li>-&gt; end;</li>
+<li>-&gt; //</li>
+<li><p>mysql &gt; DELIMITER ;</p>
+<p><strong>Ⅱ**</strong>. repeat···· end repeat<strong>**：</strong> 它在执行操作后检查结果，而while则是执行前进行检查。</p>
+</li>
+<li><p>mysql &gt; DELIMITER //</p>
+</li>
+<li>mysql &gt; CREATE PROCEDURE proc5 ()</li>
+<li>-&gt; begin</li>
+<li>-&gt; declare v int;</li>
+<li>-&gt; set v=0;</li>
+<li>-&gt; repeat</li>
+<li>-&gt; insert into t values(v);</li>
+<li>-&gt; set v=v+1;</li>
+<li>-&gt; until v&gt;=5</li>
+<li>-&gt; end repeat;</li>
+<li>-&gt; end;</li>
+<li>-&gt; //</li>
+<li><p>mysql &gt; DELIMITER ;</p>
+<p><strong>Ⅲ**</strong>. loop ·····end loop:** loop循环不需要初始条件，这点和while 循环相似，同时和repeat循环一样不需要结束条件, leave语句的意义是离开循环。</p>
+</li>
+<li><p>mysql &gt; DELIMITER //</p>
+</li>
+<li>mysql &gt; CREATE PROCEDURE proc6 ()</li>
+<li>-&gt; begin</li>
+<li>-&gt; declare v int;</li>
+<li>-&gt; set v=0;</li>
+<li>-&gt; LOOP_LABLE:loop</li>
+<li>-&gt; insert into t values(v);</li>
+<li>-&gt; set v=v+1;</li>
+<li>-&gt; if v &gt;=5 then</li>
+<li>-&gt; leave LOOP_LABLE;</li>
+<li>-&gt; end if;</li>
+<li>-&gt; end loop;</li>
+<li>-&gt; end;</li>
+<li>-&gt; //</li>
+<li><p>mysql &gt; DELIMITER ;</p>
+<p><strong>Ⅳ**</strong>. LABLES<strong> </strong>标号：<strong> 标号可以用在begin repeat while 或者loop 语句前，语句标号只能在合法的语句前面使用。可以跳出循环，使运行指令达到复合语句的最后一步。   </strong>(4). ITERATE<strong>**迭代</strong> <strong>Ⅰ**</strong>. ITERATE:** 通过引用复合语句的标号,来从新开始复合语句</p>
+</li>
+<li><p>mysql &gt; DELIMITER //</p>
+</li>
+<li>mysql &gt; CREATE PROCEDURE proc10 ()</li>
+<li>-&gt; begin</li>
+<li>-&gt; declare v int;</li>
+<li>-&gt; set v=0;</li>
+<li>-&gt; LOOP_LABLE:loop</li>
+<li>-&gt; if v=3 then</li>
+<li>-&gt; set v=v+1;</li>
+<li>-&gt; ITERATE LOOP_LABLE;</li>
+<li>-&gt; end if;</li>
+<li>-&gt; insert into t values(v);</li>
+<li>-&gt; set v=v+1;</li>
+<li>-&gt; if v&gt;=5 then</li>
+<li>-&gt; leave LOOP_LABLE;</li>
+<li>-&gt; end if;</li>
+<li>-&gt; end loop;</li>
+<li>-&gt; end;</li>
+<li>-&gt; //</li>
+<li><p>mysql &gt; DELIMITER ;</p>
+<p><strong>9.     </strong> <strong>MySQL**</strong>存储过程的基本函数<strong>  </strong>(1).<strong>**字符串类</strong> CHARSET(str) //返回字串字符集 CONCAT (string2 [,… ]) //连接字串 INSTR (string ,substring ) //返回substring首次在string中出现的位置,不存在返回0 LCASE (string2 ) //转换成小写 LEFT (string2 ,length ) //从string2中的左边起取length个字符 LENGTH (string ) //string长度 LOAD_FILE (file_name ) //从文件读取内容 LOCATE (substring , string [,start_position ] ) 同INSTR,但可指定开始位置 LPAD (string2 ,length ,pad ) //重复用pad加在string开头,直到字串长度为length LTRIM (string2 ) //去除前端空格 REPEAT (string2 ,count ) //重复count次 REPLACE (str ,search_str ,replace_str ) //在str中用replace_str替换search_str RPAD (string2 ,length ,pad) //在str后用pad补充,直到长度为length RTRIM (string2 ) //去除后端空格 STRCMP (string1 ,string2 ) //逐字符比较两字串大小, SUBSTRING (str , position [,length ]) //从str的position开始,取length个字符, 注：mysql中处理字符串时，默认第一个字符下标为1，即参数position必须大于等于1  </p>
+</li>
+<li><p>mysql&gt; select substring(‘abcd’,0,2);</p>
+</li>
+<li>+———————–+</li>
+<li>| substring(‘abcd’,0,2) |</li>
+<li>+———————–+</li>
+<li>|                       |</li>
+<li>+———————–+</li>
+<li><p>1 row in set (0.00 sec)</p>
+</li>
+<li><p>mysql&gt; select substring(‘abcd’,1,2);</p>
+</li>
+<li>+———————–+</li>
+<li>| substring(‘abcd’,1,2) |</li>
+<li>+———————–+</li>
+<li>|     ab                |</li>
+<li>+———————–+</li>
+<li>1 row in set (0.02 sec)</li>
+</ol>
+<p>TRIM([[BOTH|LEADING|TRAILING] [padding] FROM]string2) //去除指定位置的指定字符 UCASE (string2 ) //转换成大写 RIGHT(string2,length) //取string2最后length个字符 SPACE(count) //生成count个空格 <strong>(2).**</strong>数学类** ABS (number2 ) //绝对值 BIN (decimal_number ) //十进制转二进制 CEILING (number2 ) //向上取整 CONV(number2,from_base,to_base) //进制转换 FLOOR (number2 ) //向下取整 FORMAT (number,decimal_places ) //保留小数位数 HEX (DecimalNumber ) //转十六进制 注：HEX()中可传入字符串，则返回其ASC-11码，如HEX(‘DEF’)返回4142143 也可以传入十进制整数，返回其十六进制编码，如HEX(25)返回19 LEAST (number , number2 [,..]) //求最小值 MOD (numerator ,denominator ) //求余 POWER (number ,power ) //求指数 RAND([seed]) //随机数 ROUND (number [,decimals ]) //四舍五入,decimals为小数位数] 注：返回类型并非均为整数，如： (1)默认变为整形值</p>
+<ol>
+<li>mysql&gt; select round(1.23);</li>
+<li>+————-+</li>
+<li>| round(1.23) |</li>
+<li>+————-+</li>
+<li>|           1 |</li>
+<li>+————-+</li>
+<li><p>1 row in set (0.00 sec)</p>
+</li>
+<li><p>mysql&gt; select round(1.56);</p>
+</li>
+<li>+————-+</li>
+<li>| round(1.56) |</li>
+<li>+————-+</li>
+<li>|           2 |</li>
+<li>+————-+</li>
+<li>1 row in set (0.00 sec)</li>
+</ol>
+<p>(2)可以设定小数位数，返回浮点型数据</p>
+<ol>
+<li>mysql&gt; select round(1.567,2);</li>
+<li>+—————-+</li>
+<li>| round(1.567,2) |</li>
+<li>+—————-+</li>
+<li>|           1.57 |</li>
+<li>+—————-+</li>
+<li>1 row in set (0.00 sec)</li>
+</ol>
+<p>SIGN (number2 ) //  <strong>(3).**</strong>日期时间类** ADDTIME (date2 ,time_interval ) //将time_interval加到date2 CONVERT_TZ (datetime2 ,fromTZ ,toTZ ) //转换时区 CURRENT_DATE ( ) //当前日期 CURRENT_TIME ( ) //当前时间 CURRENT_TIMESTAMP ( ) //当前时间戳 DATE (datetime ) //返回datetime的日期部分 DATE_ADD (date2 , INTERVAL d_value d_type ) //在date2中加上日期或时间 DATE_FORMAT (datetime ,FormatCodes ) //使用formatcodes格式显示datetime DATE_SUB (date2 , INTERVAL d_value d_type ) //在date2上减去一个时间 DATEDIFF (date1 ,date2 ) //两个日期差 DAY (date ) //返回日期的天 DAYNAME (date ) //英文星期 DAYOFWEEK (date ) //星期(1-7) ,1为星期天 DAYOFYEAR (date ) //一年中的第几天 EXTRACT (interval_name FROM date ) //从date中提取日期的指定部分 MAKEDATE (year ,day ) //给出年及年中的第几天,生成日期串 MAKETIME (hour ,minute ,second ) //生成时间串 MONTHNAME (date ) //英文月份名 NOW ( ) //当前时间 SEC_TO_TIME (seconds ) //秒数转成时间 STR_TO_DATE (string ,format ) //字串转成时间,以format格式显示 TIMEDIFF (datetime1 ,datetime2 ) //两个时间差 TIME_TO_SEC (time ) //时间转秒数] WEEK (date_time [,start_of_week ]) //第几周 YEAR (datetime ) //年份 DAYOFMONTH(datetime) //月的第几天 HOUR(datetime) //小时 LAST_DAY(date) //date的月的最后日期 MICROSECOND(datetime) //微秒 MONTH(datetime) //月 MINUTE(datetime) //分返回符号,正负或0 SQRT(number2) //开平方</p>
+
+            
+            <p class="more">
+                <a href="/2016/02/23/2019030500080/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/02/23/2019030500080/" title="mysql存储过程详解">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/02/22/2019030500070/">
+    		MySQL单表百万数据记录分页性能优化
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-02-22T08:35:15.000Z">2016-02-22</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h2 id="背景："><a href="#背景：" class="headerlink" title="背景："></a><strong>背景：</strong></h2><p>自己的一个网站，由于单表的数据记录高达了一百万条，造成数据访问很慢，Google分析的后台经常报告超时，尤其是页码大的页面更是慢的不行。</p>
+<h2 id="测试环境："><a href="#测试环境：" class="headerlink" title="测试环境："></a><strong>测试环境：</strong></h2><p>先让我们熟悉下基本的sql语句，来查看下我们将要测试表的基本信息</p>
+<blockquote>
+<p>use infomation_schema SELECT * FROM TABLES WHERE TABLE_SCHEMA = ‘dbname’ AND TABLE_NAME = ‘product’</p>
+</blockquote>
+<p>查询结果： <img src="/uploads/2016/02/111544436293982.jpg" alt> 从上图中我们可以看到表的基本信息： 表行数：866633 平均每行的数据长度：5133字节 单表大小：4448700632字节 关于行和表大小的单位都是字节，我们经过计算可以知道 平均行长度：大约5k 单表总大小：4.1g 表中字段各种类型都有varchar、datetime、text等，id字段为主键</p>
+<h2 id="测试实验"><a href="#测试实验" class="headerlink" title="测试实验"></a>测试实验</h2><h5 id="1-直接用limit-start-count分页语句，-也是我程序中用的方法："><a href="#1-直接用limit-start-count分页语句，-也是我程序中用的方法：" class="headerlink" title="1.   直接用limit start, count分页语句， 也是我程序中用的方法："></a>1.   直接用limit start, count分页语句， 也是我程序中用的方法：</h5><p>select <em> from product limit start, count 当起始页较小时，查询没有性能问题，我们分别看下从10， 100， 1000， 10000开始分页的执行时间（每页取20条）， 如下： select </em> from product limit 10, 20   0.016秒 select <em> from product limit 100, 20   0.016秒 select </em> from product limit 1000, 20   0.047秒 select <em> from product limit 10000, 20   0.094秒 我们已经看出随着起始记录的增加，时间也随着增大， 这说明分页语句limit跟起始页码是有很大关系的，那么我们把起始记录改为40w看下（也就是记录的一般左右）                                    select </em> from product limit 400000, 20   3.229秒 再看我们取最后一页记录的时间 select * from product limit 866613, 20   37.44秒 难怪搜索引擎抓取我们页面的时候经常会报超时，像这种分页最大的页码页显然这种时 间是无法忍受的。 从中我们也能总结出两件事情： 1）limit语句的查询时间与起始记录的位置成正比 2）mysql的limit语句是很方便，但是对记录很多的表并不适合直接使用。</p>
+<h5 id="2-对limit分页问题的性能优化方法"><a href="#2-对limit分页问题的性能优化方法" class="headerlink" title="2.   对limit分页问题的性能优化方法"></a>2.   对limit分页问题的性能优化方法</h5><p>利用表的覆盖索引来加速分页查询 我们都知道，利用了索引查询的语句中如果只包含了那个索引列（覆盖索引），那么这种情况会查询很快。 因为利用索引查找有优化算法，且数据就在查询索引上面，不用再去找相关的数据地址了，这样节省了很多时间。另外Mysql中也有相关的索引缓存，在并发高的时候利用缓存就效果更好了。 在我们的例子中，我们知道id字段是主键，自然就包含了默认的主键索引。现在让我们看看利用覆盖索引的查询效果如何： 这次我们之间查询最后一页的数据（利用覆盖索引，只包含id列），如下： select id from product limit 866613, 20 0.2秒 相对于查询了所有列的37.44秒，提升了大概100多倍的速度 那么如果我们也要查询所有列，有两种方法，一种是id&gt;=的形式，另一种就是利用join，看下实际情况： SELECT <em> FROM product WHERE ID &gt; =(select id from product limit 866613, 1) limit 20 查询时间为0.2秒，简直是一个质的飞跃啊，哈哈 另一种写法 SELECT </em> FROM product a JOIN (select id from product limit 866613, 20) b ON a.ID = b.id 查询时间也很短，赞！ 其实两者用的都是一个原理嘛，所以效果也差不多</p>
+
+            
+            <p class="more">
+                <a href="/2016/02/22/2019030500070/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/02/22/2019030500070/" title="MySQL单表百万数据记录分页性能优化">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <span class="page-number current">1</span><a class="page-number" href="/tags/MySQL/page/2/">2</a><a class="page-number" href="/tags/MySQL/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/tags/MySQL/page/8/">8</a><a class="extend next" rel="next" href="/tags/MySQL/page/2/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>文章归档 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/archives/page/4/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/archives/page/4/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/archives/page/4/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/archives/page/4/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章归档 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                文章归档
+                <!-- 文章归档，可以根据日期分类 -->
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/15/2019030500141/">
+    		oracle跨库查询dblink的用法
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-15T09:06:29.000Z">2016-01-15</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/dblink/" title="dblink">dblink</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>1.创建之前的工作</strong> 在创建dblink之前，首先要查看用户是否有相应的权限。针对特定的用户，使用 sqlplus user/pwd登录后，执行如下语句：</p>
+<p><code>select</code> <code>*</code> <code>from</code> <code>user_sys_privs t</code> <code>where</code> <code>t.privilege</code> <code>like</code> <code>upper`</code>(<code>&#39;%link%&#39;</code>);`</p>
+<p>在sys用户下，显示结果为：</p>
+<p>SYS CREATE DATABASE LINK NO<br>SYS DROP PUBLIC DATABASE LINK NO<br>SYS CREATE PUBLIC DATABASE LINK NO</p>
+<p>可以看出在数据库中dblink有三种权限:</p>
+<p>CREATE DATABASE LINK–所创建的dblink只能是创建者能使用，别的用户使用不了<br>CREATE PUBLIC DATABASE LINK–public表示所创建的dblink所有用户都可以使用<br>DROP PUBLIC DATABASE LINK–删除指定dblink</p>
+<p>如果想要改变某个用户的权限，需要在sys用户下修改：</p>
+<p><code>grant</code> <code>CREATE</code> <code>PUBLIC</code> <code>DATABASE</code> <code>LINK，`</code>DROP<code></code>PUBLIC<code></code>DATABASE<code></code>LINK<code></code>to<code></code>scott;`</p>
+<p>查看dblink，有两种方式，分别如下：</p>
+<p><code>1.`</code>select<code></code>owner,object_name<code></code>from<code></code>dba_objects<code></code>where<code></code>object_type=<code>&#39;DATABASE LINK&#39;</code>;`</p>
+<p><code>2.`</code>select<code></code>*<code></code>from<code></code>dba_db_links;`</p>
+<p><strong> 2. 创建dblink</strong></p>
+<p><code>create</code> <code>public</code> <code>database</code> <code>link &lt;span style=`</code>“background-color: #ccffcc;”<code></code>&gt;LINK_NAME`</p>
+<p><code>&lt;/span&gt;`</code>connect<code></code>to<code></code>&lt;span style=<code>&quot;background-color: #ccffcc;&quot;</code>&gt;USRNAME identified<code></code>by<code></code>“<span style="``background-color: #ccffcc;``">PASSWORD</span>“`</p>
+<p><code>using</code></p>
+<p><code>&#39;(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = XXX.XXX.XXX.XXX)(PORT = 1521))</code></p>
+<p><code>(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = XXX))</code></p>
+<p><code>)&#39;`</code>;`</p>
+<p>注意：using后跟的是一个字符串，其中一定不要出现不必要的空格，否则会出错ORA-12514，在上面的代码中为了方便阅读其中进行了换行，可能会出现空格而导致错误，所以使用的时候将空格去掉就ok了。 这里LINK_NAM为自定的名称；USERNAME和PASSWORD为指定的oracle数据库中的用户名和密码，SERVICE_NAME如果不确定的话，可以通过以下语句获得：</p>
+<p><code>show parameter service_names;</code></p>
+<p><code>或者</code></p>
+<p><code>select</code> <code>name`</code>,value<code></code>from<code></code>v$parameter<code></code>where<code></code>name<code>=</code>‘service_names’`</p>
+<p><strong>3.dblink的使用</strong> dblink的使用相对比较简单，把一般访问本地表时的表名改为如下格式即可：[user.]table@link_name。</p>
+<p><code>select</code> <code>studentid</code> <code>from</code> <code>&lt;a href=`</code>“mailto:abc.studeng@abc_ten”<code></code>&gt;abc.studeng@abc_ten;`</p>
+<p><strong> 4.删除dblink</strong> 确定要删除的dblink名字以后，可以通过drop命令直接将其删除：</p>
+<p><code>drop</code> <code>public</code> <code>database</code> <code>link abc_ten;</code></p>
+
+            
+            <p class="more">
+                <a href="/2016/01/15/2019030500141/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/15/2019030500141/" title="oracle跨库查询dblink的用法">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/14/2019030500018/">
+    		客户端连接虚拟机Oracle服务器错误
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-14T05:55:43.000Z">2016-01-14</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1.在<strong>虚拟机</strong>上安装<strong>Oracle</strong>数据库时，客户端连接提示：<strong>ORA-12541</strong>：TNS:无监听程序，该怎么解决呢？ 经常有网友朋友问这个问题。 在window的系统下，已经把1521的端口开放出去了，但是从另外一台机器连接服务器的时候 ，还是连不上。 只有把整个防火墙都关闭，才能使其他机器上连接到oracle的服务器。究竟是什么原因了? 这个原因，还是归结为window系统的一个问题，对于oracle来说，对客户端的连接请求都是通过listener来进行监听和处理的。listener的端口默认是1521.所以有很多的网友在此通常都知道要开放这个端口，不过listener在监听到客户的连接以后，会建立一个临时的端口并把端口号报之给客户端，接下来就由这个端口来和服务器端交互了。这个端口是由listener分配的，所以没有办法确定，也就被防火墙拦住了。 在window下，由于linux下已经使用了共享socket解决临时sock的问题，所以linux开放了1521就可以了，window没有，所以有这样的问题。 不过还好，window的socket2 提供了share socket的技术，我们只需要通过很简单的步骤，就是让window系统下的oracle使用上share socket，从而解决我们的问题。 设置方法如下。我的机器是10.2.0.4 1. 打开注册表 2. 找到[HKEY_LOCAL_MACHINESOFTWAREORACLEKEY_OraDb10g_home1]这个目录 在其下加入一个字符串值 键：USE_SHARED_SOCKET 值: TRUE 3. 重启监听服务 现在再用客户端试试，应该就可以连上了。   2.虚拟机安装Oracle错误ORA-12514的解决方案 在<strong>虚拟机</strong>上安装<strong>Oracle</strong>数据库时，提示：<strong>ORA-12514</strong>错误，该怎么解决呢？本文我们就介绍了这一错误的解决方案，现在就让我们来一起了解一下这一过程。   <strong>解决方案：</strong>   [oracle@oracle_taowei_redhat~]$ lsnrctl status 查看监听器是否启动。   如果没有启动监听，则运行命令：lsnrctl start启动监听（lsnrctl stop关闭监听）。   启动监听后可以用sqlplus登录数据库，查看数据库信息：如sqlplus <a href="mailto:emcd/emcd@192.168.1.120" target="_blank" rel="noopener">emcd/emcd@192.168.1.120</a>:1521/orcl。这种方式存在安全隐患，密码以明文出现，容易被别人窃取；所以建议：sqlplus emcd@oracle_taowei 回车，按提示输入密码，这样就保证了密码不被别人看见。   以数据库管理员登录：sqlplus sys/oracle as sysdba 登录后可以执行关闭或启动数据库命令：   SQL&gt; shutdown immediate (关闭数据库)   SQL&gt; startup (启动数据库)   当数据库处于关闭状态时，要启动数据库：首先启动监听器 lsnrctl start；然后sqlplus sys/oracle as sysdba，回车后会显示Connected to an idle instance，并出现提示符SQL&gt;，此时输入命令startup启动数据库，输入 shutdown immediate，则可关闭数据库。</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/14/2019030500018/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/14/2019030500018/" title="客户端连接虚拟机Oracle服务器错误">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/12/2019030500119/">
+    		mysql5.7.10安装
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-12T04:34:14.000Z">2016-01-12</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>第一步：从官网下载mysql-5.7.10-win32.zip 或 mysql-5.7.10-winx64.zip 第二步：解压缩，在根目录下复制my-default.ini 为my.ini，在my.ini文件中，加入：skip-grant-tables（不需要密码验证，直接登录） 第三步：初始化mysql目录，bin\mysqld –initialize –user=mysql –console 第四步：记录生成data目录，还有一个随机密码，记下来。 [A temporary password is generated for root@localhost:      Af*E_Mq(N3k9   第五步：mysqld –console 启动mysql，登录mysql -uroot -p 输入刚才记录的密码，执行：set password = password(‘root’)修改密码。   my.ini代码 [mysqld] port = 3306 basedir=d:/ApacheSoftware/mysql-5.7.10-winx64 datadir=d:/ApacheSoftware/mysql-5.7.10-winx64/data max_connections=200 character-set-server=utf8 default-storage-engine=INNODB sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/12/2019030500119/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/12/2019030500119/" title="mysql5.7.10安装">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/12/2019030500084/">
+    		MySQL实现统计数据并插入数据的存储过程
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-12T04:33:24.000Z">2016-01-12</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>统计存储过程，这里是将统计的结果插入一个表中，后台可以有定时任务来调此存储过程。以下业务是统计仓库中商品流转情况，包括：日期、商品总数、入库数量、出库数量。 BEGIN DECLARE ES_COR_CODE VARCHAR(20); – 需要定义接收游标数据的变量 DECLARE table_ VARCHAR(50); – 遍历数据结束标志 DECLARE done INT DEFAULT FALSE; – 游标 DECLARE cur CURSOR FOR SELECT TABLE_NAME FROM (SELECT TABLE_NAME from information_schema.tables WHERE TABLE_NAME LIKE ‘%wm_item_transfer_%’ AND TABLE_SCHEMA=’wmscloud_test’ ) allTables; – 将结束标志绑定到游标 DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE; – 打开游标 OPEN cur; – 开始循环 read_loop: LOOP – 提取游标里的数据，这里只有一个，多个的话也一样； FETCH cur INTO table_; – 声明结束的时候 IF done THEN LEAVE read_loop; END IF; SET ES_COR_CODE=substring(table_,18); SET @INSERT_ITEM_TRANSFER=CONCAT(‘INSERT INTO wm_item_transfer_’,ES_COR_CODE,’ (WMIT_DATE,WMIT_STOCK_NUM,WMIT_INTO_ITEM_NUM,WMIT_OUT_ITEM_NUM) SELECT (SELECT date_sub(curdate(),interval 1 day) ) WMIT_DATE , (SELECT IFNULL(SUM(WMST_NOW_NUMBER),0) FROM wm_stock_’,ES_COR_CODE,’) WMIT_STOCK_NUM, (SELECT IFNULL(SUM(WMST_NOW_NUMBER),0) FROM wm_stock_‘,ES_COR_CODE,’ WHERE WMST_RECEIVE_DATE BETWEEN date_sub(curdate(),interval 1 day) AND NOW() ) WMIT_INTO_ITEM_NUM, (SELECT IFNULL(SUM(WMOO_OUT_NUMBER),0) FROM wm_out_order_’,ES_COR_CODE,’ where SURE_DATE BETWEEN date_sub(curdate(),interval 1 day) AND NOW() ) WMIT_OUT_ITEM_NUM’); PREPARE INSERT_ITEM_TRANSFER FROM @INSERT_ITEM_TRANSFER; EXECUTE INSERT_ITEM_TRANSFER; END LOOP; – 关闭游标 CLOSE cur; END</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/12/2019030500084/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/12/2019030500084/" title="MySQL实现统计数据并插入数据的存储过程">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/12/2019030500137/">
+    		ORACLE恢复删除表或表记录
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-12T04:27:46.000Z">2016-01-12</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>一：表的恢复</strong> 对误删的表，只要没有使用PURGE永久删除选项，那么从FLASHBACK TABLE区恢复回来希望是挺大的。一般步骤有： 1、从FLASHBACK TABLE里查询被删除的表</p>
+<p>SELECT * FROM RECYCLEBIN ORDER BY DROPTIME DESC</p>
+<p>2.执行表的恢复</p>
+<p>FLASHBACK TABLE TABLE_NAME TO BEFORE DROP;</p>
+<p><strong>二：表数据恢复</strong> 对误删的表记录，只要没有 TRUNCATE 语句，就可以根据事务的提交时间进行选择恢复，一般步骤有： 1、先从 FLASHBACK_TRANSACTION_QUERY 视图里查询，视图提供了供查询用的表名称、事务提交时间、UNDO_SQL等字段。</p>
+<p>SELECT * FROM FLASHBACK_TRANSACTION_QUERY WHERE TABLE_NAME=’TEST’;</p>
+<p>2、执行表记录恢复 一般先根据时间进行查询，查询语句模式为</p>
+<p>SELECT <em> FROM TABLE_NAME AS OF TIMESTAMP TO_TIMESTAMP(time,’yyyy-mm-dd hh24:mi:ss’); –time指某个时间点<br>如：<br>SELECT </em> FROM SCOTT.TEST AS OF TIMESTAMP TO_TIMESTAMP(‘2009-12-11 20:53:57’,’yyyy-mm-dd hh24:mi:ss’);</p>
+<p>若有数据，恢复极为简单了，语句为</p>
+<p>FLASHBACK TABLE TABLE_NAME TO TIMESTAMP TO_TIMESTAMP(TIME,’yyyy-mm-dd hh24:mi:ss’);<br>如：<br>FLASHBACK TABLE SCOTT.TEST TO TIMESTAMP TO_TIMESTAMP(‘2009-12-11 20:47:30’,’yyyy-mm-dd hh24:mi:ss’);</p>
+<p>注意:</p>
+<p>ALTER TABLE TABLE_NAME ENABLE ROW MOVEMENT;</p>
+<p>这个命令的作用是，允许Oracle 修改分配给行的rowid。 在Oracle 中，插入一行时就会为它分配一个rowid，而且这一行永远拥有这个rowid。 闪回表处理会对EMP 完成DELETE，并且重新插入行，这样就会为这些行分配一个新的rowid。 要支持闪回就必须允许Oracle 执行这个操作</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/12/2019030500137/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/12/2019030500137/" title="ORACLE恢复删除表或表记录">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/07/2019030500113/">
+    		mysql MyISAM引擎延迟更新索引
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-07T05:25:10.000Z">2016-01-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/MyISAM/" title="MyISAM">MyISAM</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>MySQL延迟更新索引（Delayed Key Write）： 使用表创建选项DELAY_KEY_WRITE创建的myisam表，在查询结束后，不会将索引的改变数据写入磁盘，而是在内存的健缓冲区（In-memory key buffer）中缓存索引改变数据。它只会在清理缓存区，或关闭表时，才将索引块转储到磁盘。对于数据经常改变，并且使用频繁的表，这种模式大大提高了表的处理性能。 不过，如果在服务器或系统奔溃，索引将肯定损坏，并需要修复。用户可以使用脚本，如运行myisamchk工具，在重启服务器前进行修复，也可以使用自动修复（Automatic Recovery）选项进行修复（即使没有选用DELAY_KEY_WRITE选项，这些修复上的安全措施也是很有价值的）。延迟更新索引特性可以被全局配置，也可以为个别表单独配置。   <strong>MySQL数据库参数DELAY_KEY_WRITE</strong>： DELAY_KEY_WRITE是指在表关闭之前，将对表的update操作只更新数据到磁盘，而不更新索引到磁盘，把对索引的更改记录在内存。（这个选项的作用是暂时制止MySQL在该命令每插入一条新记录和每修改一条现有之后立刻对索引进行刷新，对索引的刷新将等到全部记录插入/修改完毕之后再进行） 这样MyISAM表可以使索引更新更快。在关闭表的时候一起更新索引到磁盘。   <strong>使用：</strong>1：create table的时候，指定DELAY_KEY_WRITE。 2： 当表已经存在的时候：ALTER TABLE table_name DELAY_KEY_WRITE= 1。 <strong>场景：</strong>表有update操作，duang duang的体现出优势了。因为这个参数能延迟更新索引到表关闭。经常更新一个大表的时候，可以用这个参数 <strong>小提示：</strong>当DELAY_KEY_WRITE使用的时候，如果出现重启或者掉电啥的情况，会导致在cache的索引update没来得及更新，所以必须在启动参数加上 –myisam-recover，这样在你启动mysql的时候会检查你的表并同步表和索引.或者在重启服务器之前运行myisamchk。使用该特性，应用–myisam-recover选项启动服务器，为所有MyISAM表添加自动检查。</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/07/2019030500113/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/07/2019030500113/" title="mysql MyISAM引擎延迟更新索引">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/05/2019030500138/">
+    		oracle用户密码过期的处理方法
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-05T03:25:25.000Z">2016-01-05</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>Oracle错误代码：ORA-28002。 受影响版本：Oracle11g以上版本。 导致密码消失的原因：Oracle 11g中默认的DEFAULT概要文件中口令有效期PASSWORD_LIFE_TIME默认值为180天。 当以客户端登陆Oracle提示ORA-28002，则基本可以确定登陆帐号已过有效期，使用具有DBA权限的帐号重置该帐号密码即可。 解决方法： 以下步骤以具有DBA权限用户操作 0. 登录sqlplus：sqlplus / as sysdba 1.查看口令失效用户的profile文件 SQL&gt;SELECT username,profile FROM dba_users; EM：服务器&gt;用户，查看口令失效的用户对应的概要文件，这里假设为DEFAULT，下同。 2.查看对应的概要文件的口令有效期设置 SQL&gt;SELECT * FROM dba_profiles WHERE profile=’DEFAULT’ AND resource_name=’PASSWORD_LIFE_TIME’; EM：服务器&gt;概要文件&gt;选择刚刚查到的概要文件DEFAULT&gt;查看，查看口令下面的有效期值。 3.将口令有效期默认值180天修改成“无限制” SQL&gt;ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED; EM：服务器&gt;概要文件&gt;选择刚刚查到的概要文件DEFAULT&gt;编辑&gt;口令，在有效期输入或选择你需要的值，保存。 该参数修改实时生效。 出于数据库安全性考虑，不建议将PASSWORD_LIFE_TIME值设置成UNLIMITED，即建议客户能够定期修改数据库用户口令。 在修改PASSWORD_LIFE_TIME值之前已经失效的用户，还是需要重新修改一次密码才能使用。 SQL&gt;alter user  user_name identified by password;</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/05/2019030500138/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/05/2019030500138/" title="oracle用户密码过期的处理方法">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/30/2019030500068/">
+    		MySQL会话锁等待关系原理
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-30T12:44:39.000Z">2015-12-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/会话锁/" title="会话锁">会话锁</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>会话依赖关系主要需要理解锁等待相关四张表的关系： 先查询当前会话持有哪些事务的锁和依赖哪些事务的锁，通过这两种锁就可以得到一种图关系。 <strong>一：查询当前会话持有的锁：</strong> 1.查询当前会话processlist.id 2.processlist.id对应innodb_trx表中的TRX_MYSQL_THREAD_ID，这样就可以查询到当前会话的事务id 3.到lock_waits中查询blocking_trx_id 为当前会话的事务id,这样就获得了当前会话的持有lock_id 4.根据lock_id到innodb_lock可以查询出当前会话持有锁信息。 其实如果只需要查询会话的依赖的关系不需要知道锁信息的话，到第三步就可以了，通过第三步的REQUESTING_TRX_ID来反查innodb_trx表获取trx_id，反查processlist表就可以得到被当前会话阻塞的会话列表。   <strong>二：查询当前会话正等待的锁</strong> 1.查询当前会话processlist.id 2.processlist.id对应innodb_trx表中的TRX_MYSQL_THREAD_ID，这样就可以查询到当前会话的事务id 3.到lock_waits中查询REQUESTING_TRX_ID为当前会话的事务id,这样就获得了当前会话的正等待lock_id 4.根据lock_id到innodb_lock可以查询出当前会话正在等待的锁信息。 同样，其实如果只需要查询会话的依赖的关系不需要知道锁信息的话，到第三步就可以了，通过第三步的blocking_trx_id来反查innodb_trx表获取trx_id，反查processlist表就可以得到被当前会话等待的锁被哪些会话占用了。     下面列出相关表部分表结构：</p>
+<h2 id="1-INFORMATION-SCHEMA-PROCESSLIST"><a href="#1-INFORMATION-SCHEMA-PROCESSLIST" class="headerlink" title="1.INFORMATION_SCHEMA.PROCESSLIST"></a>1.INFORMATION_SCHEMA.PROCESSLIST</h2><p>  The <a href="http://dev.mysql.com/doc/refman/5.6/en/processlist-table.html" title="21.15 The INFORMATION_SCHEMA PROCESSLIST Table" target="_blank" rel="noopener"><code>PROCESSLIST</code></a> table provides information about which threads are running. <code>INFORMATION_SCHEMA</code> Name <a href="http://dev.mysql.com/doc/refman/5.6/en/show.html" title="13.7.5 SHOW Syntax" target="_blank" rel="noopener"><code>SHOW</code></a> Name Remarks</p>
+<p><code>ID</code></p>
+<p><code>Id</code></p>
+<p>MySQL extension</p>
+<p><code>USER</code></p>
+<p><code>User</code></p>
+<p>MySQL extension</p>
+<p><code>HOST</code></p>
+<p><code>Host</code></p>
+<p>MySQL extension</p>
+<p><code>DB</code></p>
+<p><code>db</code></p>
+<p>MySQL extension</p>
+<p><code>COMMAND</code></p>
+<p><code>Command</code></p>
+<p>MySQL extension</p>
+<p><code>TIME</code></p>
+<p><code>Time</code></p>
+<p>MySQL extension</p>
+<p><code>STATE</code></p>
+<p><code>State</code></p>
+<p>MySQL extension</p>
+<p><code>INFO</code></p>
+<p><code>Info</code></p>
+<p>MySQL extension</p>
+<h3 id="2-The-INFORMATION-SCHEMA-INNODB-TRX-Table"><a href="#2-The-INFORMATION-SCHEMA-INNODB-TRX-Table" class="headerlink" title="2.The INFORMATION_SCHEMA INNODB_TRX Table"></a>2.The INFORMATION_SCHEMA INNODB_TRX Table</h3><p><strong>Table 21.4 INNODB_TRX Columns</strong></p>
+<p>Column name Description</p>
+<p><code>TRX_ID</code></p>
+<p>Unique transaction ID number, internal to <code>InnoDB</code>. (Starting in MySQL 5.6, these IDs are not created for transactions that are read-only and non-locking. See <a href="http://dev.mysql.com/doc/refman/5.6/en/innodb-performance-ro-txn.html" title="8.5.3 Optimizing InnoDB Read-Only Transactions" target="_blank" rel="noopener">Section 8.5.3, “Optimizing InnoDB Read-Only Transactions”</a>for details.)</p>
+<p><code>TRX_MYSQL_THREAD_ID</code></p>
+<p>MySQL thread ID. Can be used for joining with <code>PROCESSLIST</code> on <code>ID</code>. See <a href="http://dev.mysql.com/doc/refman/5.6/en/innodb-information-schema-rapidly_changing_internal_data.html#innodb-information-schema-note_inconsistency" title="14.12.2.3.1 Potential Inconsistency with PROCESSLIST Data" target="_blank" rel="noopener">Section 14.12.2.3.1, “Potential Inconsistency with PROCESSLIST Data”</a>.</p>
+<p><code>TRX_REQUESTED_LOCK_ID</code></p>
+<p>ID of the lock the transaction is currently waiting for (if <code>TRX_STATE</code> is<code>LOCK WAIT</code>, otherwise <code>NULL</code>). Details about the lock can be found by joining with <code>INNODB_LOCKS</code> on <code>LOCK_ID</code>.</p>
+<h3 id="3-The-INFORMATION-SCHEMA-INNODB-LOCK-WAITS-Table"><a href="#3-The-INFORMATION-SCHEMA-INNODB-LOCK-WAITS-Table" class="headerlink" title="3.The INFORMATION_SCHEMA INNODB_LOCK_WAITS Table"></a>3.The INFORMATION_SCHEMA INNODB_LOCK_WAITS Table</h3><p><strong>Table 21.6 INNODB_LOCK_WAITS Columns</strong></p>
+<p>Column name Description</p>
+<p><code>REQUESTING_TRX_ID</code></p>
+<p>ID of the requesting transaction.</p>
+<p><code>REQUESTED_LOCK_ID</code></p>
+<p>ID of the lock for which a transaction is waiting. Details about the lock can be found by joining with <code>INNODB_LOCKS</code> on <code>LOCK_ID</code>.</p>
+<p><code>BLOCKING_TRX_ID</code></p>
+<p>ID of the blocking transaction.</p>
+<p><code>BLOCKING_LOCK_ID</code></p>
+<p>ID of a lock held by a transaction blocking another transaction from proceeding. Details about the lock can be found by joining with <code>INNODB_LOCKS</code> on <code>LOCK_ID</code>.</p>
+<h3 id="4-The-INFORMATION-SCHEMA-INNODB-LOCKS-Table"><a href="#4-The-INFORMATION-SCHEMA-INNODB-LOCKS-Table" class="headerlink" title="4.The INFORMATION_SCHEMA INNODB_LOCKS Table"></a>4.The INFORMATION_SCHEMA INNODB_LOCKS Table</h3><p><strong>Table 21.5 INNODB_LOCKS Columns</strong></p>
+<p>  Column name Description</p>
+<p><code>LOCK_ID</code></p>
+<p>Unique lock ID number, internal to <code>InnoDB</code>. Treat it as an opaque string. Although <code>LOCK_ID</code>currently contains <code>TRX_ID</code>, the format of the data in <code>LOCK_ID</code> is not guaranteed to remain the same in future releases. Do not write programs that parse the <code>LOCK_ID</code> value.</p>
+<p><code>LOCK_TRX_ID</code></p>
+<p>ID of the transaction holding this lock. Details about the transaction can be found by joining with <code>INNODB_TRX</code> on <code>TRX_ID</code>.</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/30/2019030500068/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/30/2019030500068/" title="MySQL会话锁等待关系原理">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/28/2019030500102/">
+    		MySQL的语句执行顺序
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-28T11:23:28.000Z">2015-12-28</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>MySQL的语句一共分为11步，如下图所标注的那样，最先执行的总是 FROM操作，最后执行的是LIMIT操作。其中每一个操作都会产生一张虚拟的表，这个虚拟的表作为一个处理的输入，只是这些虚拟的表对用户来说是透明 的，但是只有最后一个虚拟的表才会被作为结果返回。如果没有在语句中指定某一个子句，那么将会跳过相应的步骤。</p>
+<p>Sql代码</p>
+<ol>
+<li>(8)SELECT (9)DISTINCT&lt;select_list&gt;</li>
+<li>(1)FROM&lt;left_table&gt;</li>
+<li>(3)&lt;join_type&gt;JOIN&lt;right_table&gt;</li>
+<li>(2)        ON&lt;jion_condition&gt;</li>
+<li>(4)WHERE&lt;where_condition&gt;</li>
+<li>(5)GROUP BY&lt;group_by_list&gt;</li>
+<li>(6)WITH{CUBE|ROLLUP}</li>
+<li>(7)HAVING&lt;having_condition&gt;</li>
+<li>(8)ORDER BY&lt;order_by_list&gt;</li>
+<li>(11)LIMIT&lt;limit_member&gt;</li>
+</ol>
+<h2 id="下面我们来具体分析一下查询处理的每一个阶段"><a href="#下面我们来具体分析一下查询处理的每一个阶段" class="headerlink" title="下面我们来具体分析一下查询处理的每一个阶段"></a>下面我们来具体分析一下查询处理的每一个阶段</h2><ol>
+<li><strong>FORM</strong>: 对FROM的左边的表和右边的表计算笛卡尔积。产生虚表VT1</li>
+<li><strong>ON</strong>: 对虚表VT1进行ON筛选，只有那些符合<join-condition>的行才会被记录在虚表VT2中。</join-condition></li>
+<li><strong>JOIN</strong>： 如果指定了OUTER JOIN（比如left join、 right join），那么保留表中未匹配的行就会作为外部行添加到虚拟表VT2中，产生虚拟表VT3, rug from子句中包含两个以上的表的话，那么就会对上一个join连接产生的结果VT3和下一个表重复执行步骤1~3这三个步骤，一直到处理完所有的表为 止。</li>
+<li><strong>WHERE</strong>： 对虚拟表VT3进行WHERE条件过滤。只有符合<where-condition>的记录才会被插入到虚拟表VT4中。</where-condition></li>
+<li><strong>GROUP BY</strong>: 根据group by子句中的列，对VT4中的记录进行分组操作，产生VT5.</li>
+<li><strong>CUBE | ROLLUP</strong>: 对表VT5进行cube或者rollup操作，产生表VT6.</li>
+<li><strong>HAVING</strong>： 对虚拟表VT6应用having过滤，只有符合<having-condition>的记录才会被 插入到虚拟表VT7中。</having-condition></li>
+<li><strong>SELECT</strong>： 执行select操作，选择指定的列，插入到虚拟表VT8中。</li>
+<li><strong>DISTINCT</strong>： 对VT8中的记录进行去重。产生虚拟表VT9.</li>
+<li><strong>ORDER BY</strong>: 将虚拟表VT9中的记录按照&lt;order_by_list&gt;进行排序操作，产生虚拟表VT10.</li>
+<li><strong>LIMIT</strong>：取出指定行的记录，产生虚拟表VT11, 并将结果返回。</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/12/28/2019030500102/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/28/2019030500102/" title="MySQL的语句执行顺序">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/28/2019030500116/">
+    		MySQL Timestamp的几个坑
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-28T11:21:06.000Z">2015-12-28</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/Timestamp/" title="Timestamp">Timestamp</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>问题1：一个表中，是否可以有多个timestamp的列的默认值是 now()? 可以   问题2：timestamp类型，可以为null时，默认插入是 0000-00 还是 null?  null   问题3：timestamp类型，不设置任何属性时，或者设置not null 默认插入是 0000-00 还是 null? 设置not null  插入 null就是now() 不指定值第一个now() 后面都是 0000-00-00 如果可以为null 则插入null时 才是null，不指定的话就是now() 还有一个坑就是你把timestamp调整为第一个timestamp时。他自动加上默认 current_timestamp和on update . 你把带有 default current_timestamp和 on update 的第一个字段调整到其他的timestamp后面时，原来后面的那个不变，原来的第一个属性就丢了。   问题4：replace into 在流模式和statement模式下，会不会自增ID出现问题？ 二者都不会出现问题</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/28/2019030500116/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/28/2019030500116/" title="MySQL Timestamp的几个坑">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/archives/page/3/">前一页</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/page/5/">5</a><a class="page-number" href="/archives/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/18/">18</a><a class="extend next" rel="next" href="/archives/page/5/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

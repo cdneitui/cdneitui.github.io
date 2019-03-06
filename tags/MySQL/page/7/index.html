@@ -1,0 +1,1593 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>`MySQL`标签下的文章 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/tags/MySQL/page/7/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/tags/MySQL/page/7/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/tags/MySQL/page/7/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/tags/MySQL/page/7/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 按标签分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `MySQL`标签下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/11/2019030500106/">
+    		MYSQL设计优化
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-11T04:44:09.000Z">2015-06-11</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>本文将从各方面介绍优化mysql设计的一些方式。</p>
+<h2 id="1、优化sql语句"><a href="#1、优化sql语句" class="headerlink" title="1、优化sql语句"></a>1、优化sql语句</h2><h3 id="1-定位需要优化的sql语句"><a href="#1-定位需要优化的sql语句" class="headerlink" title="(1)定位需要优化的sql语句"></a>(1)定位需要优化的sql语句</h3><h4 id="1-show-status统计SQL语句频率"><a href="#1-show-status统计SQL语句频率" class="headerlink" title="1)show status统计SQL语句频率"></a>1)show status统计SQL语句频率</h4><p>对Myisam和Innodb存储引擎都计数的参数： SHOW STATUS可以根据需要显示session级别的统计结果和global级别的统计结果。 1.Com_select  执行select操作的次数，一次查询只累加1； 2.Com_insert 执行insert操作的次数，对于批量插入的insert操作，只累加一次； 3.Com_update 执行update操作的次数； 4.Com_delete　执行delete操作的次数； 执行如：SHOW STATUS WHERE Variable_name = ‘Com_select’; 对Innodb存储引擎计数的参数（计算的方式不一样）： 1.Innodb_rows_read select查询返回的行数； 2.Innodb_rows_inserted 执行Insert操作插入的行数； 3.Innodb_rows_updated 执行update操作更新的行数； 4.Innodb_rows_deleted 执行delete操作删除的行数； 通过以上几个参数，可以很容易的了解当前数据库的应用是以插入更新为主还是以查询操作为主，以及各种类型的SQL大致的执行比例是多少。 对于更新操作的计数，是对执行次数的计数，不论提交还是回滚都会累加。 对于事务型的参数 1.Com_commit 事务提交次数 2.Com_rollback 事务回滚次数 对于回滚操作非常频繁的数据库，可能意味着应用编写存在问题。 数据库的基本情况的参数： 1.Connections 试图连接Mysql服务器的次数 2.Uptime 服务器工作时间 3.Slow_queries 慢查询的次数</p>
+<h4 id="2-定位执行效率较低的SQL语句"><a href="#2-定位执行效率较低的SQL语句" class="headerlink" title="2)定位执行效率较低的SQL语句"></a>2)定位执行效率较低的SQL语句</h4><p>两种方式定位执行效率较低的SQL语句： (1)通过慢查询日志定位那些执行效率较低的sql语句（需要查询结束后），用–log-slow-queries[=file_name]选项启动时，mysqld写一个包含所有执行时间超过long_query_time秒的SQL语句的日志文件. (2)使用show processlist命令查看当前MySQL在进行的线程，包括线程的状态，是否锁表等等，可以实时的查看SQL执行情况，同时对一些锁表操作进行优化。</p>
+<h4 id="3-EXPLAIN命令分析SQL语句"><a href="#3-EXPLAIN命令分析SQL语句" class="headerlink" title="3)EXPLAIN命令分析SQL语句"></a>3)EXPLAIN命令分析SQL语句</h4><p>通过explain或者desc 获取MySQL如何执行SELECT语句的信息 EXPLAIN SELECT * FROM message a LEFT JOIN mytable b ON a.id = b.id WHERE a.id=1; 返回结果 +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ |   id   | select_type   | table | type  | possible_keys| key            | key_len   | ref   |  rows  |  Extra       | +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ |   1    | SIMPLE        | a     | const | PRIMARY      | PRIMARY        | 4         | const | 1      |              | |   1    | SIMPLE        | b     | ALL    | NULL             | NULL           | NULL      |       | 9999   |              | +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ select_type：select 类型 table：      输出结果集的表 type：       表示表的连接类型 ①当表中仅有一行是最佳的连接类型； ②当select操作中使用索引进行表连接时type的值为ref； ③当select的表连接没有使用索引时，经常会看到type的值为ALL，表示对该表进行了全表扫描，这时需要考虑通过创建索引来提高表连接的效率。 possible_keys：表示查询时,可以使用的索引列. key：          表示使用的索引 key_len：      索引长度 rows：         扫描范围 Extra：执行情况的说明和描述 例如上面的例子，因为是对b表的全表扫描导致效率下降，则对b表的 id 字段创建索引，查询需要扫描的行数将会减少。 返回结果 +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ |   id   | select_type   | table | type  | possible_keys| key            | key_len   | ref   |  rows  |  Extra       | +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+ |   1    | SIMPLE        | a     | const | PRIMARY      | PRIMARY        | 4         | const | 1      |              | |   1    | SIMPLE        | b     | const | PRIMARY      | PRIMARY        | 4         | const | 1      |              | +——–+—————+——-+——-+————–+—————-+———–+——-+——–+————–+</p>
+<h3 id="2-sql语句优化方式"><a href="#2-sql语句优化方式" class="headerlink" title="(2)sql语句优化方式"></a>(2)sql语句优化方式</h3><p>1)大批量插入数据 1)对于Myisam类型的表，可以通过以下步骤快速的导入大量的数据。 前后两个命令用来打开或者关闭Myisam表非唯一索引的更新。在导入大量的数据到一个非空的Myisam表时，通过设置这两个命令，可以提高导入的效率。 ALTER TABLE mytable DISABLE KEYS; INSERT INTO mytable(id, username, city, age) VALUES(1, ‘name1’, ‘city1’, 10),(2, ‘name2’, ‘city2’, 20),(3, ‘name3’, ‘city3’, 30); ALTER TABLE mytable ENABLE KEYS; 对于导入大量数据到一个空的Myisam表，默认就是先导入数据然后才创建索引的，所以不用进行设置。 2)对于Innodb类型的表，我们有以下几种方式可以提高导入的效率（对Innodb类型的表，上面的方式并不能提高导入数据的效率） ①因为Innodb类型的表是按照主键的顺序保存的，所以将导入的数据按照主键的顺序排列，可以有效的提高导入数据的效率。 如果Innodb表没有主键，那么系统会默认创建一个内部列作为主键，所以如果可以给表创建一个主键，将可以利用这个优势提高导入数据的效率。 ②在导入数据前执行SET UNIQUE_CHECKS=0，关闭唯一性校验，在导入结束后执行SET UNIQUE_CHECKS=1，恢复唯一性校验，可以提高导入的效率。 SET UNIQUE_CHECKS=0; SET UNIQUE_CHECKS=1; ③如果使用自动提交的方式，建议在导入前执行SET AUTOCOMMIT=0，关闭自动提交，导入结束后再执行SET AUTOCOMMIT=1，打开自动提交，也可以提高导入的效率。 SET AUTOCOMMIT=0; SET AUTOCOMMIT=1; 2)优化insert语句 1)如果同时插入很多行，请使用多个值的INSERT语句。这比使用分开INSERT语句快(在一些情况中几倍)。 Insert into test values(1,2),(1,3),(1,4)… 2)如果从不同客户插入很多行，能通过使用INSERT DELAYED 语句得到更高的速度。 Delayed 的含义是让insert 语句马上执行，其实数据都被放在内存的队列中，并没有真正写入磁盘；这比每条语句分别插入要快的多； LOW_PRIORITY 刚好相反，在所有其他用户对表的读写完后才进行插入； 3)将索引文件和数据文件分在不同的磁盘上存放（利用建表中的选项）； 4)如果批量插入，可以增加bulk_insert_buffer_size变量值的方法来提高速度，但是，这只能对myisam表使用； 5)当从一个文本文件装载一个表时，使用LOAD DATA INFILE。这通常比使用很多INSERT语句快20倍； 6)根据应用情况使用 replace 语句代替 insert； 7)根据应用情况使用 ignore 关键字忽略重复记录。 INSERT DELAYED INTO mytable(id, username, city, age) VALUES(4, ‘name4’, ‘city4’, 40); INSERT LOW_PRIORITY INTO mytable(id, username, city, age) VALUES(5, ‘name5’, ‘city5’, 50); REPLACE INTO mytable(id, username, city, age) VALUES(5, ‘name5’, ‘city5’, 50); INSERT IGNORE INTO mytable(id, username, city, age) VALUES(5, ‘name5’, ‘city5’, 50); 3)优化group by语句 默认情况下，MySQL排序所有GROUP BY col1，col2，….（如同指定了ORDER BY  col1，col2，…） 如果查询包括GROUP BY但想避免排序结果的消耗，可以指定 ORDER BY NULL禁止排序。 例如： SELECT <em> FROM mytable GROUP BY username ORDER BY NULL; 4)优化order by语句 以下情况可以使用索引: SELECT </em> FROM t1 ORDER BY key_part1,key_part2,… ;  –order by字段都为同一组合索引的一部分 SELECT <em> FROM t1 WHERE key_part1=1 ORDER BY key_part1 DESC, –key_part2 DESC;–where条件和order by使用相同的索引字段 SELECT </em> FROM t1 ORDER BY key_part1 DESC, key_part2 DESC;–order by的的所有字段顺序相同 以下情况不使用索引: 1)SELECT <em> FROM t1 ORDER BY key_part1 DESC, key_part2 ASC；–order by的字段混合ASC和DESC 2)SELECT </em> FROM t1 WHERE key2=constant ORDER BY key1；–用于查询行的关键字与ORDER BY中所使用的不相同 3)SELECT <em> FROM t1 ORDER BY key1, key2；–对不同的关键字使用ORDER BY 5)优化join语句 Mysql4.1开始支持SQL的子查询。这个技术可以使用SELECT语句来创建一个单列的查询结果，然后把这个结果作为过滤条件用在另一个查询中。 使用子查询可以一次性的完成很多逻辑上需要多个步骤才能完成的SQL操作，同时也可以避免事务或者表锁死，并且写起来也很容易。 但是，有些情况下，子查询可以被更有效率的连接(JOIN).. 替代。 假设我们要将所有没有订单记录的用户取出来，可以用下面这个查询完成： SELECT </em> FROM customerinfo WHERE CustomerID NOT in (SELECT CustomerID FROM salesinfo ) 如果使用连接(JOIN).. 来完成这个查询工作，速度将会快很多。尤其是当salesinfo表中对CustomerID建有索引的话，性能将会更好，查询如下： SELECT * FROM customerinfo LEFT JOIN salesinfo ON customerinfo.CustomerID=salesinfo.CustomerID WHERE salesinfo.CustomerID IS NULL 连接(JOIN).. 之所以更有效率一些，是因为 MySQL不需要在内存中创建临时表来完成这个逻辑上的需要两个步骤的查询工作。 6)insert update delete的调度优先级 MySQL还允许改变语句调度的优先级，使来自多个客户端的操作更好地协作(需要判断应用是以查询为主还是以更新为主的)。 以下改变调度策略的方法主要是针对Myisam存储引擎的（对于Innodb存储引擎，语句的执行是由获得行锁的顺序决定的） 默认调度策略： 1）写入操作优先于读取操作。 2）对某张数据表的写入操作某一时刻只能发生一次，写入请求按照它们到达的次序来处理。 3）对某张数据表的多个读取操作可以同时地进行。 语句调节符可以修改调度策略（以下是查询为主的）： 1）LOW_PRIORITY 关键字应用于 DELETE 、 INSERT 、 LOAD DATA 、 REPLACE和UPDATE 。 2）HIGH_PRIORITY关键字应用于SELECT和INSERT语句。 3）DELAYED关键字应用于INSERT和REPLACE语句。 如果写入操作是一个LOW_PRIORITY（低优先级）请求，那么读取操作优先级会高于写操作。（在这种情况下，如果写入者在等待的时候，第二个读取者到达了，那么就允许第二个读取者插到写入者之前。只有在没有其它的读取者的时候，才允许写入者开始操作。这种调度方式可能存在LOW_PRIORITY的写入操作永远被阻塞的情况。） SELECT查询被设置为HIGH_PRIORITY（高优先级），则也会调整SELECT操作到正在等待的写入操作之前。 设置方式： 1）启动方式 如果你希望所有支持LOW_PRIORITY选项的语句都默认地按照低优先级来处理，那么请使用–low-priority-updates选项来启动服务器。 2）sql方式 通过使用INSERT HIGH_PRIORITY来把INSERT语句提高到正常的写入优先级，可以消除该选项对单个INSERT语句的影响。 INSERT LOW_PRIORITY INTO mytable(id, username, city, age) VALUES(7, ‘name7’, ‘city7’, 70);</p>
+<h2 id="2、优化数据表"><a href="#2、优化数据表" class="headerlink" title="2、优化数据表"></a>2、优化数据表</h2><h3 id="1-优化表的数据类型"><a href="#1-优化表的数据类型" class="headerlink" title="(1)优化表的数据类型"></a>(1)优化表的数据类型</h3><p>函数PROCEDURE ANALYSE()可以对数据表中的列的数据类型提出优化建议，根据实际情况考虑是否实施优化。(虽然应用设计的时候需要考虑字段的长度留有一定的冗余，但是不推荐让很多字段都留有大量的冗余，这样即浪费存储也浪费内存) 语法： SELECT <em> FROM tbl_name PROCEDURE ANALYSE(); –输出的对数据表中的每一列的数据类型提出优化建议 SELECT </em> FROM tbl_name PROCEDURE ANALYSE(16,256);–不要为那些包含的值多于16个或者256字节的ENUM类型提出建议。(如果没有这样的限制，输出信息可能很长；ENUM定义通常很难阅读)</p>
+<h3 id="2-拆分表提高访问效率"><a href="#2-拆分表提高访问效率" class="headerlink" title="(2)拆分表提高访问效率"></a>(2)拆分表提高访问效率</h3><p>这里我们所说的拆分，主要是针对Myisam类型的表，拆分的方法可以分成两种情况： 纵向拆分： 纵向拆分是只按照应用访问的频度，将表中经常访问的字段和不经常访问的字段拆分成两个表，经常访问的字段尽量是定长的，这样可以有效的提高表的查询和更新的效率。 横向拆分： 横向拆分是指按照应用的情况，有目的的将数据横向拆分成几个表或者通过分区分到多个分区中，这样可以有效的避免Myisam表的读取和更新导致的锁问题。</p>
+<h3 id="3-规范化和逆规范化"><a href="#3-规范化和逆规范化" class="headerlink" title="(3)规范化和逆规范化"></a>(3)规范化和逆规范化</h3><p>根据实际情况考虑以下两个需求： 规范化的需求： 规范化设计强调数据的独立性，数据应该尽可能少地冗余，因为存在过多的冗余数据，意味着要占用了更多的物理空间，同时也对数据的维护和一致性检查带来了麻烦。 逆规范化的需求： 对于查询操作很多的应用，一次查询可能需要访问多表进行，如果通过冗余相同数据纪录在一个表中，更新的代价增加不多，但是查询操作效率可以有明显提高。</p>
+<h3 id="4-内存临时表"><a href="#4-内存临时表" class="headerlink" title="(4)内存临时表"></a>(4)内存临时表</h3><p>使用create temporary table语法创建临时表，它是基于session的表，数据保存在内存里面，当session断掉后，表自然消除。 比如，对于统计分析的表，如果统计的数据量不大，利用insert和select将数据移到临时表中比直接在表上做统计要效率更高。</p>
+<h3 id="5-选择更合适的表类型"><a href="#5-选择更合适的表类型" class="headerlink" title="(5)选择更合适的表类型"></a>(5)选择更合适的表类型</h3><p>1）如果应用出现比较严重的锁冲突，请考虑是否更改存储引擎到innodb，行锁机制可以有效的减少锁冲突的出现。 2）如果应用查询操作很多，且对事务完整性要求不严格，则可以考虑使用Myisam存储引擎。</p>
+<h2 id="3、优化客户端应用"><a href="#3、优化客户端应用" class="headerlink" title="3、优化客户端应用"></a>3、优化客户端应用</h2><h3 id="1-使用连接池"><a href="#1-使用连接池" class="headerlink" title="(1)使用连接池"></a>(1)使用连接池</h3><p>对于访问数据库来说，建立连接的代价比较昂贵，因此，我们有必要建立”连接池”以提高访问的性能。 我们可以把连接当作对象或者设备，池中又有许多已经建立的连接，访问本来需要与数据库的连接的地方，都改为和池相连，池临时分配连接供访问使用，结果返回后，访问将连接交还。</p>
+<h3 id="2-避免重复检索"><a href="#2-避免重复检索" class="headerlink" title="(2)避免重复检索"></a>(2)避免重复检索</h3><p>理清访问逻辑，需要对相同表的访问，尽量集中在相同sql访问，一次提取结果，减少对数据库的重复访问。</p>
+<h2 id="4、优化数据库服务器"><a href="#4、优化数据库服务器" class="headerlink" title="4、优化数据库服务器"></a>4、优化数据库服务器</h2><h3 id="1-使用mysql查询缓存"><a href="#1-使用mysql查询缓存" class="headerlink" title="(1)使用mysql查询缓存"></a>(1)使用mysql查询缓存</h3><p>作用： 查询缓存存储SELECT查询的文本以及发送给客户端的相应结果。如果随后收到一个相同的查询，服务器从查询缓存中重新得到查询结果，而不再需要解析和执行查询。 适用范围： 不发生数据更新的表。当表更改（包括表结构和表数据）后，查询缓存值的相关条目会被清空。 查询缓存的主要参数： SHOW VARIABLES LIKE ‘%query_cache%’; （或者 SHOW VARIABLES WHERE Variable_name LIKE ‘%query_cache%’;) ： have_query_cache  表示服务器在安装时已经配置了高速缓存 query_cache_size  表示缓存区大小，单位为字节(1024字节为1KB) query_cache_type  值从0到2，含义分别为 0或者off（缓存关闭） 1或者on（缓存打开，使用sql_no_cache的select除外） 2或者demand（只有带sql_cache的select语句提供高速缓存） SET GLOBAL query_cache_size=1024*50; 设置查询缓存大小，单位字节，1024字节为 1KB，query_cache_size大小的设置必须大于40KB SHOW STATUS命令实时监视查询缓存: SHOW STATUS LIKE ‘%Qcache%’; Qcache_queries_in_cache  在缓存中已注册的查询数目 Qcache_inserts           被加入到缓存中的查询数目 Qcache_hits              缓存采样数数目 Qcache_lowmem_prunes     因为缺少内存而被从缓存中删除的查询数目 Qcache_not_cached        没有被缓存的查询数目 (不能被缓存的，或由于 QUERY_CACHE_TYPE) Qcache_free_memory       查询缓存的空闲内存总数 Qcache_free_blocks       查询缓存中的空闲内存块的数目 Qcache_total_blocks      查询缓存中的块的总数目</p>
+<h3 id="2-使用机器高速缓存"><a href="#2-使用机器高速缓存" class="headerlink" title="(2)使用机器高速缓存"></a>(2)使用机器高速缓存</h3><p>Cache（高速缓存）、Memory（内存）、Hard disk（硬盘）都是数据存取单元，但存取速度却有很大差异，呈依次递减的顺序。 对于CPU来说，它可以从距离自己最近的Cache高速地存取数据，而不是从内存和硬盘以低几个数量级的速度来存取数据。 而Cache中所存储的数据，往往是CPU要反复存取的数据，有特定的机制（或程序）来保证Cache内数据的命中率（Hit Rate）。 因此，CPU存取数据的速度在应用高速缓存后得到了巨大的提高。 因为将数据写入高速缓存的任务由Cache Manager负责，所以对用户来说高速缓存的内容肯定是只读的。 需要你做的工作很少，程序中的SQL语句和直接访问DBMS时没有分别，返回的结果也看不出有什么差别。而数据库厂商往往会在DB Server的配置文件中提供与Cache相关的参数，通过修改它们，可针对我们的应用优化Cache的管理。</p>
+<h3 id="3-均衡负载"><a href="#3-均衡负载" class="headerlink" title="(3)均衡负载"></a>(3)均衡负载</h3><p>1)读写分流（主从复制） 利用mysql的主从复制可以有效的分流更新操作和查询操作。 具体的实现是一个主服务器，承担更新操作（为了数据的一致性），多台从服务器，承担查询操作（多台从服务器一方面用来确保可用性，一方面可以创建不同的索引满足不同查询的需要），主从之间通过复制实现数据的同步。 主从复制优化： 对于主从之间不需要复制全部表的情况，可以通过在主的服务器上搭建一个虚拟的从服务器，将需要复制到从服务器的表设置成blackhole引擎，然后定义replicate-do-table参数只复制这些表，这样就过滤出需要复制的binlog，减少了传输binlog的带宽。因为搭建的虚拟的从服务器只起到过滤binlog的作用，并没有实际纪录任何数据，所以对主数据库服务器的性能影响也非常的有限。 注意： 通过复制分流查询的存在的问题是主数据库上更新频繁或者网络出现问题的时候，主从之间的数据可能存在差异，造成查询结果的异议，应用在设计的时候需要有所考虑。 2)分布式的数据库 分布式的数据库设计适合大数据量，负载高的情况，可平均多台服务器的负载，有良好的扩展性和高效性（读写效率）。 分布式事务： mysql从5.0.3开始支持分布式事务，目前分布式事务只对Innodb存储引擎支持。 也可以使用mysql的Cluster功能（NDB引擎）或者使用自己用mysql api来实现全局事务。</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/11/2019030500106/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/11/2019030500106/" title="MYSQL设计优化">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/11/2019030500115/">
+    		MySQL Study之--Mysql启动失败“mysql.host”
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-11T04:33:56.000Z">2015-06-11</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>MySQL Study之–Mysql启动失败“mysql.host”</strong></p>
+<p>系统环境： 操作系统：RedHat EL55 DB Soft：  Mysql 5.6.4-m7</p>
+<p><strong>通过源码包安装mysql后，在启动mysqld时出现错误：</strong></p>
+<p><strong>[root@rh55 mysql]# bin/mysqld_safe &amp;</strong> [1] 15846 [root@rh55 mysql]# 150610 17:04:36 mysqld_safe Logging to ‘/usr/local/mysql/data/mysql/rh55.err’. 150610 17:04:36 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data/mysql 150610 17:04:37 mysqld_safe mysqld from pid file /usr/local/mysql/data/mysql/rh55.pid ended [1]+  Done                    bin/mysqld_safe</p>
+<p><strong>查看mysql日志：</strong></p>
+<p>[root@rh55 mysql]# more /usr/local/mysql/data/mysql/rh55.err</p>
+<p><strong>[html]</strong></p>
+<ol>
+<li>150610 16:56:59 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data/mysql</li>
+<li>/usr/local/mysql/bin/mysqld: Table ‘mysql.plugin’ doesn’t exist</li>
+<li>150610 16:57:00 [ERROR] Can’t open the mysql.plugin table. Please run mysql_upgrade to create it.</li>
+<li>150610 16:57:00 InnoDB: The InnoDB memory heap is disabled</li>
+<li>150610 16:57:00 InnoDB: Mutexes and rw_locks use InnoDB’s own implementation</li>
+<li>150610 16:57:00 InnoDB: Compressed tables use zlib 1.2.3</li>
+<li>150610 16:57:00 InnoDB: CPU does not support crc32 instructions</li>
+<li>150610 16:57:00 InnoDB: Initializing buffer pool, size = 128.0M</li>
+<li>150610 16:57:00 InnoDB: Completed initialization of buffer pool</li>
+<li>InnoDB: The first specified data file ./ibdata1 did not exist:</li>
+<li>InnoDB: a new database to be created!</li>
+<li>150610 16:57:00 InnoDB: Setting file ./ibdata1 size to 10 MB</li>
+<li>InnoDB: Database physically writes the file full: wait…</li>
+<li>150610 16:57:01 InnoDB: Log file ./ib_logfile0 did not exist: new to be created</li>
+<li>InnoDB: Setting log file ./ib_logfile0 size to 5 MB</li>
+<li>InnoDB: Database physically writes the file full: wait…</li>
+<li>150610 16:57:02 InnoDB: Log file ./ib_logfile1 did not exist: new to be created</li>
+<li>InnoDB: Setting log file ./ib_logfile1 size to 5 MB</li>
+<li>InnoDB: Database physically writes the file full: wait…</li>
+<li>InnoDB: Doublewrite buffer not found: creating new</li>
+<li>InnoDB: Doublewrite buffer created</li>
+<li>150610 16:57:04 InnoDB: 128 rollback segment(s) are active.</li>
+<li>InnoDB: Creating foreign key constraint system tables</li>
+<li>InnoDB: Foreign key constraint system tables created</li>
+<li>150610 16:57:04 InnoDB: Waiting for the background threads to start</li>
+<li>150610 16:57:05 InnoDB: 1.2.4 started; log sequence number 0</li>
+<li>150610 16:57:05 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been</li>
+<li>started. Generating a new UUID: ab19e2d2-0f4e-11e5-b157-080027973e8a.</li>
+<li>150610 16:57:05 [ERROR] Fatal error: Can’t open and lock privilege tables: Table ‘mysql.host’ doesn’t exist</li>
+<li>150610 16:57:05 mysqld_safe mysqld from pid file /usr/local/mysql/data/mysql/rh55.pid ended</li>
+<li>150610 17:04:36 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data/mysql</li>
+<li>/usr/local/mysql/bin/mysqld: Table ‘mysql.plugin’ doesn’t exist</li>
+<li>150610 17:04:36 [ERROR] Can’t open the mysql.plugin table. Please run mysql_upgrade to create it.</li>
+<li>150610 17:04:36 InnoDB: The InnoDB memory heap is disabled</li>
+<li>150610 17:04:36 InnoDB: Mutexes and rw_locks use InnoDB’s own implementation</li>
+<li>150610 17:04:36 InnoDB: Compressed tables use zlib 1.2.3</li>
+<li>150610 17:04:36 InnoDB: CPU does not support crc32 instructions</li>
+<li>150610 17:04:36 InnoDB: Initializing buffer pool, size = 128.0M</li>
+<li>150610 17:04:36 InnoDB: Completed initialization of buffer pool</li>
+<li>150610 17:04:36 InnoDB: highest supported file format is Barracuda.</li>
+<li>InnoDB: Log scan progressed past the checkpoint lsn 48961</li>
+<li>150610 17:04:36  InnoDB: Database was not shut down normally!</li>
+<li>InnoDB: Starting crash recovery.</li>
+<li>InnoDB: Reading tablespace information from the .ibd files…</li>
+<li>InnoDB: Restoring possible half-written data pages from the doublewrite</li>
+<li>InnoDB: buffer…</li>
+<li>InnoDB: Doing recovery: scanned up to log sequence number 1595695</li>
+<li>150610 17:04:36  InnoDB: Starting an apply batch of log records to the database…</li>
+<li>InnoDB: Progress in percents: 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</li>
+<li>77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</li>
+<li>InnoDB: Apply batch completed</li>
+<li>150610 17:04:37 InnoDB: 128 rollback segment(s) are active.</li>
+<li>150610 17:04:37 InnoDB: 1.2.4 started; log sequence number 1595695</li>
+<li>150610 17:04:37 [Note] Recovering after a crash using mysql-bin</li>
+<li>150610 17:04:37 [Note] Starting crash recovery…</li>
+<li>150610 17:04:37 [Note] Crash recovery finished.</li>
+<li>150610 17:04:37 [ERROR] Fatal error: Can’t open and lock privilege tables: Table ‘mysql.host’ doesn’t exist</li>
+<li>150610 17:04:37 mysqld_safe mysqld from pid file /usr/local/mysql/data/mysql/rh55.pid ended</li>
+</ol>
+<p><strong>查看mysql配置文件:</strong> <strong>[root@rh55 ~]# cat /etc/my.cnf</strong></p>
+<p><strong>[html]</strong></p>
+<ol>
+<li>[mysqld]</li>
+<li>port            = 3306</li>
+<li>socket          = /tmp/mysql.sock</li>
+<li>skip-external-locking</li>
+<li>key_buffer_size = 16M</li>
+<li>max_allowed_packet = 1M</li>
+<li>table_open_cache = 64</li>
+<li>sort_buffer_size = 512K</li>
+<li>net_buffer_length = 8K</li>
+<li>read_buffer_size = 256K</li>
+<li>read_rnd_buffer_size = 512K</li>
+<li>myisam_sort_buffer_size = 8M</li>
+<li>datadir=/usr/local/mysql/data/mysql</li>
+</ol>
+<p><strong>解决方案：</strong> <strong>[root@rh55 mysql]# scripts/mysql_install_db –user=mysql –datadir=/usr/local/mysql/data/mysql</strong></p>
+<p><strong>[html]</strong></p>
+<ol>
+<li>WARNING: The host ‘rh55’ could not be looked up with resolveip.</li>
+<li>This probably means that your libc libraries are not 100 % compatible</li>
+<li>with this binary MySQL version. The MySQL daemon, mysqld, should work</li>
+<li>normally with the exception that host name resolving will not work.</li>
+<li>This means that you should use IP addresses instead of hostnames</li>
+<li>when specifying MySQL privileges !</li>
+<li>Installing MySQL system tables…</li>
+<li>150610 17:07:10 InnoDB: The InnoDB memory heap is disabled</li>
+<li>150610 17:07:10 InnoDB: Mutexes and rw_locks use InnoDB’s own implementation</li>
+<li>150610 17:07:10 InnoDB: Compressed tables use zlib 1.2.3</li>
+<li>150610 17:07:10 InnoDB: CPU does not support crc32 instructions</li>
+<li>150610 17:07:10 InnoDB: Initializing buffer pool, size = 128.0M</li>
+<li>150610 17:07:10 InnoDB: Completed initialization of buffer pool</li>
+<li>150610 17:07:10 InnoDB: highest supported file format is Barracuda.</li>
+<li>InnoDB: Log scan progressed past the checkpoint lsn 48961</li>
+<li>150610 17:07:10  InnoDB: Database was not shut down normally!</li>
+<li>InnoDB: Starting crash recovery.</li>
+<li>InnoDB: Reading tablespace information from the .ibd files…</li>
+<li>InnoDB: Restoring possible half-written data pages from the doublewrite</li>
+<li>InnoDB: buffer…</li>
+<li>InnoDB: Doing recovery: scanned up to log sequence number 1595695</li>
+<li>150610 17:07:11  InnoDB: Starting an apply batch of log records to the database…</li>
+<li>InnoDB: Progress in percents: 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</li>
+<li>InnoDB: Apply batch completed</li>
+<li>150610 17:07:11 InnoDB: 128 rollback segment(s) are active.</li>
+<li>150610 17:07:11 InnoDB: Waiting for the background threads to start</li>
+<li>150610 17:07:12 InnoDB: 1.2.4 started; log sequence number 1595695</li>
+<li>150610 17:07:12 [Note] Recovering after a crash using mysql-bin</li>
+<li>150610 17:07:12 [Note] Starting crash recovery…</li>
+<li>150610 17:07:12 [Note] Crash recovery finished.</li>
+<li>150610 17:07:14 [Warning] Info table is not ready to be used. Table ‘mysql.slave_master_info’ cannot be opened.</li>
+<li>150610 17:07:14 [Warning] Error while checking replication metadata. Setting the requested repository in order to give users the chance to fix the problem and restart the server. If this is a live upgrade please consider using mysql_upgrade to fix the problem.</li>
+<li>150610 17:07:14 [Warning] Info table is not ready to be used. Table ‘mysql.slave_relay_log_info’ cannot be opened.</li>
+<li>150610 17:07:14 [Warning] Error while checking replication metadata. Setting the requested repository in order to give users the chance to fix the problem and restart the server. If this is a live upgrade please consider using mysql_upgrade to fix the problem.</li>
+<li>150610 17:07:15 [Note] Binlog end</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘partition’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_FOREIGN_COLS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_FOREIGN’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_FIELDS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_COLUMNS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_INDEXES’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_TABLESTATS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_TABLES’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_INDEX_TABLE’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_INDEX_CACHE’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_CONFIG’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_BEING_DELETED’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_DELETED’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_INSERTED’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_DEFAULT_STOPWORD’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_METRICS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_BUFFER_POOL_STATS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_BUFFER_PAGE_LRU’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_BUFFER_PAGE’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_CMPMEM_RESET’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_CMPMEM’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_CMP_RESET’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_CMP’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_LOCK_WAITS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_LOCKS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_TRX’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘InnoDB’</li>
+<li>150610 17:07:15  InnoDB: FTS optimize thread exiting.</li>
+<li>150610 17:07:15  InnoDB: Starting shutdown…</li>
+<li>150610 17:07:16 InnoDB: Shutdown completed; log sequence number 1602851</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘PERFORMANCE_SCHEMA’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘CSV’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘MRG_MYISAM’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘MEMORY’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘MyISAM’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘mysql_old_password’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘mysql_native_password’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘binlog’</li>
+<li>OK</li>
+<li>Filling help tables…</li>
+<li>150610 17:07:16 InnoDB: The InnoDB memory heap is disabled</li>
+<li>150610 17:07:16 InnoDB: Mutexes and rw_locks use InnoDB’s own implementation</li>
+<li>150610 17:07:16 InnoDB: Compressed tables use zlib 1.2.3</li>
+<li>150610 17:07:16 InnoDB: CPU does not support crc32 instructions</li>
+<li>150610 17:07:16 InnoDB: Initializing buffer pool, size = 128.0M</li>
+<li>150610 17:07:16 InnoDB: Completed initialization of buffer pool</li>
+<li>150610 17:07:16 InnoDB: highest supported file format is Barracuda.</li>
+<li>150610 17:07:17 InnoDB: 128 rollback segment(s) are active.</li>
+<li>150610 17:07:17 InnoDB: 1.2.4 started; log sequence number 1602851</li>
+<li>150610 17:07:17 [Note] Binlog end</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘partition’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_FOREIGN_COLS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_FOREIGN’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_FIELDS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_COLUMNS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_INDEXES’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_TABLESTATS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_TABLES’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_INDEX_TABLE’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_INDEX_CACHE’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_CONFIG’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_BEING_DELETED’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_DELETED’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_INSERTED’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_DEFAULT_STOPWORD’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_METRICS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_BUFFER_POOL_STATS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_BUFFER_PAGE_LRU’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_BUFFER_PAGE’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_CMPMEM_RESET’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_CMPMEM’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_CMP_RESET’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_CMP’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_LOCK_WAITS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_LOCKS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_TRX’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘InnoDB’</li>
+<li>150610 17:07:17  InnoDB: FTS optimize thread exiting.</li>
+<li>150610 17:07:17  InnoDB: Starting shutdown…</li>
+<li>150610 17:07:18 InnoDB: Shutdown completed; log sequence number 1602861</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘PERFORMANCE_SCHEMA’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘CSV’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘MRG_MYISAM’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘MEMORY’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘MyISAM’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘mysql_old_password’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘mysql_native_password’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘binlog’</li>
+<li><p>OK</p>
+</li>
+<li><p>To start mysqld at boot time you have to copy</p>
+</li>
+<li><p>support-files/mysql.server to the right place for your system</p>
+</li>
+<li><p>PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !</p>
+</li>
+<li><p>To do so, start the server, then issue the following commands:</p>
+</li>
+<li><p>./bin/mysqladmin -u root password ‘new-password’</p>
+</li>
+<li><p>./bin/mysqladmin -u root -h rh55 password ‘new-password’</p>
+</li>
+<li><p>Alternatively you can run:</p>
+</li>
+<li><p>./bin/mysql_secure_installation</p>
+</li>
+<li><p>which will also give you the option of removing the test</p>
+</li>
+<li>databases and anonymous user created by default.  This is</li>
+<li><p>strongly recommended for production servers.</p>
+</li>
+<li><p>See the manual for more instructions.</p>
+</li>
+<li><p>You can start the MySQL daemon with:</p>
+</li>
+<li><p>cd . ; ./bin/mysqld_safe &amp;</p>
+</li>
+<li><p>You can test the MySQL daemon with mysql-test-run.pl</p>
+</li>
+<li><p>cd ./mysql-test ; perl mysql-test-run.pl</p>
+</li>
+<li><p>Please report any problems with the ./bin/mysqlbug script!</p>
+</li>
+</ol>
+<p><strong>启动mysql server：</strong> <strong>[root@rh55 mysql]# bin/mysqld_safe &amp;</strong> [1] 16199 [root@rh55 mysql]# 150610 17:08:22 mysqld_safe Logging to ‘/usr/local/mysql/data/mysql/rh55.err’. 150610 17:08:22 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data/mysql <strong>验证启动成功：</strong> <strong>[root@rh55 mysql]# netstat -an |grep 3306</strong> tcp        0      0 :::3306                     :::*                        LISTEN</p>
+
+            
+            <p class="more">
+                <a href="/2015/06/11/2019030500115/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/11/2019030500115/" title="MySQL Study之--Mysql启动失败“mysql.host”">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/08/2019030500005/">
+    		centos6.5安装mysql5.6
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-08T08:35:13.000Z">2015-06-08</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/CentOS/" title="CentOS">CentOS</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h4 id="1-先查看版本号"><a href="#1-先查看版本号" class="headerlink" title="1. 先查看版本号"></a>1. 先查看版本号</h4><pre><code># uname -a
+</code></pre><h4 id="2-下载并安装Mysql的yum仓库"><a href="#2-下载并安装Mysql的yum仓库" class="headerlink" title="2. 下载并安装Mysql的yum仓库"></a>2. 下载并安装Mysql的yum仓库</h4><p>下载Mysql的yum仓库 <a href="http://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">http://dev.mysql.com/downloads/repo/yum/</a> 然后安装一下这个仓库列表</p>
+<pre><code>$ sudo yum localinstall mysql-community-release-el6-5.noarch.rpm 
+</code></pre><h4 id="3-搜索可安装的mysql版本"><a href="#3-搜索可安装的mysql版本" class="headerlink" title="3. 搜索可安装的mysql版本"></a>3. 搜索可安装的mysql版本</h4><p>执行这个命令后就能看到可安装的mysql：</p>
+<pre><code># yum repolist enabled | grep &quot;mysql.*-community.*&quot;
+</code></pre><p>如果我们是要安装最新的版本，那么可以直接执行</p>
+<pre><code># sudo yum install mysql-community-server
+</code></pre><p>如果我们要选择版本，可以先执行下面这个命令查看一下有哪些版本：</p>
+<pre><code># yum repolist all | grep mysql
+</code></pre><p>如果要选择版本的话，有两种方式，一种是使用命令来</p>
+<pre><code>$ sudo yum-config-manager --disable mysql56-community
+$ sudo yum-config-manager --enable mysql57-community-dmr
+</code></pre><p>这个命令就是在仓库中启用5.7版本的，禁用5.6版本子仓库 或者编辑/etc/yum.repos.d/mysql-community.repo文件</p>
+<pre><code># Enable to use MySQL 5.6
+[mysql56-community]
+name=MySQL 5.6 Community Server
+baseurl=//repo.mysql.com/yum/mysql-5.6-community/el/5/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql 
+</code></pre><p>enabled=0表示禁用 比如要安装5.7版本的mysql，要确定5.6的enabled=0，5.7的enabled=1，一次保证只启用一个子仓库</p>
+<pre><code># Note: MySQL 5.7 is currently in development. For use at your own risk.
+# Please read with sub pages: https://dev.mysql.com/doc/relnotes/mysql/5.7/en/
+[mysql57-community-dmr]
+name=MySQL 5.7 Community Server Development Milestone Release
+baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/6/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
+</code></pre><p>然后我们又可以愉快的安装mysql了</p>
+<pre><code>$ sudo yum install mysql-community-server
+</code></pre><p>安装完成后我们启动mysql</p>
+<pre><code>$ sudo service mysqld start
+</code></pre><p>查看mysql状态</p>
+<pre><code>$ sudo service mysqld status
+</code></pre><p>启动mysql服务并初始化：</p>
+<pre><code># /etc/init.d/mysqld start
+Initializing MySQL database: 
+PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !
+To do so, start the server, then issue the following commands:
+
+/usr/bin/mysqladmin -u root password &apos;new-password&apos;
+/usr/bin/mysqladmin -u root -h iZ94vana2fdZ password &apos;new-password&apos;
+
+Alternatively you can run:
+/usr/bin/mysql_secure_installation
+
+which will also give you the option of removing the test
+databases and anonymous user created by default. This is
+strongly recommended for production servers.
+
+See the manual for more instructions.
+
+Please report any problems at http://bugs.mysql.com/
+
+[ OK ]
+Starting mysqld: [ OK ]
+</code></pre><h4 id="4-相关命令"><a href="#4-相关命令" class="headerlink" title="4. 相关命令"></a>4. 相关命令</h4><p>启动mysql服务</p>
+<pre><code># service mysqld start
+</code></pre><p>重启mysql服务</p>
+<pre><code># service mysqld restart
+</code></pre><p>停止mysql服务</p>
+<pre><code># service mysqld stop
+</code></pre>
+            
+            <p class="more">
+                <a href="/2015/06/08/2019030500005/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/08/2019030500005/" title="centos6.5安装mysql5.6">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/02/2019030500173/">
+    		win7 64位安装mysql
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-02T07:37:32.000Z">2015-06-02</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>版本：mysql官网，下载win7-64位的mysql服务端安装包。 解压：C:\Program Files\mysql\mysql-5.6.25-winx64。 配置环境变量：MYSQL_HOME=C:\Program Files\mysql\mysql-5.6.25-winx64，添加到Path中：%MYSQL_HOME%/bin 配置：更改my-default.ini文件名为my.ini，在[mysqld]下面添加一行编码：character-set-server = gbk 添加3个服务启动参数： basedir = C:/Program Files/mysql/mysql-5.6.25-winx64/ datadir = C:/Program Files/mysql/mysql-5.6.25-winx64/data/ tmpdir = C:/Program Files/mysql/mysql-5.6.25-winx64/temp/ user=mysql 此时安装mysql，命令：mysqld –install MySQL –defaults-file=”my.ini” 启动mysql，命令：net start MySQL 会发现报错“无法启动 发生系统错误2”，是因为免安装，系统不知道配置文件加载路径，系统默认加载了一个不存在的路径， 所以需要更改路径，进到注册表： HKEY_LOCAL_MACHINE-SYSTEM-CurrentControlSet-services-mysql(服务名)-ImagePath 讲值改为：”C:\Program Files\mysql\mysql-5.6.25-winx64\bin\mysqld” –defaults-file=”C:\Program Files\mysql\mysql-5.6.25-winx64\my.ini” MySQL 再次执行命令：net start MySQL，如果参数都配置正确，切tmpdir路径已经存在，则启动成功； 反之报错，修改参数，重新启动即可。 注意：datadir位安装包解压出来的data目录，tmpdir目录必须存在，mysql启动时会检查目录是否存在，不会自动创建。</p>
+<h3 id="MySQL服务的启动、停止与卸载"><a href="#MySQL服务的启动、停止与卸载" class="headerlink" title="MySQL服务的启动、停止与卸载"></a>MySQL服务的启动、停止与卸载</h3><p>在 Windows 命令提示符下运行: <strong>启动:</strong> net start MySQL <strong>停止:</strong> net stop MySQL <strong>卸载:</strong> sc delete MySQL</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/02/2019030500173/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/02/2019030500173/" title="win7 64位安装mysql">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/02/2019030500079/">
+    		mysql存储过程事务回滚
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-02T04:58:26.000Z">2015-06-02</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/存储过程/" title="存储过程">存储过程</a> / 
+    
+        <a href="/tags/事务/" title="事务">事务</a> / 
+    
+        <a href="/tags/回滚/" title="回滚">回滚</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>SQL过程代码：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>DELIMITER $$</p>
+</li>
+<li><p>CREATE DEFINER=`root`@`localhost` PROCEDURE `test_procedure`()</p>
+</li>
+<li>BEGIN</li>
+<li>DECLARE errno int;</li>
+<li>declare continue HANDLER for sqlexception</li>
+<li>begin</li>
+<li>rollback;</li>
+<li>set errno=1;</li>
+<li>end;</li>
+<li>start transaction;</li>
+<li>set errno=0;</li>
+<li>insert into test(name) values (‘kaka’);</li>
+<li>insert into test(id, name) values(1,’papa’);</li>
+<li>commit;</li>
+<li>select errno;</li>
+<li>END</li>
+</ol>
+<p>过程说明： 1、首先表中已经存在一条记录(1,’baby’)； 2、调用测试存储过程； 3、该过程首先声明error变量，和一个SQL异常处理handler，该handler触发时会回滚事务，并将error置为1； 事务开始，将error置为0，插入一条数据name为‘kaka’，再插入一条数据(1,’papa’)，然后提交； 但第二次插入数据时，主键id已存在，此处会报异常触发我们的SQL异常处理handler。实现回滚并将error置为1； 查看error值； 4、调用存储过程之后查看测试表中的数据是否回滚； 调用前： <img src="http://img.blog.csdn.net/20150601213911848?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc29tZV90aW1lcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 调用中: <img src="http://img.blog.csdn.net/20150601213920210?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc29tZV90aW1lcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 调用后： <img src="http://img.blog.csdn.net/20150601213927885?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc29tZV90aW1lcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 建库SQL：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>CREATE DATABASE  IF NOT EXISTS `test`;</li>
+<li>USE `test`;</li>
+<li>DROP TABLE IF EXISTS `test`;</li>
+<li>CREATE TABLE `test` (</li>
+<li>`id` int(11) NOT NULL AUTO_INCREMENT,</li>
+<li><code>name</code> varchar(45) DEFAULT NULL,</li>
+<li>PRIMARY KEY (`id`)</li>
+<li>) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;</li>
+</ol>
+<p>综上，可以通过在存储过程中声明异常处理handler使得我们的事物达到回滚效果。</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/02/2019030500079/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/02/2019030500079/" title="mysql存储过程事务回滚">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/05/27/2019030500015/">
+    		利用Navicat工具实现MySQL数据库结构同步
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-05-27T06:34:25.000Z">2015-05-27</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/数据库/" title="数据库">数据库</a> / 
+    
+        <a href="/tags/结构同步/" title="结构同步">结构同步</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>Navicat 是一套快速、可靠并价格相宜的数据库管理工具，专为简化数据库的管理及降低系统管理成本而设。Navicat提供多达 7 种语言供客户选择，被公认为全球最受欢迎的数据库前端用户界面工具。 Navicat旗下有多个产品成员 ，可以用来对本机或远程的 MySQL、SQL Server、SQLite、Oracle 及 PostgreSQL 数据库进行管理及开发。因为文中介绍的是MySQL数据库，因此我们要用到的是Navicat旗下的Navicat For MySQL工具。Navicat For MySQL下载链接。 我们在开发项目时一般会用到一个开发版和一个正式版的数据库，在开发版中修改了数据库表结构如何才能快速同步到正式版呢？如果自己手动一个个字段或属性去修改，实在是太麻烦，而且容易遗漏，有了Navicat 工具，就能快速实现数据库直接的同步，包括结构同步，数据同步等。下面介绍如何利用Navicat For MySQL实现MySQL数据库间结构同步。</p>
+<h4 id="1-打开Navicat-For-MySQL"><a href="#1-打开Navicat-For-MySQL" class="headerlink" title="1.打开Navicat For MySQL"></a>1.打开Navicat For MySQL</h4><h4 id="2-创建数据库连接，可连接本地数据库服务器，也可远程连接。如图所示创建一个本地连接。"><a href="#2-创建数据库连接，可连接本地数据库服务器，也可远程连接。如图所示创建一个本地连接。" class="headerlink" title="2.创建数据库连接，可连接本地数据库服务器，也可远程连接。如图所示创建一个本地连接。"></a>2.创建数据库连接，可连接本地数据库服务器，也可远程连接。如图所示创建一个本地连接。</h4><p><img src="http://img.blog.csdn.net/20150527110818261" alt="这里写图片描述"> 连接名可自己任意命名，方便自己识别就行。填好地址用户名密码等之后，可点击测试连接，看能够创建连接，若成功则会弹窗提示。 <img src="http://img.blog.csdn.net/20150527111134502" alt="这里写图片描述"></p>
+<h4 id="3-连接成功后，选中工具→结构同步，便可对该连接下的数据库进行同步操作了。"><a href="#3-连接成功后，选中工具→结构同步，便可对该连接下的数据库进行同步操作了。" class="headerlink" title="3.连接成功后，选中工具→结构同步，便可对该连接下的数据库进行同步操作了。"></a>3.连接成功后，选中工具→结构同步，便可对该连接下的数据库进行同步操作了。</h4><p><img src="http://img.blog.csdn.net/20150527111311753" alt="这里写图片描述"></p>
+<h4 id="4-选中要同步的数据的源和目标，源便是结构同步的参考数据库，目标则是要修改结构进行同步的那个数据库。并选择要对比的项。你可以选择仅同步表，或仅同步视图或存储过程等。都设置好后点击比对按钮即可对比这两个数据库的结构，找出其中的不同。"><a href="#4-选中要同步的数据的源和目标，源便是结构同步的参考数据库，目标则是要修改结构进行同步的那个数据库。并选择要对比的项。你可以选择仅同步表，或仅同步视图或存储过程等。都设置好后点击比对按钮即可对比这两个数据库的结构，找出其中的不同。" class="headerlink" title="4.选中要同步的数据的源和目标，源便是结构同步的参考数据库，目标则是要修改结构进行同步的那个数据库。并选择要对比的项。你可以选择仅同步表，或仅同步视图或存储过程等。都设置好后点击比对按钮即可对比这两个数据库的结构，找出其中的不同。"></a>4.选中要同步的数据的源和目标，源便是结构同步的参考数据库，目标则是要修改结构进行同步的那个数据库。并选择要对比的项。你可以选择仅同步表，或仅同步视图或存储过程等。都设置好后点击比对按钮即可对比这两个数据库的结构，找出其中的不同。</h4><p><img src="http://img.blog.csdn.net/20150527111308842" alt="这里写图片描述"></p>
+<h4 id="5-比对结果如下图所示，可以在上面的源对象和目标对象列表中看出哪些表或视图或函数等结构有不同，具体的不同则可以通过下面的查询语句来看。选中要执行的查询语句点击运行便可进行同步修改。"><a href="#5-比对结果如下图所示，可以在上面的源对象和目标对象列表中看出哪些表或视图或函数等结构有不同，具体的不同则可以通过下面的查询语句来看。选中要执行的查询语句点击运行便可进行同步修改。" class="headerlink" title="5.比对结果如下图所示，可以在上面的源对象和目标对象列表中看出哪些表或视图或函数等结构有不同，具体的不同则可以通过下面的查询语句来看。选中要执行的查询语句点击运行便可进行同步修改。"></a>5.比对结果如下图所示，可以在上面的源对象和目标对象列表中看出哪些表或视图或函数等结构有不同，具体的不同则可以通过下面的查询语句来看。选中要执行的查询语句点击运行便可进行同步修改。</h4><p><img src="http://img.blog.csdn.net/20150527111642032" alt="这里写图片描述"></p>
+<h4 id="6-运行结果将在信息日志中显示，如果出现执行不成功的查询，则会以红色字体显示，可自己再手动进行修改。若无错误，则结构同步完成。可到数据库中查看，两个表要同步的部分是否结构已经一致。"><a href="#6-运行结果将在信息日志中显示，如果出现执行不成功的查询，则会以红色字体显示，可自己再手动进行修改。若无错误，则结构同步完成。可到数据库中查看，两个表要同步的部分是否结构已经一致。" class="headerlink" title="6.运行结果将在信息日志中显示，如果出现执行不成功的查询，则会以红色字体显示，可自己再手动进行修改。若无错误，则结构同步完成。可到数据库中查看，两个表要同步的部分是否结构已经一致。"></a>6.运行结果将在信息日志中显示，如果出现执行不成功的查询，则会以红色字体显示，可自己再手动进行修改。若无错误，则结构同步完成。可到数据库中查看，两个表要同步的部分是否结构已经一致。</h4><p><img src="http://img.blog.csdn.net/20150527112235429" alt="这里写图片描述"></p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/05/27/2019030500015/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/05/27/2019030500015/" title="利用Navicat工具实现MySQL数据库结构同步">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/05/27/2019030500035/">
+    		新安装的MySQL必须调整的10项配置
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-05-27T05:57:07.000Z">2015-05-27</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p><img src="http://img.blog.csdn.net/20150527122226062?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2Vic2l0ZXM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 还在为新安装的mysql服务，不知道修改哪些默认配置而发愁吗？mysql可调整参数有100多个，到底要立即！马上！调整哪些最重要的参数？ 网络神贴答复你： 这篇文章主要介绍了MySQL优化必须调整的10项配置,使用这些方法可以让你快速地获得一个稳健的MySQL配置,需要的朋友可以参考下： 当我们被人雇来监测MySQL性能时，人们希望我们能够检视一下MySQL配置然后给出一些提高建议。许多人在事后都非常惊讶，因为我们建议他们仅仅改动几个设置，即使是这里有好几百个配置项。这篇文章的目的在于给你一份非常重要的配置项清单。 我们曾在几年前在博客里给出了这样的建议，但是MySQL的世界变化实在太快了！ 写在开始前… 即使是经验老道的人也会犯错，会引起很多麻烦。所以在盲目的运用这些推荐之前，请记住下面的内容： 一次只改变一个设置！这是测试改变是否有益的唯一方法。 大多数配置能在运行时使用SET GLOBAL改变。这是非常便捷的方法它能使你在出问题后快速撤销变更。但是，要永久生效你需要在配置文件里做出改动。 一个变更即使重启了MySQL也没起作用？ 请确定你使用了正确的配置文件。请确定你把配置放在了正确的区域内(所有这篇文章提到的配置都属于 [mysqld]) 服务器在改动一个配置后启不来了：请确定你使用了正确的单位。 例如，innodb_buffer_pool_size的单位是MB而max_connection是没有单位的。 不要在一个配置文件里出现重复的配置项。如果你想追踪改动，请使用版本控制。 不要用天真的计算方法，例如”现在我的服务器的内存是之前的2倍，所以我得把所有数值都改成之前的2倍“。 ‍<strong>基本配置</strong> 你需要经常察看以下3个配置项。不然，可能很快就会出问题。 innodb_buffer_pool_size: 这是你安装完InnoDB后第一个应该设置的选项。 缓冲池是数据和索引缓存的地方：这个值越大越好，这能保证你在大多数的读取操作时使用的是内存而不是硬盘。典型的值是5-6GB(8GB内存)，20-25GB(32GB内存)，100-120GB(128GB内存)。 innodb_log_file_size： 这是redo日志的大小。redo日志被用于确保写操作快速而可靠并且在崩溃时恢复。 一直到MySQL 5.1，它都难于调整，因为一方面你想让它更大来提高性能，另一方面你想让它更小来使得崩溃后更快恢复。幸运的是从MySQL 5.5之后，崩溃恢复的性能的到了很大提升，这样你就可以同时拥有较高的写入性能和崩溃恢复性能了。一直到MySQL 5.5，redo日志的总尺寸被限定在4GB(默认可以有2个log文件)。这在MySQL 5.6里被提高。 一开始就把innodb_log_file_size设置成512M(这样有1GB的redo日志)会使你有充裕的写操作空间。如果你知道你的应用程序需要频繁的写入数据并且你使用的时MySQL 5.6，你可以一开始就把它这是成4G。 max_connections: 如果你经常看到‘Too many connections’错误，是因为max_connections的值太低了。这非常常见因为应用程序没有正确的关闭数据库连接，你需要比默认的151连接数更大的值。max_connection值被设高了(例如1000或更高)之后一个主要缺陷是当服务器运行1000个或更高的活动事务时会变的没有响应。在应用程序里使用连接池或者在MySQL里使用进程池有助于解决这一问题。 <strong>InnoDB配置</strong> 从MySQL 5.5版本开始，InnoDB就是默认的存储引擎并且它比任何其他存储引擎的使用都要多得多。那也是为什么它需要小心配置的原因。 innodb_file_per_table： 这项设置告知InnoDB是否需要将所有表的数据和索引存放在共享表空间里（innodb_file_per_table = OFF） 或者为每张表的数据单独放在一个.ibd文件（innodb_file_per_table = ON）。每张表一个文件允许你在drop、truncate或者rebuild表时回收磁盘空间。这对于一些高级特性也是有必要的，比如数据压缩。但是它不会带来任何性能收益。你不想让每张表一个文件的主要场景是：有非常多的表（比如10k+）。 MySQL 5.6中，这个属性默认值是ON，因此大部分情况下你什么都不需要做。对于之前的版本你必需在加载数据之前将这个属性设置为ON，因为它只对新创建的表有影响。 innodb_flush_log_at_trx_commit： 默认值为1，表示InnoDB完全支持ACID特性。当你的主要关注点是数据安全的时候这个值是最合适的，比如在一个主节点上。但是对于磁盘（读写）速度较慢的系统，它会带来很巨大的开销，因为每次将改变flush到redo日志都需要额外的fsyncs。将它的值设置为2会导致不太可靠（reliable）因为提交的事务仅仅每秒才flush一次到redo日志，但对于一些场景是可以接受的，比如对于主节点的备份节点这个值是可以接受的。如果值为0速度就更快了，但在系统崩溃时可能丢失一些数据：只适用于备份节点。 innodb_flush_method: 这项配置决定了数据和日志写入硬盘的方式。一般来说，如果你有硬件RAID控制器，并且其独立缓存采用write-back机制，并有着电池断电保护，那么应该设置配置为O_DIRECT；否则，大多数情况下应将其设为fdatasync（默认值）。sysbench是一个可以帮助你决定这个选项的好工具。 innodb_log_buffer_size: 这项配置决定了为尚未执行的事务分配的缓存。其默认值（1MB）一般来说已经够用了，但是如果你的事务中包含有二进制大对象或者大文本字段的话，这点缓存很快就会被填满并触发额外的I/O操作。看看Innodb_log_waits状态变量，如果它不是0，增加innodb_log_buffer_size。 <strong>其他设置</strong> query_cache_size: query cache（查询缓存）是一个众所周知的瓶颈，甚至在并发并不多的时候也是如此。 最佳选项是将其从一开始就停用，设置query_cache_size = 0（现在MySQL 5.6的默认值）并利用其他方法加速查询：优化索引、增加拷贝分散负载或者启用额外的缓存（比如memcache或redis）。如果你已经为你的应用启用了query cache并且还没有发现任何问题，query cache可能对你有用。这是如果你想停用它，那就得小心了。 log_bin： 如果你想让数据库服务器充当主节点的备份节点，那么开启二进制日志是必须的。如果这么做了之后，还别忘了设置server_id为一个唯一的值。就算只有一个服务器，如果你想做基于时间点的数据恢复，这（开启二进制日志）也是很有用的：从你最近的备份中恢复（全量备份），并应用二进制日志中的修改（增量备份）。二进制日志一旦创建就将永久保存。所以如果你不想让磁盘空间耗尽，你可以用 PURGE BINARY LOGS 来清除旧文件，或者设置 expire_logs_days 来指定过多少天日志将被自动清除。 记录二进制日志不是没有开销的，所以如果你在一个非主节点的复制节点上不需要它的话，那么建议关闭这个选项。 skip_name_resolve： 当客户端连接数据库服务器时，服务器会进行主机名解析，并且当DNS很慢时，建立连接也会很慢。因此建议在启动服务器时关闭skip_name_resolve选项而不进行DNS查找。唯一的局限是之后GRANT语句中只能使用IP地址了，因此在添加这项设置到一个已有系统中必须格外小心。 <strong>总结</strong> 当然还有其他的设置可以起作用，取决于你的负载或硬件：在慢内存和快磁盘、高并发和写密集型负载情况下，你将需要特殊的调整。然而这里的目标是使得你可以快速地获得一个稳健的MySQL配置，而不用花费太多时间在调整一些无关紧要的MySQL设置或读文档找出哪些设置对你来说很重要上。</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/05/27/2019030500035/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/05/27/2019030500035/" title="新安装的MySQL必须调整的10项配置">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/05/26/2019030500097/">
+    		MySQL数据库插入速度调整
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-05-26T03:32:35.000Z">2015-05-26</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/CentOS/" title="CentOS">CentOS</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>环境介绍： CentOS 6.5 MySQL 5.5.40 硬件：4核，4GB 参考链接： <a href="http://dev.mysql.com/doc/refman/5.5/en/insert-speed.html" target="_blank" rel="noopener">http://dev.mysql.com/doc/refman/5.5/en/insert-speed.html</a> <a href="http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html" target="_blank" rel="noopener">http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html</a> 由于业务量迅速扩展，对写入速度需求越来越高，现预估需要将数据插入速度由每分钟2000条，调整为每秒100条即每分钟6000条； <strong>解决办法：</strong> 1.优化数据库主机IO； 2.调整MySQL对应参数。 开始处理： 1.主机IO优化 a.将数据库设置为独立表空间，并且将每个表空间放在不同的硬盘上； b.关闭主机其他影响IO的进程。 2. 调整my.cnf参数，提升MySQL写速度 innodb_autoextend_increment =128M innodb_log_buffer_size =32M innodb_log_file_size=128M 以上3个参数是逐步变更到对应大小的</p>
+
+            
+            <p class="more">
+                <a href="/2015/05/26/2019030500097/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/05/26/2019030500097/" title="MySQL数据库插入速度调整">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/05/25/2019030500099/">
+    		mysql数据库的连接以及增删改查Java代码实现（Statement版）
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-05-25T06:52:54.000Z">2015-05-25</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/Java/" title="Java">Java</a> / 
+    
+        <a href="/tags/Statement/" title="Statement">Statement</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>数据库：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li><p>create table t1(id int primary key not null auto_increment,name varchar(32),password varchar(32));</p>
+</li>
+<li><p>insert into t1(name,password) values(‘admin’,’123’);</p>
+</li>
+<li>insert into t1(name,password) values(‘zhangsan’,’123’);</li>
+<li>insert into t1(name,password) values(‘lisi’,’123’);</li>
+</ol>
+<p>Java代码： mysqlDao.java：</p>
+<p><strong>[java]</strong></p>
+<ol>
+<li><p>package com.dao;</p>
+</li>
+<li><p>import java.sql.Connection;</p>
+</li>
+<li>import java.sql.DriverManager;</li>
+<li>import java.sql.ResultSet;</li>
+<li>import java.sql.SQLException;</li>
+<li><p>import java.sql.Statement;</p>
+</li>
+<li><p>import org.junit.Test;</p>
+</li>
+<li><p>public class mysqlDao {</p>
+</li>
+<li><p>private static String driver=”com.mysql.jdbc.Driver”;     //驱动</p>
+</li>
+<li>private String url=”jdbc:mysql://localhost:3306/test”;    //数据库连接地址</li>
+<li>private String user=”root”;     //数据库账户</li>
+<li><p>private String password=”11”;      //数据库密码</p>
+</li>
+<li><p>private Connection connection=null;      //连接</p>
+</li>
+<li>private Statement stmt=null;      //声明</li>
+<li><p>private ResultSet rs=null;     //结果集</p>
+</li>
+<li><p>private int i=-1;</p>
+</li>
+<li><p>/*</p>
+</li>
+<li><ul>
+<li>创建驱动</li>
+</ul>
+</li>
+<li><ul>
+<li>*/</li>
+</ul>
+</li>
+<li>static{</li>
+<li>try {</li>
+<li>Class.forName(driver);</li>
+<li>} catch (ClassNotFoundException e) {</li>
+<li>// TODO Auto-generated catch block</li>
+<li>e.printStackTrace();</li>
+<li>}</li>
+<li><p>}</p>
+</li>
+<li><p>/*</p>
+</li>
+<li><ul>
+<li>加载驱动</li>
+</ul>
+</li>
+<li><ul>
+<li>*/</li>
+</ul>
+</li>
+<li>@Test</li>
+<li>public void connect() {</li>
+<li>// TODO Auto-generated method stub</li>
+<li><p>try {</p>
+</li>
+<li><p>connection=DriverManager.getConnection(url, user, password);</p>
+</li>
+<li><p>if(connection!=null){</p>
+</li>
+<li>System.out.println(“数据库连接成功！”);</li>
+<li>}else{</li>
+<li>System.out.println(“数据库连接失败！”);</li>
+<li><p>}</p>
+</li>
+<li><p>} catch (SQLException e) {</p>
+</li>
+<li>// TODO Auto-generated catch block</li>
+<li>e.printStackTrace();</li>
+<li>}</li>
+<li><p>}</p>
+</li>
+<li><p>/*</p>
+</li>
+<li><ul>
+<li>执行sql语句</li>
+</ul>
+</li>
+<li><ul>
+<li>*/</li>
+</ul>
+</li>
+<li>public void doSql(String sql) {</li>
+<li><p>// TODO Auto-generated method stub</p>
+</li>
+<li><p>System.out.println(“This Is mysqlDao.doSql() Method!”);</p>
+</li>
+<li><p>if(sql!=null){</p>
+</li>
+<li><p>connect();</p>
+</li>
+<li><p>try {</p>
+</li>
+<li><p>stmt=connection.createStatement();</p>
+</li>
+<li><p>stmt.execute(sql);</p>
+</li>
+<li><p>} catch (SQLException e) {</p>
+</li>
+<li>// TODO Auto-generated catch block</li>
+<li>e.printStackTrace();</li>
+<li><p>}</p>
+</li>
+<li><p>}</p>
+</li>
+<li><p>}</p>
+</li>
+<li><p>/*</p>
+</li>
+<li><ul>
+<li>获取影响行数</li>
+</ul>
+</li>
+<li><ul>
+<li>*/</li>
+</ul>
+</li>
+<li>public int getUpCount() {</li>
+<li><p>// TODO Auto-generated method stub</p>
+</li>
+<li><p>try {</p>
+</li>
+<li>i=stmt.getUpdateCount();</li>
+<li>} catch (SQLException e) {</li>
+<li>// TODO Auto-generated catch block</li>
+<li>e.printStackTrace();</li>
+<li><p>}</p>
+</li>
+<li><p>return i;</p>
+</li>
+<li><p>}</p>
+</li>
+<li><p>/*</p>
+</li>
+<li><ul>
+<li>获取结果集</li>
+</ul>
+</li>
+<li><ul>
+<li>*/</li>
+</ul>
+</li>
+<li><p>public ResultSet getRs() {</p>
+</li>
+<li><p>try {</p>
+</li>
+<li>rs=stmt.getResultSet();</li>
+<li>} catch (SQLException e) {</li>
+<li>// TODO Auto-generated catch block</li>
+<li>e.printStackTrace();</li>
+<li><p>}</p>
+</li>
+<li><p>return rs;</p>
+</li>
+<li><p>}</p>
+</li>
+<li><p>/*</p>
+</li>
+<li><ul>
+<li>执行关闭方法</li>
+</ul>
+</li>
+<li><ul>
+<li>*/</li>
+</ul>
+</li>
+<li>public void close() {</li>
+<li><p>// TODO Auto-generated method stub</p>
+</li>
+<li><p>try {</p>
+</li>
+<li>if(rs!=null){</li>
+<li>rs.close();</li>
+<li>}</li>
+<li>} catch (SQLException e) {</li>
+<li>// TODO Auto-generated catch block</li>
+<li>e.printStackTrace();</li>
+<li><p>}finally{</p>
+</li>
+<li><p>try {</p>
+</li>
+<li><p>if(stmt!=null){</p>
+</li>
+<li>stmt.close();</li>
+<li>}</li>
+<li>} catch (SQLException e) {</li>
+<li>// TODO Auto-generated catch block</li>
+<li>e.printStackTrace();</li>
+<li>}finally{</li>
+<li>if(connection!=null){</li>
+<li>try {</li>
+<li>connection.close();</li>
+<li>} catch (SQLException e) {</li>
+<li>// TODO Auto-generated catch block</li>
+<li>e.printStackTrace();</li>
+<li>}</li>
+<li>}</li>
+<li>}</li>
+<li><p>}</p>
+</li>
+<li><p>}</p>
+</li>
+<li><p>}</p>
+</li>
+</ol>
+<p>createSql.java</p>
+<p><strong>[java]</strong></p>
+<ol>
+<li><p>package com.dao;</p>
+</li>
+<li><p>import java.sql.ResultSet;</p>
+</li>
+<li><p>import java.sql.SQLException;</p>
+</li>
+<li><p>import org.junit.Test;</p>
+</li>
+<li><p>public class createSql {</p>
+</li>
+<li><p>mysqlDao mysqldao=new mysqlDao();</p>
+</li>
+<li><p>private String sql;</p>
+</li>
+<li><p>private int i=-1;</p>
+</li>
+<li><p>private ResultSet rs=null;</p>
+</li>
+<li><p>/*</p>
+</li>
+<li><ul>
+<li>插入数据</li>
+</ul>
+</li>
+<li><ul>
+<li>*/</li>
+</ul>
+</li>
+<li>@Test</li>
+<li>public void insert() {</li>
+<li><p>// TODO Auto-generated method stub</p>
+</li>
+<li><p>sql=”insert into t1(name,password) values(‘lisi’,’1234’)”;    //创建sql语句</p>
+</li>
+<li>mysqldao.doSql(sql);    //执行sql语句</li>
+<li>i=mysqldao.getUpCount();     //获取影响行数</li>
+<li>if(i!=-1){</li>
+<li>System.out.println(“数据插入成功！”);</li>
+<li>}else{</li>
+<li>System.out.println(“数据插入失败！”);</li>
+<li>}</li>
+<li><p>mysqldao.close();      //关闭连接</p>
+</li>
+<li><p>}</p>
+</li>
+<li><p>/*</p>
+</li>
+<li><ul>
+<li>删除数据</li>
+</ul>
+</li>
+<li><ul>
+<li>*/</li>
+</ul>
+</li>
+<li>@Test</li>
+<li>public void delete() {</li>
+<li>// TODO Auto-generated method stub</li>
+<li>sql=”delete from t1 where id=6”;</li>
+<li>mysqldao.doSql(sql);</li>
+<li>i=mysqldao.getUpCount();</li>
+<li>if(i!=-1){</li>
+<li>System.out.println(“数据删除成功！”);</li>
+<li>}else{</li>
+<li>System.out.println(“数据删除失败！”);</li>
+<li>}</li>
+<li>mysqldao.close();</li>
+<li><p>}</p>
+</li>
+<li><p>/*</p>
+</li>
+<li><ul>
+<li>修改数据</li>
+</ul>
+</li>
+<li><ul>
+<li>*/</li>
+</ul>
+</li>
+<li>@Test</li>
+<li>public void update() {</li>
+<li>// TODO Auto-generated method stub</li>
+<li>sql=”update t1 set name=’wangwu’ where id=1”;</li>
+<li>mysqldao.doSql(sql);</li>
+<li>i=mysqldao.getUpCount();</li>
+<li>if(i!=-1){</li>
+<li>System.out.println(“数据更新成功！”);</li>
+<li>}else{</li>
+<li>System.out.println(“数据更新失败！”);</li>
+<li>}</li>
+<li>mysqldao.close();</li>
+<li><p>}</p>
+</li>
+<li><p>/*</p>
+</li>
+<li><ul>
+<li>遍历数据</li>
+</ul>
+</li>
+<li><ul>
+<li>*/</li>
+</ul>
+</li>
+<li>@Test</li>
+<li>public void select() throws SQLException {</li>
+<li><p>// TODO Auto-generated method stub</p>
+</li>
+<li><p>sql=”select * from t1”;</p>
+</li>
+<li><p>mysqldao.doSql(sql);</p>
+</li>
+<li><p>rs=mysqldao.getRs();</p>
+</li>
+<li><p>if(rs!=null){</p>
+</li>
+<li>rs.last();</li>
+<li><p>i=rs.getRow();</p>
+</li>
+<li><p>if(i&gt;0){</p>
+</li>
+<li>rs.beforeFirst();</li>
+<li><p>while(rs.next()){</p>
+</li>
+<li><p>String id=rs.getString(“id”);</p>
+</li>
+<li>String name=rs.getString(“name”);</li>
+<li>String password=rs.getString(“password”);</li>
+<li>System.out.println(“id:”+id+”  “+”name:”+name+”  password:”+password);</li>
+<li>}</li>
+<li>}else{</li>
+<li>System.out.println(“对不起，没有您要查询的信息！”);</li>
+<li><p>}</p>
+</li>
+<li><p>}else{</p>
+</li>
+<li>System.out.println(“异常………..”);</li>
+<li>}</li>
+<li><p>mysqldao.close();</p>
+</li>
+<li><p>}</p>
+</li>
+<li><p>}</p>
+</li>
+</ol>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/05/25/2019030500099/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/05/25/2019030500099/" title="mysql数据库的连接以及增删改查Java代码实现（Statement版）">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/05/25/2019030500026/">
+    		教你使用mysqldump
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-05-25T05:55:30.000Z">2015-05-25</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/mysqldump/" title="mysqldump">mysqldump</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>MySQL有很多可以导入数据的方法，然而这些只是数据传输中的一半，另外的一般是从MySQL数据库中导出数据。有许多的原因我们需要导出数据。一个重要的原因是用于备份数据库。数据的造价常常是昂贵的，需要谨慎处理它们。经常地备份可以帮助防止宝贵数据地丢失；另外一个原因是，也许您希望导出数据来共享。 在这个信息技术不断成长的世界中，共享数据变得越来越常见。 比方说Macmillan USA维护护着一个将要出版的书籍的大型数据库。这个数据库在许多书店之间共享，这样他们就知道哪些书将会很快出版。医院越来越走向采用无纸病历记录，这样这些病历可以随时跟着你。世界变得越来越小，信息也被共享得越来越多。有很多中导出数据得方法，它们都跟导入数据很相似。因为，毕竟，这些都只是一种透视得方式。从数据库导出的数据就是从另一端导入的数据。这里我们并不讨论其他的数据库各种各样的导出数据的方法，您将学会如何用MySQL来实现数据导出。 使用mysqldump: (mysqldump命令位于mysql/bin/目录中) mysqldump工具很多方面类似相反作用的工具mysqlimport。它们有一些同样的选项。但mysqldump能够做更多的事情。它可以把整个数据库装载到一个单独的文本文件中。这个文件包含有所有重建您的数据库所需要的SQL命令。这个命令取得所有的模式（Schema，后面有解释）并且将其转换成DDL语法（CREATE语句，即数据库定义语句），取得所有的数据，并且从这些数据中创建INSERT语句。这个工具将您的数据库中所有的设计倒转。因为所有的东西都被包含到了一个文本文件中。这个文本文件可以用一个简单的批处理和一个合适SQL语句导回到MySQL中。这个工具令人难以置信地简单而快速。决不会有半点让人头疼地地方。 因此，如果您像装载整个数据库Meet_A_Geek的内容到一个文件中，可以使用下面的命令： bin/mysqldump –p Meet_A_Geek &gt; MeetAGeek_Dump_File.txt 这个语句也允许您指定一个表进行dump(备份/导出/装载?)。如果您只是希望把数据库Meet_A_Geek中的表Orders中的整个内容导出到一个文件，可以使用下面的命令： bin/mysqldump –p Meet_A_Geek Orders &gt;MeetAGeek_Orders.txt 这个非常的灵活，您甚至可以使用WHERE从句来选择您需要的记录导出到文件中。要达到这样的目的，可以使用类似于下面的命令： bin/mysqldump –p –where=”Order_ID &gt; 2000” Meet_A_Geek Orders &gt; Special_Dump.txt mysqldump工具有大量的选项，部分选项如下表： 选项/Option 作用/Action Performed –add-drop-table 这个选项将会在每一个表的前面加上DROP TABLE IF EXISTS语句，这样可以保证导回MySQL数据库的时候不会出错，因为每次导回的时候，都会首先检查表是否存在，存在就删除 –add-locks 这个选项会在INSERT语句中捆上一个LOCK TABLE和UNLOCK TABLE语句。这就防止在这些记录被再次导入数据库时其他用户对表进行的操作 -c or - complete_insert 这个选项使得mysqldump命令给每一个产生INSERT语句加上列（field）的名字。当把数据导出导另外一个数据库时这个选项很有用。 –delayed-insert 在INSERT命令中加入DELAY选项 -F or -flush-logs 使用这个选项，在执行导出之前将会刷新MySQL服务器的log. -f or -force 使用这个选项，即使有错误发生，仍然继续导出 –full 这个选项把附加信息也加到CREATE TABLE的语句中 -l or -lock-tables 使用这个选项，导出表的时候服务器将会给表加锁。 -t or -no-create- info 这个选项使的mysqldump命令不创建CREATE TABLE语句，这个选项在您只需要数据而不需要DDL（数据库定义语句）时很方便。 -d or -no-data 这个选项使的mysqldump命令不创建INSERT语句。</p>
+
+            
+            <p class="more">
+                <a href="/2015/05/25/2019030500026/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/05/25/2019030500026/" title="教你使用mysqldump">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/tags/MySQL/page/6/">前一页</a><a class="page-number" href="/tags/MySQL/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/MySQL/page/5/">5</a><a class="page-number" href="/tags/MySQL/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/tags/MySQL/page/8/">8</a><a class="extend next" rel="next" href="/tags/MySQL/page/8/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

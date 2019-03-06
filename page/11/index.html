@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/page/11/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/page/11/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/page/11/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/page/11/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 首页 -->
+
+    
+    <h3 class="widget-hd">
+        <strong>
+            
+                最近动态
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/09/01/2019030500117/">
+    		mysql5.6和mysql5.7分配undo回滚段的区别
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-09-01T07:36:52.000Z">2015-09-01</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/mysql5-6/" title="mysql5.6">mysql5.6</a> / 
+    
+        <a href="/tags/mysql5-7/" title="mysql5.7">mysql5.7</a> / 
+    
+        <a href="/tags/undo/" title="undo">undo</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1、mysql5.7中分为2类：临时表空间回滚段和普通回滚段。 2、mysql5.6中没有区分。 As of <strong>MySQL 5.7.2</strong>, 32 undo logs are reserved for use by temporary tables and are hosted in the temporary table tablespace (<code>ibtmp1</code>). To allocate additional undo logs for data-modifying transactions that generate undo records,<code>innodb_undo_logs</code> must be set to a value greater than 32 if undo logs are stored in the system tablespace only. If you have configured separate undo tablespaces, <code>innodb_undo_logs</code> must be set to a value greater than 33 to allocate additional undo logs for data-modifying transactions. Each undo log can host up to a maximum of 1024 transactions. 如果undo log存储在系统表空间，innodb_undo_logs值必须大于32 否则独立存储的话必须大于3。 参考： <a href="http://www.tuicool.com/articles/IzQNRrz" target="_blank" rel="noopener">http://www.tuicool.com/articles/IzQNRrz</a> <a href="http://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar\_innodb\_undo\_logs" target="_blank" rel="noopener">http://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar\_innodb\_undo\_logs</a> <a href="http://dev.mysql.com/doc/refman/5.6/en/innodb-parameters.html#sysvar\_innodb\_undo\_logs" target="_blank" rel="noopener">http://dev.mysql.com/doc/refman/5.6/en/innodb-parameters.html#sysvar\_innodb\_undo\_logs</a> <a href="http://bbs.aliyun.com/read/244045.html?spm=5176.7189909.0.0.AB00as" target="_blank" rel="noopener">http://bbs.aliyun.com/read/244045.html?spm=5176.7189909.0.0.AB00as</a></p>
+
+            
+            <p class="more">
+                <a href="/2015/09/01/2019030500117/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/09/01/2019030500117/" title="mysql5.6和mysql5.7分配undo回滚段的区别">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/09/01/2019030500077/">
+    		mysql备份与还原
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-09-01T07:35:13.000Z">2015-09-01</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/数据库/" title="数据库">数据库</a> / 
+    
+        <a href="/tags/mysqldump/" title="mysqldump">mysqldump</a> / 
+    
+        <a href="/tags/mysql备份/" title="mysql备份">mysql备份</a> / 
+    
+        <a href="/tags/mysql还原/" title="mysql还原">mysql还原</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<h1 id="1-mysqldump"><a href="#1-mysqldump" class="headerlink" title="1.mysqldump"></a>1.mysqldump</h1><h2 id="1-1-备份方法："><a href="#1-1-备份方法：" class="headerlink" title="1.1.备份方法："></a>1.1.备份方法：</h2><p>（1）导出整个数据库并指定字符集(包括数据库中的数据）</p>
+<pre><code>mysqldump -u root -p --default-character-set=utf8 dbname &gt; 存放路径 
+</code></pre><p>（2）导出数据库结构（不含数据）</p>
+<pre><code>mysqldump -u username -p -d dbname &gt; dbname.sql    
+</code></pre><p>（3）导出数据库中的某张数据表（包含数据）</p>
+<pre><code>mysqldump -u username -p dbname tablename &gt; tablename.sql    
+</code></pre><p>（4）导出数据库中的某张数据表的表结构（不含数据）</p>
+<pre><code>mysqldump -u username -p -d dbname tablename &gt; tablename.sql
+</code></pre><h2 id="1-2-mysqldump常用参数"><a href="#1-2-mysqldump常用参数" class="headerlink" title="1.2.mysqldump常用参数"></a>1.2.mysqldump常用参数</h2><blockquote>
+<p>–compatible=name 它告诉 mysqldump，导出的数据将和哪种数据库或哪个旧版本的 MySQL 服务器相兼容。值可以为 ansi、mysql323、mysql40、postgresql、oracle、mssql、db2、maxdb、no_key_options、no_tables_options、no_field_options 等，要使用几个值，用逗号将它们隔开。当然了，它并不保证能完全兼容，而是尽量兼容。</p>
+<hr>
+<p>–all-databases , -A 导出全部数据库mysqldump -uroot -p –all-databases</p>
+<hr>
+<p>–all-tablespaces , -Y导出全部表空间。mysqldump -uroot -p –all-databases</p>
+<hr>
+<p>–all-tablespaces–no-tablespaces , -y不导出任何表空间信息。mysqldump -uroot -p –all-databases –no-tablespaces</p>
+<hr>
+<p>–add-drop-database每个数据库创建之前添加drop数据库语句。mysqldump -uroot -p –all-databases –add-drop-database</p>
+<hr>
+<p>–add-drop-table每个数据表创建之前添加drop数据表语句。(默认为打开状态，使用–skip-add-drop-table取消选项)mysqldump -uroot -p –all-databases (默认添加drop语句)mysqldump -uroot -p –all-databases –skip-add-drop-table (取消drop语句)</p>
+<hr>
+<p>–add-locks在每个表导出之前增加LOCK TABLES并且之后UNLOCK TABLE。(默认为打开状态，使用–skip-add-locks取消选项)mysqldump -uroot -p –all-databases (默认添加LOCK语句)mysqldump -uroot -p –all-databases –skip-add-locks (取消LOCK语句)</p>
+<hr>
+<p>–comments附加注释信息。默认为打开，可以用–skip-comments取消mysqldump -uroot -p –all-databases (默认记录注释)mysqldump -uroot -p –all-databases –skip-comments (取消注释)</p>
+<hr>
+<p>–compact导出更少的输出信息(用于调试)。去掉注释和头尾等结构。可以使用选项：–skip-add-drop-table –skip-add-locks –skip-comments –skip-disable-keysmysqldump -uroot -p –all-databases –compact</p>
+<hr>
+<p>–complete-insert, -c使用完整的insert语句(包含列名称)。这么做能提高插入效率，但是可能会受到max_allowed_packet参数的影响而导致插入失败。mysqldump -uroot -p –all-databases –complete-insert</p>
+<hr>
+<p>–compress, -C在客户端和服务器之间启用压缩传递所有信息mysqldump -uroot -p –all-databases –compress</p>
+<hr>
+<p>–databases, -B导出几个数据库。参数后面所有名字参量都被看作数据库名。mysqldump -uroot -p –databases test mysql</p>
+<hr>
+<p>–debug输出debug信息，用于调试。默认值为：d:t:o,/tmp/mysqldump.tracemysqldump -uroot -p –all-databases –debugmysqldump -uroot -p –all-databases –debug=” d:t:o,/tmp/debug.trace”</p>
+<hr>
+<p>–debug-info输出调试信息并退出mysqldump -uroot -p –all-databases –debug-info</p>
+<hr>
+<p>–default-character-set设置默认字符集，默认值为utf8mysqldump -uroot -p –all-databases –default-character-set=latin1</p>
+<hr>
+<p>–delayed-insert采用延时插入方式（INSERT DELAYED）导出数据mysqldump -uroot -p –all-databases –delayed-insert</p>
+<hr>
+<p>–events, -E导出事件。mysqldump -uroot -p –all-databases –events</p>
+<hr>
+<p>–flush-logs开始导出之前刷新日志。请注意：假如一次导出多个数据库(使用选项–databases或者–all-databases)，将会逐个数据库刷新日志。除使用–lock-all-tables或者–master-data外。在这种情况下，日志将会被刷新一次，相应的所以表同时被锁定。因此，如果打算同时导出和刷新日志应该使用–lock-all-tables 或者–master-data 和–flush-logs。mysqldump -uroot -p –all-databases –flush-logs</p>
+<hr>
+<p>–flush-privileges在导出mysql数据库之后，发出一条FLUSH PRIVILEGES 语句。为了正确恢复，该选项应该用于导出mysql数据库和依赖mysql数据库数据的任何时候。mysqldump -uroot -p –all-databases –flush-privileges</p>
+<hr>
+<p>–force在导出过程中忽略出现的SQL错误。mysqldump -uroot -p –all-databases –force</p>
+<hr>
+<p>–host, -h需要导出的主机信息mysqldump -uroot -p –host=localhost –all-databases</p>
+<hr>
+<p>–ignore-table不导出指定表。指定忽略多个表时，需要重复多次，每次一个表。每个表必须同时指定数据库和表名。例如：–ignore-table=database.table1 –ignore-table=database.table2 ……mysqldump -uroot -p –host=localhost –all-databases –ignore-table=mysql.user</p>
+<hr>
+<p>–lock-all-tables, -x提交请求锁定所有数据库中的所有表，以保证数据的一致性。这是一个全局读锁，并且自动关闭–single-transaction 和–lock-tables 选项。mysqldump -uroot -p –host=localhost –all-databases –lock-all-tables</p>
+<hr>
+<p>–lock-tables, -l开始导出前，锁定所有表。用READ LOCAL锁定表以允许MyISAM表并行插入。对于支持事务的表例如InnoDB和BDB，–single-transaction是一个更好的选择，因为它根本不需要锁定表。请注意当导出多个数据库时，–lock-tables分别为每个数据库锁定表。因此，该选项不能保证导出文件中的表在数据库之间的逻辑一致性。不同数据库表的导出状态可以完全不同。mysqldump -uroot -p –host=localhost –all-databases –lock-tables</p>
+<hr>
+<p>–no-create-db, -n只导出数据，而不添加CREATE DATABASE 语句。mysqldump -uroot -p –host=localhost –all-databases –no-create-db</p>
+<hr>
+<p>–no-create-info, -t只导出数据，而不添加CREATE TABLE 语句。mysqldump -uroot -p –host=localhost –all-databases –no-create-info</p>
+<hr>
+<p>–no-data, -d不导出任何数据，只导出数据库表结构。mysqldump -uroot -p –host=localhost –all-databases –no-data</p>
+<hr>
+<p>–opt 这只是一个快捷选项，等同于同时添加 –add-drop-tables –add-locking –create-option –disable-keys –extended-insert –lock-tables –quick –set-charset 选项。本选项能让 mysqldump 很快的导出数据，并且导出的数据能很快导回。该选项默认开启，但可以用 –skip-opt 禁用。注意，如果运行 mysqldump 没有指定 –quick 或 –opt 选项，则会将整个结果集放在内存中。如果导出大数据库的话可能会出现问题</p>
+</blockquote>
+<h2 id="1-3-还原"><a href="#1-3-还原" class="headerlink" title="1.3.还原"></a>1.3.还原</h2><p>转载或分享请标明地址:<a href="http://blog.csdn.net/w19981220" target="_blank" rel="noopener">http://blog.csdn.net/w19981220</a> mysqldump -u用户名 -p密码 数据库 &lt; 路径 mysql -uroot -p1234 数据库名称&lt;路径 还可以使用这一种方法 首先先use 那一个数据库</p>
+<pre><code>mysql&gt; source sql文件路径
+</code></pre></blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/09/01/2019030500077/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/09/01/2019030500077/" title="mysql备份与还原">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/09/01/2019030500151/">
+    		plsql导出导入
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-09-01T07:29:02.000Z">2015-09-01</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/PL-SQL/" title="PL/SQL">PL/SQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>导出步骤： 1 tools -&gt;export user object 选择选项，导出.sql文件 2 tools -&gt;export tables-&gt; Oracle Export 选择选项导出.dmp文件 导入步骤： 1 tools-&gt;import tables-&gt;SQL Inserts 导入.sql文件 2 tools-&gt;import talbes-&gt;Oracle Import然后再导入dmp文件 数据库的导入导出成功 =======================解释===================================================================== Tools-&gt;Export User Objects导出的是建表语句（包括存储结构） Tools-&gt;Export Tables里面包含三种导出方式： 三种方式都能导出表结构以及数据，网上说三种方法有区别，如下： Oracle Export，Sql Insert，pl/sql developer 第一种是导出为.dmp的文件格式，.dmp文件是二进制的，可以跨平台，还能包含权限，效率也很不错，用得最广 第二种是导出为.sql文件的，可用文本编辑器查看，通用性比较好，但效率不如第一种，适合小数据量导入导出。尤其注意的是表中不能有大字段（blob,clob,long），如果有，会提示不能导出(提示如下： table contains one or more LONG columns cannot export in sql format,user Pl/sql developer format instead)，可以用第一种和第三种方式导出。 第三种是导出为.pde格式的，.pde为Pl/sql developer自有的文件格式，只能用Pl/sql developer自己导入导出；不能用编辑器查看。</p>
+
+            
+            <p class="more">
+                <a href="/2015/09/01/2019030500151/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/09/01/2019030500151/" title="plsql导出导入">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/08/31/2019030500130/">
+    		oracle创建外部表
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-08-31T08:56:59.000Z">2015-08-31</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>oracle db允许以只读的形式查询外部表。外部表可以存储在任何oracle db可以读取的存储设备中，其内容不在db中保存，db只保存external table的metadata，db可以查询（join、sort）external table，可以创建view、synonym，但不可以执行DML语句。 创建外部表语法create table ……orginzition external，可以把外部表假想为一个view，可以正常的做select。 analyze 和 虚拟列 表分析不使用与外部表 创建外部表语法 外部表文件： example1.txt 360,Jane,Janus,ST_CLERK,121,17-MAY-2001,3000,0,50,jjanus 361,Mark,Jasper,SA_REP,145,17-MAY-2001,8000,.1,80,mjasper 362,Brenda,Starr,AD_ASST,200,17-MAY-2001,5500,0,10,bstarr 363,Alex,Alda,AC_MGR,145,17-MAY-2001,9000,.15,80,aalda example2.txt 401,Jesse,Cromwell,HR_REP,203,17-MAY-2001,7000,0,40,jcromwel 402,Abby,Applegate,IT_PROG,103,17-MAY-2001,9000,.2,60,aapplega 403,Carol,Cousins,AD_VP,100,17-MAY-2001,27000,.3,90,ccousins 404,John,Richardson,AC_ACCOUNT,205,17-MAY-2001,5000,0,110,jrichard 创建外部表oracle可识别路径：</p>
+<pre><code>SQL&gt; conn / as sysdba
+SQL&gt; create directory external_dir as &apos;/u01/app/oracle/oradata/external&apos;;
+
+Directory created.
+
+SQL&gt; grant read，write on directory external_dir to kevin;
+
+Grant succeeded.
+</code></pre><p>外部表的使用用户kevin，创建外部表</p>
+<pre><code>SQL&gt; CREATE TABLE   ex_employees
+  2                     (employee_id       NUMBER(4),
+  3                      first_name        VARCHAR2(20),
+  4                      last_name         VARCHAR2(25),
+  5                      job_id            VARCHAR2(10),
+  6                      manager_id        NUMBER(4),
+  7                      hire_date         DATE,
+  8                      salary            NUMBER(8,2),
+  9                      commission_pct    NUMBER(2,2),
+10                      department_id     NUMBER(4),
+11                      email             VARCHAR2(25)
+12                     )
+13       ORGANIZATION EXTERNAL
+14       (
+15         TYPE ORACLE_LOADER
+16         DEFAULT DIRECTORY external_dir
+17         ACCESS PARAMETERS
+18         (
+19           records delimited by newline
+20           badfile external_dir:&apos;empxt%a_%p.bad&apos;
+21           logfile  external_dir:&apos;empxt%a_%p.log&apos;
+22           fields terminated by &apos;,&apos;
+23           missing field values are null
+24           ( employee_id, first_name, last_name, job_id, manager_id,
+25             hire_date char date_format date mask &quot;dd-mon-yyyy&quot;,
+26             salary, commission_pct, department_id, email
+27           )
+28         )
+29         LOCATION (&apos;example1.txt&apos;, &apos;example2.txt&apos;)
+30       )
+31       PARALLEL
+32       REJECT LIMIT UNLIMITED;
+
+Table created.
+</code></pre><p>创建完成后可以可以通过cats把数据导入至数据库的表中，如果数据比较多，可以开启session level parallel导入</p>
+<pre><code>alter session enable parallel；
+create table employee as select * from ex_employee;
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 JOB_ID     MANAGER_ID HIRE_DATE     SALARY COMMISSION_PCT DEPARTMENT_ID EMAIL
+----------- -------------------- ------------------------- ---------- ---------- --------- ---------- -------------- ------------- -------------------------
+        360 Jane                 Janus                     ST_CLERK          121 17-MAY-01       3000              0            50 jjanus
+        361 Mark                 Jasper                    SA_REP            145 17-MAY-01       8000             .1            80 mjasper
+        362 Brenda               Starr                     AD_ASST           200 17-MAY-01       5500              0            10 bstarr
+        363 Alex                 Alda                      AC_MGR            145 17-MAY-01       9000            .15            80 aalda
+
+        401 Jesse                Cromwell                  HR_REP            203 17-MAY-01       7000              0            40 jcromwel
+        402 Abby                 Applegate                 IT_PROG           103 17-MAY-01       9000             .2            60 aapplega
+        403 Carol                Cousins                   AD_VP             100 17-MAY-01      27000             .3            90 ccousins
+        404 John                 Richardson                AC_ACCOUNT        205 17-MAY-01       5000              0           110 jrichard
+
+
+10 rows selected.
+</code></pre></blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/08/31/2019030500130/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/08/31/2019030500130/" title="oracle创建外部表">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/SQL-Server/">SQL Server</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/08/31/2019030500165/">
+    		SQL Server2012无法连接到2015-0831-1223
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-08-31T08:54:46.000Z">2015-08-31</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL-Server/" title="SQL Server">SQL Server</a> / 
+    
+        <a href="/tags/MSSQLSERVER/" title="MSSQLSERVER">MSSQLSERVER</a> / 
+    
+        <a href="/tags/SQL-Server2012/" title="SQL Server2012">SQL Server2012</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1、错误描述 <img src="http://img.blog.csdn.net/20150831140850940?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> <img src="http://img.blog.csdn.net/20150831140904891?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 2、错误原因 SQL Server(MSSQLSERVER)和SQL Server Analysis Services(MSSQLSERVER)服务没有启动 3、解决办法 管理工具-服务，启动两个服务 <img src="http://img.blog.csdn.net/20150831141939971?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p>
+
+            
+            <p class="more">
+                <a href="/2015/08/31/2019030500165/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/08/31/2019030500165/" title="SQL Server2012无法连接到2015-0831-1223">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/08/26/2019030500124/">
+    		Oracle与Mysql数据的事务处理机制
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-08-26T04:55:50.000Z">2015-08-26</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/事务/" title="事务">事务</a> / 
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/回滚/" title="回滚">回滚</a> / 
+    
+        <a href="/tags/rollback/" title="rollback">rollback</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>相比oracle的事务处理，Mydql相对还是简单一点的，但是事务作为一项重要的安全机制在数据库里面是必不可少的，特别是里面的事务回滚机制非常的有用，不多说了，先说一下mysql的事务处理： Mysql简单的回滚： 第一步：开始事务：start transaction; 第二步：执行dml等其他的变化操作。 第三步：混滚到开始事务之前状态： rollback; 这样的话在执行完毕之后就发现之前的一些操作没有执行成功。只有commit提交之后才会真正的把数据提交。但是，还要考虑下面的两种情况，一种是服务关闭的情况，这样我们的数据回滚在没有提交的情况下是有真正的去执行，还有就是回滚是能够用一次，再次使用虽然不报错，但是不起任何作用。 如果你会说了，我想在一次事务中国实现多次回滚怎么办，这里你可以使用设置保存点： 在上面的第二步中，你可以这样一下： savepoint 保存点1（名称而已）; 然后你继续执行dml，到了耨一个地方继续savepoint 保存点2; 你是不是想通过rollback to 保存点的方式会滚到之前的状态。但是，不得不告诉你，旺旺想想的和显示的情况并不是一模一样，你会发现只能够滚滚到第一个保存 点，其他的保存点会提示不存在！ Oracle的事务处理： Oracle是不用说明开启事务的，针对dml语句，当你设置保存点，接下来的步骤如上返回到保准点同样的用commit提交事务。 但是，我这里就总结出了一个重要的原则：事务回滚只能反方向一直逆行，这个过程已然不可逆。除非提交结束事务。</p>
+
+            
+            <p class="more">
+                <a href="/2015/08/26/2019030500124/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/08/26/2019030500124/" title="Oracle与Mysql数据的事务处理机制">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/08/25/2019030500063/">
+    		mysql-cluster数据自动修复（节点崩溃期间写入其他节点数据）
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-08-25T10:41:59.000Z">2015-08-25</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/cluster/" title="cluster">cluster</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>Mysql-cluster是具有故障节点恢复正常后的数据自动恢复功能的。 实验环境中包含两个data节点：分别位于46，47两台服务器上 ndb_mgm&gt; show Connected to Management Server at: localhost:1186 [ndbd(NDB)] 2 node(s) id=2 @10.186.20.46 (mysql-5.6.25 ndb-7.4.7, Nodegroup: 0) id=3 @10.186.20.47 (mysql-5.6.25 ndb-7.4.7, Nodegroup: 0, <em>) [ndb_mgmd(MGM)] 1 node(s) id=1 @10.186.20.45 (mysql-5.6.25 ndb-7.4.7) [mysqld(API)] 2 node(s) id=4 @10.186.20.46 (mysql-5.6.25 ndb-7.4.7) id=5 @10.186.20.47 (mysql-5.6.25 ndb-7.4.7) ndb_mgm&gt; 此处所说的数据自动修复是指的，在其中一个节点崩溃后，另外一个节点对外提供服务，在崩溃期间所有的数据变动（ndb表），可以在崩溃节点恢复并且假如集群后，自动同步数据。 实验过程如下： 1，检验当前数据（test.a表为ndb表） 46： mysql&gt; select </em> from a; +——+ | id | +——+ | 1 | | 2 | +——+ 2 rows in set (0.00 sec) 47： mysql&gt; select <em> from a; +——+ | id | +——+ | 1 | | 2 | +——+ 2 rows in set (0.01 sec) 2，停掉47上的sql，data节点 [root@10-186-20-47 mysql3307]# ps -ef|grep mysqld root 2216 2011 0 12:18 pts/0 00:00:00 /bin/sh ./bin/mysqld_safe –defaults-file=./my.cnf mysql 2385 2216 1 12:18 pts/0 00:01:54 /opt/mysql_s/bin/mysqld –defaults-file=./my.cnf –basedir=/opt/mysql_s/ –datadir=/opt/mysql_s/data –plugin-dir=/opt/mysql_s//lib/plugin –user=mysql –log-error=/opt/mysql_s/data/10-186-20-47.err –pid-file=/opt/mysql_s/data/10-186-20-47.pid –socket=/tmp/mysql3302.sock –port=3302 root 4979 4641 0 12:37 pts/1 00:00:00 /bin/sh ./bin/mysqld_safe –defaults-file=./my.cnf mysql 5157 4979 0 12:37 pts/1 00:00:12 /usr/local/mysql3307/bin/mysqld –defaults-file=./my.cnf –basedir=/usr/local/mysql3307 –datadir=/usr/local/mysql3307/data –plugin-dir=/usr/local/mysql3307/lib/plugin –user=mysql –log-error=/usr/local/mysql3307/data/10-186-20-47.err –pid-file=/usr/local/mysql3307/data/10-186-20-47.pid –socket=/tmp/mysql3307.sock –port=3307 root 14253 4641 0 14:44 pts/1 00:00:00 grep mysqld [root@10-186-20-47 mysql3307]# kill 2385 [root@10-186-20-47 mysql3307]# [root@10-186-20-47 mysql3307]# ps -ef|grep ndb root 7810 1 0 13:13 ? 00:00:03 ndbd –ndb-connectstring=10.186.20.45:1186 root 7811 7810 1 13:13 ? 00:01:28 ndbd –ndb-connectstring=10.186.20.45:1186 root 14312 4641 0 14:44 pts/1 00:00:00 grep ndb [root@10-186-20-47 mysql3307]# kill 7811 7810 [root@10-186-20-47 mysql3307]# 通过管理节点show命令查看是否处于不可用的状态 ndb_mgm&gt; show [ndbd(NDB)] 2 node(s) id=2 @10.186.20.46 (mysql-5.6.25 ndb-7.4.7, Nodegroup: 0, </em>) id=3 (not connected, accepting connect from 10.186.20.47) [ndb_mgmd(MGM)] 1 node(s) id=1 @10.186.20.45 (mysql-5.6.25 ndb-7.4.7) [mysqld(API)] 2 node(s) id=4 @10.186.20.46 (mysql-5.6.25 ndb-7.4.7) id=5 (not connected, accepting connect from 10.186.20.47) ndb_mgm&gt; 3，在46节点上做插入，删除操作。 mysql&gt; insert into a select 3; Query OK, 1 row affected (0.00 sec) Records: 1 Duplicates: 0 Warnings: 0 mysql&gt; delete from a where id=1; Query OK, 1 row affected (0.02 sec) mysql&gt; 4，开启47上的sql，data节点 [root@10-186-20-47 mysql_s]# ./bin/mysqld_safe –defaults-file=./my.cnf &amp; [2] 14408 [root@10-186-20-47 mysql_s]# 150825 14:46:26 mysqld_safe Logging to ‘/opt/mysql_s/data/10-186-20-47.err’. 150825 14:46:26 mysqld_safe Starting mysqld daemon with databases from /opt/mysql_s/data [root@10-186-20-47 mysql_s]# [root@10-186-20-47 mysql_s]# [root@10-186-20-47 mysql_s]# ndb ndbd ndbmtd [root@10-186-20-47 mysql_s]# ndbd –ndb-connectstring=10.186.20.45:1186 2015-08-25 14:46:54 [ndbd] INFO – Angel connected to ‘10.186.20.45:1186’ 2015-08-25 14:46:54 [ndbd] INFO – Angel allocated nodeid: 3 [root@10-186-20-47 mysql_s]# 5，检验47上数据是否同步 mysql&gt; select * from a; +——+ | id | +——+ | 2 | | 3 | +——+ 2 rows in set (0.00 sec) 数据已经自动修复。</p>
+
+            
+            <p class="more">
+                <a href="/2015/08/25/2019030500063/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/08/25/2019030500063/" title="mysql-cluster数据自动修复（节点崩溃期间写入其他节点数据）">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/08/24/2019030500160/">
+    		SQL-PL/SQL基础操作知识
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-08-24T04:58:11.000Z">2015-08-24</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/SQL-PL/" title="SQL-PL">SQL-PL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>SQL的4GL，对流程控制的支持不够，Oracle的PL/SQL是3GL，添加了流程控制、变量等支持可以在数据库层面上进行程序的设计。</p>
+<ul>
+<li>PL/SQL的特点 1.支持事务控制和SQL. 2.数据类型在SQL的基础上进行了扩展。 3.PL/SQL可存储在Oracle数据库上。 4.可以对PL/SQL进行权限控制。</li>
+<li>PL/SQL的优势 1.可以提高横向的运行性能。 2.可以使程序模块化。 3.可以采用逻辑控制语句来控制程序的结构。 4.利用运行时的错误信息，做日志记录。 5.良好的移植性。</li>
+<li><p>PL/SQL的结构 pl/sql的基本单位是块，分为三部分：声明部分，执行部分和异常处理部分。 以declare作为开始标记，执行部分用begin作为标志，异常处理部分以exception作为标志，其中执行部分是必须有的。</p>
+<p>[declare]<br>….<br>begin</p>
+<pre><code>...
+</code></pre><p>[exception]</p>
+<pre><code>...
+</code></pre><p>end;</p>
+</li>
+</ul>
+<p>例如： 只包含执行体</p>
+<pre><code>begin
+    dbms.output.put_lin(&apos;执行体...&apos;);
+end;
+</code></pre><p>注意，在使用dbms_output之前要打开控制器输出开关:set serveroutput on; 包含声明和执行体两部分：</p>
+<pre><code>declare
+     v_result number(8,2);
+begin
+     v_result = 100 / 6;
+     dbms_output.put_line(&apos;结果是：&apos;||v_result);
+end;
+</code></pre><p>包含声明、执行体和异常处理三部分</p>
+<pre><code>declare
+     v_ename varchar2(20);
+begin
+     select ename into v_ename from emp where empno=7369;
+     dbms_output.put_line(&apos;姓名：&apos;||v_ename);
+exception
+     when no_data_found then
+          dbms_output.put_line(&apos;没有该员工&apos;);
+     when too_many_rows_exeption then
+          dbms_output.put_line(&apos;数据过多&apos;);
+end；
+</code></pre><ul>
+<li><p>PL/SQL中变量的使用 1.声明变量的语法结构</p>
+<p>variable_name datatype[ [not null] {:=|default} expression];</p>
+</li>
+</ul>
+<p>2.常量声明</p>
+<pre><code>constant_name constant datatype
+[not null]
+{:=default} expression;
+</code></pre><p>常量的datatype有以下三种： 1）标量类型：单一类型，不存在组合 2）复合类型：由几种单一类型组成 3）引用类型：使用其他数据项的引用 标量类型： 数值 number(pression,scade) binary_integer pls_integer simple_integer 字符 char varchar2 nvarchar long 布尔类型 true/false/null 日期类型 date/datestamp 复合类型（先定义后声明变量） 记录类型声明语法</p>
+<pre><code>type type_name is recode
+(
+     field_name datatype
+     [ [not null] {:=|default} expression]
+     [,field_name datatype
+       [not null]
+       {:=|default} expression
+     ]
+);
+</code></pre><p>VARRAY变长数组：它是一个存储有序元素的集合，适合较少的数据使用。 声明语法：</p>
+<pre><code>type type_name is {varray} (size_limit) of element_type [not null]
+</code></pre><ul>
+<li>PL/SQL中的结构控制语句</li>
+</ul>
+<p>1.IF条件语句 ①</p>
+<pre><code>IF condition THEN
+     statement;
+END IF;
+</code></pre><p>②</p>
+<pre><code>IF condition THEN
+    statement;
+ELSE
+    statement;
+ENDF IF;
+</code></pre><p>③</p>
+<pre><code>IF condition THEN
+     statement;
+ELSE IF condition THEN
+     statement;
+ELSE
+     statement;
+END IF;
+</code></pre><p>2.CASE语句 ①简单case</p>
+<pre><code>[&lt;&lt;label_name&gt;&gt;]
+
+CASE case_operate
+WHEN condition THEN
+     statement;
+[WHEN condition THEN
+     statement;]
+[ELSE 
+     statement;]     
+
+END CASE[&lt;&lt;label_name&gt;&gt;]
+</code></pre><p>②搜索case</p>
+<pre><code>[&lt;&lt;label_name&gt;&gt;]
+CASE
+  WHEN boolean_exp THEN statement;
+  [WHEN boolean_exp THEN statement;]
+  ...
+  [ELSE statement;]
+
+END CASE[&lt;&lt;label_name&gt;&gt;]
+</code></pre><ul>
+<li><p>LOOP循环控制语句 1.基本LOOP</p>
+<p>[&lt;&lt;label_name&gt;&gt;]<br>LOOP</p>
+<pre><code>statement;
+</code></pre><p>END LOOP [&lt;&lt;label_name&gt;&gt;];</p>
+</li>
+</ul>
+<p>基本loop语句通常和exit连用，否则会出现死循环</p>
+<pre><code>[&lt;&lt;label_name&gt;&gt;]
+loop
+     ....
+     exit when ...
+     | if ... exit;
+</code></pre><p>2.WHILE..LOOP</p>
+<pre><code>[&lt;&lt;label_name&gt;&gt;]
+when boolean_exp
+loop
+     statement;
+end loop[&lt;&lt;label_name&gt;&gt;]
+</code></pre><p>3.FOR…LOOP</p>
+<pre><code>[&lt;&lt;label_name&gt;&gt;]
+for index_name in 
+[REVERSE]  //反向
+lower_bound, upper_bound
+loop
+    statement;
+end loop[&lt;&lt;label_name&gt;&gt;]
+</code></pre>
+            
+            <p class="more">
+                <a href="/2015/08/24/2019030500160/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/08/24/2019030500160/" title="SQL-PL/SQL基础操作知识">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/开发语言/">开发语言</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/08/20/2019030500041/">
+    		精通Hibernate——Session的保存、更新、删除和查询
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-08-20T11:34:47.000Z">2015-08-20</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/hibernate/" title="hibernate">hibernate</a> / 
+    
+        <a href="/tags/session/" title="session">session</a> / 
+    
+        <a href="/tags/方法/" title="方法">方法</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>session的save方法 使一个临时对象变为持久化对象。 session的save方法完成以下操作： 1、把customer对象加入到缓存中，使他变为持久化对象 2、选用映射文件指定的标识符生成器为持久化对象分配唯一的OID。Customer.hbm.xml文件中id元素的 子元素指定标识符生成器： <generator> <id name="id" column="ID"> <generator class="increment"> </generator></id> 在配置文件配置了id自增后，在程序中在setId();是无效的。 3、计划执行一个insert语句，把customer对象当前的属性组装到insert语句中，save方法并不会立即执行sql语句。只有当清理缓存时才会执行insert语句。如果在save方法之后又修改了持久化对象的属性，这会使得Session在清理缓存的时候额外执行Sql 的update语句。以下两段代码尽管都能完成相同功能，第一段代码仅执行了一条insert语句，而右边执行了一条insert语句和一条update语句。第一段代码减少了数据库访问次数，具有更好的性能。 Customer customer = new Customer(); // 先设置customer属性再保存 customer.setName(“Tom”); session.save(customer); tx.commit(); Customer customer = new Customer(); session.save(customer); // 先保存再设置customer属性 customer.setName(“Tom”); tx.commit(); Hibernate通过持久化对象的OID来维持他和数据库相关记录的对应关系。当Customer对象处于持久化状态时，不允许随意修改他的OID。 session的update方法 使一个游离对象转变为持久化对象 session的update方法完成以下操作： 1、把Customer对象重新加入到Session缓存中，使他变为持久化对象 2、计划执行一个update语句。值得注意的是session只在清理缓存的时候执行update 只要通过update方法使游离对象被一个Session关联，即使没有修改Customer对象的任何属性，Session在清理缓存时也会执行由update方法计划的update语句。 如果希望session仅仅当修改了Customer对象的属性时才执行update语句，可以把映射文件中class元素的select-before-update设为true，默认为false； <class name="mypack.Customers" table="CUSTOMERS" select-before-update="true"> 当update方法关联一个游离对象时，如果在session缓存中已经存在相同的OID的持久化对象，会抛出异常。 session的saveOrUpdate方法 saveOrUpdate方法同时包含了save与update方法，如果传入的参数是临时对象，就调用save方法，如果传入的是游离对象就调用update方法，如果传入的是持久化对象就直接返回。那么Hibernate如何判断对象的状态呢？ 下面看看临时对象的判断条件： 1、Java对象的OID取值为null 2、Java对象具有version属性并且取值为null 3、在映射文件中为id元素设置了unsaved-value属性，并且OID取值与unsaved-value属性值匹配 4、在映射文件中为version属性设置了unsaved-value属性，并且OID取值与unsaved-value属性值匹配 5、自定义了Hibernate的Interceptor实现类，并且Interceptor的isUnsaved方法返回true session的load和get方法 Session的load和get方法都能根据OID从数据库中加载一个持久化对象，区别在于：当数据库中没有与之对应的记录时load方法会抛出ObjectNotFoundException异常，get方法返回null。 get方法会在调用之后立即向数据库发出sql语句（不考虑缓存的情况下），返回持久化对象；而load方法会在调用后返回一个代理对象，该代理对象只保存了实体对象的id，直到使用对象的非主键属性时才会发出sql语句 Session的delete方法 delete方法用于从数据库中删除与Java对象对应的记录，如果传入的参数是持久化对象，session就计划执行一个delete语句，如果传入的是游离对象，先使游离对象被session关联，使他变为持久化对象，然后计划执行一个delete语句。Session只有在清理缓存的时候才会执行delete语句，只有调用session.close才会从session缓存中删除对象。</class></generator></p>
+
+            
+            <p class="more">
+                <a href="/2015/08/20/2019030500041/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/08/20/2019030500041/" title="精通Hibernate——Session的保存、更新、删除和查询">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/08/18/2019030500118/">
+    		Mysql5.7.8安装文档（二进制安装）
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-08-18T06:23:32.000Z">2015-08-18</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>Mysql5.7.8安装文档（二进制安装） 5.7的二进制安装方法与5.6大概差不多，但有些地方不太一样，比如说，初始化命令的该变，5.7之后的小版本初始化命令也不相同。现在使用的是开发版的5.7.8. 第一步，下载解压二进制文件，加压，进入解压出来的文件 [root@mysql47 mysql33333]# ll total 160 drwxr-xr-x 2 7161 wheel 4096 Jul 20 20:54 bin -rw-r–r– 1 7161 wheel 17987 Jul 20 20:25 COPYING drwxr-xr-x 2 7161 wheel 4096 Jul 20 20:54 docs drwxr-xr-x 3 7161 wheel 4096 Jul 20 20:54 include -rw-r–r– 1 7161 wheel 106739 Jul 20 20:25 INSTALL-BINARY drwxr-xr-x 4 7161 wheel 4096 Jul 20 20:54 lib drwxr-xr-x 4 7161 wheel 4096 Jul 20 20:54 man -rw-r–r– 1 7161 wheel 2478 Jul 20 20:25 README drwxr-xr-x 28 7161 wheel 4096 Jul 20 20:54 share drwxr-xr-x 2 7161 wheel 4096 Jul 20 20:54 support-files [root@mysql47 mysql33333]# 会发现没有data目录。没有之前mysql5.6的scripts文件夹。 我是重命名了一下，mysql33333 第二步，在mysql33333下建立data目录 第三步，更改文件夹mysql33333的文件所属用户 [root@mysql47 local]# chown -R mysql:mysql mysql33333 [root@mysql47 mysql33333]# ll total 164 drwxr-xr-x 2 mysql mysql 4096 Jul 20 20:54 bin -rw-r–r– 1 mysql mysql 17987 Jul 20 20:25 COPYING drwxr-xr-x 2 mysql mysql 4096 Aug 18 11:07 data drwxr-xr-x 2 mysql mysql 4096 Jul 20 20:54 docs drwxr-xr-x 3 mysql mysql 4096 Jul 20 20:54 include -rw-r–r– 1 mysql mysql 106739 Jul 20 20:25 INSTALL-BINARY drwxr-xr-x 4 mysql mysql 4096 Jul 20 20:54 lib drwxr-xr-x 4 mysql mysql 4096 Jul 20 20:54 man -rw-r–r– 1 mysql mysql 2478 Jul 20 20:25 README drwxr-xr-x 28 mysql mysql 4096 Jul 20 20:54 share drwxr-xr-x 2 mysql mysql 4096 Jul 20 20:54 support-files [root@mysql47 mysql33333]# 第四步，初始化数据库 由于我的版本是5.6.8.所以根据官档的说明，进行安装。以下是官档的相关说明。 shell&gt; ln -s full-path-to-mysql-VERSION-OS mysql shell&gt; cd mysql shell&gt; mkdir mysql-files shell&gt; chmod 770 mysql-files shell&gt; chown -R mysql . shell&gt; chgrp -R mysql . shell&gt; bin/mysql_install_db –user=mysql # Before MySQL 5.7.6 shell&gt; bin/mysqld –initialize –user=mysql # MySQL 5.7.6 and up shell&gt; bin/mysql_ssl_rsa_setup # MySQL 5.7.6 and up shell&gt; chown -R root . shell&gt; chown -R mysql data mysql-files shell&gt; bin/mysqld_safe –user=mysql &amp;</p>
+<h1 id="Next-command-is-optional"><a href="#Next-command-is-optional" class="headerlink" title="Next command is optional"></a>Next command is optional</h1><p>shell&gt; cp support-files/mysql.server /etc/init.d/mysql.server 命令如下： [root@mysql47 bin]# ./mysqld –initialize –basedir=/usr/local/mysql33333 –datadir=/usr/local/mysql33333/data &amp; 会报warning提示信息，可以看一下。显示给出一个root的临时密码，但是后来登录使用的时候不能用。 第五步，./mysql_ssl_rsa_setup –datadir=/usr/local/mysql33333/data 第六步：在mysql33333文件夹下，并配置相关参数，简单配置一下就好。 cp ./support-files/my-default.cnf ./my.cnf 第六步，更改mysql33333文件夹所属。 Chown -R mysql:mysql /usr/local/mysql33333 第七步：利用–skip-grant-tables的方式登录启动数据库服务器 之所以通过这种方式启动，是因为，虽然在初始化的时候，warning里面已经给出了root的临时密码，但是我尝试了一下，正常启动mysql服务器之后，用那个密码登不进去。 第八步,登录服务器，并且修改root密码。 先看版本号： mysql&gt; select version(); +———–+ | version() | +———–+ | 5.7.8-rc | +———–+ 1 row in set (0.00 sec) 看mysql.user表 mysql&gt; select <em> from mysql.user\G <strong>_</strong>\</em>****************<strong>_</strong> 1. row <strong>_</strong>*****************<strong>_</strong> Host: localhost User: root Select_priv: Y Insert_priv: Y Update_priv: Y Delete_priv: Y Create_priv: Y Drop_priv: Y Reload_priv: Y Shutdown_priv: Y Process_priv: Y File_priv: Y Grant_priv: Y References_priv: Y Index_priv: Y Alter_priv: Y Show_db_priv: Y Super_priv: Y Create_tmp_table_priv: Y Lock_tables_priv: Y Execute_priv: Y Repl_slave_priv: Y Repl_client_priv: Y Create_view_priv: Y Show_view_priv: Y Create_routine_priv: Y Alter_routine_priv: Y Create_user_priv: Y Event_priv: Y Trigger_priv: Y Create_tablespace_priv: Y ssl_type: ssl_cipher: x509_issuer: x509_subject: max_questions: 0 max_updates: 0 max_connections: 0 max_user_connections: 0 plugin: mysql_native_password authentication_string: *D5F86FA8F536F9E81C12E8A993EF5292A90259FB password_expired: Y password_last_changed: 2015-08-18 11:11:39 password_lifetime: NULL account_locked: N 1 row in set (0.00 sec) 只有一个root帐号，并且密码已经过期了。 在这里修改密码的时候，要考虑到pasword_expied,设置成N，才可以用。 修改密码： mysql&gt; update mysql.user set authentication_string=password(‘redhat’), password_expired=’N’ where user=’root’; Query OK, 1 row affected, 1 warning (0.00 sec) Rows matched: 1 Changed: 1 Warnings: 1 mysql&gt; flush privileges; Query OK, 0 rows affected (0.00 sec) 可能感觉这个方法有点怪异，为什么不直接set password=password(); 看一下 mysql&gt; set password=password(‘123’); ERROR 1131 (42000): You are using MySQL as an anonymous user and anonymous users are not allowed to change passwords 答案是不可以，因为mysql.user表已经没有这个字段了。 修改完成之后，用root登录。 mysql&gt; select current_user(); +—————-+ | current_user() | +—————-+ | root@localhost | +—————-+ 1 row in set (0.00 sec) 登录ok。</p>
+
+            
+            <p class="more">
+                <a href="/2015/08/18/2019030500118/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/08/18/2019030500118/" title="Mysql5.7.8安装文档（二进制安装）">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/page/10/">前一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/12/">后一页</a>
+    </nav>
+    
+
+
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

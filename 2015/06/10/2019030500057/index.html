@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>MongoDB常用命令 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2015/06/10/2019030500057/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2015/06/10/2019030500057/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/2015/06/10/2019030500057/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2015/06/10/2019030500057/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>MongoDB常用命令</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2015-06-10T04:33:16.000Z">2015-06-10</time>
+    </p>
+    <div class="post-content">
+        <blockquote>
+<p>首先我们先安装这个数据库，你可以使用windows或者linux，但推荐使用的是linux，我使用的是ubuntu12.04.在下方的网址中共可以下载，基本都是64位的系统。如果位linux系统也可以使用命令行安装，我就是使用sudo apt-get install mongodb。</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><span style="font-size:14px;"><a href="https://www.mongodb.org/downloads" target="_blank" rel="noopener">https://www.mongodb.org/downloads</a></span></li>
+</ol>
+<p>MongoDB 由 databases 组成,databases 由 collections 组成,collections 由documents(相当于行)组成,而 documents 有 fields(相当于列)组成。 help 最开始应该介绍的就是help函数，学习一个东西最好的文档就是官方文档，下面我会给出几个指令的执行过程。最基本的形式就是db.help()，也可以在中间加上数据库的名称如db.douban.help()。</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><blockquote>
+<p>db.help()</p>
+</blockquote>
+</li>
+<li>DB methods:</li>
+<li>db.addUser(username, password[, readOnly=false])</li>
+<li>db.auth(username, password)</li>
+<li>db.cloneDatabase(fromhost)</li>
+<li>db.commandHelp(name) returns the help for the command</li>
+<li>db.copyDatabase(fromdb, todb, fromhost)</li>
+<li>db.createCollection(name, { size : …, capped : …, max : … } )</li>
+<li>db.currentOp() displays the current operation in the db</li>
+<li>db.dropDatabase()</li>
+<li>db.eval(func, args) run code server-side</li>
+<li>db.getCollection(cname) same as db[‘cname’] or db.cname</li>
+<li>db.getCollectionNames()</li>
+<li>db.getLastError() - just returns the err msg string</li>
+<li>db.getLastErrorObj() - return full status object</li>
+<li>db.getMongo() get the server connection object</li>
+<li>db.getMongo().setSlaveOk() allow this connection to read from the nonmaster member of a replica pair</li>
+<li>db.getName()</li>
+<li>db.getPrevError()</li>
+<li>db.getProfilingLevel() - deprecated</li>
+<li>db.getProfilingStatus() - returns if profiling is on and slow threshold</li>
+<li>db.getReplicationInfo()</li>
+<li>db.getSiblingDB(name) get the db at the same server as this one</li>
+<li>db.isMaster() check replica primary status</li>
+<li>db.killOp(opid) kills the current operation in the db</li>
+<li>db.listCommands() lists all the db commands</li>
+<li>db.logout()</li>
+<li>db.printCollectionStats()</li>
+<li>db.printReplicationInfo()</li>
+<li>db.printSlaveReplicationInfo()</li>
+<li>db.printShardingStatus()</li>
+<li>db.removeUser(username)</li>
+<li>db.repairDatabase()</li>
+<li>db.resetError()</li>
+<li>db.runCommand(cmdObj) run a database command.  if cmdObj is a string, turns it into { cmdObj : 1 }</li>
+<li>db.serverStatus()</li>
+<li>db.setProfilingLevel(level,<slowms>) 0=off 1=slow 2=all</slowms></li>
+<li>db.shutdownServer()</li>
+<li>db.stats()</li>
+<li>db.version() current version of the server</li>
+<li>db.getMongo().setSlaveOk() allow queries on a replication slave server</li>
+<li>db.fsyncLock() flush data to disk and lock server for backups</li>
+<li>db.fsyncUnock() unlocks server following a db.fsyncLock()</li>
+</ol>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><blockquote>
+<p>db.douban.help()</p>
+</blockquote>
+</li>
+<li>DBCollection help</li>
+<li>db.douban.find().help() - show DBCursor help</li>
+<li>db.douban.count()</li>
+<li>db.douban.dataSize()</li>
+<li>db.douban.distinct( key ) - eg. db.douban.distinct( ‘x’ )</li>
+<li>db.douban.drop() drop the collection</li>
+<li>db.douban.dropIndex(name)</li>
+<li>db.douban.dropIndexes()</li>
+<li>db.douban.ensureIndex(keypattern[,options]) - options is an object with these possible fields: name, unique, dropDups</li>
+<li>db.douban.reIndex()</li>
+<li>db.douban.find([query],[fields]) - query is an optional query filter. fields is optional set of fields to return.</li>
+<li>e.g. db.douban.find( {x:77} , {name:1, x:1} )</li>
+<li>db.douban.find(…).count()</li>
+<li>db.douban.find(…).limit(n)</li>
+<li>db.douban.find(…).skip(n)</li>
+<li>db.douban.find(…).sort(…)</li>
+<li>db.douban.findOne([query])</li>
+<li>db.douban.findAndModify( { update : … , remove : bool [, query: {}, sort: {}, ‘new’: false] } )</li>
+<li>db.douban.getDB() get DB object associated with collection</li>
+<li>db.douban.getIndexes()</li>
+<li>db.douban.group( { key : …, initial: …, reduce : …[, cond: …] } )</li>
+<li>db.douban.mapReduce( mapFunction , reduceFunction , <optional params> )</optional></li>
+<li>db.douban.remove(query)</li>
+<li>db.douban.renameCollection( newName , <droptarget> ) renames the collection.</droptarget></li>
+<li>db.douban.runCommand( name , <options> ) runs a db command with the given name where the first param is the collection name</options></li>
+<li>db.douban.save(obj)</li>
+<li>db.douban.stats()</li>
+<li>db.douban.storageSize() - includes free space allocated to this collection</li>
+<li>db.douban.totalIndexSize() - size in bytes of all the indexes</li>
+<li>db.douban.totalSize() - storage allocated for all data and indexes</li>
+<li>db.douban.update(query, object[, upsert_bool, multi_bool])</li>
+<li>db.douban.validate( <full> ) - SLOW</full></li>
+<li>db.douban.getShardVersion() - only for use with sharding</li>
+<li>db.douban.getShardDistribution() - prints statistics about data distribution in the cluster</li>
+</ol>
+<p>use use deng可以用来创建 deng,不用担心 deng 不会创建,当创建第一个 collection 时,deng会自动创建。 insert         db.unicorns.insert({name: ‘demo’, sex: ‘m’, weight: 70})，插入一个数据 collection 为 unicorns，使 用 db.getCollectionNames() , 会 得 到 unicorns 和 system.indexes 。system.indexes 对每个 DB 都会有,用于记录 index。可以通过find函数查看是否插入成功。 find  db.unicorns.find()会看到 document。就相当于mysql中的select * from table; 查看集合中的所有内容。</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><span style="font-size:14px;">使用查询</span></li>
+<li><p><span style="font-size:14px;">db.unicorns.find({name: ‘Dunx’})</span></p>
+</li>
+<li><p>其他说明:</p>
+</li>
+<li>$lt, $lte, $gt, $gte and $ne 分别表示小于、小于等于、大于、大于等于、不等于</li>
+<li><p>db.unicorns.find({gender: {$ne: ‘f’}, weight: {$gte: 701}})</p>
+</li>
+<li><p>$exists 用于表示 field 是否存在</p>
+</li>
+<li><p>db.unicorns.find({vampires: {$exists: false}})</p>
+</li>
+<li><p>or 和 and</p>
+</li>
+<li>db.unicorns.find({gender: ‘f’, $or: [{loves: ‘apple’}, {loves: ‘orange’}, {weight: {$lt: 500}}]})</li>
+</ol>
+<p>db.unicorns.find(null, {name: 1}) 只返回 name 这个 field,具体如下所示:</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><blockquote>
+<p>db.unicorns.find(null, {name: 1})</p>
+</blockquote>
+</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cf7”), “name” : “Aurora” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cf6”), “name” : “Horny” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cf8”), “name” : “Unicrom” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cf9”), “name” : “Roooooodles” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cfa”), “name” : “Solnara” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cfb”), “name” : “Ayna” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cfc”), “name” : “Kenny” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cfd”), “name” : “Raleigh” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cfe”), “name” : “Leia” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081cff”), “name” : “Pilot” }</li>
+<li>{ “_id” : ObjectId(“4da6f22da8d5cd3b72081d00”), “name” : “Nimue” }</li>
+<li>{ “_id” : ObjectId(“4da6f231a8d5cd3b72081d01”), “name” : “Dunx” }</li>
+<li><blockquote>
+<p>db.unicorns.find(null, {name: 1,_id:0})</p>
+</blockquote>
+</li>
+<li>{ “name” : “Aurora” }</li>
+<li>{ “name” : “Horny” }</li>
+<li>{ “name” : “Unicrom” }</li>
+<li>{ “name” : “Roooooodles” }</li>
+<li>{ “name” : “Solnara” }</li>
+<li>{ “name” : “Ayna” }</li>
+<li>{ “name” : “Kenny” }</li>
+<li>{ “name” : “Raleigh” }</li>
+<li>{ “name” : “Leia” }</li>
+<li>{ “name” : “Pilot” }</li>
+<li>{ “name” : “Nimue” }</li>
+<li>{ “name” : “Dunx” }</li>
+</ol>
+<p>sort</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li>db.unicorns.find().sort({weight: -1})</li>
+<li>db.unicorns.find().sort({name: 1, vampires: -1})</li>
+<li><p>#1 表示升序,-1 表示降序</p>
+</li>
+<li><p><pre name="code" class="cpp">db.unicorns.find().sort({weight: -1}).limit(2).skip(1)</pre></p>
+</li>
+<li>#得到第二个和第三个，limit 规定查询个数,skip 规定忽略几个。</li>
+</ol>
+<p>count</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li>db.unicorns.count({vampires: {$gt: 50}})</li>
+<li>#or</li>
+<li>db.unicorns.find({vampires: {$gt: 50}}).count()</li>
+</ol>
+<p>remove</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li>db.unicorns.remove()</li>
+<li>如下面所示。</li>
+<li><blockquote>
+<p>db.unicorns.remove()</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>db.unicorns.find()</p>
+</blockquote>
+</li>
+<li><blockquote>
+</blockquote>
+</li>
+</ol>
+<p>update</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><span style="font-size:14px;">db.unicorns.update({name: ‘jingdong’}, {weight: 590})</span></li>
+</ol>
+<p>注意:此语句执行后,先查询 name 是’jingdong’的所有数据,然后将 name是’jingdong’的整个 document 都替换为{weight: 590}。 即 db.unicorns.insert({name: ‘jingdong’, dob: new Date(1979, 7, 18, 18, 44),loves:[‘apple’], weight: 575, gender: ‘m’, vampires: 99});整个替换为{weight: 590}，最后只剩一个{weight: 590}。 执行$set，不会替换原有数据，因此正确的更新方式如下：</p>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li><span style="font-size:14px;">db.unicorns.update({name: ‘jingdong’}, {$set: {weight: 590}})</span></li>
+</ol>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li>db.unicorns.update({name: ‘Pilot’}, {$inc: {<span style="font-size:14px;">weight: 500</span>}})</li>
+<li><p>$inc 增加或减少数字 如果原来为500之后会变为1000，因为500+500 = 1000</p>
+</li>
+<li><p>db.unicorns.update({name: ‘Aurora’}, {$push: {loves: ‘sugar’}})</p>
+</li>
+<li>$push 增加数组元素</li>
+<li>$pop 减少数组元素</li>
+</ol>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li>若存在则更新,否则添加</li>
+<li>db.hits.update({page: ‘unicorns’}, {$inc: {hits: 1}}, true);</li>
+<li>db.hits.find();</li>
+<li>使用第三个参数设置是否 true(upset)</li>
+<li>,默认是 false</li>
+</ol>
+<p><strong>[cpp]</strong></p>
+<ol>
+<li>#批量更新</li>
+<li>db.unicorns.update({}, {$set: {vaccinated: true }});</li>
+<li>db.unicorns.find({vaccinated: true});</li>
+<li>不会将所有的数据的 vaccinated 都更新为 true</li>
+<li>若将所有的数据的 vaccinated 都更新为 true,则如下:</li>
+<li>db.unicorns.update({}, {$set: {vaccinated: true }}, false, true);</li>
+<li>db.unicorns.find({vaccinated: true});</li>
+</ol>
+<p>ensureIndex 创建索引的方式 db.unicorns.ensureIndex({name: 1}) 删除索引的方式 db.unicorns.dropIndex({name: 1}) 创建独立索引 db.unicorns.ensureIndex({name: 1}, {unique: true}) 创建联合索引 db.unicorns.dropIndex({name: 1, vampires: -1}) 使用 web 获得 mongoDB 的信息 使用 <a href="http://localhost:28017/" target="_blank" rel="noopener">http://localhost:28017/</a> 获得 MongoDB 的信息。 数据备份和恢复 使用 mongodump备份数据库 mongodump 使用 mongorestore恢复数据库 mongorestore</p>
+</blockquote>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/NOSQL/">NOSQL</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MongoDB/" title="MongoDB">MongoDB</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br>
+        <a href="/2015/06/11/2019030500115/">
+            
+                MySQL Study之--Mysql启动失败“mysql.host”
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br>
+        <a href="/2015/06/10/2019030500166/">
+            
+                SqlServer 2012 FileTable 文件表
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '2019030500057' || '2015/06/10/2019030500057/',
+    owner: 'your_github_id',
+    repo: 'your_blog_comments',
+    clientId: 'your_client_id',
+    clientSecret: 'your_client_secret'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>`Oracle`标签下的文章 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/tags/Oracle/page/3/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/tags/Oracle/page/3/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/tags/Oracle/page/3/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/tags/Oracle/page/3/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 按标签分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `Oracle`标签下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/08/31/2019030500130/">
+    		oracle创建外部表
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-08-31T08:56:59.000Z">2015-08-31</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>oracle db允许以只读的形式查询外部表。外部表可以存储在任何oracle db可以读取的存储设备中，其内容不在db中保存，db只保存external table的metadata，db可以查询（join、sort）external table，可以创建view、synonym，但不可以执行DML语句。 创建外部表语法create table ……orginzition external，可以把外部表假想为一个view，可以正常的做select。 analyze 和 虚拟列 表分析不使用与外部表 创建外部表语法 外部表文件： example1.txt 360,Jane,Janus,ST_CLERK,121,17-MAY-2001,3000,0,50,jjanus 361,Mark,Jasper,SA_REP,145,17-MAY-2001,8000,.1,80,mjasper 362,Brenda,Starr,AD_ASST,200,17-MAY-2001,5500,0,10,bstarr 363,Alex,Alda,AC_MGR,145,17-MAY-2001,9000,.15,80,aalda example2.txt 401,Jesse,Cromwell,HR_REP,203,17-MAY-2001,7000,0,40,jcromwel 402,Abby,Applegate,IT_PROG,103,17-MAY-2001,9000,.2,60,aapplega 403,Carol,Cousins,AD_VP,100,17-MAY-2001,27000,.3,90,ccousins 404,John,Richardson,AC_ACCOUNT,205,17-MAY-2001,5000,0,110,jrichard 创建外部表oracle可识别路径：</p>
+<pre><code>SQL&gt; conn / as sysdba
+SQL&gt; create directory external_dir as &apos;/u01/app/oracle/oradata/external&apos;;
+
+Directory created.
+
+SQL&gt; grant read，write on directory external_dir to kevin;
+
+Grant succeeded.
+</code></pre><p>外部表的使用用户kevin，创建外部表</p>
+<pre><code>SQL&gt; CREATE TABLE   ex_employees
+  2                     (employee_id       NUMBER(4),
+  3                      first_name        VARCHAR2(20),
+  4                      last_name         VARCHAR2(25),
+  5                      job_id            VARCHAR2(10),
+  6                      manager_id        NUMBER(4),
+  7                      hire_date         DATE,
+  8                      salary            NUMBER(8,2),
+  9                      commission_pct    NUMBER(2,2),
+10                      department_id     NUMBER(4),
+11                      email             VARCHAR2(25)
+12                     )
+13       ORGANIZATION EXTERNAL
+14       (
+15         TYPE ORACLE_LOADER
+16         DEFAULT DIRECTORY external_dir
+17         ACCESS PARAMETERS
+18         (
+19           records delimited by newline
+20           badfile external_dir:&apos;empxt%a_%p.bad&apos;
+21           logfile  external_dir:&apos;empxt%a_%p.log&apos;
+22           fields terminated by &apos;,&apos;
+23           missing field values are null
+24           ( employee_id, first_name, last_name, job_id, manager_id,
+25             hire_date char date_format date mask &quot;dd-mon-yyyy&quot;,
+26             salary, commission_pct, department_id, email
+27           )
+28         )
+29         LOCATION (&apos;example1.txt&apos;, &apos;example2.txt&apos;)
+30       )
+31       PARALLEL
+32       REJECT LIMIT UNLIMITED;
+
+Table created.
+</code></pre><p>创建完成后可以可以通过cats把数据导入至数据库的表中，如果数据比较多，可以开启session level parallel导入</p>
+<pre><code>alter session enable parallel；
+create table employee as select * from ex_employee;
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 JOB_ID     MANAGER_ID HIRE_DATE     SALARY COMMISSION_PCT DEPARTMENT_ID EMAIL
+----------- -------------------- ------------------------- ---------- ---------- --------- ---------- -------------- ------------- -------------------------
+        360 Jane                 Janus                     ST_CLERK          121 17-MAY-01       3000              0            50 jjanus
+        361 Mark                 Jasper                    SA_REP            145 17-MAY-01       8000             .1            80 mjasper
+        362 Brenda               Starr                     AD_ASST           200 17-MAY-01       5500              0            10 bstarr
+        363 Alex                 Alda                      AC_MGR            145 17-MAY-01       9000            .15            80 aalda
+
+        401 Jesse                Cromwell                  HR_REP            203 17-MAY-01       7000              0            40 jcromwel
+        402 Abby                 Applegate                 IT_PROG           103 17-MAY-01       9000             .2            60 aapplega
+        403 Carol                Cousins                   AD_VP             100 17-MAY-01      27000             .3            90 ccousins
+        404 John                 Richardson                AC_ACCOUNT        205 17-MAY-01       5000              0           110 jrichard
+
+
+10 rows selected.
+</code></pre></blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/08/31/2019030500130/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/08/31/2019030500130/" title="oracle创建外部表">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/08/26/2019030500124/">
+    		Oracle与Mysql数据的事务处理机制
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-08-26T04:55:50.000Z">2015-08-26</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/事务/" title="事务">事务</a> / 
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/回滚/" title="回滚">回滚</a> / 
+    
+        <a href="/tags/rollback/" title="rollback">rollback</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>相比oracle的事务处理，Mydql相对还是简单一点的，但是事务作为一项重要的安全机制在数据库里面是必不可少的，特别是里面的事务回滚机制非常的有用，不多说了，先说一下mysql的事务处理： Mysql简单的回滚： 第一步：开始事务：start transaction; 第二步：执行dml等其他的变化操作。 第三步：混滚到开始事务之前状态： rollback; 这样的话在执行完毕之后就发现之前的一些操作没有执行成功。只有commit提交之后才会真正的把数据提交。但是，还要考虑下面的两种情况，一种是服务关闭的情况，这样我们的数据回滚在没有提交的情况下是有真正的去执行，还有就是回滚是能够用一次，再次使用虽然不报错，但是不起任何作用。 如果你会说了，我想在一次事务中国实现多次回滚怎么办，这里你可以使用设置保存点： 在上面的第二步中，你可以这样一下： savepoint 保存点1（名称而已）; 然后你继续执行dml，到了耨一个地方继续savepoint 保存点2; 你是不是想通过rollback to 保存点的方式会滚到之前的状态。但是，不得不告诉你，旺旺想想的和显示的情况并不是一模一样，你会发现只能够滚滚到第一个保存 点，其他的保存点会提示不存在！ Oracle的事务处理： Oracle是不用说明开启事务的，针对dml语句，当你设置保存点，接下来的步骤如上返回到保准点同样的用commit提交事务。 但是，我这里就总结出了一个重要的原则：事务回滚只能反方向一直逆行，这个过程已然不可逆。除非提交结束事务。</p>
+
+            
+            <p class="more">
+                <a href="/2015/08/26/2019030500124/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/08/26/2019030500124/" title="Oracle与Mysql数据的事务处理机制">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/09/2019030500012/">
+    		关于Oracle 10g的schedule job
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-09T05:35:10.000Z">2015-07-09</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/schedule-job/" title="schedule job">schedule job</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>– job 权限 grant create job to somebody; – job 创建 begin dbms_scheduler.create_job ( job_name =&gt; ‘AGENT_LIQUIDATION_JOB’, job_type =&gt; ‘STORED_PROCEDURE’, job_action =&gt; ‘AGENT_LIQUIDATION.LIQUIDATION’, –存储过程名 start_date =&gt; sysdate, repeat_interval =&gt; ‘FREQ=MONTHLY; INTERVAL=1; BYMONTHDAY=1;BYHOUR=1;BYMINUTE=0;BYSECOND=0’,  – 按月，间隔为1个(月),每月1号,凌晨1点 comments =&gt; ‘执行代理商清分程序’ ); end; / – job 执行时间测试 DECLARE start_date date; return_date_after date; next_run_date date; BEGIN start_date := sysdate;–to_timestamp_tz(‘10-OCT-2004 10:00:00’,’DD-MM-YYYY HH24:MI:SS’); return_date_after := start_date; FOR i IN <strong>1</strong>..<strong>10</strong> LOOP DBMS_SCHEDULER.EVALUATE_CALENDAR_STRING(‘FREQ=MONTHLY; INTERVAL=1; BYMONTHDAY=1;BYHOUR=1;BYMINUTE=0;BYSECOND=0’,start_date, return_date_after, next_run_date); DBMS_OUTPUT.PUT_LINE(‘next_run_date: ‘ || to_char(next_run_date,’yyyy-mm-dd HH24:MI:SS’)); return_date_after := next_run_date; END LOOP; END; / – job 查询 select owner, job_name, state from dba_scheduler_jobs; select job_name, state from user_scheduler_jobs; – job 启用 begin dbms_scheduler.enable(‘BACKUP_JOB’); end; / – job 运行 begin dbms_scheduler.run_job(‘COLA_JOB’,TRUE); – true代表同步执行 end; / – job 停止(不太好用) begin dbms_scheduler.stop_job(job_name =&gt; ‘COLA_JOB’,force =&gt; TRUE); end; / – job 删除(对停job来说好用) begin dbms_scheduler.drop_job(job_name =&gt; ‘COLA_JOB’,force =&gt; TRUE);) end; /</p>
+
+            
+            <p class="more">
+                <a href="/2015/07/09/2019030500012/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/09/2019030500012/" title="关于Oracle 10g的schedule job">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/9.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/02/2019030500127/">
+    		Oracle中Hint深入理解
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-02T09:05:01.000Z">2015-07-02</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/Hint/" title="Hint">Hint</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p><strong>Hint概述</strong> 基于代价的优化器是很聪明的，在绝大多数情况下它会选择正确的优化器，减轻了DBA的负担。但有时它也聪明反被聪明误，选择了很差的执行计划，使某个语句的执行变得奇慢无比。 此时就需要DBA进行人为的干预，告诉优化器使用我们指定的存取路径或连接类型生成执行计划，从 而使语句高效的运行。例如，如果我们认为对于一个特定的语句，执行全表扫描要比执行索引扫描更有效，则我们就可以指示优化器使用全表扫描。在Oracle 中，是通过为语句添加 Hints(提示)来实现干预优化器优化的目的。 不建议在代码中使用hint，在代码使用hint使得CBO无法根据实际的数据状态选择正确的执行计划。毕竟 数据是不断变化的， 10g以后的CBO也越来越完善，大多数情况下我们该让Oracle自行决定采用什么执行计划。 Oracle Hints是一种机制，用来告诉优化器按照我们的告诉它的方式生成执行计划。我们可以用Oracle Hints来实现： 1) 使用的优化器的类型 2) 基于代价的优化器的优化目标，是all_rows还是first_rows。 3) 表的访问路径，是全表扫描，还是索引扫描，还是直接利用rowid。 4) 表之间的连接类型 5) 表之间的连接顺序 6) 语句的并行程度 除了”RULE”提示外，一旦使用的别的提示，语句就会自动的改为使用CBO优化器，此时如果你的数据字典中没有统计数据，就会使用缺省的统计数据。所以建议大家如果使用CBO或Hints提示，则最好对表和索引进行定期的分析。 如何使用Hints: Hints只应用在它们所在sql语句块(statement block，由select、update、delete关键字标识)上，对其它SQL语句或语句的其它部分没有影响。如：对于使用union操作的2个sql语句，如果只在一个sql语句上有Hints，则该Hints不会影响另一个sql语句。 我们可以使用注释(comment)来为一个语句添加Hints，一个语句块只能有一个注释，而且注释只能放在SELECT, UPDATE, or DELETE关键字的后面 使用Oracle Hints的语法： {DELETE|INSERT|SELECT|UPDATE} /<em>+ hint [text] [hint[text]]… </em>/ or {DELETE|INSERT|SELECT|UPDATE} –+ hint [text] [hint[text]]… 注解： 1) DELETE、INSERT、SELECT和UPDATE是标识一个语句块开始的关键字，包含提示的注释只能出现在这些关键字的后面，否则提示无效。 2) “+”号表示该注释是一个Hints，该加号必须立即跟在”/<em>”的后面，中间不能有空格。 3) hint是下面介绍的具体提示之一，如果包含多个提示，则每个提示之间需要用一个或多个空格隔开。 4) text 是其它说明hint的注释性文本 5)使用表别名。如果在查询中指定了表别名，那么提示必须也使用表别名。例如：select /</em>+ index(e,dept_idx) <em>/ </em> from emp e; 6)不要在提示中使用模式名称：如果在提示中指定了模式的所有者，那么提示将被忽略。例如： select /<em>+ index(scott.emp,dept_idx) </em>/ <em> from emp 注意：如果你没有正确的指定Hints，Oracle将忽略该Hints，并且不会给出任何错误。 <strong>hint被忽略</strong> 如果CBO认为使用hint会导致错误的结果时，hint将被忽略，详见下例 SQL&gt; select /</em>+ index(t t_ind) <em>/ count(</em>) from t; Execution Plan ———————————————————- Plan hash value: 2966233522 ——————————————————————- | Id  | Operation          | Name | Rows  | Cost (%CPU)| Time     | ——————————————————————- |   0 | SELECT STATEMENT   |      |     1 |    57   (2)| 00:00:01 | |   1 |  SORT AGGREGATE    |      |     1 |            |          | |   2 |   TABLE ACCESS FULL| T    | 50366 |    57   (2)| 00:00:01 | ——————————————————————- 因为我们是对记录求总数，且我们并没有在建立索引时指定不能为空，索引如果CBO选择在索引上进行count时，但索引字段上的值为空时，结果将不准确，故CBO没有选择索引。 SQL&gt;  select /<em>+ index(t t_ind) </em>/ count(id) from t; Execution Plan ———————————————————- Plan hash value: 646498162 ————————————————————————– | Id  | Operation        | Name  | Rows  | Bytes | Cost (%CPU)| Time     | ————————————————————————– |   0 | SELECT STATEMENT |       |     1 |     5 |   285   (1)| 00:00:04 | |   1 |  SORT AGGREGATE  |       |     1 |     5 |            |          | |   2 |   INDEX FULL SCAN| T_IND | 50366 |   245K|   285   (1)| 00:00:04 | ————————————————————————– 因为我们只对id进行count，这个动作相当于count索引上的所有id值，这个操作和对表上的id字段进行count是一样的(组函数会忽略null值) <strong>Hint的具体用法</strong> <strong>和优化器相关的hint</strong> 1、/<em>+ ALL_ROWS </em>/ 表明对语句块选择基于开销的优化方法,并获得最佳吞吐量,使资源消耗最小化. SELECT /<em>+ ALL+_ROWS</em>/ EMP_NO,EMP_NAM,DAT_IN FROM BSEMPMS WHERE EMP_NO=’SCOTT’; 2、/<em>+ FIRST_ROWS(n) </em>/ 表明对语句块选择基于开销的优化方法,并获得最佳响应时间,使资源消耗最小化. SELECT /<em>+FIRST_ROWS(20) </em>/ EMP_NO,EMP_NAM,DAT_IN FROM BSEMPMS WHERE EMP_NO=’SCOTT’; 3、/<em>+ RULE</em>/ 表明对语句块选择基于规则的优化方法. SELECT /<em>+ RULE </em>/ EMP_NO,EMP_NAM,DAT_IN FROM BSEMPMS WHERE EMP_NO=’SCOTT’; <strong>和访问路径相关的hint</strong> 1、/<em>+ FULL(TABLE)</em>/ 表明对表选择全局扫描的方法. SELECT /<em>+FULL(A)</em>/ EMP_NO,EMP_NAM FROM BSEMPMS A WHERE EMP_NO=’SCOTT’; 2、/<em>+ INDEX(TABLE INDEX_NAME) </em>/ 表明对表选择索引的扫描方法. SELECT /<em>+INDEX(BSEMPMS SEX_INDEX) </em>/ <em> FROM BSEMPMS WHERE SEX=’M’; 5、/</em>+ INDEX_ASC(TABLE INDEX_NAME)<em>/ 表明对表选择索引升序的扫描方法. SELECT /</em>+INDEX_ASC(BSEMPMS PK_BSEMPMS) <em>/ </em> FROM BSEMPMS WHERE DPT_NO=’SCOTT’; 6、/<em>+ INDEX_COMBINE</em>/ 为指定表选择位图访问路经,如果INDEX_COMBINE中没有提供作为参数的索引,将选择出位图索引的布尔组合方式. SELECT /<em>+INDEX_COMBINE(BSEMPMS SAL_BMI HIREDATE_BMI) </em>/  <em> FROM BSEMPMS WHERE SAL&lt;5000000 AND HIREDATE 7、/</em>+ INDEX_JOIN(TABLE INDEX_NAME1 INDEX_NAME2) <em>/ 当谓词中引用的列都有索引的时候，可以通过指定采用索引关联的方式，来访问数据 select /</em>+ index_join(t t_ind t_bm) <em>/ id from t where id=100 and object_name=’EMPLOYEES’ 8、/</em>+ INDEX_DESC(TABLE INDEX_NAME)<em>/ 表明对表选择索引降序的扫描方法. SELECT /</em>+INDEX_DESC(BSEMPMS PK_BSEMPMS) <em>/ </em> FROM BSEMPMS WHERE DPT_NO=’SCOTT’; 9、/<em>+ INDEX_FFS(TABLE INDEX_NAME) </em>/ 对指定的表执行快速全索引扫描,而不是全表扫描的办法. SELECT /<em> + INDEX_FFS(BSEMPMS IN_EMPNAM)</em>/ <em> FROM BSEMPMS WHERE DPT_NO=’TEC305’; 10、/</em>+ INDEX_SS(T T_IND) <em>/ 从9i开始，oracle引入了这种索引访问方式。当在一个联合索引中，某些谓词条件并不在联合索引的第一列时，可以通过Index Skip Scan来访问索引获得数据。当联合索引第一列的唯一值个数很少时，使用这种方式比全表扫描效率高。 SQL&gt; create table t as select 1 id,object_name from dba_objects; Table created. SQL&gt; insert into t select 2,object_name from dba_objects; 50366 rows created. SQL&gt; insert into t select 3,object_name from dba_objects; 50366 rows created. SQL&gt; insert into t select 4,object_name from dba_objects; 50366 rows created. SQL&gt; commit; Commit complete. SQL&gt; create index t_ind on t(id,object_name); Index created. SQL&gt; exec dbms_stats.gather_table_stats(‘HR’,’T’,cascade=&gt;true); PL/SQL procedure successfully completed. 执行全表扫描 SQL&gt; select /</em>+ full(t) <em>/ </em> from t where object_name=’EMPLOYEES’; 6 rows selected. Execution Plan ———————————————————- Plan hash value: 1601196873 ————————————————————————– | Id  | Operation         | Name | Rows  | Bytes | Cost (%CPU)| Time     | ————————————————————————– |   0 | SELECT STATEMENT  |      |     5 |   135 |   215   (3)| 00:00:03 | |<em>  1 |  TABLE ACCESS FULL| T    |     5 |   135 |   215   (3)| 00:00:03 | ————————————————————————– Predicate Information (identified by operation id): ————————————————— 1 - filter(“OBJECT_NAME”=’EMPLOYEES’) Statistics ———————————————————- 0  recursive calls 0  db block gets 942  consistent gets 0  physical reads 0  redo size 538  bytes sent via SQL\</em>Net to client 385  bytes received via SQL*Net from client 2  SQL*Net roundtrips to/from client 0  sorts (memory) 0  sorts (disk) 6  rows processed 不采用hint SQL&gt;  select * from t where object_name=’EMPLOYEES’; 6 rows selected. Execution Plan ———————————————————- Plan hash value: 2869677071 ————————————————————————– | Id  | Operation        | Name  | Rows  | Bytes | Cost (%CPU)| Time     | ————————————————————————– |   0 | SELECT STATEMENT |       |     5 |   135 |     5   (0)| 00:00:01 | |<em>  1 |  INDEX SKIP SCAN | T_IND |     5 |   135 |     5   (0)| 00:00:01 | ————————————————————————– Predicate Information (identified by operation id): ————————————————— 1 - access(“OBJECT_NAME”=’EMPLOYEES’) filter(“OBJECT_NAME”=’EMPLOYEES’) Statistics ———————————————————- 1  recursive calls 0  db block gets 17  consistent gets 1  physical reads 0  redo size 538  bytes sent via SQL\</em>Net to client 385  bytes received via SQL*Net from client 2  SQL<em>Net roundtrips to/from client 0  sorts (memory) 0  sorts (disk) 6  rows processed 当全表扫描扫描了942个块，联合索引只扫描了17个数据块。可以看到联合索引的第一个字段的值重复率很高时，即使谓词中没有联合索引的第一个字段，依然会使用index_ss方式，效率远远高于全表扫描效率。但当 第一个字段的值重复率很低时，使用 index_ss的效率要低于 全表扫描，读者可以自行实验 <strong>和表的关联相关的hint</strong> /\</em>+ leading(table_1,table_2) <em>/ 在多表关联查询中，指定哪个表作为驱动表，即告诉优化器首先要访问哪个表上的数据。 select /</em>+ leading(t,t1) <em>/ t.</em> from t,t1 where t.id=t1.id; /<em>+ order </em>/ 让Oracle根据from后面表的顺序来选择驱动表，oracle建议使用leading，他更为灵活 select /<em>+ order </em>/ t.<em> from t,t1 where t.id=t1.id; /</em>+ use_nl(table_1,table_2) <em>/ 在多表关联查询中，指定使用nest loops方式进行多表关联。 select /</em>+ use_nl(t,t1) <em>/ t.</em> from t,t1 where t.id=t1.id; /<em>+ use_hash(table_1,table_2) </em>/ 在多表关联查询中，指定使用hash join方式进行多表关联。 select /<em>+ use_hash(t,t1) </em>/ t.<em> from t,t1 where t.id=t1.id; 在多表关联查询中，指定使用hash join方式进行多表关联，并指定表t为驱动表。 select /</em>+ use_hash(t,t1) leading(t,t1) <em>/ t.</em> from t,t1 where t.id=t1.id; /<em>+ use_merge(table_1,table_2) </em>/ 在多表关联查询中，指定使用merge join方式进行多表关联。 select /<em>+ use_merge(t,t1) </em>/ t.<em> from t,t1 where t.id=t1.id; /</em>+ no_use_nl(table_1,table_2) <em>/ 在多表关联查询中，指定不使用nest loops方式进行多表关联。 select /</em>+ no_use_nl(t,t1) <em>/ t.</em> from t,t1 where t.id=t1.id; /<em>+ no_use_hash(table_1,table_2) </em>/ 在多表关联查询中，指定不使用hash join方式进行多表关联。 select /<em>+ no_use_hash(t,t1) </em>/ t.<em> from t,t1 where t.id=t1.id; /</em>+ no_use_merge(table_1,table_2) <em>/ 在多表关联查询中，指定不使用merge join方式进行多表关联。 select /</em>+ no_use_merge(t,t1) <em>/ t.</em> from t,t1 where t.id=t1.id; <strong>其他常用的hint</strong> /*+ parallel(table_name n) <em>/ 在sql中指定执行的并行度，这个值将会覆盖自身的并行度 select /</em>+ parallel(t 4) <em>/ count(</em>)  from t; /<em>+ no_parallel(table_name) </em>/ 在sql中指定执行的不使用并行 select /<em>+ no_parallel(t) </em>/ count(<em>)  from t; /</em>+ append <em>/以直接加载的方式将数据加载入库 insert into t /</em>+ append <em>/ select </em> from t; /<em>+ dynamic_sampling(table_name n) </em>/ 设置sql执行时动态采用的级别，这个级别为0~10 select /<em>+ dynamic_sampling(t 4) </em>/ <em> from t where id &gt; 1234 /</em>+ cache(table_name) <em>/ 进行全表扫描时将table置于LRU列表的最活跃端，类似于table的cache属性 select /</em>+ full(employees) cache(employees) */ last_name from employees <strong>附录hint表格</strong></p>
+<p><strong>Hints for Optimization Approaches and Goals</strong></p>
+<p>ALL_ROWS</p>
+<p>The ALL_ROWS hint explicitly chooses the cost-based approach to optimize a statement block with a goal of best throughput (that is, minimum total resource consumption).</p>
+<p>FIRST_ROWS</p>
+<p>The FIRST_ROWS hint explicitly chooses the cost-based approach to optimize a statement block with a goal of best response time (minimum resource usage to return first row). In newer Oracle version you should give a parameter with this hint: FIRST_ROWS(n) means that the optimizer will determine an executionplan to give a fast response for returning the first n rows.</p>
+<p>CHOOSE</p>
+<p>The CHOOSE hint causes the optimizer to choose between the rule-based approach and the cost-based approach for a SQL statement based on the presence of statistics for the tables accessed by the statement</p>
+<p>RULE</p>
+<p>The RULE hint explicitly chooses rule-based optimization for a statement block. This hint also causes the optimizer to ignore any other hints specified for the statement block. The RULE hint does not work any more in Oracle 10g.</p>
+<p><strong>Hints for Access Paths</strong></p>
+<p>FULL</p>
+<p>The FULL hint explicitly chooses a full table scan for the specified table. The syntax of the FULL hint is FULL(table) where table specifies the alias of the table (or table name if alias does not exist) on which the full table scan is to be performed.</p>
+<p>ROWID</p>
+<p>The ROWID hint explicitly chooses a table scan by ROWID for the specified table. The syntax of the ROWID hint is ROWID(table) where table specifies the name or alias of the table on which the table access by ROWID is to be performed. (This hint depricated in Oracle 10g)</p>
+<p>CLUSTER</p>
+<p>The CLUSTER hint explicitly chooses a cluster scan to access the specified table. The syntax of the CLUSTER hint is CLUSTER(table) where table specifies the name or alias of the table to be accessed by a cluster scan.</p>
+<p>HASH</p>
+<p>The HASH hint explicitly chooses a hash scan to access the specified table. The syntax of the HASH hint is HASH(table) where table specifies the name or alias of the table to be accessed by a hash scan.</p>
+<p>HASH_AJ</p>
+<p>The HASH_AJ hint transforms a NOT IN subquery into a hash anti-join to access the specified table. The syntax of the HASH_AJ hint is HASH_AJ(table) where table specifies the name or alias of the table to be accessed.(depricated in Oracle 10g)</p>
+<p>INDEX</p>
+<p>The INDEX hint explicitly chooses an index scan for the specified table. The syntax of the INDEX hint is INDEX(table index) where:table specifies the name or alias of the table associated with the index to be scanned and index specifies an index on which an index scan is to be performed. This hint may optionally specify one or more indexes:</p>
+<p>NO_INDEX</p>
+<p>The NO_INDEX hint explicitly disallows a set of indexes for the specified table. The syntax of the NO_INDEX hint is NO_INDEX(table index)</p>
+<p>INDEX_ASC</p>
+<p>The INDEX_ASC hint explicitly chooses an index scan for the specified table. If the statement uses an index range scan, Oracle scans the index entries in ascending order of their indexed values.</p>
+<p>INDEX_COMBINE</p>
+<p>If no indexes are given as arguments for the INDEX_COMBINE hint, the optimizer will use on the table whatever boolean combination of bitmap indexes has the best cost estimate. If certain indexes are given as arguments, the optimizer will try to use some boolean combination of those particular bitmap indexes. The syntax of INDEX_COMBINE is INDEX_COMBINE(table index).</p>
+<p>INDEX_JOIN</p>
+<p>Explicitly instructs the optimizer to use an index join as an access path. For the hint to have a positive effect, a sufficiently small number of indexes must exist that contain all the columns required to resolve the query.</p>
+<p>INDEX_DESC</p>
+<p>The INDEX_DESC hint explicitly chooses an index scan for the specified table. If the statement uses an index range scan, Oracle scans the index entries in descending order of their indexed values.</p>
+<p>INDEX_FFS</p>
+<p>This hint causes a fast full index scan to be performed rather than a full table.</p>
+<p>NO_INDEX_FFS</p>
+<p>Do not use fast full index scan (from Oracle 10g)</p>
+<p>INDEX_SS</p>
+<p>Exclude range scan from query plan (from Oracle 10g)</p>
+<p>INDEX_SS_ASC</p>
+<p>Exclude range scan from query plan (from Oracle 10g)</p>
+<p>INDEX_SS_DESC</p>
+<p>Exclude range scan from query plan (from Oracle 10g)</p>
+<p>NO_INDEX_SS</p>
+<p>The NO_INDEX_SS hint causes the optimizer to exclude a skip scan of the specified indexes on the specified table. (from Oracle 10g)</p>
+<p><strong>Hints for Query Transformations</strong></p>
+<p>NO_QUERY_TRANSFORMATION</p>
+<p>Prevents the optimizer performing query transformations. (from Oracle 10g)</p>
+<p>USE_CONCAT</p>
+<p>The USE_CONCAT hint forces combined OR conditions in the WHERE clause of a query to be transformed into a compound query using the UNION ALL set operator. Normally, this transformation occurs only if the cost of the query using the concatenations is cheaper than the cost without them.</p>
+<p>NO_EXPAND</p>
+<p>The NO_EXPAND hint prevents the optimizer from considering OR-expansion for queries having OR conditions or IN-lists in the WHERE clause. Usually, the optimizer considers using OR expansion and uses this method if it decides that the cost is lower than not using it.</p>
+<p>REWRITE</p>
+<p>The REWRITE hint forces the optimizer to rewrite a query in terms of materialized views, when possible, without cost consideration. Use the REWRITE hint with or without a view list. If you use REWRITE with a view list and the list contains an eligible materialized view, then Oracle uses that view regardless of its cost.</p>
+<p>NOREWRITE / NO_REWRITE</p>
+<p>In Oracle 10g renamed to NO_REWRITE. The NOREWRITE/NO_REWRITE hint disables query rewrite for the query block, overriding the setting of the parameter QUERY_REWRITE_ENABLED.</p>
+<p>MERGE</p>
+<p>The MERGE hint lets you merge views in a query.</p>
+<p>NO_MERGE</p>
+<p>The NO_MERGE hint causes Oracle not to merge mergeable views. This hint is most often used to reduce the number of possible permutations for a query and make optimization faster.</p>
+<p>FACT</p>
+<p>The FACT hint indicated that the table should be considered as a fact table. This is used in the context of the star transformation.</p>
+<p>NO_FACT</p>
+<p>The NO_FACT hint is used in the context of the star transformation to indicate to the transformation that the hinted table should not be considered as a fact table.</p>
+<p>STAR_TRANSFORMATION</p>
+<p>The STAR_TRANSFORMATION hint makes the optimizer use the best plan in which the transformation has been used. Without the hint, the optimizer could make a query optimization decision to use the best plan generated without the transformation, instead of the best plan for the transformed query.</p>
+<p>NO_STAR_TRANSFORMATION</p>
+<p>Do not use star transformation (from Oracle 10g)</p>
+<p>UNNEST</p>
+<p>The UNNEST hint specifies subquery unnesting.</p>
+<p>NO_UNNEST</p>
+<p>Use of the NO_UNNEST hint turns off unnesting for specific subquery blocks.</p>
+<p><strong>Hints for Join Orders</strong></p>
+<p>LEADING</p>
+<p>Give this hint to indicate the leading table in a join. This will indicate only 1 table. If you want to specify the whole order of tables, you can use the ORDERED hint. Syntax: LEADING(table)</p>
+<p>ORDERED</p>
+<p>The ORDERED hint causes Oracle to join tables in the order in which they appear in the FROM clause. If you omit the ORDERED hint from a SQL statement performing a join , the optimizer chooses the order in which to join the tables. You may want to use the ORDERED hint to specify a join order if you know something about the number of rows selected from each table that the optimizer does not. Such information would allow you to choose an inner and outer table better than the optimizer could.</p>
+<p><strong>Hints for Join Operations</strong></p>
+<p>USE_NL</p>
+<p>The USE_NL hint causes Oracle to join each specified table to another row source with a nested loops join using the specified table as the inner table. The syntax of the USE_NL hint is USE_NL(table table) where table is the name or alias of a table to be used as the inner table of a nested loops join.</p>
+<p>NO_USE_NL</p>
+<p>Do not use nested loop (from Oracle 10g)</p>
+<p>USE_NL_WITH_INDEX</p>
+<p>Specifies a nested loops join. (from Oracle 10g)</p>
+<p>USE_MERGE</p>
+<p>The USE_MERGE hint causes Oracle to join each specified table with another row source with a sort-merge join. The syntax of the USE_MERGE hint is USE_MERGE(table table) where table is a table to be joined to the row source resulting from joining the previous tables in the join order using a sort-merge join.</p>
+<p>NO_USE_MERGE</p>
+<p>Do not use merge (from Oracle 10g)</p>
+<p>USE_HASH</p>
+<p>The USE_HASH hint causes Oracle to join each specified table with another row source with a hash join. The syntax of the USE_HASH hint is USE_HASH(table table) where table is a table to be joined to the row source resulting from joining the previous tables in the join order using a hash join.</p>
+<p>NO_USE_HASH</p>
+<p>Do not use hash (from Oracle 10g)</p>
+<p>Hints for Parallel Execution</p>
+<p>PARALLEL</p>
+<p>The PARALLEL hint allows you to specify the desired number of concurrent query servers that can be used for the query. The syntax is PARALLEL(table number number). The PARALLEL hint must use the table alias if an alias is specified in the query. The PARALLEL hint can then take two values separated by commas after the table name. The first value specifies the degree of parallelism for the given table, the second value specifies how the table is to be split among the instances of a parallel server. Specifying DEFAULT or no value signifies the query coordinator should examine the settings of the initialization parameters (described in a later section) to determine the default degree of parallelism.</p>
+<p>NOPARALLEL / NO_PARALLEL</p>
+<p>The NOPARALLEL hint allows you to disable parallel scanning of a table, even if the table was created with a PARALLEL clause. In Oracle 10g this hint was renamed to NO_PARALLEL.</p>
+<p>PQ_DISTRIBUTE</p>
+<p>The PQ_DISTRIBUTE hint improves the performance of parallel join operations. Do this by specifying how rows of joined tables should be distributed among producer and consumer query servers. Using this hint overrides decisions the optimizer would normally make.</p>
+<p>NO_PARALLEL_INDEX</p>
+<p>The NO_PARALLEL_INDEX hint overrides a PARALLEL attribute setting on an index to avoid a parallel index scan operation.</p>
+<p>Additional Hints</p>
+<p>APPEND</p>
+<p>When the APPEND hint is used with the INSERT statement, data is appended to the table. Existing free space in the block is not used. If a table or an index is specified with nologging, this hint applied with an insert statement produces a direct path insert which reduces generation of redo.</p>
+<p>NOAPPEND</p>
+<p>Overrides the append mode.</p>
+<p>CACHE</p>
+<p>The CACHE hint specifies that the blocks retrieved for the table in the hint are placed at the most recently used end of the LRU list in the buffer cache when a full table scan is performed. This option is useful for small lookup tables. In the following example, the CACHE hint overrides the table default caching specification.</p>
+<p>NOCACHE</p>
+<p>The NOCACHE hint specifies that the blocks retrieved for this table are placed at the least recently used end of the LRU list in the buffer cache when a full table scan is performed. This is the normal behavior of blocks in the buffer cache.</p>
+<p>PUSH_PRED</p>
+<p>The PUSH_PRED hint forces pushing of a join predicate into the view.</p>
+<p>NO_PUSH_PRED</p>
+<p>The NO_PUSH_PRED hint prevents pushing of a join predicate into the view.</p>
+<p>PUSH_SUBQ</p>
+<p>The PUSH_SUBQ hint causes nonmerged subqueries to be evaluated at the earliest possible place in the execution plan.</p>
+<p>NO_PUSH_SUBQ</p>
+<p>The NO_PUSH_SUBQ hint causes non-merged subqueries to be evaluated as the last step in the execution plan.</p>
+<p>QB_NAME</p>
+<p>Specifies a name for a query block. (from Oracle 10g)</p>
+<p>CURSOR_SHARING_EXACT</p>
+<p>Oracle can replace literals in SQL statements with bind variables, if it is safe to do so. This is controlled with the CURSOR_SHARING startup parameter. The CURSOR_SHARING_EXACT hint causes this behavior to be switched off. In other words, Oracle executes the SQL statement without any attempt to replace literals by bind variables.</p>
+<p>DRIVING_SITE</p>
+<p>The DRIVING_SITE hint forces query execution to be done for the table at a different site than that selected by Oracle</p>
+<p>DYNAMIC_SAMPLING</p>
+<p>The DYNAMIC_SAMPLING hint lets you control dynamic sampling to improve server performance by determining more accurate predicate selectivity and statistics for tables and indexes. You can set the value of DYNAMIC_SAMPLING to a value from 0 to 10. The higher the level, the more effort the compiler puts into dynamic sampling and the more broadly it is applied. Sampling defaults to cursor level unless you specify a table.</p>
+<p>SPREAD_MIN_ANALYSIS</p>
+<p>This hint omits some of the compile time optimizations of the rules, mainly detailed dependency graph analysis, on spreadsheets. Some optimizations such as creating filters to selectively populate spreadsheet access structures and limited rule pruning are still used. (from Oracle 10g)</p>
+<p><strong>Hints with unknown status</strong></p>
+<p>MERGE_AJ</p>
+<p>The MERGE_AJ hint transforms a NOT IN subquery into a merge anti-join to access the specified table. The syntax of the MERGE_AJ hint is MERGE_AJ(table) where table specifies the name or alias of the table to be accessed.(depricated in Oracle 10g)</p>
+<p>AND_EQUAL</p>
+<p>The AND_EQUAL hint explicitly chooses an execution plan that uses an access path that merges the scans on several single-column indexes. The syntax of the AND_EQUAL hint is AND_EQUAL(table index index) where table specifies the name or alias of the table associated with the indexes to be merged. and index specifies an index on which an index scan is to be performed. You must specify at least two indexes. You cannot specify more than five. (depricated in Oracle 10g)</p>
+<p>STAR</p>
+<p>The STAR hint forces the large table to be joined last using a nested loops join on the index. The optimizer will consider different permutations of the small tables. (depricated in Oracle 10g)</p>
+<p>BITMAP</p>
+<p>Usage: BITMAP(table_name index_name) Uses a bitmap index to access the table. (depricated ?)</p>
+<p>HASH_SJ</p>
+<p>Use a Hash Anti-Join to evaluate a NOT IN sub-query. Use this hint in the sub-query, not in the main query. Use this when your high volume NOT IN sub-query is using a FILTER or NESTED LOOPS join. Try MERGE_AJ if HASH_AJ refuses to work.(depricated in Oracle 10g)</p>
+<p>NL_SJ</p>
+<p>Use a Nested Loop in a sub-query. (depricated in Oracle 10g)</p>
+<p>NL_AJ</p>
+<p>Use an anti-join in a sub-query. (depricated in Oracle 10g)</p>
+<p>ORDERED_PREDICATES</p>
+<p>(depricated in Oracle 10g)</p>
+<p>EXPAND_GSET_TO_UNION</p>
+<p>(depricated in Oracle 10g)</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/07/02/2019030500127/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/02/2019030500127/" title="Oracle中Hint深入理解">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/02/2019030500139/">
+    		Oracle移除表空间的数据文件 ora-00604 ora-01426
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-02T05:05:35.000Z">2015-07-02</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/ora-00604/" title="ora-00604">ora-00604</a> / 
+    
+        <a href="/tags/ora-01426/" title="ora-01426">ora-01426</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>项目背景:在之前开发环境数据库管理比较乱,在表空间不足时只是添加数据文件,测试完后数据己删除,但数据库表空间所占的空间不能回收,导致数据库的存储目录使用率达到97%以上实际使用只有10%,迫切需要将不用空间进行回收. 技术背景:Oracle不提供如删除表、视图一样删除数据文件的方法，数据文件是表空间的一部分，所以不能“移走”表空间。Oracle 10G R2开始，可以采用：Alter tablespace tablespace_name drop datafile file_name;来删除一个空数据文件，并且相应的数据字典信息也会清除: A.确认oracle版本(我是以本机(windows)查看数据库版本,测试环境为AIX操作系统,但数据库版本一致),版本满足可以直接删除数据文件 select <em> from v$version; B.确认移除的数据文件 a.确定需要移去的数据文件,可以用数据文件最大扩展的大小和对象多少综合评估一下,是否将这个文件进行移除 扩展大小: select file_id,tablespace_name,max(t.block_id)\</em>8192/1024/1024 from dba_extents t where tablespace_name = ‘FERMATDATA’ group by file_id,tablespace_name 对象多少: select * from dba_extents t where t.file_id =10 C.将数据文件中己有的对象move到其他表空间 a.对于segment_type为TABLE的非分区表采用以下语句 alter table bob_rwa3.db move tablespace ETLDATA; 批量语句: select ‘alter table ‘||t.owner||’.’||t.segment_name||’ move tablespace ETLDATA ;’ from dba_extents t where t.file_id =10 and t.partition_name is null b.对于segment_type为TABLE的分区表采用以下语句(非复合分区) alter table BOB_RAY.T_TRANSITION_MATRIX move partition P199001010001 tablespace ETLDATA update global indexes ; 批量脚本: select ‘alter table ‘||t.owner||’.’||t.segment_name||’ move partition ‘||t.partition_name||’ tablespace ETLDATA update global indexes ;’ from dba_extents t where t.file_id =10 and t.partition_name is not null ; c.对于segment_type 为TABLE复合分区采用以下语句 alter table BOB_RAY.LOG_TABLE move subpartition P199001010001_NULL tablespace IRM_DATA; 批量脚本可以自己关联dba_tab_subpartitions表写出. d.对于segment_type为LOBSEGMENT或LOBINDEX可以采用以下语句,因为LOB类型的字段会自动生成存储数据和索引两部份(lobsegment,lobindex) 1.查看找segment_type为lob的segment_name: select <em>  from dba_extents t where t.file_id =10 and t.segment_type like ‘%LOB%’; 2.查看segment_type为LOB对应的column select </em> from dba_lobs t where t.segment_name like ‘%SYS_LOB0000145648C00003%’ ; 3.将segment_type为LOB类型转移到其他表空间,因为move table只转移动非lob字段,所以需要执行以下语句 alter table BOB_RAY.BIRT_RESOURCE move tablespace ETLDADA lob(CONTENT) store as (tablespace ETLDATA); 批量脚本关联即可写出 因为本项目中数据表空间和索引表空间是分开的,所以这里不涉及索引的相关操作,如果有索引的情况估计与表的情况相似. D.确认数据文件是否为空 a.查看dba_extents 是否有记录(需要没有记录) select <em>  from dba_extents t where t.file_id =10; b.查看dba_segments是否有记录(需要没有记录) select </em> from dba_segments t where t.header_file = 10 注意:如果dba_segments有回收站的数据,那么在删除表空间数据文件时会报错 ora-00604 ora-01426 c.删除回收站数据 purge recyclebin; E.删除表空间对应的数据文件 1.查看数据文件名称 select * from dba_data_files t where t.file_id = 10 ; 2.删除表空间数据文件 alter tablespace FERMATDATA drop  datafile ‘D:\APP\ORADATA\RWADB\FERMATDATA02.DBF’; 注意:当执行完语句时数据库服务器用df -g查看空间时没有变化,重启数据库后才能看到空间明显回收了 F.指定表存储在固定的数据文件方法以(扩展) alter  table bob_ray.bis_risk_bucket allocate extent( datafie ‘/oracle/oradata/orcl/appdata.dbf’ ); 此语句不会改变表中现有数据的存储,当新insert数据时才生效,</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/07/02/2019030500139/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/02/2019030500139/" title="Oracle移除表空间的数据文件 ora-00604 ora-01426">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/10/2019030500132/">
+    		oracle复制列值
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-10T04:28:51.000Z">2015-06-10</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>需求描述：在测试环境中已存在的表中添加一个字段，并将表中一部分数据的这一列进行了手工添加数据，现在希望能在正式环境中添加这个字段后，并把将测试环境已存在的值复制到正式环境。 由于测试环境和正式环境的表结构一样，但是没有在同一个库，所以解决办法是： 1、在测试环境新建一个Database links 2、通过如下语句进行复制：</p>
+<pre><code>UPDATE ext_organinfo eop
+SET    eop.thumbnailmap = (SELECT eo.thumbnailmap
+                           FROM   ext_organinfo@puam eo
+                           WHERE  eo.organ_id = eop.organ_id)
+WHERE  eop.organ_id IN (SELECT eo.organ_id
+                        FROM   ext_organinfo@puam eo
+                        WHERE  eo.thumbnailmap IS NOT NULL )
+</code></pre><p>新建Database Links过程如下： 1、在plsql左侧栏中找到Database links 右键 new ，Database links的创建截图如下： <img src="http://img.blog.csdn.net/20150610084728666" alt="这里写图片描述"></p>
+
+            
+            <p class="more">
+                <a href="/2015/06/10/2019030500132/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/10/2019030500132/" title="oracle复制列值">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/06/04/2019030500143/">
+    		Oracle问题--远程登录失败原因分析
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-06-04T07:23:25.000Z">2015-06-04</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>远程机：        安装 Oracle 的计算机； 本地机：        访问远程机上 Oracle 数据库的计算机。 一、问题描述     在远程计算机安装 Oracle 数据库。     在本地机上，配置 InstantClient 后，        使用 PLSql Developer 远程登录 Oracle 数据库，报 Oracle 错误。   二、解决思路     根据 Oracle 错误代码分析原因，如ORA-1455。   三、原因分析     常常是远程或本地计算机配置错误。   四、解决方案 (1)、先确保能在远程计算机上，使用 PLSql 访问远程机上的 Oracle 数据库。         若不能访问，重新配置远程计算机上的 Oracle 数据库； (2)、安装 Oracle 数据库后，数据库的连接配置是针对数据库所在机器。     因此在其他计算机上，无法登录另一台机器上的 Oracle 数据库。     此时需要更改远程计算机（安装 Oracle 的计算机）上的配置文件； (3)、修改两个文件：listener.ora和tnsnames.ora     可从Oracle安装目录检索到。     –所有的 SID_NAME、SID 的值，           改为与 InstantClient 中 tnsnames.ora 中 SERVICE_NAME 相同的值；     –所有HOST的值，改为 Oracle 数据库所在计算机的 IP 地址； (4)、重启远程机上的 Oracle 数据库，     在本地机上启动 PLSql Developer，     即可成功登录到远程机上的  Oracle 数据库。   <strong>环境：</strong>  –远程机环境：</p>
+<blockquote>
+<p>Win7 SP1</p>
+</blockquote>
+<blockquote>
+<p>Oracle 11g</p>
+</blockquote>
+<pre><code>--本地机环境：
+</code></pre><blockquote>
+<p>Win7 SP1</p>
+</blockquote>
+<blockquote>
+<p>PLSql Developer 8.0.4.1514</p>
+</blockquote>
+<blockquote>
+<p> InstantClient 11.2</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/06/04/2019030500143/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/06/04/2019030500143/" title="Oracle问题--远程登录失败原因分析">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/05/25/2019030500125/">
+    		Oracle中不等于号问题
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-05-25T06:57:04.000Z">2015-05-25</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>在Oracle中，不等于号有以下几种方式： <strong>&lt;&gt;，!=，^=</strong>   测试SQL</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>create table test(</li>
+<li>id int,</li>
+<li>name varchar2(10),</li>
+<li>age int</li>
+<li><p>)</p>
+</li>
+<li><p>insert into test(id,name,age) values(1,’zhangsan’,23);</p>
+</li>
+<li>insert into test(id,name,age) values(2,’lisi’,’’);</li>
+<li>insert into test(id,name,age) values(3,’wangwu’,null);</li>
+<li>insert into test(id,name,age) values(4,’sunqi’,27);</li>
+<li>insert into test(id,name,age) values(5,’’,22);</li>
+</ol>
+<p>如图： <img src="http://img.blog.csdn.net/20150522160700341" alt> 字段NAME和AGE都有空值   例1、查询AGE不等于23的数据</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>select * from test where  age &lt;&gt; 23;</li>
+</ol>
+<p><img src="http://img.blog.csdn.net/20150522160701133" alt>   例2、查询NAME不为lisi的数据</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>select * from test where name != ‘lisi’;</li>
+</ol>
+<p><img src="http://img.blog.csdn.net/20150522160807016" alt>   以上两个例子严格意义上说均不符合我们的要求，因为没有把null值查询出来 null只能通过is null或者is not null来判断，其它操作符与null操作都是false。   最后正确的sql语句为：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>select * from test where instr(concat(name,’xx’),’lisi’) = 0; –查询name字段不等于’lisi’的记录</li>
+<li>或</li>
+<li>select * from test where nvl(name,’xx’)&lt;&gt;’lisi’;</li>
+</ol>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>select * from test where instr(concat(age,00),23) = 0; –查询age字段不等于23的记录</li>
+<li>或</li>
+<li>select * from test where nvl(age,00)&lt;&gt;23;</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/05/25/2019030500125/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/05/25/2019030500125/" title="Oracle中不等于号问题">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/05/25/2019030500024/">
+    		手动和自动启动多个oracle实例
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-05-25T06:51:51.000Z">2015-05-25</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p><strong>手工启动两个实例</strong> su - oracle lsnrctl start －－假设一个实例是itsm、另外一个是test export ORACLE_SID=itsm sqlplus / as sysdba startup quit export ORACLE_SID=test sqlplus / as sysdba startup quit <strong>自动启动，可以在/etc/rc.local中设置，增加如下的内容</strong> –启动默认的数据库实例 su - oracle lsnrctl start sqlplus / as sysdba startup quit –启动第二个数据库实例 su - oracle export ORACLE_SID=test sqlplus / as sysdba startup quit</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/05/25/2019030500024/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/05/25/2019030500024/" title="手动和自动启动多个oracle实例">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/05/25/2019030500133/">
+    		Oracle定时器的应用
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-05-25T06:49:03.000Z">2015-05-25</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/定时器/" title="定时器">定时器</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>Oracle定时器，一旦设置，服务器的重启不会影响Oracle定时器的执行（定时每天执行），</p>
+<p>begin<br>  sys.dbms_job.submit(job =&gt; :job,<br>                      what =&gt; ‘check_err;’,<br>                      next_date =&gt; trunc(sysdate)+23/24,<br>                      interval =&gt; ‘trunc(next_day(sysdate,’’星期五’’))+23/24’);<br>  commit;<br>end;</p>
+<p>   其中:job是系统自动产生编号，check_err是自己的一个过程或函数，next_date设置下次执行时间，<br>这里是今天晚上23：00，interval设置时间间隔，多久执行一次，这里是每周的星期五晚上23：00，<br>函数next_day返回日期中包含指定字符的日期，trunc 函数去掉日期里的时间，也就是得到的是某天的00:00，<br>时间是以天为单位的所以要得到某某点某某分，就需要分数：</p>
+<p>1、 每分钟执行</p>
+<p>Interval =&gt; TRUNC(sysdate,’mi’) + 1 / (24*60)</p>
+<p>2、 每天定时执行</p>
+<p>例如：每天的凌晨2点执行</p>
+<p>Interval =&gt; TRUNC(sysdate) + 1 +2 / (24)</p>
+<p>3、 每周定时执行</p>
+<p>例如：每周一凌晨2点执行</p>
+<p>Interval =&gt; TRUNC(next_day(sysdate,’星期一’))+2/24</p>
+<p>4、 每月定时执行</p>
+<p>例如：每月1日凌晨2点执行</p>
+<p>Interval =&gt;TRUNC(LAST_DAY(SYSDATE))+1+2/24</p>
+<p>5、 每季度定时执行</p>
+<p>例如每季度的第一天凌晨2点执行</p>
+<p>Interval =&gt; TRUNC(ADD_MONTHS(SYSDATE,3),’Q’) + 2/24</p>
+<p>6、 每半年定时执行</p>
+<p>例如：每年7月1日和1月1日凌晨2点</p>
+<p>Interval =&gt; ADD_MONTHS(trunc(sysdate,’yyyy’),6)+2/24</p>
+<p>7、 每年定时执行</p>
+<p>例如：每年1月1日凌晨2点执行</p>
+<p>Interval =&gt;ADD_MONTHS(trunc(sysdate,’yyyy’),6)+2/24</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/05/25/2019030500133/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/05/25/2019030500133/" title="Oracle定时器的应用">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/tags/Oracle/page/2/">前一页</a><a class="page-number" href="/tags/Oracle/">1</a><a class="page-number" href="/tags/Oracle/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

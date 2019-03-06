@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>NoSQL数据库概览及其与SQL语法的比较 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2015/07/02/2019030500123/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2015/07/02/2019030500123/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/2015/07/02/2019030500123/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2015/07/02/2019030500123/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>NoSQL数据库概览及其与SQL语法的比较</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2015-07-02T06:14:20.000Z">2015-07-02</time>
+    </p>
+    <div class="post-content">
+        <blockquote>
+<p><strong>【文章摘要</strong>】 HBase是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，同时也是知名的NoSQL数据库之一。NoSQL数据库的产生就是为了解决大规模数据集合多重数据种类带来的挑战，尤其是大数据应用的难题。 本文对NoSQL数据库的定义、分类、特征、当前比较流行的NoSQL数据库系统等进行了简单的介绍，并对NoSQL和SQL语法进行了简单的比较，为大家对NoSQL数据库的学习提供了有益的参考。   <strong>一、NoSQL的出现</strong> 关系型数据库系统多年来在解决数据存储、服务和处理问题方面取得了巨大的成功。一些大型的公司使用关系型数据库建立了自己的系统，如联机事务处理系统和后端分析应用系统。联机事务处理(OLTP)系统用来实时记录交易信息。对这类系统的期望是能够快速返回响应信息(一般在毫秒级)。联机分析处理(OLAP)系统用来分析查询所储存的数据。OLAP属于商业智能的范畴，数据需要研究、处理和分析，以便收集信息，进一步驱动商业决策。 关系型数据库的内部设计由关系算法决定，这些系统需要预先定义一个模式(schema)和数据要遵守的类型。SQL是与这些系统交互的标准方式。但在对象-关系不匹配问题出现的场合，SQL就不是表达访问模式的最好方式了。例如目前炙手可热的大数据领域，关系型数据库不能很好地工作。 有关大数据常见定义包括：第一，大数据意味着数据足够大，为了从这些数据中获得一些真知灼见，你不得不研究它；第二，大数据就是不再适用于单台机器的数据。这些观点并不完整，我们需要用一种根本上不同的方式来考虑数据，从如何驱动商业价值的角度来考虑数据，这种数据就是大数据。 在大数据领域中，系统需要能够适应不同种类的数据格式和数据源，不需要预先严格定义模式，并且能够处理大规模数据。这样，NoSQL就出现了。   <strong>二、NoSQL的定义</strong> NoSQL(NoSQL= Not Only SQL )，意即“不仅仅是SQL”，是一项全新的数据库革命性运动。NoSQL的拥护者们提倡运用非关系型的数据存储。大多数数据库技术不能保证支持ACID(原子性、一致性、隔离性和持久性)，而且大部分技术都是开源项目，这些技术作为整体被称为NoSQL。   <strong>三、NoSQL的分类</strong> 一般将NoSQL数据库分为四大类：键值(Key-Value)存储数据库、列存储数据库、文档型数据库和图形(Graph)数据库。它们的数据模型、优缺点、典型应用场景如表1所示。</p>
+<p>表1 四大NoSQL数据库分析</p>
+<p><strong>分类</strong></p>
+<p><strong>数据模型</strong></p>
+<p><strong>优点</strong></p>
+<p><strong>缺点</strong></p>
+<p><strong>典型应用场景</strong></p>
+<p>键值(Key-Value)存储数据库</p>
+<p>Key指向Value的键值对，通常用hash表来实现</p>
+<p>查找速度快</p>
+<p>数据无结构化(通常只被当作字符串或者二进制数据)</p>
+<p>内容缓存，主要用于处理大量数据的高访问负载，也用于一些日志系统等</p>
+<p>列存储数据库</p>
+<p>以列簇式存储，将同一列数据存在一起</p>
+<p>查找速度快，可扩展性强，更容易进行分布式扩展</p>
+<p>功能相对局限</p>
+<p>分布式的文件系统</p>
+<p>文档型数据库</p>
+<p>Key-Value对应的键值对，Value为结构化数据</p>
+<p>数据结构要求不严格，表结构可变(不需要像关系型数据库一样需预先定义表结构)</p>
+<p>查询性能不高，而且缺乏统一的查询语法</p>
+<p>Web应用</p>
+<p>图形(Graph)数据库</p>
+<p>图结构</p>
+<p>利用图结构相关算法(如最短路径寻址，N度关系查找等)</p>
+<p>很多时候需要对整个图做计算才能得出需要的信息，而且这种结构不太好做分布式的集群方案</p>
+<p>社交网络，推荐系统等</p>
+<pre><code>**四、NoSQL的特征** NoSQL数据库并没有一个统一的架构，但是它们都普遍存在表2所示的一些共同特征。
+</code></pre><p>表2 NoSQL的特征</p>
+<p><strong>特征</strong></p>
+<p><strong>描述</strong></p>
+<p>不需要预定义模式</p>
+<p>不需事先定义数据模式，预定义表结构等。数据中每条记录都可能有不同的属性和格式</p>
+<p>无共享架构</p>
+<p>NoSQL往往将数据划分后存储在各个本地服务器上，从而提高了系统的性能</p>
+<p>弹性可扩展</p>
+<p>可以在系统运行的时候，动态增加或者删除结点。不需要停机维护，数据可以自动迁移</p>
+<p>分区</p>
+<p>NoSQL数据库将数据进行分区，将记录分散在多个节点上面，并且通常分区的同时还要做复制</p>
+<p>异步复制</p>
+<p>NoSQL中的复制，往往是基于日志的异步复制。这样，数据就可以尽快地写入一个节点，而不会出现网络传输迟延</p>
+<p>BASE</p>
+<p>相对于ACID特性，NoSQL数据库保证的是BASE特性(BASE是最终一致性和软事务)</p>
+<p>  <strong>五、常见的NoSQL数据库</strong> 比较适合采用NoSQL数据库的场合是：(1)数据模型比较简单；(2)需要灵活性更强的IT系统；(3)对数据库性能要求较高；(4)不需要高度的数据一致性；(5)对于给定key，比较容易映射复杂值的环境。 常见的NoSQL数据库如表3所示。</p>
+<p>表3常见的NoSQL数据库</p>
+<p><strong>分类</strong></p>
+<p><strong>实例</strong></p>
+<p>键值(Key-Value)存储数据库</p>
+<p>*  Riak：一个开源、分布式键值数据库，支持数据复制和容错</p>
+<p>*  Redis：一个开源的键值存储数据库，支持主从式复制、事务，Pub/Sub、Lua脚本，还支持给Key添加时限</p>
+<p>*  Dynamo：一个键值分布式存储数据库，直接由亚马逊Dynamo数据库实现</p>
+<ul>
+<li><p>Oracle NoSQL Database：来自Oracle的键值NoSQL数据库，支持事务ACID和JSON</p>
+</li>
+<li><p>Oracle NoSQL Database：具备数据备份和分布式键值存储系统</p>
+</li>
+<li><p>Voldemort：具备数据备份和分布式键值存储系统</p>
+</li>
+<li><p>Aerospike：一个键值存储数据库，支持混合内存架构，通过强一致性和可调一致性保证数据的完整性</p>
+</li>
+</ul>
+<p>列存储数据库</p>
+<ul>
+<li><p>Cassandra：支持跨数据中心的数据复制，提供列索引</p>
+</li>
+<li><p>HBase：一个开源、分布式、面向列存储的模型</p>
+</li>
+<li><p>Amazon SimpleDB：一个非关系型数据存储</p>
+</li>
+<li><p>Apache Accumulo：有序的、分布式键值数据存储，基于Google的BigTable设计</p>
+</li>
+<li><p>Hypertable：一个开源、可扩展的数据库，模仿Bigtable，支持分片</p>
+</li>
+<li><p>Azure Tables：为要求大量非结构化数据存储的应用提供NoSQL性能</p>
+</li>
+</ul>
+<p>文档型数据库</p>
+<ul>
+<li><p>MongoDB：开源、面向文档</p>
+</li>
+<li><p>CounchDB：一个使用JSON的文档数据库，使用Javascript做MapReduce查询，也是一个使用HTTP的API</p>
+</li>
+<li><p>Couchbase：基于JSON模型</p>
+</li>
+<li><p>RavenDB：一个基于.net语言的面向文档数据库</p>
+</li>
+<li><p>MarkLogic：用来存储基于XML和以文档为中心的信息，支持灵活的模式</p>
+</li>
+</ul>
+<p>图形(Graph)数据库</p>
+<ul>
+<li><p>Neo4j：一个图数据库，支持ACID事务</p>
+</li>
+<li><p>InfiniteGraph：用来维持和遍历对象间的关系，支持分布式数据存储</p>
+</li>
+<li><p>AllegroGraph：结合使用了内存和磁盘，提供了高可扩展性，支持SPARQ、RDFS++和Prolog推理</p>
+</li>
+</ul>
+<p><strong>六、NoSQL和SQL语法的简单比较</strong> 前面介绍了NoSQL的基本情况，下面以HBase和ORACLE为例，对NoSQL和SQL的语法进行简单的比较。HBase数据库被认为是安全特性最完善的NoSQL数据库产品之一，它被证实是一个强大的工具，尤其是在已经使用Hadoop的场合。如今，它已经是Apache顶级项目，有着众多的开发人员和兴旺的用户社区。 1.创建表 如果要创建一个表“mytable”，其中包含了一个“info”字段，那么： (1)ORACLE中的语法为： create table mytable ( info  varchar(30) not null ); (2)HBase中的语法为： create ‘mytable’, ‘cf’ 该命令创建了一个有一个列族(“cf”)的表“mytable”。   2.写数据 如果要向表中写入数据“hello hbase”，那么： (1)ORACLE中的语法为： insert into mytable(info) values(‘hello hbase’); (2)HBase中的语法为： put ‘mytable’, ‘first’, ‘cf:info’, ‘hello hbase’ 该命令在“mytable”表的“first”行中的“cf:info”列对应的数据单元中插入“hello hbase”。   3.读(查)数据 如果要从表中读出单条数据，那么： (1)ORACLE中的语法为： select <em> from mytable where info = ‘hello hbase’; (2)HBase中的语法为： get ‘mytable’, ‘first’ 该命令输出了该行的数据单元。   如果要从表中读出所有数据，那么： (1)ORACLE中的语法为： select </em> from mytable; (2)HBase中的语法为： scan ‘mytable’ 该命令输出了所有数据。   4.删数据 如果要从表中删除数据，那么： (1)ORACLE中的语法为： delete from mytable where info = ‘hello hbase’; (2)HBase中的语法为： put ‘mytable’, ‘first’, ‘cf:info’, ‘hello hbase1’ 该命令用最新的值覆盖了旧的值，就相当于将原数据删除了。   5.修改数据 如果要在表中修改数据，那么： (1)ORACLE中的语法为： update mytable set info = ‘hello hbase1’ where info = ‘hellohbase’; (2)HBase中的语法为： put ‘mytable’, ‘first’, ‘cf:info’, ‘hello hbase1’ 该命令用最新的值覆盖了旧的值，就相当于修改了原数据。   6.删表 如果要删除表，那么： (1)ORACLE中的语法为： drop table mytable; (2)HBase中的语法为： disable ‘mytable’ drop ‘mytable’ 该命令先将表“disable”掉，然后再“drop”掉。   我们可以看到，HBase的语法比较的简单，因此完全可以将上述所有命令放到一个shell脚本中，让命令批量执行。下面，我们来具体操作一下： 第一步，编写名为“command.sh”的脚本，其内容如下： exec /root/zhouzx/hbase-1.0.1/bin/hbase shell &lt;&lt;EOF create ‘mytable’, ‘cf’ put ‘mytable’, ‘first’, ‘cf:info’, ‘hello hbase’ get ‘mytable’, ‘first’ scan ‘mytable’ put ‘mytable’, ‘first’, ‘cf:info’, ‘hello hbase1’ disable ‘mytable’ drop ‘mytable’ EOF   第二步，将该脚本上传到Linux机器的安装HBase的用户下，依次执行“dos2unix command.sh”和“chmod 777command.sh”命令来转换文件格式和对文件赋权限。   第三步，执行“./command.sh”命令，在Linux界面上，我们可以看到如下输出信息： HBase Shell; enter ‘help<return>‘ for list of supportedcommands. Type “exit<return>“ to leave the HBase Shell Version 1.0.1, r66a93c09df3b12ff7b86c39bc8475c60e15af82d, Fri Apr17 22:14:06 PDT 2015   create ‘mytable’, ‘cf’ 0 row(s) in 0.6660 seconds   Hbase::Table - mytable put ‘mytable’, ‘first’, ‘cf:info’, ‘hello hbase’ 0 row(s) in 0.1140 seconds   get ‘mytable’, ‘first’ COLUMN                           CELL cf:info                         timestamp=1435807200326, value=hello hbase 1 row(s) in 0.0440 seconds   scan ‘mytable’ ROW                  COLUMN+CELL first                   column=cf:info,timestamp=1435807200326, value=hello hbase 1 row(s) in 0.0210 seconds   put ‘mytable’, ‘first’, ‘cf:info’, ‘hello hbase1’ 0 row(s) in 0.0040 seconds   disable ‘mytable’ 0 row(s) in 1.1930 seconds   drop ‘mytable’ 0 row(s) in 0.1940 seconds   整个脚本执行过程不过几秒钟，但我们之前提到的所有HBase命令都包括其中了，由此可见批处理的威力。大家一定要好好体会一下。   <strong>七、总结</strong> 本文对NoSQL进行了全面的介绍，并比较了它与SQL语法之间的不同。尽管大多数NoSQL数据存储系统都已被部署到实际应用中，但仍存在以下挑战性问题需要解决： 第一，已有key-value数据库产品大多是面向特定应用自治构建的，缺乏通用性。 第二，已有产品支持的功能有限(不支持事务特性)，导致其应用具有一定的局限性。 第三，已有一些研究成果和改进的NoSQL数据存储系统，但它们都是针对不同应用需求而提出的相应解决方案，很少从全局考虑系统的通用性，也没有形成系列化的研究成果。 第四，缺乏类似关系数据库所具有的强有力的理论(如armstrong公理系统)、技术(如成熟的基于启发式的优化策略、两段封锁协议等)、标准规范(如SQL语言)的支持。 第五，很多NoSQL数据库没有提供内建的安全机制。   随着云计算、移动互联网等技术的发展，大数据广泛存在，同时也出现了许多云环境下的新型应用，如社交网络、移动服务、协作编辑等。这些新型应用对海量数据管理或称云数据管理系统也提出了新的需求，NoSQL数据库在这些方面有大展身手的机会。我们有理由相信，NoSQL数据库的明天会更加的美好！</return></return></p>
+</blockquote>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/NOSQL/">NOSQL</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/NoSQL/" title="NoSQL">NoSQL</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br>
+        <a href="/2015/07/02/2019030500128/">
+            
+                Oracle中Hint深入理解
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br>
+        <a href="/2015/07/02/2019030500105/">
+            
+                mysql行转列（拆分字符串场景）
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '2019030500123' || '2015/07/02/2019030500123/',
+    owner: 'your_github_id',
+    repo: 'your_blog_comments',
+    clientId: 'your_client_id',
+    clientSecret: 'your_client_secret'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/hibernate/" title="hibernate">hibernate (2)</a>
+  
+    <a class="tag-item" href="/tags/session/" title="session">session (1)</a>
+  
+    <a class="tag-item" href="/tags/方法/" title="方法">方法 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

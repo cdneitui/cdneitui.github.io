@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>MySQL Study之--Mysql启动失败“mysql.host” | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2015/06/11/2019030500115/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2015/06/11/2019030500115/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/2015/06/11/2019030500115/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2015/06/11/2019030500115/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>MySQL Study之--Mysql启动失败“mysql.host”</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2015-06-11T04:33:56.000Z">2015-06-11</time>
+    </p>
+    <div class="post-content">
+        <p><strong>MySQL Study之–Mysql启动失败“mysql.host”</strong></p>
+<p>系统环境： 操作系统：RedHat EL55 DB Soft：  Mysql 5.6.4-m7</p>
+<p><strong>通过源码包安装mysql后，在启动mysqld时出现错误：</strong></p>
+<p><strong>[root@rh55 mysql]# bin/mysqld_safe &amp;</strong> [1] 15846 [root@rh55 mysql]# 150610 17:04:36 mysqld_safe Logging to ‘/usr/local/mysql/data/mysql/rh55.err’. 150610 17:04:36 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data/mysql 150610 17:04:37 mysqld_safe mysqld from pid file /usr/local/mysql/data/mysql/rh55.pid ended [1]+  Done                    bin/mysqld_safe</p>
+<p><strong>查看mysql日志：</strong></p>
+<p>[root@rh55 mysql]# more /usr/local/mysql/data/mysql/rh55.err</p>
+<p><strong>[html]</strong></p>
+<ol>
+<li>150610 16:56:59 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data/mysql</li>
+<li>/usr/local/mysql/bin/mysqld: Table ‘mysql.plugin’ doesn’t exist</li>
+<li>150610 16:57:00 [ERROR] Can’t open the mysql.plugin table. Please run mysql_upgrade to create it.</li>
+<li>150610 16:57:00 InnoDB: The InnoDB memory heap is disabled</li>
+<li>150610 16:57:00 InnoDB: Mutexes and rw_locks use InnoDB’s own implementation</li>
+<li>150610 16:57:00 InnoDB: Compressed tables use zlib 1.2.3</li>
+<li>150610 16:57:00 InnoDB: CPU does not support crc32 instructions</li>
+<li>150610 16:57:00 InnoDB: Initializing buffer pool, size = 128.0M</li>
+<li>150610 16:57:00 InnoDB: Completed initialization of buffer pool</li>
+<li>InnoDB: The first specified data file ./ibdata1 did not exist:</li>
+<li>InnoDB: a new database to be created!</li>
+<li>150610 16:57:00 InnoDB: Setting file ./ibdata1 size to 10 MB</li>
+<li>InnoDB: Database physically writes the file full: wait…</li>
+<li>150610 16:57:01 InnoDB: Log file ./ib_logfile0 did not exist: new to be created</li>
+<li>InnoDB: Setting log file ./ib_logfile0 size to 5 MB</li>
+<li>InnoDB: Database physically writes the file full: wait…</li>
+<li>150610 16:57:02 InnoDB: Log file ./ib_logfile1 did not exist: new to be created</li>
+<li>InnoDB: Setting log file ./ib_logfile1 size to 5 MB</li>
+<li>InnoDB: Database physically writes the file full: wait…</li>
+<li>InnoDB: Doublewrite buffer not found: creating new</li>
+<li>InnoDB: Doublewrite buffer created</li>
+<li>150610 16:57:04 InnoDB: 128 rollback segment(s) are active.</li>
+<li>InnoDB: Creating foreign key constraint system tables</li>
+<li>InnoDB: Foreign key constraint system tables created</li>
+<li>150610 16:57:04 InnoDB: Waiting for the background threads to start</li>
+<li>150610 16:57:05 InnoDB: 1.2.4 started; log sequence number 0</li>
+<li>150610 16:57:05 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been</li>
+<li>started. Generating a new UUID: ab19e2d2-0f4e-11e5-b157-080027973e8a.</li>
+<li>150610 16:57:05 [ERROR] Fatal error: Can’t open and lock privilege tables: Table ‘mysql.host’ doesn’t exist</li>
+<li>150610 16:57:05 mysqld_safe mysqld from pid file /usr/local/mysql/data/mysql/rh55.pid ended</li>
+<li>150610 17:04:36 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data/mysql</li>
+<li>/usr/local/mysql/bin/mysqld: Table ‘mysql.plugin’ doesn’t exist</li>
+<li>150610 17:04:36 [ERROR] Can’t open the mysql.plugin table. Please run mysql_upgrade to create it.</li>
+<li>150610 17:04:36 InnoDB: The InnoDB memory heap is disabled</li>
+<li>150610 17:04:36 InnoDB: Mutexes and rw_locks use InnoDB’s own implementation</li>
+<li>150610 17:04:36 InnoDB: Compressed tables use zlib 1.2.3</li>
+<li>150610 17:04:36 InnoDB: CPU does not support crc32 instructions</li>
+<li>150610 17:04:36 InnoDB: Initializing buffer pool, size = 128.0M</li>
+<li>150610 17:04:36 InnoDB: Completed initialization of buffer pool</li>
+<li>150610 17:04:36 InnoDB: highest supported file format is Barracuda.</li>
+<li>InnoDB: Log scan progressed past the checkpoint lsn 48961</li>
+<li>150610 17:04:36  InnoDB: Database was not shut down normally!</li>
+<li>InnoDB: Starting crash recovery.</li>
+<li>InnoDB: Reading tablespace information from the .ibd files…</li>
+<li>InnoDB: Restoring possible half-written data pages from the doublewrite</li>
+<li>InnoDB: buffer…</li>
+<li>InnoDB: Doing recovery: scanned up to log sequence number 1595695</li>
+<li>150610 17:04:36  InnoDB: Starting an apply batch of log records to the database…</li>
+<li>InnoDB: Progress in percents: 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76</li>
+<li>77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</li>
+<li>InnoDB: Apply batch completed</li>
+<li>150610 17:04:37 InnoDB: 128 rollback segment(s) are active.</li>
+<li>150610 17:04:37 InnoDB: 1.2.4 started; log sequence number 1595695</li>
+<li>150610 17:04:37 [Note] Recovering after a crash using mysql-bin</li>
+<li>150610 17:04:37 [Note] Starting crash recovery…</li>
+<li>150610 17:04:37 [Note] Crash recovery finished.</li>
+<li>150610 17:04:37 [ERROR] Fatal error: Can’t open and lock privilege tables: Table ‘mysql.host’ doesn’t exist</li>
+<li>150610 17:04:37 mysqld_safe mysqld from pid file /usr/local/mysql/data/mysql/rh55.pid ended</li>
+</ol>
+<p><strong>查看mysql配置文件:</strong> <strong>[root@rh55 ~]# cat /etc/my.cnf</strong></p>
+<p><strong>[html]</strong></p>
+<ol>
+<li>[mysqld]</li>
+<li>port            = 3306</li>
+<li>socket          = /tmp/mysql.sock</li>
+<li>skip-external-locking</li>
+<li>key_buffer_size = 16M</li>
+<li>max_allowed_packet = 1M</li>
+<li>table_open_cache = 64</li>
+<li>sort_buffer_size = 512K</li>
+<li>net_buffer_length = 8K</li>
+<li>read_buffer_size = 256K</li>
+<li>read_rnd_buffer_size = 512K</li>
+<li>myisam_sort_buffer_size = 8M</li>
+<li>datadir=/usr/local/mysql/data/mysql</li>
+</ol>
+<p><strong>解决方案：</strong> <strong>[root@rh55 mysql]# scripts/mysql_install_db –user=mysql –datadir=/usr/local/mysql/data/mysql</strong></p>
+<p><strong>[html]</strong></p>
+<ol>
+<li>WARNING: The host ‘rh55’ could not be looked up with resolveip.</li>
+<li>This probably means that your libc libraries are not 100 % compatible</li>
+<li>with this binary MySQL version. The MySQL daemon, mysqld, should work</li>
+<li>normally with the exception that host name resolving will not work.</li>
+<li>This means that you should use IP addresses instead of hostnames</li>
+<li>when specifying MySQL privileges !</li>
+<li>Installing MySQL system tables…</li>
+<li>150610 17:07:10 InnoDB: The InnoDB memory heap is disabled</li>
+<li>150610 17:07:10 InnoDB: Mutexes and rw_locks use InnoDB’s own implementation</li>
+<li>150610 17:07:10 InnoDB: Compressed tables use zlib 1.2.3</li>
+<li>150610 17:07:10 InnoDB: CPU does not support crc32 instructions</li>
+<li>150610 17:07:10 InnoDB: Initializing buffer pool, size = 128.0M</li>
+<li>150610 17:07:10 InnoDB: Completed initialization of buffer pool</li>
+<li>150610 17:07:10 InnoDB: highest supported file format is Barracuda.</li>
+<li>InnoDB: Log scan progressed past the checkpoint lsn 48961</li>
+<li>150610 17:07:10  InnoDB: Database was not shut down normally!</li>
+<li>InnoDB: Starting crash recovery.</li>
+<li>InnoDB: Reading tablespace information from the .ibd files…</li>
+<li>InnoDB: Restoring possible half-written data pages from the doublewrite</li>
+<li>InnoDB: buffer…</li>
+<li>InnoDB: Doing recovery: scanned up to log sequence number 1595695</li>
+<li>150610 17:07:11  InnoDB: Starting an apply batch of log records to the database…</li>
+<li>InnoDB: Progress in percents: 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99</li>
+<li>InnoDB: Apply batch completed</li>
+<li>150610 17:07:11 InnoDB: 128 rollback segment(s) are active.</li>
+<li>150610 17:07:11 InnoDB: Waiting for the background threads to start</li>
+<li>150610 17:07:12 InnoDB: 1.2.4 started; log sequence number 1595695</li>
+<li>150610 17:07:12 [Note] Recovering after a crash using mysql-bin</li>
+<li>150610 17:07:12 [Note] Starting crash recovery…</li>
+<li>150610 17:07:12 [Note] Crash recovery finished.</li>
+<li>150610 17:07:14 [Warning] Info table is not ready to be used. Table ‘mysql.slave_master_info’ cannot be opened.</li>
+<li>150610 17:07:14 [Warning] Error while checking replication metadata. Setting the requested repository in order to give users the chance to fix the problem and restart the server. If this is a live upgrade please consider using mysql_upgrade to fix the problem.</li>
+<li>150610 17:07:14 [Warning] Info table is not ready to be used. Table ‘mysql.slave_relay_log_info’ cannot be opened.</li>
+<li>150610 17:07:14 [Warning] Error while checking replication metadata. Setting the requested repository in order to give users the chance to fix the problem and restart the server. If this is a live upgrade please consider using mysql_upgrade to fix the problem.</li>
+<li>150610 17:07:15 [Note] Binlog end</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘partition’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_FOREIGN_COLS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_FOREIGN’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_FIELDS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_COLUMNS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_INDEXES’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_TABLESTATS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_SYS_TABLES’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_INDEX_TABLE’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_INDEX_CACHE’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_CONFIG’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_BEING_DELETED’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_DELETED’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_INSERTED’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_FT_DEFAULT_STOPWORD’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_METRICS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_BUFFER_POOL_STATS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_BUFFER_PAGE_LRU’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_BUFFER_PAGE’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_CMPMEM_RESET’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_CMPMEM’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_CMP_RESET’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_CMP’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_LOCK_WAITS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_LOCKS’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘INNODB_TRX’</li>
+<li>150610 17:07:15 [Note] Shutting down plugin ‘InnoDB’</li>
+<li>150610 17:07:15  InnoDB: FTS optimize thread exiting.</li>
+<li>150610 17:07:15  InnoDB: Starting shutdown…</li>
+<li>150610 17:07:16 InnoDB: Shutdown completed; log sequence number 1602851</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘PERFORMANCE_SCHEMA’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘CSV’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘MRG_MYISAM’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘MEMORY’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘MyISAM’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘mysql_old_password’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘mysql_native_password’</li>
+<li>150610 17:07:16 [Note] Shutting down plugin ‘binlog’</li>
+<li>OK</li>
+<li>Filling help tables…</li>
+<li>150610 17:07:16 InnoDB: The InnoDB memory heap is disabled</li>
+<li>150610 17:07:16 InnoDB: Mutexes and rw_locks use InnoDB’s own implementation</li>
+<li>150610 17:07:16 InnoDB: Compressed tables use zlib 1.2.3</li>
+<li>150610 17:07:16 InnoDB: CPU does not support crc32 instructions</li>
+<li>150610 17:07:16 InnoDB: Initializing buffer pool, size = 128.0M</li>
+<li>150610 17:07:16 InnoDB: Completed initialization of buffer pool</li>
+<li>150610 17:07:16 InnoDB: highest supported file format is Barracuda.</li>
+<li>150610 17:07:17 InnoDB: 128 rollback segment(s) are active.</li>
+<li>150610 17:07:17 InnoDB: 1.2.4 started; log sequence number 1602851</li>
+<li>150610 17:07:17 [Note] Binlog end</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘partition’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_FOREIGN_COLS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_FOREIGN’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_FIELDS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_COLUMNS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_INDEXES’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_TABLESTATS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_SYS_TABLES’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_INDEX_TABLE’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_INDEX_CACHE’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_CONFIG’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_BEING_DELETED’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_DELETED’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_INSERTED’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_FT_DEFAULT_STOPWORD’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_METRICS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_BUFFER_POOL_STATS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_BUFFER_PAGE_LRU’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_BUFFER_PAGE’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_CMPMEM_RESET’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_CMPMEM’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_CMP_RESET’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_CMP’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_LOCK_WAITS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_LOCKS’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘INNODB_TRX’</li>
+<li>150610 17:07:17 [Note] Shutting down plugin ‘InnoDB’</li>
+<li>150610 17:07:17  InnoDB: FTS optimize thread exiting.</li>
+<li>150610 17:07:17  InnoDB: Starting shutdown…</li>
+<li>150610 17:07:18 InnoDB: Shutdown completed; log sequence number 1602861</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘PERFORMANCE_SCHEMA’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘CSV’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘MRG_MYISAM’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘MEMORY’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘MyISAM’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘mysql_old_password’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘mysql_native_password’</li>
+<li>150610 17:07:18 [Note] Shutting down plugin ‘binlog’</li>
+<li><p>OK</p>
+</li>
+<li><p>To start mysqld at boot time you have to copy</p>
+</li>
+<li><p>support-files/mysql.server to the right place for your system</p>
+</li>
+<li><p>PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !</p>
+</li>
+<li><p>To do so, start the server, then issue the following commands:</p>
+</li>
+<li><p>./bin/mysqladmin -u root password ‘new-password’</p>
+</li>
+<li><p>./bin/mysqladmin -u root -h rh55 password ‘new-password’</p>
+</li>
+<li><p>Alternatively you can run:</p>
+</li>
+<li><p>./bin/mysql_secure_installation</p>
+</li>
+<li><p>which will also give you the option of removing the test</p>
+</li>
+<li>databases and anonymous user created by default.  This is</li>
+<li><p>strongly recommended for production servers.</p>
+</li>
+<li><p>See the manual for more instructions.</p>
+</li>
+<li><p>You can start the MySQL daemon with:</p>
+</li>
+<li><p>cd . ; ./bin/mysqld_safe &amp;</p>
+</li>
+<li><p>You can test the MySQL daemon with mysql-test-run.pl</p>
+</li>
+<li><p>cd ./mysql-test ; perl mysql-test-run.pl</p>
+</li>
+<li><p>Please report any problems with the ./bin/mysqlbug script!</p>
+</li>
+</ol>
+<p><strong>启动mysql server：</strong> <strong>[root@rh55 mysql]# bin/mysqld_safe &amp;</strong> [1] 16199 [root@rh55 mysql]# 150610 17:08:22 mysqld_safe Logging to ‘/usr/local/mysql/data/mysql/rh55.err’. 150610 17:08:22 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/data/mysql <strong>验证启动成功：</strong> <strong>[root@rh55 mysql]# netstat -an |grep 3306</strong> tcp        0      0 :::3306                     :::*                        LISTEN</p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br>
+        <a href="/2015/06/11/2019030500106/">
+            
+                MYSQL设计优化
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br>
+        <a href="/2015/06/10/2019030500057/">
+            
+                MongoDB常用命令
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '2019030500115' || '2015/06/11/2019030500115/',
+    owner: 'your_github_id',
+    repo: 'your_blog_comments',
+    clientId: 'your_client_id',
+    clientSecret: 'your_client_secret'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

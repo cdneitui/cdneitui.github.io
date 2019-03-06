@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>MySQL EXPLAIN SQL 输出信息描述 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2015/10/12/2019030500112/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2015/10/12/2019030500112/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/2015/10/12/2019030500112/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2015/10/12/2019030500112/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>MySQL EXPLAIN SQL 输出信息描述</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2015-10-12T04:41:26.000Z">2015-10-12</time>
+    </p>
+    <div class="post-content">
+        <p>EXPLAIN语句能够被用于获取一些关于SQL执行时的相关信息，比如表的连接顺序，对表的方式方式等等。通过对该相关信息进行进一步的分析，我们    可以通过对表添加适当的索引，以及优化连接顺序，使用提示等等手段来达到使SQL高效运行的目的。本文描述了EXPLAIN的用法并给出了相关示例。 一、EXPLAIN概述 EXPLAIN 语句主要是用于解析SQL执行计划，通过分析执行计划采取适当的优化方式提高SQL运行的效率。EXPLAIN 语句输出通常包括id列，select_type，table，type，possible_keys，key等等列信息MySQL 5.6.3后支持SELECT, DELETE, INSERT,REPLACE, and UPDATE. EXPLAIN EXTENDED支持一些额外的执行计划相关的信息EXPLAIN PARTITIONS支持基于分区表查询执行计划的相关信息 二、EXPLAIN输出列描述 – 下面通过示例来展示EXPLAIN输出列(root@localhost) [sakila]&gt; explain select sum(amount) from customer a,    -&gt; payment b where 1=1 and a.customer_id=b.customer_id and    -&gt; <a href="mailto:email=&#39;JANE.BENNETT@sakilacustomer.org" target="_blank" rel="noopener">email=&#39;JANE.BENNETT@sakilacustomer.org</a>‘\G<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> 1. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>           id: 1  select_type: SIMPLE        table: a         type: ALLpossible_keys: PRIMARY          key: NULL      key_len: NULL          ref: NULL         rows: 590        Extra: Using where<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> 2. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>           id: 1  select_type: SIMPLE        table: b         type: refpossible_keys: idx_fk_customer_id          key: idx_fk_customer_id      key_len: 2          ref: sakila.a.customer_id         rows: 14        Extra: 1、各列表示的意义 Column        Meaning——        ————————————id            The SELECT identifier                       select_type   The SELECT typetable         The table for the output rowpartitions    The matching partitionstype          The join typepossible_keys The possible indexes to choosekey           index actually chosenkey_len       The length of the chosen keyref           The columns compared to the indexrows          Estimate of rows to be examinedfiltered      Percentage of rows filtered by table conditionExtra         Additional information 2、各列上的具体描述 id：    包含一组数字，表示查询中执行select子句或操作表的顺序    id相同，执行顺序由上至下，否则id值越大(通常子查询会产生)优先级越高，越先被执行    id如果相同，可以认为是一组，从上往下顺序执行；在所有组中，id值越大，优先级越高，越先执行 select_type:      表示查询中每个select子句的类型（简单 OR复杂）    select_type              Value Meaning    ————-            ———————————————–    SIMPLE                   Simple SELECT (not using UNION or subqueries)    PRIMARY                  Outermost SELECT 最外层select    UNION                    Second or later SELECT statement in a UNION    DEPENDENT UNION          Second or later SELECT statement in a UNION, dependent on outer query    UNION                    RESULT Result of a UNION.    SUBQUERY                 First SELECT in subquery    DEPENDENT SUBQUERY       First SELECT in subquery, dependent on outer query(通常为相关子查询)    DERIVED                  Derived table SELECT (subquery in FROM clause)    MATERIALIZED             Materialized subquery    UNCACHEABLE SUBQUERY     A subquery for which the result cannot be cached and must be reevaluated                             for each row of the outer query    UNCACHEABLE UNION        The second or later select in a UNION that belongs to an uncacheable                             subquery (see UNCACHEABLE SUBQUERY)    table：      从哪个表(表名)上输出行记录，也可能是下列值:     • &lt;unionM,N&gt;: The row refers to the union of the rows with id values of M and N.    • <derivedn>: The row refers to the derived table result for the row with an id value of N.                   A derived table may result, for example, from a subquery in the FROM clause.    • <subqueryn>: The row refers to the result of a materialized subquery for the row with an id value of N.  partitions:     查询匹配的记录来自哪一个分区，当使用EXPLAIN，分区PARTITIONS关键字被指定时 type：    连接类型    system          表只有一行    const           表最多只有一行匹配，通用用于主键或者唯一索引比较时    eq_ref          每次与之前的表合并行都只在该表读取一行，这是除了system，const之外最好的一种，                    特点是使用=，而且索引的所有部分都参与join且索引是主键或非空唯一键的索引    ref             如果每次只匹配少数行，那就是比较好的一种，使用=或&lt;=&gt;，可以是左覆盖索引或非主键或非唯一键    fulltext        全文搜索    ref_or_null     与ref类似，但包括NULL    index_merge     表示出现了索引合并优化(包括交集，并集以及交集之间的并集)，但不包括跨表和全文索引。                    这个比较复杂，目前的理解是合并单表的范围索引扫描（如果成本估算比普通的range要更优的话）    unique_subquery 在in子查询中，就是value in (select…)把形如“select unique_key_column”的子查询替换。                    PS：所以不一定in子句中使用子查询就是低效的！    index_subquery  同上，但把形如”select non_unique_key_column“的子查询替换    range           常数值的范围    index           a.当查询是索引覆盖的，即所有数据均可从索引树获取的时候（Extra中有Using Index）；                    b.以索引顺序从索引中查找数据行的全表扫描（无 Using Index）；                    c.如果Extra中Using Index与Using Where同时出现的话，则是利用索引查找键值的意思；                    d.如单独出现，则是用读索引来代替读行，但不用于查找    all             全表扫描 possible_keys：    指出MySQL能使用哪个索引在表中找到行。    查询涉及到的字段上若存在索引则该索引将被列出，但不一定被查询使用。    如果改列为NULL，说明该查询不会使用到当前表上的相关索引，考虑是否有必要添加索引key    显示MySQL在查询中实际使用的索引，若没有使用索引，显示为NULL    也可能存在key不等于possible_keys的情形，即possible_keys不适合提取所需的行    而查询所选择的列在使用其他索引时更高效    TIPS：查询中若使用了覆盖索引，则该索引仅出现在key列表中 key_len    表示索引中使用的字节数，可通过该列计算查询中使用的索引的长度 ref    表示上述表的连接匹配条件，即哪些列或常量被用于查找索引列上的值rows    表示MySQL根据表统计信息及索引选用情况，估算的找到所需的记录所需要读取的行数    对于InnoDB，该值为预估，不一定精确 Extra    包含不适合在其他列中显示但十分重要的额外信息 三、使用EXPLAIN EXTENDED 示例 (root@localhost) [sakila]&gt; explain extended select <em> from city where country_id in    -&gt; ( select country_id from country where country=’China’) and 1=1 \G<strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong></em> 1. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>           id: 1  select_type: SIMPLE        table: country         type: ALLpossible_keys: PRIMARY          key: NULL      key_len: NULL          ref: NULL         rows: 109     filtered: 100.00        Extra: Using where<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> 2. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>           id: 1  select_type: SIMPLE        table: city         type: refpossible_keys: idx_fk_country_id          key: idx_fk_country_id      key_len: 2          ref: sakila.country.country_id         rows: 1     filtered: 100.00        Extra: NULL2 rows in set, 1 warning (0.00 sec) (root@localhost) [sakila]&gt; show warnings\G<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> 1. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>  Level: Note   Code: 1003Message: /<em> select#1 </em>/ select `city`.`city_id` AS `city_id`,`city`.`city` AS `city`,`city`.`country_id` AS `country_id`,`city`.`last_update` AS `last_update` from `sakila`.`country` join `sakila`.`city` where ((`city`.`country_id` = `country`.`country_id`) and (`country`.`country` = ‘China’))1 row in set (0.00 sec) – 从上面的extended使用可以看出，查询中多出了filtered列– 其次原来的SQL语句真正在执行的时候被改写，即原来的1=1的条件被去掉– 对于复杂的SQL语句我们可以通过该方式获得一个比较清晰的真正被执行的SQL语句 四、EXPLAIN PARTITIONS示例 (root@localhost) [sakila]&gt; CREATE TABLE `actor_part` (    -&gt;   `actor_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,    -&gt;   `first_name` varchar(45) NOT NULL,    -&gt;   `last_name` varchar(45) NOT NULL,    -&gt;   `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,    -&gt;   PRIMARY KEY (`actor_id`),    -&gt;   KEY `idx_actor_last_name` (`last_name`)    -&gt; ) partition by hash(actor_id) partitions 4;Query OK, 0 rows affected (0.11 sec) (root@localhost) [sakila]&gt; insert into actor_part select <em> from actor;Query OK, 200 rows affected (0.02 sec)Records: 200  Duplicates: 0  Warnings: 0(root@localhost) [sakila]&gt; explain select </em> from actor_part where actor_id=10;  – 未使用partitions时+—-+————-+————+——-+—————+———+———+——-+——+——-+| id | select_type | table      | type  | possible_keys | key     | key_len | ref   | rows | Extra |+—-+————-+————+——-+—————+———+———+——-+——+——-+|  1 | SIMPLE      | actor_part | const | PRIMARY       | PRIMARY | 2       | const |    1 | NULL  |+—-+————-+————+——-+—————+———+———+——-+——+——-+1 row in set (0.00 sec) (root@localhost) [sakila]&gt; explain partitions select * from actor_part where actor_id=10; – 使用partitions时+—-+————-+————+————+——-+—————+———+———+——-+——+——-+| id | select_type | table      | partitions | type  | possible_keys | key     | key_len | ref   | rows | Extra |+—-+————-+————+————+——-+—————+———+———+——-+——+——-+|  1 | SIMPLE      | actor_part | p2         | const | PRIMARY       | PRIMARY | 2       | const |    1 | NULL  |+—-+————-+————+————+——-+—————+———+———+——-+——+——-+1 row in set (0.00 sec)– 多出了partitions列</subqueryn></derivedn></p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/EXPLAIN/" title="EXPLAIN">EXPLAIN</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br>
+        <a href="/2015/10/15/2019030500140/">
+            
+                Oracle联合索引
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br>
+        <a href="/2015/10/08/2019030500126/">
+            
+                Oracle中查询、禁用、启用、删除表外键
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '2019030500112' || '2015/10/12/2019030500112/',
+    owner: 'your_github_id',
+    repo: 'your_blog_comments',
+    clientId: 'your_client_id',
+    clientSecret: 'your_client_secret'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

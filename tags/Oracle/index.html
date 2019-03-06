@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>`Oracle`标签下的文章 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/tags/Oracle/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/tags/Oracle/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/tags/Oracle/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/tags/Oracle/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 按标签分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `Oracle`标签下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/03/22/2019030500135/">
+    		Oracle序列号简述
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-03-22T08:03:30.000Z">2016-03-22</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/SEQUENCE/" title="SEQUENCE">SEQUENCE</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>序列号SEQUENCE：是Oracle提供的用于产生一系列唯一数字的数据库对象。   序列号在数据库中是一个共享对象, 序列号是一个计数器，它并不会与特定的表关联。 主要用于提供主键值或唯一约束值。 将序列值装入内存可以提高访问效率。   <strong>创建序列号语法：</strong> CREATE SEQUENCE [SCHEMA.]SEQUENCE_NAME [INCREMENT BY N] [START WITH N] [{MAXVALUE N | NOMAXVALUE}] [{MINVALUE N | NOMINVALUE}] [{CYCLE | NOCYCLE}] [{CACHE N | NOCACHE}];   SEQUENCE_NAME:序列号名称 INCREMENT BY用于定义序列的步长，如果省略，则默认为1，如果出现负值，则代表Oracle序列的值是按照此步长递减的。 START WITH 定义序列的初始值(即产生的第一个值)，默认为1。 MAXVALUE 定义序列生成器能产生的最大值。选项NOMAXVALUE是默认选项，代表没有最大值定义，这时对于递增Oracle序列，系统能够产生的最大值是10的27次方;对于递减序列，最大值是-1。 MINVALUE定义序列生成器能产生的最小值。选项NOMAXVALUE是默认选项，代表没有最小值定义，这时对于递减序列，系统能够产生的最小值是-10的26次方;对于递增序列，最小值是1。 CYCLE和NOCYCLE 表示当序列生成器的值达到限制值后是否循环。CYCLE代表循环，NOCYCLE代表不循环。如果循环，则当递增序列达到最大值时，循环到最小值;最小值为1。对于递减序列达到最小值时，循环到最大值。如果不循环，达到限制值后，继续产生新值就会发生错误。 CACHE(缓冲)定义存放序列的内存块的大小，默认为20。NOCACHE表示不对序列进行内存缓冲。对序列进行内存缓冲，可以改善序列的性能。 缓存选项会造成数据丢失，当实例异常关闭时。   如果指定CACHE值，ORACLE就可以<strong>预先在内存里面放置一些SEQUENCE</strong>，这样存取的快些。CACHE里面的取完后，ORACLE自动再取一组到CACHE。使用CACHE或许会跳号， 比如数据库突然不正常DOWN掉（SHUTDOWN ABORT),CACHE中的SEQUENCE就会丢失。举个例子：比如你的SEQUENCE中CACHE 100，那当你SEQUENCE取到90时突然断电，那么在你重启数据库后，SEQUENCE的值将从101开始。   如果指定NOCACHE值，ORACLE就不会预先在内存里面存放SEQUENCE，当然这也就可以避免数据库不正常DOWN掉的SEQUENCE丢失。不过会产生一些问题：创建NOCACHE SEQUENCE在高并发访问时，容易导致ROW CACHE LOCK等待事件，主要原因是每次获取NEXTVAL时都需要修改ROWCACHE中的字典信息。使用NOCACHE SEQUENCE，还会导致如下问题: 由于每次修改字典信息都需要COMMIT,可能导致LOG FILE SYNC等待，NOCACHE SEQUENCE在RAC环境下，会对基于SEQUENCE生成的列创建的索引，造成实例间大量索引块争用，基于以上问题,避免创建NOCACHE SEQUENCE。   SEQUENCE相关保护机制： ROW CACHE LOCK：在调用SEQUENCE.NEXTVAL情况下需要修改数据字典时发生，对应ROW CACHE LOCK事件。 SQ LOCK：在内存缓存(并非ROW CACHE)上获取SEQUENCE.NEXTVAL时发生，对应ENQ:SQ-CONTENTION事件。 SV LOCK：RAC环境下获取CACHE+ORDER属性的SEQUENCE.NEXTVAL时发生，对应DFS LOCK HANDLE事件。   使用序列号会产生跳号，序列在下列情况下出现裂缝: 回滚 系统异常 多个表同时使用同一序列   <strong>序列号使用：</strong> -- 返回序列中下一个有效的值，任何用户都可以引用 SELECT SEQUENCE_NAME.NEXTVAL FROM DUAL; – 序列的当前值 SELECT SEQUENCE_NAME.CURRVAL FROM DUAL;   实例应用：实现ID的自动递增 创建序列号 CREATE SEQUENCE TEST_SEQ INCREMENT BY 1 START WITH 1 MAXVALUE 30000 MINVALUE 1 CACHE 2;   创建表 CREATE TABLE TEST_TABLE( ID NUMBER(6), NAME VARCHAR2(30), CONSTRAINT PK_ID PRIMARY KEY(ID) );   插入数据 INSERT INTO TEST_TABLE VALUES(TEST_SEQ.NEXTVAL,’TOM’); COMMIT;   查看数据库中的序列号： SELECT <em> FROM USER_SEQUENCES; SELECT </em> FROM ALL_SEQUENCES; SELECT * FROM DBA_SEQUENCES;   <strong>修改序列号:</strong> ALTER SEQUENCE SEQUENCE_NAME [INCREMENT BY N] [{MAXVALUE N | NOMAXVALUE}] [{MINVALUE N | NOMINVALUE}] [{CYCLE | NOCYCLE}] [{CACHE N | NOCACHE}];   <strong>不能修改序列的初始值,否则会报ORA-02283:无法更改启动序列号</strong>   <strong>删除序列号：</strong> DROP SEQUENCE [SCHEMA.]序列名;</p>
+
+            
+            <p class="more">
+                <a href="/2016/03/22/2019030500135/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/03/22/2019030500135/" title="Oracle序列号简述">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/03/17/2019030500128/">
+    		Oracle中in、exists、left join 的效率
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-03-17T10:26:48.000Z">2016-03-17</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/exists/" title="exists">exists</a> / 
+    
+        <a href="/tags/left-join/" title="left join">left join</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>也是用到了才知道，oracle in表达式参数支持最大上限1000个，是个头疼的问题， 解决思路：拆分成多个in表达式，每个表达式中参数不超过1000。   或者用其他关键字：   首先，在oracle中效率排行：表连接&gt;exist&gt;not exist&gt;in&gt;not in; 因此如果简单提高效率可以用exist代替in进行操作，当然换成表连接可以更快地提高效率，具体是用left join代替not in 和not exist，用inner join 代替in和exist，这样可以大大提高效率。具体例子如下： A、NOT IN、NOT EXISTS的相关子查询可以改用LEFT JOIN代替写法。 比如：   SELECT PUB_NAME   FROM PUBLISHERS   WHERE PUB_ID NOT IN (SELECT PUB_ID FROM TITLES WHERE TYPE = ‘BUSINESS’)   可以改写成：   SELECT A.PUB_NAME   FROM PUBLISHERS A LEFT JOIN TITLES B ON B.TYPE = ‘BUSINESS’ AND A.PUB_ID=B. PUB_ID   WHERE B.PUB_ID IS NULL (2) SELECT TITLE   FROM TITLES   WHERE NOT EXISTS (SELECT TITLE_ID FROM SALES WHERE TITLE_ID = TITLES.TITLE_ID)   可以改写成： SELECT TITLE   FROM TITLES LEFT JOIN SALES ON SALES.TITLE_ID = TITLES.TITLE_ID   WHERE SALES.TITLE_ID IS NULL   B、 如果保证子查询没有重复 ，IN、EXISTS的相关子查询可以用INNER JOIN 代替。   比如： SELECT PUB_NAME   FROM PUBLISHERS   WHERE PUB_ID IN (SELECT PUB_ID FROM TITLES   WHERE TYPE = ‘BUSINESS’)   可以改写成： SELECT DISTINCT A.PUB_NAME   FROM PUBLISHERS A INNER JOIN TITLES B ON B.TYPE = ‘BUSINESS’ AND A.PUB_ID=B. PUB_ID</p>
+
+            
+            <p class="more">
+                <a href="/2016/03/17/2019030500128/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/03/17/2019030500128/" title="Oracle中in、exists、left join 的效率">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/02/16/2019030500136/">
+    		Oracle查询杀死死锁
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-02-16T05:45:21.000Z">2016-02-16</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/死锁/" title="死锁">死锁</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>oracle死锁问题查询及处理</p>
+<p>一、数据库死锁的现象       首先确认登录的界面  sys/dba 程序在执行的过程中，点击确定或保存按钮，程序没有响应，也没有出现报错。</p>
+<p>二、死锁的原理</p>
+<p>当对于数据库某个表的某一列做更新或删除等操作，执行完毕后该条语句不提</p>
+<p>交，另一条对于这一列数据做更新操作的语句在执行的时候就会处于等待状态，</p>
+<p>此时的现象是这条语句一直在执行，但一直没有执行成功，也没有报错。</p>
+<p>三、死锁的定位方法</p>
+<p>通过检查数据库表，能够检查出是哪一条语句被死锁，产生死锁的机器是哪一台。</p>
+<p>1）用dba用户执行以下语句</p>
+<p>select username,lockwait,status,machine,program from v$session where sid in</p>
+<p>(select session_id from v$locked_object)</p>
+<p>如果有输出的结果，则说明有死锁，且能看到死锁的机器是哪一台。字段说明：</p>
+<p>Username：死锁语句所用的数据库用户；</p>
+<p>Lockwait：死锁的状态，如果有内容表示被死锁。</p>
+<p>Status： 状态，active表示被死锁</p>
+<p>Machine： 死锁语句所在的机器。</p>
+<p>Program： 产生死锁的语句主要来自哪个应用程序。</p>
+<p>2）用dba用户执行以下语句，可以查看到被死锁的语句。</p>
+<p>select sql_text from v$sql where hash_value in</p>
+<p>(select sql_hash_value from v$session where sid in</p>
+<p>(select session_id from v$locked_object))</p>
+<p>四、死锁的解决方法</p>
+<pre><code>一般情况下，只要将产生死锁的语句提交就可以了，但是在实际的执行过程中。用户可
+</code></pre><p>能不知道产生死锁的语句是哪一句。可以将程序关闭并重新启动就可以了。</p>
+<p>　经常在Oracle的使用过程中碰到这个问题，所以也总结了一点解决方法。</p>
+<p>1）查找死锁的进程：</p>
+<p>sqlplus “/as sysdba” (sys/change_on_install)</p>
+<p>SELECT s.username,l.OBJECT_ID,l.SESSION_ID,s.SERIAL#,</p>
+<p>l.ORACLE_USERNAME,l.OS_USER_NAME,l.PROCESS</p>
+<p>FROM V$LOCKED_OBJECT l,V$SESSION S WHERE l.SESSION_ID=S.SID;</p>
+<p>2）kill掉这个死锁的进程：</p>
+<p>　　alter system kill session ‘sid,serial#’; （其中sid=l.session_id）</p>
+<p>3）如果还不能解决：</p>
+<p>select pro.spid from v$session ses,v$process pro where ses.sid=XX and ses.paddr=pro.addr;</p>
+<p>　　其中sid用死锁的sid替换: exit</p>
+<p>ps -ef|grep spid</p>
+<p>　　其中spid是这个进程的进程号，kill掉这个Oracle进程</p>
+<pre><code>KILL -9  “刚才查出的SPID”
+
+在WINDOWS平台，可以是偶那个orakill。
+</code></pre><p>4）查询死锁语句</p>
+<p>select A.SQL_TEXT, B.USERNAME, C.OBJECT_ID, C.SESSION_ID,</p>
+<pre><code>B.SERIAL#, C.ORACLE\_USERNAME,C.OS\_USER_NAME,C.Process,
+
+&apos;&apos;&apos;&apos;||C.Session_ID||&apos;,&apos;||B.SERIAL#||&apos;&apos;&apos;&apos;
+</code></pre><p>from v$sql A, v$session B, v$locked_object C</p>
+<p>where A.HASH_VALUE = B.SQL_HASH_VALUE and</p>
+<p>B.SID = C.Session_ID</p>
+<p>精简处理步骤</p>
+<p>–1、查找被锁表的object_id</p>
+<p>select object_id from all_objects where object_name = upper(‘table_name’) and object_type = ‘TABLE’</p>
+<p>–2、根据第1步查到的object_id查找被锁对象的会话ID</p>
+<p>select session_id from v$locked_object where object_id = 1779474</p>
+<p>–3、根据第2步查到的session_id查找serial#</p>
+<p>select sid,serial# from v$session  where sid = 284</p>
+<p>–4、根据session_id和serial#杀掉进程</p>
+<p>alter system kill session ‘sid,serial#’</p>
+<p>–查找在被锁对象上的操作语句</p>
+<p>select sql_text from v$sqlarea where address = ‘00’  –address为v$session中的sql_address字段</p>
+
+            
+            <p class="more">
+                <a href="/2016/02/16/2019030500136/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/02/16/2019030500136/" title="Oracle查询杀死死锁">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/27/2019030500129/">
+    		Oracle修改字符集
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-27T02:17:18.000Z">2016-01-27</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>方法一：sqlplus “用户/密码 as sysdba” sqlplus “sys/sys as sysdba” 方法二：sqlplus/nolog SQL&gt; conn /as sysdba SQL&gt; shutdown immediate; SQL&gt; startup mount SQL&gt; ALTER SYSTEM ENABLE RESTRICTED SESSION; SQL&gt; ALTER SYSTEM SET JOB_QUEUE_PROCESSES=0; SQL&gt; ALTER SYSTEM SET AQ_TM_PROCESSES=0; SQL&gt; alter database open; SQL&gt; ALTER DATABASE CHARACTER SET ZHS16GBK; ORA-12712: new character set must be a superset of old character set 提示我们的字符集：新字符集必须为旧字符集的超集，这时我们可以跳过超集的检查做更改： SQL&gt; ALTER DATABASE character set INTERNAL_USE ZHS16GBK; –我们看到这个过程和之前ALTER DATABASE CHARACTER SET操作的内部过程是完全相同的，也就是说INTERNAL_USE提供的帮助就是使Oracle数据库绕过了子集与超集的校验. SQL&gt; shutdown immediate; SQL&gt; startup <!--StartFragment--><!--EndFragment--> SQL&gt; select userenv(‘language’) from dual;  Oracle查看字符集</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/27/2019030500129/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/27/2019030500129/" title="Oracle修改字符集">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/18/2019030500147/">
+    		oracle SQL竖表转横表
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-18T10:14:25.000Z">2016-01-18</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>oracle SQL竖表转横表 T_T_STUDENT表查询记录如下，要转成横表 姓名 课程 成绩 1 张飞 语文 80 2 张飞 数学 87 3 关羽 语文 97 4 张飞 英语 68 5 关羽 数学 53 6 刘备 语文 90 方法一： –用decode实现, SELECT T.NAME, SUM(DECODE(T.Course, ‘语文’, T.Score)) 语文, SUM(DECODE(T.Course, ‘数学’, T.Score)) 数学, SUM(DECODE(T.Course, ‘英语’, T.Score)) 英语 FROM T_T_STUDENT T GROUP BY T.NAME 方法二： –用case when 实现 SELECT T.NAME, SUM(CASE T.Course WHEN ‘语文’ THEN T.Score ELSE 0 END) 语文, SUM(CASE T.Course WHEN ‘数学’ THEN T.Score ELSE 0 END) 数学, SUM(CASE T.Course WHEN ‘英语’ THEN T.Score ELSE 0 END) 英语 FROM T_T_STUDENT T GROUP BY T.NAME 输出结果如下： 姓名 语文 数学 英语 1 刘备 90 94 92 2 关羽 97 53 95 3 张飞 80 87 68 区别如果条件是单一值时，用decode比较简便，如果判断条件比较复杂是用case when实现</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/18/2019030500147/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/18/2019030500147/" title="oracle SQL竖表转横表">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/15/2019030500141/">
+    		oracle跨库查询dblink的用法
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-15T09:06:29.000Z">2016-01-15</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/dblink/" title="dblink">dblink</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>1.创建之前的工作</strong> 在创建dblink之前，首先要查看用户是否有相应的权限。针对特定的用户，使用 sqlplus user/pwd登录后，执行如下语句：</p>
+<p><code>select</code> <code>*</code> <code>from</code> <code>user_sys_privs t</code> <code>where</code> <code>t.privilege</code> <code>like</code> <code>upper`</code>(<code>&#39;%link%&#39;</code>);`</p>
+<p>在sys用户下，显示结果为：</p>
+<p>SYS CREATE DATABASE LINK NO<br>SYS DROP PUBLIC DATABASE LINK NO<br>SYS CREATE PUBLIC DATABASE LINK NO</p>
+<p>可以看出在数据库中dblink有三种权限:</p>
+<p>CREATE DATABASE LINK–所创建的dblink只能是创建者能使用，别的用户使用不了<br>CREATE PUBLIC DATABASE LINK–public表示所创建的dblink所有用户都可以使用<br>DROP PUBLIC DATABASE LINK–删除指定dblink</p>
+<p>如果想要改变某个用户的权限，需要在sys用户下修改：</p>
+<p><code>grant</code> <code>CREATE</code> <code>PUBLIC</code> <code>DATABASE</code> <code>LINK，`</code>DROP<code></code>PUBLIC<code></code>DATABASE<code></code>LINK<code></code>to<code></code>scott;`</p>
+<p>查看dblink，有两种方式，分别如下：</p>
+<p><code>1.`</code>select<code></code>owner,object_name<code></code>from<code></code>dba_objects<code></code>where<code></code>object_type=<code>&#39;DATABASE LINK&#39;</code>;`</p>
+<p><code>2.`</code>select<code></code>*<code></code>from<code></code>dba_db_links;`</p>
+<p><strong> 2. 创建dblink</strong></p>
+<p><code>create</code> <code>public</code> <code>database</code> <code>link &lt;span style=`</code>“background-color: #ccffcc;”<code></code>&gt;LINK_NAME`</p>
+<p><code>&lt;/span&gt;`</code>connect<code></code>to<code></code>&lt;span style=<code>&quot;background-color: #ccffcc;&quot;</code>&gt;USRNAME identified<code></code>by<code></code>“<span style="``background-color: #ccffcc;``">PASSWORD</span>“`</p>
+<p><code>using</code></p>
+<p><code>&#39;(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = XXX.XXX.XXX.XXX)(PORT = 1521))</code></p>
+<p><code>(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = XXX))</code></p>
+<p><code>)&#39;`</code>;`</p>
+<p>注意：using后跟的是一个字符串，其中一定不要出现不必要的空格，否则会出错ORA-12514，在上面的代码中为了方便阅读其中进行了换行，可能会出现空格而导致错误，所以使用的时候将空格去掉就ok了。 这里LINK_NAM为自定的名称；USERNAME和PASSWORD为指定的oracle数据库中的用户名和密码，SERVICE_NAME如果不确定的话，可以通过以下语句获得：</p>
+<p><code>show parameter service_names;</code></p>
+<p><code>或者</code></p>
+<p><code>select</code> <code>name`</code>,value<code></code>from<code></code>v$parameter<code></code>where<code></code>name<code>=</code>‘service_names’`</p>
+<p><strong>3.dblink的使用</strong> dblink的使用相对比较简单，把一般访问本地表时的表名改为如下格式即可：[user.]table@link_name。</p>
+<p><code>select</code> <code>studentid</code> <code>from</code> <code>&lt;a href=`</code>“mailto:abc.studeng@abc_ten”<code></code>&gt;abc.studeng@abc_ten;`</p>
+<p><strong> 4.删除dblink</strong> 确定要删除的dblink名字以后，可以通过drop命令直接将其删除：</p>
+<p><code>drop</code> <code>public</code> <code>database</code> <code>link abc_ten;</code></p>
+
+            
+            <p class="more">
+                <a href="/2016/01/15/2019030500141/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/15/2019030500141/" title="oracle跨库查询dblink的用法">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/14/2019030500018/">
+    		客户端连接虚拟机Oracle服务器错误
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-14T05:55:43.000Z">2016-01-14</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1.在<strong>虚拟机</strong>上安装<strong>Oracle</strong>数据库时，客户端连接提示：<strong>ORA-12541</strong>：TNS:无监听程序，该怎么解决呢？ 经常有网友朋友问这个问题。 在window的系统下，已经把1521的端口开放出去了，但是从另外一台机器连接服务器的时候 ，还是连不上。 只有把整个防火墙都关闭，才能使其他机器上连接到oracle的服务器。究竟是什么原因了? 这个原因，还是归结为window系统的一个问题，对于oracle来说，对客户端的连接请求都是通过listener来进行监听和处理的。listener的端口默认是1521.所以有很多的网友在此通常都知道要开放这个端口，不过listener在监听到客户的连接以后，会建立一个临时的端口并把端口号报之给客户端，接下来就由这个端口来和服务器端交互了。这个端口是由listener分配的，所以没有办法确定，也就被防火墙拦住了。 在window下，由于linux下已经使用了共享socket解决临时sock的问题，所以linux开放了1521就可以了，window没有，所以有这样的问题。 不过还好，window的socket2 提供了share socket的技术，我们只需要通过很简单的步骤，就是让window系统下的oracle使用上share socket，从而解决我们的问题。 设置方法如下。我的机器是10.2.0.4 1. 打开注册表 2. 找到[HKEY_LOCAL_MACHINESOFTWAREORACLEKEY_OraDb10g_home1]这个目录 在其下加入一个字符串值 键：USE_SHARED_SOCKET 值: TRUE 3. 重启监听服务 现在再用客户端试试，应该就可以连上了。   2.虚拟机安装Oracle错误ORA-12514的解决方案 在<strong>虚拟机</strong>上安装<strong>Oracle</strong>数据库时，提示：<strong>ORA-12514</strong>错误，该怎么解决呢？本文我们就介绍了这一错误的解决方案，现在就让我们来一起了解一下这一过程。   <strong>解决方案：</strong>   [oracle@oracle_taowei_redhat~]$ lsnrctl status 查看监听器是否启动。   如果没有启动监听，则运行命令：lsnrctl start启动监听（lsnrctl stop关闭监听）。   启动监听后可以用sqlplus登录数据库，查看数据库信息：如sqlplus <a href="mailto:emcd/emcd@192.168.1.120" target="_blank" rel="noopener">emcd/emcd@192.168.1.120</a>:1521/orcl。这种方式存在安全隐患，密码以明文出现，容易被别人窃取；所以建议：sqlplus emcd@oracle_taowei 回车，按提示输入密码，这样就保证了密码不被别人看见。   以数据库管理员登录：sqlplus sys/oracle as sysdba 登录后可以执行关闭或启动数据库命令：   SQL&gt; shutdown immediate (关闭数据库)   SQL&gt; startup (启动数据库)   当数据库处于关闭状态时，要启动数据库：首先启动监听器 lsnrctl start；然后sqlplus sys/oracle as sysdba，回车后会显示Connected to an idle instance，并出现提示符SQL&gt;，此时输入命令startup启动数据库，输入 shutdown immediate，则可关闭数据库。</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/14/2019030500018/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/14/2019030500018/" title="客户端连接虚拟机Oracle服务器错误">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/12/2019030500137/">
+    		ORACLE恢复删除表或表记录
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-12T04:27:46.000Z">2016-01-12</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>一：表的恢复</strong> 对误删的表，只要没有使用PURGE永久删除选项，那么从FLASHBACK TABLE区恢复回来希望是挺大的。一般步骤有： 1、从FLASHBACK TABLE里查询被删除的表</p>
+<p>SELECT * FROM RECYCLEBIN ORDER BY DROPTIME DESC</p>
+<p>2.执行表的恢复</p>
+<p>FLASHBACK TABLE TABLE_NAME TO BEFORE DROP;</p>
+<p><strong>二：表数据恢复</strong> 对误删的表记录，只要没有 TRUNCATE 语句，就可以根据事务的提交时间进行选择恢复，一般步骤有： 1、先从 FLASHBACK_TRANSACTION_QUERY 视图里查询，视图提供了供查询用的表名称、事务提交时间、UNDO_SQL等字段。</p>
+<p>SELECT * FROM FLASHBACK_TRANSACTION_QUERY WHERE TABLE_NAME=’TEST’;</p>
+<p>2、执行表记录恢复 一般先根据时间进行查询，查询语句模式为</p>
+<p>SELECT <em> FROM TABLE_NAME AS OF TIMESTAMP TO_TIMESTAMP(time,’yyyy-mm-dd hh24:mi:ss’); –time指某个时间点<br>如：<br>SELECT </em> FROM SCOTT.TEST AS OF TIMESTAMP TO_TIMESTAMP(‘2009-12-11 20:53:57’,’yyyy-mm-dd hh24:mi:ss’);</p>
+<p>若有数据，恢复极为简单了，语句为</p>
+<p>FLASHBACK TABLE TABLE_NAME TO TIMESTAMP TO_TIMESTAMP(TIME,’yyyy-mm-dd hh24:mi:ss’);<br>如：<br>FLASHBACK TABLE SCOTT.TEST TO TIMESTAMP TO_TIMESTAMP(‘2009-12-11 20:47:30’,’yyyy-mm-dd hh24:mi:ss’);</p>
+<p>注意:</p>
+<p>ALTER TABLE TABLE_NAME ENABLE ROW MOVEMENT;</p>
+<p>这个命令的作用是，允许Oracle 修改分配给行的rowid。 在Oracle 中，插入一行时就会为它分配一个rowid，而且这一行永远拥有这个rowid。 闪回表处理会对EMP 完成DELETE，并且重新插入行，这样就会为这些行分配一个新的rowid。 要支持闪回就必须允许Oracle 执行这个操作</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/12/2019030500137/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/12/2019030500137/" title="ORACLE恢复删除表或表记录">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/05/2019030500138/">
+    		oracle用户密码过期的处理方法
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-05T03:25:25.000Z">2016-01-05</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>Oracle错误代码：ORA-28002。 受影响版本：Oracle11g以上版本。 导致密码消失的原因：Oracle 11g中默认的DEFAULT概要文件中口令有效期PASSWORD_LIFE_TIME默认值为180天。 当以客户端登陆Oracle提示ORA-28002，则基本可以确定登陆帐号已过有效期，使用具有DBA权限的帐号重置该帐号密码即可。 解决方法： 以下步骤以具有DBA权限用户操作 0. 登录sqlplus：sqlplus / as sysdba 1.查看口令失效用户的profile文件 SQL&gt;SELECT username,profile FROM dba_users; EM：服务器&gt;用户，查看口令失效的用户对应的概要文件，这里假设为DEFAULT，下同。 2.查看对应的概要文件的口令有效期设置 SQL&gt;SELECT * FROM dba_profiles WHERE profile=’DEFAULT’ AND resource_name=’PASSWORD_LIFE_TIME’; EM：服务器&gt;概要文件&gt;选择刚刚查到的概要文件DEFAULT&gt;查看，查看口令下面的有效期值。 3.将口令有效期默认值180天修改成“无限制” SQL&gt;ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED; EM：服务器&gt;概要文件&gt;选择刚刚查到的概要文件DEFAULT&gt;编辑&gt;口令，在有效期输入或选择你需要的值，保存。 该参数修改实时生效。 出于数据库安全性考虑，不建议将PASSWORD_LIFE_TIME值设置成UNLIMITED，即建议客户能够定期修改数据库用户口令。 在修改PASSWORD_LIFE_TIME值之前已经失效的用户，还是需要重新修改一次密码才能使用。 SQL&gt;alter user  user_name identified by password;</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/05/2019030500138/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/05/2019030500138/" title="oracle用户密码过期的处理方法">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/5.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/16/2019030500134/">
+    		Oracle常用语句
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-16T03:15:11.000Z">2015-12-16</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <ol>
+<li>– 查看表信息</li>
+<li><p>DESC 表名;</p>
+</li>
+<li><p>– 表添加注释</p>
+</li>
+<li><p>COMMENT ON TABLE 表名 IS ‘注释信息’;</p>
+</li>
+<li><p>– 列添加注释</p>
+</li>
+<li><p>COMMENT ON COLUMN 表名.列名 IS ‘注释信息’;</p>
+</li>
+<li><p>– 修改表名  </p>
+</li>
+<li><p>ALTER TABLE 原表名  RENAME TO 新表名;</p>
+</li>
+<li><p>– 修改字段名</p>
+</li>
+<li><p>ALTER TABLE 表名 RENAME COLUMN 原字段名 TO 新字段名;</p>
+</li>
+<li><p>– 在表的后面增加一个字段  </p>
+</li>
+<li>ALTER TABLE 表名 ADD 字段名 数据类型(数据大小);</li>
+<li><p>ALTER TABLE 表名 ADD(字段名1 数据类型(数据大小) 约束条件, 字段名2 数据类型(数据大小) 约束条件, …);</p>
+</li>
+<li><p>– 在表中删除一列  </p>
+</li>
+<li>ALTER TABLE 表名 DROP COLUMN 列名;</li>
+<li><p>ALTER TABLE 表名 DROP (字段名1, 字段名2, …);</p>
+</li>
+<li><p>– 修改表里字段的定义描述  </p>
+</li>
+<li><p>ALTER TABLE 表名 MODIFY 字段名 数据类型(数据大小);</p>
+</li>
+<li><p>– 给表里的字段加上约束条件  </p>
+</li>
+<li>ALTER TABLE 表名 ADD CONSTRAINT 约束名 PRIMARY KEY (字段名, …);– 主键  </li>
+<li>ALTER TABLE 表名 ADD CONSTRAINT 约束名 UNIQUE (字段名, …);– 唯一键  </li>
+<li>– 外键</li>
+<li>ALTER TABLE 表名 ADD CONSTRAINT 约束名 FOREIGN KEY(字段名) REFERENCES 外键表名(外键字段名) ON DELETE CASCADE;</li>
+<li>– 注：ON DELETE CASCADE和ON DELETE SET NULL的作用是用来处理级联删除问题的，也可以不加。</li>
+<li>– CHECK约束</li>
+<li>ALTER TABLE 表名 ADD CONSTRAINT 约束名 CHECK (约束条件);</li>
+<li>– 非空约束，增加非空约束时用的是关键字MODIFY，其它四种约束都是ADD</li>
+<li><p>ALTER TABLE 表名 MODIFY 字段名 NOT NULL;</p>
+</li>
+<li><p>– 删除表里的约束条件</p>
+</li>
+<li>– 非空约束不能指定约束名，应该先通过查询表和列所对应的的约束信息，找出约束名，再删除。</li>
+<li><p>ALTER TABLE 表名 DROP CONSTRAINT 约束名;</p>
+</li>
+<li><p>– 修改主键，可以先删除主键约束，再重新创建新主键约束。</p>
+</li>
+<li><p>– 重命令约束</p>
+</li>
+<li><p>ALTER TABLE 表名 RENAME CONSTRAINT 原约束名 TO 新约束名;</p>
+</li>
+<li><p>– 创建索引</p>
+</li>
+<li>CREATE [unique] INDEX [user.]index</li>
+<li>ON [user.]table (column [ASC | DESC] [,column [ASC | DESC] ] … )</li>
+<li>[CLUSTER [scheam.]cluster]</li>
+<li>[INITRANS n]</li>
+<li>[MAXTRANS n]</li>
+<li>[PCTFREE n]</li>
+<li>[STORAGE storage]</li>
+<li>[TABLESPACE tablespace]</li>
+<li>[NO SORT]</li>
+<li><p>Advanced</p>
+</li>
+<li><p>其中：</p>
+</li>
+<li>schema ORACLE模式，缺省即为当前帐户</li>
+<li>index 索引名</li>
+<li>table 创建索引的基表名</li>
+<li>column 基表中的列名，一个索引最多有16列，long列、long raw列不能建索引列</li>
+<li>DESC、ASC 缺省为ASC即升序排序</li>
+<li>CLUSTER 指定一个聚簇(Hash cluster不能建索引)</li>
+<li>INITRANS、MAXTRANS 指定初始和最大事务入口数</li>
+<li>Tablespace 表空间名</li>
+<li>STORAGE 存储参数，同create table 中的storage.</li>
+<li>PCTFREE 索引数据块空闲空间的百分比(不能指定pctused)</li>
+<li><p>NO SORT 不(能)排序(存储时就已按升序，所以指出不再排序)</p>
+</li>
+<li><p>CREATE INDEX 索引名 ON 表名 (字段名, …);</p>
+</li>
+<li><p>– 删除索引，当表结构被删除时，有其相关的所有索引也随之被删除。</p>
+</li>
+<li>DROP INDEX [schema.]indexname</li>
+<li>drop index 索引名;</li>
+</ol>
+<p>-- 查看表信息<br>DESC 表名;</p>
+<p>-- 表添加注释<br>COMMENT ON TABLE 表名 IS ‘注释信息’;</p>
+<p>-- 列添加注释<br>COMMENT ON COLUMN 表名.列名 IS ‘注释信息’;</p>
+<p>-- 修改表名<br>ALTER TABLE 原表名  RENAME TO 新表名;  </p>
+<p>-- 修改字段名<br>ALTER TABLE 表名 RENAME COLUMN 原字段名 TO 新字段名;</p>
+<p>-- 在表的后面增加一个字段<br>ALTER TABLE 表名 ADD 字段名 数据类型(数据大小);<br>ALTER TABLE 表名 ADD(字段名1 数据类型(数据大小) 约束条件, 字段名2 数据类型(数据大小) 约束条件, …);</p>
+<p>-- 在表中删除一列<br>ALTER TABLE 表名 DROP COLUMN 列名;<br>ALTER TABLE 表名 DROP (字段名1, 字段名2, …);  </p>
+<p>-- 修改表里字段的定义描述<br>ALTER TABLE 表名 MODIFY 字段名 数据类型(数据大小);  </p>
+<p>-- 给表里的字段加上约束条件<br>ALTER TABLE 表名 ADD CONSTRAINT 约束名 PRIMARY KEY (字段名, …);– 主键<br>ALTER TABLE 表名 ADD CONSTRAINT 约束名 UNIQUE (字段名, …);– 唯一键<br>-- 外键<br>ALTER TABLE 表名 ADD CONSTRAINT 约束名 FOREIGN KEY(字段名) REFERENCES 外键表名(外键字段名) ON DELETE CASCADE;<br>-- 注：ON DELETE CASCADE和ON DELETE SET NULL的作用是用来处理级联删除问题的，也可以不加。<br>-- CHECK约束<br>ALTER TABLE 表名 ADD CONSTRAINT 约束名 CHECK (约束条件);<br>-- 非空约束，增加非空约束时用的是关键字MODIFY，其它四种约束都是ADD<br>ALTER TABLE 表名 MODIFY 字段名 NOT NULL;</p>
+<p>-- 删除表里的约束条件<br>-- 非空约束不能指定约束名，应该先通过查询表和列所对应的的约束信息，找出约束名，再删除。<br>ALTER TABLE 表名 DROP CONSTRAINT 约束名;</p>
+<p>-- 修改主键，可以先删除主键约束，再重新创建新主键约束。</p>
+<p>-- 重命令约束<br>ALTER TABLE 表名 RENAME CONSTRAINT 原约束名 TO 新约束名;</p>
+<p>-- 创建索引<br>CREATE [unique] INDEX [user.]index<br>ON [user.]table (column [ASC | DESC] [,column [ASC | DESC] ] … )<br>[CLUSTER [scheam.]cluster]<br>[INITRANS n]<br>[MAXTRANS n]<br>[PCTFREE n]<br>[STORAGE storage]<br>[TABLESPACE tablespace]<br>[NO SORT]<br>Advanced</p>
+<p>其中：<br>   schema ORACLE模式，缺省即为当前帐户<br>   index 索引名<br>   table 创建索引的基表名<br>   column 基表中的列名，一个索引最多有16列，long列、long raw列不能建索引列<br>   DESC、ASC 缺省为ASC即升序排序<br>   CLUSTER 指定一个聚簇(Hash cluster不能建索引)<br>   INITRANS、MAXTRANS 指定初始和最大事务入口数<br>   Tablespace 表空间名<br>   STORAGE 存储参数，同create table 中的storage.<br>   PCTFREE 索引数据块空闲空间的百分比(不能指定pctused)<br>   NO SORT 不(能)排序(存储时就已按升序，所以指出不再排序)</p>
+<p>CREATE INDEX 索引名 ON 表名 (字段名, …);</p>
+<p>-- 删除索引，当表结构被删除时，有其相关的所有索引也随之被删除。<br>DROP INDEX [schema.]indexname<br>drop index 索引名;</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/16/2019030500134/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/16/2019030500134/" title="Oracle常用语句">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <span class="page-number current">1</span><a class="page-number" href="/tags/Oracle/page/2/">2</a><a class="page-number" href="/tags/Oracle/page/3/">3</a><a class="extend next" rel="next" href="/tags/Oracle/page/2/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

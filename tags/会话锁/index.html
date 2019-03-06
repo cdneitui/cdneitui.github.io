@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>`会话锁`标签下的文章 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/tags/会话锁/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/tags/会话锁/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/tags/会话锁/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/tags/会话锁/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 按标签分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `会话锁`标签下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/30/2019030500068/">
+    		MySQL会话锁等待关系原理
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-30T12:44:39.000Z">2015-12-30</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/会话锁/" title="会话锁">会话锁</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>会话依赖关系主要需要理解锁等待相关四张表的关系： 先查询当前会话持有哪些事务的锁和依赖哪些事务的锁，通过这两种锁就可以得到一种图关系。 <strong>一：查询当前会话持有的锁：</strong> 1.查询当前会话processlist.id 2.processlist.id对应innodb_trx表中的TRX_MYSQL_THREAD_ID，这样就可以查询到当前会话的事务id 3.到lock_waits中查询blocking_trx_id 为当前会话的事务id,这样就获得了当前会话的持有lock_id 4.根据lock_id到innodb_lock可以查询出当前会话持有锁信息。 其实如果只需要查询会话的依赖的关系不需要知道锁信息的话，到第三步就可以了，通过第三步的REQUESTING_TRX_ID来反查innodb_trx表获取trx_id，反查processlist表就可以得到被当前会话阻塞的会话列表。   <strong>二：查询当前会话正等待的锁</strong> 1.查询当前会话processlist.id 2.processlist.id对应innodb_trx表中的TRX_MYSQL_THREAD_ID，这样就可以查询到当前会话的事务id 3.到lock_waits中查询REQUESTING_TRX_ID为当前会话的事务id,这样就获得了当前会话的正等待lock_id 4.根据lock_id到innodb_lock可以查询出当前会话正在等待的锁信息。 同样，其实如果只需要查询会话的依赖的关系不需要知道锁信息的话，到第三步就可以了，通过第三步的blocking_trx_id来反查innodb_trx表获取trx_id，反查processlist表就可以得到被当前会话等待的锁被哪些会话占用了。     下面列出相关表部分表结构：</p>
+<h2 id="1-INFORMATION-SCHEMA-PROCESSLIST"><a href="#1-INFORMATION-SCHEMA-PROCESSLIST" class="headerlink" title="1.INFORMATION_SCHEMA.PROCESSLIST"></a>1.INFORMATION_SCHEMA.PROCESSLIST</h2><p>  The <a href="http://dev.mysql.com/doc/refman/5.6/en/processlist-table.html" title="21.15 The INFORMATION_SCHEMA PROCESSLIST Table" target="_blank" rel="noopener"><code>PROCESSLIST</code></a> table provides information about which threads are running. <code>INFORMATION_SCHEMA</code> Name <a href="http://dev.mysql.com/doc/refman/5.6/en/show.html" title="13.7.5 SHOW Syntax" target="_blank" rel="noopener"><code>SHOW</code></a> Name Remarks</p>
+<p><code>ID</code></p>
+<p><code>Id</code></p>
+<p>MySQL extension</p>
+<p><code>USER</code></p>
+<p><code>User</code></p>
+<p>MySQL extension</p>
+<p><code>HOST</code></p>
+<p><code>Host</code></p>
+<p>MySQL extension</p>
+<p><code>DB</code></p>
+<p><code>db</code></p>
+<p>MySQL extension</p>
+<p><code>COMMAND</code></p>
+<p><code>Command</code></p>
+<p>MySQL extension</p>
+<p><code>TIME</code></p>
+<p><code>Time</code></p>
+<p>MySQL extension</p>
+<p><code>STATE</code></p>
+<p><code>State</code></p>
+<p>MySQL extension</p>
+<p><code>INFO</code></p>
+<p><code>Info</code></p>
+<p>MySQL extension</p>
+<h3 id="2-The-INFORMATION-SCHEMA-INNODB-TRX-Table"><a href="#2-The-INFORMATION-SCHEMA-INNODB-TRX-Table" class="headerlink" title="2.The INFORMATION_SCHEMA INNODB_TRX Table"></a>2.The INFORMATION_SCHEMA INNODB_TRX Table</h3><p><strong>Table 21.4 INNODB_TRX Columns</strong></p>
+<p>Column name Description</p>
+<p><code>TRX_ID</code></p>
+<p>Unique transaction ID number, internal to <code>InnoDB</code>. (Starting in MySQL 5.6, these IDs are not created for transactions that are read-only and non-locking. See <a href="http://dev.mysql.com/doc/refman/5.6/en/innodb-performance-ro-txn.html" title="8.5.3 Optimizing InnoDB Read-Only Transactions" target="_blank" rel="noopener">Section 8.5.3, “Optimizing InnoDB Read-Only Transactions”</a>for details.)</p>
+<p><code>TRX_MYSQL_THREAD_ID</code></p>
+<p>MySQL thread ID. Can be used for joining with <code>PROCESSLIST</code> on <code>ID</code>. See <a href="http://dev.mysql.com/doc/refman/5.6/en/innodb-information-schema-rapidly_changing_internal_data.html#innodb-information-schema-note_inconsistency" title="14.12.2.3.1 Potential Inconsistency with PROCESSLIST Data" target="_blank" rel="noopener">Section 14.12.2.3.1, “Potential Inconsistency with PROCESSLIST Data”</a>.</p>
+<p><code>TRX_REQUESTED_LOCK_ID</code></p>
+<p>ID of the lock the transaction is currently waiting for (if <code>TRX_STATE</code> is<code>LOCK WAIT</code>, otherwise <code>NULL</code>). Details about the lock can be found by joining with <code>INNODB_LOCKS</code> on <code>LOCK_ID</code>.</p>
+<h3 id="3-The-INFORMATION-SCHEMA-INNODB-LOCK-WAITS-Table"><a href="#3-The-INFORMATION-SCHEMA-INNODB-LOCK-WAITS-Table" class="headerlink" title="3.The INFORMATION_SCHEMA INNODB_LOCK_WAITS Table"></a>3.The INFORMATION_SCHEMA INNODB_LOCK_WAITS Table</h3><p><strong>Table 21.6 INNODB_LOCK_WAITS Columns</strong></p>
+<p>Column name Description</p>
+<p><code>REQUESTING_TRX_ID</code></p>
+<p>ID of the requesting transaction.</p>
+<p><code>REQUESTED_LOCK_ID</code></p>
+<p>ID of the lock for which a transaction is waiting. Details about the lock can be found by joining with <code>INNODB_LOCKS</code> on <code>LOCK_ID</code>.</p>
+<p><code>BLOCKING_TRX_ID</code></p>
+<p>ID of the blocking transaction.</p>
+<p><code>BLOCKING_LOCK_ID</code></p>
+<p>ID of a lock held by a transaction blocking another transaction from proceeding. Details about the lock can be found by joining with <code>INNODB_LOCKS</code> on <code>LOCK_ID</code>.</p>
+<h3 id="4-The-INFORMATION-SCHEMA-INNODB-LOCKS-Table"><a href="#4-The-INFORMATION-SCHEMA-INNODB-LOCKS-Table" class="headerlink" title="4.The INFORMATION_SCHEMA INNODB_LOCKS Table"></a>4.The INFORMATION_SCHEMA INNODB_LOCKS Table</h3><p><strong>Table 21.5 INNODB_LOCKS Columns</strong></p>
+<p>  Column name Description</p>
+<p><code>LOCK_ID</code></p>
+<p>Unique lock ID number, internal to <code>InnoDB</code>. Treat it as an opaque string. Although <code>LOCK_ID</code>currently contains <code>TRX_ID</code>, the format of the data in <code>LOCK_ID</code> is not guaranteed to remain the same in future releases. Do not write programs that parse the <code>LOCK_ID</code> value.</p>
+<p><code>LOCK_TRX_ID</code></p>
+<p>ID of the transaction holding this lock. Details about the transaction can be found by joining with <code>INNODB_TRX</code> on <code>TRX_ID</code>.</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/30/2019030500068/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/30/2019030500068/" title="MySQL会话锁等待关系原理">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/0.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <span class="page-number current">1</span>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

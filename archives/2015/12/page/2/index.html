@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>文章归档: 2015/12 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/archives/2015/12/page/2/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/archives/2015/12/page/2/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/archives/2015/12/page/2/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/archives/2015/12/page/2/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章归档 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                文章归档
+                <!-- 文章归档，可以根据日期分类 -->
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/21/2019030500016/">
+    		大批量数据修改时发现有一行数据被锁住了，一直处于等待状态的问题解决
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-21T09:07:58.000Z">2015-12-21</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/批量/" title="批量">批量</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>最近写了个轻量级的分布式并行处理框架用来处理大批量的业务数据， 从业务监控数据中发现少量业务数据修改时一直处于等待状态，很明显是出现类似  for update 锁表，锁行的情况。 这种问题是系统设计（复杂的业务逻辑）导致的，暂时只能从数据库层次解决，因为修改系统设计比较复杂，也没有那么多时间。 解决思路： 1.查出锁住该表的会话id,serial#</p>
+<ol>
+<li>SELECT object_name,machine,s.sid,s.serial#</li>
+<li>FROM gv$locked_object l,dba_objects o,gv$session s</li>
+<li>WHERE l.object_id=o.object_id</li>
+<li>AND l.session_id=s.sid;</li>
+</ol>
+<p>SQL代码</p>
+<ol>
+<li>SELECT o.object_name,s.sid, s.serial#</li>
+<li>FROM v$lock l, dba_objects o, v$session s</li>
+<li>WHERE l.id1　= o.object_id</li>
+<li>AND l.sid = s.sid</li>
+<li>AND o.object_name=’SJ_AFFAIR’;</li>
+</ol>
+<p>2.kill掉该会话 alter system kill session ‘sid, serial#’; 3.代码临时优化：修改“初始表”数据时进行锁表尝试：for update nowait ，这个成本貌似有点高， 由于这种场景通常是数据异常场景，所以有监控就够了，因为7万票才偶尔出现一次，暂时不处理代码。 理论扫盲： 二、V$LOCK和V$LOCKED_OBJECT 查询锁表都会用到V$LOCK和V$LOCKED_OBJECT,但这两者不是相同的。我们先看看它们各自的主要字段： 1.v$lock sid：     会话SID，通常与v$session关联。 type：     锁类型，TM表示表锁或DML锁，TX表示行锁或事务锁，UL表示用户锁。我们主要关注TX和TM两种型的锁其它均为系统锁，会很快自动释放，不用关注。行锁不会单独存，行级锁之前需要先加表级共享锁。 lmode：     会话保持的锁的模式。 0＝None；1＝Null；2＝Row-S (SS,行级共享锁，其他对象只能查询这些数据行)；3＝Row-X (SX,行级排它锁,在提交前不允许做DML操作)；4＝Share(共享锁)；5＝S/Row-X (SSX,共享行级排它锁)；6＝Exclusive(排它锁) ID1,ID2:      ID1,ID2的取值含义根据type的取值而有所不同，对于TM 锁ID1表示被锁定表的object_id 可以和dba_objects视图关联取得具体表信息，ID2 值为0；对于TX 锁ID1以十进制数值表示该事务所占用的回滚段号和事务槽slot number号,其组形式: 0xRRRRSSSS,RRRR=RBS/UNDO NUMBER,SSSS=SLOT NUMBER，ID2 以十进制数值表示环绕wrap的次数，即事务槽被重用的次数 2.V$LOCKED_OBJECT session_id：         会话id。通常与v$session关联。 object_id：          被锁对象标识。通常与dba_objects关联。 oracle_username：    登录oracle用户名。 os_user_name：       电脑用户名如：Administrator locked_mode：        会话保持的锁的模式。 三、两者的区别 1.V$LOCKED_OBJECT只能报发生等待的表级锁,不能报发生等待的行级锁。 注：这句话是网上别人说的，暂时未验证，需慎重考虑。但是从我遇到的问题来看，似乎是正确的。只是我的问题已经无法重现，也就失去了验证它的机会。 2.v$locked_object包含的是当前DB中被锁住的OBJECT，而v$lock不仅包含用户的，还包括系统被锁住的object，即： V$LOCK&gt;v$locked_object</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/21/2019030500016/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/21/2019030500016/" title="大批量数据修改时发现有一行数据被锁住了，一直处于等待状态的问题解决">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/NOSQL/">NOSQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/21/2019030500045/">
+    		非关系型数据库redis的yum安装及使用
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-21T03:16:12.000Z">2015-12-21</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/redis/" title="redis">redis</a> / 
+    
+        <a href="/tags/yum/" title="yum">yum</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>安装Apache yum install httpd rpm -qi httpd 查看Apache信息 centos7 安装redis 安装EPEL wget <a href="http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm" target="_blank" rel="noopener">http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm</a> rpm -ivh epel-release-7-5.noarch.rpm yum install redis systemctl start redis.service systemctl status redis.service systemctl enable redis.service 遵循事务，一个不成功都不成功 redis-cli string类型 set name zouhuying get name  同一个建只允许用一次 setnx  key存在则返回0，不存在就设置 setex 指定键值对对应的有效期 setex haircolor 10 red setrange  替换一部分字符串 zouhuiying/ setrange name 1 h /zhuhuiying mset 设置多个key的值 mset name zouhuiying age 18 mesetnx getset name haoning设置新值获取旧值 getrang name 0 3获取name的0-3个字符 mget 获取多个key的值 incr 递增值 incrby incrby age （+-）3(指定的数字增加减) decr decrby 递减 append append name hhh追加，返回新字符串的长度 strlen  value的长度 hashes类型 hset hset myhash(表) field1（字段） Hello hsetnx setnx hmset  hmget hincr hincrby hdecr hdecrby hexits 测试表中字段是否存在 hlen 表中字段的个数 hdel 删除表中某个字段 hmset user:001 age 66 height 178 hmget useer:001 age height hdel user:001 age hkeys 返回所以字段hkeys user:001 hvals hvals user:001 hgetall user:001   keys and values list类型(双向链表 栈和队列) 栈：先进后出（存放值） 队列：先进先出 （从上到下） push pop lpush mylist zouhuiying（先进后出） rpush mylist ying（先进先出） lrange mylist 0 -1 linsert (插入元素) linsert mylist before “ying” “yingying” lset 替换指定下标的元素  lset mylist 0 “xiaoying” lrem 删除n个和value相同的值 返回删除值得个数 lrem mylist 1 “hello” 删除1个 n= 0：全部删除 n&lt;0 :从尾部删除 ltrim:保留ltrim mylist 1 -1（保留的范围），其他删除 lpop 从头部删除元素 rpop 从尾部删除 rpoplpush （边取边加，可以是两个表） lindex: lindex mylist 0（下标为0的元素） llen:llen mylist (mylist的长度) set sadd scard sdiff sdiffstore sinter sinterstore sismember smembers smove spop srandmember srem sunion sunionstore sscan sortedset zadd zcard zcount zrange zrangebyscore zrank zrem zremrangebyrank zremrangebyscore zrevrange zrevrangebyscore zrevrank zscore zunionstore zscan <a href="http://www.icoolxue.com/play/1489" target="_blank" rel="noopener">http://www.icoolxue.com/play/1489</a> 视频 <a href="http://doc.redisfans.com/" target="_blank" rel="noopener">http://doc.redisfans.com/</a>  命令 redis 常用命令 1.建值相关命令 keys * 返回所以建 keys 正则表达式 exists key检查key是否存在 del key expire key time 设置过期时间（key要存在） ttl key 查看建还有几秒过期 -1：表示已经过期 select （0-15）选择数据库 move key (0-15) persist:移除过期时间 randomkey随机返回一个key rename 重命名 type key :返回key的数据类型 2.服务器相关命令 ping (PONG，表示ping 通) echo 普通echo select quit/exit/control-c退出客户端 dbsize 当前数据库中的key的数量 info：返回相关信息 config get key 返回key的信息 flushdb 删除当前数据库下的所有key flushall 删除所有数据库下的所有key redis的高级应用 安全性：redis.conf-&gt;requirepass mima   登陆redis-cli -a mima   或者redis-cli  auth mima 主从复制：修改redis.conf -&gt;增加slaveof 192.168.139.213 6379(主机IP和端口)   and   masterauth mima（主机redis密码）and bind 0.0.0.0  (telnet 检查从机能否访问主机的端口) 事务处理：multi 进去事务 所有的命令保存在queued中，并不执行。exec后再按照顺序执行命令   取消事务：discard取消所有命令 乐观锁：session1：set age 20/ watch age  / multi/ set age 30/ exec(执行会失败) session2 set age 20 unwatch 清除监视 持久化机制：数据快照 redis.conf -&gt; save 9000 1  快照存在/var/lib/redis/dump.rdb中，二进制文件无法查看 存储操作aof   redis.conf -&gt;appendonly yes-&gt;appendfsync always(最快，性能不好)/appendfsync everysec(每一秒0/appendfsync no（完全依赖os，性能最好，持久化没有保证）快照存在/var/lib/redis/dump.rdb 发布订阅信息：subscribe tv1 /publish tv1 zouhuiying(两个session) 虚拟内存的使用：更改配置文件vm-enabled</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/21/2019030500045/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/21/2019030500045/" title="非关系型数据库redis的yum安装及使用">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/16/2019030500134/">
+    		Oracle常用语句
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-16T03:15:11.000Z">2015-12-16</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <ol>
+<li>– 查看表信息</li>
+<li><p>DESC 表名;</p>
+</li>
+<li><p>– 表添加注释</p>
+</li>
+<li><p>COMMENT ON TABLE 表名 IS ‘注释信息’;</p>
+</li>
+<li><p>– 列添加注释</p>
+</li>
+<li><p>COMMENT ON COLUMN 表名.列名 IS ‘注释信息’;</p>
+</li>
+<li><p>– 修改表名  </p>
+</li>
+<li><p>ALTER TABLE 原表名  RENAME TO 新表名;</p>
+</li>
+<li><p>– 修改字段名</p>
+</li>
+<li><p>ALTER TABLE 表名 RENAME COLUMN 原字段名 TO 新字段名;</p>
+</li>
+<li><p>– 在表的后面增加一个字段  </p>
+</li>
+<li>ALTER TABLE 表名 ADD 字段名 数据类型(数据大小);</li>
+<li><p>ALTER TABLE 表名 ADD(字段名1 数据类型(数据大小) 约束条件, 字段名2 数据类型(数据大小) 约束条件, …);</p>
+</li>
+<li><p>– 在表中删除一列  </p>
+</li>
+<li>ALTER TABLE 表名 DROP COLUMN 列名;</li>
+<li><p>ALTER TABLE 表名 DROP (字段名1, 字段名2, …);</p>
+</li>
+<li><p>– 修改表里字段的定义描述  </p>
+</li>
+<li><p>ALTER TABLE 表名 MODIFY 字段名 数据类型(数据大小);</p>
+</li>
+<li><p>– 给表里的字段加上约束条件  </p>
+</li>
+<li>ALTER TABLE 表名 ADD CONSTRAINT 约束名 PRIMARY KEY (字段名, …);– 主键  </li>
+<li>ALTER TABLE 表名 ADD CONSTRAINT 约束名 UNIQUE (字段名, …);– 唯一键  </li>
+<li>– 外键</li>
+<li>ALTER TABLE 表名 ADD CONSTRAINT 约束名 FOREIGN KEY(字段名) REFERENCES 外键表名(外键字段名) ON DELETE CASCADE;</li>
+<li>– 注：ON DELETE CASCADE和ON DELETE SET NULL的作用是用来处理级联删除问题的，也可以不加。</li>
+<li>– CHECK约束</li>
+<li>ALTER TABLE 表名 ADD CONSTRAINT 约束名 CHECK (约束条件);</li>
+<li>– 非空约束，增加非空约束时用的是关键字MODIFY，其它四种约束都是ADD</li>
+<li><p>ALTER TABLE 表名 MODIFY 字段名 NOT NULL;</p>
+</li>
+<li><p>– 删除表里的约束条件</p>
+</li>
+<li>– 非空约束不能指定约束名，应该先通过查询表和列所对应的的约束信息，找出约束名，再删除。</li>
+<li><p>ALTER TABLE 表名 DROP CONSTRAINT 约束名;</p>
+</li>
+<li><p>– 修改主键，可以先删除主键约束，再重新创建新主键约束。</p>
+</li>
+<li><p>– 重命令约束</p>
+</li>
+<li><p>ALTER TABLE 表名 RENAME CONSTRAINT 原约束名 TO 新约束名;</p>
+</li>
+<li><p>– 创建索引</p>
+</li>
+<li>CREATE [unique] INDEX [user.]index</li>
+<li>ON [user.]table (column [ASC | DESC] [,column [ASC | DESC] ] … )</li>
+<li>[CLUSTER [scheam.]cluster]</li>
+<li>[INITRANS n]</li>
+<li>[MAXTRANS n]</li>
+<li>[PCTFREE n]</li>
+<li>[STORAGE storage]</li>
+<li>[TABLESPACE tablespace]</li>
+<li>[NO SORT]</li>
+<li><p>Advanced</p>
+</li>
+<li><p>其中：</p>
+</li>
+<li>schema ORACLE模式，缺省即为当前帐户</li>
+<li>index 索引名</li>
+<li>table 创建索引的基表名</li>
+<li>column 基表中的列名，一个索引最多有16列，long列、long raw列不能建索引列</li>
+<li>DESC、ASC 缺省为ASC即升序排序</li>
+<li>CLUSTER 指定一个聚簇(Hash cluster不能建索引)</li>
+<li>INITRANS、MAXTRANS 指定初始和最大事务入口数</li>
+<li>Tablespace 表空间名</li>
+<li>STORAGE 存储参数，同create table 中的storage.</li>
+<li>PCTFREE 索引数据块空闲空间的百分比(不能指定pctused)</li>
+<li><p>NO SORT 不(能)排序(存储时就已按升序，所以指出不再排序)</p>
+</li>
+<li><p>CREATE INDEX 索引名 ON 表名 (字段名, …);</p>
+</li>
+<li><p>– 删除索引，当表结构被删除时，有其相关的所有索引也随之被删除。</p>
+</li>
+<li>DROP INDEX [schema.]indexname</li>
+<li>drop index 索引名;</li>
+</ol>
+<p>-- 查看表信息<br>DESC 表名;</p>
+<p>-- 表添加注释<br>COMMENT ON TABLE 表名 IS ‘注释信息’;</p>
+<p>-- 列添加注释<br>COMMENT ON COLUMN 表名.列名 IS ‘注释信息’;</p>
+<p>-- 修改表名<br>ALTER TABLE 原表名  RENAME TO 新表名;  </p>
+<p>-- 修改字段名<br>ALTER TABLE 表名 RENAME COLUMN 原字段名 TO 新字段名;</p>
+<p>-- 在表的后面增加一个字段<br>ALTER TABLE 表名 ADD 字段名 数据类型(数据大小);<br>ALTER TABLE 表名 ADD(字段名1 数据类型(数据大小) 约束条件, 字段名2 数据类型(数据大小) 约束条件, …);</p>
+<p>-- 在表中删除一列<br>ALTER TABLE 表名 DROP COLUMN 列名;<br>ALTER TABLE 表名 DROP (字段名1, 字段名2, …);  </p>
+<p>-- 修改表里字段的定义描述<br>ALTER TABLE 表名 MODIFY 字段名 数据类型(数据大小);  </p>
+<p>-- 给表里的字段加上约束条件<br>ALTER TABLE 表名 ADD CONSTRAINT 约束名 PRIMARY KEY (字段名, …);– 主键<br>ALTER TABLE 表名 ADD CONSTRAINT 约束名 UNIQUE (字段名, …);– 唯一键<br>-- 外键<br>ALTER TABLE 表名 ADD CONSTRAINT 约束名 FOREIGN KEY(字段名) REFERENCES 外键表名(外键字段名) ON DELETE CASCADE;<br>-- 注：ON DELETE CASCADE和ON DELETE SET NULL的作用是用来处理级联删除问题的，也可以不加。<br>-- CHECK约束<br>ALTER TABLE 表名 ADD CONSTRAINT 约束名 CHECK (约束条件);<br>-- 非空约束，增加非空约束时用的是关键字MODIFY，其它四种约束都是ADD<br>ALTER TABLE 表名 MODIFY 字段名 NOT NULL;</p>
+<p>-- 删除表里的约束条件<br>-- 非空约束不能指定约束名，应该先通过查询表和列所对应的的约束信息，找出约束名，再删除。<br>ALTER TABLE 表名 DROP CONSTRAINT 约束名;</p>
+<p>-- 修改主键，可以先删除主键约束，再重新创建新主键约束。</p>
+<p>-- 重命令约束<br>ALTER TABLE 表名 RENAME CONSTRAINT 原约束名 TO 新约束名;</p>
+<p>-- 创建索引<br>CREATE [unique] INDEX [user.]index<br>ON [user.]table (column [ASC | DESC] [,column [ASC | DESC] ] … )<br>[CLUSTER [scheam.]cluster]<br>[INITRANS n]<br>[MAXTRANS n]<br>[PCTFREE n]<br>[STORAGE storage]<br>[TABLESPACE tablespace]<br>[NO SORT]<br>Advanced</p>
+<p>其中：<br>   schema ORACLE模式，缺省即为当前帐户<br>   index 索引名<br>   table 创建索引的基表名<br>   column 基表中的列名，一个索引最多有16列，long列、long raw列不能建索引列<br>   DESC、ASC 缺省为ASC即升序排序<br>   CLUSTER 指定一个聚簇(Hash cluster不能建索引)<br>   INITRANS、MAXTRANS 指定初始和最大事务入口数<br>   Tablespace 表空间名<br>   STORAGE 存储参数，同create table 中的storage.<br>   PCTFREE 索引数据块空闲空间的百分比(不能指定pctused)<br>   NO SORT 不(能)排序(存储时就已按升序，所以指出不再排序)</p>
+<p>CREATE INDEX 索引名 ON 表名 (字段名, …);</p>
+<p>-- 删除索引，当表结构被删除时，有其相关的所有索引也随之被删除。<br>DROP INDEX [schema.]indexname<br>drop index 索引名;</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/16/2019030500134/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/16/2019030500134/" title="Oracle常用语句">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/16/2019030500100/">
+    		MySQL数据库调优分享
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-16T03:13:15.000Z">2015-12-16</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/数据库/" title="数据库">数据库</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>日常的困扰 *<em>反映查询某个数据越来越慢，怎么办？ 数据库监控页面显示某个操作频繁执行，每次执行都非常耗时，怎么办？ 1.Sql优化 2.合理使用索引 一、sql优化—常用方法 1）not in 子查询优化 2）模糊匹配 like ‘%abc%’ 3）limit分页优化 4）count(</em>)统计数据如何加快速度 5）or条件如何优化 6）用where子句代替having子句 1、not in 子查询优化 SELECT count(<em>) FROM t_cps t1  where t1.flag&gt;=2 and  sample_md5 not in (select sample_hash from t_sfa_sample  t2 where t2.sample_hash=t1.sample_md5); -1052661行记录 33.530s SELECT count(</em>) FROM t_cps t1  where t1.flag&gt;=2 and not exists(select sample_hash from t_sfa_sample   t2 where t2.sample_hash=t1.sample_md5); -1052661行记录 18.617s SELECT count(<em>) FROM t_cps t1 left join t_sfa_sample t2 on t1.sample_md5=t2.sample_hash where t1.flag&gt;=2  and t2.sample_hash is null; -1052661行记录 14.544s 生产环境中，尽量避免使用子查询，可用表连接join代替。可避免mysql在内存中创建临时表 in和exists SELECT count(</em>) FROM t_cps t1  where t1.flag&gt;=2 and  sample_md5  in (select sample_hash  from t_sfa_sample   t2 where t2.sample_hash=t1.sample_md5); 1227992行记录 30.762s SELECT count(<em>) FROM t_cps t1  where t1.flag&gt;=2 and  exists (select sample_hash from t_sfa_sample   t2 where t2.sample_hash=t1.sample_md5); 1227992行记录 15.581s in和exists执行时: in是先执行子查询中的查询，然后再执行主查询。 exists是先执行主查询，即外层表的查询，然后再执行子查询 exists 和 in 在执行时效率单从执行时间来说差不多，exists要稍微优于in。在使用时一般应该是用exists而不用in 而在not in 和 not exists比较时，not exists的效率要比not in的效率要高。 但也有少数时候并非如此。 建议是尽量多使用exists和not exists，少用in 和not in 2、模糊匹配 like ‘%abc%’ mysql&gt; explain select </em> from update_log_test where msg like ‘e%’; +—-+————-+—————–+——-+—————+———+———+——+——+———————–+ | id | select_type | table           | type  | possible_keys | key     | key_len | ref  | rows | Extra                 | +—-+————-+—————–+——-+—————+———+———+——+——+———————–+ |  1 | SIMPLE      | update_log_test | range | idx_msg       | idx_msg | 768     | NULL |    1 | Using index condition | +—-+————-+—————–+——-+—————+———+———+——+——+———————–+ 1 row in set (0.00 sec) mysql&gt; explain select <em> from update_log_test where msg like ‘%e%’; +—-+————-+—————–+——+—————+——+———+——+——+————-+ | id | select_type | table           | type | possible_keys | key  | key_len | ref  | rows | Extra       | +—-+————-+—————–+——+—————+——+———+——+——+————-+ |  1 | SIMPLE      | update_log_test | ALL  | NULL          | NULL | NULL    | NULL |    4 | Using where | +—-+————-+—————–+——+—————+——+———+——+——+————-+ 1 row in set (0.00 sec) like ‘abc%’可以用到索引，但like‘%abc%’却不行。 SELECT </em> FROM books  WHERE name like “MySQL%” ; 但是如果换用下面的查询，返回的结果一样，但速度就要快上很多： SELECT <em> FROM books  WHERE name&gt;=”MySQL”and name&lt;”MySQM” ; 补充：explain列的解释 table  显示这一行的数据是关于哪张表的 type   这是重要的列，显示连接使用了何种类型。从最好到最差的连接类型为const、eq_reg、ref、range、index和ALL possible_keys  显示可能应用在这张表中的索引。如果为空，没有可能的索引。 key 实际使用的索引。如果为NULL，则没有使用索引。很少的情况下，MYSQL会选择优化不足的索引。这种情况下，可以在SELECT语句中使用USE INDEX（indexname）来强制使用一个索引或者用IGNORE INDEX（indexname）来强制MYSQL忽略索引 key_len  使用的索引的长度。在不损失精确性的情况下，长度越短越好 ref     显示索引的哪一列被使用了，显示了哪些字段或者常量被用来和 key配合从表中查询记录出来。 rows   MYSQL认为必须检查的用来返回请求数据的行数 Extra  关于MYSQL如何解析查询的额外信息。这里可以看到的坏的例子是Using temporary和Using filesort，意思MYSQL根本不能使用索引，检索会很慢 type不同连接类型的解释（按照效率高低的顺序排序） const   索引可以是主键或惟一索引，因为只有一行，这个值实际就是常数，因为MYSQL先读这个值然后把它当做常数来对待 mysql&gt; explain select </em> from update_log_20141111 where id=2; +—-+————-+———————+——-+—————+———+———+——-+——+——-+ | id | select_type | table               | type  | possible_keys | key     | key_len | ref   | rows | Extra | +—-+————-+———————+——-+—————+———+———+——-+——+——-+ |  1 | SIMPLE      | update_log_20141111 | const | PRIMARY       | PRIMARY | 4       | const |    1 | NULL  | +—-+————-+———————+——-+—————+———+———+——-+——+——-+ eq_ref     从前面的表中，对每一个记录的联合都从表中读取一个记录，它在查询使用了索引为主键或惟一键的全部时使用 mysql&gt; explain select <em> from t1,t2 where t1.id=t2.id; +—-+————-+——-+——–+—————+———+———+————+——+——-+ | id | select_type | table | type   | possible_keys | key     | key_len | ref        | rows | Extra | +—-+————-+——-+——–+—————+———+———+————+——+——-+ |  1 | SIMPLE      | t2    | ALL    | PRIMARY       | NULL    | NULL    | NULL       |    9 | NULL  | |  1 | SIMPLE      | t1    | eq_ref | PRIMARY       | PRIMARY | 4       | test.t2.id |    1 | NULL  | +—-+————-+——-+——–+—————+———+———+————+——+——-+ 2 rows in set (0.00 sec) ref      只有在查询使用了不是惟一或主键的键或者是这些类型的部分（比如，利用最左边前缀）时发生。对于之前的表的每一个行联合，全部记录都将从表中读出。这个类型严重依赖于根据索引匹配的记录多少—越少越好 mysql&gt; explain select </em> from update_log_20141110 t1,update_log_test t2 where t1.action=t2.action; +—-+————-+——-+——+—————+———-+———+—————-+——+————-+ | id | select_type | table | type | possible_keys | key      | key_len | ref            | rows | Extra       | +—-+————-+——-+——+—————+———-+———+—————-+——+————-+ |  1 | SIMPLE      | t1    | ALL  | i_action      | NULL     | NULL    | NULL           |    2 | Using where | |  1 | SIMPLE      | t2    | ref  | i_action      | i_action | 2       | test.t1.action |    1 | NULL        | +—-+————-+——-+——+—————+———-+———+—————-+——+————-+ 2 rows in set (0.00 sec) range   返回一个范围中的行，比如使用&gt;或&lt;查找东西时 mysql&gt; explain select <em> from t1 where id&gt;=9900 order by id limit 10; +—-+————-+——-+——-+—————+———+———+——+——+————-+ | id | select_type | table | type  | possible_keys | key     | key_len | ref  | rows | Extra       | +—-+————-+——-+——-+—————+———+———+——+——+————-+ |  1 | SIMPLE      | t1    | range | PRIMARY       | PRIMARY | 4       | NULL |  101 | Using where | +—-+————-+——-+——-+—————+———+———+——+——+————-+ 1 row in set (0.00 sec) index   对前面的表中的每一个记录联合进行完全扫描（比ALL更好，因为索引一般小于表数据） ALL      对每一个记录联合进行完全扫描，这一般比较糟糕，应该尽量避免 Extra 列返回的描述的意义 Distinct  一旦MYSQL找到了与行相联合匹配的行，就不再搜索了 Not exists  MYSQL优化了LEFT JOIN，一旦它找到了匹配LEFT JOIN标准的行，就不再搜索 Record（index map:#）没有找到理想的索引，因此对于从前面表中来的每一个行组合，MYSQL检查使用哪个索引，并用它来从表中返回行。这是使用索引的最慢的连接之一 Using filesort   看到这个的时候，查询就需要优化了。MYSQL需要进行额外的步骤来发现如何对返回的行排序。它根据连接类型以及存储排序键值和匹配条件的全部行的行指针来排序全部行 Using index  列数据是从仅仅使用了索引中的信息而没有读取实际的行动的表返回的，这发生在对表的全部的请求列都是同一个索引的部分的时候 Using temporary 看到这个的时候，查询需要优化了。这里，MYSQL需要创建一个临时表来存储结果，这通常发生在对不同的列集进行ORDER BY上，而不是GROUP BY上 Using where 使用了WHERE从句来限制哪些行将与下一张表匹配或者是返回给用户。如果不想返回表中的全部行，并且连接类型ALL或index，这就会发生，或者是查询有问题 3、limit分页优化 Select  </em> from t1 order by id limit 9900,10; 上面的语句，虽然用到了id索引，但是从第一行开始起定位至9900行，然后再扫描后10行，相当于进行了一次全扫描，显然效率不高。 Select <em> from t1 where id&gt;=9900 order by id limit 10; 利用id索引直接定位到9900行，然后在扫描出后10行，相当于一个range范围扫描 mysql&gt; explain select  </em> from t1 order by id limit 9900,10; +—-+————-+——-+——-+—————+———+———+——+——+——-+ | id | select_type | table | type  | possible_keys | key     | key_len | ref  | rows | Extra | +—-+————-+——-+——-+—————+———+———+——+——+——-+ |  1 | SIMPLE      | t1    | index | NULL          | PRIMARY | 4       | NULL | 9910 | NULL  | +—-+————-+——-+——-+—————+———+———+——+——+——-+ 1 row in set (0.00 sec) mysql&gt; explain select <em> from t1 where id&gt;=9900 order by id limit 10; +—-+————-+——-+——-+—————+———+———+——+——+————-+ | id | select_type | table | type  | possible_keys | key     | key_len | ref  | rows | Extra       | +—-+————-+——-+——-+—————+———+———+——+——+————-+ |  1 | SIMPLE      | t1    | range | PRIMARY       | PRIMARY | 4       | NULL |  101 | Using where | +—-+————-+——-+——-+—————+———+———+——+——+————-+ 1 row in set (0.00 sec) 4、count(</em>)统计数据如何加快速度 select count(<em>)  from update_log; select count(</em>)  from update_log  where sid&gt;=0; 利用辅助索引 select count(distinct k) from t; select count(<em>) from (select distinct k from t) tmp;  利用索引来做排重操作。 注意：innodb count（</em>）必须全表扫，而不像myisam那样有一个计数器，直接从中取出数据。Innodb必须要全表扫一次才能得到count，而且会锁表。 5、or条件如何优化 select <em> from user where name=’d’ or age=31; name和age都建立了索引，但explain发现这个or条件用不到索引。 改成union all结果集合并 select </em> from user where name=’d’ union all select <em> from user where age=31; 6、用where子句代替having子句 select </em> from user group by id having id&gt;40 limit 3; select <em> from user where id&gt;40 group by id limit 3; having只会在检索出所有记录之后才对结果集进行过滤。这个处理需要排序、总计等操作。 如果能通过where子句限制记录的数目，那就能减少这方面的开销。 SQL优化的一般步骤 1、通过 show status 命令了解各种SQL的执行频率 show status like ‘uptime’ 当前MySQL运行时间 show status like ‘com_select’ 当前MySQL执行了多少次查询 show status like ‘com_insert’ 当前MySQL执行了多少次添加 show status like ‘com_update’ 当前MySQL执行了多少次更新 show status like ‘com_delete’ 当前MySQL执行了多少次删除 show status 语法： show [session|global] status like ‘’; 如果不写 [session|global] 表示默认是 session 指取出当前窗口的执行情况 如果想看所有(mysql启动到现在)的情况 加上 global show global status like ‘com_insert’; 2、 定位执行效率较低的SQL语句 （重点select） 3、通过 explain 分析低效率的SQL语句的执行情况 4、确定问题并采取相应的优化措施 二、合理使用索引 使用索引，why? 单列索引和联合索引 字段使用函数，将不能走索引 当取出的数据量超过表中数据的20%，索引是否有效？ order by 和group by优化 全文索引 1、适当的索引对应用的性能来说至关重要。 2、索引只对select有加速作用，但对写入（insert,update、delete）操作会带来额外的开销，如果带有一个或多个索引，那么数据更新的时候，mysql也要更新各个索引。 3、并不是所有经常查询的列都适合创建索引，区分度不高的，通常走全表扫浏览会更快。例如性别，只有男女两种，就不适合。 4、一条sql只能用一个索引，如果有多个，优化器会选择最优的。 1、单列索引和联合索引 mysql&gt; create index i_s_time on update_log(server,time); 联合索引要遵循最左侧原则 mysql&gt; explain select </em> from update_log where server=’115.29.138.24’ and time=’13:00:00’; +—-+————-+————+——+—————–+———-+———+————-+——+———————–+ | id | select_type | table      | type | possible_keys   | key      | key_len | ref         | rows | Extra                 | +—-+————-+————+——+—————–+———-+———+————-+——+———————–+ |  1 | SIMPLE      | update_log | ref  | i_time,i_s_time | i_s_time | 50      | const,const |    7 | Using index condition | +—-+————-+————+——+—————–+———-+———+————-+——+———————–+ 1 row in set (0.00 sec) mysql&gt; explain select <em> from update_log where server=’115.29.138.24’; +—-+————-+————+——+—————+———-+———+——-+———+———————–+ | id | select_type | table      | type | possible_keys | key      | key_len | ref   | rows    | Extra                 | +—-+————-+————+——+—————+———-+———+——-+———+———————–+ |  1 | SIMPLE      | update_log | ref  | i_s_time      | i_s_time | 46      | const | 2653264 | Using index condition | +—-+————-+————+——+—————+———-+———+——-+———+———————–+ 1 row in set (0.00 sec) mysql&gt; explain select </em> from update_log where server=’115.29.138.24’ and client=’14.197.74.21’ and time=’13:00:00’; +—-+————-+————+——+—————–+———-+———+————-+——+————————————+ | id | select_type | table      | type | possible_keys   | key      | key_len | ref         | rows | Extra                              | +—-+————-+————+——+—————–+———-+———+————-+——+————————————+ |  1 | SIMPLE      | update_log | ref  | i_time,i_s_time | i_s_time | 50      | const,const |    7 | Using index condition; Using where | +—-+————-+————+——+—————–+———-+———+————-+——+————————————+ 1 row in set (0.00 sec) mysql&gt; explain select <em> from update_log where  time=’13:00:00’; +—-+————-+————+——+—————+——+———+——+———-+————-+ | id | select_type | table      | type | possible_keys | key  | key_len | ref  | rows     | Extra       | +—-+————-+————+——+—————+——+———+——+———-+————-+ |  1 | SIMPLE      | update_log | ALL  | NULL          | NULL | NULL    | NULL | 21615394 | Using where | +—-+————-+————+——+—————+——+———+——+———-+————-+ 1 row in set (0.00 sec) 2、字段使用函数，将不能走索引 –mysql目前还不支持函数索引 mysql&gt; explain select </em> from update_log where year(date)&lt;2014; +—-+————-+————+——+—————+——+———+——+———-+————-+ | id | select_type | table      | type | possible_keys | key  | key_len | ref  | rows     | Extra       | +—-+————-+————+——+—————+——+———+——+———-+————-+ |  1 | SIMPLE      | update_log | ALL  | NULL          | NULL | NULL    | NULL | 21615394 | Using where | +—-+————-+————+——+—————+——+———+——+———-+————-+ 1 row in set (0.00 sec) 在where后面的查询条件字段使用了date()函数，是不会用到索引的。 mysql&gt; explain select <em> from update_log where date&lt;’2014-01-01’; +—-+————-+————+——-+—————+——+———+——+——+———————–+ | id | select_type | table      | type  | possible_keys | key  | key_len | ref  | rows | Extra                 | +—-+————-+————+——-+—————+——+———+——+——+———————–+ |  1 | SIMPLE      | update_log | range | date          | date | 4       | NULL |    1 | Using index condition | +—-+————-+————+——-+—————+——+———+——+——+———————–+ 1 row in set (0.00 sec) 同样的情形也会发生在对数值型字段进行计算的时候： SELECT </em> FROM t1  WHERE Amount/7&lt;24; SELECT <em> FROM t1  WHERE Amount&lt;24\</em>7; 3、无引号导致全表扫描，无法使用索引 mysql&gt; explain select * from update_log_test where msg=123; +—-+————-+—————–+——+—————+——+———+——+——+————-+ | id | select_type | table           | type | possible_keys | key  | key_len | ref  | rows | Extra       | +—-+————-+—————–+——+—————+——+———+——+——+————-+ |  1 | SIMPLE      | update_log_test | ALL  | i_msg         | NULL | NULL    | NULL |    4 | Using where | +—-+————-+—————–+——+—————+——+———+——+——+————-+ 1 row in set (0.00 sec) mysql&gt; explain select <em> from update_log_test where msg=’yoyo’; +—-+————-+—————–+——+—————+——-+———+——-+——+———————–+ | id | select_type | table           | type | possible_keys | key   | key_len | ref   | rows | Extra                 | +—-+————-+—————–+——+—————+——-+———+——-+——+———————–+ |  1 | SIMPLE      | update_log_test | ref  | i_msg         | i_msg | 768     | const |    1 | Using index condition | +—-+————-+—————–+——+—————+——-+———+——-+——+———————–+ 由于msg是varchar类型，因此查询的时候，必须加‘’ 数字当字符类型使用时，也一定要加上。 4、当取出的数据量超过表中数据的20%，优化器认为全表扫更快，不会走索引 mysql&gt; explain select </em> from update_log where time&lt;’14:00:00’; +—-+————-+————+——+—————+——+———+——+———-+————-+ | id | select_type | table      | type | possible_keys | key  | key_len | ref  | rows     | Extra       | +—-+————-+————+——+—————+——+———+——+———-+————-+ |  1 | SIMPLE      | update_log | ALL  | i_time        | NULL | NULL    | NULL | 21615394 | Using where | +—-+————-+————+——+—————+——+———+——+———-+————-+ 1 row in set (0.00 sec) mysql&gt; explain select <em> from update_log where time&lt;’14:00:00’ and time&gt;’13:00:00’; +—-+————-+————+——-+—————+——–+———+——+———+———————–+ | id | select_type | table      | type  | possible_keys | key    | key_len | ref  | rows    | Extra                 | +—-+————-+————+——-+—————+——–+———+——+———+———————–+ |  1 | SIMPLE      | update_log | range | i_time        | i_time | 4       | NULL | 3013332 | Using index condition | +—-+————-+————+——-+—————+——–+———+——+———+———————–+ 1 row in set (0.00 sec) 5、order by 和group by优化 mysql&gt; explain select </em> from update_log where server=’115.29.138.24’ order by time; +—-+————-+————+——+—————+——+———+——+———-+—————————–+ | id | select_type | table      | type | possible_keys | key  | key_len | ref  | rows     | Extra                       | +—-+————-+————+——+—————+——+———+——+———-+—————————–+ |  1 | SIMPLE      | update_log | ALL  | NULL          | NULL | NULL    | NULL | 21615394 | Using where; Using filesort | +—-+————-+————+——+—————+——+———+——+———-+—————————–+ 1 row in set (0.00 sec) 创建联合索引 mysql&gt; create index i_s_time on update_log(server,time); Query OK, 0 rows affected (3 min 18.94 sec) Records: 0  Duplicates: 0  Warnings: 0 mysql&gt; explain select <em> from update_log where server=’115.29.138.24’ order by time; +—-+————-+————+——+—————+———-+———+——-+———+————————————+ | id | select_type | table      | type | possible_keys | key      | key_len | ref   | rows    | Extra                              | +—-+————-+————+——+—————+———-+———+——-+———+————————————+ |  1 | SIMPLE      | update_log | ref  | i_s_time      | i_s_time | 46      | const | 2653264 | Using index condition; Using where | +—-+————-+————+——+—————+———-+———+——-+———+————————————+ 1 row in set (0.01 sec) 如果order by 后面有多个字段排序，它们的顺序要一致，如果一个是降序，一个是升序，也会出现using filesort排序。 6、全文索引 全文索引：主要是针对文件，文本的索引，比如文章(5.6开始innodb也支持） 字段类型：char、varchar、text 全文搜索通过 MATCH() 函数完成. mysql&gt; create table articles( -&gt; id int unsigned auto_increment not null primary key, -&gt; title varchar(200), -&gt; body text, -&gt; fulltext(title,body)); Query OK, 0 rows affected (0.05 sec) mysql&gt; INSERT INTO articles VALUES -&gt; (NULL,’MySQL Tutorial’, ‘DBMS stands for DataBase …’), -&gt;  (NULL,’How To Use MySQL Efficiently’, ‘After you went through a …’), -&gt; (NULL,’Optimising MySQL’,’In this tutorial we will show …’), -&gt; (NULL,’1001 MySQL Tricks’,’1. Never run mysqld as root. 2. …’), -&gt; (NULL,’MySQL vs. YourSQL’, ‘In the following database comparison …’), -&gt; (NULL,’MySQL Security’, ‘When configured properly, MySQL …’); Query OK, 6 rows affected (0.01 sec) Records: 6  Duplicates: 0  Warnings: 0 mysql&gt; explain select </em> from articles where match(title,body) against(‘database’); +—-+————-+———-+———-+—————+——-+———+——+——+————-+ | id | select_type | table    | type     | possible_keys | key   | key_len | ref  | rows | Extra       | +—-+————-+———-+———-+—————+——-+———+——+——+————-+ |  1 | SIMPLE      | articles | fulltext | title         | title | 0       | NULL |    1 | Using where | +—-+————-+———-+———-+—————+——-+———+——+——+————-+ 1 row in set (0.00 sec) 但如果某个单词单词出现在至少全文的50%的行中，它会被列入停止字。对于大型数据集，使用这个操作最合适不过了—-一个自然语言问询不会从一个1GB 的表每隔一行返回一次。对于小型数据集，它的用处可能比较小。不是大型的数据量，就不要用他，影响插入速度 7、mysql 5.6支持explain update/delete mysql&gt; explain update update_log_test set msg=’gugu’ where id=4; +—-+————-+—————–+——-+—————+———+———+——-+——+————-+ | id | select_type | table           | type  | possible_keys | key     | key_len | ref   | rows | Extra       | +—-+————-+—————–+——-+—————+———+———+——-+——+————-+ |  1 | SIMPLE      | update_log_test | range | PRIMARY       | PRIMARY | 4       | const |    1 | Using where | +—-+————-+—————–+——-+—————+———+———+——-+——+————-+ 1 row in set (0.01 sec) mysql&gt; explain delete from update_log_test  where id=4; +—-+————-+—————–+——-+—————+———+———+——-+——+————-+ | id | select_type | table           | type  | possible_keys | key     | key_len | ref   | rows | Extra       | +—-+————-+—————–+——-+—————+———+———+——-+——+————-+ |  1 | SIMPLE      | update_log_test | range | PRIMARY       | PRIMARY | 4       | const |    1 | Using where | +—-+————-+—————–+——-+—————+———+———+——-+——+————-+ 1 row in set (0.00 sec) 8、mysql5.6优化了合并索引 mysql&gt; explain select <em> from update_log where date=’2014-11-12’ or time=’14:00:00’; +—-+————-+————+————-+—————+————-+———+——+———-+—————————————+ | id | select_type | table      | type        | possible_keys | key         | key_len | ref  | rows     | Extra                                 | +—-+————-+————+————-+—————+————-+———+——+———-+—————————————+ |  1 | SIMPLE      | update_log | index_merge | date,i_time   | date,i_time | 4,4     | NULL | 10808103 | Using union(date,i_time); Using where | +—-+————-+————+————-+—————+————-+———+——+———-+—————————————+ 1 row in set (0.01 sec) mysql&gt; explain select </em> from update_log where date=’2014-11-12’ union select * from update_log where time=’14:00:00’; +—-+————–+————+——+—————+——–+———+——-+———-+———————–+ | id | select_type  | table      | type | possible_keys | key    | key_len | ref   | rows     | Extra                 | +—-+————–+————+——+—————+——–+———+——-+———-+———————–+ |  1 | PRIMARY      | update_log | ref  | date          | date   | 4       | const | 10807697 | NULL                  | |  2 | UNION        | update_log | ref  | i_time        | i_time | 4       | const |      406 | Using index condition | | NULL | UNION RESULT | &lt;union1,2&gt; | ALL  | NULL          | NULL   | NULL    | NULL  |     NULL | Using temporary       | +—-+————–+————+——+—————+——–+———+——-+———-+———————–+ 3 rows in set (0.00 sec) 实际测试2条sql，or的执行时间是union执行时间的两倍。 1、union all 不一定就比 or及in 快，要结合实际情况分析到底使用哪种情况。 2、对于索引列来最好使用union all，因复杂的查询【包含运算等】将使or、in放弃索引而全表扫描，除非你能确定or、in会使用索引。 3、对于只有非索引字段来说你就老老实实的用or 或者in，因为 非索引字段本来要全表扫描而union all 只成倍增加表扫描的次数。 Union：对两个结果集进行并集操作，不包括重复行，同时进行默认规则的排序；Union All：对两个结果集进行并集操作，包括重复行，不进行排序； union因为要进行重复值扫描，所以效率低。</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/16/2019030500100/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/16/2019030500100/" title="MySQL数据库调优分享">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/NOSQL/">NOSQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/11/2019030500055/">
+    		MongoDB基本操作以及JDBC连接
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-11T04:05:19.000Z">2015-12-11</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MongoDB/" title="MongoDB">MongoDB</a> / 
+    
+        <a href="/tags/JDBC/" title="JDBC">JDBC</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>MongoDB</strong> Mac上使用MongoDB的方法。 官网下载安装包，安装完毕后，如果是默认路径，就在根目录下<em>创建一个data文件夹</em>，存放数据库中的数据。 开启MongoDB服务：在terminal中，切换到bin目录下执行./mongod就开启了MongoDB服务 连接数据库：新创建一个terminal窗口，在bin目录下执行./mongo，这是默认链接到test 退出数据库：用control + c 或者“&gt;exit” 与数据库断开链接，这时服务器还是开启状态 关闭服务：首先切换到admin，然后执行db.shutdownServer()，这样就关闭了MongoDB服务 MongoDB是一种非关系型数据库，它的数据存储格式为Bson，和Json很相似，SQL语句是用于关系型数据库的，对于MongoDB数据库的操作更像是对象调用方法，这里简单列举几种重要操作： 1，创建数据库。在MongoDB中创建数据库和切换数据库时都用“use dbname”命令，例如use person；如果不存在名字为person的数据库，就创建一个名为person的数据库，如果已经存在就切换到这个数据库下。值得注意的是，当这个数据库不存在，我们执行use person后，这是person是个空的数据库，如果我们不向里面写数据，那么系统就会自动删除这个数据库，只有写了数据系统才会保存。 2，创建集合。创建集合的概念和创建一个数据库相似，例如当前是Person数据库，当我们想创建一个名为students的集合时，我们就采用db.students.insert({“name” : “XXX” });这时students集合就在Person数据库中建立了，集合里面保存了一条记录，里面包含一个字段是”name“。 3，查询操作 find。我们用db.students.find()可以查询students集合中所有的数据，如果用db.students.find({“name”: “xxx”})可以查找我们需要的特定数据。结果集中有一个字段是”_id“， 这个字段是数据库默认给我们加的GUID，目的就是保证数据的唯一性。 4，更新操作 update。db.students.update({“name” : “XXX”}, {“name”: “XX”}),当我们执行完成后，name将变为”XX“。 5，删除操作 remove。执行db.students.remove({“name” : “XX”})操作，就会在集合中删除名为”XX“的所有记录。 6，删除集合，db.students.drop() 7，删除数据库，首先进入要删除的数据库，然后执行db.dropDatabase()。 下面是用JDBC链接MongoDB数据库，并采用了Singleton的设计模式。</p>
+<p>Java代码</p>
+<ol>
+<li>import com.mongodb.DB;</li>
+<li><p>import com.mongodb.MongoClient;</p>
+</li>
+<li><p>public class Connection {</p>
+</li>
+<li>private String host = “localhost”;</li>
+<li>private int port = 27017;</li>
+<li><p>private String dbName = “mongo”;</p>
+</li>
+<li><p>private static Connection instance = null;</p>
+</li>
+<li><p>// singleton model</p>
+</li>
+<li>private Connection() {</li>
+<li><p>}</p>
+</li>
+<li><p>public DB getConnection() {</p>
+</li>
+<li>DB db = null;</li>
+<li>try {</li>
+<li>MongoClient client = new MongoClient(host, port);</li>
+<li>db = client.getDB(dbName);</li>
+<li>} catch (UnknownHostException e) {</li>
+<li>e.printStackTrace();</li>
+<li>}</li>
+<li>return db;</li>
+<li><p>}</p>
+</li>
+<li><p>public static Connection getInstance() {</p>
+</li>
+<li>if (Connection.instance == null) {</li>
+<li>Connection.instance = new Connection();</li>
+<li>}</li>
+<li>return Connection.instance;</li>
+<li>}</li>
+<li>}</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/12/11/2019030500055/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/11/2019030500055/" title="MongoDB基本操作以及JDBC连接">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/07/2019030500107/">
+    		mysql集群
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-07T04:35:02.000Z">2015-12-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/集群/" title="集群">集群</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>五台服务器篇 安装要求 安装环境：CentOS-6.3 安装方式：源码编译安装 软件名称：mysql-cluster-gpl-7.2.6-linux2.6-x86_64.tar.gz 下载地址：<a href="http://mysql.mirror.kangaroot.net/Downloads/" target="_blank" rel="noopener">http://mysql.mirror.kangaroot.net/Downloads/</a> 软件安装位置：/usr/local/mysql 数据存放位置：/var/mysql/data 日志存放位置：/var/mysql/logs 集群设计 首先设计集群的安装分配方式，我共需要5台服务器，服务器分配如下： 管理节点：    192.168.15.231 sql节点1：   192.168.15.232 sql节点2：   192.168.15.233 数据节点1：  192.168.15.234 数据节点2：  192.168.15.235 设备的连接方式如下图所示： 注意：目前这种设计存在的问题是管理节点是单点的，231挂掉后整个集群就会瘫痪，先不管这个问题，首先把这个简单的MySQL集群先搭建起来。 检查安装的mysql 检查系统中已经安装过的mysql信息，操作如下： [root@localhost /]# rpm -qa | grep mysql [root@localhost /]# service mysql status 如果安装过其他版本的mysql，请卸载，操作如下： [root@localhost /]# /etc/init.d/mysqld    stop  //关闭目前的mysql服务 [root@localhost /]# ps    -ef | grep mysql  //检验mysql是否已经关闭 #如果没关闭，执行kill -9 端口号 #执行删除 rpm -e –allmatches    –nodeps mysql mysql-server rm -rf /var/lib/mysql  // 删除mysql的安装目录 管理节点 管理节点安装 安装管理节点（192.168.15.231） [root@localhost /]#    groupadd mysql [root@localhost /]#  useradd mysql -g mysql [root@localhost /]# cd    /usr/local [root@localhost local]#    tar -zxv -f mysql-cluster-gpl-7.2.6-linux2.6-x86_64.tar.gz [root@localhost local]#    mv mysql-cluster-gpl-7.2.6-linux2.6-x86_64 mysql [root@localhost local]#    chown -R mysql:mysql mysql [root@localhost local]#    cd mysql [root@localhost mysql]#    scripts/mysql_install_db –user=mysql 管理节点配置 [root@localhost ~]#  mkdir /var/lib/mysql-cluster [root@localhost ~]# cd    /var/lib/mysql-cluster [root@localhost mysql-cluster]#    vi + /var/lib/mysql-cluster/config.ini 在config.ini 中添加以下内容: [NDBD DEFAULT] NoOfReplicas=1 [TCP DEFAULT] portnumber=3306 [NDB_MGMD] #设置管理节点服务器 HostName=192.168.15.231 DataDir=/var/mysql/data [NDBD] #设置存储节点服务器(NDB节点) HostName=192.168.15.234 DataDir=/var/mysql/data [NDBD] #第二个NDB节点 HostName=192.168.15.235 DataDir=/var/mysql/data [MYSQLD] #设置SQL节点服务器 HostName=192.168.15.232 [MYSQLD] #第二个SQL节点 HostName=192.168.15.233 管理节点启动 [root@localhost ~]#/usr/local/mysql/bin/ndb_mgmd -f /var/lib/mysql-cluster/config.ini [root@localhost ~]# mkdir  /var/mysql/logs [root@localhost ~]# netstat -lntpu 看到tcp 0 0 0.0.0.0:1186开放说明启动正常 开启管理节点服务器的1186端口 管理节点检验 执行以下操作： [root@localhost /]# ndb_mgm     // 管理节点 – NDB Cluster – Management Client – ndb_mgm&gt; show Connected to Management Server at:    localhost:1186 Cluster Configuration ——————— [ndbd(NDB)]        2 node(s) id=2 (not connected, accepting connect from    192.168.15.234) id=3 (not connected, accepting connect from    192.168.15.235) [ndb_mgmd(MGM)] 1 node(s) id=1       @192.168.15.231  (mysql-5.5.22    ndb-7.2.6) [mysqld(API)]      2 node(s) id=4 (not connected, accepting connect from    192.168.15.232) id=5 (not connected, accepting connect from    192.168.15.233) 管理节点关闭 [root@localhost /]#    /usr/local/mysql/bin/ndb_mgm -e shutdown #成功后终端打印出以下信息 Connected to Management    Server at: 192.168.15.236:1186 3 NDB Cluster node(s)    have shutdown. Disconnecting to allow    management server to shutdown. 数据节点 数据节点安装 数据节点1： 192.168.15.234 数据节点2： 192.168.15.235 [root@localhost /]#    groupadd mysql [root@localhost /]#    useradd mysql -g mysql [root@localhost /]# cd    /usr/local [root@localhost local]#    tar -zxv -f mysql-cluster-gpl-7.2.6-linux2.6-x86_64.tar.gz [root@localhost local]#    mv mysql-cluster-gpl-7.2.6-linux2.6-x86_64 mysql [root@localhost local]#    chown -R mysql:mysql mysql [root@localhost local]#    cd mysql [root@localhost mysql]#    scripts/mysql_install_db –user=mysql [root@localhost mysql]#    cp support-files/my-medium.cnf /etc/my.cnf [root@localhost mysql]#    cp support-files/mysql.server /etc/init.d/mysqld 数据节点配置 对数据节点进行配置，执行以下操作： [root@localhost mysql]#    mkdir /var/mysql/data [root@localhost mysql]#    mkdir /var/mysql/logs [root@localhost mysql]#    vi /etc/my.cnf 向文件追加以下内容： [MYSQLD] ndbcluster ndb-connectstring=192.168.15.231 [MYSQL_CLUSTER] ndb-connectstring=192.168.15.231 [NDB_MGM] connect-string=192.168.15.231 数据节点启动 启动此处时，管理节点服务器防火墙必须开启1186,3306端口。 注意：只是在第一次启动或在备份／恢复或配置变化后重启ndbd时，才加–initial参数！ 第一次启动如下： [root@localhost mysql]#/usr/local/mysql/bin/ndbd –initial 2013-01-30 13:43:53    [ndbd] INFO     – Angel connected to    ‘192.168.15.231:1186’ 2013-01-30 13:43:53    [ndbd] INFO     – Angel allocated    nodeid: 2 正常启动方式： [root@localhost mysql]# /usr/local/mysql/bin/ndbd 数据节点关闭 [root@localhost /]# /etc/rc.d/init.d/mysqld stop 或者 [root@localhost mysql]# /etc/init.d/mysql stop Shutting down MySQL.. SUCCESS! /usr/local/mysql/bin/mysqladmin -uroot shutdown SQL节点安装 SQL节点安装 SQL节点和存储节点(NDB节点)安装相同，都执行以下操作； sql节点1： 192.168.15.232 sql节点2： 192.168.15.233 [root@localhost /]#    groupadd mysql [root@localhost /]#    useradd mysql -g mysql [root@localhost /]# cd    /usr/local [root@localhost local]#    tar -zxv -f mysql-cluster-gpl-7.2.6-linux2.6-x86_64.tar.gz [root@localhost local]#    mv mysql-cluster-gpl-7.2.6-linux2.6-x86_64 mysql [root@localhost local]# chown    -R mysql:mysql mysql [root@localhost local]#    cd mysql [root@localhost mysql]#    scripts/mysql_install_db –user=mysql [root@localhost mysql]#    cp support-files/my-medium.cnf /etc/my.cnf [root@localhost mysql]#    cp support-files/mysql.server /etc/init.d/mysqld SQL节点配置 执行以下操作： [root@localhost mysql]#    mkdir /var/mysql/data     //创建存储数据的文件夹 [root@localhost mysql]#    mkdir /var/mysql/logs     //创建存储日志的文件夹 [root@localhost mysql]#    vi /usr/local/mysql/my.cnf  //修改配置文件 追加以下内容： [MYSQLD] ndbcluster ndb-connectstring=192.168.15.231 [MYSQL_CLUSTER] ndb-connectstring=192.168.15.231 [NDB_MGM] connect-string=192.168.15.231 SQL节点启动 执行以下操作： [root@localhost    mysql]# service mysqld start Starting    MySQL.. SUCCESS! SQL节点关闭 最直接的方式： [root@localhost mysql]# /usr/local/mysql/bin/mysqladmin    -uroot shutdown [root@localhost /]# /etc/rc.d/init.d/mysqld stop 或者 [root@localhost mysql]# /etc/init.d/mysql stop Shutting down MySQL.. SUCCESS! 功能测试 在管理节点（192.168.15.231）上查看服务状态 [root@localhost ~]#    /usr/local/mysql/bin/ndb_mgm – NDB Cluster – Management Client – ndb_mgm&gt; show Cluster Configuration ——————— [ndbd(NDB)]        2 node(s) id=2       @192.168.15.234  (mysql-5.5.22    ndb-7.2.6, Nodegroup: 0, Master) id=3       @192.168.15.235  (mysql-5.5.22    ndb-7.2.6, Nodegroup: 1) [ndb_mgmd(MGM)] 1 node(s) id=1       @192.168.15.231  (mysql-5.5.22    ndb-7.2.6) [mysqld(API)]      2 node(s) id=4       @192.168.15.232  (mysql-5.5.22    ndb-7.2.6) id=5       @192.168.15.233  (mysql-5.5.22    ndb-7.2.6) 可以看到这里的数据节点、管理节点、sql节点都是正常的。 注意： 在建表的时候一定要用ENGINE=NDB或ENGINE=NDBCLUSTER指定使用NDB集群存储引擎，或用ALTER TABLE选项更改表的存储引擎。 NDB表必须有一个主键，因此创建表的时候必须定义主键，否则NDB存储引擎将自动生成隐含的主键。 Sql节点的用户权限表仍然采用MYISAM存储引擎保存的，所以在一个Sql节点创建的MySql用户只能访问这个节点，如果要用同样的用户访 问别的Sql节点，需要在对应的Sql节点追加用户。虽然在MySql Cluster7.2版本开始提供了”用户权限共享”。 数据同步性测试 在一个数据节点上进行相关数据库的创建，然后到另外一个数据节点上看看数据是否同步。 第1步： SQL节点1（192.168.15.232）上增加数据： [root@localhost    mysql]#  /etc/rc.d/init.d/mysqld status                //检验mysql是否运行 [root@localhost mysql]#    /etc/rc.d/init.d/mysqld start                   //启动mysql [root@localhost mysql]#    /usr/local/mysql/bin/mysql -u root -p Enter password: mysql&gt; show databases; mysql&gt; create database    testdb2; mysql&gt; use testdb2; mysql&gt; CREATE TABLE    td_test2 (i INT) ENGINE=NDB; //这里必须指定数据库表的引擎为NDBCLUSTER，与配置文件中的名称相同 mysql&gt; INSERT INTO    td_test2() VALUES (1); mysql&gt; INSERT INTO    td_test2() VALUES (152); mysql&gt; SELECT <em> FROM    td_test2; 第2步： 进入到SQL节点2（192.168.15.233）上查看数据 mysql&gt; use testdb2; Database changed mysql&gt; SELECT </em> FROM td_test2; +——+ | i    | +——+ |  126 | |    1 | +——+ 2 rows in set (0.01 sec) 查看表的引擎是不是NDB： &gt;show create table td_test2; 第3步： 反向测试，SQL节点2（192.168.15.233）上增加数据： mysql&gt; create database    bb; mysql&gt; use bb; mysql&gt; CREATE TABLE    td_test3 (i INT) ENGINE=NDB; mysql&gt; INSERT INTO    td_test3 () VALUES (98); mysql&gt; SELECT <em> FROM    td_test3; SQL节点1（192.168.15.232）上查看数据： mysql&gt;  use bb; Database changed mysql&gt;  SELECT </em> FROM td_test3; +——+ | i    | +——+ |   98 | +——+ 1 row in set (0.00 sec) 关闭集群 先关闭管理节点，然后关闭SQL节点和数据节点。 集群启动操作顺序 要再次启动集群，按照以下顺序执行： 管理节点 -&gt; 数据节点 –&gt; SQL节点注意：此次启动数据节点时不要加”–initial”参数。 安装及测试中的错误 启动中的错误 错误提示： Can’t connect to local MySQL server through socket ‘/tmp/mysql.sock’ (2) 解决办法1（端口占用） netstat -anp |grep 3306 kill -9 进程号 解决办法1（权限问题） [root@localhost mysql]# chown -R mysql:mysql /var/mysql          //修改自定义文件夹的访问权限 三台服务器篇 一、介绍 ======== 这篇文档旨在介绍如何安装配置基于2台服务器的MySQL集群。并且实现任意一台服务器出现问题或宕机时MySQL依然能够继续运行。 注意！ 虽 然这是基于2台服务器的MySQL集群，但也必须有额外的第三台服务器作为管理节点，但这台服务器可以在集群启动完成后关闭。同时需要注意的是 并不推荐在集群启动完成后关闭作为管理节点的服务器。尽管理论上可以建立基于只有2台服务器的MySQL集群，但是这样的架构，一旦一台服务器宕机之后集 群就无法继续正常工作了，这样也就失去了集群的意义了。出于这个原因，就需要有第三台服务器作为管理节点运行。 另外，可能很多朋友都没有3台服务器的实际环境，可以考虑在VMWare或其他虚拟机中进行实验。 下面假设这3台服务的情况： Server1: mysql1.vmtest.net 192.168.0.1 Server2: mysql2.vmtest.net 192.168.0.2 Server3: mysql3.vmtest.net 192.168.0.3 Servers1 和Server2作为实际配置MySQL集群的服务器。对于作为管理节点的Server3则要求较低，只需对Server3的系 统进行很小的调整并且无需安装MySQL，Server3可以使用一台配置较低的计算机并且可以在Server3同时运行其他服务。 二、在Server1和Server2上安装MySQL ================================= 从<a href="http://www.mysql.com上下载mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz" target="_blank" rel="noopener">http://www.mysql.com上下载mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz</a> 注意：必须是max版本的MySQL，Standard版本不支持集群部署！ 以下步骤需要在Server1和Server2上各做一次 # mv mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz /usr/local/ # cd /usr/local/ # groupadd mysql # useradd -g mysql mysql # tar -zxvf mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz # rm -f mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz # mv mysql-max-4.1.9-pc-linux-gnu-i686 mysql # cd mysql # scripts/mysql_install_db –user=mysql # chown -R root  . # chown -R mysql data # chgrp -R mysql . # cp support-files/mysql.server /etc/rc.d/init.d/mysqld # chmod +x /etc/rc.d/init.d/mysqld # chkconfig –add mysqld 此时不要启动MySQL！ 三、安装并配置管理节点服务器(Server3) ===================================== 作为管理节点服务器，Server3需要ndb_mgm和ndb_mgmd两个文件： 从<a href="http://www.mysql.com上下载mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz" target="_blank" rel="noopener">http://www.mysql.com上下载mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz</a> # mkdir /usr/src/mysql-mgm # cd /usr/src/mysql-mgm # tar -zxvf mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz # rm mysql-max-4.1.9-pc-linux-gnu-i686.tar.gz # cd mysql-max-4.1.9-pc-linux-gnu-i686 # mv bin/ndb_mgm . # mv bin/ndb_mgmd . # chmod +x ndb_mg<em> # mv ndb_mg</em> /usr/bin/ # cd # rm -rf /usr/src/mysql-mgm 现在开始为这台管理节点服务器建立配置文件： # mkdir /var/lib/mysql-cluster # cd /var/lib/mysql-cluster # vi config.ini 在config.ini中添加如下内容： [NDBD DEFAULT] NoOfReplicas=2 [MYSQLD DEFAULT] [NDB_MGMD DEFAULT] [TCP DEFAULT] # Managment Server [NDB_MGMD] HostName=192.168.0.3 #管理节点服务器Server3的IP地址 # Storage Engines [NDBD] HostName=192.168.0.1 #MySQL集群Server1的IP地址 DataDir= /var/lib/mysql-cluster [NDBD] HostName=192.168.0.2 #MySQL集群Server2的IP地址 DataDir=/var/lib/mysql-cluster # 以下2个[MYSQLD]可以填写Server1和Server2的主机名。 # 但为了能够更快的更换集群中的服务器，推荐留空，否则更换服务器后必须对这个配置进行更改。 [MYSQLD] [MYSQLD] 保存退出后，启动管理节点服务器Server3： # ndb_mgmd 启动管理节点后应该注意，这只是管理节点服务，并不是管理终端。因而你看不到任何关于启动后的输出信息。 四、配置集群服务器并启动MySQL ============================= 在Server1和Server2中都需要进行如下改动： # vi /etc/my.cnf [mysqld] ndbcluster ndb-connectstring=192.168.0.3 #Server3的IP地址 [mysql_cluster] ndb-connectstring=192.168.0.3 #Server3的IP地址 保存退出后，建立数据目录并启动MySQL： # mkdir /var/lib/mysql-cluster # cd /var/lib/mysql-cluster # /usr/local/mysql/bin/ndbd –initial # /etc/rc.d/init.d/mysqld start 可以把/usr/local/mysql/bin/ndbd加到/etc/rc.local中实现开机启动。 注意：只有在第一次启动ndbd时或者对Server3的config.ini进行改动后才需要使用–initial参数！ 五、检查工作状态 ================ 回到管理节点服务器Server3上，并启动管理终端： # /usr/bin/ndb_mgm 键入show命令查看当前工作状态：（下面是一个状态输出示例） [root@mysql3 root]# /usr/bin/ndb_mgm – NDB Cluster – Management Client – ndb_mgm&gt; show Connected to Management Server at: localhost:1186 Cluster Configuration ——————— [ndbd(NDB)]     2 node(s) id=2    @192.168.0.1  (Version: 4.1.9, Nodegroup: 0, Master) id=3    @192.168.0.2  (Version: 4.1.9, Nodegroup: 0) [ndb_mgmd(MGM)] 1 node(s) id=1    @192.168.0.3  (Version: 4.1.9) [mysqld(API)]   2 node(s) id=4   (Version: 4.1.9) id=5   (Version: 4.1.9) ndb_mgm&gt; 如果上面没有问题，现在开始测试MySQL： 注意，这篇文档对于MySQL并没有设置root密码，推荐你自己设置Server1和Server2的MySQL root密码。 在Server1中： # /usr/local/mysql/bin/mysql -u root -p &gt; use test; &gt; CREATE TABLE ctest (i INT) ENGINE=NDBCLUSTER; &gt; INSERT INTO ctest () VALUES (1); &gt; SELECT * FROM ctest; 应该可以看到1 row returned信息（返回数值1）。 如果上述正常，则换到Server2上重复上面的测试，观察效果。如果成功，则在Server2中执行INSERT再换回到Server1观察是否工作正常。 如果都没有问题，那么恭喜成功！ 六、破坏性测试 ============== 将Server1或Server2的网线拔掉，观察另外一台集群服务器工作是否正常（可以使用SELECT查询测试）。测试完毕后，重新插入网线即可。 如果你接触不到物理服务器，也就是说不能拔掉网线，那也可以这样测试： 在Server1或Server2上： # ps aux | grep ndbd 将会看到所有ndbd进程信息： root      5578  0.0  0.3  6220 1964 ?        S    03:14   0:00 ndbd root      5579  0.0 20.4 492072 102828 ?     R    03:14   0:04 ndbd root     23532  0.0  0.1  3680  684 pts/1    S    07:59   0:00 grep ndbd 然后杀掉一个ndbd进程以达到破坏MySQL集群服务器的目的： # kill -9 5578 5579 之后在另一台集群服务器上使用SELECT查询测试。并且在管理节点服务器的管理终端中执行show命令会看到被破坏的那台服务器的状态。 测试完成后，只需要重新启动被破坏服务器的ndbd进程即可： # ndbd 注意！前面说过了，此时是不用加–inital参数的！ 至此，MySQL集群就配置完成了！</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/07/2019030500107/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/07/2019030500107/" title="mysql集群">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/07/2019030500131/">
+    		oracle 各种授权
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-07T04:12:08.000Z">2015-12-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>alter any cluster 修改任意簇的权限 alter any index 修改任意索引的权限 alter any role 修改任意角色的权限 alter any sequence 修改任意序列的权限 alter any snapshot 修改任意快照的权限 alter any table 修改任意表的权限 alter any trigger 修改任意触发器的权限 alter cluster 修改拥有簇的权限 alter database 修改数据库的权限 alter procedure 修改拥有的存储过程权限 alter profile 修改资源限制简表的权限 alter resource cost 设置佳话资源开销的权限 alter rollback segment 修改回滚段的权限 alter sequence 修改拥有的序列权限 alter session 修改数据库会话的权限 alter sytem 修改数据库服务器设置的权限 alter table 修改拥有的表权限 alter tablespace 修改表空间的权限 alter user 修改用户的权限 analyze 使用analyze命令分析数据库中任意的表、索引和簇 audit any 为任意的数据库对象设置审计选项 audit system 允许系统操作审计 backup any table 备份任意表的权限 become user 切换用户状态的权限 commit any table 提交表的权限 create any cluster 为任意用户创建簇的权限 create any index 为任意用户创建索引的权限 create any procedure 为任意用户创建存储过程的权限 create any sequence 为任意用户创建序列的权限 create any snapshot 为任意用户创建快照的权限 create any synonym 为任意用户创建同义名的权限 create any table 为任意用户创建表的权限 create any trigger 为任意用户创建触发器的权限 create any view 为任意用户创建视图的权限 create cluster 为用户创建簇的权限 create database link 为用户创建的权限 create procedure 为用户创建存储过程的权限 create profile 创建资源限制简表的权限 create public database link 创建公共数据库链路的权限 create public synonym 创建公共同义名的权限 create role 创建角色的权限 create rollback segment 创建回滚段的权限 create session 创建会话的权限 create sequence 为用户创建序列的权限 create snapshot 为用户创建快照的权限 create synonym 为用户创建同义名的权限 create table 为用户创建表的权限 create tablespace 创建表空间的权限 create user 创建用户的权限 create view 为用户创建视图的权限 delete any table 删除任意表行的权限 delete any view 删除任意视图行的权限 delete snapshot 删除快照中行的权限 delete table 为用户删除表行的权限 delete view 为用户删除视图行的权限 drop any cluster 删除任意簇的权限 drop any index 删除任意索引的权限 drop any procedure 删除任意存储过程的权限 drop any role 删除任意角色的权限 drop any sequence 删除任意序列的权限 drop any snapshot 删除任意快照的权限 drop any synonym 删除任意同义名的权限 drop any table 删除任意表的权限 drop any trigger 删除任意触发器的权限 drop any view 删除任意视图的权限 drop profile 删除资源限制简表的权限 drop public cluster 删除公共簇的权限 drop public database link 删除公共数据链路的权限 drop public synonym 删除公共同义名的权限 drop rollback segment 删除回滚段的权限 drop tablespace 删除表空间的权限 drop user 删除用户的权限 execute any procedure 执行任意存储过程的权限 execute function 执行存储函数的权限 execute package 执行存储包的权限 execute procedure 执行用户存储过程的权限 force any transaction 管理未提交的任意事务的输出权限 force transaction 管理未提交的用户事务的输出权限 grant any privilege 授予任意系统特权的权限 grant any role 授予任意角色的权限 index table 给表加索引的权限 insert any table 向任意表中插入行的权限 insert snapshot 向快照中插入行的权限 insert table 向用户表中插入行的权限 insert view 向用户视图中插行的权限 lock any table 给任意表加锁的权限 manager tablespace 管理（备份可用性）表空间的权限 references table 参考表的权限 restricted session 创建有限制的数据库会话的权限 select any sequence 使用任意序列的权限 select any table 使用任意表的权限 select snapshot 使用快照的权限 select sequence 使用用户序列的权限 select table 使用用户表的权限 select view 使用视图的权限 unlimited tablespace 对表空间大小不加限制的权限 update any table 修改任意表中行的权限 update snapshot 修改快照中行的权限 update table 修改用户表中的行的权限 update view 修改视图中行的权限 例： grant CREATE ANY INDEX, DROP ANY INDEX to sx_work;</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/07/2019030500131/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/07/2019030500131/" title="oracle 各种授权">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/07/2019030500156/">
+    		sql之left join、right join、inner join的区别
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-07T04:11:13.000Z">2015-12-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/left-join/" title="left join">left join</a> / 
+    
+        <a href="/tags/inner-join/" title="inner join">inner join</a> / 
+    
+        <a href="/tags/right-join/" title="right join">right join</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>left join(左联接) 返回包括左表中的所有记录和右表中联结字段相等的记录 right join(右联接) 返回包括右表中的所有记录和左表中联结字段相等的记录 inner join(等值连接) 只返回两个表中联结字段相等的行 举例如下： ——————————————– 表A记录如下： aID　　　　　aNum 1　　　　　a20050111 2　　　　　a20050112 3　　　　　a20050113 4　　　　　a20050114 5　　　　　a20050115 表B记录如下: bID　　　　　bName 1　　　　　2006032401 2　　　　　2006032402 3　　　　　2006032403 4　　　　　2006032404 8　　　　　2006032408 ——————————————– 1.left join sql语句如下: select <em> from A left join B on A.aID = B.bID 结果如下: aID　　　　　aNum　　　　　bID　　　　　bName 1　　　　　a20050111　　　　1　　　　　2006032401 2　　　　　a20050112　　　　2　　　　　2006032402 3　　　　　a20050113　　　　3　　　　　2006032403 4　　　　　a20050114　　　　4　　　　　2006032404 5　　　　　a20050115　　　　NULL　　　　　NULL （所影响的行数为 5 行） 结果说明: left join是以A表的记录为基础的,A可以看成左表,B可以看成右表,left join是以左表为准的. 换句话说,左表(A)的记录将会全部表示出来,而右表(B)只会显示符合搜索条件的记录(例子中为: A.aID = B.bID). B表记录不足的地方均为NULL. ——————————————– 2.right join sql语句如下: select </em> from A right join B on A.aID = B.bID 结果如下: aID　　　　　aNum　　　　　bID　　　　　bName 1　　　　　a20050111　　　　1　　　　　2006032401 2　　　　　a20050112　　　　2　　　　　2006032402 3　　　　　a20050113　　　　3　　　　　2006032403 4　　　　　a20050114　　　　4　　　　　2006032404 NULL　　　　　NULL　　　　　8　　　　　2006032408 （所影响的行数为 5 行） 结果说明: 仔细观察一下,就会发现,和left join的结果刚好相反,这次是以右表(B)为基础的,A表不足的地方用NULL填充. ——————————————– 3.inner join sql语句如下: select * from A innerjoin B on A.aID = B.bID 结果如下: aID　　　　　aNum　　　　　bID　　　　　bName 1　　　　　a20050111　　　　1　　　　　2006032401 2　　　　　a20050112　　　　2　　　　　2006032402 3　　　　　a20050113　　　　3　　　　　2006032403 4　　　　　a20050114　　　　4　　　　　2006032404 结果说明: 很明显,这里只显示出了 A.aID = B.bID的记录.这说明inner join并不以谁为基础,它只显示符合条件的记录. ——————————————– 注: LEFT JOIN操作用于在任何的 FROM 子句中，组合来源表的记录。使用 LEFT JOIN 运算来创建一个左边外部联接。左边外部联接将包含了从第一个（左边）开始的两个表中的全部记录，即使在第二个（右边）表中并没有相符值的记录。 语法：FROM table1 LEFT JOIN table2 ON table1.field1 compopr table2.field2 说明：table1, table2参数用于指定要将记录组合的表的名称。 field1, field2参数指定被联接的字段的名称。且这些字段必须有相同的数据类型及包含相同类型的数据，但它们不需要有相同的名称。 compopr参数指定关系比较运算符：”=”， “&lt;”， “&gt;”， “&lt;=”， “&gt;=” 或 “&lt;&gt;”。 如果在INNER JOIN操作中要联接包含Memo 数据类型或 OLE Object 数据类型数据的字段，将会发生错误.</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/07/2019030500156/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/07/2019030500156/" title="sql之left join、right join、inner join的区别">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/04/2019030500066/">
+    		MySQL主从复制（Master-Slave）与读写分离
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-04T05:31:11.000Z">2015-12-04</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/Master/" title="Master">Master</a> / 
+    
+        <a href="/tags/Slave/" title="Slave">Slave</a> / 
+    
+        <a href="/tags/主从复制/" title="主从复制">主从复制</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1. 主从复制通过修改 mysql 配置文件实现。 2. 读写分离通过 Amoeba for Mysql/MySQL-Proxy <img src="/uploads/2015/12/42f7d87b-0c40-33a6-bc09-af7ff4f195f0.jpg" alt> 3. 4台服务器做的一套集群方案 <img src="/uploads/2015/12/935df5ae-e425-39c6-9bac-bbc9ab0c43de.png" alt> Amoeba for Mysql和 MySQL-Proxy： 1. Amoeba 是用JAVA写的功能异常强大，支持读写分离，表和库级别的读写分离，数据库水平分割，垂直分割，还有集群。 2.mysql-proxy 只是轻量级的读写分离程序C写的，驱动是需要lua的脚本跑，而且在高并发下经常挂掉。程序还忽略了一些字符设定，如果数据库不是同一编码还会出现乱码,amoeba就不存在 。 3. mysql proxy没有现成的 lua脚本。mysql proxy根本没有配置文件，lua脚本就是它的全部 。 而moeba for Mysql只需要进行相关的配置就可以满足需求</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/04/2019030500066/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/04/2019030500066/" title="MySQL主从复制（Master-Slave）与读写分离">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/04/2019030500029/">
+    		数据库中的字段和Java里面的类型匹配
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-04T05:29:42.000Z">2015-12-04</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/hibernate/" title="hibernate">hibernate</a> / 
+    
+        <a href="/tags/Java/" title="Java">Java</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>当在hibernate中运用原始的sql语句进行操作的的时候，常常会报错，错误很多都是关于 No Dialect mapping for JDBC type:?这里的问号是不同的数字如：-1,1，-9,3等等，每种数字代表一种类型。经过分析和查找，问题常常发生在几个地方 1、错误的配置了hibernate的方言 2、就是你的数据库中的字段和Java里面的类型不匹配的问题 错误如下： org.hibernate.MappingException: No Dialect mapping for JDBC type: -1 Error message: org.hibernate.MappingException: No Dialect mapping for JDBC type: -1 at org.hibernate.dialect.TypeNames.get(TypeNames.java:56) at org.hibernate.dialect.TypeNames.get(TypeNames.java:81) at org.hibernate.dialect.Dialect.getHibernateTypeName(Dialect.java:370) at org.hibernate.loader.custom.CustomLoader$Metadata.getHibernateType(CustomLoader.java:559) at org.hibernate.loader.custom.CustomLoader$ScalarResultColumnProcessor.performDiscovery(CustomLoader.java:485) at org.hibernate.loader.custom.CustomLoader.autoDiscoverTypes(CustomLoader.java:501) at org.hibernate.loader.Loader.getResultSet(Loader.java:1796) at org.hibernate.loader.Loader.doQuery(Loader.java:674) at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:236) at org.hibernate.loader.Loader.doList(Loader.java:2220) at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2104) at org.hibernate.loader.Loader.list(Loader.java:2099) at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:289) at org.hibernate.impl.SessionImpl.listCustomQuery(SessionImpl.java:1695) at org.hibernate.impl.AbstractSessionImpl.list(AbstractSessionImpl.java:142) at org.hibernate.impl.SQLQueryImpl.list(SQLQueryImpl.java:152) at com.tilsi.solr.dao.summary.EntryDAO.queryByEntryId(EntryDAO.java:164) at com.tilsi.solr.service.db.DbSearchThread.searchSummary(DbSearchThread.java:69) at com.tilsi.solr.service.db.DbSearchThread.call(DbSearchThread.java:48) at com.tilsi.solr.service.db.DbSearchThread.call(DbSearchThread.java:1) at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303) at java.util.concurrent.FutureTask.run(FutureTask.java:138) at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886) at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908) at java.lang.Thread.run(Thread.java:662) 解决方法为：通过查询hibernate的源码，找到问题的根本所在，就是hibernate中不支持对应的数据类型，具体数据类型的值，请查看下表 查看 java.sql.Types 类，可以找到对应类型，调整相应的数据库里的类型，或者其他支持这个类型的方言。 public final static int BIT   =  -7; public final static int TINYINT  =  -6; public final static int SMALLINT =   5; public final static int INTEGER  =   4; public final static int BIGINT   =  -5; public final static int FLOAT   =   6; public final static int REAL   =   7; public final static int DOUBLE   =   8; public final static int NUMERIC  =   2; public final static int DECIMAL  =   3; public final static int CHAR  =   1; public final static int VARCHAR  =  12; public final static int LONGVARCHAR  =  -1; public final static int DATE   =  91; public final static int TIME   =  92; public final static int TIMESTAMP  =  93; public final static int BINARY  =  -2; public final static int VARBINARY  =  -3; public final static int LONGVARBINARY  =  -4; public final static int NULL  =   0; public final static int OTHER  = 1111; public final static int JAVA_OBJECT         = 2000; public final static int DISTINCT            = 2001; public final static int STRUCT              = 2002; public final static int ARRAY               = 2003; public final static int BLOB                = 2004; public final static int CLOB                = 2005; public final static int REF                 = 2006; public final static int DATALINK = 70; public final static int BOOLEAN = 16; public final static int ROWID = -8; public static final int NCHAR = -15; public static final int NVARCHAR = -9; public static final int LONGNVARCHAR = -16; public static final int NCLOB = 2011; public static final int SQLXML = 2009; 这类错误，最后的问号表示不确定的数字，但是解决的方法都一样。 首先，自定义一个方言类——Hibernate Dialect，该类需要继承与我们使用的数据库相应的方言类。比如：如果我们用的是mysql（版本为5.x.x），我们需要继承“org.hibernate.dialect.MySQL5Dialect”；如果我们使用的是DB2，那么我们应该继承“org.hibernate.dialect.DB2Dialect”；我用的是SqlServer2008，所以我要继承“org.hibernate.dialect.SQLServerDialect”，参考代码如下： import java.sql.Types; import org.hibernate.Hibernate; import org.hibernate.dialect.SQLServerDialect; public class SqlServer2008Dialect extends SQLServerDialect { public SqlServer2008Dialect() { super(); registerHibernateType(Types.CHAR, Hibernate.STRING.getName()); registerHibernateType(Types.NVARCHAR, Hibernate.STRING.getName()); registerHibernateType(Types.LONGNVARCHAR, Hibernate.STRING.getName()); registerHibernateType(Types.DECIMAL, Hibernate.DOUBLE.getName()); } } 总之大家可以在“org.hibernate.dialect”这个package中找到与数据库相对应的方言类。在其中，我们需要注意三点： a、在默认构造方法中继承父类构造方法，同时调用“registerHibernateType(int code, String name)”方法将数据库中该数据类型映射到相应的java类型。code表示数据库中的数据类型整数表示，可以在“java.sql.Types”类中查到相应的数据库类型。name表示我们要映射的java类型。可以从“org.hibernate.Hibernate”中查到。 b、Types类。在Types中定义了数据库常用的字段类型，如： …… public final static int LONGVARCHAR =  -1; public final static int TIMESTAMP =  93; …… 也就是上面我列出的java.sql.Types。 我们可以根据“No Dialect mapping for JDBC type : ”后面紧跟的数字在该类（Types）中找到相应的类型。我们也可以根据数据表中字段的类型找到相应的值。这个值就是registerHibernateType(int code, String name)的第一个参数。 c、Hibernate类。Hibernate中定义了转换的目的类型，如第一段代码所示。能够转化成什么类型，可以在该类中查找。通过调用“getName()”方法得到一个String型。当然，如果你记住了，我们还可以这样写 import org.hibernate.dialect.SQLServerDialect; public class SqlServer2008Dialect extends SQLServerDialect { public SqlServer2008Dialect() { super(); registerHibernateType(1, “string”); registerHibernateType(-9, “string”); registerHibernateType(-16, “string”); registerHibernateType(3, “double”); } } 其实和上面是一样的，只是把上面所代表的值直接写出来了。需要注意的是super()方法的调用，不调用该方法是否会出现错误，这个我就不知道了，我没有测试，所以最好调一下。 然后，我们还需要在配置文件中作修改，我将连接数据库的方法放在了spring配置文件中了，这段代码就写在applicationContext.xml里面了： <property name="hibernateProperties"> <props> <!-- <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect </prop> --> <prop key="hibernate.dialect">com.sense.workflow.util.SqlServer2008Dialect</prop> <prop key="hibernate.hbm2ddl.auto">update</prop> <prop key="hibernate.show\_sql">true</prop> <prop key="hibernate.cache.use\_query\_cache">false</prop> <!-- 显示sql格式 --> <prop key="hibernate.format_sql">false</prop> </props> </property> 最后还有一个解决方法：如果你的数据库表中某个字段不可以不用text类型的，将其改成其他类型（如：varchar等）也可以，这个方法虽然简单，当数据库字段必须用text类型的时候该方法就不行了。</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/04/2019030500029/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/04/2019030500029/" title="数据库中的字段和Java里面的类型匹配">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <a class="extend prev" rel="prev" href="/archives/2015/12/">前一页</a><a class="page-number" href="/archives/2015/12/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2015/12/page/3/">3</a><a class="extend next" rel="next" href="/archives/2015/12/page/3/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

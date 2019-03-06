@@ -1,0 +1,1130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>`SQL`标签下的文章 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/tags/SQL/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/tags/SQL/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/tags/SQL/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/tags/SQL/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 按标签分类 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                `SQL`标签下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/02/19/2019030500159/">
+    		SQL语言基础-检索数据
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-02-19T06:01:48.000Z">2016-02-19</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <h1 id="检索数据"><a href="#检索数据" class="headerlink" title="检索数据"></a>检索数据</h1><p>用户对表或视图最常进行的操作就是检索数据，检索数据可以通过SELECT语句来实现，该语句由多个子句组成，通过这些子句可以完成筛选、投影和连接等各种数据操作，最终得到用户想要的查询结果。 格式： select {[distinct|all]columns|*} [into table_name] from {tables|views|other select} [where conditions] [group by columns] [having conditions] [order by columns] select子句：用于选择数据表、视图中的列。 into子句：用于将原表的结构和数据插入新表中。 from子句：用于指定数据来源，包括表，视图和其他select语句。     where子句：用于对检索的数据进行筛选。     group by子句：用于对检索结果进行分组显示。     having子句：用于从使用group by子句分组后的查询结果中筛选数据行。     order by子句：用来对结果集进行排序（包括升序和降序）。  </p>
+<ol>
+<li>简单查询</li>
+</ol>
+<hr>
+<p>  只包含SELECT子句和FROM子句的查询就是简单查询，SELECT子句和FROM子句是SELECT语句的必选项。如果要检索指定数据表的所有列，可以在SELECT子句后面使用星号（*）来实现。在检索一个数据表时，要注意该表所属于的模式。如果在指定表所属的模式内部检索数据，则可以直接使用表名；如果不在指定表所属的模式内部检索数据，则不但要查看当前模式是否具有查询的权限，而且还要在表名前面加上其所属的模式名称。例： <img src="/uploads/2016/02/22d82297-15e2-3255-9d18-254d24ae7bb9.png" alt> 上面的SELECT语句若要在SYSTEM模式下执行，则需要在dept前面加上scott，即“scott.dept“。上面的例子中，from子句的后面只有一个数据表，实际上可以在from子句的后面指定多个数据表，每个数据表之间使用逗号（,）分隔开，例：  </p>
+<p>Sql代码</p>
+<ol>
+<li>SQL&gt;select * from scott.dept, scott.salgrade;</li>
+</ol>
+<p>用户可以指定查询表中的某些列而不是全部列，并且被指定列的顺序不受限制，指定部分列也称作投影操作。这些列名紧跟在SELECT关键字的后名，每个列名之间用逗号隔开。利用SELECT指定列的好处就是可以改变列在查询结果中的默认显示顺序。例： <img src="/uploads/2016/02/df72a04e-1a39-37ac-9c03-5a6b30641ec6.png" alt>   上面显示结果中列的显示顺序与emp表结构的自然顺序不同。 在Oracle数据库中，有一个标识行中唯一特性的行标识符，该行标识符的名称为ROWID。行标识符ROWID是Oracle数据库内部使用的隐藏列，由于该隐藏列实际上并不是定义在表中，所以也称为伪列。伪列ROWID长度为18位字符，包含了该行数据在Oracle数据库中的物理地址。用户使用DESCRIBE命令是无法查到ROWID列的，但是可以在SELECT语句中检索到该列。例：  </p>
+<p>Sql代码</p>
+<ol>
+<li>SQL&gt;select rowid, job, ename from scott.emp;</li>
+</ol>
+<p>在使用SELECT语句时，对于数字数据和日期数据都可以使用算术表达式。在SELECT语句中可以使用算术运算符，包括加（+）、减（-）、乘（*）、除（/）和括号。另外，在SELECT语句中不仅可以执行单独的数学运算，还可以执行单独的日期运算以及列名关联的运算。例，检索emp表的sal列，把其值调整为原来的1.1倍： <img src="/uploads/2016/02/eecf8877-9064-3958-bc4e-60c7ca327947.png" alt>     由于许多数据表的列名都是一些英文缩写，用户为了方便查看检索结果，常常需要为这些列指定别名。在Oracle系统中，为列指定别名既可以使用AS关键字，也可以不使用任何关键字而直接指定。例：检索emp表的指定列（empno,ename,job），并使用as关键字为这些列指定中文的别名： <img src="/uploads/2016/02/b10a01f8-66f7-33fa-aa43-22a30f1b15d1.png" alt>   在默认情况下，结果集中包含所有符合查询条件的数据行，这样结果集中就有可能出现重复数据。而在实际的应用中，这些重复的数据除了占据较大的显示空间外，可能不会给用户带来太多有价值的东西，这样就需要除去重复的记录，保留唯一的记录即可。在SELECT语句中，可以使用DISTINCT关键字来限制在查询结果显示不重复的数据，该关键字用在SELECT子句的列表前面。例：  </p>
+<p>Sql代码</p>
+<ol>
+<li>SQL&gt;select distinct job from scott.emp;</li>
+</ol>
+<ol start="2">
+<li>筛选查询</li>
+</ol>
+<hr>
+<p>在SELECT语句中使用WHERE子句可以实现对数据行的筛选操作，只有满足WHERE子句中判断条件的行才会显示在结果集中，而那些不满足WHERE子句判断条件的行则不包括在结果集中。通过筛选数据，可以从大量的数据中得到用户所需要的数据。在SELECT语句中，WHERE子句位于FROM子句之后。 语法：SELECT columns_list FROM table_name WHERE conditional_expression     columns_list：字段列表。     table_name：表名。     conditional_expression：筛选条件表达式。 比较筛选：可以在WHERE语句中使用比较运算符来筛选数据，这样只有满足筛选条件的数据行才会被检索出来，不满足比较条件的数据行则不会被检索出来。在进行比较筛选的过程中，字符串和日期的值必须使用单引号标识，否则Oracle会提示“标识符无效”。例：  </p>
+<p>Sql代码</p>
+<ol>
+<li>SQL&gt;select empno, ename, sal from scott.emp where sal&gt;1500;</li>
+</ol>
+<p>另外，有两个特殊的“比较筛选”操作： A {operator} ANY (B)：表示A与B中的任何一个元素进行operator运算符的比较，只要有一个比较值为true，就返回数据行。 A={operator} ALL (B)：表示A与B中的所有元素进行operator运算符的比较，只有与所有元素比较值都为true，就返回数据行。 例，使用ALL关键字过滤工资（sal）同时不等于3000，950和800的员工记录： <img src="/uploads/2016/02/3893bd81-a723-3f28-89e2-332cfe027606.png" alt>   使用特殊关键字筛选：SQL语言提供了LIKE、IN、BETWEEN和IS NULL等关键字来筛选匹配的数据，这些关键字的功能分别是匹配字符串、查询目标值、限定值的范围和判断值是否为空等。可以在关键字前加上NOT，表示否定的判断。   LIKE关键字：在WHERE子句中使用LIKE关键字查询数据的方式也称为字符串模式匹配或字符串模糊查询。LIKE关键字需要使用通配符在字符串内查找指定的模式，所以需要了解常用的通配符。常用的通配符有下划线“_”，它代表任意一个字符；百分号“%”，它代表任意数据的字符。例如，“K%”表示以K字母开头的任意长度的字符串，“%M%”表示包含字母M的任意长度的字符串，“_MRKJ”表示5个字符长度且后面4个字符是MRKJ的字符串。例，使用LIKE关键字匹配以字母S开头的任意长度的员工名称： <img src="/uploads/2016/02/5393c67d-e979-3bed-a4e3-c4787ceec90d.png" alt> IN关键字：当测试一个数据值是否匹配一组目标值中的一个时，通常使用IN关键字来指定列表搜索条件。IN关键字的格式是IN（目标值1,目标值2,目标值3…），目标值的项目之间必须使用逗号分隔，并且括在括号中。例，在emp表中使用IN关键字查询职务为“PRESIDENT”、“MANAGER”和“ANALYST”中任意一种的员工信息： <img src="/uploads/2016/02/96be47d2-8155-3282-bbec-3ca2f78acf5b.png" alt title="点击查看原始大小图片">   BETWEEN关键字：需要返回某一个数值是否位于两个给定的值之间，可以使用范围条件进行检索。通常使用BETWEEN…AND和NOT…BETWEEN…AND。使用BETWEEN…AND查询条件时，指定的第一个值必须小于第二个值。因为BETWEEN…AND实质是查询条件“大于等于第一个值，并且小于等于第二个值”的简写形式。即BETWEEN…AND要包括两端的值，等价于比较运算符（&gt;=…&lt;=）。例，在emp表中，使用“BETWEEN…AND”关键字查询工资（sal）在2000到3000之间的员工的信息： <img src="/uploads/2016/02/60ad9599-1511-3d67-982f-961d7e38ee1a.png" alt>   IS NULL关键字：空值（NULL）从技术上来说就是未知的、不确定的值，但空值和空字符串不同，因为空值是不存在的值，而空字符串是长度为0的字符串。因为空值代表的是未知的值，所以并不是所有的空值都相等。这样就不能用“=”运算符来检测空值。所以SQL引入了个IS NULL关键字来检测特殊值之间的等价性，并且IS NULL关键字通常在WHERE子句中使用。例，在HR模式下，使用IS NULL关键字过滤出locations表中省份或州（state_province）的名称为空值的街道地址信息： <img src="/uploads/2016/02/3a1ad8d7-95f6-38de-a693-b7be30a1ec78.png" alt>   逻辑筛选：逻辑筛选是指在WHERE子句中使用逻辑运算符AND、OR和NOT进行数据筛选操作，那么这些逻辑运算符可以把多个筛选条件组合起来，这样便于用户获取更加准确的数据记录。 AND逻辑运算符：表示两个逻辑表达式之间“逻辑与的关系”，完全可以使用“AND”运算符加“比较运算符”来代替“BETWEEN…AND”关键字。例，在表emp中，使用“AND”运算符查询工资（sal）在2000到3000之间的员工信息： <img src="/uploads/2016/02/10a2da84-3533-3957-8d6d-db3ca72366f0.png" alt>   OR逻辑运算符：表示两个逻辑表达式之间“逻辑或”的关系，两个表达式的结果中有一个为true，则这个逻辑表达式的值就为true。例，在emp表中，使用OR逻辑运算符查询工资小于2000或工资大于3000的员工信息：  </p>
+<p>Sql代码</p>
+<ol>
+<li>select empno,ename,sal from scott.emp where sal<2000 or sal>3000;</2000></li>
+</ol>
+<ol start="3">
+<li>分组查询</li>
+</ol>
+<hr>
+<p>数据分组的目的是用来汇总数据或为整个分组显示单行的汇总信息，所谓的分组就是将一个“数据集”划分成若干个“小区域”，然后针对若干个“小区域”进行数据处理。通常在查询结果集中使用GROUP BY子句对记录进行分组。在SELECT子句中，GROUP BY子句位于FROM子句之后。 语法： SELECT columns_list FROM table_name [WHERE conditional_expression] GROUP BY columns_list     columns_list：字段列表，在GROUP BY子句中也可以指定多个列分组。     table_name：表名。     conditional_expression：筛选条件表达式。 GROUP BY子句可以基于指定某一列的值将数据集合划分为多个分组，同一组内所有记录在分组属性上具有相同的值，也可以基于指定多列的值将数据集合划分为多个分组。例，在emp表中，按照部门编号（deptno）和职务（job）列进行分组： <img src="/uploads/2016/02/0f42704a-b34b-304c-b6b3-bb0191db437e.png" alt>   GROUP BY子句经常与聚集函数一起使用。如果SELECT子句中包含聚集函数，则计算每组的汇总值，当用户指定GROUP BY时，选择列表中任一聚集表达式内的所有列都应包含在GROUP BY列表中，或者GROUP BY表达式必须与选择列表表达式完全匹配。例，在emp表中，通过分组方式计算每个部门的平均工资： <img src="/uploads/2016/02/d195c6b0-f85a-35f6-8495-1b0071540f40.png" alt>   HAVING子句对GROUP BY子句选择出来的结果进行再次筛选，最后输出符合HAVING子句中条件的记录。HAVING子句的语法跟WHERE子句的语法“相类似”，唯一不同的是HAVING子句中可以包含聚集函数count、avg、sum等。例，在emp表中，首先通过分组的方式计算出每个部门的平均工资，然后再能过HAVING子句过滤出平均工资大于2000的记录信息： <img src="/uploads/2016/02/f3297b4d-a943-364e-a489-9a462a0fd70f.png" alt title="点击查看原始大小图片">  </p>
+<ol start="4">
+<li>排序查询</li>
+</ol>
+<hr>
+<p>在检索数据时，如果把数据从数据库中直接读取出来，这时查询结果将按默认顺序排列。在SELECT语句中，可以使用GROUP BY子句对检索的结果集进行排序，该子句位于FROM子句之后。ORDER BY子句可以根据查询结果中的一个列或多个列对查询结果进行排序，并且第一个排序项是主要的排序依据，其余那些是次要的排序依据。 语法： SELECT columns_list FROM table_name [WHERE conditional_expression] [GROUP BY columns_list] ORDER BY {order_by_expression [ASC|DESC]}     columns_list：字段列表，这里的GROUP BY子句中也可以指定多个列分组。     table_name：表名。     conditional_expression：筛选条件表达式。 order_by_expression：表示要排序的列名或表达式。关键字ASC表示按升序排列，这也是默认的排列方式；关键字DESC表示按降序排列。 检索emp表中的所有数据，并按照部门编号（deptno）、员工编号（empno）排序： <img src="/uploads/2016/02/8500dce8-59f8-3d8b-b820-0325993800cb.png" alt>    </p>
+<ol start="5">
+<li>多表关联查询</li>
+</ol>
+<hr>
+<p>在实际的应用系统开发中会涉及多个数据表，每个表的信息不是独立存在的，而是若干个表之间的信息存在一定的关系，这样当用户查询某一个表的信息时，很可能需要查询关联数据表的信息，这就是多表关联查询。SELECT语句自身是支持多表关联查询的，多表关联查询要比单表查询复杂得多。在进行多表关联查询时，可能会涉及表别名、内连接、外连接、自然连接、自连接和交叉连接等概念。 表别名：在多表关联查询时，如果多个表之间存在同名的列，则必须使用表名来限定列的引用。但是，随着查询变得越来越复杂，语句就会因为每次限定列必须输入表名而变得冗长乏味。对于这种情况，SQL语言提供了设定表别名的机制，使用简短的表别名就可以替代原有连长的表名称，这样就可以大大缩减语句的长度。需要注意一点，一旦在FROM子句中为表指定了别名，则必须在其他的子句中都使用表别名，而不允许再使用原来的表名，否则将出现标识符无效的错误提示。例，通过deptno（部门编号）列来关联emp表和dept表，并检索这两个表中相关字段的信息： <img src="/uploads/2016/02/8231dbd9-6460-3bea-a7e4-d2bc5aff53e9.png" alt>   内连接：内连接是一种常用的多表关联查询方式，一般使用关键字INNER JOIN来实现。其中，INNER关键字可以省略，当只使用JOIN关键字时，语句只表示内连接操作。在使用内连接查询多个表时，必须在FROM子句之后定义一个ON子句，该子句用来指定两个表实现内连接的“连接条件”。需要注意的是，在内连接的检索结果中，所有记录行都是满足连接条件的。 格式：SELECT columns_list FROM table_name1[INNER] JOIN table_name2 ON join_condition;  columns_list：字段列表。    table_name1和table_name2：两个要实现内连接的表。  join_condition：实现内连接的条件表达式。 通过deptno字段来内连接emp表和dept表，并检索这两个表中相关字段的信息： <img src="/uploads/2016/02/5c3f40d8-31a9-3b3d-b1c4-8f2d6534933a.png" alt> 外连接：使用内连接进行多表查询时，返回的查询结果中只包含符合查询条件和连接条件的行。内连接消除了和另一个表中的任何行不匹配的行，而外连接扩展了内连接的结果集，外连接不只列出与连接条件匹配的行，还能列出左表（左外连接时）、右表（右外连接时）或两个表（完全外连接时）中所有符合搜索条件的数据行。外连接种类通常有以下三种：     左外连接：关键字为LEFT OUTER JOIN或LEFT JOIN。     右外连接：关键字为RIGHT OUTER JOIN或RIGHT JOIN。     完全外连接：关键字为FULL OUTER JOIN或FULL JOIN。 左外连接的查询结果不仅包含了满足连接条件的数据行，而且还包含左表（FROM子句后第一个表）中不满足连接条件的数据行。例，首先使用insert语句在emp表中插入新记录（注意没有为deptno和dname列插入值，即它们的值为null），然后实现在emp表和dept表之前通过deptno列进行左外连接：  </p>
+<p>Sql代码</p>
+<ol>
+<li>insert into emp(empno,ename,job) value(9527,’EAST’,’SALESMAN’);</li>
+</ol>
+<p><img src="/uploads/2016/02/99e95b66-0181-3b38-8362-eae2fef65c83.png" alt> 右外连接的查询结果不仅包含了满足连接条件的数据行，而且还包含右表（FROM子句后第二个表）中不满足连接条件的数据行。 完全外连接的查询结果不仅包含了满足连接条件的数据行，而且还包含左表和右表中不满足连接条件的数据行。 自然连接：自然连接是指在检索多个表时，Oracle会将第一个表中的列与第二个表中的具有相同名称的列进行自动连接。在自然连接中，用户不需要明确指定进行连接的列，这个任务由Oracle自动完成，自然连接使用“NATURAL JOIN”关键字。由于自然连接强制要求表之间必须具有相同的列名称，这样容易在设计表时出现不可预知的错误，所以在实际应用系统开发中很少用到自然连接。但毕竟这是一种多表关联查询数据的方式，在某些特定情况下还是有一定的使用价值。另外需要注意的是，在使用自然连接时，不能为列指定限定词（即表名或表的别名），否则Oracle系统会弹出“ORA-25115：NATURAL连接中使用的列不能有限定词”的错误提示。例，在emp表中检索工资（sal字段）大于2000的记录，并实现emp表与dept表的自然连接： <img src="/uploads/2016/02/d569240c-cf11-3010-b647-fe4914733f00.png" alt>   自连接：在应用系统开发中，用户可能会拥有“自引用式的外键”。“自引用式外键”是指表中的一个列可以是该表主键的一个外键。比如，在SCOTT模式下，emp表中某一行的mgr列值（管理者列）可能是另一行的empno列值（员工列），因为管理者本身也是公司的员工。这样用户就可以通过mgr列与empno列的关系，实现查询某个管理者所管理的下属员工信息。例： <img src="/uploads/2016/02/7247cc67-7eda-3f83-8506-0f28a645e545.png" alt> 交叉连接：交叉连接实际上就是不需要任何连接条件的连接，它使用CROSS JOIN关键字来实现。交叉连接的执行结果是一个笛卡儿积，这种查询结果是非常冗余的，但可以通过WHERE子句来过滤出有用的记录信息。例，在SCOTT模式下，通过交叉连接dept表和emp表计算出查询结果的行数： <img src="/uploads/2016/02/1fa93f70-b0aa-36df-bd17-1eb0191488e0.png" alt></p>
+
+            
+            <p class="more">
+                <a href="/2016/02/19/2019030500159/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/02/19/2019030500159/" title="SQL语言基础-检索数据">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/9.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2016/01/18/2019030500147/">
+    		oracle SQL竖表转横表
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2016-01-18T10:14:25.000Z">2016-01-18</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>oracle SQL竖表转横表 T_T_STUDENT表查询记录如下，要转成横表 姓名 课程 成绩 1 张飞 语文 80 2 张飞 数学 87 3 关羽 语文 97 4 张飞 英语 68 5 关羽 数学 53 6 刘备 语文 90 方法一： –用decode实现, SELECT T.NAME, SUM(DECODE(T.Course, ‘语文’, T.Score)) 语文, SUM(DECODE(T.Course, ‘数学’, T.Score)) 数学, SUM(DECODE(T.Course, ‘英语’, T.Score)) 英语 FROM T_T_STUDENT T GROUP BY T.NAME 方法二： –用case when 实现 SELECT T.NAME, SUM(CASE T.Course WHEN ‘语文’ THEN T.Score ELSE 0 END) 语文, SUM(CASE T.Course WHEN ‘数学’ THEN T.Score ELSE 0 END) 数学, SUM(CASE T.Course WHEN ‘英语’ THEN T.Score ELSE 0 END) 英语 FROM T_T_STUDENT T GROUP BY T.NAME 输出结果如下： 姓名 语文 数学 英语 1 刘备 90 94 92 2 关羽 97 53 95 3 张飞 80 87 68 区别如果条件是单一值时，用decode比较简便，如果判断条件比较复杂是用case when实现</p>
+
+            
+            <p class="more">
+                <a href="/2016/01/18/2019030500147/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2016/01/18/2019030500147/" title="oracle SQL竖表转横表">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/28/2019030500108/">
+    		MYSQL通过SQL脚本创建存储过程(游标删除多表数据)
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-28T11:02:37.000Z">2015-12-28</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/游标/" title="游标">游标</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>首先描述一下业务处理存储过程功能：删除除系统管理员创建的角色和对应的业务表数据。 [size=medium]</p>
+<p>Sql代码</p>
+<ol>
+<li>–  CALL P_INTSYS(‘%_10006%’,’10006’);</li>
+<li><p>drop procedure if exists wmscloud_test.P_INTSYS;</p>
+</li>
+<li><p>CREATE PROCEDURE wmscloud_test.P_INTSYS(IN likeTableName VARCHAR(30),IN esCorCode VARCHAR(30))</p>
+</li>
+<li><p>BEGIN</p>
+</li>
+<li><p>– 需要定义接收游标数据的变量 </p>
+</li>
+<li>DECLARE table_ VARCHAR(50);</li>
+<li>– 遍历数据结束标志</li>
+<li>DECLARE done INT DEFAULT FALSE;</li>
+<li>– 游标</li>
+<li>DECLARE cur CURSOR FOR SELECT TABLE_NAME FROM (SELECT TABLE_NAME from information_schema.tables WHERE TABLE_NAME LIKE likeTableName ) allTables;</li>
+<li>– 将结束标志绑定到游标</li>
+<li>DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;</li>
+<li>– 打开游标</li>
+<li>OPEN cur;</li>
+<li>– 开始循环</li>
+<li><p>read_loop: LOOP</p>
+</li>
+<li><p>– 提取游标里的数据，这里只有一个，多个的话也一样；</p>
+</li>
+<li>FETCH cur INTO table_;</li>
+<li>– 声明结束的时候</li>
+<li>IF done THEN</li>
+<li>LEAVE read_loop;</li>
+<li><p>END IF;</p>
+</li>
+<li><p>– 这里做你想做的循环的事件</p>
+</li>
+<li>SET @delete_table=CONCAT(‘ DELETE FROM ‘,table_,’;’);</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>END LOOP;</p>
+</li>
+<li>– 关闭游标</li>
+<li><p>CLOSE cur;</p>
+</li>
+<li><p>– 删除,除去系统管理员创建的外其余用户和角色</p>
+</li>
+<li>SET @delete_table=CONCAT(‘ DELETE FROM es_user WHERE CREATOR!=1 and ES_COR_CODE=’,esCorCode);</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>SET @delete_table=CONCAT(‘ DELETE FROM es_role WHERE CREATOR!=1 and ES_COR_CODE=’,esCorCode);</p>
+</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>END</p>
+</li>
+</ol>
+<p>[/size] 执行脚本生成的函数</p>
+<p>Sql代码</p>
+<ol>
+<li><p>[size=medium]BEGIN</p>
+</li>
+<li><p>– 需要定义接收游标数据的变量 </p>
+</li>
+<li>DECLARE table_ VARCHAR(50);</li>
+<li>– 遍历数据结束标志</li>
+<li>DECLARE done INT DEFAULT FALSE;</li>
+<li>– 游标</li>
+<li>DECLARE cur CURSOR FOR SELECT TABLE_NAME FROM (SELECT TABLE_NAME from information_schema.tables WHERE TABLE_NAME LIKE likeTableName ) allTables;</li>
+<li>– 将结束标志绑定到游标</li>
+<li>DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;</li>
+<li>– 打开游标</li>
+<li>OPEN cur;</li>
+<li>– 开始循环</li>
+<li><p>read_loop: LOOP</p>
+</li>
+<li><p>– 提取游标里的数据，这里只有一个，多个的话也一样；</p>
+</li>
+<li>FETCH cur INTO table_;</li>
+<li>– 声明结束的时候</li>
+<li>IF done THEN</li>
+<li>LEAVE read_loop;</li>
+<li><p>END IF;</p>
+</li>
+<li><p>– 这里做你想做的循环的事件</p>
+</li>
+<li>SET @delete_table=CONCAT(‘ DELETE FROM ‘,table_,’;’);</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>END LOOP;</p>
+</li>
+<li>– 关闭游标</li>
+<li><p>CLOSE cur;</p>
+</li>
+<li><p>– 删除,除去系统管理员创建的外其余用户和角色</p>
+</li>
+<li>SET @delete_table=CONCAT(‘ DELETE FROM es_user WHERE CREATOR!=1 and ES_COR_CODE=’,esCorCode);</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>SET @delete_table=CONCAT(‘ DELETE FROM es_role WHERE CREATOR!=1 and ES_COR_CODE=’,esCorCode);</p>
+</li>
+<li>PREPARE delete_table FROM @delete_table;</li>
+<li><p>EXECUTE delete_table;</p>
+</li>
+<li><p>END[/size]</p>
+</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/12/28/2019030500108/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/28/2019030500108/" title="MYSQL通过SQL脚本创建存储过程(游标删除多表数据)">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/21/2019030500016/">
+    		大批量数据修改时发现有一行数据被锁住了，一直处于等待状态的问题解决
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-21T09:07:58.000Z">2015-12-21</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/批量/" title="批量">批量</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>最近写了个轻量级的分布式并行处理框架用来处理大批量的业务数据， 从业务监控数据中发现少量业务数据修改时一直处于等待状态，很明显是出现类似  for update 锁表，锁行的情况。 这种问题是系统设计（复杂的业务逻辑）导致的，暂时只能从数据库层次解决，因为修改系统设计比较复杂，也没有那么多时间。 解决思路： 1.查出锁住该表的会话id,serial#</p>
+<ol>
+<li>SELECT object_name,machine,s.sid,s.serial#</li>
+<li>FROM gv$locked_object l,dba_objects o,gv$session s</li>
+<li>WHERE l.object_id=o.object_id</li>
+<li>AND l.session_id=s.sid;</li>
+</ol>
+<p>SQL代码</p>
+<ol>
+<li>SELECT o.object_name,s.sid, s.serial#</li>
+<li>FROM v$lock l, dba_objects o, v$session s</li>
+<li>WHERE l.id1　= o.object_id</li>
+<li>AND l.sid = s.sid</li>
+<li>AND o.object_name=’SJ_AFFAIR’;</li>
+</ol>
+<p>2.kill掉该会话 alter system kill session ‘sid, serial#’; 3.代码临时优化：修改“初始表”数据时进行锁表尝试：for update nowait ，这个成本貌似有点高， 由于这种场景通常是数据异常场景，所以有监控就够了，因为7万票才偶尔出现一次，暂时不处理代码。 理论扫盲： 二、V$LOCK和V$LOCKED_OBJECT 查询锁表都会用到V$LOCK和V$LOCKED_OBJECT,但这两者不是相同的。我们先看看它们各自的主要字段： 1.v$lock sid：     会话SID，通常与v$session关联。 type：     锁类型，TM表示表锁或DML锁，TX表示行锁或事务锁，UL表示用户锁。我们主要关注TX和TM两种型的锁其它均为系统锁，会很快自动释放，不用关注。行锁不会单独存，行级锁之前需要先加表级共享锁。 lmode：     会话保持的锁的模式。 0＝None；1＝Null；2＝Row-S (SS,行级共享锁，其他对象只能查询这些数据行)；3＝Row-X (SX,行级排它锁,在提交前不允许做DML操作)；4＝Share(共享锁)；5＝S/Row-X (SSX,共享行级排它锁)；6＝Exclusive(排它锁) ID1,ID2:      ID1,ID2的取值含义根据type的取值而有所不同，对于TM 锁ID1表示被锁定表的object_id 可以和dba_objects视图关联取得具体表信息，ID2 值为0；对于TX 锁ID1以十进制数值表示该事务所占用的回滚段号和事务槽slot number号,其组形式: 0xRRRRSSSS,RRRR=RBS/UNDO NUMBER,SSSS=SLOT NUMBER，ID2 以十进制数值表示环绕wrap的次数，即事务槽被重用的次数 2.V$LOCKED_OBJECT session_id：         会话id。通常与v$session关联。 object_id：          被锁对象标识。通常与dba_objects关联。 oracle_username：    登录oracle用户名。 os_user_name：       电脑用户名如：Administrator locked_mode：        会话保持的锁的模式。 三、两者的区别 1.V$LOCKED_OBJECT只能报发生等待的表级锁,不能报发生等待的行级锁。 注：这句话是网上别人说的，暂时未验证，需慎重考虑。但是从我遇到的问题来看，似乎是正确的。只是我的问题已经无法重现，也就失去了验证它的机会。 2.v$locked_object包含的是当前DB中被锁住的OBJECT，而v$lock不仅包含用户的，还包括系统被锁住的object，即： V$LOCK&gt;v$locked_object</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/21/2019030500016/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/21/2019030500016/" title="大批量数据修改时发现有一行数据被锁住了，一直处于等待状态的问题解决">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/07/2019030500156/">
+    		sql之left join、right join、inner join的区别
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-07T04:11:13.000Z">2015-12-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/left-join/" title="left join">left join</a> / 
+    
+        <a href="/tags/inner-join/" title="inner join">inner join</a> / 
+    
+        <a href="/tags/right-join/" title="right join">right join</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>left join(左联接) 返回包括左表中的所有记录和右表中联结字段相等的记录 right join(右联接) 返回包括右表中的所有记录和左表中联结字段相等的记录 inner join(等值连接) 只返回两个表中联结字段相等的行 举例如下： ——————————————– 表A记录如下： aID　　　　　aNum 1　　　　　a20050111 2　　　　　a20050112 3　　　　　a20050113 4　　　　　a20050114 5　　　　　a20050115 表B记录如下: bID　　　　　bName 1　　　　　2006032401 2　　　　　2006032402 3　　　　　2006032403 4　　　　　2006032404 8　　　　　2006032408 ——————————————– 1.left join sql语句如下: select <em> from A left join B on A.aID = B.bID 结果如下: aID　　　　　aNum　　　　　bID　　　　　bName 1　　　　　a20050111　　　　1　　　　　2006032401 2　　　　　a20050112　　　　2　　　　　2006032402 3　　　　　a20050113　　　　3　　　　　2006032403 4　　　　　a20050114　　　　4　　　　　2006032404 5　　　　　a20050115　　　　NULL　　　　　NULL （所影响的行数为 5 行） 结果说明: left join是以A表的记录为基础的,A可以看成左表,B可以看成右表,left join是以左表为准的. 换句话说,左表(A)的记录将会全部表示出来,而右表(B)只会显示符合搜索条件的记录(例子中为: A.aID = B.bID). B表记录不足的地方均为NULL. ——————————————– 2.right join sql语句如下: select </em> from A right join B on A.aID = B.bID 结果如下: aID　　　　　aNum　　　　　bID　　　　　bName 1　　　　　a20050111　　　　1　　　　　2006032401 2　　　　　a20050112　　　　2　　　　　2006032402 3　　　　　a20050113　　　　3　　　　　2006032403 4　　　　　a20050114　　　　4　　　　　2006032404 NULL　　　　　NULL　　　　　8　　　　　2006032408 （所影响的行数为 5 行） 结果说明: 仔细观察一下,就会发现,和left join的结果刚好相反,这次是以右表(B)为基础的,A表不足的地方用NULL填充. ——————————————– 3.inner join sql语句如下: select * from A innerjoin B on A.aID = B.bID 结果如下: aID　　　　　aNum　　　　　bID　　　　　bName 1　　　　　a20050111　　　　1　　　　　2006032401 2　　　　　a20050112　　　　2　　　　　2006032402 3　　　　　a20050113　　　　3　　　　　2006032403 4　　　　　a20050114　　　　4　　　　　2006032404 结果说明: 很明显,这里只显示出了 A.aID = B.bID的记录.这说明inner join并不以谁为基础,它只显示符合条件的记录. ——————————————– 注: LEFT JOIN操作用于在任何的 FROM 子句中，组合来源表的记录。使用 LEFT JOIN 运算来创建一个左边外部联接。左边外部联接将包含了从第一个（左边）开始的两个表中的全部记录，即使在第二个（右边）表中并没有相符值的记录。 语法：FROM table1 LEFT JOIN table2 ON table1.field1 compopr table2.field2 说明：table1, table2参数用于指定要将记录组合的表的名称。 field1, field2参数指定被联接的字段的名称。且这些字段必须有相同的数据类型及包含相同类型的数据，但它们不需要有相同的名称。 compopr参数指定关系比较运算符：”=”， “&lt;”， “&gt;”， “&lt;=”， “&gt;=” 或 “&lt;&gt;”。 如果在INNER JOIN操作中要联接包含Memo 数据类型或 OLE Object 数据类型数据的字段，将会发生错误.</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/07/2019030500156/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/07/2019030500156/" title="sql之left join、right join、inner join的区别">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/12/04/2019030500029/">
+    		数据库中的字段和Java里面的类型匹配
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-12-04T05:29:42.000Z">2015-12-04</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/hibernate/" title="hibernate">hibernate</a> / 
+    
+        <a href="/tags/Java/" title="Java">Java</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>当在hibernate中运用原始的sql语句进行操作的的时候，常常会报错，错误很多都是关于 No Dialect mapping for JDBC type:?这里的问号是不同的数字如：-1,1，-9,3等等，每种数字代表一种类型。经过分析和查找，问题常常发生在几个地方 1、错误的配置了hibernate的方言 2、就是你的数据库中的字段和Java里面的类型不匹配的问题 错误如下： org.hibernate.MappingException: No Dialect mapping for JDBC type: -1 Error message: org.hibernate.MappingException: No Dialect mapping for JDBC type: -1 at org.hibernate.dialect.TypeNames.get(TypeNames.java:56) at org.hibernate.dialect.TypeNames.get(TypeNames.java:81) at org.hibernate.dialect.Dialect.getHibernateTypeName(Dialect.java:370) at org.hibernate.loader.custom.CustomLoader$Metadata.getHibernateType(CustomLoader.java:559) at org.hibernate.loader.custom.CustomLoader$ScalarResultColumnProcessor.performDiscovery(CustomLoader.java:485) at org.hibernate.loader.custom.CustomLoader.autoDiscoverTypes(CustomLoader.java:501) at org.hibernate.loader.Loader.getResultSet(Loader.java:1796) at org.hibernate.loader.Loader.doQuery(Loader.java:674) at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:236) at org.hibernate.loader.Loader.doList(Loader.java:2220) at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2104) at org.hibernate.loader.Loader.list(Loader.java:2099) at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:289) at org.hibernate.impl.SessionImpl.listCustomQuery(SessionImpl.java:1695) at org.hibernate.impl.AbstractSessionImpl.list(AbstractSessionImpl.java:142) at org.hibernate.impl.SQLQueryImpl.list(SQLQueryImpl.java:152) at com.tilsi.solr.dao.summary.EntryDAO.queryByEntryId(EntryDAO.java:164) at com.tilsi.solr.service.db.DbSearchThread.searchSummary(DbSearchThread.java:69) at com.tilsi.solr.service.db.DbSearchThread.call(DbSearchThread.java:48) at com.tilsi.solr.service.db.DbSearchThread.call(DbSearchThread.java:1) at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303) at java.util.concurrent.FutureTask.run(FutureTask.java:138) at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886) at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908) at java.lang.Thread.run(Thread.java:662) 解决方法为：通过查询hibernate的源码，找到问题的根本所在，就是hibernate中不支持对应的数据类型，具体数据类型的值，请查看下表 查看 java.sql.Types 类，可以找到对应类型，调整相应的数据库里的类型，或者其他支持这个类型的方言。 public final static int BIT   =  -7; public final static int TINYINT  =  -6; public final static int SMALLINT =   5; public final static int INTEGER  =   4; public final static int BIGINT   =  -5; public final static int FLOAT   =   6; public final static int REAL   =   7; public final static int DOUBLE   =   8; public final static int NUMERIC  =   2; public final static int DECIMAL  =   3; public final static int CHAR  =   1; public final static int VARCHAR  =  12; public final static int LONGVARCHAR  =  -1; public final static int DATE   =  91; public final static int TIME   =  92; public final static int TIMESTAMP  =  93; public final static int BINARY  =  -2; public final static int VARBINARY  =  -3; public final static int LONGVARBINARY  =  -4; public final static int NULL  =   0; public final static int OTHER  = 1111; public final static int JAVA_OBJECT         = 2000; public final static int DISTINCT            = 2001; public final static int STRUCT              = 2002; public final static int ARRAY               = 2003; public final static int BLOB                = 2004; public final static int CLOB                = 2005; public final static int REF                 = 2006; public final static int DATALINK = 70; public final static int BOOLEAN = 16; public final static int ROWID = -8; public static final int NCHAR = -15; public static final int NVARCHAR = -9; public static final int LONGNVARCHAR = -16; public static final int NCLOB = 2011; public static final int SQLXML = 2009; 这类错误，最后的问号表示不确定的数字，但是解决的方法都一样。 首先，自定义一个方言类——Hibernate Dialect，该类需要继承与我们使用的数据库相应的方言类。比如：如果我们用的是mysql（版本为5.x.x），我们需要继承“org.hibernate.dialect.MySQL5Dialect”；如果我们使用的是DB2，那么我们应该继承“org.hibernate.dialect.DB2Dialect”；我用的是SqlServer2008，所以我要继承“org.hibernate.dialect.SQLServerDialect”，参考代码如下： import java.sql.Types; import org.hibernate.Hibernate; import org.hibernate.dialect.SQLServerDialect; public class SqlServer2008Dialect extends SQLServerDialect { public SqlServer2008Dialect() { super(); registerHibernateType(Types.CHAR, Hibernate.STRING.getName()); registerHibernateType(Types.NVARCHAR, Hibernate.STRING.getName()); registerHibernateType(Types.LONGNVARCHAR, Hibernate.STRING.getName()); registerHibernateType(Types.DECIMAL, Hibernate.DOUBLE.getName()); } } 总之大家可以在“org.hibernate.dialect”这个package中找到与数据库相对应的方言类。在其中，我们需要注意三点： a、在默认构造方法中继承父类构造方法，同时调用“registerHibernateType(int code, String name)”方法将数据库中该数据类型映射到相应的java类型。code表示数据库中的数据类型整数表示，可以在“java.sql.Types”类中查到相应的数据库类型。name表示我们要映射的java类型。可以从“org.hibernate.Hibernate”中查到。 b、Types类。在Types中定义了数据库常用的字段类型，如： …… public final static int LONGVARCHAR =  -1; public final static int TIMESTAMP =  93; …… 也就是上面我列出的java.sql.Types。 我们可以根据“No Dialect mapping for JDBC type : ”后面紧跟的数字在该类（Types）中找到相应的类型。我们也可以根据数据表中字段的类型找到相应的值。这个值就是registerHibernateType(int code, String name)的第一个参数。 c、Hibernate类。Hibernate中定义了转换的目的类型，如第一段代码所示。能够转化成什么类型，可以在该类中查找。通过调用“getName()”方法得到一个String型。当然，如果你记住了，我们还可以这样写 import org.hibernate.dialect.SQLServerDialect; public class SqlServer2008Dialect extends SQLServerDialect { public SqlServer2008Dialect() { super(); registerHibernateType(1, “string”); registerHibernateType(-9, “string”); registerHibernateType(-16, “string”); registerHibernateType(3, “double”); } } 其实和上面是一样的，只是把上面所代表的值直接写出来了。需要注意的是super()方法的调用，不调用该方法是否会出现错误，这个我就不知道了，我没有测试，所以最好调一下。 然后，我们还需要在配置文件中作修改，我将连接数据库的方法放在了spring配置文件中了，这段代码就写在applicationContext.xml里面了： <property name="hibernateProperties"> <props> <!-- <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect </prop> --> <prop key="hibernate.dialect">com.sense.workflow.util.SqlServer2008Dialect</prop> <prop key="hibernate.hbm2ddl.auto">update</prop> <prop key="hibernate.show\_sql">true</prop> <prop key="hibernate.cache.use\_query\_cache">false</prop> <!-- 显示sql格式 --> <prop key="hibernate.format_sql">false</prop> </props> </property> 最后还有一个解决方法：如果你的数据库表中某个字段不可以不用text类型的，将其改成其他类型（如：varchar等）也可以，这个方法虽然简单，当数据库字段必须用text类型的时候该方法就不行了。</p>
+
+            
+            <p class="more">
+                <a href="/2015/12/04/2019030500029/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/12/04/2019030500029/" title="数据库中的字段和Java里面的类型匹配">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/11/27/2019030500146/">
+    		Oracle-SQL-排序操作
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-11-27T04:25:20.000Z">2015-11-27</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/排序/" title="排序">排序</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>1、普通排序</p>
+<ol>
+<li>select * from emp  order by empno   asc(desc);</li>
+</ol>
+<p>2、根据多字段排序</p>
+<ol>
+<li>select * from emp order by ename,job  asc(desc);</li>
+</ol>
+<p>3、按子串排序</p>
+<p>Sql代码</p>
+<ol>
+<li>select * from emp order by substr(ename,length(ename)-2)</li>
+<li>通过substr函数实现子串的截取，然后进行排序</li>
+</ol>
+<p>4、对于字母、数字混合的数据进行排序 通过translate或者replace替换掉数字或字符部分，然后排序 translate(string,from,to) 字符级别的替换； 如果to的长度小于from则在from中存在，在to中不存在的将被直接删掉； replace(string,from ,to) 字符串级别的替换 5、排序时的空值处理 a、使用case when对空值进行替换，例如空值替换为0，非空值替换为1，然后可以参与排序 b、oracle9i以后的版本提供了 nulls first  和nulls  last操作。 6、根据数据项的键排序 采用类似占位符的方式来实现排序</p>
+<ol>
+<li>select empno,ename,job,case when job=’SALESMAN’ then comm else sal end from emp order by 4;</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/11/27/2019030500146/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/11/27/2019030500146/" title="Oracle-SQL-排序操作">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/10/12/2019030500112/">
+    		MySQL EXPLAIN SQL 输出信息描述
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-10-12T04:41:26.000Z">2015-10-12</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/EXPLAIN/" title="EXPLAIN">EXPLAIN</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>EXPLAIN语句能够被用于获取一些关于SQL执行时的相关信息，比如表的连接顺序，对表的方式方式等等。通过对该相关信息进行进一步的分析，我们    可以通过对表添加适当的索引，以及优化连接顺序，使用提示等等手段来达到使SQL高效运行的目的。本文描述了EXPLAIN的用法并给出了相关示例。 一、EXPLAIN概述 EXPLAIN 语句主要是用于解析SQL执行计划，通过分析执行计划采取适当的优化方式提高SQL运行的效率。EXPLAIN 语句输出通常包括id列，select_type，table，type，possible_keys，key等等列信息MySQL 5.6.3后支持SELECT, DELETE, INSERT,REPLACE, and UPDATE. EXPLAIN EXTENDED支持一些额外的执行计划相关的信息EXPLAIN PARTITIONS支持基于分区表查询执行计划的相关信息 二、EXPLAIN输出列描述 – 下面通过示例来展示EXPLAIN输出列(root@localhost) [sakila]&gt; explain select sum(amount) from customer a,    -&gt; payment b where 1=1 and a.customer_id=b.customer_id and    -&gt; <a href="mailto:email=&#39;JANE.BENNETT@sakilacustomer.org" target="_blank" rel="noopener">email=&#39;JANE.BENNETT@sakilacustomer.org</a>‘\G<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> 1. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>           id: 1  select_type: SIMPLE        table: a         type: ALLpossible_keys: PRIMARY          key: NULL      key_len: NULL          ref: NULL         rows: 590        Extra: Using where<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> 2. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>           id: 1  select_type: SIMPLE        table: b         type: refpossible_keys: idx_fk_customer_id          key: idx_fk_customer_id      key_len: 2          ref: sakila.a.customer_id         rows: 14        Extra: 1、各列表示的意义 Column        Meaning——        ————————————id            The SELECT identifier                       select_type   The SELECT typetable         The table for the output rowpartitions    The matching partitionstype          The join typepossible_keys The possible indexes to choosekey           index actually chosenkey_len       The length of the chosen keyref           The columns compared to the indexrows          Estimate of rows to be examinedfiltered      Percentage of rows filtered by table conditionExtra         Additional information 2、各列上的具体描述 id：    包含一组数字，表示查询中执行select子句或操作表的顺序    id相同，执行顺序由上至下，否则id值越大(通常子查询会产生)优先级越高，越先被执行    id如果相同，可以认为是一组，从上往下顺序执行；在所有组中，id值越大，优先级越高，越先执行 select_type:      表示查询中每个select子句的类型（简单 OR复杂）    select_type              Value Meaning    ————-            ———————————————–    SIMPLE                   Simple SELECT (not using UNION or subqueries)    PRIMARY                  Outermost SELECT 最外层select    UNION                    Second or later SELECT statement in a UNION    DEPENDENT UNION          Second or later SELECT statement in a UNION, dependent on outer query    UNION                    RESULT Result of a UNION.    SUBQUERY                 First SELECT in subquery    DEPENDENT SUBQUERY       First SELECT in subquery, dependent on outer query(通常为相关子查询)    DERIVED                  Derived table SELECT (subquery in FROM clause)    MATERIALIZED             Materialized subquery    UNCACHEABLE SUBQUERY     A subquery for which the result cannot be cached and must be reevaluated                             for each row of the outer query    UNCACHEABLE UNION        The second or later select in a UNION that belongs to an uncacheable                             subquery (see UNCACHEABLE SUBQUERY)    table：      从哪个表(表名)上输出行记录，也可能是下列值:     • &lt;unionM,N&gt;: The row refers to the union of the rows with id values of M and N.    • <derivedn>: The row refers to the derived table result for the row with an id value of N.                   A derived table may result, for example, from a subquery in the FROM clause.    • <subqueryn>: The row refers to the result of a materialized subquery for the row with an id value of N.  partitions:     查询匹配的记录来自哪一个分区，当使用EXPLAIN，分区PARTITIONS关键字被指定时 type：    连接类型    system          表只有一行    const           表最多只有一行匹配，通用用于主键或者唯一索引比较时    eq_ref          每次与之前的表合并行都只在该表读取一行，这是除了system，const之外最好的一种，                    特点是使用=，而且索引的所有部分都参与join且索引是主键或非空唯一键的索引    ref             如果每次只匹配少数行，那就是比较好的一种，使用=或&lt;=&gt;，可以是左覆盖索引或非主键或非唯一键    fulltext        全文搜索    ref_or_null     与ref类似，但包括NULL    index_merge     表示出现了索引合并优化(包括交集，并集以及交集之间的并集)，但不包括跨表和全文索引。                    这个比较复杂，目前的理解是合并单表的范围索引扫描（如果成本估算比普通的range要更优的话）    unique_subquery 在in子查询中，就是value in (select…)把形如“select unique_key_column”的子查询替换。                    PS：所以不一定in子句中使用子查询就是低效的！    index_subquery  同上，但把形如”select non_unique_key_column“的子查询替换    range           常数值的范围    index           a.当查询是索引覆盖的，即所有数据均可从索引树获取的时候（Extra中有Using Index）；                    b.以索引顺序从索引中查找数据行的全表扫描（无 Using Index）；                    c.如果Extra中Using Index与Using Where同时出现的话，则是利用索引查找键值的意思；                    d.如单独出现，则是用读索引来代替读行，但不用于查找    all             全表扫描 possible_keys：    指出MySQL能使用哪个索引在表中找到行。    查询涉及到的字段上若存在索引则该索引将被列出，但不一定被查询使用。    如果改列为NULL，说明该查询不会使用到当前表上的相关索引，考虑是否有必要添加索引key    显示MySQL在查询中实际使用的索引，若没有使用索引，显示为NULL    也可能存在key不等于possible_keys的情形，即possible_keys不适合提取所需的行    而查询所选择的列在使用其他索引时更高效    TIPS：查询中若使用了覆盖索引，则该索引仅出现在key列表中 key_len    表示索引中使用的字节数，可通过该列计算查询中使用的索引的长度 ref    表示上述表的连接匹配条件，即哪些列或常量被用于查找索引列上的值rows    表示MySQL根据表统计信息及索引选用情况，估算的找到所需的记录所需要读取的行数    对于InnoDB，该值为预估，不一定精确 Extra    包含不适合在其他列中显示但十分重要的额外信息 三、使用EXPLAIN EXTENDED 示例 (root@localhost) [sakila]&gt; explain extended select <em> from city where country_id in    -&gt; ( select country_id from country where country=’China’) and 1=1 \G<strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong></em> 1. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>           id: 1  select_type: SIMPLE        table: country         type: ALLpossible_keys: PRIMARY          key: NULL      key_len: NULL          ref: NULL         rows: 109     filtered: 100.00        Extra: Using where<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> 2. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>           id: 1  select_type: SIMPLE        table: city         type: refpossible_keys: idx_fk_country_id          key: idx_fk_country_id      key_len: 2          ref: sakila.country.country_id         rows: 1     filtered: 100.00        Extra: NULL2 rows in set, 1 warning (0.00 sec) (root@localhost) [sakila]&gt; show warnings\G<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong> 1. row <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>  Level: Note   Code: 1003Message: /<em> select#1 </em>/ select `city`.`city_id` AS `city_id`,`city`.`city` AS `city`,`city`.`country_id` AS `country_id`,`city`.`last_update` AS `last_update` from `sakila`.`country` join `sakila`.`city` where ((`city`.`country_id` = `country`.`country_id`) and (`country`.`country` = ‘China’))1 row in set (0.00 sec) – 从上面的extended使用可以看出，查询中多出了filtered列– 其次原来的SQL语句真正在执行的时候被改写，即原来的1=1的条件被去掉– 对于复杂的SQL语句我们可以通过该方式获得一个比较清晰的真正被执行的SQL语句 四、EXPLAIN PARTITIONS示例 (root@localhost) [sakila]&gt; CREATE TABLE `actor_part` (    -&gt;   `actor_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,    -&gt;   `first_name` varchar(45) NOT NULL,    -&gt;   `last_name` varchar(45) NOT NULL,    -&gt;   `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,    -&gt;   PRIMARY KEY (`actor_id`),    -&gt;   KEY `idx_actor_last_name` (`last_name`)    -&gt; ) partition by hash(actor_id) partitions 4;Query OK, 0 rows affected (0.11 sec) (root@localhost) [sakila]&gt; insert into actor_part select <em> from actor;Query OK, 200 rows affected (0.02 sec)Records: 200  Duplicates: 0  Warnings: 0(root@localhost) [sakila]&gt; explain select </em> from actor_part where actor_id=10;  – 未使用partitions时+—-+————-+————+——-+—————+———+———+——-+——+——-+| id | select_type | table      | type  | possible_keys | key     | key_len | ref   | rows | Extra |+—-+————-+————+——-+—————+———+———+——-+——+——-+|  1 | SIMPLE      | actor_part | const | PRIMARY       | PRIMARY | 2       | const |    1 | NULL  |+—-+————-+————+——-+—————+———+———+——-+——+——-+1 row in set (0.00 sec) (root@localhost) [sakila]&gt; explain partitions select * from actor_part where actor_id=10; – 使用partitions时+—-+————-+————+————+——-+—————+———+———+——-+——+——-+| id | select_type | table      | partitions | type  | possible_keys | key     | key_len | ref   | rows | Extra |+—-+————-+————+————+——-+—————+———+———+——-+——+——-+|  1 | SIMPLE      | actor_part | p2         | const | PRIMARY       | PRIMARY | 2       | const |    1 | NULL  |+—-+————-+————+————+——-+—————+———+———+——-+——+——-+1 row in set (0.00 sec)– 多出了partitions列</subqueryn></derivedn></p>
+
+            
+            <p class="more">
+                <a href="/2015/10/12/2019030500112/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/10/12/2019030500112/" title="MySQL EXPLAIN SQL 输出信息描述">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/2.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/09/11/2019030500011/">
+    		加快mydumper与myloader导出导入
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-09-11T04:58:23.000Z">2015-09-11</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/数据库/" title="数据库">数据库</a> / 
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/Database/" title="Database">Database</a> / 
+    
+        <a href="/tags/dba/" title="dba">dba</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>mydumper与myloader是一个优秀的第三方mysql数据库逻辑备份恢复工具，使用多线程的导出与导入。弥补了mysqldump单线程的不足。本文描述的是如何加快mydumper与myloader的导出与导入供大家参考。 1、基于MyIsam引擎导出导入 a、表不分块导出及导入 [root@GZAPP tmp]# mydumper -u inno -p xxx -B bsom -T tb_access_log -o /backup/tmp/ [root@GZAPP tmp]# ls -hltr   ###导出的数据文件为单个文件，大小在2.6GB total 2.6G -rw-r–r– 1 root root 1.6K Jul 24 08:51 bsom.tb_access_log-schema.sql -rw-r–r– 1 root root  214 Jul 24 08:52 metadata -rw-r–r– 1 root root 2.6G Jul 24 08:52 bsom.tb_access_log.sql ###基于缺省线程数导入，且设定每个事务查询数为10000，此参数此时其实作用不大，因为表为myisam引擎 [root@GZAPP tmp]# myloader -u inno -p xxx -B tempdb -d /backup/tmp -v 3 -q 10000 [root@GZAPP tmp]# myloader -u inno -p xxx -B tempdb -d /backup/tmp -v 3 -q 10000 <strong> Message: 4 threads created </strong> Message: Creating table `tempdb`.`tb_access_log` <strong> Message: Thread 4 shutting down </strong> Message: Thread 1 restoring `bsom`.`tb_access_log` part 0 <strong> Message: Thread 3 shutting down </strong> Message: Thread 2 shutting down root@localhost[tempdb]&gt; show processlist; +———+———+———-+——–+———+——–+———+————————————————+ | Id      | User    | Host     | db     | Command | Time   | State   | Info                                           | +———+———+———-+——–+———+——–+———+————————————————+ | 4452079 | root    | localhost| tempdb | Query   |      0 | init    | show processlist                               | | 4453793 | inno    | localhost| tempdb | Sleep   |    420 |         | NULL                                           | | 4453794 | inno    | localhost| tempdb | Query   |      4 | update  | INSERT INTO `tb_access_log` VALUES (506873,”325| +———+———+———-+——–+———+——–+———+————————————————+ ###从上面的线程数可以看出只有一个单线程在执行insert操作 b、表分块导出及导入 ###下面的示例中使用500MB进行分块 [root@GZAPP tmp]# mydumper -u inno -p xxx -B bsom -T tb_access_log -F 500 -o /backup/tmp/ [root@GZAPP tmp]# ls -hltr total 2.6G -rw-r–r– 1 root root 1.6K Jul 24 08:21 bsom.tb_access_log-schema.sql -rw-r–r– 1 root root 478M Jul 24 08:21 bsom.tb_access_log.00001.sql -rw-r–r– 1 root root 478M Jul 24 08:21 bsom.tb_access_log.00002.sql -rw-r–r– 1 root root 478M Jul 24 08:21 bsom.tb_access_log.00003.sql -rw-r–r– 1 root root 478M Jul 24 08:21 bsom.tb_access_log.00004.sql -rw-r–r– 1 root root 478M Jul 24 08:22 bsom.tb_access_log.00005.sql -rw-r–r– 1 root root  214 Jul 24 08:22 metadata -rw-r–r– 1 root root 241M Jul 24 08:22 bsom.tb_access_log.00006.sql ###由上可知，大表tb_access_log按接近500M被分割成了多个文件 [root@GZAPP tmp]# myloader -u inno -p xxx -B tempdb -t 6 -d /backup/tmp -v 3 <strong> Message: 6 threads created </strong> Message: Creating database `tempdb` <strong> Message: Creating table `tempdb`.`tb_access_log` </strong> Message: Thread 1 restoring `bsom`.`tb_access_log` part 3 <strong> Message: Thread 2 restoring `bsom`.`tb_access_log` part 5 </strong> Message: Thread 5 restoring `bsom`.`tb_access_log` part 4 <strong> Message: Thread 3 restoring `bsom`.`tb_access_log` part 6 </strong> Message: Thread 4 restoring `bsom`.`tb_access_log` part 1 <strong> Message: Thread 6 restoring `bsom`.`tb_access_log` part 2 #在下面的processlist可以看到，存在表级锁等待 +———+——-+———–+———+———+——–+—————————–+————————————————+ | Id      | User  | Host      | db      | Command | Time   | State                       | Info                                           | +———+——-+———–+———+———+——–+—————————–+————————————————+ | 4452079 | root  | localhost | bsom    | Query   |      0 | init                        | show processlist                               | | 4452167 | inno  | localhost | tempdb  | Sleep   |    769 |                             | NULL                                           | | 4452168 | inno  | localhost | tempdb  | Query   |     36 | update                      | INSERT INTO `tb_access_log` VALUES (6367402,”0,| | 4452169 | inno  | localhost | tempdb  | Query   |     21 | Waiting for table level lock| INSERT INTO `tb_access_log` VALUES (12593865,” | | 4452170 | inno  | localhost | tempdb  | Query   |     26 | Waiting for table level lock| INSERT INTO `tb_access_log` VALUES (15643029,””| | 4452171 | inno  | localhost | tempdb  | Query   |      6 | Waiting for table level lock| INSERT INTO `tb_access_log` VALUES (173947,”70 | | 4452172 | inno  | localhost | tempdb  | Query   |     15 | Waiting for table level lock| INSERT INTO `tb_access_log` VALUES (9490507,”7 | | 4452173 | inno  | localhost | tempdb  | Query   |     30 | Waiting for table level lock| INSERT INTO `tb_access_log` VALUES (3271602,”4 | +———+———+———–+———+———+——–+—————————–+———————————————-+ c、调整myisam有关参数后导入 [root@GZ-APP-BAK01 tmp]# time myloader -u innobk -p InnoBK -B tempdb -t 6 -d /backup/tmp -v 3 </strong> Message: 6 threads created <strong> Message: Creating table `tempdb`.`tb_mobile_access_log` </strong> Message: Thread 1 restoring `blossom`.`tb_mobile_access_log` part 3 <strong> Message: Thread 6 restoring `blossom`.`tb_mobile_access_log` part 6 </strong> Message: Thread 2 restoring `blossom`.`tb_mobile_access_log` part 5 <strong> Message: Thread 3 restoring `blossom`.`tb_mobile_access_log` part 4 </strong> Message: Thread 4 restoring `blossom`.`tb_mobile_access_log` part 1 <strong> Message: Thread 5 restoring `blossom`.`tb_mobile_access_log` part 2 </strong> Message: Thread 6 shutting down <strong> Message: Thread 5 shutting down </strong> Message: Thread 1 shutting down <strong> Message: Thread 2 shutting down </strong> Message: Thread 4 shutting down <strong> Message: Thread 3 shutting down real    266m28.903s user    0m6.008s sys     0m1.681s ###调整以下相关参数，后尝试再次导入， concurrent_insert  AUTO 改成 ALWAYS bulk_insert_buffer_size 8388608 改成 256M myisam_sort_buffer_size 67108864 改成 128M [root@GZ-APP-BAK01 tmp]# time myloader -u innobk -p InnoBK -B tempdb -t 6 -o -d /backup/tmp -v 3 </strong> Message: 6 threads created <strong> Message: Dropping table (if exists) `tempdb`.`tb_mobile_access_log` </strong> Message: Creating table `tempdb`.`tb_mobile_access_log` <strong> Message: Thread 1 restoring `blossom`.`tb_mobile_access_log` part 3 </strong> Message: Thread 2 restoring `blossom`.`tb_mobile_access_log` part 6 <strong> Message: Thread 3 restoring `blossom`.`tb_mobile_access_log` part 5 </strong> Message: Thread 4 restoring `blossom`.`tb_mobile_access_log` part 4 <strong> Message: Thread 6 restoring `blossom`.`tb_mobile_access_log` part 1 </strong> Message: Thread 5 restoring `blossom`.`tb_mobile_access_log` part 2 <strong> Message: Thread 2 shutting down </strong> Message: Thread 1 shutting down <strong> Message: Thread 6 shutting down </strong> Message: Thread 5 shutting down <strong> Message: Thread 3 shutting down </strong> Message: Thread 4 shutting down real    253m42.460s   ###此时导入时间并无明显减少 user    0m5.924s sys     0m1.637s 2、基于innodb引擎的导出导入 a、表未分块导出，数据文件大小为3.9GB [root@GZAPP tmp]# ls -hltr total 3.9G -rw-r–r– 1 root root 1.8K Jul 24 00:09 bscom.tb_message-schema.sql -rw-r–r– 1 root root 3.9G Jul 24 00:25 bscom.tb_message.sql -rw-r–r– 1 root root  215 Jul 24 09:14 metadata ###下面使用6个线程导入，实际上可以看到，只有1个线程在工作，因为数据文件只有1个 [root@GZAPP tmp]# myloader -u inno -p xxx -B tempdb -t 6 -d /backup/tmp -v 3 <strong> Message: 6 threads created </strong> Message: Creating table `tempdb`.`tb_message` <strong> Message: Thread 1 restoring `bscom`.`tb_message` part 0 </strong> Message: Thread 5 shutting down <strong> Message: Thread 2 shutting down </strong> Message: Thread 6 shutting down <strong> Message: Thread 3 shutting down </strong> Message: Thread 4 shutting down b、表分块导出 [root@GZAPP tmp]# mydumper -u inno -p xxx -B bscom -T tb_message -F 500 -o /backup/tmp/ [root@GZAPP tmp]# ls -hltr total 3.9G -rw-r–r– 1 root root 1.8K Jul 24 09:55 bscom.tb_message-schema.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00001.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00002.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00003.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00004.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00005.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00006.sql -rw-r–r– 1 root root 478M Jul 24 09:55 bscom.tb_message.00007.sql -rw-r–r– 1 root root 481M Jul 24 09:55 bscom.tb_message.00008.sql -rw-r–r– 1 root root  135 Jul 24 09:55 metadata -rw-r–r– 1 root root  93M Jul 24 09:55 bscom.tb_message.00009.sql ###下面尝试使用6线程导入，可以看到有6个线程在并发导入 [root@GZAPP tmp]# myloader -u inno -p xxx -B tempdb -t 6 -d /backup/tmp/ -v 3 <strong> Message: 6 threads created </strong> Message: Creating database `tempdb` <strong> Message: Creating table `tempdb`.`tb_message` </strong> Message: Thread 2 restoring `bscom`.`tb_message` part 5 <strong> Message: Thread 1 restoring `bscom`.`tb_message` part 9 </strong> Message: Thread 3 restoring `bscom`.`tb_message` part 1 <strong> Message: Thread 4 restoring `bscom`.`tb_message` part 8 </strong> Message: Thread 5 restoring `bscom`.`tb_message` part 4 <strong> Message: Thread 6 restoring `bscom`.`tb_message` part 6 </strong> Message: Thread 1 restoring `bscom`.`tb_message` part 7 <strong> Message: Thread 6 restoring `bscom`.`tb_message` part 3 </strong> Message: Thread 2 restoring `bscom`.`tb_message` part 2 <strong> Message: Thread 3 shutting down </strong> Message: Thread 5 shutting down <strong> Message: Thread 4 shutting down </strong> Message: Thread 1 shutting down <strong> Message: Thread 2 shutting down </strong> Message: Thread 6 shutting down 3、小结 a、mydumper在导出的时候可以根据服务器可用资源来合理地设置线程数。 b、mydumper在导出的时候尽可能地指定chunk-filesize或者rows参数以分块导出。 c、myloader在针对myisam引擎时建议调整相关参数至合理值以提高无法提高性能，主要是表级锁的问题。 d、myloader在针对innodb引擎时建议调整参数至合理值以提高性能，如以下参数等： innodb_buffer_pool_size innodb_flush_log_at_trx_commit innodb_log_buffer_size e、通过使用分块导出与导入可以显著利用并发来加快inndbo表导入。 f、注意mydumper导出时不会导出存储过程，函数，触发器等。</p>
+
+            
+            <p class="more">
+                <a href="/2015/09/11/2019030500011/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/09/11/2019030500011/" title="加快mydumper与myloader导出导入">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/SQL-Server/">SQL Server</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/09/07/2019030500021/">
+    		报表性能优化方案之单数据集分页SQL实现层式报表
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-09-07T04:36:01.000Z">2015-09-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/FineReport/" title="FineReport">FineReport</a> / 
+    
+        <a href="/tags/报表/" title="报表">报表</a> / 
+    
+        <a href="/tags/数据集/" title="数据集">数据集</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>1、概述</strong></p>
+<p>我们知道，行式引擎按页取数只适用于Oracle,mysql,hsql和sqlserver2008及以上数据库，其他数据库，如access，sqlserver2005，sqlite等必须编写分页SQL。</p>
+<p>下面以Access数据库为例介绍需要写分页SQL的数据库怎样利用行式的引擎实现层式报表。</p>
+<p>解决方案提供工具：报表开发工具FineReport</p>
+<p><strong>2、解决思路</strong></p>
+<p>对于mysql这类可以直接使用行式的引擎实现层式报表的数据库来说，如果勾选了行式引擎，程序会自动生成分页sql，如，我新建了一个数据集ds1，来源于mysql数据库，基本sql语句为：</p>
+<p><strong>SELECT * FROM 订单明细</strong></p>
+<p>如果不定义分页sql，勾选行式引擎选项，预览报表时，程序会将上面的sql语句转化为下面的语句来取一页的数据：</p>
+<p><strong>SELECT COUNT(<em>)AS totalRowCount FROM (SELECT </em> FROM 订单明细) t</strong></p>
+<p>如果数据库是上面所说的access一类的无法直接生成分页sql的数据库，那么就需要编写分页SQL。</p>
+<p><strong>3、操作步骤</strong></p>
+<p>以FRDemo内置的sqlite为例，说明sqlite如何写分页查询。</p>
+<p>注：sqlserver2005和sqlite操作步骤一样。</p>
+<p><strong>3.1新建数据集</strong></p>
+<p>新建数据集ds1：<strong>SELECT * FROM 订单明细</strong>。</p>
+<p><strong>3.2添加分页查询SQL语句</strong></p>
+<p>在数据查询面板中点击<strong>分页查询</strong>按钮，编辑分页SQL语句，如下图：</p>
+<p><img src="http://img.blog.csdn.net/20150907100054679" alt></p>
+<p>完整的sql语句如下：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>SELECT *</li>
+<li>FROM (</li>
+<li>SELECT  *</li>
+<li>FROM(</li>
+<li>SELECT *</li>
+<li>FROM 订单明细 ORDER BY 订单ID ASC limit ${fr_pagesize*fr_pagenumber}</li>
+<li>) AS e1 ORDER BY 订单ID DESC limit ${</li>
+<li>if(fr_pagenumber == int((((fr_rowcount-1)/fr_pagesize)+1)),fr_rowcount - (fr_pagesize*(fr_pagenumber-1)),fr_pagesize)</li>
+<li>}</li>
+<li>) AS e2 ORDER BY 订单ID ASC</li>
+</ol>
+<p>注：上述代码放置在分页sql面板中时，要删除后面的注释语句，并且语句中的三次ORDER BY 一定不能丢。</p>
+<p>·        <strong>分页sql语句注释</strong></p>
+<p><strong>${if(fr_pagenumber==int( (((fr_rowcount-1)/fr_pagesize)+1)),fr_rowcount -(fr_pagesize*(fr_pagenumber-1)),fr_pagesize)}</strong>意思是：</p>
+<p>假如是最后一页的话，就取最后一页剩余的行数，假如不是最后一页就取每页需要显示的行数，示例中每页需要显示的行数为30行。</p>
+<p><strong>fr_pagenumber</strong>：当前浏览的页数，如果预览第2页，则fr_pagenumber=2；</p>
+<p><strong>fr_rowcount</strong>：当前数据集的总数据条数；</p>
+<p><strong>fr_pagesize</strong>：表示设置行式引擎时，每页需显示的行数，该示例中fr_pagesize=30.</p>
+<p>在预览时，设定的分页查询根据3个变量的值，会生成数据库查询，如fr_pagenumber=2，fr_pagesize=30时，即在web端预览报表，预览至第2页时，上面的sql语句会转化为：</p>
+<p><strong>SELECT <em> FROM (SELECT </em> FROM ( SELECT * FROM 订单明细 ORDER BY 订单ID ASC limit 60 )AS e1 ORDER BY 订单ID DESClimit30 ) AS e2 ORDER BY 订单ID ASC</strong></p>
+<p>预览至第3页时，fr_pagenumber=3，sql语句就转化为：</p>
+<p><strong>SELECT <em> FROM (SELECT </em> FROM ( SELECT * FROM 订单明细 ORDER BY 订单ID ASC limit 90 )AS e1 ORDER BY 订单ID DESClimit30) AS e2 ORDER BY 订单ID ASC</strong></p>
+<p>预览至最后一页时，所剩下的数据可能不足30行，那么sql语句又会转化成什么样呢？</p>
+<p>如果fr_rowcount=100，fr_pagesize=30，即数据总行数为100行，每页显示30行，预览至最后一页，也就是第4页时，fr_pagenumber=4，sql语句将转换为：</p>
+<p><strong>SELECT <em> FROM (SELECT </em> FROM ( SELECT * FROM 订单明细 ORDER BY 订单ID ASC limit 90)AS e1 ORDER BY 订单ID DESClimit10 ) AS e2 ORDER BY 订单ID ASC</strong></p>
+<p><strong>3.3报表主体设计</strong></p>
+<p>将数据集中的数据列拖曳至单元格中。</p>
+<p><strong>3.4行式引擎设置</strong></p>
+<p>同上一节的设置方法，这里不再赘述。</p>
+<p><strong>3.5效果查看</strong></p>
+<p>点击分页预览，效果图如下：</p>
+<p>已完成模板请参照：<strong>%FR_HOME%\WebReport\WEB-INF\reportlets\doc\Advanced\PagingSql.cpt</strong></p>
+<p><strong>3.6数据库的分页SQL语句</strong></p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>SELECT *</li>
+<li>FROM (</li>
+<li>SELECT TOP ${</li>
+<li>if(fr_pagenumber == int((((fr_rowcount-1)/fr_pagesize)+1)),fr_rowcount - (fr_pagesize*(fr_pagenumber-1)),fr_pagesize)</li>
+<li>} *</li>
+<li>FROM(</li>
+<li>SELECT TOP ${fr_pagesize*fr_pagenumber} *</li>
+<li>FROM 订单明细 ORDER BY 订单ID ASC</li>
+<li>) AS e1 ORDER BY 订单ID DESC</li>
+<li>) AS e2 ORDER BY 订单ID ASC</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/09/07/2019030500021/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/09/07/2019030500021/" title="报表性能优化方案之单数据集分页SQL实现层式报表">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <span class="page-number current">1</span><a class="page-number" href="/tags/SQL/page/2/">2</a><a class="extend next" rel="next" href="/tags/SQL/page/2/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

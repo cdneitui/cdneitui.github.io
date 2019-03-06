@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>文章归档: 2015/7 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/archives/2015/07/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/archives/2015/07/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/archives/2015/07/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/archives/2015/07/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章归档 -->
+
+    <h3 class="widget-hd">
+        <strong>
+            
+                文章归档
+                <!-- 文章归档，可以根据日期分类 -->
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/29/2019030500148/">
+    		oracle11g exp导出问题：部分表导不出来
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-29T04:35:48.000Z">2015-07-29</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/exp/" title="exp">exp</a> / 
+    
+        <a href="/tags/oracle11g/" title="oracle11g">oracle11g</a> / 
+    
+        <a href="/tags/导出/" title="导出">导出</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>在oracle导出表的命令exp时候发现一个问题，就是部分表完全的导不出来，经检查发现只要是表为空的都会导不出来。 在如下表中发现segment_created都为NO的是导不出来的，经查询后，将语句提取出来执行即可。 select ‘alter table ‘|| table_name ||’ allocate extent;’ from user_tables where segment_created=’NO’; alter table table allocate extent; 备注：在11g中有一个特性就是参数deferred_segment_creation，默认是true的，表示段延迟创建。当创建一个新的表，并且该表还没有数据的情况</p>
+<p>下，该表是不会分配extent的，所以说该表不占数据空间，此时没有分配segment，导致exp导不出来。因此，根据上述方法，查询user_tables表，如果segment_created为NO的，说明该表没有分配segment，查询出来执行下即可。</p>
+
+            
+            <p class="more">
+                <a href="/2015/07/29/2019030500148/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/29/2019030500148/" title="oracle11g exp导出问题：部分表导不出来">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/9.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/28/2019030500157/">
+    		sql 事务-事务是一种机制、是一种操作序列
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-28T07:00:38.000Z">2015-07-28</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL/" title="SQL">SQL</a> / 
+    
+        <a href="/tags/事务/" title="事务">事务</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>事务是一种机制、是一种操作序列，它包含了一组数据库操作命令，这组命令要么全部执行，要么全部不执行. 事务的四大属性： 1   原子性(Atomicity):事务是一个完整的操作。 2   一致性（Consistency）：当事务完成时，数据必须处于一致状态。 3   隔离性(Isolation):对数据进行修改的所有并发事务是彼此隔离的。 4   持久性(Durability):事务完成后，它对于系统的影响是永久性的。 三、创建事务 T-SQL中管理事务的语句： 1 开始事务:begin transaction 2 提交事务：committransaction 3 回滚事务:rollback transaction 事务分类: 1 显式事务:用begin transaction明确指定事务的开始。 2 隐性事务：打开隐性事务：set implicit_transactions on，当以隐性事务模式操作时，SQL Servler将在提交或回滚事务后自动启动新事务。无法描述事务的开始，只需要提交或回滚事务。 3 自动提交事务：SQLServer的默认模式，它将每条单独的T-SQL语句视为一个事务。如果成功执行，则自动提交，否则回滚。 示例：张三转800元到李四帐户上。 use stuDB go –创建帐户表bank– if exists(select<em> from sysobjects where name=’bank’) drop table bank create table bank ( customerName char(10),    –顾客姓名 currentMoney money       –当前余额 ) go /**//</em>–添加约束，帐户不能少于元–<em>/ alter table bank add constraint CK_currentMoneycheck(currentMoney&gt;=1) /**//</em>–插入测试数据–<em>/ insert into bank(customerName,currentMoney) select ‘张三’,1000union select ‘李四’,1 select </em> from bank go /<strong>//<em>–使用事务–</em>/ use stuDB go –恢复原来的数据 –update bank set currentMoney=currentMoney-1000 where customerName=’李’ set nocount on    –不显示受影响的行数 print ‘查看转帐事务前的余额’ select * from bank go /</strong>//<em>–开始事务–</em>/ begin transaction declare @errorSum int    –定义变量，用于累计事务执行过程中的错误 /<strong>//<em>–转帐–</em>/ update bank set currentMoney=currentMoney-800 where customerName=’张三’ set @errorSum=@errorSum+@@error    –累计是否有错误 update bank set currentMoney=currentMoney+800 where customerName=’李四’ set @errorSum=@errorSum+@@error –累计是否有错误 print ‘查看转帐事务过程中的余额’ select * from bank /</strong>//<em>–根据是否有错误，确定事务是提交还是回滚–</em>/ if @errorSum&gt;0 begin print ‘交易失败，回滚事务.’ rollback transaction end else begin print ‘交易成功，提交事务，写入硬盘，永久保存！’ commit transaction end go print ‘查看转帐后的余额’ select * from bank go</p>
+
+            
+            <p class="more">
+                <a href="/2015/07/28/2019030500157/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/28/2019030500157/" title="sql 事务-事务是一种机制、是一种操作序列">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/23/2019030500105/">
+    		mysql 设置远程登陆以及新增用户
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-23T09:55:45.000Z">2015-07-23</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p><strong>mysql 简单的管理命令：</strong> 启动mysql sudo start mysql 停止mysql sudo stop mysql <strong>允许远程访问的设置：</strong></p>
+<pre><code>sudo vi /etc/mysql/my.cnf
+注释掉  bind-address = 127.0.0.1
+</code></pre><p>增加新用户：</p>
+<pre><code>GRANT ALL PRIVILEGES ON *.* TO gino@&apos;%&apos; IDENTIFIED BY  &quot;123456&quot;;
+
+GRANT命令说明：
+    ALL PRIVILEGES 是表示所有权限，你也可以使用select、update等权限。
+
+    ON 用来指定权限针对哪些库和表。
+
+    *.* 中前面的*号用来指定数据库名，后面的*号用来指定表名。
+
+    TO 表示将权限赋予某个用户。
+
+    jack@&apos;localhost&apos; 表示jack用户，@后面接限制的主机，可以是IP、IP段、域名以及%，%表示任何地方。注意：这里%有的版本不包括本地，以前碰到过给某个用户设置了%允许任何地方登录，但是在本地登录不了，这个和版本有关系，遇到这个问题再加一个localhost的用户就可以了。
+
+    IDENTIFIED BY 指定用户的登录密码。
+
+    WITH GRANT OPTION 这个选项表示该用户可以将自己拥有的权限授权给别人。注意：经常有人在创建操作用户的时候不指定WITH GRANT OPTION选项导致后来该用户不能使用GRANT命令创建用户或者给其它用户授权。
+
+备注：可以使用GRANT重复给用户添加权限，权限叠加，比如你先给用户添加一个select权限，然后又给用户添加一个insert权限，那么该用户就同时拥有了select和insert权限。
+
+使用这个命令使权限生效，尤其是你对那些权限表user、db、host等做了update或者delete更新的时候。以前遇到过使用grant后权限没有更新的情况，只要对权限做了更改就使用FLUSH PRIVILEGES命令来刷新权限。
+
+flush privileges;
+</code></pre>
+            
+            <p class="more">
+                <a href="/2015/07/23/2019030500105/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/23/2019030500105/" title="mysql 设置远程登陆以及新增用户">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/3.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/21/2019030500149/">
+    		PL/SQL Developer各个Window的功能
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-21T07:28:52.000Z">2015-07-21</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/PL-SQL/" title="PL/SQL">PL/SQL</a> / 
+    
+        <a href="/tags/Developer/" title="Developer">Developer</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>了解每个窗口的功能是正确使用PL/SQL Developer的首要条件，下边简要说明了PL/SQL Developer各个窗口的功能，希望能够理解： -<strong>程序窗口(program window) ：</strong>可以执行 sql,sqlplus 相关的语句，例如存储过程，方法，一般用来开发程序用的. 测试窗口(test window)：一般是用来测试存储过程等的debug。 -<strong>SQL窗口(sql window)：</strong>执行的是dml,ddl语句,主要用户语句的查询和显示（应用最多的一个窗口）。 -<strong>报告窗口(report window)：</strong>就是可以方便用于展示有聚合查询的用图表形式展示的窗口，例如sum(),count()等，有x,y轴的。 -<strong>命令窗口(command window)：</strong>除了可以执行sql, sqlplus 相关的命令，还可以执行更多的命令，例如call 等。 -<strong>解释计划窗口(plan window)：</strong>就是解释执行计划的，调优时，经常用到。 -<strong>图表窗口(diagram)：</strong>没有用过，不知道如何画图表的。</p>
+
+            
+            <p class="more">
+                <a href="/2015/07/21/2019030500149/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/21/2019030500149/" title="PL/SQL Developer各个Window的功能">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/1.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/其他数据库/">其他数据库</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/14/2019030500003/">
+    		Android ORMLite数据库简介
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-14T07:35:23.000Z">2015-07-14</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/数据库/" title="数据库">数据库</a> / 
+    
+        <a href="/tags/Android/" title="Android">Android</a> / 
+    
+        <a href="/tags/ORMLite/" title="ORMLite">ORMLite</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>一般的项目中，Android自身提供的SQLite数据库，可以满足轻量级的数据存储应用，但是，只要是存储模型稍微复杂的项目，以及数据结构模型复杂的应用，就很难再用SQLite支撑整个项目的数据存储。何况，使用SQLite编写的代码，代码后续维护和管理不容易，所以，上规模的项目中，很有必要引入一种更好用、对开发者更友好的第三方ORM数据库框架：ORMlite。 ORMLite官方的简介说：“Object Relational Mapping Lite (ORM Lite) provides some simple, lightweight functionality for persisting Java objects to SQL databases while avoiding the complexity and overhead of more standard ORM packages.”。 ORMLite是对象关系映射（Object Relational Mapping）数据库的一种轻量级SQL数据库的开发包（packages）。提供简单易用的DAO。 ORMLite官方主页：<a href="http://ormlite.com/" target="_blank" rel="noopener">http://ormlite.com</a> Java语言编写，支持Java，Android平台，本文重点介绍如何在Android平台的应用开发中使用ORMLite。 在Android应用开发中使用ORMLite，首先要下载ORMLite的开发jar包，jar资源包下载主页：<a href="http://ormlite.com/releases" target="_blank" rel="noopener">http://ormlite.com/releases</a> 具体到Android，需要在 <a href="http://ormlite.com/releases" target="_blank" rel="noopener">http://ormlite.com/releases</a> 页面下载两个jar 包（本文基于ORMLite的版本是：ormlite 4.49-SNAPSHOT）： （1）core列表下的jar包； （2）android列表下的jar包。 如图所示： <img src="http://img.blog.csdn.net/20150714145643701?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 将上面的两个jar包下载后放到Android工程项目中的libs包中，如图所示： <img src="http://img.blog.csdn.net/20150714145710073?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 以上完成后，ORMLite开发环境搭建就完成了，接下来就可以使用了。 首先需要创建和定义一张ORMLite用以存储的数据库表，这个表，用Java的一个类实现，例如User.java：</p>
+<p><strong>[java]</strong></p>
+<ol>
+<li><p>package zhangphil.ormlitetest.database;</p>
+</li>
+<li><p>import com.j256.ormlite.field.DatabaseField;</p>
+</li>
+<li><p>import com.j256.ormlite.table.DatabaseTable;</p>
+</li>
+<li><p>@DatabaseTable(tableName = “users”)</p>
+</li>
+<li><p>public class User {</p>
+</li>
+<li><p>public final static String USER_ID = “user_id”;</p>
+</li>
+<li>public final static String NAME = “name”;</li>
+<li><p>public final static String AGE = “age”;</p>
+</li>
+<li><p>public User() {</p>
+</li>
+<li><p>}</p>
+</li>
+<li><p>public User(String name, int age) {</p>
+</li>
+<li>this.name = name;</li>
+<li>this.age = age;</li>
+<li><p>}</p>
+</li>
+<li><p>// @DatabaseField(generatedId = true)</p>
+</li>
+<li><p>// public int id;</p>
+</li>
+<li><p>@DatabaseField(id = true, columnName = USER_ID)</p>
+</li>
+<li><p>public int user_id;</p>
+</li>
+<li><p>@DatabaseField(columnName = NAME)</p>
+</li>
+<li><p>public String name;</p>
+</li>
+<li><p>@DatabaseField(columnName = AGE)</p>
+</li>
+<li><p>public int age;</p>
+</li>
+<li><p>public int getUserId() {</p>
+</li>
+<li>return user_id;</li>
+<li><p>}</p>
+</li>
+<li><p>public void setUserId(int uid) {</p>
+</li>
+<li>this.user_id = uid;</li>
+<li><p>}</p>
+</li>
+<li><p>public String getName() {</p>
+</li>
+<li>return name;</li>
+<li><p>}</p>
+</li>
+<li><p>public void setName(String name) {</p>
+</li>
+<li>this.name = name;</li>
+<li><p>}</p>
+</li>
+<li><p>public int getAge() {</p>
+</li>
+<li>return age;</li>
+<li><p>}</p>
+</li>
+<li><p>public void setAge(int age) {</p>
+</li>
+<li>this.age = age;</li>
+<li><p>}</p>
+</li>
+<li><p>@Override</p>
+</li>
+<li>public String toString() {</li>
+<li>return “user_id:” + user_id + “ 姓名:” + name + “ 年龄:” + age;</li>
+<li>}</li>
+<li>}</li>
+</ol>
+<p>上面的这个Java类User中开始一段代码：</p>
+<p><strong>[java]</strong></p>
+<ol>
+<li>@DatabaseTable(tableName = “users”)</li>
+</ol>
+<p>此代码声明了User类中定义的数据模型，将存储在数据库表“users”中。换句话说，数据库表users中，存储的数据单元也即是类User中定义的数据模型。 其中： @DatabaseField(columnName = “xxx”) xxx 表示此数据字段在数据库表中的列名。 DatabaseField中，若设定id=true，则声明此id为主键。 ORMLite的数据库表定义可设置的参数比较多，这点可以参考官方文档。剩余的就是创建ORMLite数据库，和SQLite类似。ORMLite查插删改主要通过DAO。 现在给出一个简单的代码加以说： 定义一个ORMLite数据库表User.java，假设该User表存储用户的id、名字、年龄信息：</p>
+<p><strong>[java]</strong></p>
+<ol>
+<li><p>package zhangphil.ormlitetest.database;</p>
+</li>
+<li><p>import com.j256.ormlite.field.DatabaseField;</p>
+</li>
+<li><p>import com.j256.ormlite.table.DatabaseTable;</p>
+</li>
+<li><p>@DatabaseTable(tableName = “users”)</p>
+</li>
+<li><p>public class User {</p>
+</li>
+<li><p>public final static String USER_ID = “user_id”;</p>
+</li>
+<li>public final static String NAME = “name”;</li>
+<li><p>public final static String AGE = “age”;</p>
+</li>
+<li><p>public User() {</p>
+</li>
+<li><p>}</p>
+</li>
+<li><p>public User(String name, int age) {</p>
+</li>
+<li>this.name = name;</li>
+<li>this.age = age;</li>
+<li><p>}</p>
+</li>
+<li><p>// @DatabaseField(generatedId = true)</p>
+</li>
+<li><p>// public int id;</p>
+</li>
+<li><p>@DatabaseField(id = true, columnName = USER_ID)</p>
+</li>
+<li><p>public int user_id;</p>
+</li>
+<li><p>@DatabaseField(columnName = NAME)</p>
+</li>
+<li><p>public String name;</p>
+</li>
+<li><p>@DatabaseField(columnName = AGE)</p>
+</li>
+<li><p>public int age;</p>
+</li>
+<li><p>public int getUserId() {</p>
+</li>
+<li>return user_id;</li>
+<li><p>}</p>
+</li>
+<li><p>public void setUserId(int uid) {</p>
+</li>
+<li>this.user_id = uid;</li>
+<li><p>}</p>
+</li>
+<li><p>public String getName() {</p>
+</li>
+<li>return name;</li>
+<li><p>}</p>
+</li>
+<li><p>public void setName(String name) {</p>
+</li>
+<li>this.name = name;</li>
+<li><p>}</p>
+</li>
+<li><p>public int getAge() {</p>
+</li>
+<li>return age;</li>
+<li><p>}</p>
+</li>
+<li><p>public void setAge(int age) {</p>
+</li>
+<li>this.age = age;</li>
+<li><p>}</p>
+</li>
+<li><p>@Override</p>
+</li>
+<li>public String toString() {</li>
+<li>return “user_id:” + user_id + “ 姓名:” + name + “ 年龄:” + age;</li>
+<li>}</li>
+<li><p>}</p>
+<p>创建ORMLite数据库管理工具类ORMLiteDatabaseHelper.java：</p>
+</li>
+</ol>
+<p><strong>[java]</strong></p>
+<ol>
+<li><p>package zhangphil.ormlitetest.database;</p>
+</li>
+<li><p>import java.sql.SQLException;</p>
+</li>
+<li><p>import android.content.Context;</p>
+</li>
+<li>import android.database.sqlite.SQLiteDatabase;</li>
+<li>import android.database.sqlite.SQLiteDatabase.CursorFactory;</li>
+<li><p>import android.util.Log;</p>
+</li>
+<li><p>import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;</p>
+</li>
+<li>import com.j256.ormlite.dao.Dao;</li>
+<li>import com.j256.ormlite.support.ConnectionSource;</li>
+<li><p>import com.j256.ormlite.table.TableUtils;</p>
+</li>
+<li><p>public class ORMLiteDatabaseHelper extends OrmLiteSqliteOpenHelper {</p>
+</li>
+<li><p>private static ORMLiteDatabaseHelper mDatabaseHelper = null;</p>
+</li>
+<li><p>private Dao&lt;User, Integer&gt; mUserDao = null;</p>
+</li>
+<li><p>private final static String DataBase_NAME = “ormlite.db”;</p>
+</li>
+<li><p>private final static int DataBase_VERSION = 1;</p>
+</li>
+<li><p>public ORMLiteDatabaseHelper(Context context, String databaseName,</p>
+</li>
+<li>CursorFactory factory, int databaseVersion) {</li>
+<li>super(context, DataBase_NAME, factory, DataBase_VERSION);</li>
+<li><p>}</p>
+</li>
+<li><p>public static ORMLiteDatabaseHelper getInstance(Context context) {</p>
+</li>
+<li>if (mDatabaseHelper == null) {</li>
+<li>mDatabaseHelper = new ORMLiteDatabaseHelper(context, DataBase_NAME,</li>
+<li>null, DataBase_VERSION);</li>
+<li><p>}</p>
+</li>
+<li><p>return mDatabaseHelper;</p>
+</li>
+<li><p>}</p>
+</li>
+<li><p>@Override</p>
+</li>
+<li><p>public void onCreate(SQLiteDatabase arg0, ConnectionSource connectionSource) {</p>
+</li>
+<li><p>Log.d(this.getClass().getName(), “ORMLite数据库 -&gt; onCreate”);</p>
+</li>
+<li><p>try {</p>
+</li>
+<li>TableUtils.createTableIfNotExists(connectionSource, User.class);</li>
+<li>} catch (Exception e) {</li>
+<li>e.printStackTrace();</li>
+<li>}</li>
+<li><p>}</p>
+</li>
+<li><p>@Override</p>
+</li>
+<li>public void onUpgrade(SQLiteDatabase database, ConnectionSource arg1,</li>
+<li><p>int arg2, int arg3) {</p>
+</li>
+<li><p>Log.i(this.getClass().getName(), “数据库 -&gt; onUpgrade”);</p>
+</li>
+<li><p>try {</p>
+</li>
+<li>// 删除旧的数据库表。</li>
+<li><p>TableUtils.dropTable(connectionSource, User.class, true);</p>
+</li>
+<li><p>// 重新创建新版的数据库。</p>
+</li>
+<li>onCreate(database, connectionSource);</li>
+<li>} catch (SQLException e) {</li>
+<li>e.printStackTrace();</li>
+<li>}</li>
+<li><p>}</p>
+</li>
+<li><p>/**</p>
+</li>
+<li><ul>
+<li>每一个数据库中的表，要有一个获得Dao的方法。 可以使用一种更通用的模板方法如：</li>
+</ul>
+</li>
+<li>* </li>
+<li><ul>
+<li>public Dao&lt;Class, Integer&gt; getORMLiteDao(Class cls) throws SQLException {</li>
+</ul>
+</li>
+<li><ul>
+<li>if (dao == null) { dao = getDao(cls); }</li>
+</ul>
+</li>
+<li>* </li>
+<li><ul>
+<li>return dao; }</li>
+</ul>
+</li>
+<li>*/</li>
+<li>public Dao&lt;User, Integer&gt; getUserDao() {</li>
+<li>if (mUserDao == null) {</li>
+<li>try {</li>
+<li>mUserDao = getDao(User.class);</li>
+<li>} catch (java.sql.SQLException e) {</li>
+<li>e.printStackTrace();</li>
+<li>}</li>
+<li><p>}</p>
+</li>
+<li><p>return mUserDao;</p>
+</li>
+<li><p>}</p>
+</li>
+<li><p>@Override</p>
+</li>
+<li>public void close() {</li>
+<li>super.close();</li>
+<li>mUserDao = null;</li>
+<li>}</li>
+<li><p>}</p>
+<p>然后就可以在自己的应用中直接使用：</p>
+</li>
+</ol>
+<p><strong>[java]</strong></p>
+<ol>
+<li><p>package zhangphil.ormlitetest;</p>
+</li>
+<li><p>import java.sql.SQLException;</p>
+</li>
+<li>import java.util.List;</li>
+<li><p>import java.util.Random;</p>
+</li>
+<li><p>import com.j256.ormlite.dao.Dao;</p>
+</li>
+<li><p>import zhangphil.ormlitetest.database.ORMLiteDatabaseHelper;</p>
+</li>
+<li>import zhangphil.ormlitetest.database.User;</li>
+<li>import android.support.v7.app.ActionBarActivity;</li>
+<li>import android.widget.Toast;</li>
+<li><p>import android.os.Bundle;</p>
+</li>
+<li><p>public class MainActivity extends ActionBarActivity {</p>
+</li>
+<li><p>private Dao&lt;User, Integer&gt; mUserDao;</p>
+</li>
+<li><p>@Override</p>
+</li>
+<li>protected void onCreate(Bundle savedInstanceState) {</li>
+<li><p>super.onCreate(savedInstanceState);</p>
+</li>
+<li><p>ORMLiteDatabaseHelper mDatabaseHelper = ORMLiteDatabaseHelper</p>
+</li>
+<li>.getInstance(this);</li>
+<li><p>mUserDao = mDatabaseHelper.getUserDao();</p>
+</li>
+<li><p>Random rand = new Random();</p>
+</li>
+<li>for (int i = 0; i &lt; 3; i++) {</li>
+<li>User user = new User();</li>
+<li>user.setUserId(i);</li>
+<li>user.setName(“name” + i);</li>
+<li>// 生成随机测试的年龄。</li>
+<li><p>user.setAge(rand.nextInt(100));</p>
+</li>
+<li><p>try {</p>
+</li>
+<li>mUserDao.createOrUpdate(user);</li>
+<li>} catch (SQLException e) {</li>
+<li>e.printStackTrace();</li>
+<li>}</li>
+<li>}</li>
+<li><p>}</p>
+</li>
+<li><p>@Override</p>
+</li>
+<li>public void onStart() {</li>
+<li><p>super.onStart();</p>
+</li>
+<li><p>// 全局查询</p>
+</li>
+<li>try {</li>
+<li><p>List<user> users = mUserDao.queryForAll();</user></p>
+</li>
+<li><p>for (User u : users) {</p>
+</li>
+<li>Toast.makeText(this, u.toString(), Toast.LENGTH_SHORT).show();</li>
+<li>}</li>
+<li>} catch (SQLException e) {</li>
+<li>e.printStackTrace();</li>
+<li><p>}</p>
+</li>
+<li><p>// 条件查询QueryBuilder</p>
+</li>
+<li>// 假设我们给定一个用户的id=1</li>
+<li>int uid = 1;</li>
+<li>try {</li>
+<li>List<user> users = mUserDao.queryBuilder().where()</user></li>
+<li><p>.eq(User.USER_ID, uid).query();</p>
+</li>
+<li><p>for (User u : users) {</p>
+</li>
+<li>Toast.makeText(this, “查询结果 : “ + u.toString(),</li>
+<li>Toast.LENGTH_SHORT).show();</li>
+<li>}</li>
+<li>} catch (SQLException e) {</li>
+<li>e.printStackTrace();</li>
+<li>}</li>
+<li>}</li>
+<li>}</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/07/14/2019030500003/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/14/2019030500003/" title="Android ORMLite数据库简介">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/4.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/09/2019030500069/">
+    		MySQL优化之——安全地关闭MySQL实例
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-09T05:42:18.000Z">2015-07-09</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<h4 id="关闭过程："><a href="#关闭过程：" class="headerlink" title="关闭过程："></a>关闭过程：</h4><ul>
+<li>1、发起shutdown，发出  SIGTERM信号</li>
+<li>2、有必要的话，新建一个关闭线程(shutdown thread)</li>
+</ul>
+<p>如果是客户端发起的关闭，则会新建一个专用的关闭线程 如果是直接收到 SIGTERM 信号进行关闭的话，专门负责信号处理的线程就会负责关闭工作，或者新建一个独立的线程负责这个事 当无法创建独立的关闭线程时（例如内存不足），MySQL Server会发出类似下面的告警信息： Error: Can’t create thread to kill server</p>
+<ul>
+<li>3、MySQL Server不再响应新的连接请求</li>
+</ul>
+<p>关闭TCP/IP网络监听，关闭Unix Socket等渠道</p>
+<ul>
+<li>4、逐渐关闭当前的连接、事务</li>
+</ul>
+<p>空闲连接，将立刻被终止； 当前还有事务、SQL活动的连接，会将其标识为 killed，并定期检查其状态，以便下次检查时将其关闭；（参考 KILL 语法） 当前有活跃事务的，该事物会被回滚，如果该事务中还修改了非事务表，则已经修改的数据无法回滚，可能只会完成部分变更； 如果是Master/Slave复制场景里的Master，则对复制线程的处理过程和普通线程也是一样的； 如果是Master/Slave复制场景里的Slave，则会依次关闭IO、SQL线程，如果这2个线程当前是活跃的，则也会加上 killed 标识，然后再关闭； Slave服务器上，SQL线程是允许直接停止当前的SQL操作的（为了避免复制问题），然后再关闭该线程； 在MySQl 5.0.80及以前的版本里，如果SQL线程当时正好执行一个事务到中间，该事务会回滚；从5.0.81开始，则会等待所有的操作结束，除非用户发起KILL操作。 当Slave的SQL线程对非事务表执行操作时被强制 KILL了，可能会导致Master、Slave数据不一致；</p>
+<ul>
+<li>5、MySQL Server进程关闭所有线程，关闭所有存储引擎；</li>
+</ul>
+<p>刷新所有表cache，关闭所有打开的表； 每个存储引擎各自负责相关的关闭操作，例如MyISAM会刷新所有等待写入的操作；InnoDB会将buffer pool刷新到磁盘中（从MySQL 5.0.5开始，如果innodb_fast_shutdown不设置为 2 的话），把当前的LSN记录到表空间中，然后关闭所有的内部线程。</p>
+<ul>
+<li>6、MySQL Server进程退出</li>
+</ul>
+<h4 id="关于KILL指令"><a href="#关于KILL指令" class="headerlink" title="关于KILL指令"></a>关于KILL指令</h4><p>从5.0开始，KILL 支持指定  CONNECTION | QUERY两种可选项：</p>
+<ul>
+<li>KILL CONNECTION和原来的一样，停止回滚事务，关闭该线程连接，释放相关资源；</li>
+<li>KILL QUERY则只停止线程当前提交执行的操作，其他的保持不变；</li>
+</ul>
+<p>提交KILL操作后，该线程上会设置一个特殊的 kill标记位。通常需要一段时间后才能真正关闭线程，因为kill标记位只在特定的情况下才检查：</p>
+<ul>
+<li>1、执行SELECT查询时，在ORDER BY或GROUP BY循环中，每次读完一些行记录块后会检查 kill标记位，如果发现存在，该语句会终止；</li>
+<li>2、执行ALTER TABLE时，在从原始表中每读取一些行记录块后会检查 kill 标记位，如果发现存在，该语句会终止，删除临时表；</li>
+<li>3、执行UPDATE和DELETE时，每读取一些行记录块并且更新或删除后会检查 kill 标记位，如果发现存在，该语句会终止，回滚事务，若是在非事务表上的操作，则已发生变更的数据不会回滚；</li>
+<li>4、GET_LOCK() 函数返回NULL；</li>
+<li>5、INSERT DELAY线程会迅速内存中的新增记录，然后终止；</li>
+<li>6、如果当前线程持有表级锁，则会释放，并终止；</li>
+<li>7、如果线程的写操作调用在等待释放磁盘空间，则会直接抛出“磁盘空间满”错误，然后终止；</li>
+<li>8、当MyISAM表在执行REPAIR TABLE 或 OPTIMIZE TABLE 时被 KILL的话，会导致该表损坏不可用，指导再次修复完成。</li>
+</ul>
+<h4 id="安全关闭MySQL几点建议"><a href="#安全关闭MySQL几点建议" class="headerlink" title="安全关闭MySQL几点建议"></a>安全关闭MySQL几点建议</h4><p>想要安全关闭 mysqld 服务进程，建议按照下面的步骤来进行：</p>
+<ul>
+<li>0、用具有SUPER、ALL等最高权限的账号连接MySQL，最好是用 unix socket 方式连接；</li>
+<li>1、在5.0及以上版本，设置innodb_fast_shutdown = 1，允许快速关闭InnoDB（不进行full purge、insert buffer merge），如果是为了升级或者降级MySQL版本，则不要设置；</li>
+<li>2、设置innodb_max_dirty_pages_pct = 0，让InnoDB把所有脏页都刷新到磁盘中去；</li>
+<li>3、设置max_connections和max_user_connections为1，也就最后除了自己当前的连接外，不允许再有新的连接创建；</li>
+<li>4、关闭所有不活跃的线程，也就是状态为Sleep  且 Time 大于 1 的线程ID；</li>
+<li>5、执行 SHOW PROCESSLIST  确认是否还有活跃的线程，尤其是会产生表锁的线程，例如有大数据集的SELECT，或者大范围的UPDATE，或者执行DDL，都是要特别谨慎的；</li>
+<li>6、执行 SHOW ENGINE INNODB STATUS 确认History list length的值较低（一般要低于500），也就是未PURGE的事务很少，并且确认Log sequence number、Log flushed up to、Last checkpoint at三个状态的值一样，也就是所有的LSN都已经做过检查点了；</li>
+<li>7、然后执行FLUSH LOCKAL TABLES 操作，刷新所有 table cache，关闭已打开的表（LOCAL的作用是该操作不记录BINLOG）；</li>
+<li>8、如果是SLAVE服务器，最好是先关闭 IO_THREAD，等待所有RELAY LOG都应用完后，再关闭 SQL_THREAD，避免 SQL_THREAD 在执行大事务被终止，耐心待其全部应用完毕，如果非要强制关闭的话，最好也等待大事务结束后再关闭SQL_THREAD；</li>
+<li>9、最后再执行 mysqladmin shutdown。</li>
+<li>10、紧急情况下，可以设置innodb_fast_shutdown = 1，然后直接执行 mysqladmin shutdown 即可，甚至直接在操作系统层调用 kill 或者 kill -9 杀掉 mysqld 进程（在innodb_flush_log_at_trx_commit = 0 的时候可能会丢失部分事务），不过mysqld进程再次启动时，会进行CRASH RECOVERY工作，需要有所权衡。</li>
+</ul>
+<p>以上说了那么多，其实正常情况下执行 mysqladmin shutdown 就够了，如果发生阻塞，再参考上面的内容进行分析和解决吧。</p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/07/09/2019030500069/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/09/2019030500069/" title="MySQL优化之——安全地关闭MySQL实例">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/9.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/Oracle/">Oracle</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/09/2019030500012/">
+    		关于Oracle 10g的schedule job
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-09T05:35:10.000Z">2015-07-09</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/Oracle/" title="Oracle">Oracle</a> / 
+    
+        <a href="/tags/schedule-job/" title="schedule job">schedule job</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>– job 权限 grant create job to somebody; – job 创建 begin dbms_scheduler.create_job ( job_name =&gt; ‘AGENT_LIQUIDATION_JOB’, job_type =&gt; ‘STORED_PROCEDURE’, job_action =&gt; ‘AGENT_LIQUIDATION.LIQUIDATION’, –存储过程名 start_date =&gt; sysdate, repeat_interval =&gt; ‘FREQ=MONTHLY; INTERVAL=1; BYMONTHDAY=1;BYHOUR=1;BYMINUTE=0;BYSECOND=0’,  – 按月，间隔为1个(月),每月1号,凌晨1点 comments =&gt; ‘执行代理商清分程序’ ); end; / – job 执行时间测试 DECLARE start_date date; return_date_after date; next_run_date date; BEGIN start_date := sysdate;–to_timestamp_tz(‘10-OCT-2004 10:00:00’,’DD-MM-YYYY HH24:MI:SS’); return_date_after := start_date; FOR i IN <strong>1</strong>..<strong>10</strong> LOOP DBMS_SCHEDULER.EVALUATE_CALENDAR_STRING(‘FREQ=MONTHLY; INTERVAL=1; BYMONTHDAY=1;BYHOUR=1;BYMINUTE=0;BYSECOND=0’,start_date, return_date_after, next_run_date); DBMS_OUTPUT.PUT_LINE(‘next_run_date: ‘ || to_char(next_run_date,’yyyy-mm-dd HH24:MI:SS’)); return_date_after := next_run_date; END LOOP; END; / – job 查询 select owner, job_name, state from dba_scheduler_jobs; select job_name, state from user_scheduler_jobs; – job 启用 begin dbms_scheduler.enable(‘BACKUP_JOB’); end; / – job 运行 begin dbms_scheduler.run_job(‘COLA_JOB’,TRUE); – true代表同步执行 end; / – job 停止(不太好用) begin dbms_scheduler.stop_job(job_name =&gt; ‘COLA_JOB’,force =&gt; TRUE); end; / – job 删除(对停job来说好用) begin dbms_scheduler.drop_job(job_name =&gt; ‘COLA_JOB’,force =&gt; TRUE);) end; /</p>
+
+            
+            <p class="more">
+                <a href="/2015/07/09/2019030500012/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/09/2019030500012/" title="关于Oracle 10g的schedule job">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/9.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/SQL-Server/">SQL Server</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/08/2019030500164/">
+    		Sql Server 查询一段日期内的所有礼拜天
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-08T06:37:34.000Z">2015-07-08</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/SQL-Server/" title="SQL Server">SQL Server</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <ol>
+<li>/*</li>
+<li>查询一段日期内的所有礼拜天</li>
+<li>@startdate 开始日期</li>
+<li>@enddate 结束日期</li>
+<li><p>*/</p>
+</li>
+<li><p>declare @startDate datetime</p>
+</li>
+<li>declare @endDate datetime</li>
+<li>declare @week varchar(20)</li>
+<li>set @startDate = ‘20150101’</li>
+<li>set @endDate = ‘20151231’</li>
+<li>while @startDate &lt;= @endDate</li>
+<li>begin</li>
+<li>set @week = DATENAME(weekday, @startDate);</li>
+<li>if (@week = ‘星期六’ or @week = ‘星期日’)</li>
+<li>begin</li>
+<li>select DATENAME(YEAR, @startDate) as “year”, @startDate as “day”</li>
+<li><p>end</p>
+</li>
+<li><p>set @startDate = @startDate + 1;</p>
+</li>
+<li>end</li>
+</ol>
+
+            
+            <p class="more">
+                <a href="/2015/07/08/2019030500164/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/08/2019030500164/" title="Sql Server 查询一段日期内的所有礼拜天">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/8.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/07/2019030500019/">
+    		小心InnoDB 和 MyISAM 创建 Hash 索引陷阱
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-07T05:43:55.000Z">2015-07-07</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/Hash索引/" title="Hash索引">Hash索引</a> / 
+    
+        <a href="/tags/InnoDB/" title="InnoDB">InnoDB</a> / 
+    
+        <a href="/tags/MyISAM/" title="MyISAM">MyISAM</a> / 
+    
+        <a href="/tags/索引优化/" title="索引优化">索引优化</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>MySql 常见存储引擎 InnoDB 和 MyISAM 都不支持 Hash 索引，它们默认的索引都是 B-Tree。但是如果你在创建索引的时候定义其类型为 Hash，MySql 并不会报错，而且你通过 SHOW CREATE TABLE 查看该索引也是 Hash，只不过该索引实际上还是 B-Tree。 比如表 data_dict 的 DDL：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>CREATE TABLE `data_dict` (</li>
+<li>`data_type` varchar(32) NOT NULL COMMENT ‘数据字典类型’,</li>
+<li>`data_code` tinyint(4) NOT NULL COMMENT ‘数据字典代码’,</li>
+<li>`data_name` varchar(64) NOT NULL COMMENT ‘数据字典值’,</li>
+<li>PRIMARY KEY (`data_type`,`data_code`)</li>
+<li>) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=’数据字典表’;</li>
+</ol>
+<p>我们为 data_name 字段建立 Hash 索引：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>ALTER TABLE data_dict ADD INDEX data_dict_dn USING HASH (data_name);</li>
+</ol>
+<p>打印结果： 受影响的行: 0 时间: 0.345s 然后查看建表 DDL：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>SHOW CREATE TABLE data_dict;</li>
+</ol>
+<p>打印结果： CREATE TABLE `data_dict` ( `data_type` varchar(32) NOT NULL COMMENT ‘数据字典类型’, `data_code` tinyint(4) NOT NULL COMMENT ‘数据字典代码’, `data_name` varchar(64) NOT NULL COMMENT ‘数据字典值’, PRIMARY KEY (`data_type`,`data_code`), KEY `data_dict_dn` (`data_name`) USING HASH ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=’数据字典表’ 是 Hash，所以我们以为创建 Hash 索引成功。 事实上并非如此，我们都被 MySql 给骗了，我们使用 SHOW INDEXES FROM 语句对该表索引进行检索：</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>SHOW INDEXES FROM data_dict;</li>
+</ol>
+<p>打印结果： <img src="http://img.blog.csdn.net/20150707113055755?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="我们使用 SHOW INDEXES FROM 语句对该表索引进行检索"> 打回原形了。不过也不要失望，虽然常见存储引擎并不支持 Hash 索引，但 InnoDB 有另一种实现方法：自适应哈希索引。InnoDB 存储引擎会监控对表上索引的查找，如果观察到建立哈希索引可以带来速度的提升，则建立哈希索引。 我们可以通过 SHOW ENGINE INNODB STATUS 来查看当前自适应哈希索引的使用状况： ===================================== 2015-07-07 10:51:19 1d68 INNODB MONITOR OUTPUT ===================================== Per second averages calculated from the last 36 seconds …… ————————————- INSERT BUFFER AND ADAPTIVE HASH INDEX ————————————- Ibuf: size 1, free list len 2633, seg size 2635, 0 merges merged operations: insert 0, delete mark 0, delete 0 discarded operations: insert 0, delete mark 0, delete 0 Hash table size 348731, node heap has 2 buffer(s) 0.00 hash searches/s, 0.00 non-hash searches/s …… 从中我们可以看到自适应哈希索引的相关信息：有使用大小、使用情况、每秒使用自适应哈希索引搜索的情况等。 MySql 各种存储引擎的特性对比详单： <img src="http://img.blog.csdn.net/20150707113158731?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="MySql 各种存储引擎的特性对比详单"> 从中我们可以看出，</p>
+<ul>
+<li>InnoDB 支持事务，支持行级别锁定，支持 B-tree、Full-text 等索引，不支持 Hash 索引；</li>
+<li>MyISAM 不支持事务，支持表级别锁定，支持 B-tree、Full-text 等索引，不支持 Hash 索引；</li>
+<li>Memory 不支持事务，支持表级别锁定，支持 B-tree、Hash 等索引，不支持 Full-text 索引；</li>
+<li>NDB 支持事务，支持行级别锁定，支持 Hash 索引，不支持 B-tree、Full-text 等索引；</li>
+<li>Archive 不支持事务，支持表级别锁定，不支持 B-tree、Hash、Full-text 等索引；</li>
+</ul>
+<p>可以使用 SHOW ENGINES 语句查看你的 MySql Server 所支持的存储引擎，比如笔者用于本机测试的 5.6.25-log Win 版的查看结果如下： <img src="http://img.blog.csdn.net/20150707113246099?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="支持的存储引擎"> 从中可以看出，InnoDB 是该版本 MySql 的默认存储引擎，也只有 InnoDB 能够支持事务、行级别锁定、外键；支持的 MEMORY 是基于哈希的，数据都存放于内存，适用于临时表。没有看到既支持事务又支持哈希索引的 NDB 的身影。</p>
+
+            
+            <p class="more">
+                <a href="/2015/07/07/2019030500019/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/07/2019030500019/" title="小心InnoDB 和 MyISAM 创建 Hash 索引陷阱">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/7.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+        <!-- 文章列表 item -->
+<article class="post">
+    <header>
+        <!-- 标签这有且只能显示一个 -->
+        
+        <a class="cat-link" href="/categories/SQL-Server/">SQL Server</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="/2015/07/06/2019030500168/">
+    		SqlServer 批处理（Batch Requests/sec）过高追踪处理
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Jelon 发表于
+        <time datetime="2015-07-06T05:15:30.000Z">2015-07-06</time>
+        &nbsp;&nbsp;
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/sqlserver/" title="sqlserver">sqlserver</a> / 
+    
+        <a href="/tags/Requests/" title="Requests">Requests</a>
+    
+
+        </span>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <blockquote>
+<p>近一段时间观察，监控发现一数据库的 每秒批处理请求数（Batch Requests/sec）经常升高持续较长时间，比平时高出几百，如下图： <img src="http://img.blog.csdn.net/20150706115817476?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 由于一直比较高，以为是正常现象，没有注意。最近我们老大要求查看原因，所以跟踪查看，确实是数据库的非正常请求引起！ 先了解 批处理（Batch Requestsc）， 批处理简单理解为同时执行的一批SQL处理语句，一个批处理中可能有多个DML、多个存储过程等等。如在SSMS操作，每个’GO’执行前都属于一个批处理。 开始处理，用最笨的方法，打开SQL Server profiler  监控 SQL:BatchCompleted （sql批处理完成记录），但发现不是很多，每秒300左右，看起来正常，所以用 SQL Server profiler 不可行。 既然是批处理过多，批处理跟事务相关，可以打开性能监视器监控以下两个计数器： Batch Requests/sec Tranactions/sec(_Total) 发现 Tranactions/sec(_Total) 与 Batch Requests/sec 几乎是一致的，在继续查看Tranactions/sec ，把每个数据库都详细监控，确定只有 Tranactions/sec(master)  是最大的。与 master 连接相关的，如果不是系统的作业引起，可能就是连接引起，连接又有可能是内部的报表连接引起。排除除了SqlServer作业，再监控以下计数器： Connection Reset/sec Logins/sec Logout/sec 只有 Connection Reset/sec 是最频繁的，Logins/sec 和 Logout/sec 平均都在3左右。Connection Reset/sec 就是连接池连接过来的。 <strong>[plain]</strong></p>
+<ol>
+<li>“The sp_reset_connection stored procedure is used by SQL</li>
+<li>Server to support remote stored procedure calls in a transaction. This stored</li>
+<li>procedure also causes Audit Login and Audit Logout events to fire when a</li>
+<li>connection is reused from a connection pool.”</li>
+</ol>
+<p>此时可以用 SQL Server profiler  监控以下事件： Audit Login Audit Logout <img src="http://img.blog.csdn.net/20150706110355594?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 这时监控出来的数据就比较多了！~这个用户 <strong>cdwbcb</strong> 不断从连接池地连接和断开！非常频繁，可以确定是该用户引起的！ 接下来就好办了，打开SSMS连接到该数据库，执行以下语句。</p>
+<p><strong>[sql]</strong></p>
+<ol>
+<li>select p.*,s.text</li>
+<li>from master.dbo.sysprocesses p</li>
+<li>cross apply sys.dm_exec_sql_text(p.sql_handle) s</li>
+<li>where nt_username=’cdwbcb’</li>
+</ol>
+<p>找到相关数据：<img src="http://img.blog.csdn.net/20150706112721177?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt> 数据库中保持了该用户的6个连接会话。奇怪的是，这些session的事务已经关闭（open_tran=0），处于空闲状态（status=sleeping），但是仍有命令等待执行（cmd=AWAITING COMMAND）！如果 open_tran=1 还可以理解，这个就无法解释了。但是产生这种情况，应该就是应用层方面的逻辑没处理好了。 暂时的解决方法：kill 该账户的几个会话。执行后很快降下来！ <img src="http://img.blog.csdn.net/20150706115607371?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p>
+</blockquote>
+
+            
+            <p class="more">
+                <a href="/2015/07/06/2019030500168/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img>
+            <a href="/2015/07/06/2019030500168/" title="SqlServer 批处理（Batch Requests/sec）过高追踪处理">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="/img/thumbnail/6.jpg" alt="默认配图">
+                
+            </a>
+        </div>
+    </div>
+</article>
+
+    
+
+    
+    <nav class="page-navigator">
+        <span class="page-number current">1</span><a class="page-number" href="/archives/2015/07/page/2/">2</a><a class="extend next" rel="next" href="/archives/2015/07/page/2/">后一页</a>
+    </nav>
+    
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/FineReport/" title="FineReport">FineReport (1)</a>
+  
+    <a class="tag-item" href="/tags/报表/" title="报表">报表 (1)</a>
+  
+    <a class="tag-item" href="/tags/数据集/" title="数据集">数据集 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>

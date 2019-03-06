@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+    <meta name="baidu-site-verification" content="dIcXMeY8Ya">
+    
+    <title>MySQL函数 | 软件开发吧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Jelon, 前端, Web, 张德龙, 前端开发">
+    <meta name="description" content="Jelon个人前端小站">
+
+    
+    <link rel="alternative" href="/atom.xml" title="软件开发吧" type="application/atom+xml">
+    
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="/js/html5.js"></script>
+    <![endif]-->
+    
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?fd459238242776d173cdc64918fb32f2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+</head>
+</html>
+<body class="home">
+    <!--[if lt IE 9]>
+    <div class="browsehappy">
+        当前网页 <strong>不支持</strong>
+        你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.
+    </div>
+    <![endif]-->
+
+    <!-- 博客头部 -->
+    <header class="header">
+    <section class="container header-main">
+        <div class="logo">
+            <a href="/">
+                <div class="cover">
+                    <span class="name">软件开发吧</span>
+                    <span class="description"></span>
+                </div>
+            </a>
+        </div>
+        <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
+        <ul class="menu hidden" id="JELON__menu">
+            
+            <li rel="/2015/12/22/2019030500074/index.html" class="item ">
+                <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
+            </li>
+            
+            <li rel="/2015/12/22/2019030500074/index.html" class="item ">
+                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
+            </li>
+            
+            <li rel="/2015/12/22/2019030500074/index.html" class="item ">
+                <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
+            </li>
+            
+            <li rel="/2015/12/22/2019030500074/index.html" class="item ">
+                <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
+            </li>
+            
+        </ul>
+        <div class="profile clearfix">
+            <div class="feeds fl">
+                
+                
+                <p class="links">
+                    
+                        <a href="https://github.com/jangdelong" target="_blank">Github</a>
+                        |
+                    
+                        <a href="https://pages.coding.me" target="_blank">Hosted by Coding Pages</a>
+                        
+                    
+                </p>
+                <p class="sns">
+                    
+                        <a href="http://weibo.com/jangdelong" class="sinaweibo" target="_blank"><b>■</b> 新浪微博</a>
+                    
+                        <a href="https://www.facebook.com/profile.php?id=100011855760219&amp;ref=bookmarks" class="qqweibo" target="_blank"><b>■</b> Facebook</a>
+                    
+                    <a href="javascript: void(0);" class="wechat">
+                        <b>■</b>
+                        公众号
+                        <span class="popover">
+                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <i class="arrow"></i>
+                        </span>
+                    </a>
+                </p>
+                
+            </div>
+            <div class="avatar fr">
+                <img src="/img/jelon.jpg" alt="avatar" title="Jelon">
+            </div>
+        </div>
+    </section>
+</header>
+
+
+    <!-- 博客正文 -->
+    <div class="container body clearfix">
+        <section class="content">
+            <div class="content-main widget">
+                <!-- 文章页 -->
+<!-- 文章 -->
+<article class="post article">
+    <header class="text-center">
+        <h3 class="post-title"><span>MySQL函数</span></h3>
+    </header>
+    <p class="post-meta text-center">
+        Jelon 发表于
+        <time datetime="2015-12-22T06:24:35.000Z">2015-12-22</time>
+    </p>
+    <div class="post-content">
+        <p>复制代码 控制流函数 IFNULL(expr1,expr2) 如果expr1不是NULL，IFNULL()返回expr1，否则它返回expr2。IFNULL()返回一个数字或字符串值，取决于它被使用的上下文环境。 mysql&gt; select IFNULL(1,0); -&gt; 1 mysql&gt; select IFNULL(0,10); -&gt; 0 mysql&gt; select IFNULL(1/0,10); -&gt; 10 mysql&gt; select IFNULL(1/0,’yes’); -&gt; ‘yes’ IF(expr1,expr2,expr3) 如果expr1是TRUE(expr1&lt;&gt;0且expr1&lt;&gt;NULL)，那么IF()返回expr2，否则它返回expr3。IF()返回一个数字或字符串值，取决于它被使用的上下文。 mysql&gt; select IF(1&gt;2,2,3); -&gt; 3 mysql&gt; select IF(1&lt;2,’yes’,’no’); -&gt; ‘yes’ mysql&gt; select IF(strcmp(‘test’,’test1’),’yes’,’no’); -&gt; ‘no’ expr1作为整数值被计算，它意味着如果你正在测试浮点或字符串值，你应该使用一个比较操作来做。 mysql&gt; select IF(0.1,1,0); -&gt; 0 mysql&gt; select IF(0.1&lt;&gt;0,1,0); -&gt; 1 在上面的第一种情况中，IF(0.1)返回0，因为0.1被变换到整数值, 导致测试IF(0)。这可能不是你期望的。在第二种情况中，比较测试原来的浮点值看它是否是非零，比较的结果被用作一个整数。 CASE value WHEN [compare-value] THEN result [WHEN [compare-value] THEN result ] [ELSE result] END CASE WHEN [condition] THEN result [WHEN [condition] THEN result ] [ELSE result] END 第一个版本返回result，其中value=compare-value。第二个版本中如果第一个条件为真，返回result。如果没有匹配的result值，那么结果在ELSE后的result被返回。如果没有ELSE部分，那么NULL被返回。 mysql&gt; SELECT CASE 1 WHEN 1 THEN “one” WHEN 2 THEN “two” ELSE “more” END; -&gt; “one” mysql&gt; SELECT CASE WHEN 1&gt;0 THEN “true” ELSE “false” END; -&gt; “true” mysql&gt; SELECT CASE BINARY “B” when “a” then 1 when “b” then 2 END; -&gt; NULL 数学函数 所有的数学函数在一个出错的情况下返回NULL。 - 单目减。改变参数的符号。 mysql&gt; select - 2; 注意，如果这个操作符与一个BIGINT使用，返回值是一个BIGINT！这意味着你应该避免在整数上使用-，那可能有值-2^63！ ABS(X) 返回X的绝对值。 mysql&gt; select ABS(2); -&gt; 2 mysql&gt; select ABS(-32); -&gt; 32 该功能可安全用于BIGINT值。 SIGN(X) 返回参数的符号，为-1、0或1，取决于X是否是负数、零或正数。 mysql&gt; select SIGN(-32); -&gt; -1 mysql&gt; select SIGN(0); -&gt; 0 mysql&gt; select SIGN(234); -&gt; 1 MOD(N,M) % 模 (类似C中的%操作符)。返回N被M除的余数。 mysql&gt; select MOD(234, 10); -&gt; 4 mysql&gt; select 253 % 7; -&gt; 1 mysql&gt; select MOD(29,9); -&gt; 2 这个函数可安全用于BIGINT值。  FLOOR(X) 返回不大于X的最大整数值。 mysql&gt; select FLOOR(1.23); -&gt; 1 mysql&gt; select FLOOR(-1.23); -&gt; -2 注意返回值被变换为一个BIGINT！  CEILING(X) 返回不小于X的最小整数值。 mysql&gt; select CEILING(1.23); -&gt; 2 mysql&gt; select CEILING(-1.23); -&gt; -1 注意返回值被变换为一个BIGINT！ ROUND(X) 返回参数X的四舍五入的一个整数。 mysql&gt; select ROUND(-1.23); -&gt; -1 mysql&gt; select ROUND(-1.58); -&gt; -2 mysql&gt; select ROUND(1.58); -&gt; 2 注意返回值被变换为一个BIGINT! ROUND(X,D) 返回参数X的四舍五入的有D为小数的一个数字。如果D为0，结果将没有小数点或小数部分。 mysql&gt; select ROUND(1.298, 1); -&gt; 1.3 mysql&gt; select ROUND(1.298, 0); -&gt; 1 注意返回值被变换为一个BIGINT! EXP(X) 返回值e（自然对数的底）的X次方。 mysql&gt; select EXP(2); -&gt; 7.389056 mysql&gt; select EXP(-2); -&gt; 0.135335 LOG(X) 返回X的自然对数。 mysql&gt; select LOG(2); -&gt; 0.693147 mysql&gt; select LOG(-2); -&gt; NULL 如果你想要一个数字X的任意底B的对数，使用公式LOG(X)/LOG(B)。 LOG10(X) 返回X的以10为底的对数。 mysql&gt; select LOG10(2); -&gt; 0.301030 mysql&gt; select LOG10(100); -&gt; 2.000000 mysql&gt; select LOG10(-100); -&gt; NULL POW(X,Y) POWER(X,Y) 返回值X的Y次幂。 mysql&gt; select POW(2,2); -&gt; 4.000000 mysql&gt; select POW(2,-2); -&gt; 0.250000SQRT(X) 返回非负数X的平方根。 mysql&gt; select SQRT(4); -&gt; 2.000000 mysql&gt; select SQRT(20); -&gt; 4.472136 PI() 返回PI的值（圆周率）。 mysql&gt; select PI(); -&gt; 3.141593 COS(X) 返回X的余弦, 在这里X以弧度给出。 mysql&gt; select COS(PI()); -&gt; -1.000000 SIN(X) 返回X的正弦值，在此X以弧度给出。 mysql&gt; select SIN(PI()); -&gt; 0.000000 TAN(X) 返回X的正切值，在此X以弧度给出。 mysql&gt; select TAN(PI()+1); -&gt; 1.557408 ACOS(X) 返回X反余弦，即其余弦值是X。如果X不在-1到1的范围，返回NULL。 mysql&gt; select ACOS(1); -&gt; 0.000000 mysql&gt; select ACOS(1.0001); -&gt; NULL mysql&gt; select ACOS(0); -&gt; 1.570796 ASIN(X) 返回X反正弦值，即其正弦值是X。L如果X不在-1到1的范围，返回NULL。 mysql&gt; select ASIN(0.2); -&gt; 0.201358 mysql&gt; select ASIN(‘foo’); -&gt; 0.000000 ATAN(X) 返回X的反正切值，即其正切值是X。 mysql&gt; select ATAN(2); -&gt; 1.107149 mysql&gt; select ATAN(-2); -&gt; -1.107149ATAN2(X,Y) 返回2个变量X和Y的反正切。它类似于计算Y/X的反正切，除了两个参数的符号被用来决定结果的象限。 mysql&gt; select ATAN(-2,2); -&gt; -0.785398 mysql&gt; select ATAN(PI(),0); -&gt; 1.570796 COT(X) 返回X的余切。 mysql&gt; select COT(12); -&gt; -1.57267341 mysql&gt; select COT(0); -&gt; NULL RAND() RAND(N) 返回在范围0到1.0内的随机浮点值。如果一个整数参数N被指定，它被用作种子值。 mysql&gt; select RAND(); -&gt; 0.5925 mysql&gt; select RAND(20); -&gt; 0.1811 mysql&gt; select RAND(20); -&gt; 0.1811 mysql&gt; select RAND(); -&gt; 0.2079 mysql&gt; select RAND(); -&gt; 0.7888 你不能在一个ORDER BY子句用RAND()值使用列，因为ORDER BY将重复计算列多次。然而在MySQL3.23中，你可以做： SELECT <em> FROM table_name ORDER BY RAND()，这是有利于得到一个来自SELECT </em> FROM table1,table2 WHERE a=b AND c<d order by rand() limit 1000的集合的随机样本。注意在一个where子句里的一个rand()将在每次where被执行时重新评估。 least(x,y,) 有2和2个以上的参数，返回最小(最小值)的参数。参数使用下列规则进行比较： 如果返回值被使用在一个integer上下文，或所有的参数都是整数值，他们作为整数比较。 如果返回值被使用在一个real上下文，或所有的参数是实数值，他们作为实数比较。 如果任何参数是一个大小敏感的字符串，参数作为大小写敏感的字符串被比较。 在其他的情况下，参数作为大小写无关的字符串被比较。 mysql> select LEAST(2,0); -&gt; 0 mysql&gt; select LEAST(34.0,3.0,5.0,767.0); -&gt; 3.0 mysql&gt; select LEAST(“B”,”A”,”C”); -&gt; “A” 在MySQL 3.22.5以前的版本，你可以使用MIN()而不是LEAST。 GREATEST(X,Y,) 返回最大(最大值)的参数。参数使用与LEAST一样的规则进行比较。 mysql&gt; select GREATEST(2,0); -&gt; 2 mysql&gt; select GREATEST(34.0,3.0,5.0,767.0); -&gt; 767.0 mysql&gt; select GREATEST(“B”,”A”,”C”); -&gt; “C” 在MySQL在 3.22.5 以前的版本, 你能使用MAX()而不是GREATEST.  DEGREES(X) 返回参数X，从弧度变换为角度。 mysql&gt; select DEGREES(PI()); -&gt; 180.000000RADIANS(X) 返回参数X，从角度变换为弧度。 mysql&gt; select RADIANS(90); -&gt; 1.570796 TRUNCATE(X,D) 返回数字X，截断为D位小数。如果D为0，结果将没有小数点或小数部分。 mysql&gt; select TRUNCATE(1.223,1); -&gt; 1.2 mysql&gt; select TRUNCATE(1.999,1); -&gt; 1.9 mysql&gt; select TRUNCATE(1.999,0); -&gt; 1 字符串函数对于针对字符串位置的操作，第一个位置被标记为1。 ASCII(str) 返回字符串str的最左面字符的ASCII代码值。如果str是空字符串，返回0。如果str是NULL，返回NULL。 mysql&gt; select ASCII(‘2’); -&gt; 50 mysql&gt; select ASCII(2); -&gt; 50 mysql&gt; select ASCII(‘dx’); -&gt; 100也可参见ORD()函数。 ORD(str) 如果字符串str最左面字符是一个多字节字符，通过以格式((first byte ASCII code)*256+(second byte ASCII code))[*256+third byte ASCII code]返回字符的ASCII代码值来返回多字节字符代码。如果最左面的字符不是一个多字节字符。返回与ASCII()函数返回的相同值。 mysql&gt; select ORD(‘2’); -&gt; 50 CONV(N,from_base,to_base) 在不同的数字基之间变换数字。返回数字N的字符串数字，从from_base基变换为to_base基，如果任何参数是NULL，返回NULL。参数N解释为一个整数，但是可以指定为一个整数或一个字符串。最小基是2且最大的基是36。如果to_base是一个负数，N被认为是一个有符号数，否则，N被当作无符号数。 CONV以64位点精度工作。 mysql&gt; select CONV(“a”,16,2); -&gt; ‘1010’ mysql&gt; select CONV(“6E”,18,8); -&gt; ‘172’ mysql&gt; select CONV(-17,10,-18); -&gt; ‘-H’ mysql&gt; select CONV(10+”10”+’10’+0xa,10,10); -&gt; ‘40’ BIN(N) 返回二进制值N的一个字符串表示，在此N是一个长整数(BIGINT)数字，这等价于CONV(N,10,2)。如果N是NULL，返回NULL。 mysql&gt; select BIN(12); -&gt; ‘1100’ OCT(N) 返回八进制值N的一个字符串的表示，在此N是一个长整型数字，这等价于CONV(N,10,8)。如果N是NULL，返回NULL。 mysql&gt; select OCT(12); -&gt; ‘14’ HEX(N) 返回十六进制值N一个字符串的表示，在此N是一个长整型(BIGINT)数字，这等价于CONV(N,10,16)。如果N是NULL，返回NULL。 mysql&gt; select HEX(255); -&gt; ‘FF’ CHAR(N,) CHAR()将参数解释为整数并且返回由这些整数的ASCII代码字符组成的一个字符串。NULL值被跳过。 mysql&gt; select CHAR(77,121,83,81,’76’); -&gt; ‘MySQL’ mysql&gt; select CHAR(77,77.3,’77.3’); -&gt; ‘MMM’ CONCAT(str1,str2,) 返回来自于参数连结的字符串。如果任何参数是NULL，返回NULL。可以有超过2个的参数。一个数字参数被变换为等价的字符串形式。 mysql&gt; select CONCAT(‘My’, ‘S’, ‘QL’); -&gt; ‘MySQL’ mysql&gt; select CONCAT(‘My’, NULL, ‘QL’); -&gt; NULL mysql&gt; select CONCAT(14.3); -&gt; ‘14.3’ LENGTH(str) OCTET_LENGTH(str) CHAR_LENGTH(str) CHARACTER_LENGTH(str) 返回字符串str的长度。 mysql&gt; select LENGTH(‘text’); -&gt; 4 mysql&gt; select OCTET_LENGTH(‘text’); -&gt; 4 注意，对于多字节字符，其CHAR_LENGTH()仅计算一次。 LOCATE(substr,str) POSITION(substr IN str) 返回子串substr在字符串str第一个出现的位置，如果substr不是在str里面，返回0. mysql&gt; select LOCATE(‘bar’, ‘foobarbar’); -&gt; 4 mysql&gt; select LOCATE(‘xbar’, ‘foobar’); -&gt; 0 该函数是多字节可靠的。  LOCATE(substr,str,pos) 返回子串substr在字符串str第一个出现的位置，从位置pos开始。如果substr不是在str里面，返回0。 mysql&gt; select LOCATE(‘bar’, ‘foobarbar’,5); -&gt; 7 这函数是多字节可靠的。 INSTR(str,substr) 返回子串substr在字符串str中的第一个出现的位置。这与有2个参数形式的LOCATE()相同，除了参数被颠倒。 mysql&gt; select INSTR(‘foobarbar’, ‘bar’); -&gt; 4 mysql&gt; select INSTR(‘xbar’, ‘foobar’); -&gt; 0 这函数是多字节可靠的。 LPAD(str,len,padstr) 返回字符串str，左面用字符串padstr填补直到str是len个字符长。 mysql&gt; select LPAD(‘hi’,4,’??’); -&gt; ‘??hi’ RPAD(str,len,padstr) 返回字符串str，右面用字符串padstr填补直到str是len个字符长。 mysql&gt; select RPAD(‘hi’,5,’?’); -&gt; ‘hi???’ LEFT(str,len) 返回字符串str的最左面len个字符。 mysql&gt; select LEFT(‘foobarbar’, 5); -&gt; ‘fooba’ 该函数是多字节可靠的。 RIGHT(str,len) 返回字符串str的最右面len个字符。 mysql&gt; select RIGHT(‘foobarbar’, 4); -&gt; ‘rbar’ 该函数是多字节可靠的。 SUBSTRING(str,pos,len) SUBSTRING(str FROM pos FOR len) MID(str,pos,len) 从字符串str返回一个len个字符的子串，从位置pos开始。使用FROM的变种形式是ANSI SQL92语法。 mysql&gt; select SUBSTRING(‘Quadratically’,5,6); -&gt; ‘ratica’ 该函数是多字节可靠的。 SUBSTRING(str,pos) SUBSTRING(str FROM pos) 从字符串str的起始位置pos返回一个子串。 mysql&gt; select SUBSTRING(‘Quadratically’,5); -&gt; ‘ratically’ mysql&gt; select SUBSTRING(‘foobarbar’ FROM 4); -&gt; ‘barbar’ 该函数是多字节可靠的。 SUBSTRING_INDEX(str,delim,count) 返回从字符串str的第count个出现的分隔符delim之后的子串。如果count是正数，返回最后的分隔符到左边(从左边数) 的所有字符。如果count是负数，返回最后的分隔符到右边的所有字符(从右边数)。 mysql&gt; select SUBSTRING_INDEX(‘<a href="http://www.mysql.com&#39;" target="_blank" rel="noopener">www.mysql.com&#39;</a>, ‘.’, 2); -&gt; ‘<a href="http://www.mysql&#39;" target="_blank" rel="noopener">www.mysql&#39;</a> mysql&gt; select SUBSTRING_INDEX(‘<a href="http://www.mysql.com&#39;" target="_blank" rel="noopener">www.mysql.com&#39;</a>, ‘.’, -2); -&gt; ‘mysql.com’ 该函数对多字节是可靠的。 LTRIM(str) 返回删除了其前置空格字符的字符串str。 mysql&gt; select LTRIM(‘  barbar’); -&gt; ‘barbar’ RTRIM(str) 返回删除了其拖后空格字符的字符串str。 mysql&gt; select RTRIM(‘barbar   ‘); -&gt; ‘barbar’ 该函数对多字节是可靠的。  TRIM([[BOTH | LEADING | TRAILING] [remstr] FROM] str) 返回字符串str，其所有remstr前缀或后缀被删除了。如果没有修饰符BOTH、LEADING或TRAILING给出，BOTH被假定。如果remstr没被指定，空格被删除。 mysql&gt; select TRIM(‘  bar   ‘); -&gt; ‘bar’ mysql&gt; select TRIM(LEADING ‘x’ FROM ‘xxxbarxxx’); -&gt; ‘barxxx’ mysql&gt; select TRIM(BOTH ‘x’ FROM ‘xxxbarxxx’); -&gt; ‘bar’ mysql&gt; select TRIM(TRAILING ‘xyz’ FROM ‘barxxyz’); -&gt; ‘barx’ 该函数对多字节是可靠的。 SOUNDEX(str) 返回str的一个同音字符串。听起来“大致相同”的2个字符串应该有相同的同音字符串。一个“标准”的同音字符串长是4个字符，但是SOUNDEX()函数返回一个任意长的字符串。你可以在结果上使用SUBSTRING()得到一个“标准”的 同音串。所有非数字字母字符在给定的字符串中被忽略。所有在A-Z之外的字符国际字母被当作元音。 mysql&gt; select SOUNDEX(‘Hello’); -&gt; ‘H400’ mysql&gt; select SOUNDEX(‘Quadratically’); -&gt; ‘Q36324’ SPACE(N) 返回由N个空格字符组成的一个字符串。 mysql&gt; select SPACE(6); -&gt; ‘      ‘ REPLACE(str,from_str,to_str) 返回字符串str，其字符串from_str的所有出现由字符串to_str代替。 mysql&gt; select REPLACE(‘<a href="http://www.mysql.com&#39;" target="_blank" rel="noopener">www.mysql.com&#39;</a>, ‘w’, ‘Ww’); -&gt; ‘WwWwWw.mysql.com’ 该函数对多字节是可靠的。 REPEAT(str,count) 返回由重复countTimes次的字符串str组成的一个字符串。如果count &lt;= 0，返回一个空字符串。如果str或count是NULL，返回NULL。 mysql&gt; select REPEAT(‘MySQL’, 3); -&gt; ‘MySQLMySQLMySQL’ REVERSE(str) 返回颠倒字符顺序的字符串str。 mysql&gt; select REVERSE(‘abc’); -&gt; ‘cba’ 该函数对多字节可靠的。 INSERT(str,pos,len,newstr) 返回字符串str，在位置pos起始的子串且len个字符长得子串由字符串newstr代替。 mysql&gt; select INSERT(‘Quadratic’, 3, 4, ‘What’); -&gt; ‘QuWhattic’ 该函数对多字节是可靠的。 ELT(N,str1,str2,str3,) 如果N= 1，返回str1，如果N= 2，返回str2，等等。如果N小于1或大于参数个数，返回NULL。ELT()是FIELD()反运算。 mysql&gt; select ELT(1, ‘ej’, ‘Heja’, ‘hej’, ‘foo’); -&gt; ‘ej’ mysql&gt; select ELT(4, ‘ej’, ‘Heja’, ‘hej’, ‘foo’); -&gt; ‘foo’ FIELD(str,str1,str2,str3,) 返回str在str1, str2, str3, 清单的索引。如果str没找到，返回0。FIELD()是ELT()反运算。 mysql&gt; select FIELD(‘ej’, ‘Hej’, ‘ej’, ‘Heja’, ‘hej’, ‘foo’); -&gt; 2 mysql&gt; select FIELD(‘fo’, ‘Hej’, ‘ej’, ‘Heja’, ‘hej’, ‘foo’); -&gt; 0 FIND_IN_SET(str,strlist) 如果字符串str在由N子串组成的表strlist之中，返回一个1到N的值。一个字符串表是被“,”分隔的子串组成的一个字符串。如果第一个参数是一个常数字符串并且第二个参数是一种类型为SET的列，FIND_IN_SET()函数被优化而使用位运算！如果str不是在strlist里面或如果strlist是空字符串，返回0。如果任何一个参数是NULL，返回NULL。如果第一个参数包含一个“,”，该函数将工作不正常。 mysql&gt; SELECT FIND_IN_SET(‘b’,’a,b,c,d’); -&gt; 2 MAKE_SET(bits,str1,str2,) 返回一个集合 (包含由“,”字符分隔的子串组成的一个字符串)，由相应的位在bits集合中的的字符串组成。str1对应于位0，str2对应位1，等等。在str1, str2, 中的NULL串不添加到结果中。 mysql&gt; SELECT MAKE_SET(1,’a’,’b’,’c’); -&gt; ‘a’ mysql&gt; SELECT MAKE_SET(1 | 4,’hello’,’nice’,’world’); -&gt; ‘hello,world’ mysql&gt; SELECT MAKE_SET(0,’a’,’b’,’c’); -&gt; ‘’ EXPORT_SET(bits,on,off,[separator,[number_of_bits]]) 返回一个字符串，在这里对于在“bits”中设定每一位，你得到一个“on”字符串，并且对于每个复位(reset)的位，你得到一个“off”字符串。每个字符串用“separator”分隔(缺省“,”)，并且只有“bits”的“number_of_bits” (缺省64)位被使用。 mysql&gt; select EXPORT_SET(5,’Y’,’N’,’,’,4) -&gt; Y,N,Y,N LCASE(str) LOWER(str) 返回字符串str，根据当前字符集映射(缺省是ISO-8859-1 Latin1)把所有的字符改变成小写。该函数对多字节是可靠的。 mysql&gt; select LCASE(‘QUADRATICALLY’); -&gt; ‘quadratically’ UCASE(str) UPPER(str) 返回字符串str，根据当前字符集映射(缺省是ISO-8859-1 Latin1)把所有的字符改变成大写。该函数对多字节是可靠的。 mysql&gt; select UCASE(‘Hej’); -&gt; ‘HEJ’ 该函数对多字节是可靠的。 LOAD_FILE(file_name) 读入文件并且作为一个字符串返回文件内容。文件必须在服务器上，你必须指定到文件的完整路径名，而且你必须有file权限。文件必须所有内容都是可读的并且小于max_allowed_packet。如果文件不存在或由于上面原因之一不能被读出，函数返回NULL。 mysql&gt; UPDATE table_name SET blob_column=LOAD_FILE(“/tmp/picture”) WHERE id=1; MySQL必要时自动变换数字为字符串，并且反过来也如此： mysql&gt; SELECT 1+”1”; -&gt; 2 mysql&gt; SELECT CONCAT(2,’ test’); -&gt; ‘2 test’ 如果你想要明确地变换一个数字到一个字符串，把它作为参数传递到CONCAT()。 如果字符串函数提供一个二进制字符串作为参数，结果字符串也是一个二进制字符串。被变换到一个字符串的数字被当作是一个二进制字符串。这仅影响比较。   日期和时间函数   对于每个类型拥有的值范围以及并且指定日期何时间值的有效格式的描述见7.3.6 日期和时间类型。 这里是一个使用日期函数的例子。下面的查询选择了所有记录，其date_col的值是在最后30天以内： mysql&gt; SELECT something FROM table WHERE TO_DAYS(NOW()) - TO_DAYS(date_col) &lt;= 30; DAYOFWEEK(date) 返回日期date的星期索引(1=星期天，2=星期一, ……7=星期六)。这些索引值对应于ODBC标准。 mysql&gt; select DAYOFWEEK(‘1998-02-03’); -&gt; 3 WEEKDAY(date) 返回date的星期索引(0=星期一，1=星期二, ……6= 星期天)。 mysql&gt; select WEEKDAY(‘1997-10-04 22:23:00’); -&gt; 5 mysql&gt; select WEEKDAY(‘1997-11-05’); -&gt; 2 DAYOFMONTH(date) 返回date的月份中日期，在1到31范围内。 mysql&gt; select DAYOFMONTH(‘1998-02-03’); -&gt; 3 DAYOFYEAR(date) 返回date在一年中的日数, 在1到366范围内。 mysql&gt; select DAYOFYEAR(‘1998-02-03’); -&gt; 34 MONTH(date) 返回date的月份，范围1到12。 mysql&gt; select MONTH(‘1998-02-03’); -&gt; 2 DAYNAME(date) 返回date的星期名字。 mysql&gt; select DAYNAME(“1998-02-05”); -&gt; ‘Thursday’ MONTHNAME(date) 返回date的月份名字。 mysql&gt; select MONTHNAME(“1998-02-05”); -&gt; ‘February’ QUARTER(date) 返回date一年中的季度，范围1到4。 mysql&gt; select QUARTER(‘98-04-01’); -&gt; 2 WEEK(date) WEEK(date,first) 对于星期天是一周的第一天的地方，有一个单个参数，返回date的周数，范围在0到52。2个参数形式WEEK()允许你指定星期是否开始于星期天或星期一。如果第二个参数是0，星期从星期天开始，如果第二个参数是1，从星期一开始。 mysql&gt; select WEEK(‘1998-02-20’); -&gt; 7 mysql&gt; select WEEK(‘1998-02-20’,0); -&gt; 7 mysql&gt; select WEEK(‘1998-02-20’,1); -&gt; 8 YEAR(date) 返回date的年份，范围在1000到9999。 mysql&gt; select YEAR(‘98-02-03’); -&gt; 1998 HOUR(time) 返回time的小时，范围是0到23。 mysql&gt; select HOUR(‘10:05:03’); -&gt; 10 MINUTE(time) 返回time的分钟，范围是0到59。 mysql&gt; select MINUTE(‘98-02-03 10:05:03’); -&gt; 5 SECOND(time) 回来time的秒数，范围是0到59。 mysql&gt; select SECOND(‘10:05:03’); -&gt; 3 PERIOD_ADD(P,N) 增加N个月到阶段P（以格式YYMM或YYYYMM)。以格式YYYYMM返回值。注意阶段参数P不是日期值。 mysql&gt; select PERIOD_ADD(9801,2); -&gt; 199803 PERIOD_DIFF(P1,P2) 返回在时期P1和P2之间月数，P1和P2应该以格式YYMM或YYYYMM。注意，时期参数P1和P2不是日期值。 mysql&gt; select PERIOD_DIFF(9802,199703); -&gt; 11 DATE_ADD(date,INTERVAL expr type) DATE_SUB(date,INTERVAL expr type) ADDDATE(date,INTERVAL expr type) SUBDATE(date,INTERVAL expr type) 这些功能执行日期运算。对于MySQL 3.22，他们是新的。ADDDATE()和SUBDATE()是DATE_ADD()和DATE_SUB()的同义词。在MySQL 3.23中，你可以使用+和-而不是DATE_ADD()和DATE_SUB()。（见例子）date是一个指定开始日期的DATETIME或DATE值，expr是指定加到开始日期或从开始日期减去的间隔值一个表达式，expr是一个字符串；它可以以一个“-”开始表示负间隔。type是一个关键词，指明表达式应该如何被解释。EXTRACT(type FROM date)函数从日期中返回“type”间隔。下表显示了type和expr参数怎样被关联： type值  含义  期望的expr格式 SECOND  秒 SECONDS MINUTE  分钟 MINUTES HOUR  时间 HOURS DAY  天 DAYS MONTH  月 MONTHS YEAR  年 YEARS MINUTE_SECOND  分钟和秒 “MINUTES:SECONDS” HOUR_MINUTE  小时和分钟 “HOURS:MINUTES” DAY_HOUR  天和小时 “DAYS HOURS” YEAR_MONTH  年和月 “YEARS-MONTHS” HOUR_SECOND  小时, 分钟， “HOURS:MINUTES:SECONDS” DAY_MINUTE  天, 小时, 分钟 “DAYS HOURS:MINUTES” DAY_SECOND  天, 小时, 分钟, 秒 “DAYS HOURS:MINUTES:SECONDS” MySQL在expr格式中允许任何标点分隔符。表示显示的是建议的分隔符。如果date参数是一个DATE值并且你的计算仅仅包含YEAR、MONTH和DAY部分(即，没有时间部分)，结果是一个DATE值。否则结果是一个DATETIME值。 mysql&gt; SELECT “1997-12-31 23:59:59” + INTERVAL 1 SECOND; -&gt; 1998-01-01 00:00:00 mysql&gt; SELECT INTERVAL 1 DAY + “1997-12-31”; -&gt; 1998-01-01 mysql&gt; SELECT “1998-01-01” - INTERVAL 1 SECOND; -&gt; 1997-12-31 23:59:59 mysql&gt; SELECT DATE_ADD(“1997-12-31 23:59:59”, INTERVAL 1 SECOND); -&gt; 1998-01-01 00:00:00 mysql&gt; SELECT DATE_ADD(“1997-12-31 23:59:59”, INTERVAL 1 DAY); -&gt; 1998-01-01 23:59:59 mysql&gt; SELECT DATE_ADD(“1997-12-31 23:59:59”, INTERVAL “1:1” MINUTE_SECOND); -&gt; 1998-01-01 00:01:00 mysql&gt; SELECT DATE_SUB(“1998-01-01 00:00:00”, INTERVAL “1 1:1:1” DAY_SECOND); -&gt; 1997-12-30 22:58:59 mysql&gt; SELECT DATE_ADD(“1998-01-01 00:00:00”, INTERVAL “-1 10” DAY_HOUR); -&gt; 1997-12-30 14:00:00 mysql&gt; SELECT DATE_SUB(“1998-01-02”, INTERVAL 31 DAY); -&gt; 1997-12-02 mysql&gt; SELECT EXTRACT(YEAR FROM “1999-07-02”); -&gt; 1999 mysql&gt; SELECT EXTRACT(YEAR_MONTH FROM “1999-07-02 01:02:03”); -&gt; 199907 mysql&gt; SELECT EXTRACT(DAY_MINUTE FROM “1999-07-02 01:02:03”); -&gt; 20102 如果你指定太短的间隔值(不包括type关键词期望的间隔部分)，MySQL假设你省掉了间隔值的最左面部分。例如，如果你指定一个type是DAY_SECOND，值expr被希望有天、小时、分钟和秒部分。如果你象”1:10”这样指定值，MySQL假设日子和小时部分是丢失的并且值代表分钟和秒。换句话说，”1:10” DAY_SECOND以它等价于”1:10” MINUTE_SECOND的方式解释，这对那MySQL解释TIME值表示经过的时间而非作为一天的时间的方式有二义性。如果你使用确实不正确的日期，结果是NULL。如果你增加MONTH、YEAR_MONTH或YEAR并且结果日期大于新月份的最大值天数，日子在新月用最大的天调整。 mysql&gt; select DATE_ADD(‘1998-01-30’, Interval 1 month); -&gt; 1998-02-28 注意，从前面的例子中词INTERVAL和type关键词不是区分大小写的。  TO_DAYS(date) 给出一个日期date，返回一个天数(从0年的天数)。 mysql&gt; select TO_DAYS(950501); -&gt; 728779 mysql&gt; select TO_DAYS(‘1997-10-07’); -&gt; 729669 TO_DAYS()不打算用于使用格列高里历(1582)出现前的值。 FROM_DAYS(N) 给出一个天数N，返回一个DATE值。 mysql&gt; select FROM_DAYS(729669); -&gt; ‘1997-10-07’ TO_DAYS()不打算用于使用格列高里历(1582)出现前的值。 DATE_FORMAT(date,format) 根据format字符串格式化date值。下列修饰符可以被用在format字符串中： %M  月名字(January……December) %W  星期名字(Sunday……Saturday) %D  有英语前缀的月份的日期(1st, 2nd, 3rd, 等等。） %Y  年, 数字, 4 位 %y  年, 数字, 2 位 %a  缩写的星期名字(Sun……Sat) %d  月份中的天数, 数字(00……31) %e  月份中的天数, 数字(0……31) %m  月, 数字(01……12) %c  月, 数字(1……12) %b  缩写的月份名字(Jan……Dec) %j  一年中的天数(001……366) %H  小时(00……23) %k  小时(0……23) %h  小时(01……12) %I  小时(01……12) %l  小时(1……12) %i  分钟, 数字(00……59) %r  时间,12 小时(hh:mm:ss [AP]M) %T  时间,24 小时(hh:mm:ss) %S  秒(00……59) %s  秒(00……59) %p  AM或PM %w  一个星期中的天数(0=Sunday ……6=Saturday ） %U  星期(0……52), 这里星期天是星期的第一天 %u  星期(0……52), 这里星期一是星期的第一天 %%  一个文字“%”。 所有的其他字符不做解释被复制到结果中。 mysql&gt; select DATE_FORMAT(‘1997-10-04 22:23:00’, ‘%W %M %Y’); -&gt; ‘Saturday October 1997’ mysql&gt; select DATE_FORMAT(‘1997-10-04 22:23:00’, ‘%H:%i:%s’); -&gt; ‘22:23:00’ mysql&gt; select DATE_FORMAT(‘1997-10-04 22:23:00’, ‘%D %y %a %d %m %b %j’); -&gt; ‘4th 97 Sat 04 10 Oct 277’ mysql&gt; select DATE_FORMAT(‘1997-10-04 22:23:00’, ‘%H %k %I %r %T %S %w’); -&gt; ‘22 22 10 10:23:00 PM 22:23:00 00 6’MySQL3.23中，在格式修饰符字符前需要%。在MySQL更早的版本中，%是可选的。 TIME_FORMAT(time,format) 这象上面的DATE_FORMAT()函数一样使用，但是format字符串只能包含处理小时、分钟和秒的那些格式修饰符。其他修饰符产生一个NULL值或0。 CURDATE() CURRENT_DATE 以’YYYY-MM-DD’或YYYYMMDD格式返回今天日期值，取决于函数是在一个字符串还是数字上下文被使用。 mysql&gt; select CURDATE(); -&gt; ‘1997-12-15’ mysql&gt; select CURDATE() + 0; -&gt; 19971215 CURTIME() CURRENT_TIME 以’HH:MM:SS’或HHMMSS格式返回当前时间值，取决于函数是在一个字符串还是在数字的上下文被使用。 mysql&gt; select CURTIME(); -&gt; ‘23:50:26’ mysql&gt; select CURTIME() + 0; -&gt; 235026 NOW() SYSDATE() CURRENT_TIMESTAMP 以’YYYY-MM-DD HH:MM:SS’或YYYYMMDDHHMMSS格式返回当前的日期和时间，取决于函数是在一个字符串还是在数字的上下文被使用。 mysql&gt; select NOW(); -&gt; ‘1997-12-15 23:50:26’ mysql&gt; select NOW() + 0; -&gt; 19971215235026 UNIX_TIMESTAMP() UNIX_TIMESTAMP(date) 如果没有参数调用，返回一个Unix时间戳记(从’1970-01-01 00:00:00’GMT开始的秒数)。如果UNIX_TIMESTAMP()用一个date参数被调用，它返回从’1970-01-01 00:00:00’ GMT开始的秒数值。date可以是一个DATE字符串、一个DATETIME字符串、一个TIMESTAMP或以YYMMDD或YYYYMMDD格式的本地时间的一个数字。 mysql&gt; select UNIX_TIMESTAMP(); -&gt; 882226357 mysql&gt; select UNIX_TIMESTAMP(‘1997-10-04 22:23:00’); -&gt; 875996580 当UNIX_TIMESTAMP被用于一个TIMESTAMP列，函数将直接接受值，没有隐含的“string-to-unix-timestamp”变换。 FROM_UNIXTIME(unix_timestamp) 以’YYYY-MM-DD HH:MM:SS’或YYYYMMDDHHMMSS格式返回unix_timestamp参数所表示的值，取决于函数是在一个字符串还是或数字上下文中被使用。 mysql&gt; select FROM_UNIXTIME(875996580); -&gt; ‘1997-10-04 22:23:00’ mysql&gt; select FROM_UNIXTIME(875996580) + 0; -&gt; 19971004222300 FROM_UNIXTIME(unix_timestamp,format) 返回表示 Unix 时间标记的一个字符串，根据format字符串格式化。format可以包含与DATE_FORMAT()函数列出的条目同样的修饰符。 mysql&gt; select FROM_UNIXTIME(UNIX_TIMESTAMP(), ‘%Y %D %M %h:%i:%s %x’); -&gt; ‘1997 23rd December 03:43:30 x’ SEC_TO_TIME(seconds) 返回seconds参数，变换成小时、分钟和秒，值以’HH:MM:SS’或HHMMSS格式化，取决于函数是在一个字符串还是在数字上下文中被使用。 mysql&gt; select SEC_TO_TIME(2378); -&gt; ‘00:39:38’ mysql&gt; select SEC_TO_TIME(2378) + 0; -&gt; 3938 TIME_TO_SEC(time) 返回time参数，转换成秒。 mysql&gt; select TIME_TO_SEC(‘22:23:00’); -&gt; 80580 mysql&gt; select TIME_TO_SEC(‘00:39:38’); -&gt; 2378 其他函数 DATABASE() 返回当前的数据库名字。 mysql&gt; select DATABASE(); -&gt; ‘test’ 如果没有当前的数据库，DATABASE()返回空字符串。 USER() 　 SYSTEM_USER() 　 SESSION_USER() 返回当前MySQL用户名。 mysql&gt; select USER(); -&gt; ‘davida@localhost’ 在MySQL 3.22.11或以后版本中，这包括用户名和客户主机名。你可以象这样只提取用户名部分(值是否包括主机名部分均可工作)： mysql&gt; select substring_index(USER(),”@”,1); -&gt; ‘davida’ PASSWORD(str) 从纯文本口令str计算一个口令字符串。该函数被用于为了在user授权表的Password列中存储口令而加密MySQL口令。 mysql&gt; select PASSWORD(‘badpwd’); -&gt; ‘7f84554057dd964b’ PASSWORD()加密是非可逆的。PASSWORD()不以与Unix口令加密的相同的方法执行口令加密。你不应该假定如果你的Unix 口令和你的MySQL口令是一样的，PASSWORD()将导致与在Unix口令文件存储的相同的加密值。见ENCRYPT()。 ENCRYPT(str[,salt]) 使用Unix crypt()系统调用加密str。salt参数应该是一个有2个字符的字符串。（MySQL 3.22.16中，salt可以长于2个字符。） mysql&gt; select ENCRYPT(“hello”); -&gt; ‘VxuFAJXVARROc’ 如果crypt()在你的系统上不可用，ENCRYPT()总是返回NULL。ENCRYPT()只保留str起始8个字符而忽略所有其他，至少在某些系统上是这样。这将由底层的crypt()系统调用的行为决定。 ENCODE(str,pass_str) 使用pass_str作为口令加密str。为了解密结果，使用DECODE()。结果是一个二进制字符串，如果你想要在列中保存它，使用一个BLOB列类型。 DECODE(crypt_str,pass_str) 使用pass_str作为口令解密加密的字符串crypt_str。crypt_str应该是一个由ENCODE()返回的字符串。 MD5(string) 对字符串计算MD5校验和。值作为一个32长的十六进制数字被返回可以，例如用作哈希(hash)键。 mysql&gt; select MD5(“testing”) -&gt; ‘ae2b1fca515949e5d54fb22b8ed95575’ 这是一个“RSA数据安全公司的MD5消息摘要算法”。 LAST_INSERT_ID([expr]) 返回被插入一个AUTO_INCREMENT列的最后一个自动产生的值。见20.4.29 mysql_insert_id()。 mysql&gt; select LAST_INSERT_ID(); -&gt; 195 产生的最后ID以每个连接为基础在服务器被维护，它不会被其他客户改变。如果你更新另外一个有非魔术值(即，不是NULL和不是0的一个值)的AUTO_INCREMENT列，它甚至不会被改变。如果expr作为一个参数在一个UPDATE子句的LAST_INSERT_ID()里面给出，那么参数值作为一个LAST_INSERT_ID()值被返回。这可以用来模仿顺序：首先创建表： mysql&gt; create table sequence (id int not null); mysql&gt; insert into sequence values (0); 然后表能被用来产生顺序号，象这样： mysql&gt; update sequence set id=LAST_INSERT_ID(id+1); 你可以不调用LAST_INSERT_ID()而产生顺序，但是这样使用函数的实用程序在服务器上自动维护ID值作为最后自动产生的值。你可以检索新的ID值，就像你能读入正常MySQL中的任何正常的AUTO_INCREMENT值一样。例如，LAST_INSERT_ID()（没有一个参数 )将返回新ID。C API函数mysql_insert_id()也可被用来得到值。 FORMAT(X,D) 格式化数字X为类似于格式’#,###,###.##’，四舍五入到D为小数。如果D为0，结果将没有小数点和小数部分。 mysql&gt; select FORMAT(12332.123456, 4); -&gt; ‘12,332.1235’ mysql&gt; select FORMAT(12332.1,4); -&gt; ‘12,332.1000’ mysql&gt; select FORMAT(12332.2,0); -&gt; ‘12,332’ VERSION() 返回表明MySQL服务器版本的一个字符串。 mysql&gt; select VERSION(); -&gt; ‘3.22.19b-log’ GET_LOCK(str,timeout) 试图获得由字符串str给定的一个名字的锁定，第二个timeout为超时。如果锁定成功获得，返回1，如果尝试超时了，返回0，或如果发生一个错误，返回NULL(例如从存储器溢出或线程用mysqladmin kill被杀死)。当你执行RELEASE_LOCK()时、执行一个新的GET_LOCK()或线程终止时，一个锁定被释放。该函数可以用来实现应用锁或模拟记录锁，它阻止其他客户用同样名字的锁定请求；赞成一个给定的锁定字符串名字的客户可以使用字符串执行子协作建议的锁定。 mysql&gt; select GET_LOCK(“lock1”,10); -&gt; 1 mysql&gt; select GET_LOCK(“lock2”,10); -&gt; 1 mysql&gt; select RELEASE_LOCK(“lock2”); -&gt; 1 mysql&gt; select RELEASE_LOCK(“lock1”); -&gt; NULL 注意，第二个RELEASE_LOCK()调用返回NULL，因为锁”lock1”自动地被第二个GET_LOCK()调用释放。 RELEASE_LOCK(str) 释放字符串str命名的通过GET_LOCK()获得的锁。如果锁被释放，返回1，如果锁没被这个线程锁定(在此情况下锁没被释放)返回0，并且如果命名的锁不存在，返回NULL。如果锁从来没有通过调用GET_LOCK()获得或如果它已经被释放了，锁将不存在。 BENCHMARK(count,expr) BENCHMARK()函数重复countTimes次执行表达式expr，它可以用于计时MySQL处理表达式有多快。结果值总是0。意欲用于mysql客户，它报告查询的执行时间。 mysql&gt; select BENCHMARK(1000000,encode(“hello”,”goodbye”)); +———————————————-+ | BENCHMARK(1000000,encode(“hello”,”goodbye”)) | +———————————————-+ |                                            0 | +———————————————-+ 1 row in set (4.74 sec) 报告的时间是客户端的经过时间，不是在服务器端的CPU时间。执行BENCHMARK()若干次可能是明智的，并且注意服务器机器的负载有多重来解释结果。 与GROUP BY子句一起使用的函数 如果你在不包含GROUP BY子句的一个语句中使用聚合函数，它等价于聚合所有行。 COUNT(expr) 返回由一个SELECT语句检索出来的行的非NULL值的数目。 mysql&gt; select student.student_name,COUNT(<em>) from student,course where student.student_id=course.student_id GROUP BY student_name; COUNT(</em>)在它返回的检索出来的行数目上有些不同，不管他们是否包含NULL值。如果SELECT从一个表检索，或没有检索出其他列并且没有WHERE子句，COUNT(<em>)被优化以便快速地返回。例如： mysql&gt; select COUNT(</em>) from student; COUNT(DISTINCT expr,[expr]) 返回一个不同值的数目。 mysql&gt; select COUNT(DISTINCT results) from student; 在MySQL中，你可以通过给出一个表达式列表以得到不同的表达式组合的数目。在 ANSI SQL中，你可能必须在CODE(DISTINCT ..)内进行所有表达式的连接。 AVG(expr) 返回expr的平均值。 mysql&gt; select student_name, AVG(test_score) from student GROUP BY student_name; MIN(expr) 　 MAX(expr) 返回expr的最小或最大值。MIN()和MAX()可以有一个字符串参数；在这种的情况下，他们返回最小或最大的字符串值。 mysql&gt; select student_name, MIN(test_score), MAX(test_score) from student GROUP BY student_name; SUM(expr) 返回expr的和。注意，如果返回的集合没有行，它返回NULL！ STD(expr) 　 STDDEV(expr) 返回expr标准差(deviation)。这是对 ANSI SQL 的扩展。该函数的形式STDDEV()是提供与Oracle的兼容性。 BIT_OR(expr) 返回expr里所有位的位或。计算用 64 位(BIGINT)精度进行。 BIT_AND(expr) 返回expr里所有位的位与。计算用 64 位(BIGINT)精度进行。 MySQL扩展了GROUP BY的用法。你可以不出现在的GROUP BY部分的SELECT表达式中使用列或计算，这表示这个组的任何可能值。你可以使用它是性能更好，避免在不必要的项目上排序和分组。例如，你在下列查询中不需要在customer.name上聚合： mysql&gt; select order.custid,customer.name,max(payments) from order,customer where order.custid = customer.custid GROUP BY order.custid; 在 ANSI SQL中，你将必须将customer.name加到GROUP BY子句。在MySQL中，名字是冗余的。 如果你从GROUP BY部分省略的列在组中不是唯一的，不要使用这个功能。 在某些情况下，你可以使用MIN()和MAX()获得一个特定的列值，即使它不是唯一的。下例给出从包含sort列中最小值的行的column值： substr(MIN(concat(sort,space(6-length(sort)),column),7,length(column))) 注意，如果你正在使用MySQL 3.22(或更早)或如果你正在试图遵从ANSI SQL，你不能在GROUP BY或ORDER BY子句中使用表达式。你可以通过使用表达式的一个别名解决此限制： mysql&gt; SELECT id,FLOOR(value/100) AS val FROM tbl_name GROUP BY id,val ORDER BY val; 在MySQL3.23中，你可以这样做： mysql&gt; SELECT id,FLOOR(value/100) FROM tbl_name ORDER BY RAND(); 复制代码 学习的语句 /<strong><strong><strong>**</strong></strong></strong>字符串函数<strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong>/ select insert(‘ring’,2,0,’ok’); /<em>从2的地方插入ok字符，插入时替换0个字符</em>/ select repeat(‘ring’,2); /<em>重复输出字符串2次</em>/ select REVERSE(‘ring’); /<em>反写</em>/ select mid(‘ring’,2,2);/<em>从某个位置取某个长度的字符</em>/ select instr(‘ring’,’i’);/<em>查找字符</em>/ select replace(‘very good’,’o’,’O’); /<em>替换所有的字符</em>/ select LENGTH(‘very good’); /<em>返回字符串长度</em>/ select ascii(‘abc’);/<em>返回最左边的字符ascii码</em>/ select space(3);/<em>产生3次空格</em>/ select CONCAT(‘ri’,’n’,’g’,’ wang’); /<em>组合成字符串</em>/ select lcase(‘RING’); /<em>小写</em>/ select ucase(‘ring’); /<em>转换成大写</em>/ select substring_index(user(),‘@’,1); /<em>提取当前的用户名,表示提取@左边第一出现的字符，如果后面的为负数则提取右边的字符</em>/ /<strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong>数学函数<strong><strong><strong><strong>**</strong></strong></strong></strong>/ select conv(‘ee’,16,10); /<em>将’ee’从16转换成10，16和10可以是任意进制</em>/ select bin(10); /*2进制*/ select hex(10); /*16进制*/ select oct(10); /*10进制*/ select round(12.5678,2); /<em>将小数保留两位，四舍五入</em>/ select round(123.8767); /<em>转换为整形，因为没有小数位</em>/ select char(65,66,99); /<em>将ascill码组合成字符串</em>/ select least(3,6,5,1); /<em>最小数字</em>/ select greatest(6,3,2,8,3,1);  /<em>最大数字</em>/ select power(2,3); /*2的3次幂*/ select sqrt(9); /<em>开方</em>/ select pi(); /<em>圆周率 </em>/ select RAND(11); /<em>返回0-1的随机数，指定种子，每次的数都一样</em>/ select rand();  /<em>没有指定种子，默认为时间为种子</em>/ /<strong><em>**</em></strong>日期时间函数<strong><strong><strong><strong>*</strong></strong></strong></strong>/ select now(); select to_days(‘2008-07-6’); /<em>转换成天数</em>/ select to_days(‘2008-8-8’)-to_days(now());/<em>相差的天数</em>/ select day(now());/<em>该日期中的时，分，秒，天，月，年 hour(),minute(),second(),month(),year()</em>/ select dayofyear(‘2008-2-2’); /<em>返回该年已过的天数</em>/ select monthname(now()); /<em>返回月的英文名</em>/ select dayname(now());/<em>星期几的英文名</em>/ select week(now(),0); /<em>表示当前的日期是第几周，后面的数字0表示从周日开始算，1表示从周一开始算</em>/ select from_days(734215); /<em>返回该天数表示的日期</em>/ select DATEDIFF(now(),’2008-8-8’); /<em>前面的日期减去后面的日期所得的天数</em>/ select date_add(now(),interval 2 day); /<em>表示给当前的日期加2天</em>/ select date_add(now(),interval 2 month); /<em>表示给当前的日期加2个月</em>/ select CURRENT_DATE(); /<em>当前日期，短格式</em>/ select CURRENT_TIME();/<em>当前的时间</em>/ select current_user();/<em>当前的用户</em>/ select date_format(now(),’%Y-%m-%d %H:%i:%s’);/<em>日期的格式，Y表示4位，H表示24小时制</em>/ select date_format(now(),’%T’); /<em>只显示时间，没有日期，T表示24小时制,r表示12小时制</em>/ select date_format(‘2008-08-08 14:08:08’,’%Y-%m-%d’); /<em>显示日期部分，时间不要</em>/ select date_format(now(),’%Y-%m-%d %H:%i:%s %W’); /<em>带日期的</em>/ select date_format(‘2008-8-8’,’%W’);/<em>该日期的星期几</em>/ /<strong><strong>***</strong></strong>其他函数<strong><strong><strong><em>**</em></strong></strong></strong>/ select database();/<em>返回当前的数据库名字</em>/ select substring_index(CURRENT_USER(),‘@’,1);/<em>提取当前的用户名</em>/ select password(‘123’); /*mysql的加密方式*/ select MD5(‘123’);/*32位的md5加密*/ select LAST_INSERT_ID();/<em>返回最后一次自动产生的ID值</em>/ select format(123456789.565378,4);/<em>输出123,456,789.5654有四舍五入</em>/ /<strong><strong><strong>***</strong></strong></strong>控制流函数<strong><strong><strong>*</strong></strong></strong>/ select if(1,2,3);/<em>如果第一参数为空则输入第三参数，否则输入第二个参数,后面的参数可以是字符,第一为整形</em>/ select ifnull(null,2); /<em>如果第一参数为空则输出第二个参数，否则输出第一参数</em>/ select name, case when age&lt;=20 then ‘年轻’ when age&lt;=40 then ‘壮年’ when age&lt;=50 then ‘中年’ else ‘老年’ end as ‘agestr’, date_format(adddate,’%Y-%m-%d’) as ‘adddate’ from users; /*case 语句的用法*/</d></p>
+
+    </div>
+    <p class="post-meta">
+        <span class="post-cat">分类：
+            <a class="cat-link" href="/categories/MySQL/">MySQL</a>
+        </span>
+        <span class="post-tags">
+            标签：
+            
+    
+        <a href="/tags/MySQL/" title="MySQL">MySQL</a> / 
+    
+        <a href="/tags/函数/" title="函数">函数</a>
+    
+
+        </span>
+    </p>
+</article>
+<!-- 分享按钮 -->
+
+  <div class="article-share clearfix text-center">
+    <div class="share-area">
+      <span class="share-txt">分享到：</span>
+      <a href="javascript: window.open('http://service.weibo.com/share/share.php?url=' + encodeURIComponent(location.href) + '&title=' + document.title + '&language=zh_cn');" class="share-icon weibo"></a>
+      <a href="javascript: alert('请复制链接到微信并发送');" class="share-icon wechat"></a>
+      <a href="javascript: window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + document.title);" class="share-icon qqzone"></a>
+      <a href="javascript: window.open('http://connect.qq.com/widget/shareqq/index.html?url=' + encodeURIComponent(location.href) + '&desc=Jelon个人博客&title=' + document.title + '&callback=' + encodeURIComponent(location.href));" class="share-icon qq"></a>
+      <a href="javascript: window.open('http://shuo.douban.com/!service/share?href=' + encodeURIComponent(location.href) + '&name=' + document.title + '&text=' + document.title);" class="share-icon douban"></a>
+    </div>
+  </div>
+
+
+<!-- 上一篇/下一篇 -->
+
+<div class="article-nav clearfix">
+    
+    <span class="prev fl">
+        上一篇<br>
+        <a href="/2015/12/22/2019030500051/">
+            
+                java插入mysql 300万-2200万数据，优化查询
+            
+        </a>
+    </span>
+    
+
+    
+    <span class="next fr">
+        下一篇<br>
+        <a href="/2015/12/21/2019030500022/">
+            
+                大批量数据修改时发现有一行数据被锁住了，一直处于等待状态的问题解决
+            
+        </a>
+    </span>
+    
+</div>
+
+<!-- 文章评论 -->
+
+  <script src="/js/comment.js"></script>
+  <div id="comments" class="comment">
+    <!--
+    <div class="sign-bar">
+      GitHub 已登录!
+      <span class="sign-link">登出</span>
+    </div>
+    <section class="box">
+      <div class="com-avatar"><img src="/img/jelon.jpg" alt="avatar"></div>
+      <div class="com-text">
+        <div class="main">
+          <textarea class="text-area-edited show" placeholder="欢迎评论！"></textarea>
+          <div class="text-area-preview"></div>
+        </div>
+        <div class="switch">
+          <div class="switch-item on">编辑</div>
+          <div class="switch-item">预览</div>
+        </div>
+        <div class="button">提交</div>
+      </div>
+    </section>
+    <section class="tips">注：评论支持 markdown 语法！</section>
+    <section class="list-wrap">
+      <ul class="list">
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">张德龙</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like liked">已赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">333333</div>
+          </div>
+        </li>
+        <li>
+          <div class="user-avatar">
+            <a href="/">
+              <img src="/img/jelon.jpg" alt="user-avatar">
+            </a>
+          </div>
+          <div class="user-comment">
+            <div class="user-comment-header">
+              <span class="post-name">刘德华</span>
+              <span class="post-time">2017年12月12日</span>
+              <span class="like">点赞</span>
+              <span class="like-num">2</span>
+            </div>
+            <div class="user-comment-body">vvvvv</div>
+          </div>
+        </li>
+      </ul>
+      <div class="page-nav">
+        <a href="javascript: void(0);" class="item">1</a>
+        <a href="javascript: void(0);" class="item">2</a>
+        <a href="javascript: void(0);" class="item current">3</a>
+      </div>
+    </section>
+    -->
+  </div>
+  <script>
+  JELON.Comment({
+    container: 'comments',
+    label: '2019030500074' || '2015/12/22/2019030500074/',
+    owner: 'your_github_id',
+    repo: 'your_blog_comments',
+    clientId: 'your_client_id',
+    clientSecret: 'your_client_secret'
+  });
+  </script>
+
+
+            </div>
+
+        </section>
+        <!-- 侧栏部分 -->
+<aside class="sidebar">
+    <section class="widget">
+        <h3 class="widget-hd"><strong>文章分类</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/MySQL/">MySQL</a>
+        <span class="badge">(92)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Oracle/">Oracle</a>
+        <span class="badge">(40)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/开发语言/">开发语言</a>
+        <span class="badge">(7)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/">NOSQL</a>
+        <span class="badge">(17)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/其他数据库/">其他数据库</a>
+        <span class="badge">(4)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/SQL-Server/">SQL Server</a>
+        <span class="badge">(13)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/">Oracle</a>
+        <span class="badge">(3)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/MySQL/Oracle/SQL-Server/">SQL Server</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/NOSQL/开发语言/">开发语言</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+</ul>
+    </section>
+
+    
+    <section class="widget">
+        <h3 class="widget-hd"><strong>热门标签</strong></h3>
+        <!-- 文章标签 -->
+<div class="widget-bd tag-wrap">
+  
+    <a class="tag-item" href="/tags/MySQL/" title="MySQL">MySQL (71)</a>
+  
+    <a class="tag-item" href="/tags/位运算/" title="位运算">位运算 (0)</a>
+  
+    <a class="tag-item" href="/tags/PL-SQL/" title="PL/SQL">PL/SQL (5)</a>
+  
+    <a class="tag-item" href="/tags/数据库/" title="数据库">数据库 (7)</a>
+  
+    <a class="tag-item" href="/tags/视图/" title="视图">视图 (1)</a>
+  
+    <a class="tag-item" href="/tags/sqlplus/" title="sqlplus">sqlplus (1)</a>
+  
+    <a class="tag-item" href="/tags/hibernate/" title="hibernate">hibernate (2)</a>
+  
+    <a class="tag-item" href="/tags/session/" title="session">session (1)</a>
+  
+    <a class="tag-item" href="/tags/方法/" title="方法">方法 (1)</a>
+  
+    <a class="tag-item" href="/tags/B-Tree/" title="B+Tree">B+Tree (1)</a>
+  
+    <a class="tag-item" href="/tags/索引/" title="索引">索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/redis/" title="redis">redis (6)</a>
+  
+    <a class="tag-item" href="/tags/SSDB/" title="SSDB">SSDB (1)</a>
+  
+    <a class="tag-item" href="/tags/ORA-00600/" title="ORA-00600">ORA-00600 (1)</a>
+  
+    <a class="tag-item" href="/tags/存储过程/" title="存储过程">存储过程 (3)</a>
+  
+    <a class="tag-item" href="/tags/CentOS/" title="CentOS">CentOS (2)</a>
+  
+    <a class="tag-item" href="/tags/SQL/" title="SQL">SQL (17)</a>
+  
+    <a class="tag-item" href="/tags/allow/" title="allow">allow (1)</a>
+  
+    <a class="tag-item" href="/tags/Apache/" title="Apache">Apache (1)</a>
+  
+    <a class="tag-item" href="/tags/deny/" title="deny">deny (1)</a>
+  
+    <a class="tag-item" href="/tags/druid/" title="druid">druid (1)</a>
+  
+    <a class="tag-item" href="/tags/心跳/" title="心跳">心跳 (1)</a>
+  
+    <a class="tag-item" href="/tags/事务/" title="事务">事务 (5)</a>
+  
+    <a class="tag-item" href="/tags/分布式/" title="分布式">分布式 (1)</a>
+  
+    <a class="tag-item" href="/tags/消息/" title="消息">消息 (1)</a>
+  
+    <a class="tag-item" href="/tags/KeepAlived/" title="KeepAlived">KeepAlived (1)</a>
+  
+    <a class="tag-item" href="/tags/Oracle/" title="Oracle">Oracle (30)</a>
+  
+    <a class="tag-item" href="/tags/schedule-job/" title="schedule job">schedule job (1)</a>
+  
+    <a class="tag-item" href="/tags/批量/" title="批量">批量 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库/" title="分库">分库 (1)</a>
+  
+    <a class="tag-item" href="/tags/分库分表/" title="分库分表">分库分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/分表/" title="分表">分表 (1)</a>
+  
+    <a class="tag-item" href="/tags/结构同步/" title="结构同步">结构同步 (1)</a>
+  
+    <a class="tag-item" href="/tags/truncate/" title="truncate">truncate (1)</a>
+  
+    <a class="tag-item" href="/tags/Hash索引/" title="Hash索引">Hash索引 (1)</a>
+  
+    <a class="tag-item" href="/tags/InnoDB/" title="InnoDB">InnoDB (3)</a>
+  
+    <a class="tag-item" href="/tags/MyISAM/" title="MyISAM">MyISAM (3)</a>
+  
+    <a class="tag-item" href="/tags/索引优化/" title="索引优化">索引优化 (1)</a>
+  
+    <a class="tag-item" href="/tags/Excel/" title="Excel">Excel (1)</a>
+  
+</div>
+    </section>
+    
+
+    
+
+    
+    <!-- 友情链接 -->
+    <section class="widget">
+        <h3 class="widget-hd"><strong>友情链接</strong></h3>
+        <!-- 文章分类 -->
+<ul class="widget-bd">
+    
+        <li>
+            <a href="https://jelon.top" target="_blank" title="Jelon个人前端小站">前端博客小站</a>
+        </li>
+    
+        <li>
+            <a href="https://www.baidu.com" target="_blank" title="百度搜索">百度</a>
+        </li>
+    
+</ul>
+    </section>
+    
+</aside>
+<!-- / 侧栏部分 -->
+    </div>
+
+    <!-- 博客底部 -->
+    <footer class="footer">
+    &copy;
+    
+        2016-2019
+    
+
+    <a href="/">Jelon Loves You</a>
+</footer>
+<div class="back-to-top" id="JELON__backToTop" title="返回顶部">返回顶部</div>
+
+    <!--博客js脚本 -->
+    <!-- 这里放网站js脚本 -->
+<script src="/js/main.js"></script>
+</body>
+</html>
